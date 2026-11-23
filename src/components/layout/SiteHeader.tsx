@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { DemoRequestButton } from "@/components/demo";
 import { HeaderMegaMenu, MegaPanel } from "./HeaderMegaMenu";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { NavIcon } from "./NavIcon";
@@ -119,13 +120,13 @@ export function SiteHeader() {
               >
                 {t("login")}
               </a>
-              <a
-                href="#"
+              <DemoRequestButton
+                source="header"
                 className="header-cta-primary hidden md:inline-flex"
                 onMouseEnter={() => setOpenMega(null)}
               >
                 {t("startFree")}
-              </a>
+              </DemoRequestButton>
 
               <Sheet
                 open={open}
@@ -299,13 +300,13 @@ export function SiteHeader() {
                       >
                         {t("login")}
                       </a>
-                      <a
-                        href="#"
+                      <DemoRequestButton
+                        source="header-mobile"
                         className="btn-primary w-full"
                         onClick={() => setOpen(false)}
                       >
                         {t("startFree")}
-                      </a>
+                      </DemoRequestButton>
                     </div>
                     <LanguageSwitcher />
                   </div>

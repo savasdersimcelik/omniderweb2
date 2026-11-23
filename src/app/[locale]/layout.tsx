@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
+import { AttributionCapture } from "@/components/attribution/AttributionCapture";
+import {
+  DemoModalProvider,
+  DemoRequestModal,
+} from "@/components/demo";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { colors } from "@/config/colors";
@@ -98,9 +104,15 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>
-          <SiteHeader />
-          <main className="flex flex-1 flex-col">{children}</main>
-          <SiteFooter />
+          <DemoModalProvider>
+            <Suspense fallback={null}>
+              <AttributionCapture />
+            </Suspense>
+            <SiteHeader />
+            <main className="flex flex-1 flex-col">{children}</main>
+            <SiteFooter />
+            <DemoRequestModal />
+          </DemoModalProvider>
         </NextIntlClientProvider>
         <Script src={webchatSrc} strategy="afterInteractive" />
         <Script

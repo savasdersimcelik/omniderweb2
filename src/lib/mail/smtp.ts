@@ -1,4 +1,10 @@
 import nodemailer from "nodemailer";
+import type { Attribution } from "@/lib/attribution/params";
+import {
+  buildAdminLeadEmail,
+  buildUserLeadConfirmationEmail,
+  escapeHtml,
+} from "@/lib/mail/templates";
 
 export type ContactPayload = {
   name: string;
@@ -79,10 +85,47 @@ export async function sendContactEmail(payload: ContactPayload) {
   });
 }
 
-function escapeHtml(value: string) {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
+export type LeadPayload = {
+  fullName: string;
+  phone: string;
+  email?: string;
+  pageName?: string;
+  pageUrl?: string;
+  locale?: string;
+  attribution?: Attribution;
+  ip?: string | null;
+};
+
+export async function sendLeadEmail(payload: LeadPayload) {
+  const transport = createMailTransport();
+  const to = requireEnv("CONTACT_MAIL_TO");
+  const fromAddress = requireEnv("MAIL_FROM_ADDRESS");
+  const fromName = process.env.MAIL_FROM_NAME?.trim() || "Omnider";
+
+  const admin = buildAdminLeadEmail({
+    ...payload,
+    createdAt: new Date(),
+  });
+
+  await transport.sendMail({
+    from: `"${fromName}" <${fromAddress}>`,
+    to,
+    ...(payload.email
+      ? { replyTo: `"${payload.fullName}" <${payload.email}>` }
+      : {}),
+    subject: admin.subject,
+    text: admin.text,
+    html: admin.html,
+  });
+
+  if (payload.email) {
+    const user = buildUserLeadConfirmationEmail(payload);
+    await transport.sendMail({
+      from: `"${fromName}" <${fromAddress}>`,
+      to: payload.email,
+      subject: user.subject,
+      text: user.text,
+      html: user.html,
+    });
+  }
 }

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ArrowUpRight, Phone } from "lucide-react";
+import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
 import { AiCallsWidget } from "./AiCallsWidget";
@@ -46,10 +47,10 @@ export async function AiCallsSection() {
             </ul>
 
             <div className="flex flex-wrap gap-3 pt-1">
-              <Link href="/contact" className="btn-primary">
+              <DemoRequestButton source="home-ai-calls" className="btn-primary">
                 {t("ctaPrimary")}
                 <ArrowUpRight className="size-4" aria-hidden />
-              </Link>
+              </DemoRequestButton>
               <Link href="/contact" className="btn-secondary">
                 <Phone className="size-4 text-brand-600" aria-hidden />
                 {t("ctaSecondary")}

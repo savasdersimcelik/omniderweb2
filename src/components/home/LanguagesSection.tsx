@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
 import { LanguagesMap } from "./LanguagesMap";
@@ -37,10 +38,10 @@ export async function LanguagesSection() {
             <p className="text-body max-w-md">{t("description")}</p>
 
             <div className="flex flex-wrap gap-3 pt-1">
-              <Link href="/contact" className="btn-primary">
+              <DemoRequestButton source="home-languages" className="btn-primary">
                 {t("ctaPrimary")}
                 <ArrowUpRight className="size-4" aria-hidden />
-              </Link>
+              </DemoRequestButton>
               <Link href="/contact" className="btn-secondary">
                 <MessageCircle className="size-4 text-brand-600" aria-hidden />
                 {t("ctaSecondary")}

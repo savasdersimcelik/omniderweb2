@@ -13,6 +13,27 @@
       "description": "Omnider paketleri ve fiyatlandırma yakında yayınlanacak."
     }
   },
+  "DemoModal": {
+    "eyebrow": "Demo talebi",
+    "title": "Sizi arayalım",
+    "subtitle": "Bilgilerinizi bırakın, ekibimiz en kısa sürede sizi arasın.",
+    "close": "Kapat",
+    "fullName": "Ad Soyad",
+    "fullNamePlaceholder": "Adınız ve soyadınız",
+    "phone": "Telefon",
+    "phonePlaceholder": "Telefon numaranız",
+    "email": "E-posta",
+    "emailPlaceholder": "ornek@sirket.com",
+    "optional": "opsiyonel",
+    "submit": "Gönder",
+    "submitting": "Gönderiliyor…",
+    "success": "Talebiniz alındı. En kısa sürede sizi arayacağız.",
+    "duplicate": "Bu telefon numarasıyla zaten bekleyen bir talebiniz var. En kısa sürede sizi arayacağız.",
+    "error": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "captchaFailed": "reCAPTCHA doğrulaması başarısız. Lütfen tekrar deneyin.",
+    "privacyNote": "Bilgileriniz demo ve iletişim amaçlı kullanılır. Telefon ve WhatsApp üzerinden, e-posta adresiniz varsa e-posta ile de sizinle iletişime geçebiliriz.",
+    "recaptchaNotice": "Bu site reCAPTCHA ile korunmaktadır."
+  },
   "Nav": {
     "main": "Ana menü",
     "menu": "Menü",

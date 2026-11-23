@@ -1,4 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import { DemoRequestButton } from "@/components/demo";
 import { AiCallsSection } from "@/components/home/AiCallsSection";
 import { LanguagesSection } from "@/components/home/LanguagesSection";
 import { Container } from "@/components/layout/Container";
@@ -47,9 +48,9 @@ export default async function HomePage() {
             <h1 className="heading-hero">{t("title")}</h1>
             <p className="text-lead">{t("description")}</p>
             <div className="flex flex-wrap gap-3 pt-1">
-              <Link href="/contact" className="btn-primary">
+              <DemoRequestButton source="home-hero" className="btn-primary">
                 {t("ctaPrimary")}
-              </Link>
+              </DemoRequestButton>
               <Link href="/contact" className="btn-secondary">
                 {t("ctaSecondary")}
               </Link>
@@ -69,9 +70,9 @@ export default async function HomePage() {
             <h2 className="heading-section">{t("ctaTitle")}</h2>
             <p className="text-body">{t("ctaDescription")}</p>
             <div className="flex flex-wrap justify-center gap-3 pt-1">
-              <Link href="/contact" className="btn-primary">
+              <DemoRequestButton source="home-cta" className="btn-primary">
                 {t("ctaPrimary")}
-              </Link>
+              </DemoRequestButton>
               <Link href="/contact" className="btn-secondary">
                 {t("ctaSecondary")}
               </Link>

@@ -13,6 +13,27 @@
       "description": "Omnider plans and pricing will be published soon."
     }
   },
+  "DemoModal": {
+    "eyebrow": "Demo request",
+    "title": "We’ll call you",
+    "subtitle": "Leave your details and our team will call you shortly.",
+    "close": "Close",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Your first and last name",
+    "phone": "Phone",
+    "phonePlaceholder": "Your phone number",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "optional": "optional",
+    "submit": "Submit",
+    "submitting": "Sending…",
+    "success": "Request received. We’ll call you shortly.",
+    "duplicate": "You already have a pending request with this phone number. We’ll call you shortly.",
+    "error": "Something went wrong. Please try again.",
+    "captchaFailed": "reCAPTCHA verification failed. Please try again.",
+    "privacyNote": "Your details are used for demo and contact purposes. We may reach you by phone, WhatsApp, and email if provided.",
+    "recaptchaNotice": "This site is protected by reCAPTCHA."
+  },
   "Nav": {
     "main": "Main navigation",
     "menu": "Menu",
