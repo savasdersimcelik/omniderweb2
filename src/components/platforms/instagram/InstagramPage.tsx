@@ -11,9 +11,9 @@ export async function InstagramPage() {
     <>
       <InstagramHero />
       <CommentsSection />
-      <InteractiveSection />
       <ModerationSection />
       <PublishSection />
+      <InteractiveSection />
       <AdReferralSection />
       <TrySection />
     </>

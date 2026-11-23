@@ -7223,22 +7223,6 @@
   }
 }
 
-.ig-interactive__tabs {
-  display: grid;
-  gap: 0.75rem;
-}
-
-@media (min-width: 768px) {
-  .ig-interactive__tabs {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.85rem;
-  }
-}
-
-.ig-interactive__stage {
-  width: min(100%, 22.5rem);
-}
-
 .ig-interactive__screen {
   overflow: hidden;
   border-radius: 1.35rem;
@@ -7620,17 +7604,34 @@
   }
 }
 
+.ig-publish__stage {
+  width: 100%;
+}
+
 .ig-publish__day {
   display: flex;
-  min-height: 2.35rem;
+  min-height: 2.75rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.15rem;
-  border-radius: 0.55rem;
-  font-size: 0.7rem;
+  gap: 0.2rem;
+  border-radius: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 650;
   color: var(--color-ink-subtle);
+}
+
+@media (min-width: 640px) {
+  .ig-publish__day {
+    min-height: 3.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .ig-publish__day {
+    min-height: 3.6rem;
+  }
 }
 
 .ig-publish__day.is-marked {
