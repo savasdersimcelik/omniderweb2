@@ -37,7 +37,7 @@ export async function HeroSection() {
         aria-hidden
       />
 
-      <div className="home-hero relative flex h-full min-h-0 w-full flex-col items-center justify-start px-4 pt-6 pb-0 sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
+      <div className="home-hero relative flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
         <div
           className="pointer-events-none absolute inset-0 -z-10 hidden overflow-visible sm:block"
           aria-hidden
@@ -59,7 +59,7 @@ export async function HeroSection() {
           />
         </div>
 
-        <div className="home-hero__intro relative z-10 flex w-full max-w-7xl shrink-0 flex-col items-center text-center">
+        <div className="home-hero__intro relative z-10 flex w-full max-w-7xl flex-col items-center self-center text-center sm:shrink-0">
           <h1
             id="home-hero-title"
             className="home-hero__title mx-auto text-center font-bold tracking-tight text-ink"
@@ -75,7 +75,7 @@ export async function HeroSection() {
           <HeroTrust className="home-hero__trust" />
         </div>
 
-        <div className="hero-chat-shell relative z-10 mt-5 flex min-h-0 w-full flex-1 flex-col sm:mt-8 lg:mt-14">
+        <div className="hero-chat-shell relative z-10 mt-0 flex min-h-0 w-full flex-col sm:mt-8 sm:flex-1 lg:mt-14">
           <div
             className="absolute top-1/8 left-1/2 -z-10 h-1/4 w-1/2 -translate-x-1/2 -translate-y-1/2 bg-linear-to-r from-sky-500 to-brand-600 blur-[4rem] animate-image-glow lg:w-3/4 lg:blur-[10rem]"
             aria-hidden
@@ -86,7 +86,7 @@ export async function HeroSection() {
           />
           <HeroChatWidget copy={chat} />
           <div
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-background to-transparent"
+            className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-16 bg-linear-to-t from-background to-transparent sm:block"
             aria-hidden
           />
         </div>
