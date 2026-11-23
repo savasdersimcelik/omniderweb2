@@ -2095,8 +2095,8 @@
   },
   "PlatformWhatsAppBusiness": {
     "meta": {
-      "title": "WhatsApp Business — Omnider",
-      "description": "WhatsApp Business API, yapay zeka destekli otomatik yanıtlar, kampanyalar, chatbotlar ve ekip yönetimini Omnider ile tek platformda yönetin."
+      "title": "WhatsApp Business API — Ortak Gelen Kutusu, Yapay Zeka ve Kampanya — Omnider",
+      "description": "Tek WhatsApp Business numarasını web ve mobil ile tüm ekibe açın. Yapay Zeka yanıt, onaylı template, kampanya ve WhatsApp Flow tek panelde."
     },
     "hero": {
       "badge": "WhatsApp Business",
@@ -2505,8 +2505,8 @@
   },
   "PlatformInstagram": {
     "meta": {
-      "title": "Instagram — Omnider",
-      "description": "Instagram DM, yorum yanıtları, moderasyon ve gönderi yayınını Omnider ile tek yerden yönetin."
+      "title": "Instagram DM Entegrasyonu — Omnider",
+      "description": "Instagram Direct mesajlarını ortak gelen kutusunda toplayın, Yapay Zeka ve chatbot ile yanıtlayın."
     },
     "hero": {
       "badge": "Instagram",
