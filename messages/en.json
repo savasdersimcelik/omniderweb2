@@ -31,6 +31,14 @@
     "verifyEmail": {
       "title": "Verify email — Omnider",
       "description": "Verify your Omnider email address."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy — Omnider",
+      "description": "How Omnider collects, uses, and protects personal data."
+    },
+    "termsOfUse": {
+      "title": "Terms of Use — Omnider",
+      "description": "Terms that govern your use of Omnider services."
     }
   },
   "DemoModal": {
@@ -251,9 +259,70 @@
   },
   "Footer": {
     "tagline": "Unify every customer channel in one platform. From WhatsApp to Instagram, your website to email — all in Omnider.",
+    "doodleTagline": "One inbox, AI, and every channel — built for your business with Omnider.",
     "company": "Company",
     "contact": "Contact",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top",
+    "columns": {
+      "products": "Products",
+      "platforms": "Platforms",
+      "company": "Company",
+      "resources": "Resources"
+    },
+    "links": {
+      "aiAssistant": "AI assistant",
+      "campaigns": "Campaigns",
+      "appointments": "Appointments",
+      "aiCalls": "AI calls",
+      "email": "Email",
+      "whatsapp": "WhatsApp Business",
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "messenger": "Messenger",
+      "webchat": "Web chat",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "login": "Sign in",
+      "register": "Sign up",
+      "demo": "Request a demo",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    },
+    "actions": {
+      "contact": "Talk to sales",
+      "demo": "Start free"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    },
+    "crew": {
+      "inbox": {
+        "name": "Inbox",
+        "says": "Every channel lives here!"
+      },
+      "ai": {
+        "name": "Pip AI",
+        "says": "Ready to reply 24/7."
+      },
+      "chat": {
+        "name": "Flow",
+        "says": "Chatbot flows are fun."
+      },
+      "ops": {
+        "name": "Ops",
+        "says": "Best seat in the house!"
+      },
+      "support": {
+        "name": "Support",
+        "says": "Boo! …need a hand?"
+      },
+      "sales": {
+        "name": "Sales",
+        "says": "Want a demo?"
+      }
+    }
   },
   "HomePage": {
     "heroBadge": "NEW",
@@ -481,6 +550,46 @@
         "tokyo": "Tokyo · Japanese"
       }
     },
+    "aiComments": {
+      "eyebrow": "Comment replies",
+      "title": "AI replies to comments,",
+      "titleAccent": "instantly.",
+      "description": "Instagram post comments, Google Business reviews, and marketplace questions in one stream. Omnider AI drafts on-brand replies — and hands off to your team when needed.",
+      "bullets": [
+        "Collect Instagram, Google Business, and marketplace comments in one feed",
+        "On-brand auto replies — around the clock",
+        "Smooth handoff to human approval or an agent for sensitive threads"
+      ],
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Talk about comments",
+      "aiLabel": "Omnider AI",
+      "replyLabel": "Suggested reply",
+      "replyText": "Thanks! It’s in stock — shipping leaves tomorrow. We’re here if you need anything else.",
+      "statusLabel": "Auto-reply · live",
+      "platforms": {
+        "instagram": "Instagram",
+        "google": "Google",
+        "marketplace": "Marketplace"
+      },
+      "comments": [
+        {
+          "platform": "instagram",
+          "author": "@selin.k",
+          "text": "Is this in stock? What colors do you have?"
+        },
+        {
+          "platform": "google",
+          "author": "Ahmet Yılmaz",
+          "text": "Service was very fast, thank you. I’ll be back.",
+          "rating": 5
+        },
+        {
+          "platform": "marketplace",
+          "author": "Marketplace · Customer",
+          "text": "When does shipping arrive? Same-day options?"
+        }
+      ]
+    },
     "aiCalls": {
       "eyebrow": "AI calls",
       "title": "Inbound and outbound calls,",
@@ -530,7 +639,254 @@
           "label": "Tokyo · Outbound"
         }
       ]
+    },
+    "appointments": {
+      "eyebrow": "Appointment system",
+      "title": "Book from chat,",
+      "titleAccent": "synced to your calendar.",
+      "description": "Customers pick a slot on WhatsApp or Instagram; Omnider creates the booking and keeps it synced to your calendar.",
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Talk about bookings",
+      "calendarTitle": "Consultation — Ayşe Yılmaz",
+      "calendarMeta": "Thu 14:30 · Contact-linked",
+      "statusLabel": "Confirmed",
+      "slotsLabel": "Open today",
+      "slotsNote": "Lunch 12:00–13:00 closed · 30 min slots",
+      "chatCustomer": "Can I book a consultation this week?",
+      "chatReply": "Open slots: Thu 14:30 or Fri 10:00. Which works?",
+      "bookedLabel": "Appointment created",
+      "channelLabel": "WhatsApp",
+      "slots": [
+        { "time": "10:00", "open": true },
+        { "time": "10:30", "open": true },
+        { "time": "11:00", "open": false },
+        { "time": "14:00", "open": true },
+        { "time": "14:30", "open": true },
+        { "time": "15:00", "open": true }
+      ]
+    },
+    "emailSystem": {
+      "eyebrow": "Email system",
+      "title": "Inbox sorted,",
+      "titleAccent": "replies drafted by AI.",
+      "description": "Omnider AI files mail into the right folders and drafts — or sends — on-brand replies when it should answer.",
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Talk about email",
+      "inboxLabel": "Business inbox",
+      "foldersLabel": "AI folder routing on",
+      "sortedLabel": "Filed",
+      "aiLabel": "Omnider AI",
+      "replyPanelTitle": "AI reply",
+      "fromLabel": "From",
+      "subjectLabel": "Subject",
+      "replyFrom": "mehmet@example.com",
+      "replySubject": "Pricing request",
+      "replyDraft": "Hi Mehmet — thanks for reaching out. I’m sharing our package options and can suggest a short call if helpful.",
+      "replyStatus": "Reply ready · review or send",
+      "folders": [
+        { "name": "Sales", "count": "12", "active": true },
+        { "name": "Support", "count": "8" },
+        { "name": "Invoices", "count": "3" },
+        { "name": "Not spam", "count": "2" }
+      ],
+      "mails": [
+        {
+          "from": "Ayşe Kaya",
+          "subject": "Demo request — clinic",
+          "preview": "We’d like a walkthrough this week…",
+          "folder": "Sales",
+          "action": "sorted"
+        },
+        {
+          "from": "Support · Can",
+          "subject": "Integration error",
+          "preview": "WhatsApp connection dropped, need help…",
+          "folder": "Support",
+          "action": "reply"
+        }
+      ]
+    },
+    "aiAssistant": {
+      "eyebrow": "AI assistant",
+      "title": "Answers from your knowledge,",
+      "titleAccent": "handoff when it matters.",
+      "description": "Omnider AI replies 24/7 from your FAQs and product data; chatbot flows guide the chat, then hand off to an agent or department when needed.",
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Talk about AI assistant",
+      "channelLabel": "WhatsApp",
+      "aiLabel": "Omnider AI",
+      "knowledgeLabel": "Knowledge base",
+      "knowledgeItems": ["FAQs", "Products", "Templates"],
+      "customerMessage": "What packages do you offer, and can I book?",
+      "aiReply": "We have Standard and Pro. I can suggest a slot — or connect you with the team.",
+      "handoffLabel": "Handed to agent",
+      "agentLabel": "Sales · Elif",
+      "flowLabel": "Chatbot flow",
+      "statusLabel": "Live · greeting active",
+      "flowSteps": [
+        { "label": "Greeting", "active": true },
+        { "label": "FAQ / knowledge", "active": true },
+        { "label": "Product or booking", "active": true },
+        { "label": "Hand off to agent", "active": false }
+      ]
+    },
+    "campaigns": {
+      "eyebrow": "Campaign system",
+      "title": "One-time or recurring,",
+      "titleAccent": "measurable sends.",
+      "description": "Run one-time announcements or recurring newsletters on WhatsApp Business, SMS, or email — with static lists or tag-filtered dynamic audiences.",
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Talk about campaigns",
+      "campaignTitle": "Spring offer — clinic",
+      "campaignMeta": "One-time · Today 18:00",
+      "statusLabel": "Running",
+      "typesLabel": "Campaign type",
+      "channelsLabel": "Channel",
+      "audienceLabel": "Dynamic audience",
+      "audienceValue": "Tag: Sales lead · 2,480 people",
+      "templateLabel": "WhatsApp template",
+      "messagePreview": "Hi [name], 20% off consultations this week. Book from chat →",
+      "feedLabel": "Campaign run",
+      "liveLabel": "Live",
+      "progressLabel": "Run progress",
+      "progressValue": "68%",
+      "progressPercent": "68",
+      "resultLabel": "Reads and clicks update live",
+      "types": [
+        { "name": "One-time", "active": true },
+        { "name": "Recurring", "active": false }
+      ],
+      "channels": [
+        { "name": "WhatsApp Business", "active": true },
+        { "name": "SMS", "active": false },
+        { "name": "Email", "active": false }
+      ],
+      "stats": [
+        { "label": "Sent", "value": "1,684" },
+        { "label": "Delivered", "value": "94%" },
+        { "label": "Read", "value": "41%" },
+        { "label": "Clicked", "value": "12%" }
+      ],
+      "events": [
+        {
+          "name": "Ayşe Yılmaz",
+          "detail": "Sent",
+          "state": "sent"
+        },
+        {
+          "name": "Mehmet Demir",
+          "detail": "Delivered · read",
+          "state": "read"
+        },
+        {
+          "name": "Zeynep Kaya",
+          "detail": "Link clicked",
+          "state": "clicked"
+        }
+      ]
     }
+  },
+  "PrivacyPolicyPage": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "subtitle": "How Omnider collects, uses, and protects your information across the web platform, mobile apps, and messaging channels.",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdated": "2026-08-30",
+    "intro": [
+      "This Privacy Policy explains how Omnider processes personal data across the Omnider Web Platform, Android and iOS apps, panels, APIs, and related services.",
+      "By using the Services, you acknowledge that you have read and understood this Policy."
+    ],
+    "sections": [
+      {
+        "title": "Scope",
+        "paragraphs": [
+          "This Policy covers the web platform, mobile apps, customer and partner panels, and connected channels such as WhatsApp, Instagram, Messenger, Telegram, email, SMS, and web chat."
+        ]
+      },
+      {
+        "title": "Information we collect",
+        "paragraphs": [
+          "We may collect account and billing details, team roles, conversation content, contact and channel metadata, campaign data, uploaded files, and usage logs."
+        ],
+        "list": [
+          "Name, email, phone, company, and authentication data",
+          "Messages, labels, assignments, and templates",
+          "Device, session, and technical logs"
+        ]
+      },
+      {
+        "title": "How we use data",
+        "paragraphs": [
+          "We use data to provide the Service, keep it secure, support customers, bill subscriptions, meet legal duties, and improve the product."
+        ]
+      },
+      {
+        "title": "Sharing and retention",
+        "paragraphs": [
+          "We do not sell personal data. Data may be processed by subprocessors, connected messaging platforms, or when required by law. Retention depends on subscription needs and legal requirements."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "paragraphs": [
+          "Where applicable, you may request access, correction, deletion, objection, or account/data deletion. Requests are handled after identity verification."
+        ]
+      }
+    ],
+    "contactTitle": "Contact",
+    "contactBody": "For privacy questions or rights requests, email us.",
+    "contactEmail": "privacy@omnider.com"
+  },
+  "TermsOfUsePage": {
+    "eyebrow": "Legal",
+    "title": "Terms of Use",
+    "subtitle": "Rules that govern access to Omnider products, panels, mobile apps, and integrated messaging services.",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdated": "2026-08-30",
+    "intro": [
+      "These Terms of Use are a binding agreement between you and Omnider for the Omnider Web Platform, mobile apps, panels, APIs, and related services.",
+      "By creating an account or using the Services, you accept these Terms and the Privacy Policy."
+    ],
+    "sections": [
+      {
+        "title": "Acceptable use",
+        "paragraphs": [
+          "You agree to use the Services in line with the law, these Terms, and the rules of any connected third-party platforms."
+        ],
+        "list": [
+          "Spam, illegal content, or platform-policy violations are prohibited",
+          "You are responsible for account security and your team’s actions",
+          "APIs and integrations are subject to both Omnider and platform terms"
+        ]
+      },
+      {
+        "title": "Accounts and billing",
+        "paragraphs": [
+          "Paid features are billed under pricing or order terms. Access may be suspended or terminated for non-payment or material breach."
+        ]
+      },
+      {
+        "title": "Third-party platforms",
+        "paragraphs": [
+          "Channels such as WhatsApp, Instagram, Messenger, and Telegram remain subject to their own terms. Omnider is not responsible for platform changes, outages, or enforcement actions."
+        ]
+      },
+      {
+        "title": "Intellectual property",
+        "paragraphs": [
+          "Omnider software, branding, and documentation belong to Omnider. These Terms grant a license to use the Services, not ownership."
+        ]
+      },
+      {
+        "title": "Liability and governing law",
+        "paragraphs": [
+          "Services are provided as available. To the extent allowed by law, Omnider’s liability is limited. These Terms are governed by the laws of the Republic of Türkiye, without prejudice to mandatory consumer protections."
+        ]
+      }
+    ],
+    "contactTitle": "Contact",
+    "contactBody": "Questions about these Terms? Email us.",
+    "contactEmail": "legal@omnider.com"
   },
   "ContactPage": {
     "eyebrow": "Contact",
@@ -577,6 +933,13 @@
     "common": {
       "email": "Email",
       "password": "Password",
+      "passwordConfirm": "Confirm password",
+      "phone": "Phone",
+      "name": "Full name",
+      "namePlaceholder": "Jane Doe",
+      "companyName": "Company (optional)",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
       "emailPlaceholder": "you@company.com",
       "passwordPlaceholder": "Enter your password",
       "google": "Continue with Google",
@@ -586,11 +949,15 @@
       "facebook": "Continue with Facebook",
       "errorNetwork": "Network error. Check your connection and try again.",
       "loading": "Please wait…",
-      "errorGeneric": "Something went wrong. Please try again."
+      "errorGeneric": "Something went wrong. Please try again.",
+      "errorPasswordShort": "Password must be at least 8 characters.",
+      "errorPasswordMismatch": "Passwords do not match.",
+      "errorTokenMissing": "Invalid or missing reset link.",
+      "errorPhoneInvalid": "Enter a valid phone number."
     },
     "login": {
       "title": "Sign in to your account",
-      "subtitle": "Enter your email and password to continue to Omnider.",
+      "subtitle": "Continue to the panel with email and password.",
       "submit": "Sign in",
       "forgot": "Forgot password?",
       "remember": "Remember me",
@@ -600,28 +967,59 @@
     },
     "register": {
       "title": "Create your free account",
-      "placeholder": "Registration UI is coming soon. You can return to sign in for now.",
-      "loginLink": "Back to sign in",
-      "homeLink": "Home"
+      "subtitle": "Setup takes only a few minutes.",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "homeLink": "Home",
+      "termsNote": "By registering you agree to the <terms>Terms of Use</terms> and <privacy>Privacy Policy</privacy>.",
+      "partnerLabel": "Partner number (optional)",
+      "partnerLabelLocked": "Partner number",
+      "partnerPlaceholder": "100001",
+      "partnerNotFound": "This partner number was not found.",
+      "partnerInvalid": "Partner number must contain digits only."
     },
     "forgot": {
       "title": "Reset your password",
-      "placeholder": "Password reset form is coming soon. Contact us if you need help.",
+      "subtitle": "Enter your email and we’ll send you a reset link.",
+      "submit": "Send reset link",
+      "success": "A password reset link was sent to your email.",
       "backToLogin": "Back to sign in",
       "homeLink": "Home"
     },
     "reset": {
       "title": "Choose a new password",
-      "placeholder": "Password update screen is coming soon.",
+      "subtitle": "Pick a strong password for your account.",
+      "submit": "Update password",
+      "success": "Password updated. Redirecting to sign in…",
       "backToLogin": "Back to sign in",
       "homeLink": "Home"
     },
     "verify": {
       "title": "Verify your email",
-      "placeholder": "Email verification will be connected soon.",
+      "verifyingTitle": "Verifying your email…",
+      "verifyingSubtitle": "Preparing your account, please wait.",
+      "verifySuccess": "Email verified. Redirecting to the panel…",
       "backToLogin": "Back to sign in",
       "backToRegister": "Back to register",
       "homeLink": "Home"
+    },
+    "verifyRegister": {
+      "eyebrow": "Registration complete",
+      "title": "Your account is ready",
+      "subtitle": "We sent a 6-digit code and verification link to {email}.",
+      "subtitleGeneric": "We sent a 6-digit code and verification link to your email.",
+      "nextStep": "One last step",
+      "hint": "Check your inbox and spam folder. The code and link are valid for 24 hours.",
+      "codeLabel": "6-digit verification code",
+      "codeVerify": "Verify with code",
+      "codeRequired": "Please enter the 6-digit code from your email.",
+      "verifySuccess": "Email verified. Redirecting to the panel…",
+      "resend": "Resend verification email",
+      "resendSuccess": "Verification email sent again.",
+      "backToLogin": "Back to sign in",
+      "emailLabel": "Your email address",
+      "verifying": "Verifying…"
     },
     "verifyLogin": {
       "title": "Verify your email to sign in",

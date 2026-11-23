@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
-import { AuthPlaceholder } from "@/components/auth/AuthPlaceholder";
+import { ResetPasswordScreen } from "@/components/auth/ResetPasswordScreen";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -17,16 +18,11 @@ export async function generateMetadata() {
 export default async function ResetPasswordPage() {
   const locale = await getLocale();
   setRequestLocale(locale);
-  const t = await getTranslations("Auth.reset");
+  await getTranslations("Auth.reset");
 
   return (
-    <AuthPlaceholder
-      title={t("title")}
-      description={t("placeholder")}
-      primaryHref="/login"
-      primaryLabel={t("backToLogin")}
-      secondaryHref="/"
-      secondaryLabel={t("homeLink")}
-    />
+    <Suspense fallback={null}>
+      <ResetPasswordScreen />
+    </Suspense>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { OmniderAuthMark } from "@/components/auth/OmniderAuthMark";
 import NexusLogin, {
   type NexusLoginCredentials,
 } from "@/components/ui/nexus-3d-animated-login-futuristic-authentication-ui";
@@ -15,19 +15,6 @@ import {
   type AuthSessionData,
 } from "@/lib/auth/api";
 
-function OmniderMark({ className }: { className?: string }) {
-  return (
-    <Image
-      src="/icons/icon-192.png"
-      alt="Omnider"
-      width={56}
-      height={56}
-      className={className ?? "h-full w-full object-contain"}
-      priority
-    />
-  );
-}
-
 /** Keeps NexusLogin spinner until full-page navigation finishes. */
 function waitForNavigation() {
   return new Promise<void>(() => {});
@@ -40,9 +27,9 @@ export function LoginScreen() {
   return (
     <NexusLogin
       brandName="Omnider"
-      logo={<OmniderMark className="h-full w-full object-contain" />}
-      title={t("login.title")}
-      description={t("login.subtitle")}
+      brandLabel={t("login.title")}
+      brandSubtitle={t("login.subtitle")}
+      logo={<OmniderAuthMark className="h-full w-full object-contain" />}
       emailLabel={t("common.email")}
       passwordLabel={t("common.password")}
       emailPlaceholder={t("common.emailPlaceholder")}

@@ -1,5 +1,5 @@
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
-import { LoginVerifyEmailForm } from "@/components/auth/LoginVerifyEmailForm";
+import { VerifyEmailPendingForm } from "@/components/auth/VerifyEmailPendingForm";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -27,7 +27,7 @@ export default async function LoginVerifyEmailPage({
 
   const params = searchParams ? await searchParams : {};
   const raw = params.email;
-  const initialEmail = Array.isArray(raw) ? raw[0] ?? "" : raw ?? "";
+  const initialEmail = Array.isArray(raw) ? (raw[0] ?? "") : (raw ?? "");
 
-  return <LoginVerifyEmailForm initialEmail={initialEmail} />;
+  return <VerifyEmailPendingForm initialEmail={initialEmail} variant="login" />;
 }

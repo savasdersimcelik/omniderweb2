@@ -1,6 +1,6 @@
 /**
  * Auth shell — no SiteHeader / SiteFooter.
- * Full-bleed for login (Nexus) and placeholder auth screens.
+ * Full-bleed Nexus layout for login / register / forgot / reset / verify.
  */
 export default function AuthLayout({
   children,

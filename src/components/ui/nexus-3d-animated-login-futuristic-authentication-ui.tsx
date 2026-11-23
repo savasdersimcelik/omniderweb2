@@ -96,6 +96,10 @@ export interface NexusLoginCredentials {
 
 export interface NexusLoginProps {
   brandName?: string;
+  /** Text beside the logo. Defaults to uppercased brandName. */
+  brandLabel?: string;
+  /** Small subtitle under the brand/header row. */
+  brandSubtitle?: string;
   logo?: ReactNode;
   title?: string;
   description?: string;
@@ -870,7 +874,7 @@ function ShowcasePanel({
     <aside
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className="relative flex flex-col items-center justify-center overflow-hidden border-b border-border bg-muted/40 px-6 py-6 lg:border-b-0 lg:border-r lg:py-12"
+      className="relative hidden flex-col items-center justify-center overflow-hidden border-border bg-muted/40 px-6 lg:flex lg:border-r lg:py-12"
     >
       <AmbientLayer animate={animate} accent={accent} shiftX={orbShiftX} shiftY={orbShiftY} />
       <ParticleField animate={animate} interactive={parallax} accent={accent} />
@@ -1100,9 +1104,11 @@ function StatusBanner({ status }: { status: StatusMessage | null }) {
 
 export function NexusLogin({
   brandName = "Nexus",
+  brandLabel,
+  brandSubtitle,
   logo,
-  title = "Welcome back",
-  description = "Sign in to continue to your workspace.",
+  title,
+  description,
   emailLabel = "Email address",
   passwordLabel = "Password",
   emailPlaceholder = "you@example.com",
@@ -1250,6 +1256,25 @@ export function NexusLogin({
 
   const handleForgot = async () => {
     if (busy) return;
+
+    // Prefer navigating to the forgot-password page; email is optional prefill.
+    if (onForgotPassword) {
+      setBusy("forgot");
+      setStatus(null);
+      try {
+        await onForgotPassword(email.trim());
+      } catch (err) {
+        if (!alive.current) return;
+        setStatus({
+          kind: "error",
+          text: err instanceof Error ? err.message : "Could not start the password reset.",
+        });
+      } finally {
+        if (alive.current) setBusy(null);
+      }
+      return;
+    }
+
     const emailError = validateEmail(email);
     if (emailError) {
       setTouched((prev) => ({ ...prev, email: true }));
@@ -1262,14 +1287,11 @@ export function NexusLogin({
     setBusy("forgot");
     setStatus(null);
     try {
-      if (onForgotPassword) await onForgotPassword(email.trim());
-      else await wait(900);
+      await wait(900);
       if (!alive.current) return;
       setStatus({
         kind: "info",
-        text: onForgotPassword
-          ? `Password reset requested for ${email.trim()}.`
-          : `Demo: a reset link would be sent to ${email.trim()}. No email was sent.`,
+        text: `Demo: a reset link would be sent to ${email.trim()}. No email was sent.`,
       });
     } catch (err) {
       if (!alive.current) return;
@@ -1285,12 +1307,6 @@ export function NexusLogin({
   const handleSignup = () => {
     try {
       onSignup?.();
-      setStatus({
-        kind: "info",
-        text: onSignup
-          ? "Sign-up action started."
-          : "Demo: the sign-up flow would open here.",
-      });
     } catch (error) {
       setStatus({
         kind: "error",
@@ -1331,9 +1347,8 @@ export function NexusLogin({
       )}
 
       {/* Authentication side */}
-      <main className="relative flex items-center justify-center overflow-hidden px-4 py-10 sm:px-8 lg:py-16">
-        {!show3DScene && <AmbientLayer animate={animate} accent={accent} />}
-        {show3DScene && <AmbientLayer animate={animate} accent={accent} rich={false} />}
+      <main className="relative flex min-h-svh items-center justify-center overflow-hidden px-4 py-8 sm:px-8 lg:min-h-0 lg:py-16">
+        <AmbientLayer animate={animate} accent={accent} rich={!show3DScene} />
 
         <motion.div
           initial={animate ? { opacity: 0, y: 28 } : false}
@@ -1357,16 +1372,46 @@ export function NexusLogin({
             />
 
             {/* Header */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-3">
               <div className="h-10 w-10 shrink-0">{brandMark}</div>
-              <span className="text-lg font-semibold tracking-[0.18em]">{brandName.toUpperCase()}</span>
+              <div className="min-w-0 pt-0.5">
+                {brandLabel ? (
+                  <h1 className="text-base font-semibold leading-snug tracking-tight sm:text-lg">
+                    {brandLabel}
+                  </h1>
+                ) : (
+                  <span className="text-lg font-semibold tracking-[0.18em]">
+                    {brandName.toUpperCase()}
+                  </span>
+                )}
+                {brandSubtitle ? (
+                  <p className="mt-0.5 truncate text-xs leading-snug whitespace-nowrap text-muted-foreground">
+                    {brandSubtitle}
+                  </p>
+                ) : null}
+              </div>
             </div>
 
-            <h1 className="mt-7 text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h1>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
+            {title ? (
+              <h1 className="mt-7 text-2xl font-semibold tracking-tight sm:text-3xl">
+                {title}
+              </h1>
+            ) : null}
+            {description ? (
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {description}
+              </p>
+            ) : null}
 
             {/* Email form */}
-            <form onSubmit={handleSubmit} noValidate className="mt-7 space-y-5">
+            <form
+              onSubmit={handleSubmit}
+              noValidate
+              className={cn(
+                "space-y-5",
+                title || description || brandSubtitle ? "mt-7" : "mt-6",
+              )}
+            >
               <Field
                 id={emailId}
                 label={emailLabel}
@@ -1525,24 +1570,156 @@ export function NexusLogin({
 }
 
 
-/**
- * Usage:
- *
- * import NexusLogin from "./nexus-login";
- *
- * <NexusLogin
- *   brandName="Acme"
- *   onSubmit={async ({ email, password, remember }) => {
- *     await auth.signIn({ email, password, remember });
- *   }}
- *   onGoogleLogin={() => { window.location.assign(`${api}/auth/google`); }}
- *   onFacebookLogin={() => { window.location.assign(`${api}/auth/facebook`); }}
- *   onForgotPassword={(email) => auth.sendPasswordReset(email)}
- *   onSignup={() => router.push("/sign-up")}
- * />
- *
- * The callbacks are integration points only. Supply real authentication
- * handlers from your application; the component's fallback states are demos.
- */
+export type NexusAuthShellProps = {
+  brandName?: string;
+  /** Text beside the logo. Defaults to uppercased brandName. */
+  brandLabel?: string;
+  /** Small subtitle under the brand/header row. */
+  brandSubtitle?: string;
+  logo?: ReactNode;
+  title?: string;
+  description?: string;
+  eyebrow?: string;
+  headline?: string;
+  tagline?: string;
+  accentColor?: string;
+  show3DScene?: boolean;
+  enableAnimations?: boolean;
+  enableMouseParallax?: boolean;
+  /** Wider card for multi-field forms (register). */
+  wide?: boolean;
+  className?: string;
+  children: ReactNode;
+  footer?: ReactNode;
+};
+
+/** Shared Nexus split layout for register / forgot / reset / verify screens. */
+export function NexusAuthShell({
+  brandName = "Omnider",
+  brandLabel,
+  brandSubtitle,
+  logo,
+  title,
+  description,
+  eyebrow = "THE FUTURE STARTS HERE",
+  headline = "Build. Create. Authenticate.",
+  tagline = "Your next great idea begins with a better workspace.",
+  accentColor = DEFAULT_ACCENT,
+  show3DScene = true,
+  enableAnimations = true,
+  enableMouseParallax = true,
+  wide = false,
+  className,
+  children,
+  footer,
+}: NexusAuthShellProps) {
+  const reducedMotion = useReducedMotion();
+  const finePointer = useMediaQuery("(hover: hover) and (pointer: fine)");
+  const accent = safeHex(accentColor);
+  const animate = enableAnimations && !reducedMotion;
+  const parallax = animate && enableMouseParallax && finePointer;
+  const brandMark = logo ?? <NexusMark className="h-full w-full" />;
+
+  const themeVars = {
+    "--nx-accent": accent,
+    "--nx-accent-soft": withAlpha(accent, 0.18),
+  } as CSSProperties;
+
+  return (
+    <div
+      style={themeVars}
+      className={cn(
+        "relative grid min-h-screen w-full overflow-x-hidden bg-background text-foreground",
+        show3DScene ? "lg:grid-cols-2" : "grid-cols-1",
+        className,
+      )}
+    >
+      {show3DScene ? (
+        <ShowcasePanel
+          animate={animate}
+          parallax={parallax}
+          accent={accent}
+          logo={brandMark}
+          eyebrow={eyebrow}
+          headline={headline}
+          tagline={tagline}
+        />
+      ) : null}
+
+      <main className="relative flex min-h-svh items-center justify-center overflow-hidden px-4 py-8 sm:px-8 lg:min-h-0 lg:py-16">
+        <AmbientLayer animate={animate} accent={accent} rich={!show3DScene} />
+
+        <motion.div
+          initial={animate ? { opacity: 0, y: 28 } : false}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: animate ? 0.8 : 0,
+            delay: animate ? 0.1 : 0,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className={cn("relative w-full", wide ? "max-w-xl" : "max-w-md")}
+        >
+          <div
+            aria-hidden
+            className="absolute -inset-4 -z-10 rounded-[2.5rem] opacity-40 blur-3xl"
+            style={{
+              background: `linear-gradient(135deg, ${accent}, ${BLUE}, ${CYAN})`,
+            }}
+          />
+
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-card/80 p-6 text-card-foreground shadow-2xl backdrop-blur-xl sm:p-8">
+            <div
+              aria-hidden
+              className="absolute inset-x-8 top-0 h-px"
+              style={{
+                background: `linear-gradient(90deg, transparent, ${accent}, ${CYAN}, transparent)`,
+              }}
+            />
+
+            <div className="flex items-start gap-3">
+              <div className="h-10 w-10 shrink-0">{brandMark}</div>
+              <div className="min-w-0 pt-0.5">
+                {brandLabel ? (
+                  <h1 className="text-base font-semibold leading-snug tracking-tight sm:text-lg">
+                    {brandLabel}
+                  </h1>
+                ) : (
+                  <span className="text-lg font-semibold tracking-[0.18em]">
+                    {brandName.toUpperCase()}
+                  </span>
+                )}
+                {brandSubtitle ? (
+                  <p className="mt-0.5 truncate text-xs leading-snug whitespace-nowrap text-muted-foreground">
+                    {brandSubtitle}
+                  </p>
+                ) : null}
+              </div>
+            </div>
+
+            {title ? (
+              <h1 className="mt-7 text-2xl font-semibold tracking-tight sm:text-3xl">
+                {title}
+              </h1>
+            ) : null}
+            {description ? (
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {description}
+              </p>
+            ) : null}
+
+            <div
+              className={cn(
+                title || description || brandSubtitle ? "mt-7" : "mt-6",
+              )}
+            >
+              {children}
+            </div>
+            {footer ? <div className="mt-7">{footer}</div> : null}
+          </div>
+        </motion.div>
+      </main>
+    </div>
+  );
+}
 
 export default NexusLogin;

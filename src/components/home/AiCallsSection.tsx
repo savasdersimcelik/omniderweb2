@@ -18,7 +18,7 @@ export async function AiCallsSection() {
   }>;
 
   return (
-    <section id="ai-calls" className="ai-calls-section">
+    <section id="ai-calls" className="ai-calls-section home-section--plain">
       <Container className="section">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="max-w-xl space-y-6">

@@ -31,6 +31,14 @@
     "verifyEmail": {
       "title": "E-posta doğrula — Omnider",
       "description": "Omnider e-posta doğrulama."
+    },
+    "privacyPolicy": {
+      "title": "Gizlilik Politikası — Omnider",
+      "description": "Omnider kişisel verileri nasıl toplar, kullanır ve korur."
+    },
+    "termsOfUse": {
+      "title": "Kullanım Koşulları — Omnider",
+      "description": "Omnider hizmetlerinin kullanımını düzenleyen koşullar."
     }
   },
   "DemoModal": {
@@ -251,9 +259,70 @@
   },
   "Footer": {
     "tagline": "Tüm müşteri kanallarınızı tek platformda birleştirin. WhatsApp’tan Instagram’a, web sitenizden e-postaya — hepsi Omnider’da.",
+    "doodleTagline": "Tek gelen kutusu, yapay zeka ve tüm kanallar — işletmeniz için Omnider.",
     "company": "Kurumsal",
     "contact": "İletişim",
-    "rights": "Tüm hakları saklıdır."
+    "rights": "Tüm hakları saklıdır.",
+    "backToTop": "Yukarı çık",
+    "columns": {
+      "products": "Ürünler",
+      "platforms": "Platformlar",
+      "company": "Şirket",
+      "resources": "Kaynaklar"
+    },
+    "links": {
+      "aiAssistant": "AI asistan",
+      "campaigns": "Kampanyalar",
+      "appointments": "Randevu",
+      "aiCalls": "AI aramalar",
+      "email": "E-posta",
+      "whatsapp": "WhatsApp Business",
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "messenger": "Messenger",
+      "webchat": "Web chat",
+      "pricing": "Fiyatlandırma",
+      "contact": "İletişim",
+      "login": "Giriş",
+      "register": "Kayıt ol",
+      "demo": "Demo iste",
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Koşulları"
+    },
+    "actions": {
+      "contact": "Satışla konuş",
+      "demo": "Ücretsiz başla"
+    },
+    "legal": {
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Koşulları"
+    },
+    "crew": {
+      "inbox": {
+        "name": "Gelen",
+        "says": "Tüm kanallar burada!"
+      },
+      "ai": {
+        "name": "Pip AI",
+        "says": "7/24 yanıt hazırım."
+      },
+      "chat": {
+        "name": "Akış",
+        "says": "Chatbot akışları eğlenceli."
+      },
+      "ops": {
+        "name": "Operasyon",
+        "says": "En iyi koltuk burası!"
+      },
+      "support": {
+        "name": "Destek",
+        "says": "Boo!… yardım lazım mı?"
+      },
+      "sales": {
+        "name": "Satış",
+        "says": "Demo ister misin?"
+      }
+    }
   },
   "HomePage": {
     "heroBadge": "YENİ",
@@ -481,6 +550,46 @@
         "tokyo": "Tokyo · Japonca"
       }
     },
+    "aiComments": {
+      "eyebrow": "Yorum yanıtları",
+      "title": "Yorumlara yapay zeka,",
+      "titleAccent": "anında yanıt verir.",
+      "description": "Instagram gönderi yorumları, Google Business değerlendirmeleri ve pazaryeri soruları tek panelde. Omnider AI tonunuza uygun cevap üretir; gerekirse ekibinize aktarır.",
+      "bullets": [
+        "Instagram, Google Business ve pazaryeri yorumlarını tek akışta toplar",
+        "Marka dilinize uygun otomatik yanıt — 7/24",
+        "Hassas yorumlarda insan onayına veya temsilciye sorunsuz aktarım"
+      ],
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "Yorum yanıtını konuş",
+      "aiLabel": "Omnider AI",
+      "replyLabel": "Önerilen yanıt",
+      "replyText": "Teşekkürler! Stokta mevcut — kargo yarın çıkıyor. Başka bir sorunuz olursa buradayız.",
+      "statusLabel": "Otomatik yanıt · canlı",
+      "platforms": {
+        "instagram": "Instagram",
+        "google": "Google",
+        "marketplace": "Pazaryeri"
+      },
+      "comments": [
+        {
+          "platform": "instagram",
+          "author": "@selin.k",
+          "text": "Bu ürün stokta var mı? Renk seçenekleri neler?"
+        },
+        {
+          "platform": "google",
+          "author": "Ahmet Yılmaz",
+          "text": "Hizmet çok hızlıydı, teşekkürler. Tekrar geleceğim.",
+          "rating": 5
+        },
+        {
+          "platform": "marketplace",
+          "author": "Trendyol · Müşteri",
+          "text": "Kargo ne zaman gelir? Aynı gün kargo var mı?"
+        }
+      ]
+    },
     "aiCalls": {
       "eyebrow": "AI aramalar",
       "title": "Gelen ve giden aramalar,",
@@ -530,7 +639,254 @@
           "label": "Tokyo · Giden"
         }
       ]
+    },
+    "appointments": {
+      "eyebrow": "Randevu sistemi",
+      "title": "Sohbetten randevu,",
+      "titleAccent": "takvimle senkron.",
+      "description": "Müşteri WhatsApp veya Instagram’da slot seçer; Omnider rezervasyonu oluşturur ve takviminle senkron tutar.",
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "Randevuyu konuş",
+      "calendarTitle": "Konsültasyon — Ayşe Yılmaz",
+      "calendarMeta": "Per 14:30 · Kişiye bağlı",
+      "statusLabel": "Onaylı",
+      "slotsLabel": "Bugün müsait",
+      "slotsNote": "Öğle 12:00–13:00 kapalı · 30 dk süre",
+      "chatCustomer": "Bu hafta konsültasyon alabilir miyim?",
+      "chatReply": "Açık slotlar: Per 14:30 veya Cum 10:00. Hangisi uygun?",
+      "bookedLabel": "Randevu oluşturuldu",
+      "channelLabel": "WhatsApp",
+      "slots": [
+        { "time": "10:00", "open": true },
+        { "time": "10:30", "open": true },
+        { "time": "11:00", "open": false },
+        { "time": "14:00", "open": true },
+        { "time": "14:30", "open": true },
+        { "time": "15:00", "open": true }
+      ]
+    },
+    "emailSystem": {
+      "eyebrow": "E-posta sistemi",
+      "title": "Gelen kutusu,",
+      "titleAccent": "AI ile düzenli.",
+      "description": "Omnider AI e-postaları doğru klasöre taşır; uygun olanlara marka tonunda yanıt taslağı yazar veya gönderir.",
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "E-postayı konuş",
+      "inboxLabel": "Kurumsal gelen kutusu",
+      "foldersLabel": "AI klasör dağıtımı aktif",
+      "sortedLabel": "Klasöre alındı",
+      "aiLabel": "Omnider AI",
+      "replyPanelTitle": "AI yanıt",
+      "fromLabel": "Kimden",
+      "subjectLabel": "Konu",
+      "replyFrom": "mehmet@ornek.com",
+      "replySubject": "Fiyat teklifi talebi",
+      "replyDraft": "Merhaba Mehmet, talebiniz için teşekkürler. Paket seçeneklerimizi ekte paylaşıyorum; uygun bir görüşme saati önerebilirim.",
+      "replyStatus": "Yanıt hazır · inceleme veya gönder",
+      "folders": [
+        { "name": "Satış", "count": "12", "active": true },
+        { "name": "Destek", "count": "8" },
+        { "name": "Faturalar", "count": "3" },
+        { "name": "Spam dışı", "count": "2" }
+      ],
+      "mails": [
+        {
+          "from": "Ayşe Kaya",
+          "subject": "Demo talebi — klinik",
+          "preview": "Bu hafta ürünü görmek istiyoruz…",
+          "folder": "Satış",
+          "action": "sorted"
+        },
+        {
+          "from": "Destek · Can",
+          "subject": "Entegrasyon hatası",
+          "preview": "WhatsApp bağlantısı kesildi, yardım…",
+          "folder": "Destek",
+          "action": "reply"
+        }
+      ]
+    },
+    "aiAssistant": {
+      "eyebrow": "AI asistan",
+      "title": "Bilgi bankasından yanıt,",
+      "titleAccent": "gerektiğinde ekibe devret.",
+      "description": "Omnider AI FAQ ve ürün bilginizle 7/24 yanıt verir; chatbot akışı ilerler, hassas konuda temsilciye veya departmana aktarır.",
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "AI asistanı konuş",
+      "channelLabel": "WhatsApp",
+      "aiLabel": "Omnider AI",
+      "knowledgeLabel": "Bilgi bankası",
+      "knowledgeItems": ["SSS", "Ürünler", "Şablonlar"],
+      "customerMessage": "Paketleriniz neler ve randevu alabilir miyim?",
+      "aiReply": "Standart ve Pro paketlerimiz var. Uygun bir slot için sizi yönlendirebilirim — yoksa ekibimize bağlayayım.",
+      "handoffLabel": "Temsilciye aktarıldı",
+      "agentLabel": "Satış · Elif",
+      "flowLabel": "Chatbot akışı",
+      "statusLabel": "Canlı · karşılama aktif",
+      "flowSteps": [
+        { "label": "Karşılama", "active": true },
+        { "label": "SSS / bilgi bankası", "active": true },
+        { "label": "Ürün veya randevu", "active": true },
+        { "label": "Temsilciye aktar", "active": false }
+      ]
+    },
+    "campaigns": {
+      "eyebrow": "Kampanya sistemi",
+      "title": "Tek seferlik veya tekrarlayan,",
+      "titleAccent": "ölçülebilir gönderim.",
+      "description": "WhatsApp Business, SMS veya e-posta ile tek seferlik duyuru ya da tekrarlayan bülten kurun; sabit liste veya etiket filtreli dinamik kitleye gönderin.",
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "Kampanyayı konuş",
+      "campaignTitle": "Bahar indirimi — klinik",
+      "campaignMeta": "Tek seferlik · Bugün 18:00",
+      "statusLabel": "Çalışıyor",
+      "typesLabel": "Kampanya türü",
+      "channelsLabel": "Kanal",
+      "audienceLabel": "Dinamik kitle",
+      "audienceValue": "Etiket: Satış lead · 2.480 kişi",
+      "templateLabel": "WhatsApp şablonu",
+      "messagePreview": "Merhaba [ad], bu hafta konsültasyonlarda %20 indirim. Randevunu sohbetten al →",
+      "feedLabel": "Gönderim turu",
+      "liveLabel": "Canlı",
+      "progressLabel": "Tur ilerlemesi",
+      "progressValue": "%68",
+      "progressPercent": "68",
+      "resultLabel": "Okunma ve tıklama anlık güncellenir",
+      "types": [
+        { "name": "Tek seferlik", "active": true },
+        { "name": "Tekrarlayan", "active": false }
+      ],
+      "channels": [
+        { "name": "WhatsApp Business", "active": true },
+        { "name": "SMS", "active": false },
+        { "name": "E-posta", "active": false }
+      ],
+      "stats": [
+        { "label": "Gönderildi", "value": "1.684" },
+        { "label": "İletildi", "value": "%94" },
+        { "label": "Okundu", "value": "%41" },
+        { "label": "Tıkladı", "value": "%12" }
+      ],
+      "events": [
+        {
+          "name": "Ayşe Yılmaz",
+          "detail": "Gönderildi",
+          "state": "sent"
+        },
+        {
+          "name": "Mehmet Demir",
+          "detail": "İletildi · okundu",
+          "state": "read"
+        },
+        {
+          "name": "Zeynep Kaya",
+          "detail": "Link tıklandı",
+          "state": "clicked"
+        }
+      ]
     }
+  },
+  "PrivacyPolicyPage": {
+    "eyebrow": "Yasal",
+    "title": "Gizlilik Politikası",
+    "subtitle": "Omnider’ın web platformu, mobil uygulamaları ve entegre mesajlaşma kanallarında bilgilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklar.",
+    "lastUpdatedLabel": "Son güncelleme",
+    "lastUpdated": "2026-08-30",
+    "intro": [
+      "Bu Gizlilik Politikası, Omnider’ın Omnider Web Platformu, Android ve iOS uygulamaları, paneller, API’ler ve ilgili hizmetler kapsamında kişisel verileri nasıl işlediğini açıklar.",
+      "Hizmetleri kullanarak bu politikayı okuduğunuzu ve anladığınızı kabul etmiş olursunuz."
+    ],
+    "sections": [
+      {
+        "title": "Kapsam",
+        "paragraphs": [
+          "Politika; web platformu, mobil uygulamalar, müşteri ve partner panelleri ile WhatsApp, Instagram, Messenger, Telegram, e-posta, SMS ve web chat gibi bağlı kanalları kapsar."
+        ]
+      },
+      {
+        "title": "Topladığımız bilgiler",
+        "paragraphs": [
+          "Hesap ve fatura bilgileri, ekip rolleri, konuşma içerikleri, kişi ve kanal meta verileri, kampanya verileri, yüklenen dosyalar ve kullanım günlükleri toplanabilir."
+        ],
+        "list": [
+          "Ad, e-posta, telefon, şirket ve kimlik doğrulama verileri",
+          "Mesajlar, etiketler, atamalar ve şablonlar",
+          "Cihaz, oturum ve teknik log kayıtları"
+        ]
+      },
+      {
+        "title": "Kullanım amaçları",
+        "paragraphs": [
+          "Verileri hizmeti sunmak, güvenliği sağlamak, destek vermek, faturalandırmak, yasal yükümlülükleri yerine getirmek ve ürünü iyileştirmek için kullanırız."
+        ]
+      },
+      {
+        "title": "Paylaşım ve saklama",
+        "paragraphs": [
+          "Veriler; alt işlemciler, bağlı mesajlaşma platformları ve yasal zorunluluklar dışında satılmaz. Saklama süreleri abonelik, operasyonel ihtiyaç ve yasal gerekliliklere göre değişir."
+        ]
+      },
+      {
+        "title": "Haklarınız",
+        "paragraphs": [
+          "Geçerli mevzuat kapsamında erişim, düzeltme, silme, itiraz ve hesap/veri silme taleplerinde bulunabilirsiniz. Talepler kimlik doğrulamasının ardından değerlendirilir."
+        ]
+      }
+    ],
+    "contactTitle": "İletişim",
+    "contactBody": "Gizlilik sorularınız veya hak talepleriniz için bize yazın.",
+    "contactEmail": "privacy@omnider.com"
+  },
+  "TermsOfUsePage": {
+    "eyebrow": "Yasal",
+    "title": "Kullanım Koşulları",
+    "subtitle": "Omnider ürünlerine, panellerine, mobil uygulamalarına ve entegre mesajlaşma hizmetlerine erişiminizi düzenleyen kurallar.",
+    "lastUpdatedLabel": "Son güncelleme",
+    "lastUpdated": "2026-08-30",
+    "intro": [
+      "Bu Kullanım Koşulları, siz ile Omnider arasında Omnider Web Platformu, mobil uygulamalar, paneller, API’ler ve ilgili hizmetlerin kullanımını düzenleyen bağlayıcı bir sözleşmedir.",
+      "Hesap oluşturarak veya Hizmetleri kullanarak bu Koşulları ve Gizlilik Politikası’nı kabul etmiş olursunuz."
+    ],
+    "sections": [
+      {
+        "title": "Hizmetlerin kullanımı",
+        "paragraphs": [
+          "Hizmetleri yasalara, bu Koşullara ve bağlı üçüncü taraf platform kurallarına uygun şekilde kullanmayı kabul edersiniz."
+        ],
+        "list": [
+          "Spam, yasa dışı içerik veya platform politikalarını ihlal eden kullanımlar yasaktır",
+          "Hesap güvenliğinden ve ekip üyelerinizin eylemlerinden siz sorumlusunuz",
+          "API ve entegrasyonlar hem Omnider hem ilgili platform koşullarına tabidir"
+        ]
+      },
+      {
+        "title": "Hesaplar ve abonelik",
+        "paragraphs": [
+          "Ücretli özellikler fiyatlandırma veya sipariş koşullarına göre faturalandırılır. Ödeme yapılmaması veya ciddi ihlallerde erişim askıya alınabilir veya sonlandırılabilir."
+        ]
+      },
+      {
+        "title": "Üçüncü taraf platformlar",
+        "paragraphs": [
+          "WhatsApp, Instagram, Messenger, Telegram ve benzeri kanallar kendi koşullarına tabidir. Platform değişiklikleri, kesintiler veya yaptırımlardan Omnider sorumlu tutulamaz."
+        ]
+      },
+      {
+        "title": "Fikri mülkiyet",
+        "paragraphs": [
+          "Omnider yazılımı, markası ve dokümantasyonu Omnider’a aittir. Bu Koşullar size mülkiyet hakkı vermez; yalnızca Hizmetleri kullanma lisansı sağlar."
+        ]
+      },
+      {
+        "title": "Sorumluluk sınırı ve uygulanacak hukuk",
+        "paragraphs": [
+          "Hizmetler “olduğu gibi” sunulur. Zorunlu tüketici hakları saklı kalmak kaydıyla, Omnider’ın sorumluluğu yürürlükteki yasaların izin verdiği ölçüde sınırlıdır. Bu Koşullar Türkiye Cumhuriyeti hukukuna tabidir; zorunlu kurallar saklıdır."
+        ]
+      }
+    ],
+    "contactTitle": "İletişim",
+    "contactBody": "Kullanım Koşulları hakkında sorularınız için bize yazın.",
+    "contactEmail": "legal@omnider.com"
   },
   "ContactPage": {
     "eyebrow": "İletişim",
@@ -577,6 +933,13 @@
     "common": {
       "email": "E-posta",
       "password": "Şifre",
+      "passwordConfirm": "Şifre (tekrar)",
+      "phone": "Telefon",
+      "name": "Adınız soyadınız",
+      "namePlaceholder": "Ali Yılmaz",
+      "companyName": "Şirket unvanı (opsiyonel)",
+      "showPassword": "Şifreyi göster",
+      "hidePassword": "Şifreyi gizle",
       "emailPlaceholder": "ornek@sirket.com",
       "passwordPlaceholder": "Şifrenizi girin",
       "google": "Google ile devam et",
@@ -586,11 +949,15 @@
       "facebook": "Facebook ile devam et",
       "errorNetwork": "Bağlantı hatası. İnternetinizi kontrol edip tekrar deneyin.",
       "loading": "Lütfen bekleyin…",
-      "errorGeneric": "Bir hata oluştu. Lütfen tekrar deneyin."
+      "errorGeneric": "Bir hata oluştu. Lütfen tekrar deneyin.",
+      "errorPasswordShort": "Şifre en az 8 karakter olmalıdır.",
+      "errorPasswordMismatch": "Şifreler eşleşmiyor.",
+      "errorTokenMissing": "Geçersiz veya eksik sıfırlama bağlantısı.",
+      "errorPhoneInvalid": "Geçerli bir telefon numarası girin."
     },
     "login": {
       "title": "Hesabınıza giriş yapın",
-      "subtitle": "Omnider paneline devam etmek için e-posta ve şifrenizi girin.",
+      "subtitle": "E-posta ve şifrenizle panele devam edin.",
       "submit": "Giriş yap",
       "forgot": "Şifremi unuttum",
       "remember": "Beni hatırla",
@@ -600,28 +967,59 @@
     },
     "register": {
       "title": "Ücretsiz hesabınızı oluşturun",
-      "placeholder": "Kayıt ekranı yakında. Şimdilik giriş sayfasından devam edebilirsiniz.",
-      "loginLink": "Girişe dön",
-      "homeLink": "Ana sayfa"
+      "subtitle": "Kurulum yalnızca birkaç dakika sürer.",
+      "submit": "Hesap oluştur",
+      "haveAccount": "Zaten hesabınız var mı?",
+      "loginLink": "Giriş yapın",
+      "homeLink": "Ana sayfa",
+      "termsNote": "Kayıt olarak <terms>Kullanım Koşulları</terms> ve <privacy>Gizlilik Politikası</privacy> metinlerini kabul etmiş olursunuz.",
+      "partnerLabel": "Partner numarası (opsiyonel)",
+      "partnerLabelLocked": "Partner numarası",
+      "partnerPlaceholder": "100001",
+      "partnerNotFound": "Bu partner numarası bulunamadı.",
+      "partnerInvalid": "Partner numarası yalnızca rakamlardan oluşmalıdır."
     },
     "forgot": {
       "title": "Şifrenizi sıfırlayın",
-      "placeholder": "Şifre sıfırlama formu yakında. Destek için iletişime geçebilirsiniz.",
+      "subtitle": "E-posta adresinizi girin; size sıfırlama bağlantısı gönderelim.",
+      "submit": "Sıfırlama bağlantısı gönder",
+      "success": "Şifre sıfırlama bağlantısı e-posta adresinize gönderildi.",
       "backToLogin": "Girişe dön",
       "homeLink": "Ana sayfa"
     },
     "reset": {
       "title": "Yeni şifre belirleyin",
-      "placeholder": "Şifre güncelleme ekranı yakında hazır olacak.",
+      "subtitle": "Hesabınız için güçlü bir şifre seçin.",
+      "submit": "Şifreyi güncelle",
+      "success": "Şifreniz güncellendi. Giriş sayfasına yönlendiriliyorsunuz…",
       "backToLogin": "Girişe dön",
       "homeLink": "Ana sayfa"
     },
     "verify": {
       "title": "E-postanızı doğrulayın",
-      "placeholder": "E-posta doğrulama adımı yakında bağlanacak.",
+      "verifyingTitle": "E-posta doğrulanıyor…",
+      "verifyingSubtitle": "Hesabınız hazırlanıyor, lütfen bekleyin.",
+      "verifySuccess": "E-posta doğrulaması tamamlandı. Panele yönlendiriliyorsunuz…",
       "backToLogin": "Girişe dön",
       "backToRegister": "Kayıta dön",
       "homeLink": "Ana sayfa"
+    },
+    "verifyRegister": {
+      "eyebrow": "Kayıt tamamlandı",
+      "title": "Hesabınız oluşturuldu",
+      "subtitle": "{email} adresine 6 haneli kod ve doğrulama bağlantısı gönderdik.",
+      "subtitleGeneric": "E-posta adresinize 6 haneli kod ve doğrulama bağlantısı gönderdik.",
+      "nextStep": "Son bir adım kaldı",
+      "hint": "Gelen kutunuzu ve spam klasörünü kontrol edin. Kod ve bağlantı 24 saat geçerlidir.",
+      "codeLabel": "6 haneli doğrulama kodu",
+      "codeVerify": "Kod ile doğrula",
+      "codeRequired": "Lütfen e-postanızdaki 6 haneli kodu girin.",
+      "verifySuccess": "E-posta doğrulandı. Panele yönlendiriliyorsunuz…",
+      "resend": "Doğrulama e-postasını tekrar gönder",
+      "resendSuccess": "Doğrulama e-postası tekrar gönderildi.",
+      "backToLogin": "Girişe dön",
+      "emailLabel": "E-posta adresiniz",
+      "verifying": "Doğrulanıyor…"
     },
     "verifyLogin": {
       "title": "Giriş için e-postanızı doğrulayın",

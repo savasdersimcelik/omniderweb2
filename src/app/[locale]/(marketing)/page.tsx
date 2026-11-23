@@ -1,6 +1,11 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { DemoRequestButton } from "@/components/demo";
+import { AiAssistantSection } from "@/components/home/AiAssistantSection";
 import { AiCallsSection } from "@/components/home/AiCallsSection";
+import { AiCommentsSection } from "@/components/home/AiCommentsSection";
+import { AppointmentSection } from "@/components/home/AppointmentSection";
+import { CampaignSection } from "@/components/home/CampaignSection";
+import { EmailSection } from "@/components/home/EmailSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LanguagesSection } from "@/components/home/LanguagesSection";
 import { Container } from "@/components/layout/Container";
@@ -44,11 +49,21 @@ export default async function HomePage() {
 
       <HeroSection />
 
+      <AiAssistantSection />
+
       <LanguagesSection />
+
+      <EmailSection />
+
+      <AiCommentsSection />
+
+      <AppointmentSection />
 
       <AiCallsSection />
 
-      <section className="section-muted">
+      <CampaignSection />
+
+      <section className="home-section--plain">
         <Container className="section">
           <div className="mx-auto max-w-2xl space-y-5 text-center">
             <p className="eyebrow">{t("ctaEyebrow")}</p>
