@@ -76,6 +76,8 @@ export interface AdaptivePricingSectionProps {
   className?: string;
   pending?: boolean;
   controls?: ReactNode;
+  /** Break out of the page skeleton so multi-tier cards can breathe. */
+  wide?: boolean;
 }
 
 export function AdaptivePricingSection({
@@ -86,13 +88,14 @@ export function AdaptivePricingSection({
   className,
   pending = false,
   controls,
+  wide = false,
 }: AdaptivePricingSectionProps) {
   const count = Math.min(Math.max(tiers.length, 1), 5);
 
   return (
     <div className={cn("w-full", className)}>
       {(title || subtitle) && (
-        <div className="mb-8 text-center md:mb-10">
+        <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
           {title ? (
             <h2 className="mb-4 text-4xl font-light tracking-tight text-foreground md:text-5xl lg:text-6xl">
               {title}
@@ -106,16 +109,23 @@ export function AdaptivePricingSection({
         </div>
       )}
 
-      {controls ? <div className="mb-8 md:mb-10">{controls}</div> : null}
+      {controls ? (
+        <div className="mx-auto mb-8 max-w-3xl md:mb-10">{controls}</div>
+      ) : null}
 
       <div
         className={cn(
-          "mx-auto grid max-w-7xl grid-cols-1 gap-8 pt-5 md:gap-6 md:pt-6",
-          count === 1 && "max-w-md",
-          count === 2 && "md:grid-cols-2 max-w-4xl",
-          count === 3 && "md:grid-cols-3 max-w-6xl",
-          count === 4 && "md:grid-cols-2 xl:grid-cols-4",
-          count >= 5 && "md:grid-cols-2 xl:grid-cols-5 xl:gap-4",
+          "mx-auto grid grid-cols-1 gap-8 pt-6 md:pt-8",
+          wide
+            ? "pricing-packages__deck max-w-none"
+            : "max-w-7xl",
+          count === 1 && !wide && "max-w-md",
+          count === 2 && "md:grid-cols-2 md:gap-7",
+          count === 2 && !wide && "max-w-4xl",
+          count === 3 && "md:grid-cols-3 md:gap-7",
+          count === 3 && !wide && "max-w-6xl",
+          count === 4 && "md:grid-cols-2 xl:grid-cols-4 md:gap-6",
+          count >= 5 && "md:grid-cols-2 xl:grid-cols-5 xl:gap-6",
           pending && "opacity-70 transition-opacity",
         )}
       >
@@ -124,74 +134,76 @@ export function AdaptivePricingSection({
             key={tier.id || tier.name}
             id={tier.id}
             className={cn(
-              "relative h-full gap-0 overflow-visible border-0 py-0 transition-all duration-300 ring-1 ring-border/50",
+              "pricing-plan-card relative h-full gap-0 overflow-visible rounded-2xl border-0 bg-white py-0 transition-all duration-300",
               tier.highlighted
-                ? "z-20 bg-linear-to-b from-brand-50/90 to-card shadow-2xl shadow-brand-600/20 ring-brand-300 md:scale-[1.04] md:-translate-y-3"
-                : "z-10 bg-card/50 hover:bg-card/80 hover:ring-brand-200/70",
+                ? "pricing-plan-card--featured z-20 md:-translate-y-3 md:scale-[1.02]"
+                : "z-10 hover:-translate-y-1",
             )}
-            style={{ backdropFilter: "blur(10px)" }}
           >
             {tier.badge ? (
-              <div className="absolute -top-3 left-1/2 z-30 -translate-x-1/2 whitespace-nowrap">
-                <div className="rounded-full bg-linear-to-r from-brand-600 to-brand-500 px-4 py-1.5 text-xs font-bold text-primary-foreground shadow-md shadow-brand-600/35">
+              <div className="absolute -top-3.5 left-1/2 z-30 -translate-x-1/2 whitespace-nowrap">
+                <div className="rounded-full bg-linear-to-r from-brand-700 to-brand-500 px-4 py-1.5 text-[11px] font-bold tracking-wide text-primary-foreground uppercase shadow-lg shadow-brand-600/40">
                   {tier.badge.text}
                 </div>
               </div>
             ) : null}
 
-            <CardHeader className="px-4 pt-10 pb-5 text-center sm:px-5 md:px-5">
+            <CardHeader className="px-5 pt-11 pb-5 text-center sm:px-6">
               {tier.subtitle ? (
-                <div className="mb-3 text-[11px] font-medium tracking-[0.2em] text-muted-foreground uppercase">
+                <div className="mb-3 text-[11px] font-semibold tracking-[0.22em] text-brand-600/80 uppercase">
                   {tier.subtitle}
                 </div>
               ) : null}
 
               <CardTitle className="mb-3 min-w-0">
                 {tier.price ? (
-                  <div className="flex min-w-0 flex-col items-center gap-0.5 px-0.5">
+                  <div className="flex min-w-0 flex-col items-center gap-1 px-0.5">
                     <span
                       className={cn(
-                        "max-w-full font-light tracking-tight text-foreground tabular-nums leading-none",
+                        "max-w-full font-semibold tracking-tight text-foreground tabular-nums leading-none",
                         (tier.price?.length ?? 0) > 7
-                          ? "text-[clamp(1.35rem,1.6vw+0.7rem,2rem)]"
-                          : "text-[clamp(1.65rem,1.8vw+0.85rem,2.5rem)]",
+                          ? "text-[clamp(1.4rem,1.55vw+0.75rem,2.05rem)]"
+                          : "text-[clamp(1.75rem,1.9vw+0.9rem,2.55rem)]",
                       )}
                     >
                       {tier.price}
                     </span>
                     {tier.period ? (
-                      <span className="text-sm font-light text-muted-foreground">
+                      <span className="text-sm font-medium text-muted-foreground">
                         {tier.period}
                       </span>
                     ) : null}
                   </div>
                 ) : (
-                  <div className="text-[clamp(1.65rem,1.8vw+0.85rem,2.5rem)] font-light text-foreground">
+                  <div className="text-[clamp(1.75rem,1.9vw+0.9rem,2.55rem)] font-semibold text-foreground">
                     {tier.name}
                   </div>
                 )}
               </CardTitle>
 
               {tier.billedNote ? (
-                <p className="mb-2 text-xs text-muted-foreground">{tier.billedNote}</p>
+                <p className="mb-2 text-xs font-medium text-brand-600/80">
+                  {tier.billedNote}
+                </p>
               ) : null}
 
-              <CardDescription className="px-0.5 text-sm leading-relaxed font-light text-muted-foreground">
+              <CardDescription className="mx-auto max-w-[16rem] px-0.5 text-sm leading-relaxed text-muted-foreground">
                 {tier.description}
               </CardDescription>
             </CardHeader>
 
-            <CardContent className="flex-1 px-5 pb-2 md:px-6">
+            <CardContent className="flex-1 px-5 pb-1 sm:px-6">
+              <div className="mb-4 h-px w-full bg-linear-to-r from-transparent via-border to-transparent" />
               <h4
                 className={cn(
                   "mb-4 text-[11px] font-semibold tracking-[0.16em] uppercase",
-                  tier.highlighted ? "text-brand-700" : "text-muted-foreground",
+                  tier.highlighted ? "text-brand-700" : "text-slate-500",
                 )}
               >
                 {highlightsLabel}
               </h4>
 
-              <ul className="space-y-3">
+              <ul className="space-y-3.5">
                 {tier.features.map((feature) => {
                   const Icon =
                     (feature.icon && FEATURE_ICONS[feature.icon]) || Sparkles;
@@ -200,21 +212,21 @@ export function AdaptivePricingSection({
                       key={`${feature.text}-${feature.value ?? ""}`}
                       className={cn(
                         "flex items-center gap-3",
-                        !feature.included && "opacity-45",
+                        !feature.included && "opacity-40",
                       )}
                     >
-                      <Icon
+                      <span
                         className={cn(
-                          "size-4 shrink-0",
+                          "inline-flex size-7 shrink-0 items-center justify-center rounded-lg",
                           feature.included
-                            ? "text-brand-600"
-                            : "text-muted-foreground",
+                            ? "bg-brand-50 text-brand-600 ring-1 ring-brand-100"
+                            : "bg-muted text-muted-foreground",
                         )}
-                        strokeWidth={1.9}
-                        aria-hidden
-                      />
+                      >
+                        <Icon className="size-3.5" strokeWidth={2} aria-hidden />
+                      </span>
 
-                      <span className="min-w-0 flex-1 text-[13px] leading-snug text-foreground/80">
+                      <span className="min-w-0 flex-1 text-[13px] leading-snug text-slate-600">
                         {feature.text}
                         {feature.hasInfo ? (
                           <Info className="ml-1.5 inline size-3 align-[-1px] text-muted-foreground" />
@@ -224,9 +236,9 @@ export function AdaptivePricingSection({
                       {feature.value ? (
                         <strong
                           className={cn(
-                            "shrink-0 text-[13px] font-semibold tabular-nums tracking-tight",
+                            "shrink-0 text-[13px] font-bold tabular-nums tracking-tight",
                             feature.included
-                              ? "text-foreground"
+                              ? "text-slate-900"
                               : "text-muted-foreground",
                           )}
                         >
@@ -239,17 +251,17 @@ export function AdaptivePricingSection({
               </ul>
             </CardContent>
 
-            <CardFooter className="mt-auto border-0 bg-transparent px-6 pt-6 pb-7 md:px-7">
+            <CardFooter className="mt-auto border-0 bg-transparent px-5 pt-6 pb-7 sm:px-6">
               <div className="w-full">
                 {tier.href ? (
                   <Button
                     asChild
                     size="lg"
                     className={cn(
-                      "h-11 w-full text-sm font-medium transition-all duration-300",
+                      "h-11 w-full rounded-xl text-sm font-semibold transition-all duration-300",
                       tier.highlighted
-                        ? "border-0 bg-linear-to-r from-brand-700 to-brand-500 text-primary-foreground shadow-lg shadow-brand-600/30 hover:from-brand-600 hover:to-brand-400 hover:shadow-xl"
-                        : "border border-border/50 bg-muted/80 text-foreground hover:bg-brand-50 hover:text-brand-700 hover:border-brand-200",
+                        ? "border-0 bg-linear-to-r from-brand-700 to-brand-500 text-primary-foreground shadow-lg shadow-brand-600/35 hover:from-brand-600 hover:to-brand-400 hover:shadow-xl"
+                        : "border border-slate-200 bg-white text-slate-800 shadow-sm hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700",
                     )}
                   >
                     <Link href={tier.href as "/register"}>{tier.buttonText}</Link>
@@ -258,10 +270,10 @@ export function AdaptivePricingSection({
                   <Button
                     size="lg"
                     className={cn(
-                      "h-11 w-full text-sm font-medium transition-all duration-300",
+                      "h-11 w-full rounded-xl text-sm font-semibold transition-all duration-300",
                       tier.highlighted
-                        ? "border-0 bg-linear-to-r from-brand-700 to-brand-500 text-primary-foreground shadow-lg shadow-brand-600/30 hover:from-brand-600 hover:to-brand-400 hover:shadow-xl"
-                        : "border border-border/50 bg-muted/80 text-foreground hover:bg-brand-50 hover:text-brand-700 hover:border-brand-200",
+                        ? "border-0 bg-linear-to-r from-brand-700 to-brand-500 text-primary-foreground shadow-lg shadow-brand-600/35 hover:from-brand-600 hover:to-brand-400 hover:shadow-xl"
+                        : "border border-slate-200 bg-white text-slate-800 shadow-sm hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700",
                     )}
                   >
                     {tier.buttonText}

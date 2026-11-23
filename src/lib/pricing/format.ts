@@ -27,6 +27,16 @@ export function formatMoney(
   }
 }
 
+/** Always show a monthly figure; yearly billing divides the period total by 12. */
+export function monthlyDisplayMinor(
+  selectedPriceMinor: number,
+  billing: "monthly" | "yearly",
+): number {
+  const minor = Number(selectedPriceMinor) || 0;
+  if (billing !== "yearly") return minor;
+  return Math.round(minor / 12);
+}
+
 export function formatQuota(value: number | null | undefined): string {
   if (value == null) return "—";
   if (Number(value) === -1) return "∞";

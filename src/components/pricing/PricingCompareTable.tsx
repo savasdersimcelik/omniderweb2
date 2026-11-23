@@ -17,6 +17,7 @@ import {
   formatQuota,
   formatQuotaWithUnit,
   isQuotaVisible,
+  monthlyDisplayMinor,
   packageQuotas,
   type PackageQuotaKey,
 } from "@/lib/pricing/format";
@@ -306,12 +307,12 @@ export function PricingCompareTable({
                   <div className="pricing-compare__pkg-head">
                     <span>{t(`names.${pkg.code}` as "names.basic")}</span>
                     <span className="pricing-compare__pkg-price">
-                      {formatMoney(pkg.selected_price_minor, currency, locale)}
-                      <span>
-                        {billing === "yearly"
-                          ? t("card.perYear")
-                          : t("card.perMonth")}
-                      </span>
+                      {formatMoney(
+                        monthlyDisplayMinor(pkg.selected_price_minor, billing),
+                        currency,
+                        locale,
+                      )}
+                      <span>{t("card.perMonth")}</span>
                     </span>
                   </div>
                 </th>

@@ -681,12 +681,30 @@
       "bookedLabel": "Randevu oluşturuldu",
       "channelLabel": "WhatsApp",
       "slots": [
-        { "time": "10:00", "open": true },
-        { "time": "10:30", "open": true },
-        { "time": "11:00", "open": false },
-        { "time": "14:00", "open": true },
-        { "time": "14:30", "open": true },
-        { "time": "15:00", "open": true }
+        {
+          "time": "10:00",
+          "open": true
+        },
+        {
+          "time": "10:30",
+          "open": true
+        },
+        {
+          "time": "11:00",
+          "open": false
+        },
+        {
+          "time": "14:00",
+          "open": true
+        },
+        {
+          "time": "14:30",
+          "open": true
+        },
+        {
+          "time": "15:00",
+          "open": true
+        }
       ]
     },
     "emailSystem": {
@@ -708,10 +726,23 @@
       "replyDraft": "Merhaba Mehmet, talebiniz için teşekkürler. Paket seçeneklerimizi ekte paylaşıyorum; uygun bir görüşme saati önerebilirim.",
       "replyStatus": "Yanıt hazır · inceleme veya gönder",
       "folders": [
-        { "name": "Satış", "count": "12", "active": true },
-        { "name": "Destek", "count": "8" },
-        { "name": "Faturalar", "count": "3" },
-        { "name": "Spam dışı", "count": "2" }
+        {
+          "name": "Satış",
+          "count": "12",
+          "active": true
+        },
+        {
+          "name": "Destek",
+          "count": "8"
+        },
+        {
+          "name": "Faturalar",
+          "count": "3"
+        },
+        {
+          "name": "Spam dışı",
+          "count": "2"
+        }
       ],
       "mails": [
         {
@@ -740,7 +771,11 @@
       "channelLabel": "WhatsApp",
       "aiLabel": "Omnider AI",
       "knowledgeLabel": "Bilgi bankası",
-      "knowledgeItems": ["SSS", "Ürünler", "Şablonlar"],
+      "knowledgeItems": [
+        "SSS",
+        "Ürünler",
+        "Şablonlar"
+      ],
       "customerMessage": "Paketleriniz neler ve randevu alabilir miyim?",
       "aiReply": "Standart ve Pro paketlerimiz var. Uygun bir slot için sizi yönlendirebilirim — yoksa ekibimize bağlayayım.",
       "handoffLabel": "Temsilciye aktarıldı",
@@ -748,10 +783,22 @@
       "flowLabel": "Chatbot akışı",
       "statusLabel": "Canlı · karşılama aktif",
       "flowSteps": [
-        { "label": "Karşılama", "active": true },
-        { "label": "SSS / bilgi bankası", "active": true },
-        { "label": "Ürün veya randevu", "active": true },
-        { "label": "Temsilciye aktar", "active": false }
+        {
+          "label": "Karşılama",
+          "active": true
+        },
+        {
+          "label": "SSS / bilgi bankası",
+          "active": true
+        },
+        {
+          "label": "Ürün veya randevu",
+          "active": true
+        },
+        {
+          "label": "Temsilciye aktar",
+          "active": false
+        }
       ]
     },
     "campaigns": {
@@ -777,19 +824,46 @@
       "progressPercent": "68",
       "resultLabel": "Okunma ve tıklama anlık güncellenir",
       "types": [
-        { "name": "Tek seferlik", "active": true },
-        { "name": "Tekrarlayan", "active": false }
+        {
+          "name": "Tek seferlik",
+          "active": true
+        },
+        {
+          "name": "Tekrarlayan",
+          "active": false
+        }
       ],
       "channels": [
-        { "name": "WhatsApp Business", "active": true },
-        { "name": "SMS", "active": false },
-        { "name": "E-posta", "active": false }
+        {
+          "name": "WhatsApp Business",
+          "active": true
+        },
+        {
+          "name": "SMS",
+          "active": false
+        },
+        {
+          "name": "E-posta",
+          "active": false
+        }
       ],
       "stats": [
-        { "label": "Gönderildi", "value": "1.684" },
-        { "label": "İletildi", "value": "%94" },
-        { "label": "Okundu", "value": "%41" },
-        { "label": "Tıkladı", "value": "%12" }
+        {
+          "label": "Gönderildi",
+          "value": "1.684"
+        },
+        {
+          "label": "İletildi",
+          "value": "%94"
+        },
+        {
+          "label": "Okundu",
+          "value": "%41"
+        },
+        {
+          "label": "Tıkladı",
+          "value": "%12"
+        }
       ],
       "events": [
         {
@@ -813,104 +887,646 @@
   "PrivacyPolicyPage": {
     "eyebrow": "Yasal",
     "title": "Gizlilik Politikası",
-    "subtitle": "Omnider’ın web platformu, mobil uygulamaları ve entegre mesajlaşma kanallarında bilgilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklar.",
+    "subtitle": "Omnider'ın web platformu, mobil uygulamaları ve entegre mesajlaşma kanallarında bilgilerinizi nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklar.",
     "lastUpdatedLabel": "Son güncelleme",
-    "lastUpdated": "2026-08-30",
+    "lastUpdated": "30 Ağustos 2026",
+    "lastUpdatedIso": "2026-08-30",
     "intro": [
-      "Bu Gizlilik Politikası, Omnider’ın Omnider Web Platformu, Android ve iOS uygulamaları, paneller, API’ler ve ilgili hizmetler kapsamında kişisel verileri nasıl işlediğini açıklar.",
-      "Hizmetleri kullanarak bu politikayı okuduğunuzu ve anladığınızı kabul etmiş olursunuz."
+      "Bu Gizlilik Politikası (\"Politika\"), Omnider'ın (\"Omnider\", \"biz\", \"bize\" veya \"bizim\") Omnider Web Platformu, Google Play'de sunulan Omnider Android uygulaması, Apple App Store'da sunulan Omnider iOS uygulaması ve ilgili tüm entegrasyonlar, API'ler, paneller ve destek hizmetleri (topluca \"Hizmetler\") kapsamında kişisel bilgileri nasıl topladığını, kullandığını, açıkladığını ve koruduğunu açıklar.",
+      "Hizmetlere erişerek veya Hizmetleri kullanarak bu Politikayı okuduğunuzu ve anladığınızı kabul etmiş olursunuz. Uygulamalarımızı kabul etmiyorsanız lütfen Hizmetleri kullanmayın."
     ],
     "sections": [
       {
-        "title": "Kapsam",
+        "id": "scope",
+        "title": "Bu Politikanın Kapsamı",
         "paragraphs": [
-          "Politika; web platformu, mobil uygulamalar, müşteri ve partner panelleri ile WhatsApp, Instagram, Messenger, Telegram, e-posta, SMS ve web chat gibi bağlı kanalları kapsar."
-        ]
-      },
-      {
-        "title": "Topladığımız bilgiler",
-        "paragraphs": [
-          "Hesap ve fatura bilgileri, ekip rolleri, konuşma içerikleri, kişi ve kanal meta verileri, kampanya verileri, yüklenen dosyalar ve kullanım günlükleri toplanabilir."
+          "Bu Politika aşağıdaki tüm Omnider ürün ve hizmetlerini kapsar:"
         ],
         "list": [
-          "Ad, e-posta, telefon, şirket ve kimlik doğrulama verileri",
-          "Mesajlar, etiketler, atamalar ve şablonlar",
-          "Cihaz, oturum ve teknik log kayıtları"
+          "Omnider Web Platformu ve ilgili web özellikleri",
+          "Omnider Android Uygulaması (Google Play)",
+          "Omnider iOS Uygulaması (Apple App Store)",
+          "Müşteri Paneli: <a href=\"https://app.omnider.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://app.omnider.com</a>"
+        ],
+        "subsections": [
+          {
+            "title": "Mesajlaşma Kanalları ve Entegrasyonlar",
+            "paragraphs": [
+              "Hizmetler, resmi ve desteklenen mesajlaşma kanalları üzerinden konuşmaları bağlamanıza ve yönetmenize olanak tanır:"
+            ],
+            "list": [
+              "WhatsApp Business Platform",
+              "Instagram Business Messaging",
+              "Facebook Messenger",
+              "Telegram",
+              "LINE",
+              "Web Chat",
+              "Omnider'ın gelecekte ekleyebileceği diğer resmi mesajlaşma platformları"
+            ]
+          }
         ]
       },
       {
-        "title": "Kullanım amaçları",
+        "id": "information-collected",
+        "title": "Topladığımız Bilgiler",
         "paragraphs": [
-          "Verileri hizmeti sunmak, güvenliği sağlamak, destek vermek, faturalandırmak, yasal yükümlülükleri yerine getirmek ve ürünü iyileştirmek için kullanırız."
+          "Bilgileri üç genel kategoride toplarız: sizin sağladığınız bilgiler, Hizmetleri kullanımınız sırasında oluşan bilgiler ve bağladığınız üçüncü taraf platformlardan alınan bilgiler."
+        ],
+        "subsections": [
+          {
+            "title": "Hesap ve Profil Bilgileri",
+            "list": [
+              "Ad, e-posta adresi, telefon numarası, şirket adı ve fatura bilgileri",
+              "Giriş bilgileri ve kimlik doğrulama verileri",
+              "Ekip üyesi profilleri, rolleri ve yetkileri",
+              "Partner hesap bilgileri ve yönlendirme verileri"
+            ]
+          },
+          {
+            "title": "Mesajlaşma ve Müşteri Verileri",
+            "list": [
+              "Mesaj içerikleri, zaman damgaları, iletim durumu ve konuşma meta verileri",
+              "Kişi adları, telefon numaraları, kullanıcı adları, profil tanımlayıcıları ve kanala özel kimlikler",
+              "Ortak gelen kutusunda uygulanan etiketler, notlar, atamalar ve iş akışı durumları",
+              "Kampanya hedef kitle verileri, şablonlar ve yayın geçmişi"
+            ]
+          },
+          {
+            "title": "Dosya ve Medya",
+            "list": [
+              "Bağlı kanallar üzerinden paylaşılan görseller, videolar, sesli mesajlar, belgeler ve ekler",
+              "Bilgi tabanına, chatbot akışlarına veya yapay zeka eğitim bağlamlarına yüklenen dosyalar",
+              "Yüklenen veya işlenen medyaya ilişkin meta veriler (dosya türü, boyut, zaman damgaları)"
+            ]
+          },
+          {
+            "title": "Teknik ve Kullanım Bilgileri",
+            "list": [
+              "IP adresi, tarayıcı türü, cihaz türü, işletim sistemi ve uygulama sürümü",
+              "Log kayıtları, oturum tanımlayıcıları ve özellik kullanım olayları",
+              "Aşağıda açıklanan çerez ve benzeri teknoloji verileri",
+              "Mobil uygulamalardan gelen çökme raporları ve performans tanılamaları"
+            ]
+          },
+          {
+            "title": "Ödeme Bilgileri",
+            "paragraphs": [
+              "Abonelik ve ödeme işlemleri üçüncü taraf ödeme sağlayıcıları tarafından yürütülür. Fatura durumu, işlem referansları ve sınırlı ödeme meta verilerini alırız; tam kart numaralarını sunucularımızda saklamayız."
+            ]
+          },
+          {
+            "title": "Google Workspace Entegrasyon Verileri",
+            "paragraphs": [
+              "Google Workspace entegrasyonlarını (örneğin Google Sheets, Google Drive veya Google Calendar) yetkilendirirseniz, talep ettiğiniz senkronizasyon, dışa aktarma, yedekleme veya takvim yönetimi işlemlerini gerçekleştirmek için gerekli verileri işleyebiliriz. Google Workspace API verileri yalnızca bu yetkilendirilmiş entegrasyon iş akışları kapsamında işlenir ve aşağıdaki Google API Services and Limited Use bölümünde açıklandığı üzere yapay zeka destekli mesajlaşma özelliklerinden ayrı tutulur."
+            ]
+          }
         ]
       },
       {
-        "title": "Paylaşım ve saklama",
+        "id": "how-we-use",
+        "title": "Bilgilerinizi Nasıl Kullanıyoruz",
         "paragraphs": [
-          "Veriler; alt işlemciler, bağlı mesajlaşma platformları ve yasal zorunluluklar dışında satılmaz. Saklama süreleri abonelik, operasyonel ihtiyaç ve yasal gerekliliklere göre değişir."
+          "Toplanan bilgileri Hizmetleri işletmek, sürdürmek ve geliştirmek için kullanırız; bunlar arasında:"
+        ],
+        "list": [
+          "Müşteri Paneli ve Partner Paneli üzerinden kullanıcı hesaplarını oluşturmak ve yönetmek",
+          "Bağlı kanallar arasında mesajları iletmek, depolamak ve senkronize etmek",
+          "Ortak gelen kutusu, otomasyon, kampanya, randevu ve ekip yönetimi özelliklerini sunmak",
+          "Kullanıcının yetkilendirdiği Google Sheets, Google Drive ve Google Calendar senkronizasyon, dışa aktarma, yedekleme ve kayıt yönetimi işlemlerini gerçekleştirmek",
+          "Kullanıcıları doğrulamak ve erişim kontrollerini uygulamak",
+          "Abonelikleri, faturaları ve hesapla ilgili iletişimleri işlemek",
+          "Müşteri desteği, onboarding ve teknik yardım sağlamak",
+          "Hizmet performansını izlemek, kötüye kullanımı tespit etmek ve platform güvenliğini korumak",
+          "Yasal yükümlülüklere uymak ve Kullanım Koşullarımızı uygulamak"
         ]
       },
       {
-        "title": "Haklarınız",
+        "id": "ai-services",
+        "title": "Yapay Zeka Hizmetlerinin Kullanımı",
         "paragraphs": [
-          "Geçerli mevzuat kapsamında erişim, düzeltme, silme, itiraz ve hesap/veri silme taleplerinde bulunabilirsiniz. Talepler kimlik doğrulamasının ardından değerlendirilir."
+          "Omnider; otomatik yanıtlar, bilgi tabanı yanıtları, belge anlama, görsel analiz, video analizi ve sesli mesaj işleme gibi yapay zeka destekli özellikler sunar. Yapay zeka destekli mesajlaşma ile Google Workspace entegrasyonları birbirinden ayrı işlevlerdir ve ayrı iş akışları olarak çalışır. Bu yapay zeka özelliklerini etkinleştirdiğinizde:"
+        ],
+        "list": [
+          "İlgili mesaj içerikleri, istemler ve bağlamsal veriler, yanıt üretmek veya talep edilen analizi gerçekleştirmek amacıyla yalnızca yapay zeka hizmet sağlayıcılarına iletilebilir",
+          "Yapay zeka çıktıları, sağladığınız bilgilere ve yapılandırdığınız ayarlara dayanır; son müşterilere göndermeden önce yapay zeka tarafından üretilen içeriği incelemek sizin sorumluluğunuzdadır",
+          "Yapay zeka sağlayıcılarıyla veri kullanımını yalnızca hizmet sunumu amacıyla sınırlayan sözleşmesel ve teknik önlemler uygularız",
+          "Mevcut olduğu durumlarda hesap ayarlarınızdan yapay zeka özelliklerini devre dışı bırakabilir veya yapılandırabilirsiniz",
+          "Google Workspace API verileri (ham, toplulaştırılmış, anonimleştirilmiş veya türetilmiş) yapay zeka istemlerine, chatbot konuşmalarına veya yapay zeka/makine öğrenmesi sağlayıcılarına yapılan aktarımlara dahil edilmez"
+        ],
+        "subsections": [
+          {
+            "title": "Yapay Zeka Veri Minimizasyonu",
+            "paragraphs": [
+              "Talep edilen yapay zeka işlevini gerçekleştirmek için yalnızca gerekli asgari veriyi göndermeye çalışırız. Aksi açıkça belirtilen bir özelliğe açıkça onay vermediğiniz sürece özel mesajlaşma verilerinizi genel yapay zeka modellerini eğitmek için kullanmayız. Google Workspace API verileri; yapay zeka veya makine öğrenmesi modellerini geliştirmek, eğitmek, fine-tune etmek, test etmek veya iyileştirmek amacıyla asla kullanılmaz."
+            ]
+          },
+          {
+            "title": "Yapay Zeka Hizmet Sağlayıcıları",
+            "paragraphs": [
+              "Omnider, yapay zeka destekli müşteri mesajlaşmasını güçlendirmek için OpenRouter’ı ve OpenRouter üzerinden erişilen üçüncü taraf modelleri kullanabilir. Bu amaçla OpenRouter’a yalnızca ilgili mesajlaşma içeriği ve işletme tarafından yapılandırılan chatbot talimatları gönderilebilir.",
+              "Google Workspace API verileri, OpenRouter’a veya başka herhangi bir üçüncü taraf yapay zeka/makine öğrenmesi hizmetine yapılan hiçbir veri aktarımına dahil edilmez. Kullanılan alt modeller ve sağlayıcılar müşteri veya işletme yapılandırmasına göre değişebilir; ancak Google Workspace verileri hiçbir modele yönlendirilmez."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "google-api-limited-use",
+        "title": "Google API Services and Limited Use",
+        "paragraphs": [
+          "Omnider’s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.",
+          "Google Sheets, Google Drive ve Google Calendar entegrasyonları yalnızca sizin açıkça yetkilendirdiğiniz senkronizasyon, dışa aktarma, yedekleme ve kayıt yönetimi işlemleri için kullanılır. Örnek iş akışları şunlardır: Omnider CRM’de oluşan yeni bir müşteri kaydının sizin seçtiğiniz bir Google Sheet’e eklenmesi veya güncellenmesi; Omnider’da oluşturulan ya da güncellenen bir randevunun Google Calendar hesabınızda oluşturulması veya güncellenmesi; Omnider’da oluşturulan verilerin Google Drive hesabınıza aktarılması veya yedeklenmesi.",
+          "Google bağlantıları yalnızca Google OAuth üzerinden açıkça izin verdikten sonra kullanılır. Erişim, talep ettiğiniz işlevi gerçekleştirmek için gerekli kapsam ve süreyle sınırlıdır. Google entegrasyonunun bağlantısını istediğiniz zaman kaldırabilirsiniz; bağlantı kaldırıldığında gelecekteki API erişimi ve senkronizasyon işlemleri durdurulur.",
+          "Senkronizasyon amacıyla Google’dan veri okunması gerektiğinde, bu veri yalnızca ilgili CRM veya entegrasyon iş akışı kapsamında kullanılır. Yapay zeka hizmetine veya yapay zeka modeline aktarılmaz."
+        ],
+        "list": [
+          "Raw or derived Google Workspace API data is not used to develop, train, fine-tune, test, or improve generalized or foundational artificial intelligence or machine learning models.",
+          "Google Workspace API data is not transferred to OpenRouter or any other third-party AI/ML service.",
+          "Google Workspace API data is not included in AI prompts or chatbot conversations.",
+          "Google integrations and AI-powered messaging operate as separate workflows.",
+          "Google data is used only for user-authorized synchronization, export, backup, and calendar-management features.",
+          "Where Google data is retrieved for synchronization, it remains within the integration workflow and is not routed to an AI provider.",
+          "Google kullanıcı verileri satılmaz; reklam amacıyla kullanılmaz ve ilgisiz üçüncü taraflarla paylaşılmaz.",
+          "Google kullanıcı verileri yalnızca Hizmetlerin sunulması, güvenliğin sağlanması, yasal yükümlülükler veya sizin açıkça talep ettiğiniz entegrasyon işlemleri kapsamında işlenir."
+        ]
+      },
+      {
+        "id": "file-media-processing",
+        "title": "Dosya ve Medya İşleme",
+        "paragraphs": [
+          "Omnider üzerinden iletilen dosya ve medyalar; gelen kutu görüntüleme, otomasyon, yapay zeka özellikleri, yedekleme ve uyumluluk iş akışlarını etkinleştirmek için geçici olarak saklanabilir, taranabilir, dönüştürülebilir veya analiz edilebilir. İşleme şunları içerebilir:"
+        ],
+        "list": [
+          "Ekleri güvenli bulut altyapısında depolamak",
+          "Yapay zeka ve arama özellikleri için önizleme, transkript veya çıkarılmış metin oluşturmak",
+          "Teknik olarak mümkün olduğunda virüs ve kötü amaçlı yazılım taraması uygulamak",
+          "Medyayı hesap ayarlarınıza ve geçerli saklama kurallarına göre muhafaza etmek"
+        ],
+        "subsections": [
+          {
+            "title": "Sorumluluklarınız",
+            "paragraphs": [
+              "Müşterilerinize veya kişilerinize ait dosya ve medyayı toplama, saklama ve işleme konusunda yasal hakkınızın bulunduğundan emin olmak sizin sorumluluğunuzdadır. Uygun hukuki dayanak ve güvenlik önlemleri olmadan yasadışı, ihlal edici veya hassas içerik yüklemeyin."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "title": "Çerezler ve Benzeri Teknolojiler",
+        "paragraphs": [
+          "Web sitelerimiz ve web uygulamalarımız çerezler, yerel depolama, pikseller ve benzeri teknolojileri şu amaçlarla kullanır:"
+        ],
+        "list": [
+          "Oturumları sürdürmek ve dil veya arayüz tercihlerini hatırlamak",
+          "Trafik, kampanya performansı ve ürün kullanımını ölçmek",
+          "Güvenlik, dolandırıcılık önleme ve kimlik doğrulamayı desteklemek",
+          "Uygulanabilir olduğu durumlarda analitik ve reklam ölçüm entegrasyonlarını etkinleştirmek"
+        ],
+        "subsections": [
+          {
+            "title": "Çerezleri Yönetme",
+            "paragraphs": [
+              "Çerezleri tarayıcı ayarlarınız üzerinden kontrol edebilirsiniz. Belirli çerezleri devre dışı bırakmak Müşteri Paneli, Partner Paneli veya pazarlama web sitesinin işlevselliğini sınırlayabilir. Mobil uygulamalar benzer amaçlar için eşdeğer cihaz içi depolama mekanizmaları kullanabilir."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "logs",
+        "title": "Log Kayıtları",
+        "paragraphs": [
+          "IP adresleri, istek zaman damgaları, uç nokta yolları, kullanıcı aracıları, hata izleri ve yönetim eylemlerini içerebilen sunucu, uygulama, API ve güvenlik logları tutarız. Loglar; sorun giderme, denetim, kötüye kullanım tespiti, kapasite planlama ve yasal uyumluluk için kullanılır.",
+          "Loglara erişim yetkili personel ve gizlilik yükümlülükleri altındaki hizmet sağlayıcılarla sınırlıdır. Log saklama süreleri, aşağıdaki Veri Saklama bölümünde açıklandığı gibi log türüne ve operasyonel ihtiyaca göre değişir."
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Güvenlik",
+        "paragraphs": [
+          "Kişisel bilgileri korumak için aktarım sırasında şifreleme, erişim kontrolleri, role dayalı yetkilendirme, izleme ve güvenli geliştirme uygulamaları dahil idari, teknik ve organizasyonel önlemler uygularız.",
+          "Hiçbir iletim veya depolama yöntemi tamamen güvenli değildir. Verilerinizi korumak için sürekli çalışsak da mutlak güvenlik garanti edemeyiz. Hesap bilgilerinizi korumak ve yetkisiz erişim şüphesi durumunda bizi derhal bilgilendirmek sizin sorumluluğunuzdadır."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Veri Saklama Süresi",
+        "paragraphs": [
+          "Kişisel bilgileri Hizmetleri sunmak, bu Politikada açıklanan amaçları yerine getirmek, yasal yükümlülüklere uymak, uyuşmazlıkları çözmek ve sözleşmeleri uygulamak için gerekli olduğu sürece saklarız.",
+          "Saklama süreleri hesap durumu, abonelik planı, özellik kullanımı, yasal gereklilikler ve silme taleplerinize göre değişebilir. Veriler artık gerekli olmadığında, yedekleme ve yasal saklama istisnalarına tabi olarak iç saklama programlarımıza uygun şekilde siler veya anonimleştiririz."
+        ]
+      },
+      {
+        "id": "your-rights",
+        "title": "Kullanıcı Hakları",
+        "paragraphs": [
+          "Bulunduğunuz yere bağlı olarak belirli kişisel bilgilere erişme, düzeltme, silme, işlemeyi kısıtlama, itiraz etme veya taşıma haklarına sahip olabilirsiniz. İşleme rızaya dayalıysa rızanızı geri çekebilirsiniz.",
+          "Geçerli hakları kullanmak için bu Politikanın sonundaki iletişim bilgilerini kullanarak bize ulaşın. Yanıt vermeden önce kimliğinizi doğrulamamız gerekebilir. Geçerli yasaların gerektirdiği süreler içinde yanıt veririz."
+        ]
+      },
+      {
+        "id": "account-deletion",
+        "title": "Hesap Silme / Veri Silme Talebi",
+        "paragraphs": [
+          "Omnider hesabınızın ve ilişkili kişisel verilerinizin silinmesini istediğiniz zaman talep edebilirsiniz. Doğrulanmış hesap veya veri silme talebi göndermek için gerekli bilgiler, işlem süreleri ve talimatlar için <a href=\"/delete-account\">/delete-account</a> sayfasını ziyaret edin.",
+          "Kayıtlı hesap e-posta adresinizden <a href=\"mailto:info@omnider.com\">info@omnider.com</a> adresine de talep gönderebilirsiniz. Doğrulanmış hesap silme işleminden sonra:"
+        ],
+        "list": [
+          "Müşteri Paneli veya Partner Paneli erişimi devre dışı bırakılır",
+          "Aktif abonelikler faturalandırma koşullarımıza göre sonlandırılır",
+          "İlişkili çalışma alanı verileri yasal ve operasyonel saklama gerekliliklerine tabi olarak silinmek üzere planlanır",
+          "Bağlı üçüncü taraf entegrasyonları ilgili platformlarda ayrıca devre dışı bırakılmayı gerektirebilir"
+        ],
+        "subsections": [
+          {
+            "title": "Kısmi Veri Silme",
+            "paragraphs": [
+              "Tüm hesabınızı kapatmadan belirli kişisel bilgilerin silinmesini talep etmeniz gerekiyorsa aynı süreci <a href=\"/delete-account\">/delete-account</a> sayfasındaki talimatları izleyerek başlatabilirsiniz. Belirli verilerin silinmesi, Hizmetlerin tamamının veya bir kısmının sunulmasını engelleyebilir. Üçüncü taraf platformlar tarafından kontrol edilen verilerin çoğu zaman Omnider'a yapılan talebe ek olarak doğrudan ilgili platformlar veya resmi araçları üzerinden silinmesini gerektirir."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kvkk",
+        "title": "KVKK Uyumluluğu",
+        "paragraphs": [
+          "Türkiye'de bulunuyorsanız veya verileriniz Türk hukukuna tabi işleniyorsa Omnider, 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") kapsamında kişisel verileri işler.",
+          "Duruma bağlı olarak Omnider; hesap ve fatura verileri için veri sorumlusu, Hizmetler aracılığıyla yüklediğiniz veya senkronize ettiğiniz müşteri mesajlaşma verileri için ise veri işleyen sıfatıyla hareket edebilir. Omnider veri işleyen olduğu durumlarda, son müşterilerinizin verilerini işlemek için hukuki dayanağı sağlamak sizin sorumluluğunuzdadır."
+        ],
+        "list": [
+          "Kişisel verilerinizin işlenip işlenmediğine ilişkin bilgi talep edebilirsiniz",
+          "Eksik veya hatalı verilerin düzeltilmesini isteyebilirsiniz",
+          "KVKK koşulları altında verilerin silinmesini veya yok edilmesini talep edebilirsiniz",
+          "Kanunun öngördüğü şekilde işlemeye itiraz edebilir ve hukuka aykırı işlemeden doğan zararların giderilmesini talep edebilirsiniz"
+        ],
+        "subsections": [
+          {
+            "title": "KVKK Başvuruları",
+            "paragraphs": [
+              "KVKK ile ilgili talepler <a href=\"mailto:info@omnider.com\">info@omnider.com</a> adresine iletilebilir. Kimliğinizi doğruladıktan sonra yasal süre içinde yanıt veririz."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gdpr",
+        "title": "GDPR Uyumluluğu (AB / AEA / Birleşik Krallık)",
+        "paragraphs": [
+          "Avrupa Birliği, Avrupa Ekonomik Alanı veya Birleşik Krallık'ta bulunuyorsanız Omnider, Genel Veri Koruma Tüzüğü (\"GDPR\") ve geçerli yerel uygulamalara uygun şekilde kişisel verileri işler."
+        ],
+        "list": [
+          "Hukuki dayanaklar sözleşmenin ifası, meşru menfaatler, yasal yükümlülük ve gerektiğinde açık rızayı içerebilir",
+          "Erişim, düzeltme, silme, kısıtlama, taşınabilirlik ve itiraz haklarına sahipsiniz",
+          "Yerel denetim otoritenize şikayette bulunabilirsiniz",
+          "Veriler AEA/Birleşik Krallık dışına aktarıldığında, uygulanabilir olduğu durumlarda standart sözleşme maddeleri veya eşdeğer mekanizmalara dayanılır"
+        ]
+      },
+      {
+        "id": "google-play",
+        "title": "Google Play Developer Policy Uyumluluğu",
+        "paragraphs": [
+          "Omnider Android uygulaması Google Play üzerinden dağıtılır ve kullanıcı verileri, izinler, açık bilgilendirme ve hassas bilgilerin güvenli işlenmesi dahil Google Play Geliştirici Program Politikaları ile uyumlu olacak şekilde tasarlanmıştır.",
+          "Android izinlerini yalnızca uygulama işlevselliği için gerekli olanlarla sınırlarız, gerektiğinde uygulama içi açık bilgilendirmeler sunarız ve bu Politikayı Google Play incelemesi ve kullanıcı referansı için herkese açık şekilde erişilebilir tutarız."
+        ]
+      },
+      {
+        "id": "apple-app-store",
+        "title": "Apple App Store Review Guideline Uyumluluğu",
+        "paragraphs": [
+          "Omnider iOS uygulaması Apple App Store üzerinden dağıtılır ve gizlilik, veri toplama açıklamaları, hesap silme ve kullanıcı şeffaflığı gereklilikleri dahil Apple App Store İnceleme Yönergeleri ile uyumlu olacak şekilde tasarlanmıştır.",
+          "Apple'ın gerektirdiği durumlarda doğru gizlilik etiketleri ve uygulama içi veri kullanım açıklamaları sağlarız. Kullanıcılar bu Politikada açıklandığı şekilde hesap silme talebinde bulunabilir."
+        ]
+      },
+      {
+        "id": "meta-platform-terms",
+        "title": "Meta Platform Terms Uyumluluğu",
+        "paragraphs": [
+          "Omnider üzerinden WhatsApp Business Platform, Instagram Business Messaging veya Facebook Messenger bağladığınızda Meta Platform Terms, Geliştirici Politikaları, Ticaret Politikaları ve geçerli tüm Meta ürün koşullarına uymalısınız.",
+          "Omnider, Meta platform verilerine yalnızca sizin yetkinizle ve yalnızca yapılandırdığınız Hizmetleri sunmak amacıyla erişir. Müşterilerinizden gerekli onayları almak ve Meta API'lerini Meta kurallarına uygun kullanmak sizin sorumluluğunuzdadır."
+        ]
+      },
+      {
+        "id": "whatsapp-personal",
+        "title": "WhatsApp Personal Entegrasyonu",
+        "warning": {
+          "title": "WhatsApp Personal Hakkında Önemli Uyarı",
+          "paragraphs": [
+            "Kişisel WhatsApp hesabınızı QR kod ile Omnider'a bağlamak, Meta tarafından resmi olarak desteklenen bir yöntem değildir. Bu entegrasyon tamamen kullanıcının isteğiyle sunulmaktadır."
+          ],
+          "list": [
+            "WhatsApp veya Meta tarafından uygulanan hesap kısıtlamaları",
+            "Telefon numarası engellenmesi veya mesajlaşma yetkisinin kaybı",
+            "Geçici veya kalıcı WhatsApp yasaklamaları",
+            "Veri kayıpları, mesaj kayıpları veya senkronizasyon hataları",
+            "Hizmet kesintileri veya düşük performans"
+          ]
+        },
+        "paragraphs": [
+          "WhatsApp Personal entegrasyonunun kullanımından doğabilecek tüm risk ve sorumluluklar yalnızca size aittir. Omnider bu yöntem için kullanılabilirlik, istikrar veya süreklilik konusunda herhangi bir garanti vermez.",
+          "Omnider, profesyonel, uyumlu ve güvenilir müşteri iletişimi için mümkün olan her durumda resmi WhatsApp Business Platform kullanımını tavsiye eder."
+        ]
+      },
+      {
+        "id": "third-party-platforms",
+        "title": "Üçüncü Taraf Mesajlaşma Platformları ve API'ler",
+        "paragraphs": [
+          "Omnider üzerinden aşağıdaki hizmetlerin kullanımı, ilgili platformun kendi koşullarına, politikalarına ve geliştirici kurallarına tabidir:"
+        ],
+        "list": [
+          "WhatsApp Business Platform",
+          "Instagram Business",
+          "Facebook Messenger",
+          "Telegram",
+          "LINE"
+        ],
+        "subsections": [
+          {
+            "title": "Üçüncü Tarafların Politika Değişiklikleri",
+            "paragraphs": [
+              "Omnider; üçüncü taraf platformların politika değişiklikleri, API kısıtlamaları, fiyatlandırma güncellemeleri, kesintiler, yaptırımlar veya hesap askıya almalarından sorumlu değildir. Bağlı her platformun güncel koşullarını izlemek ve bunlara uymak sizin sorumluluğunuzdadır."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sharing",
+        "title": "Bilgileri Nasıl Paylaşıyoruz",
+        "paragraphs": [
+          "Kişisel bilgilerinizi satmayız. Bilgileri şu taraflarla paylaşabiliriz:"
+        ],
+        "list": [
+          "Bulut altyapısı, barındırma ve güvenlik sağlayıcıları",
+          "Ödeme işlemcileri ve faturalandırma ortakları",
+          "Talimatlarımız doğrultusunda hareket eden yapay zeka ve analitik hizmet sağlayıcıları (Google Workspace API verileri hariç; bu veriler yapay zeka/makine öğrenmesi sağlayıcılarıyla paylaşılmaz)",
+          "Yasal olarak gerekli olduğunda profesyonel danışmanlar, denetçiler ve resmi makamlar",
+          "Bu Politikaya tabi olmak kaydıyla birleşme, devralma veya varlık devri durumunda bağlı şirketler veya halefler"
+        ]
+      },
+      {
+        "id": "international-transfers",
+        "title": "Uluslararası Veri Aktarımları",
+        "paragraphs": [
+          "Omnider bilgileri kendi ülkenizden farklı ülkelerde işleyebilir ve saklayabilir. Gerektiğinde, geçerli veri koruma yasalarıyla uyumlu sözleşmesel korumalar ve güvenlik kontrolleri dahil sınır ötesi aktarımlar için uygun önlemler uygularız."
+        ]
+      },
+      {
+        "id": "children",
+        "title": "Çocukların Gizliliği",
+        "paragraphs": [
+          "Hizmetler işletmelere ve yetkili profesyonellere yöneliktir. 16 yaşın altındaki çocuklara yönelik değildir ve bilerek çocuklardan kişisel bilgi toplamayız. Bir çocuğun bize kişisel bilgi sağladığını düşünüyorsanız bizimle iletişime geçin; uygun silme adımlarını atarız."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Bu Politikadaki Değişiklikler",
+        "paragraphs": [
+          "Hizmetlerimizdeki, yasal gerekliliklerdeki veya sektör uygulamalarındaki değişiklikleri yansıtmak için bu Politikayı zaman zaman güncelleyebiliriz. Sayfanın üst kısmındaki \"Son güncelleme\" tarihi, Politikanın en son ne zaman revize edildiğini gösterir.",
+          "Önemli değişiklikler Hizmetler üzerinden, e-posta ile veya diğer makul yollarla bildirilir. Güncellenmiş Politikanın yürürlük tarihinden sonra Hizmetleri kullanmaya devam etmeniz, revize Politikayı kabul ettiğiniz anlamına gelir."
         ]
       }
-    ],
-    "contactTitle": "İletişim",
-    "contactBody": "Gizlilik sorularınız veya hak talepleriniz için bize yazın.",
-    "contactEmail": "privacy@omnider.com"
+    ]
   },
   "TermsOfUsePage": {
     "eyebrow": "Yasal",
     "title": "Kullanım Koşulları",
-    "subtitle": "Omnider ürünlerine, panellerine, mobil uygulamalarına ve entegre mesajlaşma hizmetlerine erişiminizi düzenleyen kurallar.",
+    "subtitle": "Omnider ürünlerine, mobil uygulamalarına, panellerine ve entegre mesajlaşma hizmetlerine erişiminizi ve kullanımınızı düzenleyen kurallar ve koşullar.",
     "lastUpdatedLabel": "Son güncelleme",
-    "lastUpdated": "2026-08-30",
+    "lastUpdated": "30 Ağustos 2026",
+    "lastUpdatedIso": "2026-08-30",
     "intro": [
-      "Bu Kullanım Koşulları, siz ile Omnider arasında Omnider Web Platformu, mobil uygulamalar, paneller, API’ler ve ilgili hizmetlerin kullanımını düzenleyen bağlayıcı bir sözleşmedir.",
-      "Hesap oluşturarak veya Hizmetleri kullanarak bu Koşulları ve Gizlilik Politikası’nı kabul etmiş olursunuz."
+      "Bu Kullanım Koşulları (\"Koşullar\"), siz (\"siz\", \"sizin\" veya \"Müşteri\") ile Omnider (\"Omnider\", \"biz\", \"bize\" veya \"bizim\") arasında Omnider Web Platformu, Google Play'deki Omnider Android uygulaması, Apple App Store'daki Omnider iOS uygulaması, Müşteri Paneli, Partner Paneli, API'ler, entegrasyonlar ve ilgili tüm hizmetlere (topluca \"Hizmetler\") erişimi ve kullanımını düzenleyen bağlayıcı bir sözleşmedir.",
+      "Hesap oluşturarak, bir panele erişerek, mobil uygulama indirerek veya Hizmetleri başka şekilde kullanarak bu Koşulları ve Gizlilik Politikamızı kabul etmiş olursunuz. Hizmetleri bir kuruluş adına kullanıyorsanız, o kuruluşu bağlama yetkisine sahip olduğunuzu beyan edersiniz."
     ],
     "sections": [
       {
-        "title": "Hizmetlerin kullanımı",
+        "id": "service-description",
+        "title": "Hizmet Tanımı",
         "paragraphs": [
-          "Hizmetleri yasalara, bu Koşullara ve bağlı üçüncü taraf platform kurallarına uygun şekilde kullanmayı kabul edersiniz."
+          "Omnider; işletmelerin müşteri konuşmalarını, otomasyonları, kampanyaları, randevuları, ekip iş akışlarını ve yapay zeka destekli yanıtları birden fazla mesajlaşma kanalından birleşik paneller üzerinden yönetmesini sağlayan bir yazılım-hizmet (SaaS) platformudur.",
+          "Hizmetler aşağıdakileri sınırlama olmaksızın kapsar:"
         ],
         "list": [
-          "Spam, yasa dışı içerik veya platform politikalarını ihlal eden kullanımlar yasaktır",
-          "Hesap güvenliğinden ve ekip üyelerinizin eylemlerinden siz sorumlusunuz",
-          "API ve entegrasyonlar hem Omnider hem ilgili platform koşullarına tabidir"
+          "Omnider Web Platformu ve kamuya açık pazarlama web sitesi",
+          "Google Play üzerinden dağıtılan Omnider Android Uygulaması",
+          "Apple App Store üzerinden dağıtılan Omnider iOS Uygulaması",
+          "Müşteri Paneli: <a href=\"https://app.omnider.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://app.omnider.com</a>",
+          "WhatsApp Business Platform, Instagram Business Messaging, Facebook Messenger, Telegram, LINE, Web Chat ve Omnider'ın gelecekte destekleyebileceği diğer resmi mesajlaşma platformları ile entegrasyonlar"
         ]
       },
       {
-        "title": "Hesaplar ve abonelik",
+        "id": "account-responsibility",
+        "title": "Hesap Sorumluluğu",
         "paragraphs": [
-          "Ücretli özellikler fiyatlandırma veya sipariş koşullarına göre faturalandırılır. Ödeme yapılmaması veya ciddi ihlallerde erişim askıya alınabilir veya sonlandırılabilir."
+          "Müşteri Paneli veya Partner Paneli'ne erişim yetkisi verdiğiniz ekip üyeleri, temsilciler, yükleniciler veya diğer kişilerin gerçekleştirdiği eylemler dahil hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz."
+        ],
+        "list": [
+          "Doğru ve güncel kayıt bilgileri sağlamak",
+          "Giriş bilgilerinin ve API anahtarlarının gizliliğini ve güvenliğini korumak",
+          "Hesap bilgileri değiştiğinde derhal güncellemek",
+          "Yetkisiz erişim veya güvenlik ihlali şüphesi durumunda Omnider'ı derhal bilgilendirmek",
+          "Her kullanıcının Hizmetlere yalnızca atadığınız yetkilerle erişmesini sağlamak"
         ]
       },
       {
-        "title": "Üçüncü taraf platformlar",
+        "id": "user-obligations",
+        "title": "Kullanıcı Yükümlülükleri",
         "paragraphs": [
-          "WhatsApp, Instagram, Messenger, Telegram ve benzeri kanallar kendi koşullarına tabidir. Platform değişiklikleri, kesintiler veya yaptırımlardan Omnider sorumlu tutulamaz."
+          "Hizmetleri yasalara, bu Koşullara ve geçerli tüm mevzuat ile üçüncü taraf platform kurallarına uygun, profesyonel ve hukuka uygun şekilde kullanmayı kabul edersiniz."
+        ],
+        "list": [
+          "Son müşteri verilerini toplamadan veya işlemeden önce gerekli tüm onayları, bilgilendirmeleri ve hukuki dayanakları sağlamak",
+          "Mesajların, kampanyaların ve otomasyonların spam karşıtı, tüketici koruma ve sektöre özel düzenlemelere uygun olmasını sağlamak",
+          "Yalnızca mesaj gönderme veya saklama hakkına sahip olduğunuz iletişim verilerini kullanmak",
+          "Yapay zeka ve otomasyon özelliklerini sorumlu şekilde yapılandırmak ve uygun olduğu durumlarda çıktıları müşteriye iletmeden önce incelemek",
+          "Ortak gelen kutusu ve yönetim araçlarını kullanan personeliniz için yeterli iç politikalara sahip olmak"
         ]
       },
       {
-        "title": "Fikri mülkiyet",
+        "id": "prohibited-uses",
+        "title": "Yasak Kullanımlar",
         "paragraphs": [
-          "Omnider yazılımı, markası ve dokümantasyonu Omnider’a aittir. Bu Koşullar size mülkiyet hakkı vermez; yalnızca Hizmetleri kullanma lisansı sağlar."
+          "Hizmetleri yasadışı, zararlı, taciz edici, aldatıcı veya hak ihlali içeren faaliyetlerde kullanamazsınız. Yasak kullanımlar aşağıdakileri sınırlama olmaksızın içerir:"
+        ],
+        "list": [
+          "Spam, istenmeyen toplu mesajlar veya dolandırıcılık amaçlı iletişim göndermek",
+          "Taciz, nefret söylemi, tehdit, sömürü veya yasadışı içerik dağıtımı",
+          "Kimlik taklidi, oltalama (phishing), kötü amaçlı yazılım dağıtımı veya yetkisiz erişim girişimleri",
+          "Platform hız sınırlarını, API kısıtlamalarını veya güvenlik kontrollerini aşmaya çalışmak",
+          "Açıkça izin verilmedikçe Hizmetleri tersine mühendislik yapmak, kazımak (scrape) veya yeniden satmak",
+          "Hukuki dayanak ve uygun güvenlik önlemleri olmadan özel nitelikli verileri işlemek",
+          "Meta, Google, Apple, Telegram, LINE veya diğer bağlı platform politikalarını ihlal eden her türlü faaliyet"
+        ],
+        "subsections": [
+          {
+            "title": "Uygulama ve Yaptırım",
+            "paragraphs": [
+              "Şüpheli ihlalleri inceleyebilir ve kullanıcıları, ortakları, platform bütünlüğünü veya yasal uyumluluğu korumak için gerekli olduğunda erişimi askıya alabilir veya sonlandırabiliriz."
+            ]
+          }
         ]
       },
       {
-        "title": "Sorumluluk sınırı ve uygulanacak hukuk",
+        "id": "api-usage",
+        "title": "API Kullanımı",
         "paragraphs": [
-          "Hizmetler “olduğu gibi” sunulur. Zorunlu tüketici hakları saklı kalmak kaydıyla, Omnider’ın sorumluluğu yürürlükteki yasaların izin verdiği ölçüde sınırlıdır. Bu Koşullar Türkiye Cumhuriyeti hukukuna tabidir; zorunlu kurallar saklıdır."
+          "Bazı özellikler Omnider veya üçüncü taraf mesajlaşma platformları tarafından sağlanan API'lere dayanır. Bu API'lerin kullanımı hem bu Koşullara hem de ilgili platformun kendi geliştirici koşullarına tabidir."
+        ],
+        "list": [
+          "WhatsApp Business Platform — Meta Platform Terms ve WhatsApp Business politikalarına tabidir",
+          "Instagram Business — Meta Platform Terms ve Instagram API politikalarına tabidir",
+          "Facebook Messenger — Meta Platform Terms ve Messenger Platform politikalarına tabidir",
+          "Telegram — Telegram Bot API Hizmet Koşulları ve geçerli Telegram politikalarına tabidir",
+          "LINE — LINE Developers koşulları ve Messaging API politikalarına tabidir"
+        ],
+        "subsections": [
+          {
+            "title": "Üçüncü Taraf Politika Değişiklikleri",
+            "paragraphs": [
+              "Omnider; üçüncü taraf platformların politika değişiklikleri, API kısıtlamaları, fiyatlandırma güncellemeleri, kesintiler, yaptırımlar veya hesap askıya almalarından sorumlu değildir. Bağlı her platformun güncel koşullarını izlemek ve bunlara uymak sizin sorumluluğunuzdadır."
+            ]
+          },
+          {
+            "title": "API Limitleri ve Adil Kullanım",
+            "paragraphs": [
+              "Yayınlanan hız sınırlarına, mesaj kotalarına, webhook gerekliliklerine ve teknik dokümantasyona uymalısınız. Aşırı veya kötüye kullanım amaçlı API kullanımı kısıtlamaya, askıya almaya veya erişimin sonlandırılmasına yol açabilir."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "third-party-services",
+        "title": "Üçüncü Parti Servisler",
+        "paragraphs": [
+          "Hizmetler; üçüncü taraf platformlar, ödeme işlemcileri, analitik araçlar, yapay zeka sağlayıcıları, barındırma sağlayıcıları ve diğer harici hizmetlerle birlikte çalışabilir. Omnider üçüncü taraf hizmetleri kontrol etmez ve bunların kullanılabilirliği, güvenlik uygulamaları veya politika değişikliklerinden sorumlu değildir.",
+          "Üçüncü taraf sağlayıcılarla ilişkiniz kendi koşullarına tabidir. Bir üçüncü taraf hesabını Omnider'a bağlamak, Omnider'ı o sağlayıcının eylemlerinden veya yaptırım kararlarından sorumlu kılmaz."
+        ]
+      },
+      {
+        "id": "ai-features",
+        "title": "Yapay Zeka Özellikleri",
+        "paragraphs": [
+          "Omnider; yapay zeka tarafından üretilen öneriler, sınıflandırmalar, özetler, transkriptler, çeviriler veya otomatik yanıtlar sunabilir. Yapay zeka çıktıları olasılıksaldır ve belirli bağlamlar için eksik, hatalı veya uygun olmayabilir."
+        ],
+        "list": [
+          "Son müşterilere gönderilen mesajlar ve kararlardan yalnızca siz sorumlusunuz",
+          "Yasa veya işletme politikası insan değerlendirmesi gerektirdiğinde yapay zeka tarafından üretilen içeriği incelemelisiniz",
+          "Nitelikli insan incelemesi olmadan tıbbi, hukuki, finansal veya güvenlik açısından kritik konularda yapay zeka çıktılarına güvenmemelisiniz",
+          "Omnider yapay zeka özelliklerinin hatasız, kesintisiz veya her kullanım senaryosu için uygun olacağını garanti etmez"
+        ]
+      },
+      {
+        "id": "google-integrations-ai",
+        "title": "Google Entegrasyonları ve Yapay Zeka Hizmetleri",
+        "paragraphs": [
+          "Omnider, Google Workspace entegrasyonları (Google Sheets, Google Drive ve Google Calendar dahil) sunabilir ve bunlardan ayrı olarak yapay zeka destekli mesajlaşma özellikleri sağlayabilir. Bunlar birbirinden ayrı hizmet akışlarıdır."
+        ],
+        "list": [
+          "Google entegrasyonları yalnızca sizin Google OAuth üzerinden açıkça yetkilendirmenizden sonra kullanılır",
+          "Yalnızca hukuki yetkiye sahip olduğunuz Google hesaplarını ve kaynaklarını bağlayabilirsiniz",
+          "Google entegrasyonlarıyla alınan veriler; yapay zeka veya makine öğrenmesi modellerini geliştirmek, eğitmek, fine-tune etmek, test etmek veya iyileştirmek amacıyla kullanılmaz",
+          "Google Workspace API verileri OpenRouter’a veya başka herhangi bir üçüncü taraf yapay zeka/makine öğrenmesi sağlayıcısına aktarılmaz ve yapay zeka istemlerine veya chatbot konuşmalarına dahil edilmez",
+          "Yapay zeka destekli mesajlaşma ile Google entegrasyonları ayrı hizmet akışları olarak çalışır",
+          "Google entegrasyonunun bağlantısını istediğiniz zaman kaldırabilirsiniz; bağlantının kaldırılması gelecekteki API erişimini ve senkronizasyonu durdurur",
+          "Omnider’a aktardığınız veya Omnider üzerinden Google’a gönderdiğiniz tüm veriler için gerekli hukuki yetkiye sahip olmanız gerekir"
+        ]
+      },
+      {
+        "id": "whatsapp-personal",
+        "title": "WhatsApp Personal Entegrasyonu",
+        "warning": {
+          "title": "WhatsApp Personal Hakkında Önemli Uyarı",
+          "paragraphs": [
+            "Kişisel WhatsApp hesabınızı QR kod ile Omnider'a bağlamak, Meta tarafından resmi olarak desteklenen bir yöntem değildir. Bu entegrasyon tamamen kullanıcının isteğiyle sunulmaktadır."
+          ],
+          "list": [
+            "WhatsApp veya Meta tarafından uygulanan hesap kısıtlamaları",
+            "Telefon numarası engellenmesi veya mesajlaşma yetkisinin kaybı",
+            "Geçici veya kalıcı WhatsApp yasaklamaları",
+            "Veri kayıpları, mesaj kayıpları veya senkronizasyon hataları",
+            "Hizmet kesintileri veya düşük performans"
+          ]
+        },
+        "paragraphs": [
+          "WhatsApp Personal entegrasyonunun kullanımından doğabilecek tüm risk ve sorumluluklar yalnızca size aittir. Omnider bu yöntem için kullanılabilirlik, istikrar veya süreklilik konusunda herhangi bir garanti vermez.",
+          "Omnider, profesyonel, uyumlu ve güvenilir müşteri iletişimi için mümkün olan her durumda resmi WhatsApp Business Platform kullanımını tavsiye eder."
+        ]
+      },
+      {
+        "id": "service-interruptions",
+        "title": "Hizmet Kesintileri",
+        "paragraphs": [
+          "Güvenilir Hizmetler sunmak için çalışırız; ancak kesintisiz kullanılabilirlik garanti edilmez. Hizmetler bakım, yükseltme, altyapı arızaları, üçüncü taraf platform kesintileri, internet aksaklıkları, mücbir sebep olayları veya güvenlik olayları nedeniyle kullanılamayabilir.",
+          "Omnider, geçerli yasaların açıkça gerektirdiği durumlar dışında hizmet kesintilerinden kaynaklanan gecikmeler, mesaj kayıpları, senkronizasyon hataları veya iş etkilerinden sorumlu değildir."
+        ]
+      },
+      {
+        "id": "limitation-of-liability",
+        "title": "Sorumluluk Sınırı",
+        "paragraphs": [
+          "Geçerli yasaların izin verdiği azami ölçüde Omnider ve bağlı şirketleri, yöneticileri, çalışanları ve tedarikçileri; Hizmetlerden kaynaklanan veya bunlarla ilgili dolaylı, arızi, özel, sonuç olarak ortaya çıkan, örnek veya cezai zararlardan ya da kâr, gelir, veri, itibar veya iş fırsatı kayıplarından sorumlu tutulamaz.",
+          "Hizmetlerden kaynaklanan herhangi bir talep için Omnider'ın toplam sorumluluğu, talebe yol açan olaydan önceki on iki (12) ay içinde Omnider'a ödediğiniz tutarı veya ücret ödenmemişse yüz ABD dolarını (100 USD) aşmayacaktır; hangisi daha yüksekse o uygulanır.",
+          "Bazı yargı bölgeleri belirli sorumluluk sınırlamalarına izin vermez; bu durumlarda yukarıdaki sınırlamalar yalnızca yasaların izin verdiği ölçüde geçerlidir."
+        ]
+      },
+      {
+        "id": "termination",
+        "title": "Fesih",
+        "paragraphs": [
+          "Hizmetleri istediğiniz zaman kullanmayı bırakabilir ve ödenmemiş yükümlülükler ile geçerli saklama gerekliliklerine tabi olarak hesap kapatma talebinde bulunabilirsiniz.",
+          "Bu Koşulları esaslı şekilde ihlal etmeniz, yasal veya platform riski oluşturmanız, geçerli ücretleri ödememeniz veya yasa ya da üçüncü taraf platform sağlayıcısı tarafından gerekli görülmesi halinde Omnider erişiminizi derhal askıya alabilir veya sonlandırabilir."
+        ],
+        "list": [
+          "Fesih üzerine Hizmetlere erişim hakkınız sona erer",
+          "Vadesi gelmiş ücretler ödenmeye devam eder",
+          "Niteliği gereği fesihten sonra da geçerli olması gereken hükümler (fikri mülkiyet, sorumluluk sınırı ve uygulanacak hukuk dahil) yürürlükte kalır"
+        ]
+      },
+      {
+        "id": "pricing",
+        "title": "Ücretlendirme",
+        "paragraphs": [
+          "Ücretli özellikler; fiyatlandırma sayfalarımızda, sipariş formlarında veya uygulama içi faturalandırma ekranlarında açıklanan abonelik veya kullanım bazlı koşullarla sunulur. Abone olarak Omnider ve ödeme ortaklarının geçerli ücretleri, vergileri ve aşım bedellerini tahsil etmesine yetki verirsiniz."
+        ],
+        "list": [
+          "Ücretler seçtiğiniz plana göre peşin veya dönem sonunda tahsil edilir",
+          "Aksi belirtilmedikçe abonelikler iptal edilene kadar otomatik yenilenir",
+          "Fiyat değişiklikleri yasa veya sözleşme gerektirdiği durumlarda önceden bildirilir",
+          "İade, varsa plan koşullarına ve geçerli tüketici koruma kurallarına göre sağlanır",
+          "Ödeme yapılmaması Hizmetlerin askıya alınmasına veya düşürülmesine yol açabilir"
+        ]
+      },
+      {
+        "id": "intellectual-property",
+        "title": "Fikri Mülkiyet",
+        "paragraphs": [
+          "Omnider ve lisans verenleri; Hizmetler, yazılım, marka, dokümantasyon ve ilgili fikri mülkiyet üzerindeki tüm haklara sahiptir. Bu Koşullar size Hizmetler üzerinde herhangi bir mülkiyet hakkı vermez.",
+          "Gönderdiğiniz içerik ve verilerin mülkiyeti size aittir; Omnider'ın içeriği barındırması, işlemesi, iletmesi ve görüntülemesi için gerekli lisans sınırları saklıdır. Omnider'a içeriğinizi yalnızca hizmet sunumu, destek, güvenlik ve yasal uyumluluk amacıyla kullanmak üzere münhasır olmayan, dünya çapında, telifsiz bir lisans verirsiniz."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Değişiklik Hakkı",
+        "paragraphs": [
+          "Omnider Hizmetleri, bu Koşulları veya ilgili politikaları zaman zaman değiştirebilir. Önemli değişiklikler Hizmetler üzerinden, e-posta ile veya diğer makul yollarla bildirilir. Sayfanın üst kısmındaki \"Son güncelleme\" tarihi bu Koşulların en son ne zaman revize edildiğini gösterir.",
+          "Güncellenmiş Koşulların yürürlük tarihinden sonra Hizmetleri kullanmaya devam etmeniz, revize Koşulları kabul ettiğiniz anlamına gelir. Kabul etmiyorsanız Hizmetleri kullanmayı bırakmalı ve hesap kapatma talebinde bulunmalısınız."
+        ]
+      },
+      {
+        "id": "governing-law",
+        "title": "Uygulanacak Hukuk",
+        "paragraphs": [
+          "Bu Koşullar, ikamet ettiğiniz ülkenin zorunlu tüketici koruma yasaları aksini öngörmedikçe, kanunlar ihtilafı kurallarına bakılmaksızın Türkiye Cumhuriyeti kanunlarına tabidir.",
+          "Bu Koşullardan kaynaklanan veya bunlarla ilgili uyuşmazlıklarda İstanbul mahkemeleri münhasır yargı yetkisine sahiptir; geçerli yasaların ikamet ülkenizde dava açma hakkınızı zorunlu kıldığı durumlar saklıdır."
+        ]
+      },
+      {
+        "id": "miscellaneous",
+        "title": "Çeşitli Hükümler",
+        "paragraphs": [
+          "Bu Koşulların herhangi bir hükmünün geçersiz veya uygulanamaz sayılması, kalan hükümlerin tam olarak yürürlükte kalmasını engellemez. Omnider'ın herhangi bir hakkı veya hükmü uygulamaması, o haktan veya hükümden feragat ettiği anlamına gelmez.",
+          "Bu Koşullar, Gizlilik Politikası ve sizin tarafınızdan kabul edilen sipariş formu veya plana özel koşullarla birlikte Hizmetlere ilişkin tüm anlaşmayı oluşturur ve aynı konudaki önceki anlayışların yerine geçer."
         ]
       }
-    ],
-    "contactTitle": "İletişim",
-    "contactBody": "Kullanım Koşulları hakkında sorularınız için bize yazın.",
-    "contactEmail": "legal@omnider.com"
+    ]
   },
   "ContactPage": {
     "eyebrow": "İletişim",
@@ -1040,9 +1656,18 @@
         "title": "Ödeme modeli net",
         "body": "Hazır paketlerden birini seçin; yıllık faturalamada indirim otomatik uygulanır.",
         "rows": [
-          { "label": "Sınırsız temsilci", "value": "∞" },
-          { "label": "Sınırsız departman", "value": "∞" },
-          { "label": "Kanal odaklı", "value": "10+" }
+          {
+            "label": "Sınırsız temsilci",
+            "value": "∞"
+          },
+          {
+            "label": "Sınırsız departman",
+            "value": "∞"
+          },
+          {
+            "label": "Kanal odaklı",
+            "value": "10+"
+          }
         ]
       }
     },
@@ -1220,12 +1845,30 @@
       "title": "Her pakete dahil",
       "subtitle": "Hangi planı seçerseniz seçin bu temel yetenekler yanınızda.",
       "items": [
-        { "icon": "inbox", "label": "Ortak gelen kutusu" },
-        { "icon": "ai", "label": "Yapay Zeka yanıtları" },
-        { "icon": "bot", "label": "Chatbot akışları" },
-        { "icon": "campaigns", "label": "Kampanyalar" },
-        { "icon": "reports", "label": "Raporlama" },
-        { "icon": "team", "label": "Ekip yönetimi" }
+        {
+          "icon": "inbox",
+          "label": "Ortak gelen kutusu"
+        },
+        {
+          "icon": "ai",
+          "label": "Yapay Zeka yanıtları"
+        },
+        {
+          "icon": "bot",
+          "label": "Chatbot akışları"
+        },
+        {
+          "icon": "campaigns",
+          "label": "Kampanyalar"
+        },
+        {
+          "icon": "reports",
+          "label": "Raporlama"
+        },
+        {
+          "icon": "team",
+          "label": "Ekip yönetimi"
+        }
       ]
     }
   },

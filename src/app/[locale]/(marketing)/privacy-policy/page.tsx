@@ -1,6 +1,9 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { LegalDocument } from "@/components/legal/LegalDocument";
-import { Container } from "@/components/layout/Container";
+import {
+  LegalDocument,
+  type LegalSection,
+} from "@/components/legal/LegalDocument";
+import "@/components/legal/legal.css";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -16,26 +19,17 @@ export async function generateMetadata() {
 
 export default async function PrivacyPolicyPage() {
   const t = await getTranslations("PrivacyPolicyPage");
-  const sections = t.raw("sections") as Array<{
-    title: string;
-    paragraphs?: string[];
-    list?: string[];
-  }>;
 
   return (
-    <Container as="section" className="section-sm">
-      <LegalDocument
-        eyebrow={t("eyebrow")}
-        title={t("title")}
-        subtitle={t("subtitle")}
-        lastUpdatedLabel={t("lastUpdatedLabel")}
-        lastUpdated={t("lastUpdated")}
-        intro={t.raw("intro") as string[]}
-        sections={sections}
-        contactTitle={t("contactTitle")}
-        contactBody={t("contactBody")}
-        contactEmail={t("contactEmail")}
-      />
-    </Container>
+    <LegalDocument
+      eyebrow={t("eyebrow")}
+      title={t("title")}
+      subtitle={t("subtitle")}
+      lastUpdatedLabel={t("lastUpdatedLabel")}
+      lastUpdated={t("lastUpdated")}
+      lastUpdatedIso={t("lastUpdatedIso")}
+      intro={t.raw("intro") as string[]}
+      sections={t.raw("sections") as LegalSection[]}
+    />
   );
 }

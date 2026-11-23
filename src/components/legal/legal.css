@@ -1,0 +1,113 @@
+/* Prose + list fixes only — layout comes from Container + .section */
+
+.legal-prose {
+  color: #334155;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.legal-prose > p {
+  margin: 0 0 1.05rem;
+}
+
+.legal-prose__section {
+  margin-top: 2.75rem;
+  scroll-margin-top: 6rem;
+}
+
+.legal-prose__section > h2 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #0f172a;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.legal-prose__section > p,
+.legal-prose__subsection > p {
+  margin: 0 0 0.9rem;
+}
+
+.legal-prose__subsection {
+  margin-top: 1.65rem;
+}
+
+.legal-prose__subsection > h3 {
+  margin: 0 0 0.7rem;
+  color: #0f172a;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+/* Tailwind preflight resets list styles */
+.legal-list {
+  margin: 0.85rem 0 1.15rem;
+  padding-left: 1.5rem;
+  list-style-position: outside;
+}
+
+.legal-list:not(.legal-list--ol) {
+  list-style-type: disc;
+}
+
+.legal-list--ol {
+  list-style-type: decimal;
+}
+
+.legal-list > li {
+  display: list-item;
+  margin-bottom: 0.5rem;
+  padding-left: 0.15rem;
+  line-height: 1.7;
+}
+
+.legal-list > li::marker {
+  color: #64748b;
+}
+
+.legal-prose a,
+.legal-list a {
+  color: var(--color-brand-600, #4f46e5);
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.legal-prose a:hover,
+.legal-list a:hover {
+  text-decoration: underline;
+}
+
+.legal-prose strong,
+.legal-list strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.legal-prose__warning {
+  margin: 1.25rem 0;
+  border: 1px solid #fde68a;
+  border-radius: 1rem;
+  background: #fffbeb;
+  padding: 1.1rem 1.2rem;
+  color: #92400e;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.legal-prose__warning p {
+  margin: 0.55rem 0 0;
+}
+
+.legal-prose__warning .legal-list {
+  margin-top: 0.65rem;
+  margin-bottom: 0;
+}
+
+.legal-prose__warning .legal-list > li::marker {
+  color: #b45309;
+}

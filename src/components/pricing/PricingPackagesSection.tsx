@@ -17,6 +17,7 @@ import {
 import {
   formatMoney,
   formatQuota,
+  monthlyDisplayMinor,
   packageQuotas,
   yearlyDiscountPercent,
 } from "@/lib/pricing/format";
@@ -132,8 +133,12 @@ export function PricingPackagesSection({
           id: `pkg-${pkg.code}`,
           name,
           subtitle: name,
-          price: formatMoney(pkg.selected_price_minor, currency, locale),
-          period: billing === "yearly" ? t("card.perYear") : t("card.perMonth"),
+          price: formatMoney(
+            monthlyDisplayMinor(pkg.selected_price_minor, billing),
+            currency,
+            locale,
+          ),
+          period: t("card.perMonth"),
           description,
           badge: badge ? { text: badge } : undefined,
           features,
@@ -182,38 +187,39 @@ export function PricingPackagesSection({
 
   return (
     <section id="packages" className="pricing-packages">
+      {pending ? (
+        <p className="pricing-packages__status">
+          <LoaderCircle className="size-4 animate-spin" aria-hidden />
+          {t("card.loading")}
+        </p>
+      ) : null}
+
+      {error && packages.length === 0 ? (
+        <div className="pricing-packages__error" role="alert">
+          <h3>{t("card.errorTitle")}</h3>
+          <p>{t("card.errorDesc")}</p>
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => reload(billing)}
+          >
+            <RefreshCw className="size-4" aria-hidden />
+            {t("card.retry")}
+          </button>
+        </div>
+      ) : (
+        <AdaptivePricingSection
+          title={t("title")}
+          subtitle={t("subtitle")}
+          highlightsLabel={t("card.highlights")}
+          tiers={tiers}
+          pending={pending}
+          controls={billingControls}
+          wide
+        />
+      )}
+
       <Container>
-        {pending ? (
-          <p className="pricing-packages__status">
-            <LoaderCircle className="size-4 animate-spin" aria-hidden />
-            {t("card.loading")}
-          </p>
-        ) : null}
-
-        {error && packages.length === 0 ? (
-          <div className="pricing-packages__error" role="alert">
-            <h3>{t("card.errorTitle")}</h3>
-            <p>{t("card.errorDesc")}</p>
-            <button
-              type="button"
-              className="btn-secondary"
-              onClick={() => reload(billing)}
-            >
-              <RefreshCw className="size-4" aria-hidden />
-              {t("card.retry")}
-            </button>
-          </div>
-        ) : (
-          <AdaptivePricingSection
-            title={t("title")}
-            subtitle={t("subtitle")}
-            highlightsLabel={t("card.highlights")}
-            tiers={tiers}
-            pending={pending}
-            controls={billingControls}
-          />
-        )}
-
         <PricingCompareTable
           compareData={compare}
           packages={packages}
