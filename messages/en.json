@@ -2626,6 +2626,49 @@
         }
       }
     },
+    "interactive": {
+      "eyebrow": "Interactive DM",
+      "title": "Quick replies, ice breakers, and product cards",
+      "subtitle": "Use Instagram Messaging interactions so shoppers tap instead of typing — and Omnider continues the flow.",
+      "tabsLabel": "Message type",
+      "tabs": {
+        "quick": "Quick reply",
+        "ice": "Ice breaker",
+        "card": "Product card"
+      },
+      "cards": {
+        "quick": "Chips under the message. Shoppers tap without typing; the choice hits your webhook.",
+        "ice": "Starter questions when the chat opens. You steer the first message.",
+        "card": "Image + title + buttons. Link or postback into catalog and cart."
+      },
+      "note": "Quick replies, ice breakers, and generic templates are Instagram Messaging API types. WhatsApp list messages are not available here.",
+      "phone": {
+        "name": "Atelier No.4",
+        "status": "Active now"
+      },
+      "quick": {
+        "prompt": "How can we help?",
+        "options": ["Price", "Stock", "Store"],
+        "follow": "Headphones 1,249 TRY · in stock. Reply for details."
+      },
+      "ice": {
+        "intro": "Hi! Pick a question to get started.",
+        "questions": [
+          "See products",
+          "Shipping time",
+          "Returns",
+          "Talk to agent"
+        ],
+        "picked": "See products",
+        "follow": "Sending three featured products as cards."
+      },
+      "card": {
+        "title": "Yellow headphones",
+        "subtitle": "1,249 TRY · in stock",
+        "buttons": ["Open site", "Ask in DM"]
+      },
+      "badge": "Instagram Messaging · interactive"
+    },
     "moderation": {
       "eyebrow": "Moderation",
       "title": "Hide, delete, or hand to the bot",

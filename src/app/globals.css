@@ -7223,6 +7223,293 @@
   }
 }
 
+.ig-interactive__tabs {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .ig-interactive__tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+}
+
+.ig-interactive__stage {
+  width: min(100%, 22.5rem);
+}
+
+.ig-interactive__screen {
+  overflow: hidden;
+  border-radius: 1.35rem;
+  border: 1px solid var(--color-line);
+  background: #fff;
+  box-shadow: 0 18px 40px -28px rgb(131 58 180 / 0.28);
+}
+
+.ig-interactive__topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.75rem 0.9rem;
+}
+
+.ig-interactive__avatar {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ig-purple) 12%, white);
+  box-shadow: inset 0 0 0 1px var(--color-line);
+}
+
+.ig-interactive__chat {
+  min-height: 22rem;
+  background:
+    radial-gradient(
+      120% 80% at 0% 0%,
+      color-mix(in srgb, var(--ig-purple) 8%, transparent),
+      transparent 55%
+    ),
+    #fafafa;
+  padding: 0.85rem;
+}
+
+.ig-interactive__scene {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.ig-interactive__bubble {
+  max-width: 88%;
+  border-radius: 1.1rem;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.ig-interactive__bubble.is-in {
+  align-self: flex-start;
+  background: #fff;
+  color: var(--color-ink);
+  box-shadow: inset 0 0 0 1px var(--color-line);
+  border-bottom-left-radius: 0.35rem;
+}
+
+.ig-interactive__bubble.is-out {
+  align-self: flex-end;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--ig-purple) 88%, #fff),
+    color-mix(in srgb, var(--ig-pink) 70%, #833ab4)
+  );
+  color: #fff;
+  border-bottom-right-radius: 0.35rem;
+}
+
+.ig-interactive__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-left: 0.15rem;
+}
+
+.ig-interactive__chip,
+.ig-interactive__ice-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--ig-purple) 28%, transparent);
+  background: #fff;
+  padding: 0.4rem 0.75rem;
+  color: var(--ig-purple);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.ig-interactive__chip.is-hit,
+.ig-interactive__ice-item.is-hit {
+  animation: ig-interactive-tap 480ms ease both;
+  animation-delay: 420ms;
+}
+
+.ig-interactive__ice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-self: stretch;
+}
+
+.ig-interactive__ice-item {
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 0.85rem;
+}
+
+.ig-interactive__card {
+  overflow: hidden;
+  align-self: stretch;
+  border-radius: 1rem;
+  border: 1px solid var(--color-line);
+  background: #fff;
+}
+
+.ig-interactive__card-media {
+  aspect-ratio: 16 / 10;
+  background: #f4f4f5;
+}
+
+.ig-interactive__card-body {
+  padding: 0.7rem 0.8rem 0.35rem;
+}
+
+.ig-interactive__card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.45rem 0.7rem 0.75rem;
+}
+
+.ig-interactive__card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--ig-purple) 22%, transparent);
+  background: color-mix(in srgb, var(--ig-purple) 8%, white);
+  padding: 0.5rem 0.7rem;
+  color: var(--ig-purple);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.ig-interactive__card-btn.is-primary {
+  border-color: transparent;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--ig-purple) 92%, #fff),
+    color-mix(in srgb, var(--ig-pink) 65%, #833ab4)
+  );
+  color: #fff;
+}
+
+.ig-interactive__ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  background: rgb(131 58 180 / 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.35);
+}
+
+.ig-interactive__chip.is-hit .ig-interactive__ripple,
+.ig-interactive__ice-item.is-hit .ig-interactive__ripple {
+  animation: ig-interactive-ripple 560ms ease-out both;
+  animation-delay: 420ms;
+}
+
+.ig-interactive__badge {
+  margin: 0.85rem 0 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.ig-interactive__card.is-rise,
+.ig-interactive__bubble.is-rise,
+.ig-interactive__chips.is-rise,
+.ig-interactive__ice.is-rise {
+  animation: ig-interactive-rise 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ig-interactive__chips.is-late,
+.ig-interactive__ice.is-late,
+.ig-interactive__bubble.is-late {
+  animation-delay: 380ms;
+}
+
+.ig-interactive__bubble.is-late2 {
+  animation-delay: 980ms;
+}
+
+.ig-interactive__bubble.is-from-right {
+  animation: ig-interactive-from-right 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 720ms;
+}
+
+@keyframes ig-interactive-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ig-interactive-from-right {
+  from {
+    opacity: 0;
+    transform: translate(12px, 6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ig-interactive-tap {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ig-interactive-ripple {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ig-interactive__card,
+  .ig-interactive__bubble,
+  .ig-interactive__chips,
+  .ig-interactive__ice,
+  .ig-interactive__chip,
+  .ig-interactive__ice-item,
+  .ig-interactive__ripple {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 .ig-moderation__widget,
 .ig-publish__widget,
 .ig-ad-referral__ad,

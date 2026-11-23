@@ -2626,6 +2626,49 @@
         }
       }
     },
+    "interactive": {
+      "eyebrow": "Etkileşimli DM",
+      "title": "Hızlı cevap, ice breaker ve ürün kartı",
+      "subtitle": "Instagram Messaging’in desteklediği etkileşimlerle müşteri dokunur; seçim Omnider akışına düşer.",
+      "tabsLabel": "Mesaj türü",
+      "tabs": {
+        "quick": "Hızlı cevap",
+        "ice": "Ice breaker",
+        "card": "Ürün kartı"
+      },
+      "cards": {
+        "quick": "Mesaj altında chip’ler. Müşteri yazmadan dokunur; seçim webhook’a gider.",
+        "ice": "Sohbet açılışında hazır sorular. İlk mesajı siz yönlendirirsiniz.",
+        "card": "Görsel + başlık + buton. Link veya postback ile katalog ve sepete bağlanır."
+      },
+      "note": "Quick reply, ice breaker ve generic template Instagram Messaging API türleridir. WhatsApp liste mesajı burada yok.",
+      "phone": {
+        "name": "Atölye No.4",
+        "status": "Active now"
+      },
+      "quick": {
+        "prompt": "Nasıl yardımcı olalım?",
+        "options": ["Fiyat", "Stok", "Mağaza"],
+        "follow": "Kulaklık 1.249 TL · stokta. Detay için yazabilirsiniz."
+      },
+      "ice": {
+        "intro": "Merhaba! Başlamak için bir soru seçin.",
+        "questions": [
+          "Ürünleri gör",
+          "Kargo süresi",
+          "İade politikası",
+          "Temsilciye bağlan"
+        ],
+        "picked": "Ürünleri gör",
+        "follow": "Öne çıkan 3 ürünü kart olarak gönderiyorum."
+      },
+      "card": {
+        "title": "Sarı kulaklık",
+        "subtitle": "1.249 TL · stokta",
+        "buttons": ["Siteye git", "DM’den sor"]
+      },
+      "badge": "Instagram Messaging · etkileşimli"
+    },
     "moderation": {
       "eyebrow": "Moderasyon",
       "title": "Yorumları gizle, sil, bot’a bırak",
