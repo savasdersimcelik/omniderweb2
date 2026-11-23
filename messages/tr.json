@@ -2503,6 +2503,301 @@
       }
     }
   },
+  "PlatformWhatsAppPersonal": {
+    "meta": {
+      "title": "WhatsApp Personal Entegrasyonu — Omnider",
+      "description": "Kişisel WhatsApp’ı QR ile bağlayın. Ortak mesaj kutusu, Yapay Zeka yanıt, chatbot ve ekip araçları tek panelde."
+    },
+    "hero": {
+      "badge": "WhatsApp Personal",
+      "titleLine1": "Müşteri yazsın,",
+      "titleLine2": "yapay zeka yanıtlasın",
+      "description": "QR kod ile numaranızı bağlayın; ortak gelen kutusu, yapay zeka yanıtları ve chatbot otomasyonunu Omnider ile tek platformda kullanın.",
+      "chat": {
+        "businessName": "Atölye Selin",
+        "online": "çevrimiçi",
+        "typing": "yazıyor…",
+        "transfer": "Konuşma temsilciye aktarıldı",
+        "aiLabel": "Yapay zeka",
+        "agentLabel": "Temsilci",
+        "customerName": "Ayşe Yılmaz",
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "WhatsApp gelen kutusu",
+        "searchPlaceholder": "Sohbet ara",
+        "composerPlaceholder": "Bir mesaj yazın",
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Merhaba, yarın müsait misiniz?"
+          },
+          {
+            "kind": "typing"
+          },
+          {
+            "kind": "ai",
+            "text": "Merhaba! Yarın 10:00 ve 14:00 müsait. Hangisini tercih edersiniz?"
+          },
+          {
+            "kind": "customer",
+            "text": "Birine bağlanabilir miyim?"
+          },
+          {
+            "kind": "transfer",
+            "text": "Konuşma temsilciye aktarıldı"
+          },
+          {
+            "kind": "agent",
+            "text": "Tabii — 10:00 için not aldım. Adresiniz hazır mı?"
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Merhaba, yarın müsait misiniz?",
+            "time": "14:02",
+            "unread": 1
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Fiyatı yazar mısınız?",
+            "time": "13:40",
+            "unread": 0
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Randevu almak istiyorum",
+            "time": "12:18",
+            "unread": 2
+          },
+          {
+            "name": "Burak Şen",
+            "preview": "Teşekkürler!",
+            "time": "Dün",
+            "unread": 0
+          }
+        ]
+      }
+    },
+    "connect": {
+      "eyebrow": "QR ya da kodla bağlan",
+      "title": "Telefonunuzdaki WhatsApp’ı panele taşıyın.",
+      "subtitle": "QR kodu okutun ya da telefon numaranızla 8 haneli bağlantı kodu alın. Panel bağlandığınızı kendisi fark eder; rehberiniz ve sohbetlerinizin son mesajları arka planda gelir.",
+      "tabsLabel": "Bağlantı yöntemi",
+      "tabs": {
+        "qr": "QR Kod",
+        "code": "Telefon Kodu"
+      },
+      "qrSteps": [
+        "Panelde «QR Kod ile Bağlan»a tıklayın.",
+        "Telefonda WhatsApp → Bağlı cihazlar → Cihaz bağla’yı açın.",
+        "Ekrandaki QR kodu okutun."
+      ],
+      "codeSteps": [
+        "«Telefon ile Bağlan»ı seçin, numaranızı ülke koduyla yazın.",
+        "Panel size 8 haneli bir bağlantı kodu gösterir.",
+        "WhatsApp’ta Bağlı cihazlar ekranında telefon numarasıyla bağlanmayı seçip kodu girin."
+      ],
+      "afterTitle": "Bağlanınca ne gelir?",
+      "after": [
+        "Rehberiniz kişi olarak içeri alınır.",
+        "Her sohbetin son 50 mesajı gelen kutusuna yazılır; mesaj kredisi harcanmaz, bot eski mesajlara cevap vermez.",
+        "Telefondan yazdığınız mesajlar da sohbet geçmişine düşer."
+      ],
+      "widget": {
+        "waitingQr": "Bağlantı bekleniyor… (QR okutun)",
+        "waitingCode": "Bağlantı bekleniyor… (Kodu girin)",
+        "success": "Kanal başarıyla bağlandı!",
+        "statusSync": "Senkronize…",
+        "statusReady": "Hazır",
+        "codeLabel": "Bu kodu WhatsApp’a girin",
+        "channel": "Mağaza WhatsApp",
+        "newQr": "Yeni QR Kod",
+        "check": "Bağlantıyı Kontrol Et",
+        "getCode": "Bağlantı Kodu Al",
+        "phoneMask": "+90 5•• ••• •• 41",
+        "codeValue": "K7QM2XRA",
+        "profileName": "Atölye Selin",
+        "contactsDone": "Rehber · 312 kişi ✓",
+        "messagesDone": "Sohbetler · son 50 mesaj ✓",
+        "creditNote": "Kredi harcanmadı · Bot eski mesajlara cevap vermedi"
+      },
+      "riskNote": "Not: WhatsApp Personal resmi bir Meta / WhatsApp Business API bağlantısı değildir. Oturum tabanlıdır; bağlantı kopabilir ve hesap riski taşıyabilir. Kritik işler için resmi WhatsApp Business API önerilir.",
+      "demoNote": "Görseldeki hesap ve sayılar örnektir."
+    },
+    "richMessages": {
+      "eyebrow": "Düz metinden fazlası",
+      "title": "Anket, buton ve konum gönderin",
+      "subtitle": "Müşteriye seçenekleri yazdırmayın, dokundurun. Butona bastığı, konum attığı, mesajını düzelttiği ya da emojiyle tepki verdiği her şey panelde doğru görünür.",
+      "tabsLabel": "Mesaj türü",
+      "tabs": {
+        "text": "Metin",
+        "location": "Konum",
+        "poll": "Anket",
+        "button": "Buton",
+        "document": "Dosya",
+        "sticker": "Sticker"
+      },
+      "phone": {
+        "name": "Atölye Selin",
+        "status": "çevrimiçi",
+        "text": "Merhaba, nasıl yardımcı olabilirim?",
+        "pollQuestion": "Hafta içi hangi gün gelmek istersiniz?",
+        "pollOptions": [
+          "Salı",
+          "Perşembe",
+          "Cumartesi"
+        ],
+        "buttonBody": "Nasıl devam edelim?",
+        "buttons": [
+          "Randevu al",
+          "Bizi arayın",
+          "Menüyü gör"
+        ],
+        "locationTitle": "Atölye Selin – Kadıköy",
+        "locationAddress": "Caferağa Mah. Moda Cad. No:14, Kadıköy",
+        "fileName": "atelye-menu.pdf",
+        "sticker": "🌿",
+        "edited": "düzenlendi",
+        "reaction": "👍"
+      },
+      "panel": {
+        "title": "Müşteri cevap verince panelde ne görünür?",
+        "items": {
+          "button": {
+            "title": "Butona bastı",
+            "body": "«Randevu al» seçildi, akış doğru dala geçti."
+          },
+          "location": {
+            "title": "Konum attı",
+            "body": "Harita pini ve adres sohbette görünür."
+          },
+          "edit": {
+            "title": "Mesajını düzeltti",
+            "body": "Balonda «düzenlendi» etiketi belirir."
+          },
+          "reaction": {
+            "title": "Emojiyle tepki verdi",
+            "body": "👍 mesajın altında durur; kanal ayarından kapatılabilir."
+          }
+        }
+      },
+      "note": "En fazla 3 buton · 25 karakter. Müşteri butonu yazıyla da seçebilir."
+    },
+    "catalog": {
+      "eyebrow": "Ürün kataloğu",
+      "title": "WhatsApp ürün kartını sohbete gönderin",
+      "subtitle": "Omnider ürünlerinizi hesabın WhatsApp ürün kataloğuyla senkronlayın. Tek ürün native kart; birden fazla ürün sipariş kartı olarak gider.",
+      "items": {
+        "sync": {
+          "title": "Katalog senkronu",
+          "body": "Omnider ürünleri hesabın yerel kataloğuna yazılır veya hesaptan içeri alınır."
+        },
+        "product": {
+          "title": "Tek ürün kartı",
+          "body": "Sohbette görsel, fiyat ve başlık native ürün kartında açılır."
+        },
+        "order": {
+          "title": "Çoklu ürün / sipariş",
+          "body": "Birden fazla ürün seçildiğinde sipariş kartı olarak gider."
+        }
+      },
+      "widget": {
+        "title": "Ürün kartı",
+        "productName": "Sarı kulaklık",
+        "price": "1.249 TL",
+        "stock": "Stokta",
+        "cta": "Sepete ekle",
+        "synced": "Katalogda senkron",
+        "orderTitle": "2 ürün · sipariş kartı"
+      },
+      "note": "Senkron yoksa düz kart veya butonla gönderilir."
+    },
+    "sharedContacts": {
+      "eyebrow": "Kişi kartları",
+      "title": "Numarayı yazıp durmayın. Paylaşılan kart, panelde kişi olur.",
+      "subtitle": "Müşteri WhatsApp’tan bir kişi kartı ya da birkaç kart birden paylaştığında Omnider kartı okur; adı, telefonu ve e-postasıyla Kişiler’e ekler.",
+      "items": [
+        "Tek kart da, toplu kart da gelir: “3 kişi” paylaşıldıysa üçü de ayrı kart.",
+        "Ad, telefon ve e-posta karttan alınır, rehberinize kaydedilir.",
+        "Karta dokunun: sohbet varsa açılır, yoksa kişi kartı açılır."
+      ],
+      "demo": {
+        "chatTitle": "Ayşe Yılmaz · WhatsApp Personal",
+        "customer": "Muhasebecimin numarası, faturayı ona da atar mısınız?",
+        "contactName": "Mehmet Kaya",
+        "contactPhone": "+90 5•• ••• 12 34",
+        "contactEmail": "mehmet@ornek.com",
+        "badge": "Paylaşılan kişi",
+        "multiLabel": "2 kişi",
+        "multi": [
+          "Elif Demir",
+          "Can Öz"
+        ],
+        "listTitle": "Kişiler",
+        "newBadge": "Yeni",
+        "channel": "WhatsApp Personal",
+        "fields": {
+          "name": "Ad",
+          "phone": "Telefon",
+          "email": "E-posta",
+          "channel": "Kanal"
+        }
+      }
+    },
+    "session": {
+      "eyebrow": "Oturum durumu",
+      "title": "Bağlantı koparsa ne olur?",
+      "subtitle": "Kanal listesinde bağlı / bağlı değil görünür. Aynı kanalı yeniden QR veya kodla bağlayın; hesap kısıtlanırsa kampanya gönderimi durur.",
+      "items": {
+        "status": {
+          "title": "Durumu her an görün",
+          "body": "«Bağlı» ya da «Bağlı Değil» yazar; «Bağlantıyı Kontrol Et» ile anında güncellersiniz."
+        },
+        "rescan": {
+          "title": "Aynı kanalı yeniden okutun",
+          "body": "Yeni kanal açmadan QR ya da kodla tekrar bağlanın; rehber ve son mesajlar yeniden çekilir."
+        },
+        "blocked": {
+          "title": "Hesap kısıtlanırsa toplu gönderim durur",
+          "body": "Kampanya ve yeni konuşma gönderimi kapanır; gelen mesajlara cevap vermeye devam edersiniz."
+        }
+      },
+      "widget": {
+        "linked": "Bağlı",
+        "unlinked": "Bağlı Değil",
+        "channel": "Mağaza WhatsApp",
+        "check": "Bağlantıyı Kontrol Et",
+        "rescan": "Yeniden bağlan"
+      },
+      "riskNote": "WhatsApp Personal oturum tabanlıdır; resmi Business API değildir. Kritik işler için WhatsApp Business API önerilir."
+    },
+    "try": {
+      "eyebrow": "Canlı deneme",
+      "title": "WhatsApp Personal’ı telefondan deneyin",
+      "body": "Türkiye, Avrupa veya ABD hattını taratın. Omnider yanıt verir; fiyat, randevu veya sipariş sorun.",
+      "cta": "WhatsApp’ta aç",
+      "lines": {
+        "turkey": {
+          "title": "Omnider Turkey",
+          "phone": "+90 546 419 94 17",
+          "ctaTitle": "Omnider Turkey WhatsApp hattını aç",
+          "imageAlt": "Omnider Turkey WhatsApp hattı için QR kod"
+        },
+        "europe": {
+          "title": "Omnider Avrupa",
+          "phone": "+44 7529 760393",
+          "ctaTitle": "Omnider Avrupa WhatsApp hattını aç",
+          "imageAlt": "Omnider Avrupa WhatsApp hattı için QR kod"
+        },
+        "usa": {
+          "title": "Omnider USA",
+          "phone": "+1 845 720 3266",
+          "ctaTitle": "Omnider USA WhatsApp hattını aç",
+          "imageAlt": "Omnider USA WhatsApp hattı için QR kod"
+        }
+      }
+    }
+  },
   "PlatformInstagram": {
     "meta": {
       "title": "Instagram DM Entegrasyonu — Omnider",
@@ -2648,7 +2943,11 @@
       },
       "quick": {
         "prompt": "Nasıl yardımcı olalım?",
-        "options": ["Fiyat", "Stok", "Mağaza"],
+        "options": [
+          "Fiyat",
+          "Stok",
+          "Mağaza"
+        ],
         "follow": "Kulaklık 1.249 TL · stokta. Detay için yazabilirsiniz."
       },
       "ice": {
@@ -2665,7 +2964,10 @@
       "card": {
         "title": "Sarı kulaklık",
         "subtitle": "1.249 TL · stokta",
-        "buttons": ["Siteye git", "DM’den sor"]
+        "buttons": [
+          "Siteye git",
+          "DM’den sor"
+        ]
       },
       "badge": "Instagram Messaging · etkileşimli"
     },

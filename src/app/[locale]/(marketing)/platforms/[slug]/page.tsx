@@ -4,6 +4,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { InstagramPage } from "@/components/platforms/instagram/InstagramPage";
 import { PlatformDetailPage } from "@/components/platforms/PlatformDetailPage";
 import { WhatsAppBusinessPage } from "@/components/platforms/whatsapp-business/WhatsAppBusinessPage";
+import { WhatsAppPersonalPage } from "@/components/platforms/whatsapp-personal/WhatsAppPersonalPage";
 import {
   isPlatformPageSlug,
   platformNavKeyBySlug,
@@ -14,6 +15,12 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 
 type PlatformSlugPageProps = {
   params: Promise<{ slug: string }>;
+};
+
+const dedicatedMetaNamespace: Record<string, string> = {
+  "whatsapp-business": "PlatformWhatsAppBusiness",
+  "whatsapp-personal": "PlatformWhatsAppPersonal",
+  instagram: "PlatformInstagram",
 };
 
 export function generateStaticParams() {
@@ -28,14 +35,9 @@ export async function generateMetadata({ params }: PlatformSlugPageProps) {
     return {};
   }
 
-  if (slug === "whatsapp-business" || slug === "instagram") {
-    const t = await getTranslations({
-      locale,
-      namespace:
-        slug === "whatsapp-business"
-          ? "PlatformWhatsAppBusiness"
-          : "PlatformInstagram",
-    });
+  const namespace = dedicatedMetaNamespace[slug];
+  if (namespace) {
+    const t = await getTranslations({ locale, namespace });
     return buildPageMetadata({
       pageKey: "platforms",
       pathname: `/platforms/${slug}`,
@@ -72,6 +74,10 @@ async function PlatformSlugContent({ params }: PlatformSlugPageProps) {
 
   if (slug === "whatsapp-business") {
     return <WhatsAppBusinessPage />;
+  }
+
+  if (slug === "whatsapp-personal") {
+    return <WhatsAppPersonalPage />;
   }
 
   if (slug === "instagram") {

@@ -2503,6 +2503,301 @@
       }
     }
   },
+  "PlatformWhatsAppPersonal": {
+    "meta": {
+      "title": "WhatsApp Personal Integration — Omnider",
+      "description": "Connect personal WhatsApp via QR. Shared inbox, AI replies, chatbot flows and team tools in one panel."
+    },
+    "hero": {
+      "badge": "WhatsApp Personal",
+      "titleLine1": "Customers write,",
+      "titleLine2": "AI replies",
+      "description": "Connect your number with a QR code — shared inbox, AI auto-replies and chatbot automation on Omnider, all in one platform.",
+      "chat": {
+        "businessName": "Selin Studio",
+        "online": "online",
+        "typing": "typing…",
+        "transfer": "Chat handed to an agent",
+        "aiLabel": "AI",
+        "agentLabel": "Agent",
+        "customerName": "Maya Rivera",
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "WhatsApp inbox",
+        "searchPlaceholder": "Search chats",
+        "composerPlaceholder": "Type a message",
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Hi, are you free tomorrow?"
+          },
+          {
+            "kind": "typing"
+          },
+          {
+            "kind": "ai",
+            "text": "Hi! Tomorrow 10:00 and 14:00 are open. Which works for you?"
+          },
+          {
+            "kind": "customer",
+            "text": "Can I talk to someone?"
+          },
+          {
+            "kind": "transfer",
+            "text": "Chat handed to an agent"
+          },
+          {
+            "kind": "agent",
+            "text": "Of course — I booked 10:00. Is your address ready?"
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Maya Rivera",
+            "preview": "Hi, are you free tomorrow?",
+            "time": "14:02",
+            "unread": 1
+          },
+          {
+            "name": "James Cole",
+            "preview": "Can you send the price?",
+            "time": "13:40",
+            "unread": 0
+          },
+          {
+            "name": "Sara Lee",
+            "preview": "I’d like to book an appointment",
+            "time": "12:18",
+            "unread": 2
+          },
+          {
+            "name": "Omar Ali",
+            "preview": "Thanks!",
+            "time": "Yesterday",
+            "unread": 0
+          }
+        ]
+      }
+    },
+    "connect": {
+      "eyebrow": "Connect with QR or a code",
+      "title": "Move the WhatsApp on your phone into the panel.",
+      "subtitle": "Scan a QR code, or get an 8-digit connection code with your phone number. The panel notices when you connect; your contacts and the latest messages arrive in the background.",
+      "tabsLabel": "Connection method",
+      "tabs": {
+        "qr": "QR Code",
+        "code": "Phone Code"
+      },
+      "qrSteps": [
+        "In the panel, click “Connect with QR Code”.",
+        "On your phone, open WhatsApp → Linked devices → Link a device.",
+        "Scan the QR code on the screen."
+      ],
+      "codeSteps": [
+        "Choose “Connect with phone” and enter your number with the country code.",
+        "The panel shows an 8-digit connection code.",
+        "In WhatsApp, on Linked devices, choose link with phone number and enter the code."
+      ],
+      "afterTitle": "What arrives once you connect?",
+      "after": [
+        "Your contacts are imported as people.",
+        "The last 50 messages of each chat land in the inbox; no message credits are used, and the bot does not reply to older messages.",
+        "Messages you send from the phone also land in the thread."
+      ],
+      "widget": {
+        "waitingQr": "Waiting for connection… (scan the QR)",
+        "waitingCode": "Waiting for connection… (enter the code)",
+        "success": "Channel connected successfully!",
+        "statusSync": "Syncing…",
+        "statusReady": "Ready",
+        "codeLabel": "Enter this code in WhatsApp",
+        "channel": "Store WhatsApp",
+        "newQr": "New QR code",
+        "check": "Check connection",
+        "getCode": "Get connection code",
+        "phoneMask": "+1 5•• ••• •• 41",
+        "codeValue": "K7QM2XRA",
+        "profileName": "Selin Studio",
+        "contactsDone": "Contacts · 312 ✓",
+        "messagesDone": "Chats · last 50 messages ✓",
+        "creditNote": "No credits used · The bot did not reply to older messages"
+      },
+      "riskNote": "Note: WhatsApp Personal is not an official Meta / WhatsApp Business API connection. It is session-based; the link can drop and may carry account risk. For critical work, use the official WhatsApp Business API.",
+      "demoNote": "The account and numbers in the preview are examples."
+    },
+    "richMessages": {
+      "eyebrow": "More than plain text",
+      "title": "Send polls, buttons, and locations",
+      "subtitle": "Don’t make customers type the options — let them tap. Every button, location, edit or emoji reaction shows up correctly in the panel.",
+      "tabsLabel": "Message type",
+      "tabs": {
+        "text": "Text",
+        "location": "Location",
+        "poll": "Poll",
+        "button": "Button",
+        "document": "File",
+        "sticker": "Sticker"
+      },
+      "phone": {
+        "name": "Selin Studio",
+        "status": "online",
+        "text": "Hi, how can I help?",
+        "pollQuestion": "Which weekday would you like to come?",
+        "pollOptions": [
+          "Tuesday",
+          "Thursday",
+          "Saturday"
+        ],
+        "buttonBody": "How should we continue?",
+        "buttons": [
+          "Book a slot",
+          "Call us",
+          "View menu"
+        ],
+        "locationTitle": "Selin Studio – Downtown",
+        "locationAddress": "14 Market Street, Suite 2",
+        "fileName": "studio-menu.pdf",
+        "sticker": "🌿",
+        "edited": "edited",
+        "reaction": "👍"
+      },
+      "panel": {
+        "title": "What shows in the panel when the customer replies?",
+        "items": {
+          "button": {
+            "title": "Tapped a button",
+            "body": "“Book a slot” was selected, and the flow took the right branch."
+          },
+          "location": {
+            "title": "Sent a location",
+            "body": "A map pin and address appear in the chat."
+          },
+          "edit": {
+            "title": "Edited a message",
+            "body": "The bubble shows an “edited” label."
+          },
+          "reaction": {
+            "title": "Reacted with an emoji",
+            "body": "👍 sits under the message; you can turn this off in channel settings."
+          }
+        }
+      },
+      "note": "Up to 3 buttons · 25 characters. Customers can also pick a button by typing."
+    },
+    "catalog": {
+      "eyebrow": "Product catalog",
+      "title": "Send a WhatsApp product card in the chat",
+      "subtitle": "Sync Omnider products with the account’s WhatsApp product catalog. One product is a native card; several become an order card.",
+      "items": {
+        "sync": {
+          "title": "Catalog sync",
+          "body": "Omnider products are written to the account catalog, or imported from it."
+        },
+        "product": {
+          "title": "Single product card",
+          "body": "Image, price and title open as a native product card in the chat."
+        },
+        "order": {
+          "title": "Multi-product / order",
+          "body": "When several products are selected, they go out as an order card."
+        }
+      },
+      "widget": {
+        "title": "Product card",
+        "productName": "Yellow headphones",
+        "price": "$49",
+        "stock": "In stock",
+        "cta": "Add to cart",
+        "synced": "Synced to catalog",
+        "orderTitle": "2 products · order card"
+      },
+      "note": "Without sync, a plain card or buttons are used instead."
+    },
+    "sharedContacts": {
+      "eyebrow": "Contact cards",
+      "title": "Stop typing the number. A shared card becomes a contact in the panel.",
+      "subtitle": "When a customer shares a contact card — or several at once — Omnider reads the card and adds the name, phone and email to Contacts.",
+      "items": [
+        "One card or a batch: if “3 contacts” were shared, each one is its own card.",
+        "Name, phone and email are taken from the card and saved to your contacts.",
+        "Tap the card: if you already have a chat, it opens. Otherwise the contact card opens."
+      ],
+      "demo": {
+        "chatTitle": "Maya Rivera · WhatsApp Personal",
+        "customer": "My accountant’s number — could you send the invoice to them too?",
+        "contactName": "Alex Morgan",
+        "contactPhone": "+1 5•• ••• 12 34",
+        "contactEmail": "alex@example.com",
+        "badge": "Shared contact",
+        "multiLabel": "2 contacts",
+        "multi": [
+          "Sara Lee",
+          "James Cole"
+        ],
+        "listTitle": "Contacts",
+        "newBadge": "New",
+        "channel": "WhatsApp Personal",
+        "fields": {
+          "name": "Name",
+          "phone": "Phone",
+          "email": "Email",
+          "channel": "Channel"
+        }
+      }
+    },
+    "session": {
+      "eyebrow": "Session status",
+      "title": "What if the connection drops?",
+      "subtitle": "The channel list shows connected / not connected. Reconnect the same channel with QR or a code; if the account is restricted, campaign sends stop.",
+      "items": {
+        "status": {
+          "title": "See the status any time",
+          "body": "“Connected” or “Not connected”; “Check connection” updates it immediately."
+        },
+        "rescan": {
+          "title": "Scan the same channel again",
+          "body": "Reconnect with QR or a code without opening a new channel; contacts and latest messages are pulled again."
+        },
+        "blocked": {
+          "title": "If the account is restricted, bulk sending stops",
+          "body": "Campaigns and new conversations stop sending; replies to incoming messages continue."
+        }
+      },
+      "widget": {
+        "linked": "Connected",
+        "unlinked": "Not connected",
+        "channel": "Store WhatsApp",
+        "check": "Check connection",
+        "rescan": "Reconnect"
+      },
+      "riskNote": "WhatsApp Personal is session-based, not the official Business API. For critical work, prefer WhatsApp Business API."
+    },
+    "try": {
+      "eyebrow": "Live test",
+      "title": "Try WhatsApp Personal from your phone",
+      "body": "Scan the Turkey, Europe or USA line. Omnider replies — ask about pricing, an appointment or an order.",
+      "cta": "Open in WhatsApp",
+      "lines": {
+        "turkey": {
+          "title": "Omnider Turkey",
+          "phone": "+90 546 419 94 17",
+          "ctaTitle": "Open the Omnider Turkey WhatsApp line",
+          "imageAlt": "QR code for the Omnider Turkey WhatsApp line"
+        },
+        "europe": {
+          "title": "Omnider Europe",
+          "phone": "+44 7529 760393",
+          "ctaTitle": "Open the Omnider Europe WhatsApp line",
+          "imageAlt": "QR code for the Omnider Europe WhatsApp line"
+        },
+        "usa": {
+          "title": "Omnider USA",
+          "phone": "+1 845 720 3266",
+          "ctaTitle": "Open the Omnider USA WhatsApp line",
+          "imageAlt": "QR code for the Omnider USA WhatsApp line"
+        }
+      }
+    }
+  },
   "PlatformInstagram": {
     "meta": {
       "title": "Instagram DM Integration — Omnider",
@@ -2648,7 +2943,11 @@
       },
       "quick": {
         "prompt": "How can we help?",
-        "options": ["Price", "Stock", "Store"],
+        "options": [
+          "Price",
+          "Stock",
+          "Store"
+        ],
         "follow": "Headphones 1,249 TRY · in stock. Reply for details."
       },
       "ice": {
@@ -2665,7 +2964,10 @@
       "card": {
         "title": "Yellow headphones",
         "subtitle": "1,249 TRY · in stock",
-        "buttons": ["Open site", "Ask in DM"]
+        "buttons": [
+          "Open site",
+          "Ask in DM"
+        ]
       },
       "badge": "Instagram Messaging · interactive"
     },

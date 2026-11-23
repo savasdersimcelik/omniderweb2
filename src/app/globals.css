@@ -7759,3 +7759,61 @@
   font-weight: 700;
   color: var(--ig-purple);
 }
+
+/* —— WhatsApp Personal platform page —— */
+.wap-connect__screen,
+.wap-session__widget,
+.wap-catalog__widget,
+.wap-contacts__widget,
+.wap-rich__screen {
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-line);
+  background: #fff;
+  box-shadow: 0 18px 40px -28px rgb(7 94 84 / 0.28);
+}
+
+.wap-rich__topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #075e54;
+  padding: 0.75rem 0.9rem;
+}
+
+.wap-rich__chat {
+  min-height: 18rem;
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgb(37 211 102 / 0.08), transparent 55%),
+    #efeae2;
+  padding: 0.85rem;
+}
+
+.wap-rich__bubble {
+  max-width: 88%;
+  border-radius: 0.85rem;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.wap-rich__bubble.is-in {
+  background: #fff;
+  color: var(--color-ink);
+  box-shadow: 0 1px 0.5px rgb(11 20 26 / 0.13);
+}
+
+.wap-rich__card {
+  max-width: 92%;
+  overflow: hidden;
+  border-radius: 0.85rem;
+  background: #fff;
+  box-shadow: 0 1px 0.5px rgb(11 20 26 / 0.13);
+}
+
+.wap-rich__meta {
+  margin-top: 0.65rem;
+  color: #667781;
+  font-size: 0.7rem;
+  font-weight: 600;
+}

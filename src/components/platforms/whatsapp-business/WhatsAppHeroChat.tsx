@@ -37,6 +37,8 @@ type WhatsAppHeroChatProps = {
   composerPlaceholder: string;
   sidebar: WaSidebarItem[];
   steps: WaHeroStep[];
+  /** Defaults to WhatsApp Business icon */
+  platformIcon?: string;
 };
 
 type Visible =
@@ -168,6 +170,7 @@ export function WhatsAppHeroChat({
   composerPlaceholder,
   sidebar,
   steps,
+  platformIcon = "/icons/platforms/whatsapp-business.png",
 }: WhatsAppHeroChatProps) {
   const [visible, setVisible] = useState<Visible[]>([]);
   const mobileThreadRef = useRef<HTMLDivElement>(null);
@@ -259,7 +262,7 @@ export function WhatsAppHeroChat({
         <div className="wa-chat__notch hero-chat__phone-notch" />
         <header className="wa-chat__topbar">
           <Image
-            src="/icons/platforms/whatsapp-business.png"
+            src={platformIcon}
             alt=""
             width={28}
             height={28}
@@ -298,7 +301,7 @@ export function WhatsAppHeroChat({
           <aside className="wa-browser-side">
             <div className="wa-browser-side__head">
               <Image
-                src="/icons/platforms/whatsapp-business.png"
+                src={platformIcon}
                 alt=""
                 width={28}
                 height={28}
