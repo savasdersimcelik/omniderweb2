@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
+import { InstagramPage } from "@/components/platforms/instagram/InstagramPage";
 import { PlatformDetailPage } from "@/components/platforms/PlatformDetailPage";
 import { WhatsAppBusinessPage } from "@/components/platforms/whatsapp-business/WhatsAppBusinessPage";
 import {
@@ -27,10 +28,13 @@ export async function generateMetadata({ params }: PlatformSlugPageProps) {
     return {};
   }
 
-  if (slug === "whatsapp-business") {
+  if (slug === "whatsapp-business" || slug === "instagram") {
     const t = await getTranslations({
       locale,
-      namespace: "PlatformWhatsAppBusiness",
+      namespace:
+        slug === "whatsapp-business"
+          ? "PlatformWhatsAppBusiness"
+          : "PlatformInstagram",
     });
     return buildPageMetadata({
       pageKey: "platforms",
@@ -68,6 +72,10 @@ async function PlatformSlugContent({ params }: PlatformSlugPageProps) {
 
   if (slug === "whatsapp-business") {
     return <WhatsAppBusinessPage />;
+  }
+
+  if (slug === "instagram") {
+    return <InstagramPage />;
   }
 
   return <PlatformDetailPage slug={slug} />;

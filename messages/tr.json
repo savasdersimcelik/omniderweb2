@@ -2502,5 +2502,247 @@
         "standard": "Yeni numara / Cloud API seçildi"
       }
     }
+  },
+  "PlatformInstagram": {
+    "meta": {
+      "title": "Instagram — Omnider",
+      "description": "Instagram DM, yorum yanıtları, moderasyon ve gönderi yayınını Omnider ile tek yerden yönetin."
+    },
+    "hero": {
+      "badge": "Instagram",
+      "titleLine1": "DM gelsin,",
+      "titleLine2": "yapay zeka yanıtlasın",
+      "description": "Instagram mesajları, yorumlar ve ekip yönetimini Omnider’da tek gelen kutuda birleştirin.",
+      "chat": {
+        "businessName": "Atölye",
+        "online": "çevrimiçi",
+        "typing": "yazıyor…",
+        "transfer": "Konuşma temsilciye aktarıldı",
+        "aiLabel": "Yapay zeka",
+        "agentLabel": "Temsilci",
+        "customerName": "Ayşe Yılmaz",
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Instagram gelen kutusu",
+        "searchPlaceholder": "Sohbet ara",
+        "composerPlaceholder": "Mesaj…",
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Merhaba, bu ürün hâlâ stokta mı?"
+          },
+          {
+            "kind": "typing"
+          },
+          {
+            "kind": "ai",
+            "text": "Merhaba! Evet, stokta. Kargo veya mağazadan alabilirsin."
+          },
+          {
+            "kind": "customer",
+            "text": "Temsilciyle konuşabilir miyim?"
+          },
+          {
+            "kind": "transfer",
+            "text": "Konuşma temsilciye aktarıldı"
+          },
+          {
+            "kind": "agent",
+            "text": "Tabii — hangi beden bakıyorsun?"
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Merhaba, bu ürün hâlâ stokta mı?",
+            "time": "14:02",
+            "unread": 1
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Story’deki indirim devam ediyor mu?",
+            "time": "13:40",
+            "unread": 0
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Sipariş numarası: #4821",
+            "time": "12:18",
+            "unread": 2
+          },
+          {
+            "name": "Burak Şen",
+            "preview": "Teşekkürler!",
+            "time": "Dün",
+            "unread": 0
+          }
+        ]
+      }
+    },
+    "comments": {
+      "eyebrow": "Yorumlar",
+      "title": "Yoruma yanıt, DM’e çekim",
+      "subtitle": "Gönderi altına gelen yorumu yapay zeka yanıtlar; uygunsa müşteriyi Instagram DM’e yönlendirir.",
+      "tabsLabel": "Senaryo",
+      "tabs": {
+        "price": "Fiyat sorusu",
+        "stock": "Stok",
+        "dm": "DM’e çağır"
+      },
+      "cards": {
+        "price": "Fiyat soran yoruma anında net cevap; stok ve varyant bilgisi eklenir.",
+        "stock": "Stokta / tükendi durumunu okur; alternatif ürün önerir.",
+        "dm": "Uygun yorumda “DM’den yazın” ile sohbeti Omnider gelen kutusuna alır."
+      },
+      "widget": {
+        "brand": "Atölye No.4",
+        "handle": "@atolye.no4",
+        "likes": "1.248 beğeni",
+        "caption": "Yeni sezon kulaklık · sarı vitrin",
+        "aiLabel": "Yapay zeka",
+        "scenes": {
+          "price": {
+            "user": "ayse.y",
+            "comment": "Fiyatı nedir?",
+            "reply": "1.249 TL · stokta. Detay için DM’den yazabilirsiniz 💬",
+            "badge": "Otomatik yanıt · DM’e yönlendirildi"
+          },
+          "stock": {
+            "user": "can.d",
+            "comment": "Siyah renk stokta mı?",
+            "reply": "Siyah stokta. Beyaz için ön sipariş açabiliriz — DM’den yazın.",
+            "badge": "Stok okundu · alternatif önerildi"
+          },
+          "dm": {
+            "user": "elif.k",
+            "comment": "Kargo ne kadar sürer?",
+            "reply": "Şehir içi 1 gün. Adresinizi DM’den alıp netleştirelim.",
+            "badge": "Yorum → DM çekimi"
+          }
+        }
+      }
+    },
+    "moderation": {
+      "eyebrow": "Moderasyon",
+      "title": "Yorumları gizle, sil, bot’a bırak",
+      "subtitle": "Spam, hakaret veya tekrarlayan yorumlar panelden yönetilir. Bot kuralları ve manuel aksiyon aynı yerde.",
+      "items": {
+        "hide": {
+          "title": "Gizle",
+          "body": "Uygunsuz yorumu gizlersiniz; gönderi temiz kalır."
+        },
+        "delete": {
+          "title": "Sil",
+          "body": "Spam veya ihlal yorumunu silersiniz; kayıt logda durur."
+        },
+        "bot": {
+          "title": "Bot kuralları",
+          "body": "Anahtar kelime ve skorla otomatik gizleme veya yanıt."
+        }
+      },
+      "widget": {
+        "title": "Yorum kuyruğu",
+        "tabs": {
+          "all": "Tümü",
+          "awaiting": "Bekleyen",
+          "hidden": "Gizli"
+        },
+        "rows": [
+          {
+            "user": "spam.bot",
+            "text": "Ucuz takipçi!!!",
+            "action": "Gizlendi"
+          },
+          {
+            "user": "ayse.y",
+            "text": "Fiyatı nedir?",
+            "action": "Yanıtlandı"
+          },
+          {
+            "user": "can_d",
+            "text": "Harika!",
+            "action": "—"
+          }
+        ]
+      }
+    },
+    "publish": {
+      "eyebrow": "Yayın",
+      "title": "Gönderiyi planla, Omnider’dan yayınla",
+      "subtitle": "Takvimden gün seçin, görsel ve metni kaydedin. Yayın izni (content_publish) açıkken Omnider Meta’ya gönderir.",
+      "items": {
+        "calendar": {
+          "title": "Takvim",
+          "body": "Haftalık ve aylık görünümde planlı gönderiler."
+        },
+        "draft": {
+          "title": "Taslak",
+          "body": "Görsel, caption ve etiketler taslakta bekler."
+        },
+        "scope": {
+          "title": "Yayın izni",
+          "body": "instagram_business_content_publish scope’u kanalda görünür."
+        }
+      },
+      "widget": {
+        "month": "Kasım 2026",
+        "weekdays": [
+          "Pzt",
+          "Sal",
+          "Çar",
+          "Per",
+          "Cum",
+          "Cmt",
+          "Paz"
+        ],
+        "scheduled": "Planlandı",
+        "draft": "Taslak",
+        "caption": "Yeni sezon · vitrin"
+      }
+    },
+    "adReferral": {
+      "eyebrow": "Reklamdan gelen mesajlar",
+      "title": "Bu DM hangi reklamdan geldi?",
+      "lead": "Reklamdaki “Mesaj Gönder” ile açılan Instagram sohbetinde reklamın başlığı, görseli ve linki durur.",
+      "note": "Click-to-Instagram reklamlarından gelen mesajlar reklam başlığı, görseli ve kaynak linkiyle gelir.",
+      "items": {
+        "card": {
+          "title": "Reklam kartı mesajın üstünde",
+          "body": "“Reklam” rozeti, görsel ve başlık ilk mesajın hemen üstünde."
+        },
+        "utm": {
+          "title": "UTM’li link",
+          "body": "Reklam kimliği UTM olarak eklenir; Analytics’te görürsünüz."
+        },
+        "contact": {
+          "title": "Kişi kartına işlenir",
+          "body": "Yönlendirme kaynağı otomatik dolar."
+        }
+      },
+      "scene": {
+        "brand": "Atölye No.4",
+        "sponsored": "Sponsorlu",
+        "send": "Mesaj Gönder",
+        "inbox": "Gelen kutusu",
+        "adBadge": "Reklam",
+        "headline": "Yaz kampanyası bu hafta",
+        "link": "omnider.com/kampanya…",
+        "bubble": "Merhaba, bu kampanya hâlâ geçerli mi?",
+        "customer": "Ayşe",
+        "referralLabel": "Yönlendirme Kaynağı",
+        "referralPrefix": "Referans",
+        "adId": "120384756"
+      },
+      "footnote": "Reklam bilgisi Meta’nın gönderdiği alanlara göre görünür."
+    },
+    "try": {
+      "eyebrow": "Canlı deneme",
+      "title": "Instagram DM’den yazın",
+      "body": "QR kodu taratın veya butona dokunun. Omnider Instagram hesabına mesaj penceresi açılır.",
+      "cardTitle": "omnider.tech",
+      "handle": "ig.me/m/omnider.tech",
+      "cta": "Instagram’da aç",
+      "ctaTitle": "Omnider Instagram hesabına mesaj aç",
+      "imageAlt": "Omnider Instagram DM için QR kod, ig.me/m/omnider.tech"
+    }
   }
 }

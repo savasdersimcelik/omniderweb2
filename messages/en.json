@@ -2502,5 +2502,247 @@
         "standard": "New number / Cloud API selected"
       }
     }
+  },
+  "PlatformInstagram": {
+    "meta": {
+      "title": "Instagram — Omnider",
+      "description": "Manage Instagram DMs, comment replies, moderation, and publishing in one Omnider inbox."
+    },
+    "hero": {
+      "badge": "Instagram",
+      "titleLine1": "DMs come in,",
+      "titleLine2": "AI replies",
+      "description": "Unify Instagram messages, comments, and your team in one Omnider inbox.",
+      "chat": {
+        "businessName": "Atelier",
+        "online": "online",
+        "typing": "typing…",
+        "transfer": "Conversation handed to an agent",
+        "aiLabel": "AI",
+        "agentLabel": "Agent",
+        "customerName": "Ayse Yilmaz",
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Instagram inbox",
+        "searchPlaceholder": "Search chats",
+        "composerPlaceholder": "Message…",
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Hi, is this still in stock?"
+          },
+          {
+            "kind": "typing"
+          },
+          {
+            "kind": "ai",
+            "text": "Hi! Yes — in stock. Ship or pick up in store."
+          },
+          {
+            "kind": "customer",
+            "text": "Can I talk to someone?"
+          },
+          {
+            "kind": "transfer",
+            "text": "Conversation handed to an agent"
+          },
+          {
+            "kind": "agent",
+            "text": "Of course — which size are you looking at?"
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayse Yilmaz",
+            "preview": "Hi, is this still in stock?",
+            "time": "14:02",
+            "unread": 1
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Is the story discount still on?",
+            "time": "13:40",
+            "unread": 0
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Order #4821",
+            "time": "12:18",
+            "unread": 2
+          },
+          {
+            "name": "Burak Sen",
+            "preview": "Thanks!",
+            "time": "Yesterday",
+            "unread": 0
+          }
+        ]
+      }
+    },
+    "comments": {
+      "eyebrow": "Comments",
+      "title": "Reply to comments, pull into DMs",
+      "subtitle": "AI replies under the post and, when it fits, steers the shopper into Instagram DM.",
+      "tabsLabel": "Scenario",
+      "tabs": {
+        "price": "Price question",
+        "stock": "Stock",
+        "dm": "Call to DM"
+      },
+      "cards": {
+        "price": "Clear price replies with stock and variant context.",
+        "stock": "Reads in-stock / sold-out and suggests alternatives.",
+        "dm": "Invites the right comments into the Omnider inbox via DM."
+      },
+      "widget": {
+        "brand": "Atelier No.4",
+        "handle": "@atelier.no4",
+        "likes": "1,248 likes",
+        "caption": "New season headphones · yellow window",
+        "aiLabel": "AI",
+        "scenes": {
+          "price": {
+            "user": "ayse.y",
+            "comment": "What's the price?",
+            "reply": "1,249 TRY · in stock. DM us for details 💬",
+            "badge": "Auto-reply · steered to DM"
+          },
+          "stock": {
+            "user": "can.d",
+            "comment": "Is black in stock?",
+            "reply": "Black is in stock. We can open preorder for white — DM us.",
+            "badge": "Stock checked · alternative offered"
+          },
+          "dm": {
+            "user": "elif.k",
+            "comment": "How long is shipping?",
+            "reply": "1 day in-city. Share your address in DM and we’ll confirm.",
+            "badge": "Comment → DM pull"
+          }
+        }
+      }
+    },
+    "moderation": {
+      "eyebrow": "Moderation",
+      "title": "Hide, delete, or hand to the bot",
+      "subtitle": "Spam and abusive comments are managed in one queue — rules and manual actions together.",
+      "items": {
+        "hide": {
+          "title": "Hide",
+          "body": "Hide unsuitable comments; keep the post clean."
+        },
+        "delete": {
+          "title": "Delete",
+          "body": "Remove spam or violations; keep a log."
+        },
+        "bot": {
+          "title": "Bot rules",
+          "body": "Keyword and score based auto-hide or reply."
+        }
+      },
+      "widget": {
+        "title": "Comment queue",
+        "tabs": {
+          "all": "All",
+          "awaiting": "Awaiting",
+          "hidden": "Hidden"
+        },
+        "rows": [
+          {
+            "user": "spam.bot",
+            "text": "Cheap followers!!!",
+            "action": "Hidden"
+          },
+          {
+            "user": "ayse.y",
+            "text": "What's the price?",
+            "action": "Replied"
+          },
+          {
+            "user": "can_d",
+            "text": "Love it!",
+            "action": "—"
+          }
+        ]
+      }
+    },
+    "publish": {
+      "eyebrow": "Publish",
+      "title": "Schedule posts from Omnider",
+      "subtitle": "Pick a day, save creative and caption. With content_publish scope, Omnider sends to Meta.",
+      "items": {
+        "calendar": {
+          "title": "Calendar",
+          "body": "Weekly and monthly views for planned posts."
+        },
+        "draft": {
+          "title": "Drafts",
+          "body": "Creative, caption, and tags wait in draft."
+        },
+        "scope": {
+          "title": "Publish scope",
+          "body": "instagram_business_content_publish stays visible on the channel."
+        }
+      },
+      "widget": {
+        "month": "November 2026",
+        "weekdays": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "scheduled": "Scheduled",
+        "draft": "Draft",
+        "caption": "New season · window"
+      }
+    },
+    "adReferral": {
+      "eyebrow": "Messages from ads",
+      "title": "Which ad started this DM?",
+      "lead": "Chats opened via Send Message keep the ad title, creative, and link.",
+      "note": "Click-to-Instagram ad messages arrive with creative, title, and source link.",
+      "items": {
+        "card": {
+          "title": "Ad card above the message",
+          "body": "Ad badge, creative, and headline sit above the first message."
+        },
+        "utm": {
+          "title": "UTM link",
+          "body": "Ad id lands as UTM for Analytics."
+        },
+        "contact": {
+          "title": "Stored on the contact",
+          "body": "Referral source fills automatically."
+        }
+      },
+      "scene": {
+        "brand": "Atelier No.4",
+        "sponsored": "Sponsored",
+        "send": "Send message",
+        "inbox": "Inbox",
+        "adBadge": "Ad",
+        "headline": "Summer campaign this week",
+        "link": "omnider.com/campaign…",
+        "bubble": "Hi, is this campaign still on?",
+        "customer": "Ayse",
+        "referralLabel": "Referral source",
+        "referralPrefix": "Referral",
+        "adId": "120384756"
+      },
+      "footnote": "Ad details appear according to the fields Meta sends."
+    },
+    "try": {
+      "eyebrow": "Live test",
+      "title": "Message us on Instagram",
+      "body": "Scan the QR code or tap the button. A message window opens for the Omnider Instagram account.",
+      "cardTitle": "omnider.tech",
+      "handle": "ig.me/m/omnider.tech",
+      "cta": "Open in Instagram",
+      "ctaTitle": "Open a message to the Omnider Instagram account",
+      "imageAlt": "QR code for Omnider Instagram DM, ig.me/m/omnider.tech"
+    }
   }
 }
