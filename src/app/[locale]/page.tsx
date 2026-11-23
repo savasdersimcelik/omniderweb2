@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { DemoRequestButton } from "@/components/demo";
 import { AiCallsSection } from "@/components/home/AiCallsSection";
+import { HeroSection } from "@/components/home/HeroSection";
 import { LanguagesSection } from "@/components/home/LanguagesSection";
 import { Container } from "@/components/layout/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -41,23 +42,7 @@ export default async function HomePage() {
         ]}
       />
 
-      <section className="section-hero">
-        <Container className="section">
-          <div className="max-w-3xl space-y-6">
-            <p className="eyebrow">{t("eyebrow")}</p>
-            <h1 className="heading-hero">{t("title")}</h1>
-            <p className="text-lead">{t("description")}</p>
-            <div className="flex flex-wrap gap-3 pt-1">
-              <DemoRequestButton source="home-hero" className="btn-primary">
-                {t("ctaPrimary")}
-              </DemoRequestButton>
-              <Link href="/contact" className="btn-secondary">
-                {t("ctaSecondary")}
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <HeroSection />
 
       <LanguagesSection />
 

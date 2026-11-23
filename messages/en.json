@@ -221,6 +221,14 @@
       "consultingFirms": "Consulting firms"
     }
   },
+  "Trust": {
+    "metaLabel": "Meta",
+    "providerLabel": "Tech Provider",
+    "rating": "5.0",
+    "before": "Trusted by",
+    "count": "100,000+",
+    "after": "users"
+  },
   "Footer": {
     "tagline": "Unify every customer channel in one platform. From WhatsApp to Instagram, your website to email — all in Omnider.",
     "company": "Company",
@@ -228,11 +236,146 @@
     "rights": "All rights reserved."
   },
   "HomePage": {
+    "heroBadge": "NEW",
     "eyebrow": "Omnichannel customer messaging",
     "title": "Every channel, one inbox",
-    "description": "Manage WhatsApp, Instagram, Messenger and more in a single panel. Scroll down to see the header floating behavior.",
+    "titleLine1": "Every channel,",
+    "titleLine2": "one inbox",
+    "description": "Manage WhatsApp, Instagram, Messenger and more in a single panel. AI replies first — your team stays in control.",
     "ctaPrimary": "Request a demo",
     "ctaSecondary": "Contact us",
+    "heroImageAlt": "Omnider shared inbox dashboard",
+    "heroChat": {
+      "browserUrl": "app.omnider.com/inbox",
+      "inboxTitle": "Inbox",
+      "aiLabel": "Omnider AI",
+      "agentLabel": "Emma · Sales",
+      "customerName": "Sarah Chen",
+      "deptName": "Sales",
+      "transferLabel": "Transferred to department",
+      "typingLabel": "Writing a reply",
+      "inStockLabel": "In stock",
+      "outOfStockLabel": "Sold out",
+      "viewProductLabel": "View product",
+      "carouselHint": "{count} products · swipe to browse",
+      "products": [
+        {
+          "id": "aura",
+          "name": "Aura Wireless Headphones",
+          "price": "$89",
+          "listPrice": "$119",
+          "sku": "AUR-42",
+          "inStock": true,
+          "image": "/images/hero/products/aura.jpg",
+          "description": "Active noise canceling, 36-hour battery, and fast charge.",
+          "features": [
+            { "key": "Color", "value": "Midnight black" },
+            { "key": "Connect", "value": "Bluetooth 5.3" },
+            { "key": "Warranty", "value": "2 years" }
+          ]
+        },
+        {
+          "id": "pulse",
+          "name": "Pulse Smart Watch",
+          "price": "$149",
+          "listPrice": "$179",
+          "sku": "PLS-11",
+          "inStock": true,
+          "image": "/images/hero/products/pulse.jpg",
+          "description": "Heart rate, sleep, and GPS tracking for everyday wear."
+        },
+        {
+          "id": "nova",
+          "name": "Nova Mini Speaker",
+          "price": "$49",
+          "sku": "NVA-08",
+          "inStock": false,
+          "image": "/images/hero/products/nova.jpg",
+          "description": "Waterproof with 12 hours of playtime."
+        }
+      ],
+      "sidebar": [
+        {
+          "name": "Sarah Chen",
+          "preview": "Product catalog…",
+          "platform": "whatsapp-business",
+          "channel": "WhatsApp Business"
+        },
+        {
+          "name": "Alex Rivera",
+          "preview": "Aura in stock?",
+          "platform": "whatsapp-personal",
+          "channel": "WhatsApp"
+        },
+        {
+          "name": "James Miller",
+          "preview": "Headphone colors",
+          "platform": "instagram",
+          "channel": "Instagram"
+        },
+        {
+          "name": "Nova Clinic",
+          "preview": "Price list please",
+          "platform": "messenger",
+          "channel": "Messenger"
+        },
+        {
+          "name": "Lena Vogt",
+          "preview": "Pulse features",
+          "platform": "telegram",
+          "channel": "Telegram"
+        },
+        {
+          "name": "Mika Tanaka",
+          "preview": "商品ありますか？",
+          "platform": "line",
+          "channel": "LINE"
+        },
+        {
+          "name": "Priya Shah",
+          "preview": "Product details",
+          "platform": "webchat",
+          "channel": "Webchat"
+        },
+        {
+          "name": "Green Spa",
+          "preview": "Product review",
+          "platform": "google-business",
+          "channel": "Google Business"
+        },
+        {
+          "name": "+1 415…",
+          "preview": "Product code",
+          "platform": "sms",
+          "channel": "SMS"
+        }
+      ],
+      "steps": [
+        {
+          "kind": "customer",
+          "text": "Hi — can I see your products?"
+        },
+        {
+          "kind": "product_list",
+          "text": "Sure! Here are our featured products:",
+          "productIds": ["aura", "pulse", "nova"]
+        },
+        {
+          "kind": "customer",
+          "text": "Can you show Aura Wireless details?"
+        },
+        {
+          "kind": "product_detail",
+          "text": "Here’s Aura Wireless in detail:",
+          "productId": "aura"
+        },
+        {
+          "kind": "buttons",
+          "text": "How would you like to continue?",
+          "buttons": ["Add to cart", "Another product", "Ask price"]
+        }
+      ]
+    },
     "featuresEyebrow": "Why Omnider",
     "featuresTitle": "Simplify customer communication",
     "featuresDescription": "One workspace instead of scattered apps: messages, team, and automation together.",

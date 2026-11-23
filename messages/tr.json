@@ -221,6 +221,14 @@
       "consultingFirms": "Danışmanlık firmaları"
     }
   },
+  "Trust": {
+    "metaLabel": "Meta",
+    "providerLabel": "Tech Provider",
+    "rating": "5.0",
+    "before": "",
+    "count": "100.000+",
+    "after": "kullanıcı güveniyor"
+  },
   "Footer": {
     "tagline": "Tüm müşteri kanallarınızı tek platformda birleştirin. WhatsApp’tan Instagram’a, web sitenizden e-postaya — hepsi Omnider’da.",
     "company": "Kurumsal",
@@ -228,11 +236,146 @@
     "rights": "Tüm hakları saklıdır."
   },
   "HomePage": {
+    "heroBadge": "YENİ",
     "eyebrow": "Omnichannel müşteri iletişimi",
     "title": "Tüm kanallar, tek gelen kutusu",
-    "description": "WhatsApp, Instagram, Messenger ve daha fazlasını tek panelde yönetin. Aşağı kaydırarak header’ın scroll davranışını görebilirsiniz.",
+    "titleLine1": "Tüm kanallar,",
+    "titleLine2": "tek gelen kutusu",
+    "description": "WhatsApp, Instagram, Messenger ve daha fazlasını tek panelde yönetin. Yapay zeka yanıtlar, ekibiniz yönetir.",
     "ctaPrimary": "Demo iste",
     "ctaSecondary": "İletişime geç",
+    "heroImageAlt": "Omnider gelen kutusu paneli",
+    "heroChat": {
+      "browserUrl": "app.omnider.com/inbox",
+      "inboxTitle": "Gelen kutusu",
+      "aiLabel": "Omnider AI",
+      "agentLabel": "Ayşe · Satış",
+      "customerName": "Selin Kaya",
+      "deptName": "Satış",
+      "transferLabel": "Departmana aktarıldı",
+      "typingLabel": "Yanıt yazılıyor",
+      "inStockLabel": "Stokta",
+      "outOfStockLabel": "Tükendi",
+      "viewProductLabel": "Ürünü görüntüle",
+      "carouselHint": "{count} ürün · kaydırarak inceleyin",
+      "products": [
+        {
+          "id": "aura",
+          "name": "Aura Wireless Kulaklık",
+          "price": "1.299 ₺",
+          "listPrice": "1.599 ₺",
+          "sku": "AUR-42",
+          "inStock": true,
+          "image": "/images/hero/products/aura.jpg",
+          "description": "Aktif gürültü engelleme, 36 saat pil ve hızlı şarj.",
+          "features": [
+            { "key": "Renk", "value": "Gece siyahı" },
+            { "key": "Bağlantı", "value": "Bluetooth 5.3" },
+            { "key": "Garanti", "value": "2 yıl" }
+          ]
+        },
+        {
+          "id": "pulse",
+          "name": "Pulse Akıllı Saat",
+          "price": "2.450 ₺",
+          "listPrice": "2.890 ₺",
+          "sku": "PLS-11",
+          "inStock": true,
+          "image": "/images/hero/products/pulse.jpg",
+          "description": "Kalp ritmi, uyku ve GPS takip — günlük kullanım için."
+        },
+        {
+          "id": "nova",
+          "name": "Nova Mini Hoparlör",
+          "price": "890 ₺",
+          "sku": "NVA-08",
+          "inStock": false,
+          "image": "/images/hero/products/nova.jpg",
+          "description": "Su geçirmez, 12 saat çalma süresi."
+        }
+      ],
+      "sidebar": [
+        {
+          "name": "Selin Kaya",
+          "preview": "Ürün kataloğu…",
+          "platform": "whatsapp-business",
+          "channel": "WhatsApp Business"
+        },
+        {
+          "name": "Burak Demir",
+          "preview": "Aura stok?",
+          "platform": "whatsapp-personal",
+          "channel": "WhatsApp"
+        },
+        {
+          "name": "Emre Yılmaz",
+          "preview": "Kulaklık renkleri",
+          "platform": "instagram",
+          "channel": "Instagram"
+        },
+        {
+          "name": "Nova Klinik",
+          "preview": "Fiyat listesi",
+          "platform": "messenger",
+          "channel": "Messenger"
+        },
+        {
+          "name": "Deniz Arslan",
+          "preview": "Pulse özellikler",
+          "platform": "telegram",
+          "channel": "Telegram"
+        },
+        {
+          "name": "Mika Tanaka",
+          "preview": "商品ありますか？",
+          "platform": "line",
+          "channel": "LINE"
+        },
+        {
+          "name": "Zeynep Aksoy",
+          "preview": "Ürün detayı",
+          "platform": "webchat",
+          "channel": "Webchat"
+        },
+        {
+          "name": "Green Spa",
+          "preview": "Ürün yorumu",
+          "platform": "google-business",
+          "channel": "Google Business"
+        },
+        {
+          "name": "+90 532…",
+          "preview": "Ürün kodu",
+          "platform": "sms",
+          "channel": "SMS"
+        }
+      ],
+      "steps": [
+        {
+          "kind": "customer",
+          "text": "Merhaba, ürünlerinizi görebilir miyim?"
+        },
+        {
+          "kind": "product_list",
+          "text": "Tabii! İşte öne çıkan ürünlerimiz:",
+          "productIds": ["aura", "pulse", "nova"]
+        },
+        {
+          "kind": "customer",
+          "text": "Aura Wireless detayına bakar mısın?"
+        },
+        {
+          "kind": "product_detail",
+          "text": "Aura Wireless’in detayları:",
+          "productId": "aura"
+        },
+        {
+          "kind": "buttons",
+          "text": "Nasıl devam edelim?",
+          "buttons": ["Sepete ekle", "Başka ürün", "Fiyat sor"]
+        }
+      ]
+    },
     "featuresEyebrow": "Neden Omnider",
     "featuresTitle": "Müşteri iletişimini sadeleştirin",
     "featuresDescription": "Dağınık uygulamalar yerine tek bir çalışma alanı: mesajlar, ekip ve otomasyon bir arada.",
