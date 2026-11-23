@@ -1,4 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import { LanguagesSection } from "@/components/home/LanguagesSection";
 import { Container } from "@/components/layout/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
@@ -86,6 +87,8 @@ export default async function HomePage() {
           </div>
         </Container>
       </section>
+
+      <LanguagesSection />
 
       <section className="section-muted">
         <Container className="section">

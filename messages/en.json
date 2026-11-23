@@ -262,7 +262,24 @@
     ],
     "ctaEyebrow": "Ready?",
     "ctaTitle": "Try omnichannel messaging today",
-    "ctaDescription": "Our sales team can schedule a short demo for your needs. Pages and forms come next — for now, scroll and test the header."
+    "ctaDescription": "Our sales team can schedule a short demo for your needs. Pages and forms come next — for now, scroll and test the header.",
+    "languages": {
+      "eyebrow": "Languages",
+      "title": "Wherever they write from,",
+      "titleAccent": "reply in their language.",
+      "description": "AI detects the customer’s language and replies in that same language. English, Spanish, Arabic, or Japanese — the channel doesn’t matter.",
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Talk to Sales",
+      "hub": "Omnider",
+      "places": {
+        "new-york": "New York · English",
+        "mexico-city": "Mexico City · Spanish",
+        "sao-paulo": "São Paulo · Portuguese",
+        "berlin": "Berlin · German",
+        "dubai": "Dubai · Arabic",
+        "tokyo": "Tokyo · Japanese"
+      }
+    }
   },
   "ContactPage": {
     "title": "Contact",

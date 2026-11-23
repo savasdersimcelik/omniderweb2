@@ -361,4 +361,233 @@
   .mega-featured {
     background: #0f172a;
   }
+
+  /* Home — languages section */
+  .languages-section {
+    background:
+      radial-gradient(
+        ellipse 55% 50% at 78% 42%,
+        rgb(238 242 255 / 0.95) 0%,
+        rgb(255 255 255) 68%
+      ),
+      #ffffff;
+  }
+
+  .languages-map {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .languages-map__stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1056 / 533;
+  }
+
+  .languages-map__dots,
+  .languages-map__routes,
+  .languages-map__labels {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .languages-map__dots {
+    object-fit: fill;
+    user-select: none;
+    pointer-events: none;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      #000 10%,
+      #000 90%,
+      transparent
+    );
+  }
+
+  .languages-map__routes {
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .languages-map__route {
+    fill: none;
+    stroke: url("#lang-route");
+    stroke-width: 0.35;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: languages-draw 9s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.45s);
+  }
+
+  .languages-map__traveler {
+    fill: #4f46e5;
+    offset-rotate: 0deg;
+    opacity: 0;
+    animation: languages-travel 9s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.45s);
+  }
+
+  .languages-map__point circle {
+    fill: #4f46e5;
+  }
+
+  .languages-map__pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: languages-pulse 2.2s ease-out infinite;
+  }
+
+  .languages-map__pulse--hub {
+    animation-delay: 0.4s;
+  }
+
+  .languages-map__labels {
+    pointer-events: none;
+  }
+
+  .languages-map__label {
+    position: absolute;
+    border: 1px solid rgb(226 232 240);
+    border-radius: 0.45rem;
+    background: rgb(255 255 255 / 0.94);
+    padding: 0.16rem 0.45rem;
+    color: #0f172a;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    box-shadow: 0 8px 18px -14px rgb(15 23 42 / 0.6);
+    transform: translate(-50%, calc(-100% - 0.45rem));
+  }
+
+  .languages-map__label--start {
+    transform: translate(0, calc(-100% - 0.45rem));
+  }
+
+  .languages-map__label--end {
+    transform: translate(-100%, calc(-100% - 0.45rem));
+  }
+
+  .languages-map__label--hub {
+    background: #4f46e5;
+    border-color: #4f46e5;
+    color: #fff;
+    transform: translate(-50%, 0.45rem);
+  }
+
+  .languages-map__legend {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    margin: 0.85rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .languages-map__legend li {
+    border: 1px solid rgb(226 232 240);
+    border-radius: 999px;
+    background: #fff;
+    padding: 0.28rem 0.6rem;
+    color: #0f172a;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .languages-map__legend li:last-child {
+    background: #4f46e5;
+    border-color: #4f46e5;
+    color: #fff;
+  }
+
+  @media (min-width: 640px) {
+    .languages-map__label {
+      font-size: 0.78rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .languages-map__labels {
+      display: none;
+    }
+
+    .languages-map__legend {
+      display: flex;
+    }
+  }
+}
+
+@keyframes languages-draw {
+  0%,
+  12% {
+    stroke-dashoffset: 1;
+  }
+
+  42% {
+    stroke-dashoffset: 0;
+  }
+
+  78% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes languages-travel {
+  0%,
+  12% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  42% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+
+  58%,
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes languages-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(4.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .languages-map__route {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .languages-map__traveler,
+  .languages-map__pulse {
+    animation: none;
+    opacity: 0;
+  }
 }

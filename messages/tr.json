@@ -262,7 +262,24 @@
     ],
     "ctaEyebrow": "Hazır mısınız?",
     "ctaTitle": "Omnichannel iletişimi bugün deneyin",
-    "ctaDescription": "Satış ekibimiz ihtiyaçlarınıza göre kısa bir demo planlasın. Form ve sayfalar yakında tamamlanacak — şimdilik scroll ve header’ı test edin."
+    "ctaDescription": "Satış ekibimiz ihtiyaçlarınıza göre kısa bir demo planlasın. Form ve sayfalar yakında tamamlanacak — şimdilik scroll ve header’ı test edin.",
+    "languages": {
+      "eyebrow": "Diller",
+      "title": "Nereden yazarsa yazsın,",
+      "titleAccent": "kendi dilinde yanıt.",
+      "description": "Yapay zeka müşterinin dilini algılar ve yanıtı aynı dilde verir. İngilizce, İspanyolca, Arapça veya Japonca — kanal fark etmez.",
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "Satışla konuş",
+      "hub": "Omnider",
+      "places": {
+        "new-york": "New York · İngilizce",
+        "mexico-city": "Meksiko · İspanyolca",
+        "sao-paulo": "São Paulo · Portekizce",
+        "berlin": "Berlin · Almanca",
+        "dubai": "Dubai · Arapça",
+        "tokyo": "Tokyo · Japonca"
+      }
+    }
   },
   "ContactPage": {
     "title": "İletişim",
