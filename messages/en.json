@@ -11,6 +11,26 @@
     "pricing": {
       "title": "Pricing — Omnider",
       "description": "Omnider plans and pricing will be published soon."
+    },
+    "login": {
+      "title": "Log in — Omnider",
+      "description": "Sign in to your Omnider account."
+    },
+    "register": {
+      "title": "Sign up — Omnider",
+      "description": "Create your free Omnider account."
+    },
+    "forgotPassword": {
+      "title": "Forgot password — Omnider",
+      "description": "Reset your Omnider password."
+    },
+    "resetPassword": {
+      "title": "Reset password — Omnider",
+      "description": "Choose a new Omnider password."
+    },
+    "verifyEmail": {
+      "title": "Verify email — Omnider",
+      "description": "Verify your Omnider email address."
     }
   },
   "DemoModal": {
@@ -269,9 +289,18 @@
           "image": "/images/hero/products/aura.jpg",
           "description": "Active noise canceling, 36-hour battery, and fast charge.",
           "features": [
-            { "key": "Color", "value": "Midnight black" },
-            { "key": "Connect", "value": "Bluetooth 5.3" },
-            { "key": "Warranty", "value": "2 years" }
+            {
+              "key": "Color",
+              "value": "Midnight black"
+            },
+            {
+              "key": "Connect",
+              "value": "Bluetooth 5.3"
+            },
+            {
+              "key": "Warranty",
+              "value": "2 years"
+            }
           ]
         },
         {
@@ -358,7 +387,11 @@
         {
           "kind": "product_list",
           "text": "Sure! Here are our featured products:",
-          "productIds": ["aura", "pulse", "nova"]
+          "productIds": [
+            "aura",
+            "pulse",
+            "nova"
+          ]
         },
         {
           "kind": "customer",
@@ -372,7 +405,11 @@
         {
           "kind": "buttons",
           "text": "How would you like to continue?",
-          "buttons": ["Add to cart", "Another product", "Ask price"]
+          "buttons": [
+            "Add to cart",
+            "Another product",
+            "Ask price"
+          ]
         }
       ]
     },
@@ -462,15 +499,36 @@
       "outboundLabel": "Outbound",
       "liveLabel": "Listening · Speaking",
       "inbound": [
-        { "code": "+90 212", "label": "Istanbul · Inbound" },
-        { "code": "+44 20", "label": "London · Inbound" },
-        { "code": "+49 30", "label": "Berlin · Inbound" },
-        { "code": "+971 4", "label": "Dubai · Inbound" }
+        {
+          "code": "+90 212",
+          "label": "Istanbul · Inbound"
+        },
+        {
+          "code": "+44 20",
+          "label": "London · Inbound"
+        },
+        {
+          "code": "+49 30",
+          "label": "Berlin · Inbound"
+        },
+        {
+          "code": "+971 4",
+          "label": "Dubai · Inbound"
+        }
       ],
       "outbound": [
-        { "code": "+1 415", "label": "San Francisco · Outbound" },
-        { "code": "+33 1", "label": "Paris · Outbound" },
-        { "code": "+81 3", "label": "Tokyo · Outbound" }
+        {
+          "code": "+1 415",
+          "label": "San Francisco · Outbound"
+        },
+        {
+          "code": "+33 1",
+          "label": "Paris · Outbound"
+        },
+        {
+          "code": "+81 3",
+          "label": "Tokyo · Outbound"
+        }
       ]
     }
   },
@@ -509,5 +567,79 @@
   "PricingPage": {
     "title": "Pricing",
     "description": "Plans and pricing will be added soon."
+  },
+  "Auth": {
+    "brand": {
+      "eyebrow": "OMNIDER",
+      "headline": "Connect. Reply. Grow.",
+      "tagline": "Manage WhatsApp, Instagram and more from one inbox."
+    },
+    "common": {
+      "email": "Email",
+      "password": "Password",
+      "emailPlaceholder": "you@company.com",
+      "passwordPlaceholder": "Enter your password",
+      "google": "Continue with Google",
+      "orEmail": "or",
+      "comingSoon": "Sign-in will be connected soon. This is UI-only for now.",
+      "home": "Home",
+      "facebook": "Continue with Facebook",
+      "errorNetwork": "Network error. Check your connection and try again.",
+      "loading": "Please wait…",
+      "errorGeneric": "Something went wrong. Please try again."
+    },
+    "login": {
+      "title": "Sign in to your account",
+      "subtitle": "Enter your email and password to continue to Omnider.",
+      "submit": "Sign in",
+      "forgot": "Forgot password?",
+      "remember": "Remember me",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Create account",
+      "submitting": "Signing in…"
+    },
+    "register": {
+      "title": "Create your free account",
+      "placeholder": "Registration UI is coming soon. You can return to sign in for now.",
+      "loginLink": "Back to sign in",
+      "homeLink": "Home"
+    },
+    "forgot": {
+      "title": "Reset your password",
+      "placeholder": "Password reset form is coming soon. Contact us if you need help.",
+      "backToLogin": "Back to sign in",
+      "homeLink": "Home"
+    },
+    "reset": {
+      "title": "Choose a new password",
+      "placeholder": "Password update screen is coming soon.",
+      "backToLogin": "Back to sign in",
+      "homeLink": "Home"
+    },
+    "verify": {
+      "title": "Verify your email",
+      "placeholder": "Email verification will be connected soon.",
+      "backToLogin": "Back to sign in",
+      "backToRegister": "Back to register",
+      "homeLink": "Home"
+    },
+    "verifyLogin": {
+      "title": "Verify your email to sign in",
+      "subtitle": "Enter the 6-digit code sent to {email}.",
+      "subtitleGeneric": "Enter the 6-digit code from your email to continue.",
+      "noticeTitle": "Email verification required",
+      "noticeBody": "Your account is not active yet. You cannot open the panel until you verify.",
+      "codeLabel": "6-digit verification code",
+      "codeVerify": "Verify with code",
+      "codeRequired": "Please enter the 6-digit code from your email.",
+      "emailLabel": "Your email address",
+      "resend": "Resend verification email",
+      "resendSuccess": "Verification email sent again.",
+      "verifySuccess": "Email verified. Redirecting to the panel…",
+      "hint": "Check spam too. The code and link are valid for 24 hours.",
+      "backToLogin": "Back to sign in",
+      "verifying": "Verifying…",
+      "homeLink": "Home"
+    }
   }
 }

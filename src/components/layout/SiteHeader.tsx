@@ -113,13 +113,13 @@ export function SiteHeader() {
             <div className="flex items-center gap-2 sm:gap-2.5">
               <LanguageSwitcher className="hidden sm:flex" />
 
-              <a
-                href="#"
+              <Link
+                href="/login"
                 className="header-cta-ghost hidden lg:inline-flex"
                 onMouseEnter={() => setOpenMega(null)}
               >
                 {t("login")}
-              </a>
+              </Link>
               <DemoRequestButton
                 source="header"
                 className="header-cta-primary hidden md:inline-flex"
@@ -293,13 +293,13 @@ export function SiteHeader() {
                       })}
                     </nav>
                     <div className="space-y-2 border-t border-line pt-3">
-                      <a
-                        href="#"
+                      <Link
+                        href="/login"
                         className="btn-secondary w-full"
                         onClick={() => setOpen(false)}
                       >
                         {t("login")}
-                      </a>
+                      </Link>
                       <DemoRequestButton
                         source="header-mobile"
                         className="btn-primary w-full"

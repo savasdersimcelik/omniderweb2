@@ -1,14 +1,15 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import type { LottieComponentProps } from "lottie-react";
+import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
-const LottiePlayer = dynamic(() => import("lottie-react"), {
-  ssr: false,
-});
+const LottiePlayer = dynamic(
+  () => import("lottie-react").then((mod) => mod.Lottie),
+  { ssr: false },
+);
 
-type LottieProps = LottieComponentProps & {
+type LottieProps = ComponentProps<typeof LottiePlayer> & {
   className?: string;
 };
 

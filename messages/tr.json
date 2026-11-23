@@ -11,6 +11,26 @@
     "pricing": {
       "title": "Fiyatlandırma — Omnider",
       "description": "Omnider paketleri ve fiyatlandırma yakında yayınlanacak."
+    },
+    "login": {
+      "title": "Giriş yap — Omnider",
+      "description": "Omnider hesabınıza giriş yapın."
+    },
+    "register": {
+      "title": "Kayıt ol — Omnider",
+      "description": "Omnider ücretsiz hesabınızı oluşturun."
+    },
+    "forgotPassword": {
+      "title": "Şifremi unuttum — Omnider",
+      "description": "Omnider şifre sıfırlama."
+    },
+    "resetPassword": {
+      "title": "Şifre sıfırla — Omnider",
+      "description": "Omnider yeni şifre belirleme."
+    },
+    "verifyEmail": {
+      "title": "E-posta doğrula — Omnider",
+      "description": "Omnider e-posta doğrulama."
     }
   },
   "DemoModal": {
@@ -269,9 +289,18 @@
           "image": "/images/hero/products/aura.jpg",
           "description": "Aktif gürültü engelleme, 36 saat pil ve hızlı şarj.",
           "features": [
-            { "key": "Renk", "value": "Gece siyahı" },
-            { "key": "Bağlantı", "value": "Bluetooth 5.3" },
-            { "key": "Garanti", "value": "2 yıl" }
+            {
+              "key": "Renk",
+              "value": "Gece siyahı"
+            },
+            {
+              "key": "Bağlantı",
+              "value": "Bluetooth 5.3"
+            },
+            {
+              "key": "Garanti",
+              "value": "2 yıl"
+            }
           ]
         },
         {
@@ -358,7 +387,11 @@
         {
           "kind": "product_list",
           "text": "Tabii! İşte öne çıkan ürünlerimiz:",
-          "productIds": ["aura", "pulse", "nova"]
+          "productIds": [
+            "aura",
+            "pulse",
+            "nova"
+          ]
         },
         {
           "kind": "customer",
@@ -372,7 +405,11 @@
         {
           "kind": "buttons",
           "text": "Nasıl devam edelim?",
-          "buttons": ["Sepete ekle", "Başka ürün", "Fiyat sor"]
+          "buttons": [
+            "Sepete ekle",
+            "Başka ürün",
+            "Fiyat sor"
+          ]
         }
       ]
     },
@@ -462,15 +499,36 @@
       "outboundLabel": "Giden",
       "liveLabel": "Dinliyor · Yanıtlıyor",
       "inbound": [
-        { "code": "+90 212", "label": "İstanbul · Gelen" },
-        { "code": "+44 20", "label": "Londra · Gelen" },
-        { "code": "+49 30", "label": "Berlin · Gelen" },
-        { "code": "+971 4", "label": "Dubai · Gelen" }
+        {
+          "code": "+90 212",
+          "label": "İstanbul · Gelen"
+        },
+        {
+          "code": "+44 20",
+          "label": "Londra · Gelen"
+        },
+        {
+          "code": "+49 30",
+          "label": "Berlin · Gelen"
+        },
+        {
+          "code": "+971 4",
+          "label": "Dubai · Gelen"
+        }
       ],
       "outbound": [
-        { "code": "+1 415", "label": "San Francisco · Giden" },
-        { "code": "+33 1", "label": "Paris · Giden" },
-        { "code": "+81 3", "label": "Tokyo · Giden" }
+        {
+          "code": "+1 415",
+          "label": "San Francisco · Giden"
+        },
+        {
+          "code": "+33 1",
+          "label": "Paris · Giden"
+        },
+        {
+          "code": "+81 3",
+          "label": "Tokyo · Giden"
+        }
       ]
     }
   },
@@ -509,5 +567,79 @@
   "PricingPage": {
     "title": "Fiyatlandırma",
     "description": "Paketler ve fiyatlandırma yakında eklenecek."
+  },
+  "Auth": {
+    "brand": {
+      "eyebrow": "OMNIDER",
+      "headline": "Bağlan. Yanıtla. Büyü.",
+      "tagline": "WhatsApp, Instagram ve diğer kanalları tek panelde yönetin."
+    },
+    "common": {
+      "email": "E-posta",
+      "password": "Şifre",
+      "emailPlaceholder": "ornek@sirket.com",
+      "passwordPlaceholder": "Şifrenizi girin",
+      "google": "Google ile devam et",
+      "orEmail": "veya",
+      "comingSoon": "Giriş yakında bağlanacak. Şimdilik yalnızca arayüz.",
+      "home": "Ana sayfa",
+      "facebook": "Facebook ile devam et",
+      "errorNetwork": "Bağlantı hatası. İnternetinizi kontrol edip tekrar deneyin.",
+      "loading": "Lütfen bekleyin…",
+      "errorGeneric": "Bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "login": {
+      "title": "Hesabınıza giriş yapın",
+      "subtitle": "Omnider paneline devam etmek için e-posta ve şifrenizi girin.",
+      "submit": "Giriş yap",
+      "forgot": "Şifremi unuttum",
+      "remember": "Beni hatırla",
+      "noAccount": "Hesabınız yok mu?",
+      "registerLink": "Kayıt olun",
+      "submitting": "Giriş yapılıyor…"
+    },
+    "register": {
+      "title": "Ücretsiz hesabınızı oluşturun",
+      "placeholder": "Kayıt ekranı yakında. Şimdilik giriş sayfasından devam edebilirsiniz.",
+      "loginLink": "Girişe dön",
+      "homeLink": "Ana sayfa"
+    },
+    "forgot": {
+      "title": "Şifrenizi sıfırlayın",
+      "placeholder": "Şifre sıfırlama formu yakında. Destek için iletişime geçebilirsiniz.",
+      "backToLogin": "Girişe dön",
+      "homeLink": "Ana sayfa"
+    },
+    "reset": {
+      "title": "Yeni şifre belirleyin",
+      "placeholder": "Şifre güncelleme ekranı yakında hazır olacak.",
+      "backToLogin": "Girişe dön",
+      "homeLink": "Ana sayfa"
+    },
+    "verify": {
+      "title": "E-postanızı doğrulayın",
+      "placeholder": "E-posta doğrulama adımı yakında bağlanacak.",
+      "backToLogin": "Girişe dön",
+      "backToRegister": "Kayıta dön",
+      "homeLink": "Ana sayfa"
+    },
+    "verifyLogin": {
+      "title": "Giriş için e-postanızı doğrulayın",
+      "subtitle": "{email} adresine gönderilen 6 haneli kodu girin.",
+      "subtitleGeneric": "Giriş için e-postanızdaki 6 haneli kodu girin.",
+      "noticeTitle": "E-posta doğrulaması gerekli",
+      "noticeBody": "Hesabınız henüz aktif değil. Doğrulama olmadan panele erişemezsiniz.",
+      "codeLabel": "6 haneli doğrulama kodu",
+      "codeVerify": "Kod ile doğrula",
+      "codeRequired": "Lütfen e-postanızdaki 6 haneli kodu girin.",
+      "emailLabel": "E-posta adresiniz",
+      "resend": "Doğrulama e-postasını tekrar gönder",
+      "resendSuccess": "Doğrulama e-postası tekrar gönderildi.",
+      "verifySuccess": "E-posta doğrulandı. Panele yönlendiriliyorsunuz…",
+      "hint": "Spam klasörünü de kontrol edin. Kod ve bağlantı 24 saat geçerlidir.",
+      "backToLogin": "Girişe dön",
+      "verifying": "Doğrulanıyor…",
+      "homeLink": "Ana sayfa"
+    }
   }
 }

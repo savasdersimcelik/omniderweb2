@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { Suspense } from "react";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { AttributionCapture } from "@/components/attribution/AttributionCapture";
-import {
-  DemoModalProvider,
-  DemoRequestModal,
-} from "@/components/demo";
-import { SiteFooter } from "@/components/layout/SiteFooter";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { DemoModalProvider, DemoRequestModal } from "@/components/demo";
 import { colors } from "@/config/colors";
 import { seoConfig } from "@/config/seo";
 import { routing } from "@/i18n/routing";
@@ -92,6 +87,11 @@ export const metadata: Metadata = {
   themeColor: colors.theme,
 };
 
+/**
+ * Root locale shell only — no site chrome.
+ * Marketing header/footer live in `(marketing)/layout`.
+ * Auth pages use `(auth)/layout` with no header/footer.
+ */
 export default async function LocaleLayout({
   children,
 }: LayoutProps<"/[locale]">) {
@@ -108,9 +108,7 @@ export default async function LocaleLayout({
             <Suspense fallback={null}>
               <AttributionCapture />
             </Suspense>
-            <SiteHeader />
-            <main className="flex flex-1 flex-col">{children}</main>
-            <SiteFooter />
+            {children}
             <DemoRequestModal />
           </DemoModalProvider>
         </NextIntlClientProvider>

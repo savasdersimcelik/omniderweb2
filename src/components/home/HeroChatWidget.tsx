@@ -187,6 +187,8 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
       };
 
       if (item.kind === "ai" || item.kind === "agent") {
+        const replyKind = item.kind;
+        const replyText = item.text ?? "";
         setVisible((prev) => [
           ...prev.filter((v) => v.type !== "typing"),
           { id: ++msgId.current, type: "typing" },
@@ -197,8 +199,8 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
             {
               id: ++msgId.current,
               type: "msg",
-              kind: item.kind,
-              text: item.text ?? "",
+              kind: replyKind,
+              text: replyText,
             },
           ]);
           afterDelay(STEP_MS, () => run(index + 1));
@@ -295,17 +297,17 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
             return (
               <div
                 key={`${keyPrefix}-typing-${item.id}`}
-                className="hero-chat__row hero-chat__row--in"
+                className="hero-chat__row hero-chat__row--out"
               >
-                <span className="hero-chat__avatar hero-chat__avatar--ai">
-                  <Bot className="size-3.5" />
-                </span>
                 <div className="hero-chat__bubble hero-chat__bubble--ai hero-chat__typing">
                   <span />
                   <span />
                   <span />
                   <span className="sr-only">{copy.typingLabel}</span>
                 </div>
+                <span className="hero-chat__avatar hero-chat__avatar--ai">
+                  <Bot className="size-3.5" />
+                </span>
               </div>
             );
           }
@@ -325,11 +327,8 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
             return (
               <div
                 key={`${keyPrefix}-plist-${item.id}`}
-                className="hero-chat__row hero-chat__row--in hero-chat__row--rich"
+                className="hero-chat__row hero-chat__row--out hero-chat__row--rich"
               >
-                <span className="hero-chat__avatar hero-chat__avatar--ai">
-                  <Bot className="size-3.5" />
-                </span>
                 <div className="hero-chat__bubble hero-chat__bubble--ai hero-chat__bubble--rich">
                   <span className="hero-chat__who">{copy.aiLabel}</span>
                   {item.text ? <p>{item.text}</p> : null}
@@ -377,6 +376,9 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
                     )}
                   </p>
                 </div>
+                <span className="hero-chat__avatar hero-chat__avatar--ai">
+                  <Bot className="size-3.5" />
+                </span>
               </div>
             );
           }
@@ -386,11 +388,8 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
             return (
               <div
                 key={`${keyPrefix}-pdetail-${item.id}`}
-                className="hero-chat__row hero-chat__row--in hero-chat__row--rich"
+                className="hero-chat__row hero-chat__row--out hero-chat__row--rich"
               >
-                <span className="hero-chat__avatar hero-chat__avatar--ai">
-                  <Bot className="size-3.5" />
-                </span>
                 <div className="hero-chat__bubble hero-chat__bubble--ai hero-chat__bubble--rich">
                   <span className="hero-chat__who">{copy.aiLabel}</span>
                   {item.text ? <p>{item.text}</p> : null}
@@ -448,6 +447,9 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
                     </div>
                   </div>
                 </div>
+                <span className="hero-chat__avatar hero-chat__avatar--ai">
+                  <Bot className="size-3.5" />
+                </span>
               </div>
             );
           }
@@ -456,11 +458,8 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
             return (
               <div
                 key={`${keyPrefix}-btns-${item.id}`}
-                className="hero-chat__row hero-chat__row--in hero-chat__row--rich"
+                className="hero-chat__row hero-chat__row--out hero-chat__row--rich"
               >
-                <span className="hero-chat__avatar hero-chat__avatar--ai">
-                  <Bot className="size-3.5" />
-                </span>
                 <div className="hero-chat__bubble hero-chat__bubble--ai hero-chat__bubble--rich">
                   <span className="hero-chat__who">{copy.aiLabel}</span>
                   {item.text ? <p>{item.text}</p> : null}
@@ -472,11 +471,15 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
                     ))}
                   </div>
                 </div>
+                <span className="hero-chat__avatar hero-chat__avatar--ai">
+                  <Bot className="size-3.5" />
+                </span>
               </div>
             );
           }
 
-          const isOut = item.kind === "customer";
+          /* Inbox görünümü: müşteri sol (gelen), AI/temsilci sağ (giden) */
+          const isOut = item.kind === "ai" || item.kind === "agent";
           return (
             <div
               key={`${keyPrefix}-msg-${item.id}`}
@@ -485,37 +488,40 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
                 isOut ? "hero-chat__row--out" : "hero-chat__row--in",
               )}
             >
-              {!isOut ? (
-                <span
-                  className={cn(
-                    "hero-chat__avatar",
-                    item.kind === "ai"
-                      ? "hero-chat__avatar--ai"
-                      : "hero-chat__avatar--agent",
-                  )}
-                >
-                  {item.kind === "ai" ? (
-                    <Bot className="size-3.5" />
-                  ) : (
-                    <UserRound className="size-3.5" />
-                  )}
-                </span>
-              ) : null}
-              <div
-                className={cn(
-                  "hero-chat__bubble",
-                  isOut && "hero-chat__bubble--customer",
-                  item.kind === "ai" && "hero-chat__bubble--ai",
-                  item.kind === "agent" && "hero-chat__bubble--agent",
-                )}
-              >
-                {!isOut ? (
-                  <span className="hero-chat__who">
-                    {item.kind === "ai" ? copy.aiLabel : copy.agentLabel}
+              {isOut ? (
+                <>
+                  <div
+                    className={cn(
+                      "hero-chat__bubble",
+                      item.kind === "ai" && "hero-chat__bubble--ai",
+                      item.kind === "agent" && "hero-chat__bubble--agent",
+                    )}
+                  >
+                    <span className="hero-chat__who">
+                      {item.kind === "ai" ? copy.aiLabel : copy.agentLabel}
+                    </span>
+                    <p>{item.text}</p>
+                  </div>
+                  <span
+                    className={cn(
+                      "hero-chat__avatar",
+                      item.kind === "ai"
+                        ? "hero-chat__avatar--ai"
+                        : "hero-chat__avatar--agent",
+                    )}
+                  >
+                    {item.kind === "ai" ? (
+                      <Bot className="size-3.5" />
+                    ) : (
+                      <UserRound className="size-3.5" />
+                    )}
                   </span>
-                ) : null}
-                <p>{item.text}</p>
-              </div>
+                </>
+              ) : (
+                <div className="hero-chat__bubble hero-chat__bubble--customer">
+                  <p>{item.text}</p>
+                </div>
+              )}
             </div>
           );
         })}
