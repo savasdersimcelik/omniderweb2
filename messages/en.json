@@ -10,7 +10,7 @@
     },
     "pricing": {
       "title": "Pricing — Omnider",
-      "description": "Omnider plans and pricing will be published soon."
+      "description": "Pay per channel, unlimited agents. Compare Omnider plans and start monthly or yearly."
     },
     "login": {
       "title": "Log in — Omnider",
@@ -1024,8 +1024,210 @@
     }
   },
   "PricingPage": {
-    "title": "Pricing",
-    "description": "Plans and pricing will be added soon."
+    "hero": {
+      "titleLead": "Grow your team.",
+      "titleAccent": "Not your bill.",
+      "subtitle": "Unlimited agents and departments. Pay per channel — chats and included campaign sends stay inside your plan quotas.",
+      "highlights": [
+        "No per-seat pricing",
+        "Unlimited agents & departments",
+        "Pay per channel · 14 days free"
+      ],
+      "ctaPrimary": "See plans",
+      "ctaSecondary": "Start 14-day free trial",
+      "preview": {
+        "live": "Live pricing",
+        "title": "Clear pricing model",
+        "body": "Pick a ready-made plan — yearly billing applies the discount automatically.",
+        "rows": [
+          { "label": "Unlimited agents", "value": "∞" },
+          { "label": "Unlimited departments", "value": "∞" },
+          { "label": "Channel-first", "value": "10+" }
+        ]
+      }
+    },
+    "packages": {
+      "eyebrow": "Ready-made plans",
+      "title": "Choose the plan that fits",
+      "subtitle": "Bill monthly or yearly — AI is included in every plan, and prices update instantly.",
+      "billing": {
+        "label": "Billing",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "save": "Save {percent}%"
+      },
+      "names": {
+        "basic": "Basic",
+        "starter": "Starter",
+        "advanced": "Advanced",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+      "descriptions": {
+        "basic": "A clean start with a single channel.",
+        "starter": "A few channels and higher quotas for small teams.",
+        "advanced": "The balanced plan for growing teams.",
+        "pro": "Multi-channel, higher-volume operations.",
+        "enterprise": "Large teams and top-tier capacity."
+      },
+      "badges": {
+        "most_popular": "Most popular",
+        "best_value": "Best value",
+        "recommended": "Recommended",
+        "enterprise": "Enterprise"
+      },
+      "card": {
+        "perMonth": "/mo",
+        "perYear": "/yr",
+        "billedYearly": "billed yearly",
+        "cta": "Start with this plan",
+        "highlights": "Plan highlights",
+        "loading": "Updating plans…",
+        "errorTitle": "Plans could not load",
+        "errorDesc": "Pricing is temporarily unavailable. Please try again.",
+        "retry": "Retry"
+      },
+      "quotas": {
+        "channels": "Channels",
+        "messages": "Campaign sends",
+        "aiCredits": "Artificial intelligence credits",
+        "virtualNumbers": "Virtual phone lines",
+        "outboundCallMinutes": "AI call credits",
+        "verificationCredits": "Data verification",
+        "maxProducts": "Products",
+        "maxOrdersMonth": "Orders / mo",
+        "storageGb": "Storage",
+        "conversationHistoryDays": "Conversation history",
+        "storageHistoryDays": "File history",
+        "maxLinks": "Short link allowance",
+        "maxClicks": "Tracked clicks",
+        "maxQr": "QR codes",
+        "maxBio": "Bio pages",
+        "maxWebsites": "Analytics site allowance",
+        "maxEventsMonth": "Analytics events / mo",
+        "maxReplays": "Session replays",
+        "retentionDays": "Analytics retention",
+        "gbUnit": "GB",
+        "dayUnit": "days"
+      },
+      "limits": {
+        "order_syncs": "Order sync (period)",
+        "cart_syncs": "Cart sync (period)",
+        "marketplaces": "Marketplaces"
+      },
+      "features": {
+        "shared_inbox": "Shared inbox",
+        "crm": "CRM",
+        "knowledge_base": "Knowledge base",
+        "ai_auto_reply": "Artificial intelligence auto-reply",
+        "ai_assistant": "Artificial intelligence assistant",
+        "chatflow": "Chatbot flows",
+        "campaigns": "Campaigns",
+        "appointments": "Appointments",
+        "marketplace": "Marketplace",
+        "reports": "Reporting",
+        "contact_import": "Contact import",
+        "contact_export": "Contact export",
+        "contact_verification": "Contact verification",
+        "api_access": "API access",
+        "webhook_access": "Webhook access",
+        "priority_support": "Priority support",
+        "ios_app": "iOS app",
+        "android_app": "Android app"
+      },
+      "marketplaces": {
+        "amazon": "Amazon",
+        "ciceksepeti": "Çiçeksepeti",
+        "hepsiburada": "Hepsiburada",
+        "ideasoft": "IdeaSoft",
+        "n11": "n11",
+        "opencart": "OpenCart",
+        "pazarama": "Pazarama",
+        "pttavm": "PTT AVM",
+        "shopify": "Shopify",
+        "ticimax": "Ticimax",
+        "trendyol": "Trendyol",
+        "woocommerce": "WooCommerce"
+      },
+      "shortenerFeatures": {
+        "retargeting": "Retargeting",
+        "ad_free": "Ad-free redirects",
+        "deep_links": "Deep links",
+        "custom_domains": "Custom domains",
+        "api": "API access",
+        "white_label": "White-label"
+      },
+      "analyticsFeatures": {
+        "heatmaps": "Heatmaps",
+        "session_replay": "Session replay",
+        "funnels": "Funnels",
+        "api": "Analytics API",
+        "priority": "Priority support"
+      },
+      "compare": {
+        "title": "Compare every feature",
+        "subtitle": "See quotas, messaging, and sub-services side by side.",
+        "featureColumn": "Coverage",
+        "quotasSection": "Included quotas",
+        "featuresSection": "Omnider Messaging Service",
+        "shortenerSection": "Omnider Link Shortener Service",
+        "analyticsSection": "Omnider Analytics Service",
+        "marketplacesSection": "Omnider Marketplace Service",
+        "expand": "Show details",
+        "collapse": "Hide details",
+        "serviceEnabled": "Included",
+        "serviceDisabled": "Not included"
+      }
+    },
+    "advantages": {
+      "eyebrow": "Why Omnider?",
+      "title": "Unlimited team, pay per channel",
+      "subtitle": "No seat fees. Messaging stays inside your plan quotas — grow by adding channels, not headcount charges.",
+      "items": [
+        {
+          "icon": "users",
+          "title": "No per-user pricing",
+          "desc": "Add agents without growing the bill. Scale people, keep cost predictable."
+        },
+        {
+          "icon": "inbox",
+          "title": "Unlimited agents",
+          "desc": "Invite as many agents as you need — no seat caps."
+        },
+        {
+          "icon": "departments",
+          "title": "Unlimited departments",
+          "desc": "Sales, support, marketing — organize freely."
+        },
+        {
+          "icon": "sparkle",
+          "title": "Unlimited customers",
+          "desc": "No caps on contacts or conversation history volume."
+        },
+        {
+          "icon": "bot",
+          "title": "Unlimited chats",
+          "desc": "Your shared inbox conversation count is unlimited."
+        },
+        {
+          "icon": "channels",
+          "title": "Pay per channel",
+          "desc": "Pricing follows the channel licenses you connect."
+        }
+      ]
+    },
+    "included": {
+      "title": "Included in every plan",
+      "subtitle": "These core capabilities ship with every package.",
+      "items": [
+        { "icon": "inbox", "label": "Shared inbox" },
+        { "icon": "ai", "label": "AI replies" },
+        { "icon": "bot", "label": "Chatbot flows" },
+        { "icon": "campaigns", "label": "Campaigns" },
+        { "icon": "reports", "label": "Reporting" },
+        { "icon": "team", "label": "Team management" }
+      ]
+    }
   },
   "Auth": {
     "brand": {

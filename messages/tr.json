@@ -10,7 +10,7 @@
     },
     "pricing": {
       "title": "Fiyatlandırma — Omnider",
-      "description": "Omnider paketleri ve fiyatlandırma yakında yayınlanacak."
+      "description": "Kanal başına ödeme, sınırsız temsilci. Omnider paketlerini karşılaştırın; aylık veya yıllık başlayın."
     },
     "login": {
       "title": "Giriş yap — Omnider",
@@ -1024,8 +1024,210 @@
     }
   },
   "PricingPage": {
-    "title": "Fiyatlandırma",
-    "description": "Paketler ve fiyatlandırma yakında eklenecek."
+    "hero": {
+      "titleLead": "Ekibiniz büyüsün.",
+      "titleAccent": "Fatura büyümesin.",
+      "subtitle": "Sınırsız temsilci ve departman. Ödeme kanal başına; sohbet ve gönderimler ücretsiz kotanız dahilinde akar.",
+      "highlights": [
+        "Kullanıcı başına ücret yok",
+        "Sınırsız temsilci ve departman",
+        "Kanal başına ödeme · 14 gün ücretsiz"
+      ],
+      "ctaPrimary": "Paketleri incele",
+      "ctaSecondary": "14 gün ücretsiz dene",
+      "preview": {
+        "live": "Canlı fiyatlandırma",
+        "title": "Ödeme modeli net",
+        "body": "Hazır paketlerden birini seçin; yıllık faturalamada indirim otomatik uygulanır.",
+        "rows": [
+          { "label": "Sınırsız temsilci", "value": "∞" },
+          { "label": "Sınırsız departman", "value": "∞" },
+          { "label": "Kanal odaklı", "value": "10+" }
+        ]
+      }
+    },
+    "packages": {
+      "eyebrow": "Hazır paketler",
+      "title": "İhtiyacınıza uygun planı seçin",
+      "subtitle": "Aylık veya yıllık faturalayın — yapay zeka tüm paketlere dahil, fiyatlar anında güncellenir.",
+      "billing": {
+        "label": "Faturalama",
+        "monthly": "Aylık",
+        "yearly": "Yıllık",
+        "save": "{percent}% indirim"
+      },
+      "names": {
+        "basic": "Basic",
+        "starter": "Starter",
+        "advanced": "Advanced",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+      "descriptions": {
+        "basic": "Tek kanalla başlamak için sade başlangıç.",
+        "starter": "Küçük ekipler için birkaç kanal ve daha yüksek kota.",
+        "advanced": "Büyüyen ekipler için en dengeli paket.",
+        "pro": "Çok kanallı, yüksek hacimli operasyonlar için.",
+        "enterprise": "Geniş ekipler ve üst seviye kapasite için."
+      },
+      "badges": {
+        "most_popular": "En popüler",
+        "best_value": "En iyi değer",
+        "recommended": "Önerilen",
+        "enterprise": "Kurumsal"
+      },
+      "card": {
+        "perMonth": "/ay",
+        "perYear": "/yıl",
+        "billedYearly": "yıllık faturalandırılır",
+        "cta": "Bu paketle başla",
+        "highlights": "Plan öne çıkanlar",
+        "loading": "Paketler güncelleniyor…",
+        "errorTitle": "Paketler yüklenemedi",
+        "errorDesc": "Fiyatlandırma şu an ulaşılamıyor. Lütfen tekrar deneyin.",
+        "retry": "Tekrar dene"
+      },
+      "quotas": {
+        "channels": "Kanal",
+        "messages": "Toplu gönderim",
+        "aiCredits": "Yapay Zeka kredisi",
+        "virtualNumbers": "Sanal telefon hakkı",
+        "outboundCallMinutes": "Yapay Zeka arama kredisi",
+        "verificationCredits": "Veri doğrulama",
+        "maxProducts": "Ürün",
+        "maxOrdersMonth": "Sipariş / ay",
+        "storageGb": "Depolama alanı",
+        "conversationHistoryDays": "Konuşma geçmişi",
+        "storageHistoryDays": "Dosya geçmişi",
+        "maxLinks": "Kısa link hakkı",
+        "maxClicks": "Kısa link tıklaması",
+        "maxQr": "QR kod",
+        "maxBio": "Bio sayfası",
+        "maxWebsites": "Analytics sitesi hakkı",
+        "maxEventsMonth": "Analytics olay / ay",
+        "maxReplays": "Oturum kaydı",
+        "retentionDays": "Analytics saklama",
+        "gbUnit": "GB",
+        "dayUnit": "gün"
+      },
+      "limits": {
+        "order_syncs": "Sipariş sync (dönem)",
+        "cart_syncs": "Sepet sync (dönem)",
+        "marketplaces": "Pazaryeri"
+      },
+      "features": {
+        "shared_inbox": "Ortak gelen kutusu",
+        "crm": "CRM",
+        "knowledge_base": "Bilgi bankası",
+        "ai_auto_reply": "Yapay Zeka otomatik yanıt",
+        "ai_assistant": "Yapay Zeka asistan",
+        "chatflow": "Chatbot akışları",
+        "campaigns": "Kampanyalar",
+        "appointments": "Randevu",
+        "marketplace": "Pazaryeri",
+        "reports": "Raporlama",
+        "contact_import": "Kişi içe aktarma",
+        "contact_export": "Kişi dışa aktarma",
+        "contact_verification": "Kişi doğrulama",
+        "api_access": "API erişimi",
+        "webhook_access": "Webhook erişimi",
+        "priority_support": "Öncelikli destek",
+        "ios_app": "iOS uygulaması",
+        "android_app": "Android uygulaması"
+      },
+      "marketplaces": {
+        "amazon": "Amazon",
+        "ciceksepeti": "Çiçeksepeti",
+        "hepsiburada": "Hepsiburada",
+        "ideasoft": "IdeaSoft",
+        "n11": "n11",
+        "opencart": "OpenCart",
+        "pazarama": "Pazarama",
+        "pttavm": "PTT AVM",
+        "shopify": "Shopify",
+        "ticimax": "Ticimax",
+        "trendyol": "Trendyol",
+        "woocommerce": "WooCommerce"
+      },
+      "shortenerFeatures": {
+        "retargeting": "Yeniden hedefleme",
+        "ad_free": "Reklamsız yönlendirme",
+        "deep_links": "Derin bağlantılar",
+        "custom_domains": "Özel alan adı",
+        "api": "API erişimi",
+        "white_label": "Markasız kullanım"
+      },
+      "analyticsFeatures": {
+        "heatmaps": "Isı haritası",
+        "session_replay": "Oturum kaydı",
+        "funnels": "Huni analizi",
+        "api": "Analytics API",
+        "priority": "Öncelikli destek"
+      },
+      "compare": {
+        "title": "Tüm özellikleri karşılaştırın",
+        "subtitle": "Kotalar, mesajlaşma ve alt hizmetleri yan yana görün.",
+        "featureColumn": "Kapsam",
+        "quotasSection": "Dahil kotalar",
+        "featuresSection": "Omnider Mesajlaşma Servisi",
+        "shortenerSection": "Omnider Link Kısaltma Servisi",
+        "analyticsSection": "Omnider Analytics Servisi",
+        "marketplacesSection": "Omnider Pazaryeri Servisi",
+        "expand": "Detayları göster",
+        "collapse": "Detayları gizle",
+        "serviceEnabled": "Dahil",
+        "serviceDisabled": "Dahil değil"
+      }
+    },
+    "advantages": {
+      "eyebrow": "Neden Omnider?",
+      "title": "Sınırsız ekip, kanal başına ödeme",
+      "subtitle": "Koltuk ücreti yok. Mesaj gönderimleri paket kotanız dahilinde; büyüdükçe yalnızca kanal ekleyin.",
+      "items": [
+        {
+          "icon": "users",
+          "title": "Kullanıcı başına ücret yok",
+          "desc": "Temsilci ekledikçe fatura artmaz. Ekip büyüsün, maliyet sabit kalsın."
+        },
+        {
+          "icon": "inbox",
+          "title": "Sınırsız temsilci",
+          "desc": "İstediğiniz kadar temsilci ekleyin; koltuk sınırı yok."
+        },
+        {
+          "icon": "departments",
+          "title": "Sınırsız departman",
+          "desc": "Satış, destek, pazarlama… organizasyonunuzu sınırsız bölün."
+        },
+        {
+          "icon": "sparkle",
+          "title": "Sınırsız müşteri",
+          "desc": "İletişim ve geçmişte müşteri sayısı sınırı yok."
+        },
+        {
+          "icon": "bot",
+          "title": "Sınırsız sohbet",
+          "desc": "Gelen kutunuzdaki konuşma sayısı sınırsızdır."
+        },
+        {
+          "icon": "channels",
+          "title": "Kanal başına ödeme",
+          "desc": "Ücretlendirme bağladığınız kanal lisanslarına dayanır."
+        }
+      ]
+    },
+    "included": {
+      "title": "Her pakete dahil",
+      "subtitle": "Hangi planı seçerseniz seçin bu temel yetenekler yanınızda.",
+      "items": [
+        { "icon": "inbox", "label": "Ortak gelen kutusu" },
+        { "icon": "ai", "label": "Yapay Zeka yanıtları" },
+        { "icon": "bot", "label": "Chatbot akışları" },
+        { "icon": "campaigns", "label": "Kampanyalar" },
+        { "icon": "reports", "label": "Raporlama" },
+        { "icon": "team", "label": "Ekip yönetimi" }
+      ]
+    }
   },
   "Auth": {
     "brand": {

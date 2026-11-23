@@ -1,6 +1,12 @@
-import { getLocale, getTranslations } from "next-intl/server";
-import { Container } from "@/components/layout/Container";
+import { getLocale } from "next-intl/server";
+import { PricingAdvantages } from "@/components/pricing/PricingAdvantages";
+import { PricingHero } from "@/components/pricing/PricingHero";
+import { PricingIncluded } from "@/components/pricing/PricingIncluded";
+import { PricingPackagesSection } from "@/components/pricing/PricingPackagesSection";
+import "@/components/pricing/pricing.css";
 import type { Locale } from "@/i18n/routing";
+import { fetchPricingCatalog } from "@/lib/pricing/api";
+import type { PackageComparePayload, PricingPackage } from "@/lib/pricing/types";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export async function generateMetadata() {
@@ -14,14 +20,31 @@ export async function generateMetadata() {
 }
 
 export default async function PricingPage() {
-  const t = await getTranslations("PricingPage");
+  let initialPackages: PricingPackage[] = [];
+  let initialCompare: PackageComparePayload | null = null;
+  let initialError = false;
+
+  try {
+    const catalog = await fetchPricingCatalog(
+      { billingInterval: "monthly" },
+      { server: true },
+    );
+    initialPackages = catalog.packages;
+    initialCompare = catalog.compare;
+  } catch {
+    initialError = true;
+  }
 
   return (
-    <Container as="section" className="section-sm">
-      <div className="max-w-xl space-y-3">
-        <h1 className="heading-page">{t("title")}</h1>
-        <p className="text-body">{t("description")}</p>
-      </div>
-    </Container>
+    <div className="pricing-page">
+      <PricingHero />
+      <PricingPackagesSection
+        initialPackages={initialPackages}
+        initialCompare={initialCompare}
+        initialError={initialError}
+      />
+      <PricingAdvantages />
+      <PricingIncluded />
+    </div>
   );
 }
