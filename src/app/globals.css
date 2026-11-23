@@ -6814,8 +6814,48 @@
   line-height: 1.5;
 }
 
+.ig-biz-hero__points {
+  display: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ig-biz-hero__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-ink-subtle);
+}
+
+.ig-biz-hero__points li:first-child {
+  margin-top: 0;
+}
+
+.ig-biz-hero__check {
+  display: inline-flex;
+  height: 1.35rem;
+  width: 1.35rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ig-purple) 12%, white);
+  color: var(--ig-purple);
+}
+
 .ig-biz-hero__trust {
   margin-top: 0.85rem;
+}
+
+.ig-biz-hero__trust.hero-trust {
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
 }
 
 @media (min-width: 1024px) {
@@ -6851,8 +6891,26 @@
     font-size: clamp(1rem, 1.35vw, 1.15rem);
   }
 
+  .ig-biz-hero__points {
+    display: grid;
+    max-width: 28rem;
+  }
+
   .ig-biz-hero__trust {
-    margin-top: 1.35rem;
+    margin-top: 1.5rem;
+  }
+
+  .ig-biz-hero__trust.hero-trust {
+    width: auto;
+    max-width: none;
+    margin-inline: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .ig-biz-hero__trust.hero-trust .user-trust {
+    padding-left: 1.15rem;
+    border-left: 1px solid rgb(203 213 225);
   }
 
   .ig-biz-hero__phone {
@@ -7142,22 +7200,26 @@
   align-items: start;
 }
 
+.ig-comments__copy {
+  min-width: 0;
+}
+
 .ig-comments__stage {
-  width: min(100%, 20.5rem);
+  width: min(100%, 26.5rem);
   justify-self: center;
 }
 
 @media (min-width: 1024px) {
   .ig-comments__grid {
-    grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
-    gap: 2.75rem;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 26.5rem);
+    gap: 1.5rem;
     align-items: center;
   }
 
   .ig-comments__stage {
     width: 100%;
-    max-width: 20.5rem;
-    justify-self: end;
+    max-width: none;
+    justify-self: stretch;
   }
 }
 
@@ -7210,7 +7272,7 @@
 }
 
 .ig-cmt__media {
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
   background: #f4f4f5;
 }
 

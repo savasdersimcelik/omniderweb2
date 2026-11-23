@@ -32,8 +32,8 @@ export function CommentsSection() {
       onMouseLeave={() => setPaused(false)}
     >
       <Container className="section">
-        <div className="wa-section-stack">
-          <header className="mx-auto max-w-3xl text-center">
+        <div className="ig-comments__grid">
+          <div className="ig-comments__copy">
             <p className="eyebrow inline-flex items-center gap-2 text-[var(--ig-purple)]">
               <MessageCircleIcon className="h-3.5 w-3.5" />
               {t("eyebrow")}
@@ -42,10 +42,12 @@ export function CommentsSection() {
               {t("title")}
             </h2>
             <p className="text-body mt-4">{t("subtitle")}</p>
-          </header>
 
-          <div className="ig-comments__grid mt-10">
-            <div className="space-y-3" role="tablist" aria-label={t("tabsLabel")}>
+            <div
+              className="mt-8 space-y-3"
+              role="tablist"
+              aria-label={t("tabsLabel")}
+            >
               {TABS.map((id) => {
                 const Icon =
                   id === "price"
@@ -63,7 +65,7 @@ export function CommentsSection() {
                       "flex w-full items-start gap-3 rounded-2xl px-4 py-3.5 text-left ring-1 transition",
                       tab === id
                         ? "bg-white shadow-sm ring-[color-mix(in_srgb,var(--ig-purple)_30%,transparent)]"
-                        : "bg-white/60 ring-line hover:bg-white",
+                        : "bg-white/70 ring-line hover:bg-white",
                     )}
                     onClick={() => setTab(id)}
                   >
@@ -82,10 +84,10 @@ export function CommentsSection() {
                 );
               })}
             </div>
+          </div>
 
-            <div className="ig-comments__stage">
-              <CommentsWidget tab={tab} />
-            </div>
+          <div className="ig-comments__stage">
+            <CommentsWidget tab={tab} />
           </div>
         </div>
       </Container>

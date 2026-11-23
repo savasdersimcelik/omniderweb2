@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CheckIcon } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { HeroTrust } from "@/components/trust";
 import { InstagramHeroBackdrop } from "./InstagramHeroBackdrop";
@@ -10,6 +11,7 @@ export async function InstagramHero() {
     kind: "customer" | "ai" | "agent" | "typing" | "transfer";
     text?: string;
   }>;
+  const highlights = t.raw("hero.highlights") as string[];
 
   return (
     <section
@@ -41,6 +43,18 @@ export async function InstagramHero() {
           <p className="ig-biz-hero__desc text-ink-subtle">
             {t("hero.description")}
           </p>
+
+          <ul className="ig-biz-hero__points">
+            {highlights.map((item) => (
+              <li key={item}>
+                <span className="ig-biz-hero__check">
+                  <CheckIcon className="h-3.5 w-3.5" />
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
           <HeroTrust className="ig-biz-hero__trust" />
         </div>
 

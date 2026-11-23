@@ -50,7 +50,7 @@ export function CommentsWidget({ tab }: CommentsWidgetProps) {
           alt=""
           fill
           className="object-cover"
-          sizes="320px"
+          sizes="424px"
           unoptimized
         />
       </div>
