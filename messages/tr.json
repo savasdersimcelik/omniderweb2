@@ -282,8 +282,36 @@
     }
   },
   "ContactPage": {
-    "title": "İletişim",
-    "description": "İletişim formu yakında eklenecek."
+    "eyebrow": "İletişim",
+    "title": "Sizi dinlemek için buradayız",
+    "description": "Sorularınız veya iş birliği fikirleriniz için formu doldurun. Genellikle birkaç saat içinde dönüş yapıyoruz.",
+    "privacyNote": "Bilgileriniz yalnızca talebinizi yanıtlamak için kullanılır, üçüncü taraflarla paylaşılmaz.",
+    "form": {
+      "eyebrow": "İletişim formu",
+      "title": "Bize bir mesaj bırakın",
+      "subtitle": "Formu doldurun; ekibimiz en kısa sürede size geri dönsün.",
+      "name": "Ad Soyad",
+      "namePlaceholder": "Adınız ve soyadınız",
+      "email": "E-posta",
+      "emailPlaceholder": "ornek@sirket.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+90 5xx xxx xx xx",
+      "company": "Şirket",
+      "companyPlaceholder": "Şirket adınız (opsiyonel)",
+      "subject": "Konu",
+      "subjectPlaceholder": "Size nasıl yardımcı olabiliriz?",
+      "message": "Mesajınız",
+      "messagePlaceholder": "Talebinizi kısaca anlatın…",
+      "consent": "Formu göndererek gizlilik politikamız kapsamında verilerimin işlenmesini kabul ediyorum.",
+      "optional": "opsiyonel",
+      "submit": "Mesajı Gönder",
+      "submitting": "Gönderiliyor…",
+      "success": "Mesajınız için teşekkürler! En kısa sürede size geri döneceğiz.",
+      "error": "Mesajınız gönderilemedi. Lütfen tekrar deneyin veya doğrudan e-posta gönderin.",
+      "captcha_required": "Lütfen robot olmadığınızı doğrulayın.",
+      "captcha_failed": "reCAPTCHA doğrulaması başarısız. Lütfen tekrar deneyin.",
+      "recaptchaNotice": "Bu site reCAPTCHA ile korunmaktadır."
+    }
   },
   "PricingPage": {
     "title": "Fiyatlandırma",

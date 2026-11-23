@@ -282,8 +282,36 @@
     }
   },
   "ContactPage": {
-    "title": "Contact",
-    "description": "The contact form will be added soon."
+    "eyebrow": "Contact",
+    "title": "We’re here to listen",
+    "description": "Share your questions or partnership ideas through the form. We usually reply within a few hours.",
+    "privacyNote": "Your details are only used to respond to your request and are not shared with third parties.",
+    "form": {
+      "eyebrow": "Contact form",
+      "title": "Leave us a message",
+      "subtitle": "Fill out the form and our team will get back to you shortly.",
+      "name": "Full name",
+      "namePlaceholder": "Your first and last name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 555 000 0000",
+      "company": "Company",
+      "companyPlaceholder": "Your company (optional)",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us briefly what you need…",
+      "consent": "By submitting this form I accept processing of my data under the privacy policy.",
+      "optional": "optional",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": "Thanks for your message! We’ll get back to you soon.",
+      "error": "Your message could not be sent. Please try again or email us directly.",
+      "captcha_required": "Please verify that you are not a robot.",
+      "captcha_failed": "reCAPTCHA verification failed. Please try again.",
+      "recaptchaNotice": "This site is protected by reCAPTCHA."
+    }
   },
   "PricingPage": {
     "title": "Pricing",

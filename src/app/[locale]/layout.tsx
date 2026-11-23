@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { colors } from "@/config/colors";
@@ -10,6 +11,8 @@ import { seoConfig } from "@/config/seo";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl } from "@/lib/site";
 import "@/app/globals.css";
+
+const RECAPTCHA_SITEKEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY?.trim();
 
 const isProduction = process.env.NEXT_PUBLIC_APP_ENV === "production";
 
@@ -108,6 +111,13 @@ export default async function LocaleLayout({
             ? { "data-api-host": analytics.apiHost }
             : {})}
         />
+        <SiteAnalytics />
+        {RECAPTCHA_SITEKEY ? (
+          <Script
+            src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITEKEY}`}
+            strategy="afterInteractive"
+          />
+        ) : null}
       </body>
     </html>
   );

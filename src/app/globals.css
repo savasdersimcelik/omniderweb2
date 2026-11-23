@@ -591,3 +591,13 @@
     opacity: 0;
   }
 }
+
+/* Google reCAPTCHA v3 — hide badge (chat widget overlap); branding stays in form flows */
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
