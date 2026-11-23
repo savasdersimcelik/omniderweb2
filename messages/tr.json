@@ -39,6 +39,46 @@
     "termsOfUse": {
       "title": "Kullanım Koşulları — Omnider",
       "description": "Omnider hizmetlerinin kullanımını düzenleyen koşullar."
+    },
+    "platforms": {
+      "title": "Platformlar — Omnider",
+      "description": "WhatsApp, Instagram, Messenger, e-posta, SMS ve daha fazlasını Omnider’a bağlayın. Tüm kanallar tek panelde."
+    },
+    "messaging": {
+      "title": "Mesajlaşma — Omnider",
+      "description": "Tüm mesajlaşma kanallarını tek gelen kutusunda birleştirin. WhatsApp’tan web chat’e Omnider ile yönetin."
+    },
+    "email": {
+      "title": "E-posta — Omnider",
+      "description": "Gelen kutusu, şablonlar ve e-posta yanıtlarını Omnider’da yönetin."
+    },
+    "campaigns": {
+      "title": "Kampanya Yönetimi — Omnider",
+      "description": "Çok kanallı kampanyaları planlayın, gönderin ve Omnider’da ölçün."
+    },
+    "appointments": {
+      "title": "Randevu — Omnider",
+      "description": "Randevu alma, hatırlatma ve takvim yönetimini Omnider’da birleştirin."
+    },
+    "aiCalls": {
+      "title": "AI Aramalar — Omnider",
+      "description": "Yapay zekâ destekli aramalarla müşteri iletişiminizi otomatikleştirin."
+    },
+    "aiAssistant": {
+      "title": "AI Asistan — Omnider",
+      "description": "Yapay zekâ asistanıyla müşteri sorularını otomatik yanıtlayın."
+    },
+    "linkShortener": {
+      "title": "Link Kısaltma — Omnider",
+      "description": "Kısa linkler oluşturun, tıklamaları takip edin ve kampanyalarınızı ölçün."
+    },
+    "analytics": {
+      "title": "Analitik — Omnider",
+      "description": "Kanal, temsilci ve kampanya performansını tek panelde izleyin."
+    },
+    "marketplace": {
+      "title": "Pazaryeri — Omnider",
+      "description": "Trendyol, Hepsiburada ve diğer pazaryeri mesajlarını Omnider’da yönetin."
     }
   },
   "DemoModal": {
@@ -889,8 +929,8 @@
     "title": "Gizlilik Politikası",
     "subtitle": "Omnider'ın web platformu, mobil uygulamaları ve entegre mesajlaşma kanallarında bilgilerinizi nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklar.",
     "lastUpdatedLabel": "Son güncelleme",
-    "lastUpdated": "30 Ağustos 2026",
-    "lastUpdatedIso": "2026-08-30",
+    "lastUpdated": "23 Kasım 2026",
+    "lastUpdatedIso": "2026-11-23",
     "intro": [
       "Bu Gizlilik Politikası (\"Politika\"), Omnider'ın (\"Omnider\", \"biz\", \"bize\" veya \"bizim\") Omnider Web Platformu, Google Play'de sunulan Omnider Android uygulaması, Apple App Store'da sunulan Omnider iOS uygulaması ve ilgili tüm entegrasyonlar, API'ler, paneller ve destek hizmetleri (topluca \"Hizmetler\") kapsamında kişisel bilgileri nasıl topladığını, kullandığını, açıkladığını ve koruduğunu açıklar.",
       "Hizmetlere erişerek veya Hizmetleri kullanarak bu Politikayı okuduğunuzu ve anladığınızı kabul etmiş olursunuz. Uygulamalarımızı kabul etmiyorsanız lütfen Hizmetleri kullanmayın."
@@ -912,16 +952,22 @@
           {
             "title": "Mesajlaşma Kanalları ve Entegrasyonlar",
             "paragraphs": [
-              "Hizmetler, resmi ve desteklenen mesajlaşma kanalları üzerinden konuşmaları bağlamanıza ve yönetmenize olanak tanır:"
+              "Hizmetler; desteklenen mesajlaşma, e-posta, SMS, ses, yorum/değerlendirme ve iş kanalları üzerinden konuşmaları ve etkileşimleri bağlamanıza ve yönetmenize olanak tanır. Bunlar sınırlama olmaksızın şunları kapsar:"
             ],
             "list": [
-              "WhatsApp Business Platform",
-              "Instagram Business Messaging",
+              "WhatsApp Business Platform ve WhatsApp Personal bağlantıları",
+              "Instagram (Direct Messaging, story yanıtları ve gönderi yorumları)",
               "Facebook Messenger",
               "Telegram",
               "LINE",
               "Web Chat",
-              "Omnider'ın gelecekte ekleyebileceği diğer resmi mesajlaşma platformları"
+              "E-posta (kurumsal posta kutuları ve desteklenen e-posta sağlayıcıları)",
+              "SMS",
+              "Telefon / sesli görüşme entegrasyonları",
+              "Google Business Profile (yorumlar ve değerlendirmeler)",
+              "Google Chat",
+              "LinkedIn",
+              "Omnider'ın gelecekte ekleyebileceği diğer resmi platformlar ve entegrasyonlar"
             ]
           }
         ]
@@ -945,8 +991,9 @@
           {
             "title": "Mesajlaşma ve Müşteri Verileri",
             "list": [
-              "Mesaj içerikleri, zaman damgaları, iletim durumu ve konuşma meta verileri",
-              "Kişi adları, telefon numaraları, kullanıcı adları, profil tanımlayıcıları ve kanala özel kimlikler",
+              "Mesaj, e-posta, SMS ve ses etkileşim içerikleri; zaman damgaları, iletim durumu ve konuşma meta verileri",
+              "Kişi adları, telefon numaraları, e-posta adresleri, kullanıcı adları, profil tanımlayıcıları ve kanala özel kimlikler",
+              "Instagram gönderi yorumları, Google Business değerlendirmeleri/yanıtları ve benzeri genel etkileşim verileri",
               "Ortak gelen kutusunda uygulanan etiketler, notlar, atamalar ve iş akışı durumları",
               "Kampanya hedef kitle verileri, şablonlar ve yayın geçmişi"
             ]
@@ -977,7 +1024,8 @@
           {
             "title": "Google Workspace Entegrasyon Verileri",
             "paragraphs": [
-              "Google Workspace entegrasyonlarını (örneğin Google Sheets, Google Drive veya Google Calendar) yetkilendirirseniz, talep ettiğiniz senkronizasyon, dışa aktarma, yedekleme veya takvim yönetimi işlemlerini gerçekleştirmek için gerekli verileri işleyebiliriz. Google Workspace API verileri yalnızca bu yetkilendirilmiş entegrasyon iş akışları kapsamında işlenir ve aşağıdaki Google API Services and Limited Use bölümünde açıklandığı üzere yapay zeka destekli mesajlaşma özelliklerinden ayrı tutulur."
+              "Google Workspace entegrasyonlarını (örneğin Google Sheets, Google Drive veya Google Calendar) yetkilendirirseniz, talep ettiğiniz senkronizasyon, dışa aktarma, yedekleme veya takvim yönetimi işlemlerini gerçekleştirmek için gerekli verileri işleyebiliriz. Google Workspace API verileri yalnızca bu yetkilendirilmiş entegrasyon iş akışları kapsamında işlenir ve aşağıdaki Google API Services and Limited Use bölümünde açıklandığı üzere yapay zeka destekli mesajlaşma özelliklerinden ayrı tutulur.",
+              "Google Business Profile yorumları/değerlendirmeleri ve Google Chat mesajları, Google Workspace (Sheets/Drive/Calendar) entegrasyonlarından ayrı kanallar olarak işlenir; bu kanallar üzerinden gelen içerik yukarıdaki Mesajlaşma ve Müşteri Verileri kapsamında ele alınır."
             ]
           }
         ]
@@ -1290,8 +1338,8 @@
     "title": "Kullanım Koşulları",
     "subtitle": "Omnider ürünlerine, mobil uygulamalarına, panellerine ve entegre mesajlaşma hizmetlerine erişiminizi ve kullanımınızı düzenleyen kurallar ve koşullar.",
     "lastUpdatedLabel": "Son güncelleme",
-    "lastUpdated": "30 Ağustos 2026",
-    "lastUpdatedIso": "2026-08-30",
+    "lastUpdated": "23 Kasım 2026",
+    "lastUpdatedIso": "2026-11-23",
     "intro": [
       "Bu Kullanım Koşulları (\"Koşullar\"), siz (\"siz\", \"sizin\" veya \"Müşteri\") ile Omnider (\"Omnider\", \"biz\", \"bize\" veya \"bizim\") arasında Omnider Web Platformu, Google Play'deki Omnider Android uygulaması, Apple App Store'daki Omnider iOS uygulaması, Müşteri Paneli, Partner Paneli, API'ler, entegrasyonlar ve ilgili tüm hizmetlere (topluca \"Hizmetler\") erişimi ve kullanımını düzenleyen bağlayıcı bir sözleşmedir.",
       "Hesap oluşturarak, bir panele erişerek, mobil uygulama indirerek veya Hizmetleri başka şekilde kullanarak bu Koşulları ve Gizlilik Politikamızı kabul etmiş olursunuz. Hizmetleri bir kuruluş adına kullanıyorsanız, o kuruluşu bağlama yetkisine sahip olduğunuzu beyan edersiniz."
@@ -1309,7 +1357,7 @@
           "Google Play üzerinden dağıtılan Omnider Android Uygulaması",
           "Apple App Store üzerinden dağıtılan Omnider iOS Uygulaması",
           "Müşteri Paneli: <a href=\"https://app.omnider.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://app.omnider.com</a>",
-          "WhatsApp Business Platform, Instagram Business Messaging, Facebook Messenger, Telegram, LINE, Web Chat ve Omnider'ın gelecekte destekleyebileceği diğer resmi mesajlaşma platformları ile entegrasyonlar"
+          "WhatsApp, Instagram (mesajlaşma ve yorumlar), Facebook Messenger, Telegram, LINE, Web Chat, e-posta, SMS, telefon/ses, Google Business Profile, Google Chat, LinkedIn ve Omnider'ın gelecekte destekleyebileceği diğer resmi platformlar ile entegrasyonlar"
         ]
       },
       {
@@ -1527,6 +1575,63 @@
         ]
       }
     ]
+  },
+  "PlatformsIndexPage": {
+    "eyebrow": "Platformlar",
+    "title": "Tüm platformlar",
+    "subtitle": "WhatsApp’tan e-postaya, SMS’ten Google Business’a — bağladığınız her kanal tek panelde."
+  },
+  "MessagingProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "Mesajlaşma",
+    "subtitle": "Tüm mesajlaşma kanallarını tek gelen kutusunda birleştirin. Ortak inbox, atama ve yanıtlar tek yerde.",
+    "ctaPrimary": "14 gün ücretsiz dene",
+    "ctaSecondary": "Platformlara göz at",
+    "comingSoon": "Ürün sayfası içeriği yakında."
+  },
+  "EmailProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "E-posta",
+    "comingSoon": "İçerik yakında."
+  },
+  "CampaignsProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "Kampanya Yönetimi",
+    "comingSoon": "İçerik yakında."
+  },
+  "AppointmentsProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "Randevu",
+    "comingSoon": "İçerik yakında."
+  },
+  "AiCallsProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "AI Aramalar",
+    "comingSoon": "İçerik yakında."
+  },
+  "AiAssistantProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "AI Asistan",
+    "comingSoon": "İçerik yakında."
+  },
+  "LinkShortenerProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "Link Kısaltma",
+    "comingSoon": "İçerik yakında."
+  },
+  "AnalyticsProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "Analitik",
+    "comingSoon": "İçerik yakında."
+  },
+  "MarketplaceProductPage": {
+    "eyebrow": "Ürünler",
+    "title": "Pazaryeri",
+    "comingSoon": "İçerik yakında."
+  },
+  "PlatformDetailPage": {
+    "eyebrow": "Platformlar",
+    "comingSoon": "İçerik yakında."
   },
   "ContactPage": {
     "eyebrow": "İletişim",
@@ -1986,6 +2091,324 @@
       "backToLogin": "Girişe dön",
       "verifying": "Doğrulanıyor…",
       "homeLink": "Ana sayfa"
+    }
+  },
+  "PlatformWhatsAppBusiness": {
+    "meta": {
+      "title": "WhatsApp Business — Omnider",
+      "description": "WhatsApp Business API, yapay zeka destekli otomatik yanıtlar, kampanyalar, chatbotlar ve ekip yönetimini Omnider ile tek platformda yönetin."
+    },
+    "hero": {
+      "badge": "WhatsApp Business",
+      "titleLine1": "Müşteri yazsın,",
+      "titleLine2": "yapay zeka yanıtlasın",
+      "description": "WhatsApp Business API, yapay zeka destekli otomatik yanıtlar, kampanyalar, chatbotlar ve ekip yönetimini Omnider ile tek platformda yönetin.",
+      "ctaPrimary": "Hemen demo hesap aç",
+      "ctaSecondary": "Fiyatları inceleyin",
+      "chat": {
+        "businessName": "Atölye",
+        "online": "çevrimiçi",
+        "typing": "yazıyor…",
+        "transfer": "Konuşma temsilciye aktarıldı",
+        "aiLabel": "Yapay zeka",
+        "agentLabel": "Temsilci",
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Merhaba, keten gömleğin fiyatı nedir?"
+          },
+          {
+            "kind": "typing"
+          },
+          {
+            "kind": "ai",
+            "text": "Merhaba! Keten gömlek 1.249 TL, stokta. Nasıl almak istersiniz?"
+          },
+          {
+            "kind": "buttons",
+            "buttons": [
+              "Kargo ile",
+              "Mağazadan al",
+              "Temsilciye bağlan"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Temsilciye bağlan"
+          },
+          {
+            "kind": "transfer",
+            "text": "Konuşma temsilciye aktarıldı"
+          },
+          {
+            "kind": "agent",
+            "text": "Tabii, hemen yardımcı olayım. Teslimat adresiniz hazır mı?"
+          }
+        ],
+        "desktopTitle": "WhatsApp",
+        "searchPlaceholder": "Sohbet ara",
+        "composerPlaceholder": "Bir mesaj yazın",
+        "customerName": "Ayşe Yılmaz",
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Merhaba, keten gömleğin fiyatı nedir?",
+            "time": "14:02",
+            "unread": 1
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Randevu için müsait misiniz?",
+            "time": "13:40",
+            "unread": 0
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Siparişim kargoya verildi mi?",
+            "time": "12:18",
+            "unread": 2
+          },
+          {
+            "name": "Burak Şen",
+            "preview": "Teşekkürler!",
+            "time": "Dün",
+            "unread": 0
+          }
+        ],
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "WhatsApp gelen kutusu"
+      }
+    },
+    "templates": {
+      "eyebrow": "Meta şablonları",
+      "title": "WhatsApp şablonlarınızı tek yerden yönetin.",
+      "subtitle": "Omnider şablonları Meta’dan çeker, taslak yazar ve onaya gönderir. Durumu listede görürsünüz.",
+      "items": {
+        "sync": {
+          "title": "Meta’dan tek tıkla senkron",
+          "desc": "Mevcut şablonları Cloud API’den çekin. Omnider listesi Meta ile aynı kalsın."
+        },
+        "types": {
+          "title": "Kategori ve buton tipleri",
+          "desc": "Bildirim, pazarlama, doğrulama. Header ve gövde; hızlı yanıt, URL, telefon, OTP ve Flow."
+        },
+        "status": {
+          "title": "Durum, kalite ve test",
+          "desc": "Onaylı, beklemede veya reddedildi rozeti listede durur. Kalite skorunu okuyun; onaylı şablonu kendinize test edin."
+        }
+      },
+      "mock": {
+        "title": "Mesaj şablonları",
+        "meta": "3 şablon · Meta ile senkron",
+        "sync": "Senkronize et",
+        "listLabel": "Örnek şablon listesi",
+        "status": {
+          "approved": "Onaylı",
+          "pending": "İncelemede",
+          "rejected": "Reddedildi"
+        },
+        "rows": {
+          "order": {
+            "name": "siparis_onayi",
+            "meta": "Bildirim · tr"
+          },
+          "campaign": {
+            "name": "yaz_kampanyasi",
+            "meta": "Pazarlama · tr"
+          },
+          "otp": {
+            "name": "otp_dogrulama",
+            "meta": "Doğrulama · tr"
+          }
+        }
+      },
+      "live": {
+        "syncing": "Şablonlar Meta’dan senkronize ediliyor",
+        "synced": "Şablon listesi Meta ile güncellendi"
+      }
+    },
+    "interactive": {
+      "eyebrow": "Cloud API",
+      "title": "Cevap butonu, liste ve link",
+      "subtitle": "Bot cevabı WhatsApp’ın kendi butonları ve listesiyle gider. Müşteri dokunur, seçim akışa döner.",
+      "tabsLabel": "Mesaj türü",
+      "tabs": {
+        "buttons": "Cevap butonları",
+        "list": "Ürün listesi",
+        "link": "Link butonu"
+      },
+      "cards": {
+        "buttons": "En fazla üç hızlı yanıt. Müşteri yazmadan dokunur; seçim akışı o adımla sürdürür.",
+        "list": "Liste açılır. Ürün, fiyat ve stok satırda durur; seçilen satır panele düşer.",
+        "link": "Takip, katalog veya form tek CTA butonunda. WhatsApp içinden tarayıcıya açılır."
+      },
+      "flow": {
+        "title": "Seçim akışa döner",
+        "body": "Dokunulan değer chatbot adımına gider. Panelde seçim görünür; sonraki mesaj ona göre yazılır."
+      },
+      "note": "Buton, liste ve link WhatsApp Cloud API mesaj türleridir. Müşteri WhatsApp içinde dokunur.",
+      "phone": {
+        "name": "Atölye",
+        "status": "çevrimiçi"
+      },
+      "buttons": {
+        "body": "Bu ürünü nasıl almak istersiniz?",
+        "options": [
+          "Kargo ile",
+          "Mağazadan al",
+          "Temsilciye bağlan"
+        ],
+        "follow": "Adresinizi yazın, hazırlayıp gönderelim."
+      },
+      "list": {
+        "body": "Size uygun 4 ürün buldum.",
+        "cta": "Ürünler",
+        "sheet": "Ürün seçin",
+        "detail": "1.249 TL · Stokta",
+        "rows": [
+          {
+            "title": "Keten gömlek",
+            "description": "1.249 TL",
+            "picked": true
+          },
+          {
+            "title": "Yün hırka",
+            "description": "890 TL"
+          },
+          {
+            "title": "Deri çanta",
+            "description": "2.190 TL"
+          },
+          {
+            "title": "Keten pantolon",
+            "description": "899 TL · Stokta yok",
+            "out": true
+          }
+        ]
+      },
+      "link": {
+        "body": "Siparişinizi buradan takip edebilirsiniz.",
+        "cta": "Takibi aç"
+      },
+      "badge": "Panelde: Seçim → akış devam ediyor"
+    },
+    "health": {
+      "eyebrow": "Numara sağlığı",
+      "title": "Kalite, kota ve gönderim durumu",
+      "subtitle": "Meta’nın verdiği puan, günlük kota ve gönderim durumu kanal sayfasında durur.",
+      "tabsLabel": "Kalite görünümü",
+      "tabs": {
+        "green": "Yeşil",
+        "yellow": "Sarı",
+        "red": "Kırmızı"
+      },
+      "items": {
+        "quality": {
+          "title": "Kalite puanı",
+          "desc": "Meta numaranıza yeşil, sarı ya da kırmızı verir. Puan kanal sayfasında durur; Meta bildirim gönderince panel güncellenir."
+        },
+        "quota": {
+          "title": "Mesaj kotası",
+          "desc": "24 saatte kaç yeni kişiye yazabildiğiniz görünür. Kota 250’den Sınırsız’a kadar çıkar; kartta güncel limit yazılır."
+        },
+        "status": {
+          "title": "Gönderim durumu",
+          "desc": "Kullanılabilir, Sınırlı ya da Engelli. Sorun varsa Meta’nın önerdiği çözüm aynı kartta durur."
+        },
+        "halt": {
+          "title": "Kırmızıda toplu gönderim durur",
+          "desc": "Puan kırmızıya düşünce kampanya, yeni sohbet ve 24 saat dışı şablon durur. Müşteri yazınca cevap vermeye devam edersiniz."
+        }
+      },
+      "mock": {
+        "title": "Hesap Bilgileri",
+        "label": "Örnek hesap bilgileri kartı",
+        "nameLabel": "Görünen Ad",
+        "name": "Örnek Mağaza",
+        "phoneLabel": "Telefon",
+        "phone": "+90 5xx xxx xx xx",
+        "qualityLabel": "Kalite",
+        "quotaLabel": "Mesaj Kotası",
+        "quota": "1.000 mesaj / 24 saat",
+        "sendLabel": "Genel Gönderim Durumu",
+        "send": {
+          "green": "Kullanılabilir",
+          "yellow": "Sınırlı",
+          "red": "Engelli"
+        },
+        "nameStatusLabel": "Görünen Ad Durumu",
+        "nameStatus": "Onaylandı",
+        "quality": {
+          "green": "Yeşil",
+          "yellow": "Sarı",
+          "red": "Kırmızı"
+        }
+      },
+      "banners": {
+        "green": "Her şey yolunda; kampanyalarınız normal gider.",
+        "yellow": "Gönderim devam ediyor; puanı panelde takip edin.",
+        "red": "Kalite kırmızı — toplu gönderim durdu."
+      },
+      "halt": {
+        "stopped": "Kampanya, yeni sohbet başlatma ve 24 saat dışı şablon: durduruldu",
+        "continues": "Müşteri yazınca cevap vermek: devam ediyor"
+      },
+      "note": "Puan Meta’dan gelir; Meta bildirim gönderdiğinde panel güncellenir."
+    },
+    "adReferral": {
+      "eyebrow": "Reklamdan gelen mesajlar",
+      "title": "Bu DM hangi reklamdan geldi?",
+      "lead": "Reklamdaki “Mesaj Gönder” ile açılan sohbette reklamın başlığı, görseli ve linki durur.",
+      "note": "Click-to-WhatsApp reklamlarından gelen mesajlar reklam başlığı, görseli ve kaynak linkiyle gelir.",
+      "items": {
+        "card": {
+          "title": "Reklam kartı mesajın üstünde",
+          "body": "“Reklam” rozeti, reklam görseli ve başlığı ilk mesajın hemen üstünde."
+        },
+        "utm": {
+          "title": "UTM’li link",
+          "body": "Reklam linkine gelen kutusundan tıklayınca konuşma ve reklam kimliği UTM olarak eklenir; Google Analytics’te görürsünüz."
+        },
+        "contact": {
+          "title": "Kişi kartına işlenir",
+          "body": "“Yönlendirme Kaynağı” otomatik dolar, dışa aktarmada “Referral” sütunu olarak gelir."
+        }
+      },
+      "scene": {
+        "brand": "Atölye No.4",
+        "sponsored": "Sponsorlu",
+        "send": "Mesaj Gönder",
+        "inbox": "Gelen kutusu",
+        "adBadge": "Reklam",
+        "headline": "Yaz kampanyası bu hafta",
+        "link": "omnider.com/kampanya…",
+        "bubble": "Merhaba, bu kampanya hâlâ geçerli mi?",
+        "customer": "Ayşe",
+        "referralLabel": "Yönlendirme Kaynağı",
+        "referralPrefix": "Referans",
+        "adId": "120384756"
+      },
+      "footnote": "Reklam bilgisi Meta’nın gönderdiği alanlara göre görünür."
+    },
+    "try": {
+      "eyebrow": "Canlı deneme",
+      "title": "WhatsApp Business’ı telefondan deneyin",
+      "body": "Türkiye veya Avrupa hattını taratın, ya da butona dokunun. Omnider yanıt verir; fiyat, randevu veya sipariş sorun. Yapay zeka cevaplar, gerekirse ekip devralır.",
+      "cta": "WhatsApp’ta aç",
+      "lines": {
+        "turkey": {
+          "title": "Omnider Turkey",
+          "phone": "+90 546 419 94 17",
+          "ctaTitle": "Omnider Turkey WhatsApp hattını aç",
+          "imageAlt": "Omnider Turkey WhatsApp hattı için QR kod, +90 546 419 94 17"
+        },
+        "europe": {
+          "title": "Omnider Avrupa",
+          "phone": "+44 7529 760393",
+          "ctaTitle": "Omnider Avrupa WhatsApp hattını aç",
+          "imageAlt": "Omnider Avrupa WhatsApp hattı için QR kod, +44 7529 760393"
+        }
+      }
     }
   }
 }

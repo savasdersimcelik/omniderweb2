@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronDownIcon, MenuIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -21,10 +21,28 @@ import { NavIcon } from "./NavIcon";
 
 export function SiteHeader() {
   const t = useTranslations("Nav");
+  const megaRootRef = useRef<HTMLDivElement>(null);
+  const ignoreHoverUntilRef = useRef(0);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [mobileSub, setMobileSub] = useState<string | null>(null);
   const [openMega, setOpenMega] = useState<string | null>(null);
+
+  const closeMega = () => {
+    // Prevent the trigger under the cursor from immediately re-opening via hover.
+    ignoreHoverUntilRef.current = Date.now() + 400;
+    setOpenMega(null);
+  };
+
+  const openMegaKey = (key: string) => {
+    ignoreHoverUntilRef.current = 0;
+    setOpenMega(key);
+  };
+
+  const hoverOpenMegaKey = (key: string) => {
+    if (Date.now() < ignoreHoverUntilRef.current) return;
+    setOpenMega(key);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -35,11 +53,24 @@ export function SiteHeader() {
 
   useEffect(() => {
     if (!openMega) return;
+
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpenMega(null);
+      if (event.key === "Escape") closeMega();
     };
+
+    const onPointerDown = (event: PointerEvent) => {
+      const target = event.target as Node | null;
+      if (!target) return;
+      if (megaRootRef.current?.contains(target)) return;
+      closeMega();
+    };
+
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    document.addEventListener("pointerdown", onPointerDown, true);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("pointerdown", onPointerDown, true);
+    };
   }, [openMega]);
 
   const megaEntries = navigation.filter(
@@ -57,8 +88,9 @@ export function SiteHeader() {
         )}
       >
         <div
+          ref={megaRootRef}
           className="relative"
-          onMouseLeave={() => setOpenMega(null)}
+          onMouseLeave={closeMega}
         >
           <nav
             className="container-header flex h-14 items-center justify-between gap-3 lg:h-[4.25rem]"
@@ -69,6 +101,7 @@ export function SiteHeader() {
                 href="/"
                 className="header-brand inline-flex shrink-0 items-center gap-2.5"
                 aria-label="Omnider"
+                onMouseEnter={closeMega}
               >
                 <Image
                   src="/icons/icon-192.png"
@@ -89,7 +122,8 @@ export function SiteHeader() {
                         key={entry.key}
                         entry={entry}
                         open={openMega === entry.key}
-                        onOpen={() => setOpenMega(entry.key)}
+                        onOpen={() => openMegaKey(entry.key)}
+                        onHoverOpen={() => hoverOpenMegaKey(entry.key)}
                       />
                     );
                   }
@@ -99,7 +133,7 @@ export function SiteHeader() {
                       <Link
                         href={entry.href}
                         className="header-nav-link"
-                        onMouseEnter={() => setOpenMega(null)}
+                        onMouseEnter={closeMega}
                       >
                         {t(entry.key)}
                       </Link>
@@ -115,14 +149,14 @@ export function SiteHeader() {
               <Link
                 href="/login"
                 className="header-cta-ghost hidden lg:inline-flex"
-                onMouseEnter={() => setOpenMega(null)}
+                onMouseEnter={closeMega}
               >
                 {t("login")}
               </Link>
               <Link
                 href="/register"
                 className="header-cta-primary hidden md:inline-flex"
-                onMouseEnter={() => setOpenMega(null)}
+                onMouseEnter={closeMega}
               >
                 {t("startFree")}
               </Link>
@@ -231,6 +265,8 @@ export function SiteHeader() {
                                                 : undefined
                                             }
                                             icon={item.icon}
+                                            href={item.href}
+                                            onNavigate={() => setOpen(false)}
                                           />
                                         ))}
                                       </div>
@@ -249,6 +285,8 @@ export function SiteHeader() {
                                               key={item.key}
                                               title={t(`items.${item.key}`)}
                                               icon={item.icon}
+                                              href={item.href}
+                                              onNavigate={() => setOpen(false)}
                                             />
                                           ))}
                                         </div>
@@ -274,6 +312,8 @@ export function SiteHeader() {
                                                     : undefined
                                                 }
                                                 icon={item.icon}
+                                                href={item.href}
+                                                onNavigate={() => setOpen(false)}
                                               />
                                             ))}
                                           </div>
@@ -283,6 +323,8 @@ export function SiteHeader() {
                                             key={item.key}
                                             title={t(`items.${item.key}`)}
                                             icon={item.icon}
+                                            href={item.href}
+                                            onNavigate={() => setOpen(false)}
                                           />
                                         ))}
                               </div>
@@ -321,9 +363,14 @@ export function SiteHeader() {
       {openMega ? (
         <button
           type="button"
-          className="fixed inset-0 z-40 bg-slate-950/20 backdrop-blur-[1px]"
+          tabIndex={-1}
+          className="fixed inset-0 z-40 cursor-default bg-slate-950/20 backdrop-blur-[1px]"
           aria-label={t("closeMenu")}
-          onClick={() => setOpenMega(null)}
+          onClick={closeMega}
+          onPointerDown={(event) => {
+            event.preventDefault();
+            closeMega();
+          }}
         />
       ) : null}
     </>
@@ -334,13 +381,17 @@ function MobileItem({
   title,
   description,
   icon,
+  href,
+  onNavigate,
 }: {
   title: string;
   description?: string;
   icon?: string;
+  href?: string;
+  onNavigate?: () => void;
 }) {
-  return (
-    <div className="flex cursor-default items-start gap-3 rounded-lg px-2 py-2">
+  const content = (
+    <>
       <NavIcon name={icon} className="h-8 w-8" />
       <span className="min-w-0">
         <span className="block text-sm font-medium text-ink">{title}</span>
@@ -350,6 +401,24 @@ function MobileItem({
           </span>
         ) : null}
       </span>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className="flex items-start gap-3 rounded-lg px-2 py-2 transition hover:bg-surface-subtle"
+        onClick={onNavigate}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className="flex cursor-default items-start gap-3 rounded-lg px-2 py-2">
+      {content}
     </div>
   );
 }

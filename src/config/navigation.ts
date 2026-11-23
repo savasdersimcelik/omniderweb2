@@ -10,6 +10,8 @@ export type NavItem = {
   /** Brand logo path under /public (svg/png) */
   logo?: string;
   badgeKey?: string;
+  /** When set, mega/mobile item navigates here */
+  href?: string;
 };
 
 export type NavGroup = {
@@ -78,31 +80,37 @@ export const navigation: NavEntry[] = [
             key: "messaging",
             descriptionKey: "messagingDesc",
             icon: "inbox",
+            href: "/messaging",
           },
           {
             key: "email",
             descriptionKey: "emailDesc",
             icon: "mail",
+            href: "/email",
           },
           {
             key: "campaigns",
             descriptionKey: "campaignsDesc",
             icon: "megaphone",
+            href: "/campaigns",
           },
           {
             key: "appointments",
             descriptionKey: "appointmentsDesc",
             icon: "calendar",
+            href: "/appointments",
           },
           {
             key: "aiCalls",
             descriptionKey: "aiCallsDesc",
             icon: "phone",
+            href: "/ai-calls",
           },
           {
             key: "aiAssistant",
             descriptionKey: "aiAssistantDesc",
             icon: "brain",
+            href: "/ai-assistant",
           },
         ],
       },
@@ -113,16 +121,19 @@ export const navigation: NavEntry[] = [
             key: "linkShortener",
             descriptionKey: "linkShortenerDesc",
             icon: "link",
+            href: "/link-shortener",
           },
           {
             key: "analytics",
             descriptionKey: "analyticsDesc",
             icon: "bar-chart-3",
+            href: "/analytics",
           },
           {
             key: "marketplace",
             descriptionKey: "marketplaceDesc",
             icon: "marketplace",
+            href: "/marketplace",
           },
           {
             key: "seo",
@@ -263,61 +274,73 @@ export const navigation: NavEntry[] = [
         key: "whatsappBusiness",
         icon: "whatsapp-business",
         descriptionKey: "whatsappBusinessDesc",
+        href: "/platforms/whatsapp-business",
       },
       {
         key: "telegram",
         icon: "telegram",
         descriptionKey: "telegramDesc",
+        href: "/platforms/telegram",
       },
       {
         key: "gmail",
         icon: "gmail",
         descriptionKey: "gmailDesc",
+        href: "/platforms/gmail",
       },
       {
         key: "whatsappPersonal",
         icon: "whatsapp-personal",
         descriptionKey: "whatsappPersonalDesc",
+        href: "/platforms/whatsapp-personal",
       },
       {
         key: "line",
         icon: "line",
         descriptionKey: "lineDesc",
+        href: "/platforms/line",
       },
       {
         key: "outlook",
         icon: "outlook",
         descriptionKey: "outlookDesc",
+        href: "/platforms/outlook",
       },
       {
         key: "instagram",
         icon: "instagram",
         descriptionKey: "instagramDesc",
+        href: "/platforms/instagram",
       },
       {
         key: "webchat",
         icon: "webchat",
         descriptionKey: "webchatDesc",
+        href: "/platforms/webchat",
       },
       {
         key: "googleBusiness",
         icon: "google-business",
         descriptionKey: "googleBusinessDesc",
+        href: "/platforms/google-business",
       },
       {
         key: "messenger",
         icon: "messenger",
         descriptionKey: "messengerDesc",
+        href: "/platforms/messenger",
       },
       {
         key: "platformEmail",
         icon: "email",
         descriptionKey: "platformEmailDesc",
+        href: "/platforms/email",
       },
       {
         key: "sms",
         icon: "sms",
         descriptionKey: "smsDesc",
+        href: "/platforms/sms",
       },
     ],
   },

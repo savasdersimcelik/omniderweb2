@@ -39,6 +39,46 @@
     "termsOfUse": {
       "title": "Terms of Use — Omnider",
       "description": "Terms that govern your use of Omnider services."
+    },
+    "platforms": {
+      "title": "Platforms — Omnider",
+      "description": "Connect WhatsApp, Instagram, Messenger, email, SMS, and more to Omnider. Every channel in one panel."
+    },
+    "messaging": {
+      "title": "Messaging — Omnider",
+      "description": "Unify every messaging channel in one inbox. Manage WhatsApp to web chat with Omnider."
+    },
+    "email": {
+      "title": "Email — Omnider",
+      "description": "Manage inbox, templates, and email replies with Omnider."
+    },
+    "campaigns": {
+      "title": "Campaign Management — Omnider",
+      "description": "Plan, send, and measure multi-channel campaigns with Omnider."
+    },
+    "appointments": {
+      "title": "Appointments — Omnider",
+      "description": "Book, remind, and manage appointments in one place with Omnider."
+    },
+    "aiCalls": {
+      "title": "AI Calls — Omnider",
+      "description": "Automate customer outreach with AI-powered calls."
+    },
+    "aiAssistant": {
+      "title": "AI Assistant — Omnider",
+      "description": "Answer customer questions automatically with an AI assistant."
+    },
+    "linkShortener": {
+      "title": "Link Shortener — Omnider",
+      "description": "Create short links, track clicks, and measure your campaigns."
+    },
+    "analytics": {
+      "title": "Analytics — Omnider",
+      "description": "Monitor channel, agent, and campaign performance in one panel."
+    },
+    "marketplace": {
+      "title": "Marketplace — Omnider",
+      "description": "Manage Trendyol, Hepsiburada, and other marketplace messages in Omnider."
     }
   },
   "DemoModal": {
@@ -889,8 +929,8 @@
     "title": "Privacy Policy",
     "subtitle": "How Omnider collects, uses, stores, and protects your information across our web platform, mobile applications, and integrated messaging channels.",
     "lastUpdatedLabel": "Last updated",
-    "lastUpdated": "August 30, 2026",
-    "lastUpdatedIso": "2026-08-30",
+    "lastUpdated": "November 23, 2026",
+    "lastUpdatedIso": "2026-11-23",
     "intro": [
       "This Privacy Policy (\"Policy\") describes how Omnider (\"Omnider\", \"we\", \"us\", or \"our\") collects, uses, discloses, and safeguards personal information when you use our products and services, including the Omnider Web Platform, the Omnider Android application (available on Google Play), the Omnider iOS application (available on the Apple App Store), and all related integrations, APIs, dashboards, and support services (collectively, the \"Services\").",
       "By accessing or using the Services, you acknowledge that you have read and understood this Policy. If you do not agree with our practices, please do not use the Services."
@@ -912,16 +952,22 @@
           {
             "title": "Messaging Channels and Integrations",
             "paragraphs": [
-              "The Services enable you to connect and manage conversations across official and supported messaging channels, including:"
+              "The Services enable you to connect and manage conversations and interactions across supported messaging, email, SMS, voice, review/comment, and business channels, including without limitation:"
             ],
             "list": [
-              "WhatsApp Business Platform",
-              "Instagram Business Messaging",
+              "WhatsApp Business Platform and WhatsApp Personal connections",
+              "Instagram (Direct Messaging, story replies, and post comments)",
               "Facebook Messenger",
               "Telegram",
               "LINE",
               "Web Chat",
-              "Other official messaging platforms that Omnider may add in the future"
+              "Email (business mailboxes and supported email providers)",
+              "SMS",
+              "Phone / voice call integrations",
+              "Google Business Profile (reviews and ratings)",
+              "Google Chat",
+              "LinkedIn",
+              "Other official platforms and integrations that Omnider may add in the future"
             ]
           }
         ]
@@ -945,8 +991,9 @@
           {
             "title": "Messaging and Customer Data",
             "list": [
-              "Message content, timestamps, delivery status, and conversation metadata",
-              "Contact names, phone numbers, usernames, profile identifiers, and channel-specific IDs",
+              "Message, email, SMS, and voice interaction content; timestamps, delivery status, and conversation metadata",
+              "Contact names, phone numbers, email addresses, usernames, profile identifiers, and channel-specific IDs",
+              "Instagram post comments, Google Business reviews/replies, and similar public interaction data",
               "Tags, notes, assignments, and workflow states applied within the shared inbox",
               "Campaign audience data, templates, and broadcast history"
             ]
@@ -977,7 +1024,8 @@
           {
             "title": "Google Workspace Integration Data",
             "paragraphs": [
-              "If you authorize Google Workspace integrations (such as Google Sheets, Google Drive, or Google Calendar), we may process data necessary to perform the synchronization, export, backup, or calendar-management actions you request. Google Workspace API data is processed only within those authorized integration workflows and is kept separate from AI-powered messaging features, as described in the Google API Services and Limited Use section below."
+              "If you authorize Google Workspace integrations (such as Google Sheets, Google Drive, or Google Calendar), we may process data necessary to perform the synchronization, export, backup, or calendar-management actions you request. Google Workspace API data is processed only within those authorized integration workflows and is kept separate from AI-powered messaging features, as described in the Google API Services and Limited Use section below.",
+              "Google Business Profile reviews/ratings and Google Chat messages are processed as separate channels from Google Workspace (Sheets/Drive/Calendar) integrations; content from those channels is covered under Messaging and Customer Data above."
             ]
           }
         ]
@@ -1290,8 +1338,8 @@
     "title": "Terms of Use",
     "subtitle": "The rules and conditions governing your access to and use of Omnider products, mobile applications, panels, and integrated messaging services.",
     "lastUpdatedLabel": "Last updated",
-    "lastUpdated": "August 30, 2026",
-    "lastUpdatedIso": "2026-08-30",
+    "lastUpdated": "November 23, 2026",
+    "lastUpdatedIso": "2026-11-23",
     "intro": [
       "These Terms of Use (\"Terms\") constitute a binding agreement between you (\"you\", \"your\", or \"Customer\") and Omnider (\"Omnider\", \"we\", \"us\", or \"our\") governing access to and use of the Omnider Web Platform, Omnider Android application (Google Play), Omnider iOS application (Apple App Store), Customer Panel, Partner Panel, APIs, integrations, and all related services (collectively, the \"Services\").",
       "By creating an account, accessing a panel, downloading a mobile app, or otherwise using the Services, you agree to these Terms and to our Privacy Policy. If you are using the Services on behalf of an organization, you represent that you have authority to bind that organization."
@@ -1309,7 +1357,7 @@
           "Omnider Android Application distributed via Google Play",
           "Omnider iOS Application distributed via the Apple App Store",
           "Customer Panel at <a href=\"https://app.omnider.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://app.omnider.com</a>",
-          "Integrations with WhatsApp Business Platform, Instagram Business Messaging, Facebook Messenger, Telegram, LINE, Web Chat, and other official messaging platforms Omnider may support in the future"
+          "Integrations with WhatsApp, Instagram (messaging and comments), Facebook Messenger, Telegram, LINE, Web Chat, email, SMS, phone/voice, Google Business Profile, Google Chat, LinkedIn, and other official platforms Omnider may support in the future"
         ]
       },
       {
@@ -1527,6 +1575,63 @@
         ]
       }
     ]
+  },
+  "PlatformsIndexPage": {
+    "eyebrow": "Platforms",
+    "title": "All platforms",
+    "subtitle": "From WhatsApp to email, SMS to Google Business — every connected channel in one panel."
+  },
+  "MessagingProductPage": {
+    "eyebrow": "Products",
+    "title": "Messaging",
+    "subtitle": "Unify every messaging channel in one inbox. Shared inbox, assignment, and replies in one place.",
+    "ctaPrimary": "Start free for 14 days",
+    "ctaSecondary": "Browse platforms",
+    "comingSoon": "Product page content coming soon."
+  },
+  "EmailProductPage": {
+    "eyebrow": "Products",
+    "title": "Email",
+    "comingSoon": "Content coming soon."
+  },
+  "CampaignsProductPage": {
+    "eyebrow": "Products",
+    "title": "Campaign Management",
+    "comingSoon": "Content coming soon."
+  },
+  "AppointmentsProductPage": {
+    "eyebrow": "Products",
+    "title": "Appointments",
+    "comingSoon": "Content coming soon."
+  },
+  "AiCallsProductPage": {
+    "eyebrow": "Products",
+    "title": "AI Calls",
+    "comingSoon": "Content coming soon."
+  },
+  "AiAssistantProductPage": {
+    "eyebrow": "Products",
+    "title": "AI Assistant",
+    "comingSoon": "Content coming soon."
+  },
+  "LinkShortenerProductPage": {
+    "eyebrow": "Products",
+    "title": "Link Shortener",
+    "comingSoon": "Content coming soon."
+  },
+  "AnalyticsProductPage": {
+    "eyebrow": "Products",
+    "title": "Analytics",
+    "comingSoon": "Content coming soon."
+  },
+  "MarketplaceProductPage": {
+    "eyebrow": "Products",
+    "title": "Marketplace",
+    "comingSoon": "Content coming soon."
+  },
+  "PlatformDetailPage": {
+    "eyebrow": "Platforms",
+    "comingSoon": "Content coming soon."
   },
   "ContactPage": {
     "eyebrow": "Contact",
@@ -1986,6 +2091,324 @@
       "backToLogin": "Back to sign in",
       "verifying": "Verifying…",
       "homeLink": "Home"
+    }
+  },
+  "PlatformWhatsAppBusiness": {
+    "meta": {
+      "title": "WhatsApp Business — Omnider",
+      "description": "Run WhatsApp Business API, AI-powered auto-replies, campaigns, chatbots and team management on Omnider — all in one platform."
+    },
+    "hero": {
+      "badge": "WhatsApp Business",
+      "titleLine1": "Customers write,",
+      "titleLine2": "AI replies",
+      "description": "Run WhatsApp Business API, AI-powered auto-replies, campaigns, chatbots and team management on Omnider — all in one platform.",
+      "ctaPrimary": "Open free demo account",
+      "ctaSecondary": "View pricing",
+      "chat": {
+        "businessName": "Atelier",
+        "online": "online",
+        "typing": "typing…",
+        "transfer": "Chat handed to an agent",
+        "aiLabel": "AI",
+        "agentLabel": "Agent",
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Hi, what’s the price of the linen shirt?"
+          },
+          {
+            "kind": "typing"
+          },
+          {
+            "kind": "ai",
+            "text": "Hello! The linen shirt is 1,249 TL and in stock. How would you like to get it?"
+          },
+          {
+            "kind": "buttons",
+            "buttons": [
+              "By delivery",
+              "Pick up in store",
+              "Talk to an agent"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Talk to an agent"
+          },
+          {
+            "kind": "transfer",
+            "text": "Chat handed to an agent"
+          },
+          {
+            "kind": "agent",
+            "text": "Of course — happy to help. Do you have a delivery address ready?"
+          }
+        ],
+        "desktopTitle": "WhatsApp",
+        "searchPlaceholder": "Search or start a new chat",
+        "composerPlaceholder": "Type a message",
+        "customerName": "Maya Rivera",
+        "sidebar": [
+          {
+            "name": "Maya Rivera",
+            "preview": "Hi, what’s the price of the linen shirt?",
+            "time": "14:02",
+            "unread": 1
+          },
+          {
+            "name": "James Cole",
+            "preview": "Any appointments open?",
+            "time": "13:40",
+            "unread": 0
+          },
+          {
+            "name": "Sara Lee",
+            "preview": "Has my order shipped?",
+            "time": "12:18",
+            "unread": 2
+          },
+          {
+            "name": "Omar Ali",
+            "preview": "Thanks!",
+            "time": "Yesterday",
+            "unread": 0
+          }
+        ],
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "WhatsApp inbox"
+      }
+    },
+    "templates": {
+      "eyebrow": "Meta templates",
+      "title": "Manage your WhatsApp templates in one place.",
+      "subtitle": "Omnider pulls templates from Meta, drafts them, and submits them for review. You see the status in the list.",
+      "items": {
+        "sync": {
+          "title": "One-click sync from Meta",
+          "desc": "Pull existing templates from the Cloud API so the Omnider list stays in step with Meta."
+        },
+        "types": {
+          "title": "Categories and button types",
+          "desc": "Utility, marketing, authentication. Header and body; quick reply, URL, phone, OTP, and Flow."
+        },
+        "status": {
+          "title": "Status, quality, and test send",
+          "desc": "Approved, pending, or rejected shows on the list. Read the quality score, then test an approved template on yourself."
+        }
+      },
+      "mock": {
+        "title": "Message templates",
+        "meta": "3 templates · in sync with Meta",
+        "sync": "Sync",
+        "listLabel": "Sample template list",
+        "status": {
+          "approved": "Approved",
+          "pending": "Pending",
+          "rejected": "Rejected"
+        },
+        "rows": {
+          "order": {
+            "name": "order_confirm",
+            "meta": "Utility · en"
+          },
+          "campaign": {
+            "name": "summer_offer",
+            "meta": "Marketing · en"
+          },
+          "otp": {
+            "name": "otp_verify",
+            "meta": "Authentication · en"
+          }
+        }
+      },
+      "live": {
+        "syncing": "Syncing templates from Meta",
+        "synced": "Template list updated from Meta"
+      }
+    },
+    "interactive": {
+      "eyebrow": "Cloud API",
+      "title": "Reply buttons, lists, and links",
+      "subtitle": "Bot replies go out as WhatsApp’s own buttons and lists. The customer taps; the choice returns to the flow.",
+      "tabsLabel": "Message type",
+      "tabs": {
+        "buttons": "Reply buttons",
+        "list": "Product list",
+        "link": "Link button"
+      },
+      "cards": {
+        "buttons": "Up to three quick replies. The customer taps instead of typing; that choice continues the flow.",
+        "list": "A list opens. Product, price, and stock sit on the row; the picked row lands in the panel.",
+        "link": "Tracking, a catalog, or a form in one CTA button. It opens the browser from inside WhatsApp."
+      },
+      "flow": {
+        "title": "The tap returns to the flow",
+        "body": "The tapped value goes to the chatbot step. The panel shows the choice; the next message is written from it."
+      },
+      "note": "Buttons, lists, and links are WhatsApp Cloud API message types. The customer taps inside WhatsApp.",
+      "phone": {
+        "name": "Atelier",
+        "status": "online"
+      },
+      "buttons": {
+        "body": "How would you like to get this?",
+        "options": [
+          "By delivery",
+          "Pick up in store",
+          "Talk to an agent"
+        ],
+        "follow": "Send your address and we’ll ship it."
+      },
+      "list": {
+        "body": "I found 4 products that fit.",
+        "cta": "Products",
+        "sheet": "Choose a product",
+        "detail": "1,249 TL · In stock",
+        "rows": [
+          {
+            "title": "Linen shirt",
+            "description": "1,249 TL",
+            "picked": true
+          },
+          {
+            "title": "Wool cardigan",
+            "description": "890 TL"
+          },
+          {
+            "title": "Leather bag",
+            "description": "2,190 TL"
+          },
+          {
+            "title": "Linen trousers",
+            "description": "899 TL · Out of stock",
+            "out": true
+          }
+        ]
+      },
+      "link": {
+        "body": "You can track your order from here.",
+        "cta": "Open tracking"
+      },
+      "badge": "In the panel: selection continues the flow"
+    },
+    "health": {
+      "eyebrow": "Number health",
+      "title": "Quality, quota, and send status",
+      "subtitle": "Meta’s score, daily limit, and send status sit on the channel page.",
+      "tabsLabel": "Quality view",
+      "tabs": {
+        "green": "Green",
+        "yellow": "Yellow",
+        "red": "Red"
+      },
+      "items": {
+        "quality": {
+          "title": "Quality rating",
+          "desc": "Meta gives your number green, yellow, or red. The score sits on the channel page and updates when Meta sends a notification."
+        },
+        "quota": {
+          "title": "Messaging limit",
+          "desc": "How many new people you can message in 24 hours. The limit runs from 250 to Unlimited; the current cap is on the card."
+        },
+        "status": {
+          "title": "Send status",
+          "desc": "Available, Limited, or Blocked. If there is a problem, Meta’s suggested fix sits on the same card."
+        },
+        "halt": {
+          "title": "On red, bulk sending pauses",
+          "desc": "When the score turns red, campaigns, new chats, and out-of-session templates pause. You can still reply when a customer writes."
+        }
+      },
+      "mock": {
+        "title": "Account info",
+        "label": "Sample account info card",
+        "nameLabel": "Display name",
+        "name": "Sample Store",
+        "phoneLabel": "Phone",
+        "phone": "+90 5xx xxx xx xx",
+        "qualityLabel": "Quality",
+        "quotaLabel": "Messaging limit",
+        "quota": "1,000 messages / 24 hours",
+        "sendLabel": "Sending status",
+        "send": {
+          "green": "Available",
+          "yellow": "Limited",
+          "red": "Blocked"
+        },
+        "nameStatusLabel": "Display name status",
+        "nameStatus": "Approved",
+        "quality": {
+          "green": "Green",
+          "yellow": "Yellow",
+          "red": "Red"
+        }
+      },
+      "banners": {
+        "green": "Everything looks good; campaigns run as usual.",
+        "yellow": "Sending continues; watch the score in the panel.",
+        "red": "Quality is red — bulk sending paused."
+      },
+      "halt": {
+        "stopped": "Campaigns, starting new chats, and out-of-session templates: paused",
+        "continues": "Replying when a customer writes: still on"
+      },
+      "note": "The score comes from Meta; the panel updates when Meta sends a notification."
+    },
+    "adReferral": {
+      "eyebrow": "Messages from ads",
+      "title": "Which ad did this DM come from?",
+      "lead": "A Send message tap on the ad opens the chat with the ad title, image, and link.",
+      "note": "Messages from Click-to-WhatsApp ads arrive with the headline, image, and source link.",
+      "items": {
+        "card": {
+          "title": "The ad card sits above the message",
+          "body": "An Ad badge, the ad image, and the headline appear right above the first message."
+        },
+        "utm": {
+          "title": "A link with UTM",
+          "body": "Open the ad link from the inbox and the conversation and ad id are added as UTM parameters, so you can see them in Google Analytics."
+        },
+        "contact": {
+          "title": "Saved on the contact",
+          "body": "Referral source fills in automatically and exports as a Referral column."
+        }
+      },
+      "scene": {
+        "brand": "Studio No.4",
+        "sponsored": "Sponsored",
+        "send": "Send message",
+        "inbox": "Inbox",
+        "adBadge": "Ad",
+        "headline": "Summer campaign this week",
+        "link": "omnider.com/campaign…",
+        "bubble": "Hi, is this campaign still on?",
+        "customer": "Maya",
+        "referralLabel": "Referral source",
+        "referralPrefix": "Referral",
+        "adId": "120384756"
+      },
+      "footnote": "Ad details appear according to the fields Meta sends."
+    },
+    "try": {
+      "eyebrow": "Live test",
+      "title": "Try WhatsApp Business from your phone",
+      "body": "Scan the Turkey or Europe line, or tap the button. Omnider replies — ask about pricing, an appointment or an order. AI answers, and the team takes over when needed.",
+      "cta": "Open in WhatsApp",
+      "lines": {
+        "turkey": {
+          "title": "Omnider Turkey",
+          "phone": "+90 546 419 94 17",
+          "ctaTitle": "Open the Omnider Turkey WhatsApp line",
+          "imageAlt": "QR code for the Omnider Turkey WhatsApp line, +90 546 419 94 17"
+        },
+        "europe": {
+          "title": "Omnider Europe",
+          "phone": "+44 7529 760393",
+          "ctaTitle": "Open the Omnider Europe WhatsApp line",
+          "imageAlt": "QR code for the Omnider Europe WhatsApp line, +44 7529 760393"
+        }
+      }
     }
   }
 }

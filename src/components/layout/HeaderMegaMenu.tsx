@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { NavMega } from "@/config/navigation";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { NavIcon } from "./NavIcon";
 
@@ -23,9 +24,15 @@ type HeaderMegaMenuProps = {
   entry: NavMega;
   open: boolean;
   onOpen: () => void;
+  onHoverOpen: () => void;
 };
 
-export function HeaderMegaMenu({ entry, open, onOpen }: HeaderMegaMenuProps) {
+export function HeaderMegaMenu({
+  entry,
+  open,
+  onOpen,
+  onHoverOpen,
+}: HeaderMegaMenuProps) {
   const t = useTranslations("Nav");
 
   return (
@@ -38,8 +45,8 @@ export function HeaderMegaMenu({ entry, open, onOpen }: HeaderMegaMenuProps) {
         )}
         aria-expanded={open}
         aria-haspopup="true"
-        onMouseEnter={onOpen}
-        onFocus={onOpen}
+        onMouseEnter={onHoverOpen}
+        onFocus={onHoverOpen}
         onClick={onOpen}
       >
         {t(entry.key)}
@@ -62,8 +69,13 @@ export function MegaPanel({ entry }: MegaPanelProps) {
   const t = useTranslations("Nav");
 
   return (
-    <div className="header-mega absolute inset-x-0 top-full z-50 pt-0">
-      <div className="header-mega-panel container-header overflow-hidden">
+    <div className="header-mega pointer-events-none absolute inset-x-0 top-full z-50">
+      {/* Keeps hover alive across the header → panel seam */}
+      <div
+        className="pointer-events-auto absolute inset-x-0 -top-3 h-3"
+        aria-hidden
+      />
+      <div className="header-mega-panel pointer-events-auto container-header overflow-hidden">
         <div
           className={
             entry.layout === "platforms" ||
@@ -145,12 +157,15 @@ function ProductsLayout({ entry, t }: { entry: NavMega; t: TNav }) {
                 <p className="mt-1.5 max-w-xs text-sm leading-5 text-ink-subtle">
                   {t(`items.${entry.featured.descriptionKey}`)}
                 </p>
-                <span className="mt-4 inline-flex w-fit cursor-default items-center gap-1.5 rounded-full bg-brand-600 px-3.5 py-2 text-xs font-bold text-white shadow-[0_10px_30px_-12px_rgba(79,70,229,0.95)]">
+                <Link
+                  href="/messaging"
+                  className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-brand-600 px-3.5 py-2 text-xs font-bold text-white shadow-[0_10px_30px_-12px_rgba(79,70,229,0.95)] transition hover:bg-brand-700"
+                >
                   {entry.featured.ctaKey
                     ? t(entry.featured.ctaKey)
                     : t("exploreProduct")}
                   <ArrowRightIcon className="h-3.5 w-3.5" />
-                </span>
+                </Link>
               </div>
             </div>
           </div>
@@ -163,26 +178,46 @@ function ProductsLayout({ entry, t }: { entry: NavMega; t: TNav }) {
                 {t(`groups.${platformGroup.key}`)}
               </p>
               <div className="grid gap-x-5 gap-y-1 sm:grid-cols-2">
-                {platformGroup.items.map((item) => (
-                  <div
-                    key={item.key}
-                    className="group/item flex cursor-default items-start gap-3 rounded-xl px-1.5 py-2.5 transition hover:bg-surface-subtle"
-                  >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600 ring-1 ring-brand-100">
-                      <NavIcon name={item.icon} className="h-4 w-4" />
-                    </span>
-                    <span className="min-w-0 pt-0.5">
-                      <span className="block text-sm font-semibold text-ink transition group-hover/item:text-brand-700">
-                        {t(`items.${item.key}`)}
+                {platformGroup.items.map((item) => {
+                  const content = (
+                    <>
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600 ring-1 ring-brand-100">
+                        <NavIcon name={item.icon} className="h-4 w-4" />
                       </span>
-                      {item.descriptionKey ? (
-                        <span className="mt-0.5 block text-xs leading-5 text-ink-subtle">
-                          {t(`items.${item.descriptionKey}`)}
+                      <span className="min-w-0 pt-0.5">
+                        <span className="block text-sm font-semibold text-ink transition group-hover/item:text-brand-700">
+                          {t(`items.${item.key}`)}
                         </span>
-                      ) : null}
-                    </span>
-                  </div>
-                ))}
+                        {item.descriptionKey ? (
+                          <span className="mt-0.5 block text-xs leading-5 text-ink-subtle">
+                            {t(`items.${item.descriptionKey}`)}
+                          </span>
+                        ) : null}
+                      </span>
+                    </>
+                  );
+
+                  if (item.href) {
+                    return (
+                      <Link
+                        key={item.key}
+                        href={item.href}
+                        className="group/item flex items-start gap-3 rounded-xl px-1.5 py-2.5 transition hover:bg-surface-subtle"
+                      >
+                        {content}
+                      </Link>
+                    );
+                  }
+
+                  return (
+                    <div
+                      key={item.key}
+                      className="group/item flex cursor-default items-start gap-3 rounded-xl px-1.5 py-2.5 transition hover:bg-surface-subtle"
+                    >
+                      {content}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ) : null}
@@ -193,27 +228,47 @@ function ProductsLayout({ entry, t }: { entry: NavMega; t: TNav }) {
                 {t(`groups.${servicesGroup.key}`)}
               </p>
               <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
-                {servicesGroup.items.map((item) => (
-                  <div
-                    key={item.key}
-                    className="group/item flex cursor-default items-start gap-2.5 rounded-xl px-3 py-2.5 ring-1 ring-line transition hover:bg-surface-subtle hover:ring-brand-100"
-                  >
-                    <NavIcon
-                      name={item.icon}
-                      className="h-7 w-7 text-brand-600 transition group-hover/item:text-brand-700"
-                    />
-                    <span className="min-w-0 pt-0.5">
-                      <span className="block text-sm font-semibold text-ink transition group-hover/item:text-brand-700">
-                        {t(`items.${item.key}`)}
-                      </span>
-                      {item.descriptionKey ? (
-                        <span className="mt-0.5 block text-xs leading-4 text-ink-subtle">
-                          {t(`items.${item.descriptionKey}`)}
+                {servicesGroup.items.map((item) => {
+                  const content = (
+                    <>
+                      <NavIcon
+                        name={item.icon}
+                        className="h-7 w-7 text-brand-600 transition group-hover/item:text-brand-700"
+                      />
+                      <span className="min-w-0 pt-0.5">
+                        <span className="block text-sm font-semibold text-ink transition group-hover/item:text-brand-700">
+                          {t(`items.${item.key}`)}
                         </span>
-                      ) : null}
-                    </span>
-                  </div>
-                ))}
+                        {item.descriptionKey ? (
+                          <span className="mt-0.5 block text-xs leading-4 text-ink-subtle">
+                            {t(`items.${item.descriptionKey}`)}
+                          </span>
+                        ) : null}
+                      </span>
+                    </>
+                  );
+
+                  if (item.href) {
+                    return (
+                      <Link
+                        key={item.key}
+                        href={item.href}
+                        className="group/item flex items-start gap-2.5 rounded-xl px-3 py-2.5 ring-1 ring-line transition hover:bg-surface-subtle hover:ring-brand-100"
+                      >
+                        {content}
+                      </Link>
+                    );
+                  }
+
+                  return (
+                    <div
+                      key={item.key}
+                      className="group/item flex cursor-default items-start gap-2.5 rounded-xl px-3 py-2.5 ring-1 ring-line transition hover:bg-surface-subtle hover:ring-brand-100"
+                    >
+                      {content}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ) : null}
@@ -417,32 +472,55 @@ function PlatformsLayout({ entry, t }: { entry: NavMega; t: TNav }) {
       <div className="grid gap-5 px-4 py-5 sm:px-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(15rem,0.78fr)] lg:gap-7 lg:py-6">
         <div className="min-w-0">
           <div className="grid grid-cols-1 gap-x-3 gap-y-1 sm:grid-cols-2 xl:grid-cols-3">
-            {entry.items?.map((item) => (
-              <div
-                key={item.key}
-                className="group/item flex cursor-default items-start gap-3 rounded-xl px-2 py-2.5 transition hover:bg-surface-subtle"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white ring-1 ring-line shadow-sm">
-                  <NavIcon name={item.icon} className="h-7 w-7" />
-                </span>
-                <span className="min-w-0 pt-0.5">
-                  <span className="block text-sm font-semibold text-ink transition group-hover/item:text-brand-700">
-                    {t(`items.${item.key}`)}
+            {entry.items?.map((item) => {
+              const content = (
+                <>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white ring-1 ring-line shadow-sm">
+                    <NavIcon name={item.icon} className="h-7 w-7" />
                   </span>
-                  {item.descriptionKey ? (
-                    <span className="mt-0.5 block text-xs leading-5 text-ink-subtle">
-                      {t(`items.${item.descriptionKey}`)}
+                  <span className="min-w-0 pt-0.5">
+                    <span className="block text-sm font-semibold text-ink transition group-hover/item:text-brand-700">
+                      {t(`items.${item.key}`)}
                     </span>
-                  ) : null}
-                </span>
-              </div>
-            ))}
+                    {item.descriptionKey ? (
+                      <span className="mt-0.5 block text-xs leading-5 text-ink-subtle">
+                        {t(`items.${item.descriptionKey}`)}
+                      </span>
+                    ) : null}
+                  </span>
+                </>
+              );
+
+              if (item.href) {
+                return (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className="group/item flex items-start gap-3 rounded-xl px-2 py-2.5 transition hover:bg-surface-subtle"
+                  >
+                    {content}
+                  </Link>
+                );
+              }
+
+              return (
+                <div
+                  key={item.key}
+                  className="group/item flex cursor-default items-start gap-3 rounded-xl px-2 py-2.5 transition hover:bg-surface-subtle"
+                >
+                  {content}
+                </div>
+              );
+            })}
           </div>
 
-          <span className="mt-5 inline-flex cursor-default items-center gap-1.5 text-sm font-semibold text-brand-700">
+          <Link
+            href="/platforms"
+            className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 transition hover:text-brand-800"
+          >
             {t("viewAllChannels")}
             <ArrowRightIcon className="h-3.5 w-3.5" />
-          </span>
+          </Link>
         </div>
 
         {entry.featured ? (
@@ -471,12 +549,15 @@ function PlatformsLayout({ entry, t }: { entry: NavMega; t: TNav }) {
                 <p className="mt-1.5 text-sm leading-5 text-ink-subtle">
                   {t(`items.${entry.featured.descriptionKey}`)}
                 </p>
-                <span className="mt-4 inline-flex w-fit cursor-default items-center gap-1.5 rounded-full bg-brand-600 px-3.5 py-2 text-xs font-bold text-white shadow-[0_10px_30px_-12px_rgba(79,70,229,0.9)]">
+                <Link
+                  href="/platforms"
+                  className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-brand-600 px-3.5 py-2 text-xs font-bold text-white shadow-[0_10px_30px_-12px_rgba(79,70,229,0.9)] transition hover:bg-brand-700"
+                >
                   {entry.featured.ctaKey
                     ? t(entry.featured.ctaKey)
                     : t("viewAllPlatforms")}
                   <ArrowRightIcon className="h-3.5 w-3.5" />
-                </span>
+                </Link>
               </div>
             </div>
           </div>
