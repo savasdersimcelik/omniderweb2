@@ -38,6 +38,8 @@ export function OmniderDoodleFooter({
       <DoodleCrewFooter
         wordmark="OMNIDER"
         brand={brand}
+        brandLogoSrc="/icons/icon-192.png"
+        brandLogoAlt="Omnider"
         blurb={blurb}
         tagline={tagline}
         copyright={copyright}

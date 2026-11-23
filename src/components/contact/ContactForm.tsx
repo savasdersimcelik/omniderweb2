@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useState, type FormEvent } from "react";
 import { LoaderCircle, Send, Shield } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 declare global {
   interface Window {
@@ -17,6 +18,10 @@ declare global {
 }
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY || "";
+
+const TOPICS = ["sales", "demo", "support", "partnership"] as const;
+
+type Topic = (typeof TOPICS)[number];
 
 type FormState = {
   name: string;
@@ -63,12 +68,18 @@ export function ContactForm() {
   const t = useTranslations("ContactPage");
   const locale = useLocale();
   const [form, setForm] = useState<FormState>(initialState);
+  const [topic, setTopic] = useState<Topic | null>(null);
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorKey, setErrorKey] = useState<string | null>(null);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
+  }
+
+  function selectTopic(next: Topic) {
+    setTopic(next);
+    update("subject", t(`topics.${next}.subject`));
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -104,6 +115,7 @@ export function ContactForm() {
       }
 
       setForm(initialState);
+      setTopic(null);
       setStatus("success");
     } catch {
       setStatus("error");
@@ -113,24 +125,34 @@ export function ContactForm() {
     }
   }
 
-  const fieldClass =
-    "mt-1.5 w-full rounded-xl border-0 bg-surface-subtle px-4 py-3 text-sm text-ink ring-1 ring-line transition placeholder:text-ink-faint focus:bg-surface focus:ring-2 focus:ring-brand-500 focus:outline-none";
-
   return (
-    <form onSubmit={onSubmit} className="space-y-4">
+    <form onSubmit={onSubmit} className="contact-form">
       {status === "success" ? (
-        <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+        <div className="contact-form__alert contact-form__alert--success" role="status">
           {t("form.success")}
         </div>
       ) : null}
 
       {status === "error" ? (
-        <div className="rounded-2xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">
+        <div className="contact-form__alert contact-form__alert--error" role="alert">
           {errorKey === "captcha_required" || errorKey === "captcha_failed"
             ? t(`form.${errorKey}`)
             : t("form.error")}
         </div>
       ) : null}
+
+      <div className="contact-form__topics" role="group" aria-label={t("topics.label")}>
+        {TOPICS.map((id) => (
+          <button
+            key={id}
+            type="button"
+            className={`contact-form__topic${topic === id ? " is-active" : ""}`}
+            onClick={() => selectTopic(id)}
+          >
+            {t(`topics.${id}.label`)}
+          </button>
+        ))}
+      </div>
 
       <div className="hidden" aria-hidden="true">
         <label>
@@ -146,11 +168,9 @@ export function ContactForm() {
         </label>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-ink">
-            {t("form.name")}
-          </label>
+      <div className="contact-form__grid">
+        <div className="contact-form__field">
+          <label htmlFor="name">{t("form.name")}</label>
           <input
             id="name"
             name="name"
@@ -159,14 +179,11 @@ export function ContactForm() {
             value={form.name}
             onChange={(e) => update("name", e.target.value)}
             placeholder={t("form.namePlaceholder")}
-            className={fieldClass}
           />
         </div>
 
-        <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-ink">
-            {t("form.email")}
-          </label>
+        <div className="contact-form__field">
+          <label htmlFor="email">{t("form.email")}</label>
           <input
             id="email"
             name="email"
@@ -176,16 +193,13 @@ export function ContactForm() {
             value={form.email}
             onChange={(e) => update("email", e.target.value)}
             placeholder={t("form.emailPlaceholder")}
-            className={fieldClass}
           />
         </div>
 
-        <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-ink">
+        <div className="contact-form__field">
+          <label htmlFor="phone">
             {t("form.phone")}{" "}
-            <span className="font-normal text-ink-faint">
-              · {t("form.optional")}
-            </span>
+            <span className="contact-form__optional">· {t("form.optional")}</span>
           </label>
           <input
             id="phone"
@@ -195,19 +209,13 @@ export function ContactForm() {
             value={form.phone}
             onChange={(e) => update("phone", e.target.value)}
             placeholder={t("form.phonePlaceholder")}
-            className={fieldClass}
           />
         </div>
 
-        <div>
-          <label
-            htmlFor="company"
-            className="block text-sm font-semibold text-ink"
-          >
+        <div className="contact-form__field">
+          <label htmlFor="company">
             {t("form.company")}{" "}
-            <span className="font-normal text-ink-faint">
-              · {t("form.optional")}
-            </span>
+            <span className="contact-form__optional">· {t("form.optional")}</span>
           </label>
           <input
             id="company"
@@ -216,31 +224,28 @@ export function ContactForm() {
             value={form.company}
             onChange={(e) => update("company", e.target.value)}
             placeholder={t("form.companyPlaceholder")}
-            className={fieldClass}
           />
         </div>
       </div>
 
-      <div>
-        <label htmlFor="subject" className="block text-sm font-semibold text-ink">
-          {t("form.subject")}
-        </label>
+      <div className="contact-form__field">
+        <label htmlFor="subject">{t("form.subject")}</label>
         <input
           id="subject"
           name="subject"
           required
           maxLength={160}
           value={form.subject}
-          onChange={(e) => update("subject", e.target.value)}
+          onChange={(e) => {
+            setTopic(null);
+            update("subject", e.target.value);
+          }}
           placeholder={t("form.subjectPlaceholder")}
-          className={fieldClass}
         />
       </div>
 
-      <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-ink">
-          {t("form.message")}
-        </label>
+      <div className="contact-form__field">
+        <label htmlFor="message">{t("form.message")}</label>
         <textarea
           id="message"
           name="message"
@@ -250,26 +255,32 @@ export function ContactForm() {
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
           placeholder={t("form.messagePlaceholder")}
-          className={`${fieldClass} resize-y`}
         />
       </div>
 
-      <label className="flex items-start gap-3 text-sm text-ink-muted">
+      <label className="contact-form__consent">
         <input
           type="checkbox"
           name="consent"
           required
           checked={form.consent}
           onChange={(e) => update("consent", e.target.checked)}
-          className="mt-0.5 size-4 shrink-0 rounded border-line text-brand-600 focus:ring-brand-500"
         />
-        <span>{t("form.consent")}</span>
+        <span>
+          {t.rich("form.consent", {
+            privacy: (chunks) => (
+              <Link href="/privacy-policy" className="contact-form__link">
+                {chunks}
+              </Link>
+            ),
+          })}
+        </span>
       </label>
 
       <button
         type="submit"
         disabled={sending}
-        className="btn-primary w-full text-base disabled:cursor-wait disabled:opacity-70"
+        className="btn-primary contact-form__submit"
       >
         {sending ? (
           <>
@@ -284,10 +295,12 @@ export function ContactForm() {
         )}
       </button>
 
-      <p className="flex items-center justify-center gap-1.5 text-center text-xs text-ink-faint">
+      <p className="contact-form__note">
         <Shield className="size-3.5" aria-hidden />
-        {t("form.recaptchaNotice")}
+        {t("form.privacyNote")}
       </p>
+
+      <p className="contact-form__recaptcha">{t("form.recaptchaNotice")}</p>
     </form>
   );
 }

@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { AttributionCapture } from "@/components/attribution/AttributionCapture";
 import { DemoModalProvider, DemoRequestModal } from "@/components/demo";
+import { NavigationProgress } from "@/components/layout/NavigationProgress";
 import { colors } from "@/config/colors";
 import { seoConfig } from "@/config/seo";
 import { routing } from "@/i18n/routing";
@@ -105,6 +106,7 @@ export default async function LocaleLayout({
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>
           <DemoModalProvider>
+            <NavigationProgress />
             <Suspense fallback={null}>
               <AttributionCapture />
             </Suspense>

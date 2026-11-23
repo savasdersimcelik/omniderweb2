@@ -257,6 +257,33 @@
     "count": "100,000+",
     "after": "users"
   },
+  "ClosingCta": {
+    "eyebrow": "Ready?",
+    "title": "14 days free,",
+    "titleAccent": "start using it today.",
+    "description": "Sign up, connect your channels, and manage WhatsApp Business, Instagram, Messenger, and web chat in minutes — no credit card required.",
+    "socialProof": "Trusted by 100,000+ users on Omnider",
+    "ctaPrimary": "Start 14-day free trial",
+    "ctaSecondary": "Request a demo",
+    "trialBadge": "14 days free",
+    "cardTitle": "Your demo account is ready",
+    "cardSubtitle": "Register without a card. Cancel anytime.",
+    "perks": [
+      "14-day full-feature demo account",
+      "WhatsApp, Instagram, Messenger & web chat",
+      "Set up in minutes"
+    ],
+    "preview": {
+      "live": "Live inbox",
+      "footer": "Every channel in one panel",
+      "thread1Name": "Ayse Yilmaz",
+      "thread1Msg": "Any open slots for an appointment?",
+      "thread2Name": "Brand Store",
+      "thread2Msg": "Can you share the campaign code?",
+      "thread3Name": "Support request",
+      "thread3Msg": "When will my order ship?"
+    }
+  },
   "Footer": {
     "tagline": "Unify every customer channel in one platform. From WhatsApp to Instagram, your website to email — all in Omnider.",
     "doodleTagline": "One inbox, AI, and every channel — built for your business with Omnider.",
@@ -530,9 +557,6 @@
         "description": "Manage conversations from one inbox and speed up with AI."
       }
     ],
-    "ctaEyebrow": "Ready?",
-    "ctaTitle": "Try omnichannel messaging today",
-    "ctaDescription": "Our sales team can schedule a short demo for your needs. Pages and forms come next — for now, scroll and test the header.",
     "languages": {
       "eyebrow": "Languages",
       "title": "Wherever they write from,",
@@ -890,13 +914,91 @@
   },
   "ContactPage": {
     "eyebrow": "Contact",
-    "title": "We’re here to listen",
-    "description": "Share your questions or partnership ideas through the form. We usually reply within a few hours.",
-    "privacyNote": "Your details are only used to respond to your request and are not shared with third parties.",
+    "titleLead": "We’re here",
+    "titleAccent": "to listen",
+    "description": "Write about questions, demos, or partnerships. You can also sign up and open a 14-day account instantly — we usually reply within a few hours.",
+    "highlights": [
+      "Average response time < 2 hours",
+      "Support in English & Turkish",
+      "Free onboarding consultation"
+    ],
+    "ctaPrimary": "Fill the form",
+    "ctaSecondary": "Start 14-day free trial",
+    "signal": {
+      "live": "Team online",
+      "title": "Your message lands in our shared inbox",
+      "body": "WhatsApp, Instagram, or the form — we reply from the same Omnider panel.",
+      "eta": "Typical reply",
+      "etaValue": "< 2 hrs"
+    },
+    "info": {
+      "eyebrow": "Direct line",
+      "title": "Reach us on the channel that suits you",
+      "subtitle": "Use the form, or jump straight to email and phone.",
+      "email": {
+        "label": "Email",
+        "hint": "Write to us anytime"
+      },
+      "phone": {
+        "label": "Phone",
+        "hint": "Weekdays 09:00 – 18:00"
+      },
+      "hours": {
+        "label": "Working hours",
+        "value": "Monday – Friday, 09:00 – 18:00",
+        "hint": "Weekend messages get a reply on the next business day"
+      }
+    },
+    "channels": {
+      "eyebrow": "Instant chat",
+      "title": "Let’s talk on your favorite app",
+      "subtitle": "Message us in one tap — our team replies from the same shared inbox.",
+      "items": {
+        "whatsapp": {
+          "name": "WhatsApp",
+          "desc": "Start an instant chat"
+        },
+        "instagram": {
+          "name": "Instagram",
+          "desc": "Follow & DM us"
+        },
+        "facebook": {
+          "name": "Facebook",
+          "desc": "Reach our page"
+        },
+        "telegram": {
+          "name": "Telegram",
+          "desc": "Fast support via bot"
+        },
+        "line": {
+          "name": "LINE",
+          "desc": "Connect over LINE"
+        }
+      }
+    },
+    "topics": {
+      "label": "Pick a topic",
+      "sales": {
+        "label": "Sales",
+        "subject": "Sales and pricing inquiry"
+      },
+      "demo": {
+        "label": "Demo",
+        "subject": "Live demo request"
+      },
+      "support": {
+        "label": "Support",
+        "subject": "Technical support request"
+      },
+      "partnership": {
+        "label": "Partnership",
+        "subject": "Partnership inquiry"
+      }
+    },
     "form": {
-      "eyebrow": "Contact form",
-      "title": "Leave us a message",
-      "subtitle": "Fill out the form and our team will get back to you shortly.",
+      "eyebrow": "Leave a message",
+      "title": "A few lines are enough",
+      "subtitle": "Pick a topic or type your own — our team will get back shortly.",
       "name": "Full name",
       "namePlaceholder": "Your first and last name",
       "email": "Email",
@@ -909,7 +1011,7 @@
       "subjectPlaceholder": "How can we help?",
       "message": "Message",
       "messagePlaceholder": "Tell us briefly what you need…",
-      "consent": "By submitting this form I accept processing of my data under the privacy policy.",
+      "consent": "By submitting this form I accept processing of my data under the <privacy>privacy policy</privacy>.",
       "optional": "optional",
       "submit": "Send message",
       "submitting": "Sending…",
@@ -917,6 +1019,7 @@
       "error": "Your message could not be sent. Please try again or email us directly.",
       "captcha_required": "Please verify that you are not a robot.",
       "captcha_failed": "reCAPTCHA verification failed. Please try again.",
+      "privacyNote": "Your details are only used to respond to your request.",
       "recaptchaNotice": "This site is protected by reCAPTCHA."
     }
   },

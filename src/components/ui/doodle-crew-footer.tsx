@@ -227,6 +227,9 @@ export interface DoodleCrewFooterProps {
   wordmark?: string
   /** Brand name, top left. */
   brand?: string
+  /** Optional brand mark (e.g. product logo). Replaces the default doodle face. */
+  brandLogoSrc?: string
+  brandLogoAlt?: string
   /** One or two sentences under the brand. */
   blurb?: string
   /** The line under the wordmark. */
@@ -577,6 +580,8 @@ const Link = ({ link, className }: { link: FooterLink; className?: string }) =>
 export default function DoodleCrewFooter({
   wordmark = "MISCHIEF",
   brand = "mischief",
+  brandLogoSrc,
+  brandLogoAlt = "",
   blurb = "We draw every frame by hand and ship a new chapter every season. Come make a little trouble with us.",
   tagline = "A hand-drawn world for the troublemaker in all of us.",
   columns = DEFAULT_COLUMNS,
@@ -1014,16 +1019,27 @@ export default function DoodleCrewFooter({
       <div className="dcf-top dcf-rise" style={{ "--d": "0ms" } as React.CSSProperties}>
         <div className="dcf-brand">
           <span className="dcf-logo" aria-hidden="true">
-            <svg viewBox="-60 -150 120 120" width="30" height="30">
-              <g className="dcf-art">
-                <path d="M-30 -104 C-40 -112 -44 -124 -40 -138 C-32 -129 -22 -122 -13 -114 Z" />
-                <path d="M18 -114 C26 -124 36 -130 47 -133 C45 -120 41 -110 32 -101 Z" />
-                <path d="M-44 -30 C-54 -56 -54 -70 -42 -90 C-32 -110 -14 -118 2 -118 C22 -118 40 -108 48 -88 C58 -68 56 -54 48 -30 Z" />
-                <circle className="k" cx="-15" cy="-84" r="5.5" />
-                <circle className="k" cx="13" cy="-86" r="5.5" />
-                <path className="n" d="M-12 -66 C-6 -60 6 -60 12 -67" />
-              </g>
-            </svg>
+            {brandLogoSrc ? (
+              <img
+                className="dcf-logo-img"
+                src={brandLogoSrc}
+                alt={brandLogoAlt}
+                width={28}
+                height={28}
+                decoding="async"
+              />
+            ) : (
+              <svg viewBox="-60 -150 120 120" width="30" height="30">
+                <g className="dcf-art">
+                  <path d="M-30 -104 C-40 -112 -44 -124 -40 -138 C-32 -129 -22 -122 -13 -114 Z" />
+                  <path d="M18 -114 C26 -124 36 -130 47 -133 C45 -120 41 -110 32 -101 Z" />
+                  <path d="M-44 -30 C-54 -56 -54 -70 -42 -90 C-32 -110 -14 -118 2 -118 C22 -118 40 -108 48 -88 C58 -68 56 -54 48 -30 Z" />
+                  <circle className="k" cx="-15" cy="-84" r="5.5" />
+                  <circle className="k" cx="13" cy="-86" r="5.5" />
+                  <path className="n" d="M-12 -66 C-6 -60 6 -60 12 -67" />
+                </g>
+              </svg>
+            )}
           </span>
           <span className="dcf-brandname">{brand}</span>
         </div>
@@ -1257,7 +1273,8 @@ const CSS =
   // top band
   ".dcf-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr);grid-template-rows:auto 1fr;column-gap:clamp(24px,5vw,80px);row-gap:14px;padding:clamp(28px,4.5vw,56px) var(--dcf-pad) 0;max-width:1360px;width:100%;margin:0 auto;position:relative;z-index:3}" +
   ".dcf-brand{display:flex;align-items:center;gap:10px;grid-column:1;grid-row:1}" +
-  ".dcf-logo{display:grid;place-items:center;width:40px;height:40px;border-radius:999px;border:2px solid var(--dcf-ink);background:var(--dcf-bg);transform:rotate(-6deg);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}" +
+  ".dcf-logo{display:grid;place-items:center;width:40px;height:40px;border-radius:999px;border:2px solid var(--dcf-ink);background:var(--dcf-bg);overflow:hidden;transform:rotate(-6deg);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}" +
+  ".dcf-logo-img{display:block;width:28px;height:28px;object-fit:contain}" +
   ".dcf-brand:hover .dcf-logo{transform:rotate(8deg) scale(1.06)}" +
   ".dcf-brandname{font-weight:800;font-size:19px;letter-spacing:-.02em}" +
   ".dcf-blurb{grid-column:1;grid-row:2;font-family:var(--dcf-serif);font-size:15px;line-height:1.55;color:var(--dcf-soft);max-width:34ch}" +

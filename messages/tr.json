@@ -257,6 +257,33 @@
     "count": "100.000+",
     "after": "kullanıcı güveniyor"
   },
+  "ClosingCta": {
+    "eyebrow": "Hazır mısınız?",
+    "title": "14 gün ücretsiz,",
+    "titleAccent": "hemen kullanmaya başlayın.",
+    "description": "Kayıt olun, kanallarınızı bağlayın. WhatsApp Business, Instagram, Messenger ve web chat ile müşteri mesajlarını dakikalar içinde yönetin — kredi kartı gerekmez.",
+    "socialProof": "100.000+ kullanıcı Omnider ile çalışıyor",
+    "ctaPrimary": "14 gün ücretsiz dene",
+    "ctaSecondary": "Demo iste",
+    "trialBadge": "14 gün ücretsiz",
+    "cardTitle": "Demo hesabınız hazır",
+    "cardSubtitle": "Kart bilgisi istemeden kayıt olun; istediğiniz zaman iptal edin.",
+    "perks": [
+      "14 günlük tam özellikli demo hesap",
+      "WhatsApp, Instagram, Messenger ve web chat",
+      "Dakikalar içinde kurulum"
+    ],
+    "preview": {
+      "live": "Canlı gelen kutusu",
+      "footer": "Tüm kanallar tek panelde",
+      "thread1Name": "Ayşe Yılmaz",
+      "thread1Msg": "Randevu için müsait saat var mı?",
+      "thread2Name": "Marka Mağaza",
+      "thread2Msg": "Kampanya kodunu paylaşır mısınız?",
+      "thread3Name": "Destek talebi",
+      "thread3Msg": "Siparişim ne zaman kargolanır?"
+    }
+  },
   "Footer": {
     "tagline": "Tüm müşteri kanallarınızı tek platformda birleştirin. WhatsApp’tan Instagram’a, web sitenizden e-postaya — hepsi Omnider’da.",
     "doodleTagline": "Tek gelen kutusu, yapay zeka ve tüm kanallar — işletmeniz için Omnider.",
@@ -530,9 +557,6 @@
         "description": "Tek gelen kutusundan konuşmaları yönetin; AI ile hız kazanın."
       }
     ],
-    "ctaEyebrow": "Hazır mısınız?",
-    "ctaTitle": "Omnichannel iletişimi bugün deneyin",
-    "ctaDescription": "Satış ekibimiz ihtiyaçlarınıza göre kısa bir demo planlasın. Form ve sayfalar yakında tamamlanacak — şimdilik scroll ve header’ı test edin.",
     "languages": {
       "eyebrow": "Diller",
       "title": "Nereden yazarsa yazsın,",
@@ -890,13 +914,91 @@
   },
   "ContactPage": {
     "eyebrow": "İletişim",
-    "title": "Sizi dinlemek için buradayız",
-    "description": "Sorularınız veya iş birliği fikirleriniz için formu doldurun. Genellikle birkaç saat içinde dönüş yapıyoruz.",
-    "privacyNote": "Bilgileriniz yalnızca talebinizi yanıtlamak için kullanılır, üçüncü taraflarla paylaşılmaz.",
+    "titleLead": "Sizi dinlemek için",
+    "titleAccent": "buradayız",
+    "description": "Sorularınız, demo veya iş birliği için yazın. Kayıt olup 14 günlük hesabınızı da hemen açabilirsiniz — genellikle birkaç saat içinde dönüş yapıyoruz.",
+    "highlights": [
+      "Ortalama yanıt süresi < 2 saat",
+      "Türkçe & İngilizce destek",
+      "Ücretsiz kurulum danışmanlığı"
+    ],
+    "ctaPrimary": "Formu doldurun",
+    "ctaSecondary": "14 gün ücretsiz dene",
+    "signal": {
+      "live": "Ekip çevrimiçi",
+      "title": "Mesajınız ortak gelen kutumuza düşer",
+      "body": "WhatsApp, Instagram veya form — hepsi aynı Omnider panelinde cevaplanır.",
+      "eta": "Tipik yanıt",
+      "etaValue": "< 2 saat"
+    },
+    "info": {
+      "eyebrow": "Doğrudan hat",
+      "title": "Size en uygun kanaldan yazın",
+      "subtitle": "Formu doldurun ya da e-posta ve telefonla anında ulaşın.",
+      "email": {
+        "label": "E-posta",
+        "hint": "Her zaman buradan yazabilirsiniz"
+      },
+      "phone": {
+        "label": "Telefon",
+        "hint": "Hafta içi 09:00 – 18:00"
+      },
+      "hours": {
+        "label": "Çalışma saatleri",
+        "value": "Pazartesi – Cuma, 09:00 – 18:00",
+        "hint": "Hafta sonu mesajlarına ilk iş günü dönüş yaparız"
+      }
+    },
+    "channels": {
+      "eyebrow": "Anlık mesaj",
+      "title": "Favori uygulamanızdan konuşalım",
+      "subtitle": "Tek dokunuşla yazın; ekibimiz aynı ortak gelen kutusundan yanıtlar.",
+      "items": {
+        "whatsapp": {
+          "name": "WhatsApp",
+          "desc": "Anında sohbet başlatın"
+        },
+        "instagram": {
+          "name": "Instagram",
+          "desc": "DM’den takip & mesaj"
+        },
+        "facebook": {
+          "name": "Facebook",
+          "desc": "Sayfamızdan ulaşın"
+        },
+        "telegram": {
+          "name": "Telegram",
+          "desc": "Bot üzerinden hızlı destek"
+        },
+        "line": {
+          "name": "LINE",
+          "desc": "LINE ile bağlanın"
+        }
+      }
+    },
+    "topics": {
+      "label": "Konu seçin",
+      "sales": {
+        "label": "Satış",
+        "subject": "Satış ve paketler hakkında bilgi"
+      },
+      "demo": {
+        "label": "Demo",
+        "subject": "Canlı demo talebi"
+      },
+      "support": {
+        "label": "Destek",
+        "subject": "Teknik destek talebi"
+      },
+      "partnership": {
+        "label": "İş birliği",
+        "subject": "İş birliği / partnerlik"
+      }
+    },
     "form": {
-      "eyebrow": "İletişim formu",
-      "title": "Bize bir mesaj bırakın",
-      "subtitle": "Formu doldurun; ekibimiz en kısa sürede size geri dönsün.",
+      "eyebrow": "Mesaj bırakın",
+      "title": "Birkaç satır yeter",
+      "subtitle": "Konuyu seçin veya yazın; ekibimiz en kısa sürede dönüş yapsın.",
       "name": "Ad Soyad",
       "namePlaceholder": "Adınız ve soyadınız",
       "email": "E-posta",
@@ -909,14 +1011,15 @@
       "subjectPlaceholder": "Size nasıl yardımcı olabiliriz?",
       "message": "Mesajınız",
       "messagePlaceholder": "Talebinizi kısaca anlatın…",
-      "consent": "Formu göndererek gizlilik politikamız kapsamında verilerimin işlenmesini kabul ediyorum.",
+      "consent": "Formu göndererek <privacy>gizlilik politikası</privacy> kapsamında verilerimin işlenmesini kabul ediyorum.",
       "optional": "opsiyonel",
-      "submit": "Mesajı Gönder",
+      "submit": "Mesajı gönder",
       "submitting": "Gönderiliyor…",
       "success": "Mesajınız için teşekkürler! En kısa sürede size geri döneceğiz.",
       "error": "Mesajınız gönderilemedi. Lütfen tekrar deneyin veya doğrudan e-posta gönderin.",
       "captcha_required": "Lütfen robot olmadığınızı doğrulayın.",
       "captcha_failed": "reCAPTCHA doğrulaması başarısız. Lütfen tekrar deneyin.",
+      "privacyNote": "Bilgileriniz yalnızca talebinizi yanıtlamak için kullanılır.",
       "recaptchaNotice": "Bu site reCAPTCHA ile korunmaktadır."
     }
   },
