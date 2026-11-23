@@ -2513,6 +2513,10 @@
       "titleLine1": "Müşteri yazsın,",
       "titleLine2": "yapay zeka yanıtlasın",
       "description": "QR kod ile numaranızı bağlayın; ortak gelen kutusu, yapay zeka yanıtları ve chatbot otomasyonunu Omnider ile tek platformda kullanın.",
+      "disclaimer": {
+        "title": "Resmi bağlantı değildir",
+        "body": "Oturum tabanlıdır · Business API değildir"
+      },
       "chat": {
         "businessName": "Atölye Selin",
         "online": "çevrimiçi",

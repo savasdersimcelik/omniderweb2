@@ -2513,6 +2513,10 @@
       "titleLine1": "Customers write,",
       "titleLine2": "AI replies",
       "description": "Connect your number with a QR code — shared inbox, AI auto-replies and chatbot automation on Omnider, all in one platform.",
+      "disclaimer": {
+        "title": "Not an official connection",
+        "body": "Session-based · not Business API"
+      },
       "chat": {
         "businessName": "Selin Studio",
         "online": "online",

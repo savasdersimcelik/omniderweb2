@@ -7817,3 +7817,31 @@
   font-size: 0.7rem;
   font-weight: 600;
 }
+
+.wap-hero__disclaimer {
+  display: inline-flex;
+  max-width: 22rem;
+  align-items: flex-start;
+  gap: 0.55rem;
+  border-radius: 0.9rem;
+  border: 1px solid color-mix(in srgb, #d97706 28%, transparent);
+  background: color-mix(in srgb, #f59e0b 10%, white);
+  padding: 0.65rem 0.85rem;
+  color: #92400e;
+  text-align: left;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.wap-hero__disclaimer strong {
+  display: block;
+  font-weight: 750;
+  color: #78350f;
+}
+
+.wap-hero__disclaimer strong + span {
+  display: block;
+  margin-top: 0.15rem;
+  font-weight: 550;
+  color: #92400e;
+}
