@@ -95,9 +95,9 @@ export const navigation: NavEntry[] = [
             icon: "calendar",
           },
           {
-            key: "automation",
-            descriptionKey: "automationDesc",
-            icon: "sparkles",
+            key: "aiCalls",
+            descriptionKey: "aiCallsDesc",
+            icon: "phone",
           },
           {
             key: "aiAssistant",

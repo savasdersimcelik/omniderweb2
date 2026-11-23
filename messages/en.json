@@ -80,8 +80,8 @@
       "campaignsDesc": "Email, SMS, and automation campaigns.",
       "appointments": "Appointments",
       "appointmentsDesc": "Scheduling, bookings, and reminders.",
-      "automation": "Automation",
-      "automationDesc": "Automate workflows and save time.",
+      "aiCalls": "AI calls",
+      "aiCallsDesc": "Handle inbound and outbound phone calls with AI.",
       "aiAssistant": "AI assistant",
       "aiAssistantDesc": "AI replies and chatbot flows.",
       "linkShortener": "Link shortener",
@@ -279,6 +279,35 @@
         "dubai": "Dubai · Arabic",
         "tokyo": "Tokyo · Japanese"
       }
+    },
+    "aiCalls": {
+      "eyebrow": "AI calls",
+      "title": "Inbound and outbound calls,",
+      "titleAccent": "handled by AI.",
+      "description": "Omnider AI Voice Engine answers customer calls, understands the conversation, and can place outbound calls on your behalf — 24/7, from one panel.",
+      "bullets": [
+        "AI agent that answers inbound calls instantly",
+        "Outbound calls for reminders, follow-ups, and sales",
+        "Transcripts, summaries, and records in your inbox"
+      ],
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Talk about calls",
+      "engineTitle": "AI Voice Engine",
+      "engineStatus": "Live call",
+      "inboundLabel": "Inbound",
+      "outboundLabel": "Outbound",
+      "liveLabel": "Listening · Speaking",
+      "inbound": [
+        { "code": "+90 212", "label": "Istanbul · Inbound" },
+        { "code": "+44 20", "label": "London · Inbound" },
+        { "code": "+49 30", "label": "Berlin · Inbound" },
+        { "code": "+971 4", "label": "Dubai · Inbound" }
+      ],
+      "outbound": [
+        { "code": "+1 415", "label": "San Francisco · Outbound" },
+        { "code": "+33 1", "label": "Paris · Outbound" },
+        { "code": "+81 3", "label": "Tokyo · Outbound" }
+      ]
     }
   },
   "ContactPage": {

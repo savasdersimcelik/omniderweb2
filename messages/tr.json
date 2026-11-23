@@ -80,8 +80,8 @@
       "campaignsDesc": "E-posta, SMS ve otomasyon kampanyaları.",
       "appointments": "Randevu",
       "appointmentsDesc": "Zamanlama, rezervasyon ve hatırlatmalar.",
-      "automation": "Otomasyon",
-      "automationDesc": "İş akışlarını otomatikleştirin ve zaman kazanın.",
+      "aiCalls": "AI aramalar",
+      "aiCallsDesc": "Gelen ve giden telefon aramalarını yapay zeka ile yönetin.",
       "aiAssistant": "AI asistan",
       "aiAssistantDesc": "Yapay zeka yanıtları ve chatbot akışları.",
       "linkShortener": "Link kısaltma",
@@ -279,6 +279,35 @@
         "dubai": "Dubai · Arapça",
         "tokyo": "Tokyo · Japonca"
       }
+    },
+    "aiCalls": {
+      "eyebrow": "AI aramalar",
+      "title": "Gelen ve giden aramalar,",
+      "titleAccent": "yapay zeka ile yönetilir.",
+      "description": "Omnider AI Voice Engine müşteri aramalarını karşılar, konuşmayı anlar ve gerektiğinde sizin adınıza giden arama başlatır — 7/24, tek panelden.",
+      "bullets": [
+        "Gelen aramaları anında karşılayan AI ajan",
+        "Hatırlatma, takip ve satış için giden aramalar",
+        "Transkript, özet ve gelen kutusuna otomatik düşen kayıt"
+      ],
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "Arama özelliğini konuş",
+      "engineTitle": "AI Voice Engine",
+      "engineStatus": "Canlı görüşme",
+      "inboundLabel": "Gelen",
+      "outboundLabel": "Giden",
+      "liveLabel": "Dinliyor · Yanıtlıyor",
+      "inbound": [
+        { "code": "+90 212", "label": "İstanbul · Gelen" },
+        { "code": "+44 20", "label": "Londra · Gelen" },
+        { "code": "+49 30", "label": "Berlin · Gelen" },
+        { "code": "+971 4", "label": "Dubai · Gelen" }
+      ],
+      "outbound": [
+        { "code": "+1 415", "label": "San Francisco · Giden" },
+        { "code": "+33 1", "label": "Paris · Giden" },
+        { "code": "+81 3", "label": "Tokyo · Giden" }
+      ]
     }
   },
   "ContactPage": {
