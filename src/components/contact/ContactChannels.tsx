@@ -1,14 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
 import { contactChannels } from "@/config/contact";
-import { socialLinks } from "@/config/social";
+import { getSocialLinks } from "@/config/social";
 
 export async function ContactChannels() {
+  const locale = await getLocale();
   const t = await getTranslations("ContactPage.channels");
 
   const hrefByLabel = Object.fromEntries(
-    socialLinks.map((link) => [link.label, link.href]),
+    getSocialLinks(locale).map((link) => [link.label, link.href]),
   ) as Record<string, string>;
 
   return (

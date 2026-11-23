@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ContactChannels } from "@/components/contact/ContactChannels";
 import { ContactDirect } from "@/components/contact/ContactDirect";
 import { ContactForm } from "@/components/contact/ContactForm";
@@ -28,11 +28,6 @@ export default async function ContactPage() {
       <section className="contact-hero" aria-labelledby="contact-hero-title">
         <Container className="contact-hero__inner">
           <div className="contact-hero__copy">
-            <p className="contact-hero__brand">Omnider</p>
-            <p className="contact-hero__eyebrow">
-              <Sparkles className="size-3.5" aria-hidden />
-              {t("eyebrow")}
-            </p>
             <h1 id="contact-hero-title" className="contact-hero__title">
               <span>{t("titleLead")}</span>{" "}
               <span className="contact-hero__title-accent">{t("titleAccent")}</span>

@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { socialLinks } from "@/config/social";
+import { getSocialLinks } from "@/config/social";
 import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import type { CrewMember } from "@/components/ui/doodle-crew-footer";
@@ -85,7 +85,10 @@ export async function SiteFooter() {
     { label: t("legal.terms"), href: href("/terms-of-use") },
   ];
 
-  const socials = socialLinks.map(({ label, href }) => ({ label, href }));
+  const socials = getSocialLinks(locale).map(({ label, href }) => ({
+    label,
+    href,
+  }));
 
   const crew: CrewMember[] = [
     {
