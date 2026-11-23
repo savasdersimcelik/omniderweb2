@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { HeroTrust } from "@/components/trust";
-import { OrbitingCircles } from "@/components/ui/orbiting-circles";
+import { WhatsAppHeroBackdrop } from "./WhatsAppHeroBackdrop";
 import { WhatsAppHeroChat } from "./WhatsAppHeroChat";
 
 export async function WhatsAppBusinessHero() {
@@ -20,31 +20,12 @@ export async function WhatsAppBusinessHero() {
 
   return (
     <section
-      className="wa-biz-hero viewport-hero relative w-full overflow-hidden border-b border-[color-mix(in_srgb,var(--wa-deep)_18%,transparent)]"
+      className="wa-biz-hero viewport-hero relative w-full overflow-hidden border-b border-[color-mix(in_srgb,var(--wa-deep)_14%,transparent)]"
       aria-labelledby="wa-biz-hero-title"
     >
-      <div className="home-hero relative flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
-        <div
-          className="pointer-events-none absolute inset-0 -z-10 hidden overflow-visible sm:block"
-          aria-hidden
-        >
-          <OrbitingCircles
-            speed={0.5}
-            radius={300}
-            stroke="stroke-wa-teal/35"
-          />
-          <OrbitingCircles
-            speed={0.25}
-            radius={400}
-            stroke="stroke-wa-green/28"
-          />
-          <OrbitingCircles
-            speed={0.1}
-            radius={500}
-            stroke="stroke-wa-dark/20"
-          />
-        </div>
+      <WhatsAppHeroBackdrop />
 
+      <div className="home-hero relative z-10 flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
         <div className="home-hero__intro relative z-10 flex w-full max-w-7xl flex-col items-center self-center text-center sm:shrink-0">
           <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--wa-teal)]">
             <Image

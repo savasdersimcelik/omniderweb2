@@ -2102,7 +2102,7 @@
       "badge": "WhatsApp Business",
       "titleLine1": "Customers write,",
       "titleLine2": "AI replies",
-      "description": "Run WhatsApp Business API, AI-powered auto-replies, campaigns, chatbots and team management on Omnider — all in one platform.",
+      "description": "Run WhatsApp Business API, AI replies, and team inbox on Omnider — in one place.",
       "ctaPrimary": "Open free demo account",
       "ctaSecondary": "View pricing",
       "chat": {
@@ -2393,7 +2393,7 @@
     "try": {
       "eyebrow": "Live test",
       "title": "Try WhatsApp Business from your phone",
-      "body": "Scan the Turkey or Europe line, or tap the button. Omnider replies — ask about pricing, an appointment or an order. AI answers, and the team takes over when needed.",
+      "body": "Scan the Turkey, Europe or USA line, or tap the button. Omnider replies — ask about pricing, an appointment or an order. AI answers, and the team takes over when needed.",
       "cta": "Open in WhatsApp",
       "lines": {
         "turkey": {
@@ -2407,7 +2407,99 @@
           "phone": "+44 7529 760393",
           "ctaTitle": "Open the Omnider Europe WhatsApp line",
           "imageAlt": "QR code for the Omnider Europe WhatsApp line, +44 7529 760393"
+        },
+        "usa": {
+          "title": "Omnider USA",
+          "phone": "+1 845 720 3266",
+          "ctaTitle": "Open the Omnider USA WhatsApp line",
+          "imageAlt": "QR code for the Omnider USA WhatsApp line, +1 845 720 3266"
         }
+      }
+    },
+    "connect": {
+      "eyebrow": "Connection options",
+      "title": "Connect WhatsApp the way you want",
+      "subtitle": "Keep using your WhatsApp Business app, or go straight to the WhatsApp Cloud API. Omnider supports both connection methods.",
+      "toggleLabel": "Connection type",
+      "stepsLabel": "Setup steps",
+      "modes": {
+        "coexistence": {
+          "label": "I use the WhatsApp Business app",
+          "short": "Coexistence",
+          "title": "Without leaving the app"
+        },
+        "standard": {
+          "label": "New number / Cloud API",
+          "short": "Cloud API",
+          "title": "Direct Cloud API"
+        }
+      },
+      "steps": {
+        "coexistence": [
+          {
+            "title": "Connect",
+            "body": "Choose the number from your WhatsApp Business app in Meta."
+          },
+          {
+            "title": "Confirm the number in Meta",
+            "body": "If there are several numbers, pick one from the list."
+          },
+          {
+            "title": "Ready without a PIN",
+            "body": "The register step is skipped; the number is treated as already registered."
+          }
+        ],
+        "standard": [
+          {
+            "title": "Choose the number",
+            "body": "Select your account and number in Meta. If there are several numbers, pick one from the list."
+          },
+          {
+            "title": "Enter the code",
+            "body": "Meta may send the verification code by SMS or voice call."
+          },
+          {
+            "title": "Activate with a PIN",
+            "body": "A 6-digit two-step verification PIN may be required."
+          }
+        ]
+      },
+      "compare": {
+        "label": "What differs",
+        "caption": {
+          "coexistence": "The mobile app and Cloud API work together on the same number. The PIN step is skipped.",
+          "standard": "New number or classic setup. The verification code may arrive by SMS or voice call, and a 6-digit PIN may be required."
+        },
+        "rows": {
+          "pin": {
+            "label": "PIN step",
+            "coexistence": "None",
+            "standard": "May be required"
+          },
+          "app": {
+            "label": "App on the phone",
+            "coexistence": "Keeps working",
+            "standard": "Classic Cloud API"
+          },
+          "fit": {
+            "label": "Best when",
+            "coexistence": "Number is active in the app",
+            "standard": "New number or classic setup"
+          }
+        }
+      },
+      "visual": {
+        "sameNumber": "Same number",
+        "customer": "Customer",
+        "message": "Can I book an appointment?",
+        "inbox": "Omnider inbox",
+        "phoneApp": "WhatsApp Business",
+        "meta": "Meta approval",
+        "newNumber": "New number"
+      },
+      "status": {
+        "coexistence": "Connect with the WhatsApp Business app selected",
+        "standard": "New number / Cloud API selected"
       }
     }
   }

@@ -1,4 +1,5 @@
 import { AdReferralSection } from "./AdReferralSection";
+import { ConnectSection } from "./ConnectSection";
 import { HealthSection } from "./HealthSection";
 import { InteractiveSection } from "./InteractiveSection";
 import { TemplatesSection } from "./TemplatesSection";
@@ -10,6 +11,7 @@ export async function WhatsAppBusinessPage() {
     <>
       <WhatsAppBusinessHero />
       <TemplatesSection />
+      <ConnectSection />
       <InteractiveSection />
       <HealthSection />
       <AdReferralSection />

@@ -2102,7 +2102,7 @@
       "badge": "WhatsApp Business",
       "titleLine1": "Müşteri yazsın,",
       "titleLine2": "yapay zeka yanıtlasın",
-      "description": "WhatsApp Business API, yapay zeka destekli otomatik yanıtlar, kampanyalar, chatbotlar ve ekip yönetimini Omnider ile tek platformda yönetin.",
+      "description": "WhatsApp Business API, yapay zeka yanıtlar ve ekip yönetimini Omnider’da tek yerden yönetin.",
       "ctaPrimary": "Hemen demo hesap aç",
       "ctaSecondary": "Fiyatları inceleyin",
       "chat": {
@@ -2393,7 +2393,7 @@
     "try": {
       "eyebrow": "Canlı deneme",
       "title": "WhatsApp Business’ı telefondan deneyin",
-      "body": "Türkiye veya Avrupa hattını taratın, ya da butona dokunun. Omnider yanıt verir; fiyat, randevu veya sipariş sorun. Yapay zeka cevaplar, gerekirse ekip devralır.",
+      "body": "Türkiye, Avrupa veya Amerika hattını taratın, ya da butona dokunun. Omnider yanıt verir; fiyat, randevu veya sipariş sorun. Yapay zeka cevaplar, gerekirse ekip devralır.",
       "cta": "WhatsApp’ta aç",
       "lines": {
         "turkey": {
@@ -2407,7 +2407,99 @@
           "phone": "+44 7529 760393",
           "ctaTitle": "Omnider Avrupa WhatsApp hattını aç",
           "imageAlt": "Omnider Avrupa WhatsApp hattı için QR kod, +44 7529 760393"
+        },
+        "usa": {
+          "title": "Omnider Amerika",
+          "phone": "+1 845 720 3266",
+          "ctaTitle": "Omnider Amerika WhatsApp hattını aç",
+          "imageAlt": "Omnider Amerika WhatsApp hattı için QR kod, +1 845 720 3266"
         }
+      }
+    },
+    "connect": {
+      "eyebrow": "Bağlantı seçenekleri",
+      "title": "WhatsApp’ınızı istediğiniz gibi bağlayın",
+      "subtitle": "İster mevcut WhatsApp Business uygulamanızı kullanmaya devam edin, ister doğrudan WhatsApp Cloud API’ye geçin. Omnider her iki bağlantı yöntemini de destekler.",
+      "toggleLabel": "Bağlantı tipi",
+      "stepsLabel": "Kurulum adımları",
+      "modes": {
+        "coexistence": {
+          "label": "WhatsApp Business uygulamamı kullanıyorum",
+          "short": "Coexistence",
+          "title": "Uygulamayı bırakmadan"
+        },
+        "standard": {
+          "label": "Yeni numara / Cloud API",
+          "short": "Cloud API",
+          "title": "Doğrudan Cloud API"
+        }
+      },
+      "steps": {
+        "coexistence": [
+          {
+            "title": "Bağlan",
+            "body": "Meta üzerinden WhatsApp Business uygulamanızdaki numarayı seçin."
+          },
+          {
+            "title": "Meta’da numarayı onayla",
+            "body": "Birden fazla numara varsa listeden seçilir."
+          },
+          {
+            "title": "PIN olmadan hazırsın",
+            "body": "Kayıt adımı atlanır; numara zaten kayıtlı kabul edilir."
+          }
+        ],
+        "standard": [
+          {
+            "title": "Numarayı seç",
+            "body": "Hesabınızı ve numarayı Meta’da seçin. Birden fazla numara varsa listeden seçilir."
+          },
+          {
+            "title": "Gelen kodu gir",
+            "body": "Meta doğrulama kodunu SMS veya sesli aramayla gönderebilir."
+          },
+          {
+            "title": "PIN ile etkinleştir",
+            "body": "6 haneli iki adımlı doğrulama PIN’i gerekebilir."
+          }
+        ]
+      },
+      "compare": {
+        "label": "İki yolun farkı",
+        "caption": {
+          "coexistence": "Mobil uygulama ve Cloud API aynı numarada birlikte çalışır. PIN adımı atlanır.",
+          "standard": "Yeni numara veya klasik kurulum. Doğrulama kodu SMS ya da sesli aramayla gelebilir; 6 haneli PIN gerekebilir."
+        },
+        "rows": {
+          "pin": {
+            "label": "PIN adımı",
+            "coexistence": "Yok",
+            "standard": "Gerekebilir"
+          },
+          "app": {
+            "label": "Telefondaki uygulama",
+            "coexistence": "Çalışmaya devam eder",
+            "standard": "Klasik Cloud API"
+          },
+          "fit": {
+            "label": "Ne zaman",
+            "coexistence": "Numara uygulamada aktifken",
+            "standard": "Yeni numara veya klasik kurulum"
+          }
+        }
+      },
+      "visual": {
+        "sameNumber": "Aynı numara",
+        "customer": "Müşteri",
+        "message": "Randevu alabilir miyim?",
+        "inbox": "Omnider gelen kutusu",
+        "phoneApp": "WhatsApp Business",
+        "meta": "Meta onayı",
+        "newNumber": "Yeni numara"
+      },
+      "status": {
+        "coexistence": "WhatsApp Business uygulaması ile bağlama seçildi",
+        "standard": "Yeni numara / Cloud API seçildi"
       }
     }
   }

@@ -3,6 +3,7 @@ import {
   HeroChatWidget,
   type HeroChatCopy,
 } from "@/components/home/HeroChatWidget";
+import { HomeHeroBackdrop } from "@/components/home/HomeHeroBackdrop";
 import { HeroTrust } from "@/components/trust";
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 
@@ -29,15 +30,12 @@ export async function HeroSection() {
 
   return (
     <section
-      className="viewport-hero relative w-full overflow-hidden border-b border-line bg-background"
+      className="home-hero-section viewport-hero relative w-full overflow-hidden border-b border-line"
       aria-labelledby="home-hero-title"
     >
-      <div
-        className="absolute top-0 left-1/2 -z-10 flex size-40 -translate-x-1/2 rounded-full bg-brand-500 blur-[10rem] lg:hidden"
-        aria-hidden
-      />
+      <HomeHeroBackdrop />
 
-      <div className="home-hero relative flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
+      <div className="home-hero relative z-10 flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
         <div
           className="pointer-events-none absolute inset-0 -z-10 hidden overflow-visible sm:block"
           aria-hidden
@@ -45,17 +43,17 @@ export async function HeroSection() {
           <OrbitingCircles
             speed={0.5}
             radius={300}
-            stroke="stroke-brand-200/60"
+            stroke="stroke-brand-300/50"
           />
           <OrbitingCircles
             speed={0.25}
             radius={400}
-            stroke="stroke-brand-200/45"
+            stroke="stroke-sky-300/40"
           />
           <OrbitingCircles
             speed={0.1}
             radius={500}
-            stroke="stroke-brand-200/30"
+            stroke="stroke-slate-300/35"
           />
         </div>
 
@@ -76,14 +74,6 @@ export async function HeroSection() {
         </div>
 
         <div className="hero-chat-shell relative z-10 mt-0 flex min-h-0 w-full flex-col sm:mt-8 sm:flex-1 lg:mt-14">
-          <div
-            className="absolute top-1/8 left-1/2 -z-10 h-1/4 w-1/2 -translate-x-1/2 -translate-y-1/2 bg-linear-to-r from-sky-500 to-brand-600 blur-[4rem] animate-image-glow lg:w-3/4 lg:blur-[10rem]"
-            aria-hidden
-          />
-          <div
-            className="absolute -top-1/8 left-1/2 -z-20 hidden h-1/4 w-1/4 -translate-x-1/2 -translate-y-1/2 bg-brand-600 blur-[10rem] animate-image-glow lg:block"
-            aria-hidden
-          />
           <HeroChatWidget copy={chat} />
           <div
             className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-16 bg-linear-to-t from-background to-transparent sm:block"

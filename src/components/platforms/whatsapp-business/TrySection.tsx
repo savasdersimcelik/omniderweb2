@@ -14,6 +14,11 @@ const LINES = [
     url: "https://wa.me/447529760393",
     image: "/images/home/qr/whatsapp-europe.svg",
   },
+  {
+    key: "usa" as const,
+    url: "https://wa.me/18457203266",
+    image: "/images/home/qr/whatsapp-usa.svg",
+  },
 ];
 
 export async function TrySection() {
@@ -26,8 +31,8 @@ export async function TrySection() {
       aria-labelledby="wa-try-title"
     >
       <Container className="section">
-        <div className="wa-section-aside">
-          <div className="wa-section-copy">
+        <div className="wa-try__layout">
+          <div className="wa-try__copy">
             <p className="eyebrow inline-flex items-center gap-2 text-[var(--wa-teal)]">
               <ScanLineIcon className="h-4 w-4" />
               {t("eyebrow")}
@@ -38,22 +43,22 @@ export async function TrySection() {
             <p className="text-body mt-4">{t("body")}</p>
           </div>
 
-          <div className="wa-section-widget grid gap-4 sm:grid-cols-2">
+          <div className="wa-try__cards">
             {LINES.map((line) => (
               <article
                 key={line.key}
-                className="rounded-2xl border border-line bg-white shadow-sm"
+                className="wa-try__card rounded-2xl border border-line bg-white shadow-sm"
               >
-                <div className="px-5 pt-5">
-                  <h3 className="text-lg font-semibold tracking-tight text-ink">
+                <div className="px-4 pt-4 sm:px-5 sm:pt-5">
+                  <h3 className="text-base font-semibold tracking-tight text-ink sm:text-lg">
                     {t(`lines.${line.key}.title`)}
                   </h3>
                   <p className="mt-1 text-sm text-ink-subtle">
                     {t(`lines.${line.key}.phone`)}
                   </p>
                 </div>
-                <div className="flex flex-col items-center gap-4 px-5 pt-4 pb-5">
-                  <div className="w-full max-w-[200px] rounded-lg bg-white p-3 ring-1 ring-line">
+                <div className="flex flex-col items-center gap-4 px-4 pt-4 pb-5 sm:px-5">
+                  <div className="w-full max-w-[220px] rounded-lg bg-white p-3 ring-1 ring-line">
                     <Image
                       src={line.image}
                       alt={t(`lines.${line.key}.imageAlt`)}
