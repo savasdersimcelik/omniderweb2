@@ -1,0 +1,74 @@
+# Omnider
+
+> Omnider is a shared inbox for WhatsApp, Instagram, Messenger, Telegram, LINE, web chat, email, and SMS, with AI replies, campaigns, and appointment automation. Turkish pages are the default. English pages use the /en prefix.
+
+The complete public URL list is at https://omnider.com/sitemap.xml. Account, login, and account-deletion pages are not for indexing.
+
+## Product
+
+- [Home](https://omnider.com/): Unified inbox, AI replies, campaigns, and marketplace messaging.
+- [Home (English)](https://omnider.com/en/): The same product overview in English.
+- [Platforms](https://omnider.com/platforms): WhatsApp Business and personal, Instagram, Messenger, Telegram, LINE, web chat, email, Gmail, Outlook, Google Business, and SMS.
+- [Platforms (English)](https://omnider.com/en/platforms): Channel overview in English.
+- [Features](https://omnider.com/features): Shared inbox, AI replies, voice, image, document and video AI, chatbot flows, knowledge base, templates, campaigns, lead scraper, appointments, team management, and the mobile app.
+- [Features (English)](https://omnider.com/en/features): Feature overview in English.
+- [Solutions](https://omnider.com/solutions): Industry pages for clinics, hospitals, real estate, car dealers, beauty, travel, and veterinary practices.
+- [Solutions (English)](https://omnider.com/en/solutions): Industry pages in English.
+- [Pricing](https://omnider.com/pricing): Plans and channel licenses.
+- [Pricing (English)](https://omnider.com/en/pricing): Plans in English.
+- [Blog](https://omnider.com/blog): Guides on omnichannel support and AI automation.
+- [Blog (English)](https://omnider.com/en/blog): English articles.
+
+## Platforms
+
+Turkish URLs are listed. The English page for each channel is the same path with an /en prefix, for example https://omnider.com/en/platforms/whatsapp-business.
+
+- [WhatsApp Business](https://omnider.com/platforms/whatsapp-business): One WhatsApp Business number for the whole team, with AI replies, approved templates, campaigns, and WhatsApp Flow.
+- [WhatsApp Personal](https://omnider.com/platforms/whatsapp-personal): Personal WhatsApp connected by QR, with a shared inbox, AI replies, and chatbot flows.
+- [Instagram](https://omnider.com/platforms/instagram): Instagram Direct messages in the shared inbox, with AI replies and chatbots.
+- [Messenger](https://omnider.com/platforms/messenger): Facebook Page messages in one panel, with automation.
+- [Telegram](https://omnider.com/platforms/telegram): Telegram bot or personal account, with a shared inbox, AI replies, and chatbot flows.
+- [LINE](https://omnider.com/platforms/line): LINE bot channel, with a shared inbox, AI auto-reply, and chatbot flows.
+- [Web chat](https://omnider.com/platforms/webchat): Website live chat widget; conversations land in the shared inbox.
+- [Email](https://omnider.com/platforms/email): Inbound and outbound email as conversation threads, plus bulk campaigns.
+- [Gmail](https://omnider.com/platforms/gmail): Gmail connected to the shared inbox, with team replies and AI drafts.
+- [Outlook](https://omnider.com/platforms/outlook): Outlook connected to the same panel as the other channels, with AI drafts.
+- [Google Business](https://omnider.com/platforms/google-business): Google Business Profile reviews and replies. This channel is not a messaging inbox.
+- [SMS](https://omnider.com/platforms/sms): SMS through providers such as Verimor, Netgsm, and Twilio, with campaigns, delivery tracking, and inbound replies.
+
+## Features
+
+Turkish URLs are listed. The English page for each feature is the same path with an /en prefix, for example https://omnider.com/en/features/shared-inbox.
+
+- [Shared inbox](https://omnider.com/features/shared-inbox): Conversations from every channel in one team inbox, with assignment and labels.
+- [AI replies](https://omnider.com/features/ai-replies): Around-the-clock replies that use the business's own knowledge.
+- [Voice replies](https://omnider.com/features/voice-replies): AI transcribes customer voice notes and replies in text or audio.
+- [Image analysis](https://omnider.com/features/image-analysis): AI reads customer photos, such as hair, dental, skin, property, and vehicle images, and replies.
+- [Document AI](https://omnider.com/features/document-ai): AI reads PDF, Word, and Excel files customers send, then replies using business data.
+- [Video AI](https://omnider.com/features/video-ai): AI reviews the picture and audio of customer videos, then replies using business knowledge.
+- [Chatbot flows](https://omnider.com/features/chatbot-flows): Visual no-code editor for step-by-step conversation automation.
+- [Knowledge base](https://omnider.com/features/knowledge-base): FAQ, product catalog, and templates indexed so the AI can match what the customer means.
+- [Message templates](https://omnider.com/features/message-templates): Ready messages for text, image, poll, and email, with variables, usable on every channel.
+- [WhatsApp templates](https://omnider.com/features/whatsapp-templates): Meta-approved WhatsApp templates for orders, campaigns, OTP, and reminders outside the 24-hour window.
+- [WhatsApp Flow](https://omnider.com/features/whatsapp-flow): Forms, surveys, and booking screens inside WhatsApp. Answers save to the contact card.
+- [Campaigns](https://omnider.com/features/campaigns): Plan, schedule, and measure bulk messages across channels.
+- [Lead scraper](https://omnider.com/features/lead-scraper): Find, verify, and enrich web leads, then send them into campaigns.
+- [Appointment system](https://omnider.com/features/appointment-system): Booking through chatbot and AI, with slot rules and reminders.
+- [Team management](https://omnider.com/features/team-management): Roles, departments, and access for the team.
+- [Mobile app](https://omnider.com/features/mobile-app): Read and reply to customers, and transfer chats to a department or agent, from the phone.
+
+## Company
+
+- [Contact](https://omnider.com/contact): Sales, demos, and support.
+- [Contact (English)](https://omnider.com/en/contact): English contact page.
+- [Privacy policy](https://omnider.com/privacy-policy): How Omnider collects and protects data.
+- [Privacy policy (English)](https://omnider.com/en/privacy-policy): English privacy policy.
+- [Terms of use](https://omnider.com/terms-of-use): Terms for the product, apps, panels, and APIs.
+- [Terms of use (English)](https://omnider.com/en/terms-of-use): English terms.
+
+## Optional
+
+- [Partner program](https://omnider.com/partner-program): Referral commissions on platform subscriptions.
+- [Partner program (English)](https://omnider.com/en/partner-program): English partner page.
+- [Whitelabel](https://omnider.com/whitelabel-partner): Offer Omnider under your own brand and domain.
+- [Whitelabel (English)](https://omnider.com/en/whitelabel-partner): English whitelabel page.
