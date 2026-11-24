@@ -2564,7 +2564,7 @@
           "desc": "Telefonda Bağlı cihazlar → Cihaz bağla adımlarını açıp paneldeki QR’ı okutmanız yeterli. Oturum kurulunca rehberiniz ve sohbetlerinizin son mesajları arka planda panele düşer; ekstra kurulum gerekmez."
         },
         "code": {
-          "title": "Telefon numaranızla 8 haneli kod alın, WhatsApp’ta girin.",
+          "title": "Telefon numaranızla 8 haneli kod alın ve WhatsApp’ta girin.",
           "desc": "Ülke koduyla numaranızı yazın; panel size kısa bir kod üretir. WhatsApp’ta telefon numarasıyla bağlanmayı seçip kodu girdiğinizde kanal hazır olur — QR okutmaya gerek kalmaz."
         }
       },
