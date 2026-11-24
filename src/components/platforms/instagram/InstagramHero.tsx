@@ -1,17 +1,18 @@
 import Image from "next/image";
-import { CheckIcon } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { HeroTrust } from "@/components/trust";
 import { InstagramHeroBackdrop } from "./InstagramHeroBackdrop";
-import { InstagramHeroChat } from "./InstagramHeroChat";
+
+type Bubble = {
+  name: string;
+  text: string;
+  side: "left" | "right";
+  tone: "a" | "b" | "c" | "d";
+};
 
 export async function InstagramHero() {
   const t = await getTranslations("PlatformInstagram");
-  const steps = t.raw("hero.chat.steps") as Array<{
-    kind: "customer" | "ai" | "agent" | "typing" | "transfer";
-    text?: string;
-  }>;
-  const highlights = t.raw("hero.highlights") as string[];
+  const bubbles = t.raw("hero.bubbles") as Bubble[];
 
   return (
     <section
@@ -44,30 +45,35 @@ export async function InstagramHero() {
             {t("hero.description")}
           </p>
 
-          <ul className="ig-biz-hero__points">
-            {highlights.map((item) => (
-              <li key={item}>
-                <span className="ig-biz-hero__check">
-                  <CheckIcon className="h-3.5 w-3.5" />
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
           <HeroTrust className="ig-biz-hero__trust" />
         </div>
 
-        <div className="ig-biz-hero__phone">
-          <InstagramHeroChat
-            online={t("hero.chat.online")}
-            typing={t("hero.chat.typing")}
-            aiLabel={t("hero.chat.aiLabel")}
-            agentLabel={t("hero.chat.agentLabel")}
-            customerName={t("hero.chat.customerName")}
-            composerPlaceholder={t("hero.chat.composerPlaceholder")}
-            steps={steps}
-          />
+        <div className="ig-biz-hero__scene" aria-hidden>
+          {bubbles.map((bubble, index) => (
+            <div
+              key={`${bubble.name}-${index}`}
+              className={`ig-biz-hero__bubble is-${bubble.side} is-${bubble.tone}`}
+            >
+              <span className="ig-biz-hero__avatar">
+                {bubble.name.slice(0, 1)}
+              </span>
+              <span className="min-w-0">
+                <strong>{bubble.text}</strong>
+                <small>{bubble.name}</small>
+              </span>
+            </div>
+          ))}
+
+          <div className="ig-biz-hero__portrait">
+            <Image
+              src="/images/platforms/instagram/hero-woman.png"
+              alt=""
+              fill
+              priority
+              className="object-contain object-bottom"
+              sizes="(max-width: 768px) 80vw, 420px"
+            />
+          </div>
         </div>
       </div>
     </section>

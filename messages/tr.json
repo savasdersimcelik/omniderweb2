@@ -2358,6 +2358,10 @@
       },
       "footnote": "Reklam bilgisi Meta’nın gönderdiği alanlara göre görünür."
     },
+    "midCta": {
+      "line1": "Müşteri WhatsApp’ta yazar.",
+      "strong": "Omnider AI yanıtlar."
+    },
     "try": {
       "eyebrow": "Canlı deneme",
       "title": "WhatsApp Business’ı telefondan deneyin",
@@ -2771,6 +2775,10 @@
       },
       "riskNote": "WhatsApp Personal oturum tabanlıdır; resmi Business API değildir. Kritik işler için WhatsApp Business API önerilir."
     },
+    "midCta": {
+      "line1": "Müşteri WhatsApp’ta yazar.",
+      "strong": "Omnider AI yanıtlar."
+    },
     "try": {
       "eyebrow": "Canlı deneme",
       "title": "WhatsApp Personal’ı telefondan deneyin",
@@ -2807,91 +2815,67 @@
       "badge": "Instagram",
       "titleLine1": "DM gelsin,",
       "titleLine2": "yapay zeka yanıtlasın",
-      "description": "Instagram mesajları, yorumlar ve ekip yönetimini Omnider’da tek gelen kutuda birleştirin.",
-      "chat": {
-        "businessName": "Atölye",
-        "online": "çevrimiçi",
-        "typing": "yazıyor…",
-        "transfer": "Konuşma temsilciye aktarıldı",
-        "aiLabel": "Yapay zeka",
-        "agentLabel": "Temsilci",
-        "customerName": "Ayşe Yılmaz",
-        "browserUrl": "app.omnider.com/inbox",
-        "inboxTitle": "Instagram gelen kutusu",
-        "searchPlaceholder": "Sohbet ara",
-        "composerPlaceholder": "Mesaj…",
-        "steps": [
-          {
-            "kind": "customer",
-            "text": "Merhaba, bu ürün hâlâ stokta mı?"
-          },
-          {
-            "kind": "typing"
-          },
-          {
-            "kind": "ai",
-            "text": "Merhaba! Evet, stokta. Kargo veya mağazadan alabilirsin."
-          },
-          {
-            "kind": "customer",
-            "text": "Temsilciyle konuşabilir miyim?"
-          },
-          {
-            "kind": "transfer",
-            "text": "Konuşma temsilciye aktarıldı"
-          },
-          {
-            "kind": "agent",
-            "text": "Tabii — hangi beden bakıyorsun?"
-          }
-        ],
-        "sidebar": [
-          {
-            "name": "Ayşe Yılmaz",
-            "preview": "Merhaba, bu ürün hâlâ stokta mı?",
-            "time": "14:02",
-            "unread": 1
-          },
-          {
-            "name": "Can Demir",
-            "preview": "Story’deki indirim devam ediyor mu?",
-            "time": "13:40",
-            "unread": 0
-          },
-          {
-            "name": "Elif Kara",
-            "preview": "Sipariş numarası: #4821",
-            "time": "12:18",
-            "unread": 2
-          },
-          {
-            "name": "Burak Şen",
-            "preview": "Teşekkürler!",
-            "time": "Dün",
-            "unread": 0
-          }
-        ]
-      },
-      "highlights": [
-        "Instagram DM tek gelen kutuda",
-        "Yorumlara yapay zeka yanıt",
-        "Meta Login ile tek tıkla bağlan"
+      "description": "Instagram DM’leri, gönderi yorumları ve ekip yönetimini Omnider’da tek gelen kutuda birleştirin; yapay zeka yanıtlar, ekibiniz kontrol eder.",
+      "bubbles": [
+        {
+          "name": "Ayşe Yılmaz",
+          "text": "Bu ürün hâlâ stokta mı?",
+          "side": "left",
+          "tone": "a"
+        },
+        {
+          "name": "Can Demir",
+          "text": "Story’deki indirim devam ediyor mu?",
+          "side": "left",
+          "tone": "b"
+        },
+        {
+          "name": "Elif Kara",
+          "text": "Sipariş numarası: #4821",
+          "side": "left",
+          "tone": "c"
+        },
+        {
+          "name": "Burak Şen",
+          "text": "Kargo ne zaman çıkar?",
+          "side": "right",
+          "tone": "a"
+        },
+        {
+          "name": "Zeynep Akar",
+          "text": "Yorumuma cevap gelir mi?",
+          "side": "right",
+          "tone": "d"
+        },
+        {
+          "name": "Mert Kaya",
+          "text": "Mağaza saati nedir?",
+          "side": "right",
+          "tone": "b"
+        },
+        {
+          "name": "Selin Arı",
+          "text": "Bedeni değiştirebilir miyim?",
+          "side": "right",
+          "tone": "c"
+        }
       ]
     },
     "comments": {
-      "eyebrow": "Yorumlar",
-      "title": "Yoruma yanıt, DM’e çekim",
-      "subtitle": "Gönderi altına gelen yorumu yapay zeka yanıtlar; uygunsa müşteriyi Instagram DM’e yönlendirir.",
-      "tabsLabel": "Senaryo",
-      "tabs": {
-        "price": "Fiyat sorusu",
-        "stock": "Stok",
-        "dm": "DM’e çağır"
-      },
-      "cards": {
-        "price": "Fiyat soran yoruma anında net cevap; stok ve varyant bilgisi eklenir.",
-        "stock": "Stokta / tükendi durumunu okur; alternatif ürün önerir.",
-        "dm": "Uygun yorumda “DM’den yazın” ile sohbeti Omnider gelen kutusuna alır."
+      "eyebrow": "Yorumlar & Moderasyon",
+      "title": "Yorumu yanıtla, spam’i temizle",
+      "subtitle": "Gönderi yorumlarını yapay zeka yanıtlar; spam’i gizler veya siler. Uygun konuşmayı Instagram DM’e çeker.",
+      "tiles": {
+        "reply": {
+          "eyebrow": "Otomatik yanıt",
+          "title": "Yoruma AI cevap",
+          "desc": "Fiyat, stok ve kargo sorularına anında yanıt; uygunsa DM’e yönlendirir."
+        },
+        "queue": {
+          "eyebrow": "Moderasyon",
+          "title": "Yorum kuyruğu",
+          "desc": "Spam, bekleyen ve yanıtlanan yorumlar tek listede."
+        }
       },
       "widget": {
         "brand": "Atölye No.4",
@@ -2924,22 +2908,16 @@
     "interactive": {
       "eyebrow": "Etkileşimli DM",
       "title": "Hızlı cevap, ice breaker ve ürün kartı",
-      "subtitle": "Instagram Messaging’in desteklediği etkileşimlerle müşteri dokunur; seçim Omnider akışına düşer.",
-      "tabsLabel": "Mesaj türü",
+      "subtitle": "Bot cevabı Instagram’ın kendi hızlı cevapları, ice breaker’ı ve ürün kartıyla gider; müşteri dokunur, seçim panele düşer ve akış bir sonraki mesaja göre devam eder.",
       "tabs": {
         "quick": "Hızlı cevap",
         "ice": "Ice breaker",
         "card": "Ürün kartı"
       },
       "cards": {
-        "quick": "Mesaj altında chip’ler. Müşteri yazmadan dokunur; seçim webhook’a gider.",
-        "ice": "Sohbet açılışında hazır sorular. İlk mesajı siz yönlendirirsiniz.",
+        "quick": "Mesaj altında chip’ler. Müşteri yazmadan dokunur; seçim akışı o adımla sürdürür.",
+        "ice": "Sohbet açılışında hazır sorular. İlk mesajı siz yönlendirirsiniz; seçilen satır panele düşer.",
         "card": "Görsel + başlık + buton. Link veya postback ile katalog ve sepete bağlanır."
-      },
-      "note": "Quick reply, ice breaker ve generic template Instagram Messaging API türleridir. WhatsApp liste mesajı burada yok.",
-      "phone": {
-        "name": "Atölye No.4",
-        "status": "Active now"
       },
       "quick": {
         "prompt": "Nasıl yardımcı olalım?",
@@ -2952,14 +2930,23 @@
       },
       "ice": {
         "intro": "Merhaba! Başlamak için bir soru seçin.",
-        "questions": [
-          "Ürünleri gör",
-          "Kargo süresi",
-          "İade politikası",
-          "Temsilciye bağlan"
-        ],
-        "picked": "Ürünleri gör",
-        "follow": "Öne çıkan 3 ürünü kart olarak gönderiyorum."
+        "cta": "Sorular",
+        "sheet": "Bir soru seçin",
+        "rows": [
+          {
+            "title": "Ürünleri gör",
+            "description": "Öne çıkanlar",
+            "picked": true
+          },
+          {
+            "title": "Kargo süresi",
+            "description": "1–3 iş günü"
+          },
+          {
+            "title": "Temsilciye bağlan",
+            "description": "Canlı destek"
+          }
+        ]
       },
       "card": {
         "title": "Sarı kulaklık",
@@ -2967,9 +2954,10 @@
         "buttons": [
           "Siteye git",
           "DM’den sor"
-        ]
-      },
-      "badge": "Instagram Messaging · etkileşimli"
+        ],
+        "previewTitle": "Ürün sayfası",
+        "previewUrl": "omnider.app/shop/headphones"
+      }
     },
     "moderation": {
       "eyebrow": "Moderasyon",
