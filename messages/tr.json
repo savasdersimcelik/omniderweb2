@@ -2182,56 +2182,38 @@
     "templates": {
       "eyebrow": "Meta şablonları",
       "title": "WhatsApp şablonlarınızı tek yerden yönetin.",
-      "subtitle": "Omnider şablonları Meta’dan çeker, taslak yazar ve onaya gönderir. Durumu listede görürsünüz.",
-      "items": {
+      "subtitle": "Omnider şablonları Meta’dan çeker, taslak yazar ve onaya gönderir; onay, red ve kalite durumunu tek listede takip edersiniz.",
+      "cards": {
         "sync": {
-          "title": "Meta’dan tek tıkla senkron",
-          "desc": "Mevcut şablonları Cloud API’den çekin. Omnider listesi Meta ile aynı kalsın."
+          "label": "Meta senkron",
+          "field": "Cloud API hesabı",
+          "meta": "WABA · tr",
+          "cta": "Şablonları senkronize et"
         },
         "types": {
-          "title": "Kategori ve buton tipleri",
-          "desc": "Bildirim, pazarlama, doğrulama. Header ve gövde; hızlı yanıt, URL, telefon, OTP ve Flow."
+          "label": "Şablon kategorisi",
+          "cta": "Devam et",
+          "options": {
+            "utility": "Bildirim",
+            "marketing": "Pazarlama",
+            "auth": "Doğrulama"
+          }
         },
         "status": {
-          "title": "Durum, kalite ve test",
-          "desc": "Onaylı, beklemede veya reddedildi rozeti listede durur. Kalite skorunu okuyun; onaylı şablonu kendinize test edin."
-        }
-      },
-      "mock": {
-        "title": "Mesaj şablonları",
-        "meta": "3 şablon · Meta ile senkron",
-        "sync": "Senkronize et",
-        "listLabel": "Örnek şablon listesi",
-        "status": {
-          "approved": "Onaylı",
-          "pending": "İncelemede",
-          "rejected": "Reddedildi"
-        },
-        "rows": {
-          "order": {
-            "name": "siparis_onayi",
-            "meta": "Bildirim · tr"
-          },
-          "campaign": {
-            "name": "yaz_kampanyasi",
-            "meta": "Pazarlama · tr"
-          },
-          "otp": {
-            "name": "otp_dogrulama",
-            "meta": "Doğrulama · tr"
+          "label": "Durum ve kalite",
+          "cta": "Test gönder",
+          "pills": {
+            "approved": "Onaylı",
+            "pending": "İncelemede",
+            "quality": "Yüksek kalite"
           }
         }
-      },
-      "live": {
-        "syncing": "Şablonlar Meta’dan senkronize ediliyor",
-        "synced": "Şablon listesi Meta ile güncellendi"
       }
     },
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "Cevap butonu, liste ve link",
-      "subtitle": "Bot cevabı WhatsApp’ın kendi butonları ve listesiyle gider. Müşteri dokunur, seçim akışa döner.",
-      "tabsLabel": "Mesaj türü",
+      "subtitle": "Bot cevabı WhatsApp’ın kendi butonları, listesi ve linkiyle gider; müşteri dokunur, seçim panele düşer ve akış bir sonraki mesaja göre devam eder.",
       "tabs": {
         "buttons": "Cevap butonları",
         "list": "Ürün listesi",
@@ -2241,15 +2223,6 @@
         "buttons": "En fazla üç hızlı yanıt. Müşteri yazmadan dokunur; seçim akışı o adımla sürdürür.",
         "list": "Liste açılır. Ürün, fiyat ve stok satırda durur; seçilen satır panele düşer.",
         "link": "Takip, katalog veya form tek CTA butonunda. WhatsApp içinden tarayıcıya açılır."
-      },
-      "flow": {
-        "title": "Seçim akışa döner",
-        "body": "Dokunulan değer chatbot adımına gider. Panelde seçim görünür; sonraki mesaj ona göre yazılır."
-      },
-      "note": "Buton, liste ve link WhatsApp Cloud API mesaj türleridir. Müşteri WhatsApp içinde dokunur.",
-      "phone": {
-        "name": "Atölye",
-        "status": "çevrimiçi"
       },
       "buttons": {
         "body": "Bu ürünü nasıl almak istersiniz?",
@@ -2261,10 +2234,9 @@
         "follow": "Adresinizi yazın, hazırlayıp gönderelim."
       },
       "list": {
-        "body": "Size uygun 4 ürün buldum.",
+        "body": "Size uygun ürünler buldum.",
         "cta": "Ürünler",
         "sheet": "Ürün seçin",
-        "detail": "1.249 TL · Stokta",
         "rows": [
           {
             "title": "Keten gömlek",
@@ -2278,19 +2250,15 @@
           {
             "title": "Deri çanta",
             "description": "2.190 TL"
-          },
-          {
-            "title": "Keten pantolon",
-            "description": "899 TL · Stokta yok",
-            "out": true
           }
         ]
       },
       "link": {
         "body": "Siparişinizi buradan takip edebilirsiniz.",
-        "cta": "Takibi aç"
-      },
-      "badge": "Panelde: Seçim → akış devam ediyor"
+        "cta": "Takibi aç",
+        "previewTitle": "Sipariş takibi",
+        "previewUrl": "omnider.app/track"
+      }
     },
     "health": {
       "eyebrow": "Numara sağlığı",

@@ -2182,56 +2182,38 @@
     "templates": {
       "eyebrow": "Meta templates",
       "title": "Manage your WhatsApp templates in one place.",
-      "subtitle": "Omnider pulls templates from Meta, drafts them, and submits them for review. You see the status in the list.",
-      "items": {
+      "subtitle": "Omnider pulls templates from Meta, drafts them, and submits them for review—so you can track approval, rejection, and quality in one list.",
+      "cards": {
         "sync": {
-          "title": "One-click sync from Meta",
-          "desc": "Pull existing templates from the Cloud API so the Omnider list stays in step with Meta."
+          "label": "Meta sync",
+          "field": "Cloud API account",
+          "meta": "WABA · en",
+          "cta": "Sync templates"
         },
         "types": {
-          "title": "Categories and button types",
-          "desc": "Utility, marketing, authentication. Header and body; quick reply, URL, phone, OTP, and Flow."
+          "label": "Template category",
+          "cta": "Continue",
+          "options": {
+            "utility": "Utility",
+            "marketing": "Marketing",
+            "auth": "Authentication"
+          }
         },
         "status": {
-          "title": "Status, quality, and test send",
-          "desc": "Approved, pending, or rejected shows on the list. Read the quality score, then test an approved template on yourself."
-        }
-      },
-      "mock": {
-        "title": "Message templates",
-        "meta": "3 templates · in sync with Meta",
-        "sync": "Sync",
-        "listLabel": "Sample template list",
-        "status": {
-          "approved": "Approved",
-          "pending": "Pending",
-          "rejected": "Rejected"
-        },
-        "rows": {
-          "order": {
-            "name": "order_confirm",
-            "meta": "Utility · en"
-          },
-          "campaign": {
-            "name": "summer_offer",
-            "meta": "Marketing · en"
-          },
-          "otp": {
-            "name": "otp_verify",
-            "meta": "Authentication · en"
+          "label": "Status and quality",
+          "cta": "Test send",
+          "pills": {
+            "approved": "Approved",
+            "pending": "Pending",
+            "quality": "High quality"
           }
         }
-      },
-      "live": {
-        "syncing": "Syncing templates from Meta",
-        "synced": "Template list updated from Meta"
       }
     },
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "Reply buttons, lists, and links",
-      "subtitle": "Bot replies go out as WhatsApp’s own buttons and lists. The customer taps; the choice returns to the flow.",
-      "tabsLabel": "Message type",
+      "subtitle": "Bot replies go out as WhatsApp’s own buttons, lists, and links—customers tap, the choice lands in the panel, and the next message continues the flow.",
       "tabs": {
         "buttons": "Reply buttons",
         "list": "Product list",
@@ -2241,15 +2223,6 @@
         "buttons": "Up to three quick replies. The customer taps instead of typing; that choice continues the flow.",
         "list": "A list opens. Product, price, and stock sit on the row; the picked row lands in the panel.",
         "link": "Tracking, a catalog, or a form in one CTA button. It opens the browser from inside WhatsApp."
-      },
-      "flow": {
-        "title": "The tap returns to the flow",
-        "body": "The tapped value goes to the chatbot step. The panel shows the choice; the next message is written from it."
-      },
-      "note": "Buttons, lists, and links are WhatsApp Cloud API message types. The customer taps inside WhatsApp.",
-      "phone": {
-        "name": "Atelier",
-        "status": "online"
       },
       "buttons": {
         "body": "How would you like to get this?",
@@ -2261,10 +2234,9 @@
         "follow": "Send your address and we’ll ship it."
       },
       "list": {
-        "body": "I found 4 products that fit.",
+        "body": "I found products that fit.",
         "cta": "Products",
         "sheet": "Choose a product",
-        "detail": "1,249 TL · In stock",
         "rows": [
           {
             "title": "Linen shirt",
@@ -2278,19 +2250,15 @@
           {
             "title": "Leather bag",
             "description": "2,190 TL"
-          },
-          {
-            "title": "Linen trousers",
-            "description": "899 TL · Out of stock",
-            "out": true
           }
         ]
       },
       "link": {
         "body": "You can track your order from here.",
-        "cta": "Open tracking"
-      },
-      "badge": "In the panel: selection continues the flow"
+        "cta": "Open tracking",
+        "previewTitle": "Order tracking",
+        "previewUrl": "omnider.app/track"
+      }
     },
     "health": {
       "eyebrow": "Number health",
