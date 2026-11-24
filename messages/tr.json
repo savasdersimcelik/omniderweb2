@@ -2609,14 +2609,34 @@
       "eyebrow": "Düz metinden fazlası",
       "title": "Anket, buton ve konum gönderin",
       "subtitle": "Müşteriye seçenekleri yazdırmayın, dokundurun. Butona bastığı, konum attığı, mesajını düzelttiği ya da emojiyle tepki verdiği her şey panelde doğru görünür.",
-      "tabsLabel": "Mesaj türü",
       "tabs": {
         "text": "Metin",
         "location": "Konum",
         "poll": "Anket",
         "button": "Buton",
-        "document": "Dosya",
-        "sticker": "Sticker"
+        "document": "Dosya"
+      },
+      "cards": {
+        "text": {
+          "title": "Düz metin ve tepkiler",
+          "desc": "Mesaj balonu, düzenlendi etiketi ve emoji tepkisi sohbette doğru görünür."
+        },
+        "poll": {
+          "title": "Anketle seçim alın",
+          "desc": "Müşteri seçeneklere dokunur; cevap panele düşer, yazmaya gerek kalmaz."
+        },
+        "location": {
+          "title": "Konum kartı gönderin",
+          "desc": "Harita pini ve adres native konum kartında açılır."
+        },
+        "button": {
+          "title": "Cevap butonları",
+          "desc": "En fazla üç buton; seçim akışı doğru dala taşır."
+        },
+        "document": {
+          "title": "Dosya paylaşın",
+          "desc": "PDF ve belgeler sohbette kart olarak gider."
+        }
       },
       "phone": {
         "name": "Atölye Selin",
@@ -2637,32 +2657,9 @@
         "locationTitle": "Atölye Selin – Kadıköy",
         "locationAddress": "Caferağa Mah. Moda Cad. No:14, Kadıköy",
         "fileName": "atelye-menu.pdf",
-        "sticker": "🌿",
         "edited": "düzenlendi",
         "reaction": "👍"
-      },
-      "panel": {
-        "title": "Müşteri cevap verince panelde ne görünür?",
-        "items": {
-          "button": {
-            "title": "Butona bastı",
-            "body": "«Randevu al» seçildi, akış doğru dala geçti."
-          },
-          "location": {
-            "title": "Konum attı",
-            "body": "Harita pini ve adres sohbette görünür."
-          },
-          "edit": {
-            "title": "Mesajını düzeltti",
-            "body": "Balonda «düzenlendi» etiketi belirir."
-          },
-          "reaction": {
-            "title": "Emojiyle tepki verdi",
-            "body": "👍 mesajın altında durur; kanal ayarından kapatılabilir."
-          }
-        }
-      },
-      "note": "En fazla 3 buton · 25 karakter. Müşteri butonu yazıyla da seçebilir."
+      }
     },
     "catalog": {
       "eyebrow": "Ürün kataloğu",

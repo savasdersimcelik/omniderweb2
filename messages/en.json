@@ -2609,14 +2609,34 @@
       "eyebrow": "More than plain text",
       "title": "Send polls, buttons, and locations",
       "subtitle": "Don’t make customers type the options — let them tap. Every button, location, edit or emoji reaction shows up correctly in the panel.",
-      "tabsLabel": "Message type",
       "tabs": {
         "text": "Text",
         "location": "Location",
         "poll": "Poll",
         "button": "Button",
-        "document": "File",
-        "sticker": "Sticker"
+        "document": "File"
+      },
+      "cards": {
+        "text": {
+          "title": "Plain text and reactions",
+          "desc": "Bubbles, edited labels, and emoji reactions show correctly in the chat."
+        },
+        "poll": {
+          "title": "Collect choices with polls",
+          "desc": "Customers tap an option; the answer lands in the panel without typing."
+        },
+        "location": {
+          "title": "Send a location card",
+          "desc": "Map pin and address open as a native location card."
+        },
+        "button": {
+          "title": "Reply buttons",
+          "desc": "Up to three buttons; the choice continues the right flow branch."
+        },
+        "document": {
+          "title": "Share files",
+          "desc": "PDFs and documents go out as chat cards."
+        }
       },
       "phone": {
         "name": "Selin Studio",
@@ -2637,32 +2657,9 @@
         "locationTitle": "Selin Studio – Downtown",
         "locationAddress": "14 Market Street, Suite 2",
         "fileName": "studio-menu.pdf",
-        "sticker": "🌿",
         "edited": "edited",
         "reaction": "👍"
-      },
-      "panel": {
-        "title": "What shows in the panel when the customer replies?",
-        "items": {
-          "button": {
-            "title": "Tapped a button",
-            "body": "“Book a slot” was selected, and the flow took the right branch."
-          },
-          "location": {
-            "title": "Sent a location",
-            "body": "A map pin and address appear in the chat."
-          },
-          "edit": {
-            "title": "Edited a message",
-            "body": "The bubble shows an “edited” label."
-          },
-          "reaction": {
-            "title": "Reacted with an emoji",
-            "body": "👍 sits under the message; you can turn this off in channel settings."
-          }
-        }
-      },
-      "note": "Up to 3 buttons · 25 characters. Customers can also pick a button by typing."
+      }
     },
     "catalog": {
       "eyebrow": "Product catalog",
