@@ -155,6 +155,7 @@ export function SiteHeader() {
               </Link>
               <Link
                 href="/register"
+                id="cta-register"
                 className="header-cta-primary hidden md:inline-flex"
                 onMouseEnter={closeMega}
               >
@@ -343,6 +344,7 @@ export function SiteHeader() {
                       </Link>
                       <Link
                         href="/register"
+                        id="cta-register"
                         className="btn-primary w-full"
                         onClick={() => setOpen(false)}
                       >

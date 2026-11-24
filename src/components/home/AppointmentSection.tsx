@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight, CalendarDays } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -10,6 +10,7 @@ import {
 
 export async function AppointmentSection() {
   const t = await getTranslations("HomePage.appointments");
+  const nav = await getTranslations("Nav");
   const slots = t.raw("slots") as AppointmentSlot[];
 
   return (
@@ -41,9 +42,8 @@ export async function AppointmentSection() {
               {t("ctaPrimary")}
               <ArrowUpRight className="size-4" aria-hidden />
             </DemoRequestButton>
-            <Link href="/contact" className="btn-secondary">
-              <CalendarDays className="size-4 text-brand-600" aria-hidden />
-              {t("ctaSecondary")}
+            <Link href="/register" id="cta-register" className="btn-secondary">
+              {nav("startFree")}
             </Link>
           </div>
         </div>

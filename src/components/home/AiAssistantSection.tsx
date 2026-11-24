@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight, Bot } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -10,6 +10,7 @@ import {
 
 export async function AiAssistantSection() {
   const t = await getTranslations("HomePage.aiAssistant");
+  const nav = await getTranslations("Nav");
   const knowledgeItems = t.raw("knowledgeItems") as string[];
   const flowSteps = t.raw("flowSteps") as FlowStep[];
 
@@ -42,9 +43,8 @@ export async function AiAssistantSection() {
               {t("ctaPrimary")}
               <ArrowUpRight className="size-4" aria-hidden />
             </DemoRequestButton>
-            <Link href="/contact" className="btn-secondary">
-              <Bot className="size-4 text-brand-600" aria-hidden />
-              {t("ctaSecondary")}
+            <Link href="/register" id="cta-register" className="btn-secondary">
+              {nav("startFree")}
             </Link>
           </div>
         </div>

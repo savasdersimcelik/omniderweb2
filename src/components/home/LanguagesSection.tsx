@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -7,6 +7,7 @@ import { LanguagesMap } from "./LanguagesMap";
 
 export async function LanguagesSection() {
   const t = await getTranslations("HomePage.languages");
+  const nav = await getTranslations("Nav");
 
   const places = {
     "new-york": t("places.new-york"),
@@ -42,9 +43,8 @@ export async function LanguagesSection() {
                 {t("ctaPrimary")}
                 <ArrowUpRight className="size-4" aria-hidden />
               </DemoRequestButton>
-              <Link href="/contact" className="btn-secondary">
-                <MessageCircle className="size-4 text-brand-600" aria-hidden />
-                {t("ctaSecondary")}
+              <Link href="/register" id="cta-register" className="btn-secondary">
+                {nav("startFree")}
               </Link>
             </div>
           </div>

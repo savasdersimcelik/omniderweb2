@@ -304,7 +304,7 @@
     "description": "Kayıt olun, kanallarınızı bağlayın. WhatsApp Business, Instagram, Messenger ve web chat ile müşteri mesajlarını dakikalar içinde yönetin — kredi kartı gerekmez.",
     "socialProof": "100.000+ kullanıcı Omnider ile çalışıyor",
     "ctaPrimary": "14 gün ücretsiz dene",
-    "ctaSecondary": "Demo iste",
+    "ctaSecondary": "Sizi arayalım",
     "trialBadge": "14 gün ücretsiz",
     "cardTitle": "Demo hesabınız hazır",
     "cardSubtitle": "Kart bilgisi istemeden kayıt olun; istediğiniz zaman iptal edin.",
@@ -398,7 +398,7 @@
     "titleLine1": "Tüm kanallar,",
     "titleLine2": "tek gelen kutusu",
     "description": "WhatsApp, Instagram, Messenger ve daha fazlasını tek panelde yönetin. Yapay zeka yanıtlar, ekibiniz yönetir.",
-    "ctaPrimary": "Demo iste",
+    "ctaPrimary": "Sizi arayalım",
     "ctaSecondary": "İletişime geç",
     "heroImageAlt": "Omnider gelen kutusu paneli",
     "heroChat": {
@@ -602,7 +602,7 @@
       "title": "Nereden yazarsa yazsın,",
       "titleAccent": "kendi dilinde yanıt.",
       "description": "Yapay zeka müşterinin dilini algılar ve yanıtı aynı dilde verir. İngilizce, İspanyolca, Arapça veya Japonca — kanal fark etmez.",
-      "ctaPrimary": "Demo iste",
+      "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "Satışla konuş",
       "hub": "Omnider",
       "places": {
@@ -624,7 +624,7 @@
         "Marka dilinize uygun otomatik yanıt — 7/24",
         "Hassas yorumlarda insan onayına veya temsilciye sorunsuz aktarım"
       ],
-      "ctaPrimary": "Demo iste",
+      "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "Yorum yanıtını konuş",
       "aiLabel": "Omnider AI",
       "replyLabel": "Önerilen yanıt",
@@ -664,7 +664,7 @@
         "Hatırlatma, takip ve satış için giden aramalar",
         "Transkript, özet ve gelen kutusuna otomatik düşen kayıt"
       ],
-      "ctaPrimary": "Demo iste",
+      "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "Arama özelliğini konuş",
       "engineTitle": "AI Voice Engine",
       "engineStatus": "Canlı görüşme",
@@ -709,7 +709,7 @@
       "title": "Sohbetten randevu,",
       "titleAccent": "takvimle senkron.",
       "description": "Müşteri WhatsApp veya Instagram’da slot seçer; Omnider rezervasyonu oluşturur ve takviminle senkron tutar.",
-      "ctaPrimary": "Demo iste",
+      "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "Randevuyu konuş",
       "calendarTitle": "Konsültasyon — Ayşe Yılmaz",
       "calendarMeta": "Per 14:30 · Kişiye bağlı",
@@ -752,7 +752,7 @@
       "title": "Gelen kutusu,",
       "titleAccent": "AI ile düzenli.",
       "description": "Omnider AI e-postaları doğru klasöre taşır; uygun olanlara marka tonunda yanıt taslağı yazar veya gönderir.",
-      "ctaPrimary": "Demo iste",
+      "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "E-postayı konuş",
       "inboxLabel": "Kurumsal gelen kutusu",
       "foldersLabel": "AI klasör dağıtımı aktif",
@@ -806,7 +806,7 @@
       "title": "Bilgi bankasından yanıt,",
       "titleAccent": "gerektiğinde ekibe devret.",
       "description": "Omnider AI FAQ ve ürün bilginizle 7/24 yanıt verir; chatbot akışı ilerler, hassas konuda temsilciye veya departmana aktarır.",
-      "ctaPrimary": "Demo iste",
+      "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "AI asistanı konuş",
       "channelLabel": "WhatsApp",
       "aiLabel": "Omnider AI",
@@ -846,7 +846,7 @@
       "title": "Tek seferlik veya tekrarlayan,",
       "titleAccent": "ölçülebilir gönderim.",
       "description": "WhatsApp Business, SMS veya e-posta ile tek seferlik duyuru ya da tekrarlayan bülten kurun; sabit liste veya etiket filtreli dinamik kitleye gönderin.",
-      "ctaPrimary": "Demo iste",
+      "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "Kampanyayı konuş",
       "campaignTitle": "Bahar indirimi — klinik",
       "campaignMeta": "Tek seferlik · Bugün 18:00",
@@ -2360,7 +2360,9 @@
     },
     "midCta": {
       "line1": "Müşteri WhatsApp’ta yazar.",
-      "strong": "Omnider AI yanıtlar."
+      "strong": "Omnider AI yanıtlar.",
+      "demo": "Sizi arayalım",
+      "start": "Ücretsiz başla"
     },
     "try": {
       "eyebrow": "Canlı deneme",
@@ -2777,7 +2779,9 @@
     },
     "midCta": {
       "line1": "Müşteri WhatsApp’ta yazar.",
-      "strong": "Omnider AI yanıtlar."
+      "strong": "Omnider AI yanıtlar.",
+      "demo": "Sizi arayalım",
+      "start": "Ücretsiz başla"
     },
     "try": {
       "eyebrow": "Canlı deneme",
@@ -3081,6 +3085,204 @@
       "cta": "Instagram’da aç",
       "ctaTitle": "Omnider Instagram hesabına mesaj aç",
       "imageAlt": "Omnider Instagram DM için QR kod, ig.me/m/omnider.tech"
+    }
+  },
+  "PlatformMessenger": {
+    "meta": {
+      "title": "Facebook Messenger Entegrasyonu — Omnider",
+      "description": "Facebook sayfanızın Messenger yazışmalarını ortak gelen kutusunda toplayın, yapay zeka ve chatbot ile yanıtlayın."
+    },
+    "hero": {
+      "badge": "Facebook Messenger",
+      "titleLine1": "Facebook sayfanız",
+      "titleLine2": "Messenger’da cevaplasın",
+      "description": "Sayfayı bağlayın; yazışma, yorum ve reklamdan gelen konuşma aynı kutuya düşsün.",
+      "steps": [
+        "Facebook ile bağla",
+        "Sayfa seç",
+        "Yazışma gelsin"
+      ],
+      "chat": {
+        "pageName": "Atölye",
+        "status": "şu an aktif",
+        "incoming": "Bu çanta hâlâ var mı?",
+        "productName": "Siyah deri çanta",
+        "productPrice": "1.890 TL",
+        "productCta": "Ürünü incele",
+        "chips": ["Stok", "Fiyat", "Kargo"]
+      }
+    },
+    "interactive": {
+      "eyebrow": "Messenger’da etkileşimli mesaj",
+      "title": "Yazı yazdırmayın, dokunsun",
+      "subtitle": "Ürünlerinizi kart olarak gösterin, seçenekleri balon olarak sunun, linki ve telefonu butona koyun. Omnider her mesajı Messenger’ın anladığı biçime kendisi çevirir.",
+      "tabsLabel": "Mesaj biçimi",
+      "tabs": {
+        "cards": "Ürün kartları",
+        "quick": "Hızlı cevaplar",
+        "actions": "Butonlar"
+      },
+      "facts": {
+        "cards": {
+          "title": "Ürün başına bir kart",
+          "body": "Görsel, ad ve fiyat. En fazla 10 kart."
+        },
+        "quick": {
+          "title": "Seçenekler balon olur",
+          "body": "En fazla 13 balon."
+        },
+        "actions": {
+          "title": "Link, arama, e-posta",
+          "body": "En fazla 3 buton."
+        },
+        "flow": {
+          "title": "Seçim akışa geri döner",
+          "body": "Dokunuş akışa iletilir."
+        }
+      },
+      "demo": {
+        "phoneName": "Atölye",
+        "phoneStatus": "şu an aktif",
+        "cardsIntro": "Size uygun 3 model buldum",
+        "cardsFollow": "Siyah deri çanta seçildi",
+        "viewProduct": "Ürünü incele",
+        "products": [
+          { "name": "Siyah deri çanta", "price": "1.890 TL", "tone": "bag" },
+          { "name": "Bej sneaker", "price": "2.450 TL", "tone": "shoe" },
+          { "name": "Minimal saat", "price": "3.200 TL", "tone": "watch" }
+        ],
+        "quickIntro": "Hangi gün uğramak istersiniz?",
+        "quickPicked": "Salı",
+        "quick": ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma"],
+        "actionsIntro": "Size nasıl yardımcı olalım?",
+        "actions": [
+          { "id": "url", "label": "Siteye git" },
+          { "id": "call", "label": "Bizi arayın" },
+          { "id": "email", "label": "E-posta gönder" }
+        ]
+      },
+      "note": "24 saati geçen konuşmalarda temsilci yanıtı yalnızca metin olarak gönderilebilir. Messenger konum mesajını desteklemediği için konum harita linkiyle gider."
+    },
+    "comments": {
+      "eyebrow": "Sayfa yorumları",
+      "title": "Yorumu yanıtla, aynı kutuda tut",
+      "subtitle": "Facebook gönderilerindeki yorumlar ortak gelen kutusuna düşer. Yapay zeka yanıtlar; spam gizlenir veya silinir.",
+      "tiles": {
+        "reply": {
+          "eyebrow": "Otomatik yanıt",
+          "title": "Yoruma yapay zeka cevap",
+          "desc": "Fiyat, stok ve kargo sorularına anında yanıt; uygunsa Messenger yazışmasına çeker."
+        },
+        "queue": {
+          "eyebrow": "Moderasyon",
+          "title": "Yorum kuyruğu",
+          "desc": "Spam, bekleyen ve yanıtlanan yorumlar tek listede."
+        }
+      },
+      "widget": {
+        "brand": "Atölye",
+        "postLabel": "Sayfa gönderisi",
+        "aiLabel": "Yapay zeka",
+        "scenes": {
+          "price": {
+            "user": "ayse.y",
+            "comment": "Fiyatı nedir?",
+            "reply": "1.890 TL · stokta. Detay için Messenger’dan yazabilirsiniz.",
+            "badge": "Otomatik yanıt · Messenger’a yönlendirildi"
+          }
+        }
+      }
+    },
+    "moderation": {
+      "items": {
+        "hide": {
+          "title": "Gizle",
+          "body": "Uygunsuz yorumu gizlersiniz; gönderi temiz kalır."
+        },
+        "delete": {
+          "title": "Sil",
+          "body": "Spam veya ihlal yorumunu silersiniz; kayıt logda durur."
+        }
+      },
+      "widget": {
+        "title": "Yorum kuyruğu",
+        "rows": [
+          { "user": "spam.bot", "text": "Ucuz takipçi!!!", "action": "Gizlendi" },
+          { "user": "ayse.y", "text": "Fiyatı nedir?", "action": "Yanıtlandı" },
+          { "user": "can_d", "text": "Harika!", "action": "—" }
+        ]
+      }
+    },
+    "publish": {
+      "eyebrow": "Yayın",
+      "title": "Sayfa gönderisini planla",
+      "subtitle": "Takvimden gün seçin, görsel ve metni kaydedin. pages_manage_posts izni açıkken Omnider gönderiyi Facebook sayfasına yollar.",
+      "items": {
+        "calendar": {
+          "title": "Takvim",
+          "body": "Haftalık ve aylık görünümde planlı sayfa gönderileri."
+        },
+        "draft": {
+          "title": "Taslak",
+          "body": "Görsel ve metin taslakta bekler."
+        },
+        "scope": {
+          "title": "Yayın izni",
+          "body": "pages_manage_posts izni kanalda görünür."
+        }
+      },
+      "widget": {
+        "month": "Kasım 2026",
+        "weekdays": ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+        "scheduled": "Planlandı",
+        "draft": "Taslak",
+        "caption": "Yeni sezon · vitrin"
+      }
+    },
+    "adReferral": {
+      "eyebrow": "Reklamdan gelen yazışma",
+      "title": "Bu yazışma hangi reklamdan geldi?",
+      "lead": "Reklamdaki “Mesaj gönder” Messenger penceresini açar. Başlık ve kaynak gelen kutuda durur.",
+      "note": "Tıkla-ve-Messenger reklamından gelen konuşma, reklam kartı ve yönlendirme kaynağıyla düşer.",
+      "items": {
+        "card": {
+          "title": "Reklam kartı mesajın üstünde",
+          "body": "Reklam rozeti, başlık ve link ilk mesajın hemen üstünde."
+        },
+        "utm": {
+          "title": "UTM’li link",
+          "body": "Reklam kimliği UTM olarak eklenir; Analytics’te görürsünüz."
+        },
+        "contact": {
+          "title": "Kişi kartına işlenir",
+          "body": "Yönlendirme kaynağı otomatik dolar."
+        }
+      },
+      "scene": {
+        "brand": "Atölye",
+        "sponsored": "Sponsorlu",
+        "send": "Mesaj gönder",
+        "inbox": "Gelen kutusu",
+        "adBadge": "Reklam",
+        "headline": "Yaz kampanyası bu hafta",
+        "link": "omnider.com/kampanya…",
+        "bubble": "Merhaba, bu kampanya hâlâ geçerli mi?",
+        "customer": "Ayşe",
+        "referralLabel": "Yönlendirme kaynağı",
+        "referralPrefix": "Reklam",
+        "adId": "120384756"
+      },
+      "footnote": "Reklam bilgisi Meta’nın gönderdiği alanlara göre görünür."
+    },
+    "try": {
+      "eyebrow": "Canlı deneme",
+      "title": "Messenger’dan yazın",
+      "body": "QR kodu taratın veya butona dokunun. Omnider Facebook sayfasının Messenger penceresi açılır.",
+      "cardTitle": "Omnider Messenger",
+      "handle": "m.me/1076656148865069",
+      "cta": "Messenger’da aç",
+      "ctaTitle": "Omnider Messenger sohbetini aç",
+      "imageAlt": "Omnider Messenger için QR kod"
     }
   }
 }

@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight, Phone } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -7,6 +7,7 @@ import { AiCallsWidget } from "./AiCallsWidget";
 
 export async function AiCallsSection() {
   const t = await getTranslations("HomePage.aiCalls");
+  const nav = await getTranslations("Nav");
 
   const inbound = t.raw("inbound") as Array<{
     code: string;
@@ -51,9 +52,8 @@ export async function AiCallsSection() {
                 {t("ctaPrimary")}
                 <ArrowUpRight className="size-4" aria-hidden />
               </DemoRequestButton>
-              <Link href="/contact" className="btn-secondary">
-                <Phone className="size-4 text-brand-600" aria-hidden />
-                {t("ctaSecondary")}
+              <Link href="/register" id="cta-register" className="btn-secondary">
+                {nav("startFree")}
               </Link>
             </div>
           </div>

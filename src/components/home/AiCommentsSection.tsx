@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight, MessageSquareText } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -10,6 +10,7 @@ import {
 
 export async function AiCommentsSection() {
   const t = await getTranslations("HomePage.aiComments");
+  const nav = await getTranslations("Nav");
 
   const comments = t.raw("comments") as CommentPreview[];
 
@@ -50,12 +51,8 @@ export async function AiCommentsSection() {
                 {t("ctaPrimary")}
                 <ArrowUpRight className="size-4" aria-hidden />
               </DemoRequestButton>
-              <Link href="/contact" className="btn-secondary">
-                <MessageSquareText
-                  className="size-4 text-brand-600"
-                  aria-hidden
-                />
-                {t("ctaSecondary")}
+              <Link href="/register" id="cta-register" className="btn-secondary">
+                {nav("startFree")}
               </Link>
             </div>
           </div>

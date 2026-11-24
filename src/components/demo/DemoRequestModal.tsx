@@ -174,6 +174,7 @@ export function DemoRequestModal() {
             </div>
             <button
               type="button"
+              id="cta-close-demo"
               className="flex size-9 shrink-0 items-center justify-center rounded-full text-ink-subtle transition hover:bg-surface-subtle hover:text-ink"
               onClick={closeDemo}
               aria-label={t("close")}
@@ -272,6 +273,7 @@ export function DemoRequestModal() {
 
             <button
               type="submit"
+              id="cta-submit-demo"
               disabled={sending || status === "success"}
               className="btn-primary h-12 w-full text-base disabled:cursor-wait disabled:opacity-70"
             >

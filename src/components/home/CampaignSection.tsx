@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight, Megaphone } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -12,6 +12,7 @@ import {
 
 export async function CampaignSection() {
   const t = await getTranslations("HomePage.campaigns");
+  const nav = await getTranslations("Nav");
   const types = t.raw("types") as CampaignOption[];
   const channels = t.raw("channels") as CampaignOption[];
   const events = t.raw("events") as CampaignEvent[];
@@ -47,9 +48,8 @@ export async function CampaignSection() {
               {t("ctaPrimary")}
               <ArrowUpRight className="size-4" aria-hidden />
             </DemoRequestButton>
-            <Link href="/contact" className="btn-secondary">
-              <Megaphone className="size-4 text-brand-600" aria-hidden />
-              {t("ctaSecondary")}
+            <Link href="/register" id="cta-register" className="btn-secondary">
+              {nav("startFree")}
             </Link>
           </div>
         </div>

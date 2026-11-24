@@ -304,7 +304,7 @@
     "description": "Sign up, connect your channels, and manage WhatsApp Business, Instagram, Messenger, and web chat in minutes — no credit card required.",
     "socialProof": "Trusted by 100,000+ users on Omnider",
     "ctaPrimary": "Start 14-day free trial",
-    "ctaSecondary": "Request a demo",
+    "ctaSecondary": "We'll call you",
     "trialBadge": "14 days free",
     "cardTitle": "Your demo account is ready",
     "cardSubtitle": "Register without a card. Cancel anytime.",
@@ -398,7 +398,7 @@
     "titleLine1": "Every channel,",
     "titleLine2": "one inbox",
     "description": "Manage WhatsApp, Instagram, Messenger and more in a single panel. AI replies first — your team stays in control.",
-    "ctaPrimary": "Request a demo",
+    "ctaPrimary": "We'll call you",
     "ctaSecondary": "Contact us",
     "heroImageAlt": "Omnider shared inbox dashboard",
     "heroChat": {
@@ -602,7 +602,7 @@
       "title": "Wherever they write from,",
       "titleAccent": "reply in their language.",
       "description": "AI detects the customer’s language and replies in that same language. English, Spanish, Arabic, or Japanese — the channel doesn’t matter.",
-      "ctaPrimary": "Request a demo",
+      "ctaPrimary": "We'll call you",
       "ctaSecondary": "Talk to Sales",
       "hub": "Omnider",
       "places": {
@@ -624,7 +624,7 @@
         "On-brand auto replies — around the clock",
         "Smooth handoff to human approval or an agent for sensitive threads"
       ],
-      "ctaPrimary": "Request a demo",
+      "ctaPrimary": "We'll call you",
       "ctaSecondary": "Talk about comments",
       "aiLabel": "Omnider AI",
       "replyLabel": "Suggested reply",
@@ -664,7 +664,7 @@
         "Outbound calls for reminders, follow-ups, and sales",
         "Transcripts, summaries, and records in your inbox"
       ],
-      "ctaPrimary": "Request a demo",
+      "ctaPrimary": "We'll call you",
       "ctaSecondary": "Talk about calls",
       "engineTitle": "AI Voice Engine",
       "engineStatus": "Live call",
@@ -709,7 +709,7 @@
       "title": "Book from chat,",
       "titleAccent": "synced to your calendar.",
       "description": "Customers pick a slot on WhatsApp or Instagram; Omnider creates the booking and keeps it synced to your calendar.",
-      "ctaPrimary": "Request a demo",
+      "ctaPrimary": "We'll call you",
       "ctaSecondary": "Talk about bookings",
       "calendarTitle": "Consultation — Ayşe Yılmaz",
       "calendarMeta": "Thu 14:30 · Contact-linked",
@@ -752,7 +752,7 @@
       "title": "Inbox sorted,",
       "titleAccent": "replies drafted by AI.",
       "description": "Omnider AI files mail into the right folders and drafts — or sends — on-brand replies when it should answer.",
-      "ctaPrimary": "Request a demo",
+      "ctaPrimary": "We'll call you",
       "ctaSecondary": "Talk about email",
       "inboxLabel": "Business inbox",
       "foldersLabel": "AI folder routing on",
@@ -806,7 +806,7 @@
       "title": "Answers from your knowledge,",
       "titleAccent": "handoff when it matters.",
       "description": "Omnider AI replies 24/7 from your FAQs and product data; chatbot flows guide the chat, then hand off to an agent or department when needed.",
-      "ctaPrimary": "Request a demo",
+      "ctaPrimary": "We'll call you",
       "ctaSecondary": "Talk about AI assistant",
       "channelLabel": "WhatsApp",
       "aiLabel": "Omnider AI",
@@ -846,7 +846,7 @@
       "title": "One-time or recurring,",
       "titleAccent": "measurable sends.",
       "description": "Run one-time announcements or recurring newsletters on WhatsApp Business, SMS, or email — with static lists or tag-filtered dynamic audiences.",
-      "ctaPrimary": "Request a demo",
+      "ctaPrimary": "We'll call you",
       "ctaSecondary": "Talk about campaigns",
       "campaignTitle": "Spring offer — clinic",
       "campaignMeta": "One-time · Today 18:00",
@@ -2360,7 +2360,9 @@
     },
     "midCta": {
       "line1": "Customers write on WhatsApp.",
-      "strong": "Omnider AI replies."
+      "strong": "Omnider AI replies.",
+      "demo": "We'll call you",
+      "start": "Start for free"
     },
     "try": {
       "eyebrow": "Live test",
@@ -2777,7 +2779,9 @@
     },
     "midCta": {
       "line1": "Customers write on WhatsApp.",
-      "strong": "Omnider AI replies."
+      "strong": "Omnider AI replies.",
+      "demo": "We'll call you",
+      "start": "Start for free"
     },
     "try": {
       "eyebrow": "Live test",
@@ -3081,6 +3085,204 @@
       "cta": "Open in Instagram",
       "ctaTitle": "Open a message to the Omnider Instagram account",
       "imageAlt": "QR code for Omnider Instagram DM, ig.me/m/omnider.tech"
+    }
+  },
+  "PlatformMessenger": {
+    "meta": {
+      "title": "Facebook Messenger Integration — Omnider",
+      "description": "Collect your Facebook Page’s Messenger chats in a shared inbox and reply with AI and chatbots."
+    },
+    "hero": {
+      "badge": "Facebook Messenger",
+      "titleLine1": "Your Facebook Page",
+      "titleLine2": "answers on Messenger",
+      "description": "Connect the Page. Chats, comments, and ad conversations land in one inbox.",
+      "steps": [
+        "Connect with Facebook",
+        "Pick the Page",
+        "Messages arrive"
+      ],
+      "chat": {
+        "pageName": "Atelier",
+        "status": "active now",
+        "incoming": "Is this bag still available?",
+        "productName": "Black leather bag",
+        "productPrice": "1,890 TRY",
+        "productCta": "View product",
+        "chips": ["Stock", "Price", "Shipping"]
+      }
+    },
+    "interactive": {
+      "eyebrow": "Interactive Messenger",
+      "title": "Let them tap, not type",
+      "subtitle": "Show products as cards, choices as chips, and links or calls as buttons. Omnider turns each message into the format Messenger understands.",
+      "tabsLabel": "Message format",
+      "tabs": {
+        "cards": "Product cards",
+        "quick": "Quick replies",
+        "actions": "Buttons"
+      },
+      "facts": {
+        "cards": {
+          "title": "One card per product",
+          "body": "Image, name, and price. Up to 10 cards."
+        },
+        "quick": {
+          "title": "Choices become chips",
+          "body": "Up to 13 chips."
+        },
+        "actions": {
+          "title": "Link, call, email",
+          "body": "Up to 3 buttons."
+        },
+        "flow": {
+          "title": "The tap returns to the flow",
+          "body": "The choice is passed back into the flow."
+        }
+      },
+      "demo": {
+        "phoneName": "Atelier",
+        "phoneStatus": "active now",
+        "cardsIntro": "I found 3 models that fit",
+        "cardsFollow": "Black leather bag selected",
+        "viewProduct": "View product",
+        "products": [
+          { "name": "Black leather bag", "price": "1,890 TRY", "tone": "bag" },
+          { "name": "Beige sneaker", "price": "2,450 TRY", "tone": "shoe" },
+          { "name": "Minimal watch", "price": "3,200 TRY", "tone": "watch" }
+        ],
+        "quickIntro": "Which day works for a visit?",
+        "quickPicked": "Tuesday",
+        "quick": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "actionsIntro": "How can we help?",
+        "actions": [
+          { "id": "url", "label": "Open site" },
+          { "id": "call", "label": "Call us" },
+          { "id": "email", "label": "Send email" }
+        ]
+      },
+      "note": "After 24 hours, an agent reply can only be sent as text. Messenger has no location message, so a place goes out as a map link."
+    },
+    "comments": {
+      "eyebrow": "Page comments",
+      "title": "Reply to comments in the same inbox",
+      "subtitle": "Comments on Facebook posts land in the shared inbox. AI replies, and spam is hidden or deleted.",
+      "tiles": {
+        "reply": {
+          "eyebrow": "Auto-reply",
+          "title": "AI answers the comment",
+          "desc": "Instant replies on price, stock, and shipping — then the chat can move into Messenger."
+        },
+        "queue": {
+          "eyebrow": "Moderation",
+          "title": "Comment queue",
+          "desc": "Spam, awaiting, and replied comments in one list."
+        }
+      },
+      "widget": {
+        "brand": "Atelier",
+        "postLabel": "Page post",
+        "aiLabel": "AI",
+        "scenes": {
+          "price": {
+            "user": "maya.r",
+            "comment": "What’s the price?",
+            "reply": "1,890 TRY · in stock. Message us on Messenger for details.",
+            "badge": "Auto-reply · moved to Messenger"
+          }
+        }
+      }
+    },
+    "moderation": {
+      "items": {
+        "hide": {
+          "title": "Hide",
+          "body": "Hide an unsuitable comment and keep the post clean."
+        },
+        "delete": {
+          "title": "Delete",
+          "body": "Remove spam or a violation. The action stays in the log."
+        }
+      },
+      "widget": {
+        "title": "Comment queue",
+        "rows": [
+          { "user": "spam.bot", "text": "Cheap followers!!!", "action": "Hidden" },
+          { "user": "maya.r", "text": "What’s the price?", "action": "Replied" },
+          { "user": "james_c", "text": "Love it!", "action": "—" }
+        ]
+      }
+    },
+    "publish": {
+      "eyebrow": "Publish",
+      "title": "Schedule the Page post",
+      "subtitle": "Pick a day, save the creative and caption. With pages_manage_posts, Omnider sends the post to the Facebook Page.",
+      "items": {
+        "calendar": {
+          "title": "Calendar",
+          "body": "Weekly and monthly views for planned Page posts."
+        },
+        "draft": {
+          "title": "Drafts",
+          "body": "Creative and caption wait in draft."
+        },
+        "scope": {
+          "title": "Publish permission",
+          "body": "pages_manage_posts stays visible on the channel."
+        }
+      },
+      "widget": {
+        "month": "November 2026",
+        "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "scheduled": "Scheduled",
+        "draft": "Draft",
+        "caption": "New season · window"
+      }
+    },
+    "adReferral": {
+      "eyebrow": "Chats from ads",
+      "title": "Which ad opened this chat?",
+      "lead": "Send message on the ad opens Messenger. The headline and source stay in the inbox.",
+      "note": "A click-to-Messenger ad arrives with the ad card and referral source.",
+      "items": {
+        "card": {
+          "title": "Ad card above the message",
+          "body": "The ad badge, headline, and link sit above the first message."
+        },
+        "utm": {
+          "title": "UTM link",
+          "body": "The ad id lands as UTM for Analytics."
+        },
+        "contact": {
+          "title": "Stored on the contact",
+          "body": "The referral source fills in automatically."
+        }
+      },
+      "scene": {
+        "brand": "Atelier",
+        "sponsored": "Sponsored",
+        "send": "Send message",
+        "inbox": "Inbox",
+        "adBadge": "Ad",
+        "headline": "Summer campaign this week",
+        "link": "omnider.com/campaign…",
+        "bubble": "Hi, is this campaign still on?",
+        "customer": "Maya",
+        "referralLabel": "Referral source",
+        "referralPrefix": "Ad",
+        "adId": "120384756"
+      },
+      "footnote": "Ad details appear according to the fields Meta sends."
+    },
+    "try": {
+      "eyebrow": "Live test",
+      "title": "Message us on Messenger",
+      "body": "Scan the QR code or tap the button. The Omnider Facebook Page opens in Messenger.",
+      "cardTitle": "Omnider Messenger",
+      "handle": "m.me/1076656148865069",
+      "cta": "Open in Messenger",
+      "ctaTitle": "Open the Omnider Messenger chat",
+      "imageAlt": "QR code for Omnider Messenger"
     }
   }
 }

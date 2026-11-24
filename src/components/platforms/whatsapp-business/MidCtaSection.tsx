@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
+import { Link } from "@/i18n/navigation";
 
 export async function MidCtaSection() {
   const t = await getTranslations("PlatformWhatsAppBusiness.midCta");
@@ -14,10 +16,27 @@ export async function MidCtaSection() {
       <Container className="section">
         <div className="wa-mid-cta__shell">
           <div className="wa-mid-cta__panel">
-            <h2 id="wa-mid-cta-title" className="wa-mid-cta__title">
-              <span>{t("line1")}</span>
-              <strong>{t("strong")}</strong>
-            </h2>
+            <div className="wa-mid-cta__copy">
+              <h2 id="wa-mid-cta-title" className="wa-mid-cta__title">
+                <span>{t("line1")}</span>
+                <strong>{t("strong")}</strong>
+              </h2>
+              <div className="wa-mid-cta__actions">
+                <DemoRequestButton
+                  source="whatsapp-business-mid-cta"
+                  className="wa-mid-cta__btn wa-mid-cta__btn--demo"
+                >
+                  {t("demo")}
+                </DemoRequestButton>
+                <Link
+                  href="/register"
+                  id="cta-register"
+                  className="wa-mid-cta__btn wa-mid-cta__btn--start"
+                >
+                  {t("start")}
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="wa-mid-cta__corner" aria-hidden>

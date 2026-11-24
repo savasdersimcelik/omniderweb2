@@ -24,6 +24,7 @@ export function DemoRequestButton({
       type={type}
       className={cn(className)}
       {...props}
+      id="cta-modal-demo"
       onClick={(event) => {
         onClick?.(event);
         if (!event.defaultPrevented) {

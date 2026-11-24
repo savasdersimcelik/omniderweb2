@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -11,6 +11,7 @@ import {
 
 export async function EmailSection() {
   const t = await getTranslations("HomePage.emailSystem");
+  const nav = await getTranslations("Nav");
   const folders = t.raw("folders") as EmailFolder[];
   const mails = t.raw("mails") as InboxMail[];
 
@@ -43,9 +44,8 @@ export async function EmailSection() {
               {t("ctaPrimary")}
               <ArrowUpRight className="size-4" aria-hidden />
             </DemoRequestButton>
-            <Link href="/contact" className="btn-secondary">
-              <Mail className="size-4 text-brand-600" aria-hidden />
-              {t("ctaSecondary")}
+            <Link href="/register" id="cta-register" className="btn-secondary">
+              {nav("startFree")}
             </Link>
           </div>
         </div>
