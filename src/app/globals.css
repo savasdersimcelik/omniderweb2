@@ -5762,6 +5762,59 @@
     );
 }
 
+/* Hero chat: crop composer, keep widget above backdrop */
+.wa-biz-hero .hero-chat-shell {
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 70%,
+    rgb(0 0 0 / 0.75) 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 70%,
+    rgb(0 0 0 / 0.75) 88%,
+    transparent 100%
+  );
+}
+
+.wa-biz-hero .hero-chat,
+.wa-biz-hero .hero-chat__browser,
+.wa-biz-hero .hero-chat__phone {
+  position: relative;
+  z-index: 21;
+  transform: translateY(3.25rem);
+}
+
+@media (max-width: 39.99rem) {
+  .wa-biz-hero .hero-chat-shell {
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 66%,
+      rgb(0 0 0 / 0.7) 86%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 66%,
+      rgb(0 0 0 / 0.7) 86%,
+      transparent 100%
+    );
+  }
+
+  .wa-biz-hero .hero-chat,
+  .wa-biz-hero .hero-chat__phone {
+    transform: translateY(2.25rem);
+  }
+}
+
 .wa-biz-hero__bg {
   position: absolute;
   inset: 0;

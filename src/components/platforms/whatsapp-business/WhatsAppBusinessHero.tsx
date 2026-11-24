@@ -53,7 +53,7 @@ export async function WhatsAppBusinessHero() {
           <HeroTrust className="home-hero__trust" />
         </div>
 
-        <div className="hero-chat-shell relative z-10 mt-0 flex min-h-0 w-full flex-col items-center self-center sm:mt-8 sm:flex-1 lg:mt-10">
+        <div className="hero-chat-shell relative z-20 mt-0 flex min-h-0 w-full flex-col items-center self-center sm:mt-8 sm:flex-1 lg:mt-10">
           <WhatsAppHeroChat
             businessName={t("hero.chat.businessName")}
             online={t("hero.chat.online")}
