@@ -2686,7 +2686,29 @@
         "stock": "In stock",
         "cta": "Add to cart",
         "synced": "Synced to catalog",
-        "orderTitle": "2 products · order card"
+        "orderTitle": "Order summary",
+        "orderRef": "Order #4821",
+        "orderCount": "3 items",
+        "orderTotalLabel": "Total",
+        "orderTotal": "$127",
+        "orderCta": "Confirm order",
+        "orderLines": [
+          {
+            "name": "Yellow headphones",
+            "price": "$49",
+            "qty": "1 pc"
+          },
+          {
+            "name": "Linen shirt",
+            "price": "$36",
+            "qty": "2 pc"
+          },
+          {
+            "name": "Leather bag",
+            "price": "$42",
+            "qty": "1 pc"
+          }
+        ]
       },
       "note": "Without sync, a plain card or buttons are used instead."
     },

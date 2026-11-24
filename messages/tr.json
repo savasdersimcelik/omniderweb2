@@ -2686,7 +2686,29 @@
         "stock": "Stokta",
         "cta": "Sepete ekle",
         "synced": "Katalogda senkron",
-        "orderTitle": "2 ürün · sipariş kartı"
+        "orderTitle": "Sipariş özeti",
+        "orderRef": "Sipariş #4821",
+        "orderCount": "3 ürün",
+        "orderTotalLabel": "Toplam",
+        "orderTotal": "3.288 TL",
+        "orderCta": "Siparişi onayla",
+        "orderLines": [
+          {
+            "name": "Sarı kulaklık",
+            "price": "1.249 TL",
+            "qty": "1 adet"
+          },
+          {
+            "name": "Keten gömlek",
+            "price": "890 TL",
+            "qty": "2 adet"
+          },
+          {
+            "name": "Deri çanta",
+            "price": "1.149 TL",
+            "qty": "1 adet"
+          }
+        ]
       },
       "note": "Senkron yoksa düz kart veya butonla gönderilir."
     },
