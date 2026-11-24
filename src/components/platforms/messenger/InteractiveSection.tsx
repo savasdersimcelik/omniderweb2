@@ -1,14 +1,29 @@
 "use client";
 
-import { MousePointerClickIcon } from "lucide-react";
-import { useState } from "react";
+import {
+  ExternalLinkIcon,
+  GalleryHorizontalIcon,
+  MailIcon,
+  MessageCircleIcon,
+  MousePointerClickIcon,
+  PhoneIcon,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/Container";
 import { cn } from "@/lib/utils";
 import { ProductArt } from "./ProductArt";
 
-const TABS = ["cards", "quick", "actions"] as const;
-type Tab = (typeof TABS)[number];
+const COLUMNS = [
+  { id: "cards" as const, Icon: GalleryHorizontalIcon },
+  { id: "quick" as const, Icon: MessageCircleIcon },
+  { id: "actions" as const, Icon: MousePointerClickIcon },
+];
+
+const ACTION_ICONS = {
+  url: ExternalLinkIcon,
+  call: PhoneIcon,
+  email: MailIcon,
+} as const;
 
 type Product = {
   name: string;
@@ -17,149 +32,142 @@ type Product = {
 };
 
 type Action = {
-  id: "url" | "call" | "email";
+  id: keyof typeof ACTION_ICONS;
   label: string;
 };
 
-const FACTS = ["cards", "quick", "actions", "flow"] as const;
-
 export function InteractiveSection() {
   const t = useTranslations("PlatformMessenger.interactive");
-  const [tab, setTab] = useState<Tab>("cards");
   const products = t.raw("demo.products") as Product[];
   const quick = t.raw("demo.quick") as string[];
   const actions = t.raw("demo.actions") as Action[];
-  const pageName = t("demo.phoneName");
+  const picked = t("demo.quickPicked");
 
   return (
     <section
       id="interactive"
-      className="ms-ix border-t border-line"
-      aria-labelledby="ms-ix-title"
+      className="ms-interactive border-t border-line"
+      aria-labelledby="ms-interactive-title"
     >
       <Container className="section">
         <div className="wa-section-stack">
           <header className="mx-auto max-w-3xl text-center">
             <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--color-messenger-blue)]">
-              <MousePointerClickIcon className="h-3.5 w-3.5" />
+              <MessageCircleIcon className="h-3.5 w-3.5" />
               {t("eyebrow")}
             </p>
-            <h2 id="ms-ix-title" className="heading-section mt-3">
+            <h2 id="ms-interactive-title" className="heading-section mt-3">
               {t("title")}
             </h2>
-            <p className="text-body mt-4">{t("subtitle")}</p>
+            <p className="ms-interactive__subtitle text-body mt-4">
+              {t("subtitle")}
+            </p>
           </header>
 
-          <div className="ms-ix__layout">
-            <div className="ms-ix__stage">
-              <div
-                className="ms-ix__tabs"
-                role="tablist"
-                aria-label={t("tabsLabel")}
-              >
-                {TABS.map((id) => (
-                  <button
-                    key={id}
-                    type="button"
-                    role="tab"
-                    id={`ms-ix-tab-${id}`}
-                    aria-selected={tab === id}
-                    aria-controls={`ms-ix-panel-${id}`}
-                    tabIndex={tab === id ? 0 : -1}
-                    className={cn("ms-ix__tab", tab === id && "is-on")}
-                    onClick={() => setTab(id)}
-                  >
-                    {t(`tabs.${id}`)}
-                  </button>
-                ))}
-              </div>
+          <div className="ms-interactive__cols">
+            {COLUMNS.map(({ id, Icon }) => (
+              <article key={id} className="ms-interactive__col">
+                <div className="ms-interactive__col-copy">
+                  <div className="ms-interactive__col-heading">
+                    <span className="ms-interactive__col-icon">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <h3 className="ms-interactive__col-title">{t(`tabs.${id}`)}</h3>
+                  </div>
+                  <p className="ms-interactive__col-desc">
+                    {t(`facts.${id}.body`)}
+                    {id === "cards" ? ` ${t("facts.flow.body")}` : null}
+                  </p>
+                </div>
 
-              <div className="ms-ix__screen">
-                <header className="ms-window__top">
-                  <span className="ms-window__avatar">{pageName.slice(0, 1)}</span>
-                  <span className="min-w-0">
-                    <strong>{pageName}</strong>
-                    <small>{t("demo.phoneStatus")}</small>
-                  </span>
-                </header>
+                <div className="ms-interactive__widget">
+                  {id === "cards" ? (
+                    <div className="ms-interactive__widget-inner">
+                      <p className="ms-interactive__bubble is-in">
+                        {t("demo.cardsIntro")}
+                      </p>
+                      <div className="ms-interactive__rail">
+                        {products.map((product, index) => (
+                          <article
+                            key={product.name}
+                            className={cn(
+                              "ms-interactive__pcard",
+                              index === 0 && "is-hit",
+                            )}
+                          >
+                            <div className="ms-interactive__shot">
+                              <ProductArt tone={product.tone} />
+                            </div>
+                            <p className="ms-interactive__card-body">{product.name}</p>
+                            <p className="ms-interactive__card-sub">{product.price}</p>
+                            <span className="ms-interactive__choice">
+                              {t("demo.viewProduct")}
+                            </span>
+                          </article>
+                        ))}
+                      </div>
+                      <p className="ms-interactive__bubble is-out">
+                        {t("demo.cardsFollow")}
+                      </p>
+                    </div>
+                  ) : null}
 
-                <div
-                  id="ms-ix-panel-cards"
-                  role="tabpanel"
-                  aria-labelledby="ms-ix-tab-cards"
-                  hidden={tab !== "cards"}
-                  className="ms-ix__panel"
-                >
-                  <p className="ms-bubble is-in">{t("demo.cardsIntro")}</p>
-                  <div className="ms-ix__rail">
-                    {products.map((product) => (
-                      <article key={product.name} className="ms-ix__pcard">
-                        <div className={`ms-product__art is-${product.tone}`}>
-                          <ProductArt tone={product.tone} />
+                  {id === "quick" ? (
+                    <div className="ms-interactive__widget-inner">
+                      <article className="ms-interactive__card">
+                        <p className="ms-interactive__card-body">
+                          {t("demo.quickIntro")}
+                        </p>
+                        <div className="ms-interactive__actions">
+                          {quick.map((label) => (
+                            <span
+                              key={label}
+                              className={cn(
+                                "ms-interactive__choice",
+                                label === picked && "is-hit",
+                              )}
+                            >
+                              {label}
+                            </span>
+                          ))}
                         </div>
-                        <p className="ms-product__name">{product.name}</p>
-                        <p className="ms-product__price">{product.price}</p>
-                        <span className="ms-product__cta">{t("demo.viewProduct")}</span>
                       </article>
-                    ))}
-                  </div>
-                  <p className="ms-bubble is-in">{t("demo.cardsFollow")}</p>
-                </div>
+                      <p className="ms-interactive__bubble is-out">{picked}</p>
+                    </div>
+                  ) : null}
 
-                <div
-                  id="ms-ix-panel-quick"
-                  role="tabpanel"
-                  aria-labelledby="ms-ix-tab-quick"
-                  hidden={tab !== "quick"}
-                  className="ms-ix__panel"
-                >
-                  <p className="ms-bubble is-in">{t("demo.quickIntro")}</p>
-                  <div className="ms-chips">
-                    {quick.map((label) => (
-                      <span
-                        key={label}
-                        className={cn(
-                          "ms-chip",
-                          label === t("demo.quickPicked") && "is-on",
-                        )}
-                      >
-                        {label}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="ms-bubble is-out">{t("demo.quickPicked")}</p>
+                  {id === "actions" ? (
+                    <div className="ms-interactive__widget-inner">
+                      <article className="ms-interactive__card">
+                        <p className="ms-interactive__card-body">
+                          {t("demo.actionsIntro")}
+                        </p>
+                        <div className="ms-interactive__actions">
+                          {actions.map((action, index) => {
+                            const ActionIcon = ACTION_ICONS[action.id];
+                            return (
+                              <span
+                                key={action.id}
+                                className={cn(
+                                  "ms-interactive__choice",
+                                  index === 0 && "is-hit",
+                                )}
+                              >
+                                <ActionIcon className="h-3.5 w-3.5" />
+                                {action.label}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      </article>
+                    </div>
+                  ) : null}
                 </div>
-
-                <div
-                  id="ms-ix-panel-actions"
-                  role="tabpanel"
-                  aria-labelledby="ms-ix-tab-actions"
-                  hidden={tab !== "actions"}
-                  className="ms-ix__panel"
-                >
-                  <p className="ms-bubble is-in">{t("demo.actionsIntro")}</p>
-                  <div className="ms-ix__actions">
-                    {actions.map((action) => (
-                      <span key={action.id} className="ms-ix__action">
-                        {action.label}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <ul className="ms-ix__facts">
-              {FACTS.map((id) => (
-                <li key={id} className="ms-ix__fact">
-                  <h3>{t(`facts.${id}.title`)}</h3>
-                  <p>{t(`facts.${id}.body`)}</p>
-                </li>
-              ))}
-            </ul>
+              </article>
+            ))}
           </div>
 
-          <p className="ms-ix__note">{t("note")}</p>
+          <p className="ms-interactive__note">{t("note")}</p>
         </div>
       </Container>
     </section>
