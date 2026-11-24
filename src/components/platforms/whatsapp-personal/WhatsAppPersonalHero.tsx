@@ -27,8 +27,8 @@ export async function WhatsAppPersonalHero() {
     >
       <WhatsAppHeroBackdrop />
 
-      <div className="home-hero relative z-10 flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
-        <div className="home-hero__intro relative z-10 flex w-full max-w-7xl flex-col items-center self-center text-center sm:shrink-0">
+      <div className="home-hero relative z-10 flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6">
+        <div className="home-hero__intro wa-biz-hero__intro relative z-10 flex w-full max-w-7xl flex-col items-center justify-center self-center text-center">
           <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--wa-teal)]">
             <Image
               src="/icons/platforms/whatsapp-personal.png"
@@ -69,7 +69,7 @@ export async function WhatsAppPersonalHero() {
           </div>
         </div>
 
-        <div className="hero-chat-shell relative z-10 mt-0 flex min-h-0 w-full flex-col items-center self-center sm:mt-8 sm:flex-1 lg:mt-10">
+        <div className="hero-chat-shell wa-biz-hero__chat relative z-20 mt-0 flex min-h-0 w-full flex-col items-center self-center">
           <WhatsAppHeroChat
             businessName={t("hero.chat.businessName")}
             online={t("hero.chat.online")}
