@@ -6256,10 +6256,26 @@
 }
 
 /* Connect: coexistence vs Cloud API */
+.wa-connect {
+  overflow-x: clip;
+}
+
+.wa-connect .wa-section-stack,
+.wa-connect__widget,
+.wa-connect__panel,
+.wa-connect__compare,
+.wa-connect__steps,
+.wa-connect__visual,
+.wa-connect__flow {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .wa-connect__toggle {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.65rem;
+  width: 100%;
   max-width: 36rem;
   margin-inline: auto;
 }
@@ -6272,6 +6288,7 @@
 
 .wa-connect__tab {
   display: flex;
+  min-width: 0;
   align-items: flex-start;
   gap: 0.7rem;
   border-radius: 1rem;
@@ -6283,6 +6300,10 @@
     border-color 0.15s ease,
     background-color 0.15s ease,
     box-shadow 0.15s ease;
+}
+
+.wa-connect__tab > svg {
+  flex-shrink: 0;
 }
 
 .wa-connect__tab.is-on.is-coex {
@@ -6302,11 +6323,13 @@
 .wa-connect__widget {
   display: grid;
   gap: 1.25rem;
+  width: 100%;
 }
 
 .wa-connect__panel {
   display: grid;
   gap: 1.25rem;
+  width: 100%;
   border-radius: 1.25rem;
   border: 1px solid var(--color-line);
   background: #fff;
@@ -6340,6 +6363,7 @@
 .wa-connect__step {
   display: flex;
   gap: 0.85rem;
+  min-width: 0;
   padding-bottom: 1.1rem;
   opacity: 0.55;
   transition:
@@ -6386,6 +6410,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   border-radius: 1rem;
   background:
     radial-gradient(
@@ -6407,6 +6432,7 @@
 
 .wa-connect__node {
   display: flex;
+  min-width: 0;
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
@@ -6419,10 +6445,16 @@
   color: var(--color-ink);
 }
 
+.wa-connect__node > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .wa-connect__mark {
   display: inline-flex;
   height: 1.75rem;
   width: 1.75rem;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
@@ -6452,10 +6484,13 @@
   font-size: 0.8125rem;
   font-weight: 600;
   color: #111b21;
+  overflow-wrap: anywhere;
   box-shadow: 0 1px 0.5px rgb(15 23 42 / 0.08);
 }
 
 .wa-connect__compare {
+  width: 100%;
+  overflow: hidden;
   border-radius: 1.25rem;
   border: 1px solid var(--color-line);
   background: #fff;
@@ -6464,12 +6499,17 @@
 }
 
 .wa-connect__table-wrap {
+  max-width: 100%;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wa-connect__table {
   width: 100%;
+  min-width: 0;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 0.875rem;
 }
 
@@ -6479,6 +6519,8 @@
   text-align: left;
   border-top: 1px solid var(--color-line-subtle);
   vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .wa-connect__table thead th {
@@ -6491,7 +6533,7 @@
 .wa-connect__table tbody th {
   font-weight: 600;
   color: var(--color-ink);
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .wa-connect__table td {
@@ -6510,6 +6552,35 @@
   font-size: 0.875rem;
   line-height: 1.55;
   color: var(--color-ink-subtle);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 39.99rem) {
+  .wa-connect__panel,
+  .wa-connect__compare {
+    padding: 0.95rem;
+  }
+
+  .wa-connect__visual {
+    padding: 1rem;
+  }
+
+  .wa-connect__flow {
+    max-width: 100%;
+  }
+
+  .wa-connect__table {
+    font-size: 0.78rem;
+  }
+
+  .wa-connect__table th,
+  .wa-connect__table td {
+    padding: 0.55rem 0.45rem;
+  }
+
+  .wa-connect__step.is-active {
+    transform: none;
+  }
 }
 
 /* —— Instagram platform page —— */
