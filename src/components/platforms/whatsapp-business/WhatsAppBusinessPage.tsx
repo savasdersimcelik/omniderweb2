@@ -10,8 +10,8 @@ export async function WhatsAppBusinessPage() {
   return (
     <>
       <WhatsAppBusinessHero />
-      <TemplatesSection />
       <ConnectSection />
+      <TemplatesSection />
       <InteractiveSection />
       <HealthSection />
       <AdReferralSection />
