@@ -2210,6 +2210,29 @@
         }
       }
     },
+    "performance": {
+      "eyebrow": "Performance",
+      "title": "Replies in seconds",
+      "body": "A fast reply keeps the lead and the order in the chat.",
+      "reply": {
+        "value": "12 sec",
+        "label": "Average reply time. A fast response when the customer writes."
+      },
+      "lead": {
+        "kicker": "Lead conversion",
+        "value": "58%",
+        "label": "Chats become qualified leads the team sees in the panel."
+      },
+      "order": {
+        "kicker": "Order conversion",
+        "value": "44%",
+        "label": "The conversation turns into an order."
+      },
+      "always": {
+        "kicker": "Replies",
+        "value": "24/7"
+      }
+    },
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "Reply buttons, lists, and links",
@@ -2610,6 +2633,29 @@
       },
       "riskNote": "Note: WhatsApp Personal is not an official Meta / WhatsApp Business API connection. It is session-based; the link can drop and may carry account risk. For critical work, use the official WhatsApp Business API.",
       "demoNote": "The account and numbers in the preview are examples."
+    },
+    "stats": {
+      "eyebrow": "Performance",
+      "title": "Replies in seconds",
+      "body": "A fast reply keeps the lead and the order in the chat.",
+      "reply": {
+        "value": "12 sec",
+        "label": "Average reply time. A fast response when the customer writes."
+      },
+      "lead": {
+        "kicker": "Lead conversion",
+        "value": "58%",
+        "label": "Chats become qualified leads the team sees in the panel."
+      },
+      "order": {
+        "kicker": "Order conversion",
+        "value": "44%",
+        "label": "The conversation turns into an order."
+      },
+      "always": {
+        "kicker": "Replies",
+        "value": "24/7"
+      }
     },
     "richMessages": {
       "eyebrow": "More than plain text",
@@ -3096,21 +3142,7 @@
       "badge": "Facebook Messenger",
       "titleLine1": "Your Facebook Page",
       "titleLine2": "answers on Messenger",
-      "description": "Connect the Page. Chats, comments, and ad conversations land in one inbox.",
-      "steps": [
-        "Connect with Facebook",
-        "Pick the Page",
-        "Messages arrive"
-      ],
-      "chat": {
-        "pageName": "Atelier",
-        "status": "active now",
-        "incoming": "Is this bag still available?",
-        "productName": "Black leather bag",
-        "productPrice": "1,890 TRY",
-        "productCta": "View product",
-        "chips": ["Stock", "Price", "Shipping"]
-      }
+      "description": "Connect the Page. Chats, comments, and ad conversations land in one inbox."
     },
     "interactive": {
       "eyebrow": "Interactive Messenger",

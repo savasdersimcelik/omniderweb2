@@ -2210,6 +2210,29 @@
         }
       }
     },
+    "performance": {
+      "eyebrow": "Performans",
+      "title": "Saniyeler içinde dönüş",
+      "body": "Hızlı cevap lead’i ve siparişi sohbette tutar.",
+      "reply": {
+        "value": "12 sn",
+        "label": "Ortalama cevap hızı. Müşteri yazınca hızlı dönüş."
+      },
+      "lead": {
+        "kicker": "Lead dönüşümü",
+        "value": "58%",
+        "label": "Sohbet nitelikli talebe döner, kayıt panele düşer."
+      },
+      "order": {
+        "kicker": "Sipariş dönüşümü",
+        "value": "44%",
+        "label": "Konuşma siparişe bağlanır."
+      },
+      "always": {
+        "kicker": "Yanıt",
+        "value": "7/24"
+      }
+    },
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "Cevap butonu, liste ve link",
@@ -2610,6 +2633,29 @@
       },
       "riskNote": "Not: WhatsApp Personal resmi bir Meta / WhatsApp Business API bağlantısı değildir. Oturum tabanlıdır; bağlantı kopabilir ve hesap riski taşıyabilir. Kritik işler için resmi WhatsApp Business API önerilir.",
       "demoNote": "Görseldeki hesap ve sayılar örnektir."
+    },
+    "stats": {
+      "eyebrow": "Performans",
+      "title": "Saniyeler içinde dönüş",
+      "body": "Hızlı cevap lead’i ve siparişi sohbette tutar.",
+      "reply": {
+        "value": "12 sn",
+        "label": "Ortalama cevap hızı. Müşteri yazınca hızlı dönüş."
+      },
+      "lead": {
+        "kicker": "Lead dönüşümü",
+        "value": "58%",
+        "label": "Sohbet nitelikli talebe döner, kayıt panele düşer."
+      },
+      "order": {
+        "kicker": "Sipariş dönüşümü",
+        "value": "44%",
+        "label": "Konuşma siparişe bağlanır."
+      },
+      "always": {
+        "kicker": "Yanıt",
+        "value": "7/24"
+      }
     },
     "richMessages": {
       "eyebrow": "Düz metinden fazlası",
@@ -3096,21 +3142,7 @@
       "badge": "Facebook Messenger",
       "titleLine1": "Facebook sayfanız",
       "titleLine2": "Messenger’da cevaplasın",
-      "description": "Sayfayı bağlayın; yazışma, yorum ve reklamdan gelen konuşma aynı kutuya düşsün.",
-      "steps": [
-        "Facebook ile bağla",
-        "Sayfa seç",
-        "Yazışma gelsin"
-      ],
-      "chat": {
-        "pageName": "Atölye",
-        "status": "şu an aktif",
-        "incoming": "Bu çanta hâlâ var mı?",
-        "productName": "Siyah deri çanta",
-        "productPrice": "1.890 TL",
-        "productCta": "Ürünü incele",
-        "chips": ["Stok", "Fiyat", "Kargo"]
-      }
+      "description": "Sayfayı bağlayın; yazışma, yorum ve reklamdan gelen konuşma aynı kutuya düşsün."
     },
     "interactive": {
       "eyebrow": "Messenger’da etkileşimli mesaj",

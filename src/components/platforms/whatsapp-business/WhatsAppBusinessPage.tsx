@@ -3,6 +3,7 @@ import { ConnectSection } from "./ConnectSection";
 import { HealthSection } from "./HealthSection";
 import { InteractiveSection } from "./InteractiveSection";
 import { MidCtaSection } from "./MidCtaSection";
+import { PerformanceSection } from "./PerformanceSection";
 import { TemplatesSection } from "./TemplatesSection";
 import { TrySection } from "./TrySection";
 import { WhatsAppBusinessHero } from "./WhatsAppBusinessHero";
@@ -12,10 +13,11 @@ export async function WhatsAppBusinessPage() {
     <>
       <WhatsAppBusinessHero />
       <ConnectSection />
+      <PerformanceSection />
       <InteractiveSection />
+      <HealthSection />
       <MidCtaSection />
       <TemplatesSection />
-      <HealthSection />
       <AdReferralSection />
       <TrySection />
     </>

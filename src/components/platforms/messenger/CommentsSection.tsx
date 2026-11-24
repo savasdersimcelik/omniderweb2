@@ -56,7 +56,7 @@ export async function CommentsSection() {
 
             <div className="ms-cm__reply">
               <div className="ms-cm__post">
-                <span className="ms-window__avatar">{t("widget.brand").slice(0, 1)}</span>
+                <span className="ms-cm__avatar">{t("widget.brand").slice(0, 1)}</span>
                 <span className="min-w-0">
                   <strong>{t("widget.brand")}</strong>
                   <small>{t("widget.postLabel")}</small>
