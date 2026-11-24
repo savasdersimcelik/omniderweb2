@@ -2554,10 +2554,19 @@
       "eyebrow": "QR ya da kodla bağlan",
       "title": "Telefonunuzdaki WhatsApp’ı panele taşıyın.",
       "subtitle": "QR kodu okutun ya da telefon numaranızla 8 haneli bağlantı kodu alın. Panel bağlandığınızı kendisi fark eder; rehberiniz ve sohbetlerinizin son mesajları arka planda gelir.",
-      "tabsLabel": "Bağlantı yöntemi",
       "tabs": {
         "qr": "QR Kod",
         "code": "Telefon Kodu"
+      },
+      "paths": {
+        "qr": {
+          "title": "QR kodu okutarak WhatsApp’ınızı Omnider paneline bağlayın.",
+          "desc": "Telefonda Bağlı cihazlar → Cihaz bağla adımlarını açıp paneldeki QR’ı okutmanız yeterli. Oturum kurulunca rehberiniz ve sohbetlerinizin son mesajları arka planda panele düşer; ekstra kurulum gerekmez."
+        },
+        "code": {
+          "title": "Telefon numaranızla 8 haneli kod alın, WhatsApp’ta girin.",
+          "desc": "Ülke koduyla numaranızı yazın; panel size kısa bir kod üretir. WhatsApp’ta telefon numarasıyla bağlanmayı seçip kodu girdiğinizde kanal hazır olur — QR okutmaya gerek kalmaz."
+        }
       },
       "qrSteps": [
         "Panelde «QR Kod ile Bağlan»a tıklayın.",

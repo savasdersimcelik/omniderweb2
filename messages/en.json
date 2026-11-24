@@ -2554,10 +2554,19 @@
       "eyebrow": "Connect with QR or a code",
       "title": "Move the WhatsApp on your phone into the panel.",
       "subtitle": "Scan a QR code, or get an 8-digit connection code with your phone number. The panel notices when you connect; your contacts and the latest messages arrive in the background.",
-      "tabsLabel": "Connection method",
       "tabs": {
         "qr": "QR Code",
         "code": "Phone Code"
+      },
+      "paths": {
+        "qr": {
+          "title": "Scan the QR code to link WhatsApp to the Omnider panel.",
+          "desc": "On your phone open Linked devices → Link a device and scan the QR in the panel. Once the session is up, your contacts and the latest chat messages land in the panel in the background—no extra setup."
+        },
+        "code": {
+          "title": "Get an 8-digit phone code and enter it in WhatsApp.",
+          "desc": "Enter your number with the country code; the panel generates a short code. In WhatsApp choose link with phone number, enter the code, and the channel is ready—no QR scan needed."
+        }
       },
       "qrSteps": [
         "In the panel, click “Connect with QR Code”.",
