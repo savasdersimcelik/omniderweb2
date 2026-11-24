@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display, Source_Serif_4 } from "next/font/google";
 import Script from "next/script";
 import { Suspense } from "react";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
@@ -51,7 +51,11 @@ const geistMono = Geist_Mono({
 const playfair = Playfair_Display({
   variable: "--font-brand",
   subsets: ["latin", "latin-ext"],
-  weight: ["700", "800"],
+});
+
+const sourceSerif = Source_Serif_4({
+  variable: "--font-serif",
+  subsets: ["latin", "latin-ext"],
 });
 
 export function generateStaticParams() {
@@ -101,7 +105,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${sourceSerif.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>

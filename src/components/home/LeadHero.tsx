@@ -11,14 +11,18 @@ const floats = [
   { src: "/icons/platforms/instagram.png", label: "Instagram", slot: "ne" },
   { src: "/icons/platforms/linkedin.png", label: "LinkedIn", slot: "sw" },
   { src: "/icons/platforms/messenger.png", label: "Messenger", slot: "se" },
-  { src: "/icons/platforms/tiktok.png", label: "TikTok", slot: "n" },
-  { src: "/icons/platforms/telegram.png", label: "Telegram", slot: "n3" },
-  { src: "/icons/platforms/facebook.svg", label: "Facebook", slot: "s" },
-  { src: "/icons/platforms/webchat.svg", label: "Web chat", slot: "s2" },
-  { src: "/icons/platforms/gmail.png", label: "Gmail", slot: "w", wide: true },
-  { src: "/icons/platforms/email.png", label: "E-posta", slot: "e", wide: true },
-  { src: "/icons/platforms/line.png", label: "LINE", slot: "w2", wide: true },
-  { src: "/icons/platforms/google-business.png", label: "Google", slot: "e2", wide: true },
+  { src: "/icons/platforms/webchat.svg", label: "Web chat", slot: "w", from: "lg" },
+  { src: "/icons/platforms/tiktok.png", label: "TikTok", slot: "e", from: "lg" },
+  { src: "/icons/platforms/gmail.png", label: "Gmail", slot: "w2", from: "lg" },
+  { src: "/icons/platforms/email.png", label: "E-posta", slot: "e2", from: "lg" },
+  { src: "/icons/platforms/telegram.png", label: "Telegram", slot: "n", from: "xl" },
+  { src: "/icons/platforms/x.svg", label: "X", slot: "n2", from: "xl" },
+  { src: "/icons/platforms/facebook.svg", label: "Facebook", slot: "n3", from: "xl" },
+  { src: "/icons/platforms/line.png", label: "LINE", slot: "s", from: "xl" },
+  { src: "/icons/platforms/outlook.png", label: "Outlook", slot: "s2", from: "xl" },
+  { src: "/icons/platforms/google-business.png", label: "Google", slot: "nw2", from: "xl" },
+  { src: "/icons/platforms/sms.png", label: "SMS", slot: "sw2", from: "xl" },
+  { src: "/icons/platforms/whatsapp-personal.png", label: "WhatsApp", slot: "se2", from: "xl" },
 ];
 
 export async function LeadHero() {
@@ -30,8 +34,8 @@ export async function LeadHero() {
       <div className="home-lead__field" aria-hidden>
         {floats.map((icon, index) => (
           <span
-            key={icon.label}
-            className={`home-lead__float home-lead__float--${icon.slot}${icon.wide ? " home-lead__float--wide" : ""}`}
+            key={icon.slot}
+            className={`home-lead__float home-lead__float--${icon.slot}${icon.from ? ` home-lead__float--${icon.from}` : ""}`}
             style={{ animationDelay: `${-index * 0.7}s` }}
           >
             <Image src={icon.src} alt="" width={28} height={28} />
@@ -59,10 +63,10 @@ export async function LeadHero() {
 
         <div className="home-lead__visual">
           <Image
-            src="/images/home/lead-cutout.png"
+            src="/images/home/lead-hero.png"
             alt=""
-            width={409}
-            height={610}
+            width={784}
+            height={1168}
             priority
             className="home-lead__person"
           />
