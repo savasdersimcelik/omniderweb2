@@ -1,14 +1,15 @@
+import { ArrowUpRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { DemoRequestButton } from "@/components/demo";
 import {
   HeroChatWidget,
   type HeroChatCopy,
 } from "@/components/home/HeroChatWidget";
-import { HomeHeroBackdrop } from "@/components/home/HomeHeroBackdrop";
-import { HeroTrust } from "@/components/trust";
-import { OrbitingCircles } from "@/components/ui/orbiting-circles";
+import { Link } from "@/i18n/navigation";
 
 export async function HeroSection() {
   const t = await getTranslations("HomePage");
+  const nav = await getTranslations("Nav");
 
   const chat: HeroChatCopy = {
     browserUrl: t("heroChat.browserUrl"),
@@ -33,44 +34,29 @@ export async function HeroSection() {
       className="home-hero-section viewport-hero relative w-full overflow-hidden border-b border-line"
       aria-labelledby="home-hero-title"
     >
-      <HomeHeroBackdrop />
-
       <div className="home-hero relative z-10 flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6 sm:pt-8 lg:px-8 lg:pt-14">
-        <div
-          className="pointer-events-none absolute inset-0 -z-10 hidden overflow-visible sm:block"
-          aria-hidden
-        >
-          <OrbitingCircles
-            speed={0.5}
-            radius={300}
-            stroke="stroke-brand-300/50"
-          />
-          <OrbitingCircles
-            speed={0.25}
-            radius={400}
-            stroke="stroke-sky-300/40"
-          />
-          <OrbitingCircles
-            speed={0.1}
-            radius={500}
-            stroke="stroke-slate-300/35"
-          />
-        </div>
-
         <div className="home-hero__intro relative z-10 flex w-full max-w-7xl flex-col items-center self-center text-center sm:shrink-0">
-          <h1
+          <h2
             id="home-hero-title"
             className="home-hero__title mx-auto text-center font-bold tracking-tight text-ink"
           >
             <span className="home-hero__title-line">{t("titleLine1")}</span>
             <span className="home-hero__title-line">{t("titleLine2")}</span>
-          </h1>
+          </h2>
 
           <p className="home-hero__desc mx-auto text-center text-muted-foreground">
             {t("description")}
           </p>
 
-          <HeroTrust className="home-hero__trust" />
+          <div className="home-hero__actions">
+            <DemoRequestButton source="home-hero" className="btn-primary">
+              {t("ctaPrimary")}
+              <ArrowUpRight className="size-4" aria-hidden />
+            </DemoRequestButton>
+            <Link href="/register" className="btn-secondary">
+              {nav("startFree")}
+            </Link>
+          </div>
         </div>
 
         <div className="hero-chat-shell relative z-10 mt-0 flex min-h-0 w-full flex-col sm:mt-8 sm:flex-1 lg:mt-14">

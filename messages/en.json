@@ -294,7 +294,7 @@
     "providerLabel": "Tech Provider",
     "rating": "5.0",
     "before": "Trusted by",
-    "count": "100,000+",
+    "count": "1000+",
     "after": "users"
   },
   "ClosingCta": {
@@ -302,7 +302,7 @@
     "title": "14 days free,",
     "titleAccent": "start using it today.",
     "description": "Sign up, connect your channels, and manage WhatsApp Business, Instagram, Messenger, and web chat in minutes — no credit card required.",
-    "socialProof": "Trusted by 100,000+ users on Omnider",
+    "socialProof": "Trusted by 1000+ users on Omnider",
     "ctaPrimary": "Start 14-day free trial",
     "ctaSecondary": "We'll call you",
     "trialBadge": "14 days free",
@@ -394,10 +394,45 @@
   "HomePage": {
     "heroBadge": "NEW",
     "eyebrow": "Omnichannel customer messaging",
-    "title": "Every channel, one inbox",
-    "titleLine1": "Every channel,",
+    "title": "Every message, one inbox",
+    "titleLine1": "Every message,",
     "titleLine2": "one inbox",
-    "description": "Manage WhatsApp, Instagram, Messenger and more in a single panel. AI replies first — your team stays in control.",
+    "description": "Messages from WhatsApp, Instagram, Messenger, and every other channel land in one inbox. AI sends the first reply, and your team stays in control.",
+    "lead": {
+      "titleLine1": "Customers write,",
+      "titleLine2": "Omnider replies.",
+      "body": "WhatsApp, Instagram, Messenger and the rest share one inbox. AI sends the first reply, and your team takes over when it matters.",
+      "cta": "We'll call you"
+    },
+    "metrics": {
+      "eyebrow": "Performance",
+      "title": "Faster replies,",
+      "titleAccent": "more sales.",
+      "body": "Reply time, lead conversion, and order conversion come out of the same chat. The team sees all of it in one inbox.",
+      "note": "Try it free for 14 days.",
+      "cta": "We'll call you",
+      "reply": {
+        "value": "12 sec",
+        "label": "Average reply time"
+      },
+      "lead": {
+        "value": "58%",
+        "label": "Lead conversion"
+      },
+      "order": {
+        "value": "44%",
+        "label": "Order conversion",
+        "note": "The conversation turns into an order."
+      },
+      "always": {
+        "value": "24/7",
+        "label": "Replies around the clock"
+      },
+      "customers": {
+        "value": "1000+",
+        "label": "Businesses on Omnider"
+      }
+    },
     "ctaPrimary": "We'll call you",
     "ctaSecondary": "Contact us",
     "heroImageAlt": "Omnider shared inbox dashboard",

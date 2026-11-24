@@ -294,7 +294,7 @@
     "providerLabel": "Tech Provider",
     "rating": "5.0",
     "before": "",
-    "count": "100.000+",
+    "count": "1000+",
     "after": "kullanıcı güveniyor"
   },
   "ClosingCta": {
@@ -302,7 +302,7 @@
     "title": "14 gün ücretsiz,",
     "titleAccent": "hemen kullanmaya başlayın.",
     "description": "Kayıt olun, kanallarınızı bağlayın. WhatsApp Business, Instagram, Messenger ve web chat ile müşteri mesajlarını dakikalar içinde yönetin — kredi kartı gerekmez.",
-    "socialProof": "100.000+ kullanıcı Omnider ile çalışıyor",
+    "socialProof": "1000+ kullanıcı Omnider ile çalışıyor",
     "ctaPrimary": "14 gün ücretsiz dene",
     "ctaSecondary": "Sizi arayalım",
     "trialBadge": "14 gün ücretsiz",
@@ -394,10 +394,45 @@
   "HomePage": {
     "heroBadge": "YENİ",
     "eyebrow": "Omnichannel müşteri iletişimi",
-    "title": "Tüm kanallar, tek gelen kutusu",
-    "titleLine1": "Tüm kanallar,",
+    "title": "Tüm mesajlar, tek gelen kutusu",
+    "titleLine1": "Tüm mesajlar,",
     "titleLine2": "tek gelen kutusu",
-    "description": "WhatsApp, Instagram, Messenger ve daha fazlasını tek panelde yönetin. Yapay zeka yanıtlar, ekibiniz yönetir.",
+    "description": "WhatsApp, Instagram, Messenger ve diğer kanallardan gelen mesajlar tek gelen kutusunda toplanır. Yapay zeka ilk yanıtı verir, ekibiniz yönetir.",
+    "lead": {
+      "titleLine1": "Müşteri yazsın,",
+      "titleLine2": "Omnider yanıtlasın.",
+      "body": "WhatsApp, Instagram, Messenger ve diğer kanallar tek gelen kutusunda. Yapay zeka ilk yanıtı verir, ekibiniz gerektiğinde devralır.",
+      "cta": "Sizi arayalım"
+    },
+    "metrics": {
+      "eyebrow": "Performans",
+      "title": "Hızlı cevap,",
+      "titleAccent": "daha çok satış.",
+      "body": "Ortalama cevap süresi, lead ve sipariş dönüşümü sohbetten çıkar. Ekip hepsini tek gelen kutusunda görür.",
+      "note": "14 gün ücretsiz deneyin.",
+      "cta": "Sizi arayalım",
+      "reply": {
+        "value": "12 sn",
+        "label": "Ortalama cevap süresi"
+      },
+      "lead": {
+        "value": "58%",
+        "label": "Lead dönüşümü"
+      },
+      "order": {
+        "value": "44%",
+        "label": "Sipariş dönüşümü",
+        "note": "Konuşma siparişe bağlanır."
+      },
+      "always": {
+        "value": "7/24",
+        "label": "Kesintisiz yanıt"
+      },
+      "customers": {
+        "value": "1000+",
+        "label": "İşletme Omnider kullanıyor"
+      }
+    },
     "ctaPrimary": "Sizi arayalım",
     "ctaSecondary": "İletişime geç",
     "heroImageAlt": "Omnider gelen kutusu paneli",
