@@ -4,12 +4,12 @@ import { InfoIcon } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { UserTrust } from "@/components/trust";
 
-/** Mobile: soft top fade into copy (single mask — reliable on Safari/Android). */
+/** Mobile: soft top fade into copy only — no bottom blur. */
 const photoMaskMobile: CSSProperties = {
   WebkitMaskImage:
-    "linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%)",
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
   maskImage:
-    "linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%)",
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
 };
 
 const photoMask: CSSProperties = {

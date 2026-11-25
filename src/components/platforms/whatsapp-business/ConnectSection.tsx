@@ -30,7 +30,7 @@ export function ConnectSection() {
   return (
     <section
       id="connect"
-      className="wa-connect border-t border-line bg-surface-subtle/40"
+      className="wa-connect border-t border-line"
       aria-labelledby="wa-connect-title"
     >
       <Container className="section">

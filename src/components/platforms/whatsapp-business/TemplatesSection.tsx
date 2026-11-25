@@ -26,7 +26,7 @@ export async function TemplatesSection() {
   return (
     <section
       id="templates"
-      className="wa-templates border-t border-line bg-white"
+      className="wa-templates border-t border-line"
       aria-labelledby="wa-templates-title"
     >
       <Container className="section">

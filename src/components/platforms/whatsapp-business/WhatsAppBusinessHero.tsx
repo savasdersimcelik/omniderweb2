@@ -3,21 +3,18 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { HeroTrust } from "@/components/trust";
 
-/** Mobile: soft top fade into copy (single mask — reliable on Safari/Android). */
+/** Mobile: soft top fade into copy only — no bottom blur. */
 const photoMaskMobile: CSSProperties = {
   WebkitMaskImage:
-    "linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%)",
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
   maskImage:
-    "linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%)",
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
 };
 
+/** Desktop: left soft fade only — no bottom blur. */
 const photoMask: CSSProperties = {
-  WebkitMaskImage:
-    "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%), linear-gradient(transparent 0%, #000 3%, #000 98%, transparent 100%)",
-  maskImage:
-    "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%), linear-gradient(transparent 0%, #000 3%, #000 98%, transparent 100%)",
-  WebkitMaskComposite: "source-in",
-  maskComposite: "intersect",
+  WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%)",
+  maskImage: "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%)",
 };
 
 export async function WhatsAppBusinessHero() {

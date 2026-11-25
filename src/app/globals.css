@@ -4432,12 +4432,6 @@
 }
 
 /* Interactive: reply / list / link stage */
-.wa-interactive {
-  background:
-    radial-gradient(ellipse 46% 38% at 78% 42%, rgb(18 140 126 / 0.06), transparent 70%),
-    linear-gradient(180deg, #fff 0%, #f8faf9 48%, #fff 100%);
-}
-
 .wa-interactive__subtitle {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -5516,8 +5510,17 @@
     );
 }
 
-/* Photo hero: clean mint/white plane matching the marketing mockup */
-.wa-biz-hero--photo {
+/* Shared mint plane — hero + all WhatsApp page sections read as one surface */
+.wa-biz-hero--photo,
+.wa-inbox,
+.wa-connect,
+.wap-stats,
+.wa-interactive,
+.wa-health,
+.wa-mid-cta,
+.wa-templates,
+.wa-ad-referral,
+.wa-try {
   background: linear-gradient(
     105deg,
     #ffffff 0%,
@@ -6382,15 +6385,6 @@
 
 /* WhatsApp inbox: browser chat lives under the hero. The hero slot stays empty. */
 .wa-inbox {
-  /* Continues the photo-hero mint plane so hero → inbox reads as one surface */
-  background: linear-gradient(
-    105deg,
-    #ffffff 0%,
-    #f7fcf9 28%,
-    #eef8f3 52%,
-    #e8f5f0 72%,
-    #f4faf7 100%
-  );
   border-bottom: 1px solid color-mix(in srgb, var(--wa-deep, #026450) 14%, transparent);
 }
 
@@ -8529,7 +8523,6 @@
 .wap-mid-cta,
 .wa-mid-cta {
   overflow: visible;
-  background: #fff;
 }
 
 .wap-mid-cta__shell,

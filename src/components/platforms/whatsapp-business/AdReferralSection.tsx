@@ -20,7 +20,7 @@ export async function AdReferralSection() {
   return (
     <section
       id="ad-referral"
-      className="wa-ad-referral border-t border-line bg-surface-subtle/40"
+      className="wa-ad-referral border-t border-line"
       aria-labelledby="wa-ad-referral-title"
     >
       <Container className="section">
