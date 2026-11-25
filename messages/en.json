@@ -452,7 +452,7 @@
       "products": [
         {
           "id": "aura",
-          "name": "Aura Wireless Headphones",
+          "name": "Yellow headphones",
           "price": "$89",
           "listPrice": "$119",
           "sku": "AUR-42",
@@ -462,7 +462,7 @@
           "features": [
             {
               "key": "Color",
-              "value": "Midnight black"
+              "value": "Yellow"
             },
             {
               "key": "Connect",
@@ -497,13 +497,13 @@
       "sidebar": [
         {
           "name": "Sarah Chen",
-          "preview": "Product catalog…",
+          "preview": "Yellow headphones in stock?",
           "platform": "whatsapp-business",
           "channel": "WhatsApp Business"
         },
         {
           "name": "Alex Rivera",
-          "preview": "Aura in stock?",
+          "preview": "Yellow headphones in stock?",
           "platform": "whatsapp-personal",
           "channel": "WhatsApp"
         },
@@ -553,11 +553,11 @@
       "steps": [
         {
           "kind": "customer",
-          "text": "Hi — can I see your products?"
+          "text": "Hi, are the yellow headphones in stock?"
         },
         {
           "kind": "product_list",
-          "text": "Sure! Here are our featured products:",
+          "text": "Yes — here are the featured ones:",
           "productIds": [
             "aura",
             "pulse",
@@ -566,11 +566,11 @@
         },
         {
           "kind": "customer",
-          "text": "Can you show Aura Wireless details?"
+          "text": "Can you show the yellow headphones in detail?"
         },
         {
           "kind": "product_detail",
-          "text": "Here’s Aura Wireless in detail:",
+          "text": "Here’s the yellow pair in detail:",
           "productId": "aura"
         },
         {
@@ -578,7 +578,7 @@
           "text": "How would you like to continue?",
           "buttons": [
             "Add to cart",
-            "Another product",
+            "Another color",
             "Ask price"
           ]
         }
@@ -2155,14 +2155,14 @@
         "steps": [
           {
             "kind": "customer",
-            "text": "Hi, what’s the price of the linen shirt?"
+            "text": "Hi, are the yellow headphones in stock?"
           },
           {
             "kind": "typing"
           },
           {
             "kind": "ai",
-            "text": "Hello! The linen shirt is 1,249 TL and in stock. How would you like to get it?"
+            "text": "Hello! The yellow headphones are 1,249 TL and in stock. How would you like to get them?"
           },
           {
             "kind": "buttons",
@@ -2192,7 +2192,7 @@
         "sidebar": [
           {
             "name": "Maya Rivera",
-            "preview": "Hi, what’s the price of the linen shirt?",
+            "preview": "Hi, are the yellow headphones in stock?",
             "time": "14:02",
             "unread": 1
           },
@@ -2302,17 +2302,17 @@
         "sheet": "Choose a product",
         "rows": [
           {
-            "title": "Linen shirt",
+            "title": "Yellow headphones",
             "description": "1,249 TL",
             "picked": true
           },
           {
-            "title": "Wool cardigan",
-            "description": "890 TL"
+            "title": "Pulse Smart Watch",
+            "description": "2,450 TL"
           },
           {
-            "title": "Leather bag",
-            "description": "2,190 TL"
+            "title": "Nova Mini Speaker",
+            "description": "$49"
           }
         ]
       },
@@ -2569,14 +2569,14 @@
         "steps": [
           {
             "kind": "customer",
-            "text": "Hi, are you free tomorrow?"
+            "text": "Hi, are the yellow headphones in stock?"
           },
           {
             "kind": "typing"
           },
           {
             "kind": "ai",
-            "text": "Hi! Tomorrow 10:00 and 14:00 are open. Which works for you?"
+            "text": "Hi! The yellow headphones are 1,249 TL and in stock. We can ship them or you can pick them up."
           },
           {
             "kind": "customer",
@@ -2588,13 +2588,13 @@
           },
           {
             "kind": "agent",
-            "text": "Of course — I booked 10:00. Is your address ready?"
+            "text": "Of course — they’re in stock, I’ll set a pair aside. Is your delivery address ready?"
           }
         ],
         "sidebar": [
           {
             "name": "Maya Rivera",
-            "preview": "Hi, are you free tomorrow?",
+            "preview": "Hi, are the yellow headphones in stock?",
             "time": "14:02",
             "unread": 1
           },
@@ -2782,7 +2782,7 @@
         "orderRef": "Order #4821",
         "orderCount": "3 items",
         "orderTotalLabel": "Total",
-        "orderTotal": "$127",
+        "orderTotal": "$247",
         "orderCta": "Confirm order",
         "orderLines": [
           {
@@ -2791,13 +2791,13 @@
             "qty": "1 pc"
           },
           {
-            "name": "Linen shirt",
-            "price": "$36",
-            "qty": "2 pc"
+            "name": "Pulse Smart Watch",
+            "price": "$149",
+            "qty": "1 pc"
           },
           {
-            "name": "Leather bag",
-            "price": "$42",
+            "name": "Nova Mini Speaker",
+            "price": "$49",
             "qty": "1 pc"
           }
         ]
@@ -2950,6 +2950,124 @@
           "tone": "c"
         }
       ]
+    },
+    "inbox": {
+      "titleLine1": "Instagram DMs,",
+      "titleLine2": "one inbox",
+      "description": "Incoming DMs land in the Omnider inbox. AI sends the first reply, and your team takes over when it matters.",
+      "cta": "We'll call you",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Inbox",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Emma · Sales",
+        "customerName": "Maya Rivera",
+        "deptName": "Sales",
+        "transferLabel": "Transferred to sales",
+        "typingLabel": "Writing a reply",
+        "inStockLabel": "In stock",
+        "outOfStockLabel": "Sold out",
+        "viewProductLabel": "View product",
+        "carouselHint": "{count} products · swipe to browse",
+        "products": [
+          {
+            "id": "aura",
+            "name": "Yellow headphones",
+            "price": "$89",
+            "listPrice": "$119",
+            "sku": "AUR-42",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Active noise canceling, 36-hour battery, and fast charge.",
+            "features": [
+              { "key": "Color", "value": "Yellow" },
+              { "key": "Connect", "value": "Bluetooth 5.3" },
+              { "key": "Warranty", "value": "2 years" }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Smartwatch",
+            "price": "$149",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Heart rate, sleep, and GPS tracking."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Speaker",
+            "price": "$59",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Waterproof, 12 hours of playback."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Maya Rivera",
+            "preview": "Are the yellow headphones in stock?",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "James Cole",
+            "preview": "Story discount",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Sara Lee",
+            "preview": "Order #4821",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Ava Quinn",
+            "preview": "Will you reply to my comment?",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Noah Blake",
+            "preview": "Store hours",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Lina Ortiz",
+            "preview": "Size exchange",
+            "platform": "instagram",
+            "channel": "Instagram"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Hi, are the yellow headphones in stock?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Yes — here are the featured ones:",
+            "productIds": ["aura", "pulse", "nova"]
+          },
+          {
+            "kind": "customer",
+            "text": "Can you show the yellow headphones in detail?"
+          },
+          {
+            "kind": "product_detail",
+            "text": "Here’s the yellow pair in detail:",
+            "productId": "aura"
+          },
+          {
+            "kind": "buttons",
+            "text": "How would you like to continue?",
+            "buttons": ["Buy in DM", "Another color", "Ask price"]
+          }
+        ]
+      }
     },
     "comments": {
       "eyebrow": "Comments & moderation",
@@ -3180,9 +3298,17 @@
     },
     "hero": {
       "badge": "Facebook Messenger",
-      "titleLine1": "Your Facebook Page",
-      "titleLine2": "answers on Messenger",
-      "description": "Connect the Page. Chats, comments, and ad conversations land in one inbox."
+      "titleLine1": "Ads, comments, messages",
+      "titleLine2": "answered in one inbox",
+      "description": "Connect your Facebook Page. Chats that start from an ad, comments on a post, and direct messages all land in the same inbox. AI sends the first reply, your team takes over, and the appointment is written to the calendar.",
+      "cta": "We'll call you",
+      "flowLabel": "Messenger flow",
+      "flow": [
+        { "title": "Ad click", "detail": "Messenger" },
+        { "title": "Chat", "detail": "24/7 reply" },
+        { "title": "Appointment", "detail": "On the calendar" },
+        { "title": "Sale", "detail": "Closed in inbox" }
+      ]
     },
     "interactive": {
       "eyebrow": "Interactive Messenger",

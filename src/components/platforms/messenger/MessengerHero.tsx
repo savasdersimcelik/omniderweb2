@@ -1,10 +1,28 @@
 import Image from "next/image";
+import {
+  ArrowUpRight,
+  CalendarDays,
+  MessageCircle,
+  MousePointerClick,
+  TrendingUp,
+} from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { DemoRequestButton } from "@/components/demo";
 import { HeroTrust } from "@/components/trust";
+import { Link } from "@/i18n/navigation";
 import { MessengerHeroBackdrop } from "./MessengerHeroBackdrop";
+
+const FLOW_ICONS = [MousePointerClick, MessageCircle, CalendarDays, TrendingUp];
+
+type FlowStep = {
+  title: string;
+  detail: string;
+};
 
 export async function MessengerHero() {
   const t = await getTranslations("PlatformMessenger");
+  const nav = await getTranslations("Nav");
+  const steps = t.raw("hero.flow") as FlowStep[];
 
   return (
     <section
@@ -37,6 +55,39 @@ export async function MessengerHero() {
             {t("hero.description")}
           </p>
           <HeroTrust className="ms-biz-hero__trust" />
+          <ol className="ms-hero-flow" aria-label={t("hero.flowLabel")}>
+            {steps.map((step, index) => {
+              const Icon = FLOW_ICONS[index] ?? MessageCircle;
+              const active = index === 1;
+              return (
+                <li
+                  key={step.title}
+                  className={
+                    active
+                      ? "ms-hero-flow__step ms-hero-flow__step--active"
+                      : "ms-hero-flow__step"
+                  }
+                >
+                  <span className="ms-hero-flow__icon" aria-hidden>
+                    <Icon />
+                  </span>
+                  <span className="ms-hero-flow__text">
+                    <span className="ms-hero-flow__title">{step.title}</span>
+                    <span className="ms-hero-flow__detail">{step.detail}</span>
+                  </span>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+        <div className="ms-biz-hero__actions">
+          <DemoRequestButton source="messenger-hero" className="btn-primary">
+            {t("hero.cta")}
+            <ArrowUpRight className="size-4" aria-hidden />
+          </DemoRequestButton>
+          <Link href="/register" className="btn-secondary">
+            {nav("startFree")}
+          </Link>
         </div>
       </div>
     </section>

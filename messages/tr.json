@@ -452,8 +452,8 @@
       "products": [
         {
           "id": "aura",
-          "name": "Aura Wireless Kulaklık",
-          "price": "1.299 ₺",
+          "name": "Sarı kulaklık",
+          "price": "1.249 ₺",
           "listPrice": "1.599 ₺",
           "sku": "AUR-42",
           "inStock": true,
@@ -462,7 +462,7 @@
           "features": [
             {
               "key": "Renk",
-              "value": "Gece siyahı"
+              "value": "Sarı"
             },
             {
               "key": "Bağlantı",
@@ -497,13 +497,13 @@
       "sidebar": [
         {
           "name": "Selin Kaya",
-          "preview": "Ürün kataloğu…",
+          "preview": "Sarı kulaklık stokta mı?",
           "platform": "whatsapp-business",
           "channel": "WhatsApp Business"
         },
         {
           "name": "Burak Demir",
-          "preview": "Aura stok?",
+          "preview": "Sarı kulaklık stokta mı?",
           "platform": "whatsapp-personal",
           "channel": "WhatsApp"
         },
@@ -553,11 +553,11 @@
       "steps": [
         {
           "kind": "customer",
-          "text": "Merhaba, ürünlerinizi görebilir miyim?"
+          "text": "Merhaba, sarı kulaklık stokta mı?"
         },
         {
           "kind": "product_list",
-          "text": "Tabii! İşte öne çıkan ürünlerimiz:",
+          "text": "Evet, öne çıkanlar burada:",
           "productIds": [
             "aura",
             "pulse",
@@ -566,11 +566,11 @@
         },
         {
           "kind": "customer",
-          "text": "Aura Wireless detayına bakar mısın?"
+          "text": "Sarı kulaklığın detayına bakar mısın?"
         },
         {
           "kind": "product_detail",
-          "text": "Aura Wireless’in detayları:",
+          "text": "Sarı kulaklığın detayları:",
           "productId": "aura"
         },
         {
@@ -578,7 +578,7 @@
           "text": "Nasıl devam edelim?",
           "buttons": [
             "Sepete ekle",
-            "Başka ürün",
+            "Başka renk",
             "Fiyat sor"
           ]
         }
@@ -2155,14 +2155,14 @@
         "steps": [
           {
             "kind": "customer",
-            "text": "Merhaba, keten gömleğin fiyatı nedir?"
+            "text": "Merhaba, sarı kulaklık stokta mı?"
           },
           {
             "kind": "typing"
           },
           {
             "kind": "ai",
-            "text": "Merhaba! Keten gömlek 1.249 TL, stokta. Nasıl almak istersiniz?"
+            "text": "Merhaba! Sarı kulaklık 1.249 TL, stokta. Nasıl almak istersiniz?"
           },
           {
             "kind": "buttons",
@@ -2192,7 +2192,7 @@
         "sidebar": [
           {
             "name": "Ayşe Yılmaz",
-            "preview": "Merhaba, keten gömleğin fiyatı nedir?",
+            "preview": "Merhaba, sarı kulaklık stokta mı?",
             "time": "14:02",
             "unread": 1
           },
@@ -2302,17 +2302,17 @@
         "sheet": "Ürün seçin",
         "rows": [
           {
-            "title": "Keten gömlek",
+            "title": "Sarı kulaklık",
             "description": "1.249 TL",
             "picked": true
           },
           {
-            "title": "Yün hırka",
-            "description": "890 TL"
+            "title": "Pulse Akıllı Saat",
+            "description": "2.450 TL"
           },
           {
-            "title": "Deri çanta",
-            "description": "2.190 TL"
+            "title": "Nova Mini Hoparlör",
+            "description": "890 TL"
           }
         ]
       },
@@ -2569,14 +2569,14 @@
         "steps": [
           {
             "kind": "customer",
-            "text": "Merhaba, yarın müsait misiniz?"
+            "text": "Merhaba, sarı kulaklık stokta mı?"
           },
           {
             "kind": "typing"
           },
           {
             "kind": "ai",
-            "text": "Merhaba! Yarın 10:00 ve 14:00 müsait. Hangisini tercih edersiniz?"
+            "text": "Merhaba! Sarı kulaklık 1.249 TL, stokta. Kargo veya mağazadan alabilirsiniz."
           },
           {
             "kind": "customer",
@@ -2588,13 +2588,13 @@
           },
           {
             "kind": "agent",
-            "text": "Tabii — 10:00 için not aldım. Adresiniz hazır mı?"
+            "text": "Tabii — stokta, hemen ayırayım. Teslimat adresiniz hazır mı?"
           }
         ],
         "sidebar": [
           {
             "name": "Ayşe Yılmaz",
-            "preview": "Merhaba, yarın müsait misiniz?",
+            "preview": "Merhaba, sarı kulaklık stokta mı?",
             "time": "14:02",
             "unread": 1
           },
@@ -2782,7 +2782,7 @@
         "orderRef": "Sipariş #4821",
         "orderCount": "3 ürün",
         "orderTotalLabel": "Toplam",
-        "orderTotal": "3.288 TL",
+        "orderTotal": "4.589 TL",
         "orderCta": "Siparişi onayla",
         "orderLines": [
           {
@@ -2791,13 +2791,13 @@
             "qty": "1 adet"
           },
           {
-            "name": "Keten gömlek",
-            "price": "890 TL",
-            "qty": "2 adet"
+            "name": "Pulse Akıllı Saat",
+            "price": "2.450 TL",
+            "qty": "1 adet"
           },
           {
-            "name": "Deri çanta",
-            "price": "1.149 TL",
+            "name": "Nova Mini Hoparlör",
+            "price": "890 TL",
             "qty": "1 adet"
           }
         ]
@@ -2950,6 +2950,124 @@
           "tone": "c"
         }
       ]
+    },
+    "inbox": {
+      "titleLine1": "Instagram DM,",
+      "titleLine2": "tek gelen kutu",
+      "description": "Gelen DM’ler Omnider gelen kutusunda toplanır. Yapay zeka ilk yanıtı verir, ekibiniz gerektiğinde devralır.",
+      "cta": "Sizi arayalım",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Gelen kutusu",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Ayşe · Satış",
+        "customerName": "Ayşe Yılmaz",
+        "deptName": "Satış",
+        "transferLabel": "Satışa aktarıldı",
+        "typingLabel": "Yanıt yazılıyor",
+        "inStockLabel": "Stokta",
+        "outOfStockLabel": "Tükendi",
+        "viewProductLabel": "Ürünü görüntüle",
+        "carouselHint": "{count} ürün · kaydırarak inceleyin",
+        "products": [
+          {
+            "id": "aura",
+            "name": "Sarı kulaklık",
+            "price": "1.249 ₺",
+            "listPrice": "1.599 ₺",
+            "sku": "AUR-42",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Aktif gürültü engelleme, 36 saat pil ve hızlı şarj.",
+            "features": [
+              { "key": "Renk", "value": "Sarı" },
+              { "key": "Bağlantı", "value": "Bluetooth 5.3" },
+              { "key": "Garanti", "value": "2 yıl" }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Akıllı Saat",
+            "price": "2.450 ₺",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Kalp ritmi, uyku ve GPS takip."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Hoparlör",
+            "price": "890 ₺",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Su geçirmez, 12 saat çalma süresi."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Sarı kulaklık stokta mı?",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Story’deki indirim",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Sipariş #4821",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Zeynep Akar",
+            "preview": "Yorumuma cevap gelir mi?",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Mert Kaya",
+            "preview": "Mağaza saati",
+            "platform": "instagram",
+            "channel": "Instagram"
+          },
+          {
+            "name": "Selin Arı",
+            "preview": "Beden değişimi",
+            "platform": "instagram",
+            "channel": "Instagram"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Merhaba, sarı kulaklık stokta mı?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Evet, öne çıkanlar burada:",
+            "productIds": ["aura", "pulse", "nova"]
+          },
+          {
+            "kind": "customer",
+            "text": "Sarı kulaklığın detayına bakar mısın?"
+          },
+          {
+            "kind": "product_detail",
+            "text": "Sarı kulaklığın detayları:",
+            "productId": "aura"
+          },
+          {
+            "kind": "buttons",
+            "text": "Nasıl devam edelim?",
+            "buttons": ["DM’den al", "Başka renk", "Fiyat sor"]
+          }
+        ]
+      }
     },
     "comments": {
       "eyebrow": "Yorumlar & Moderasyon",
@@ -3180,9 +3298,17 @@
     },
     "hero": {
       "badge": "Facebook Messenger",
-      "titleLine1": "Facebook sayfanız",
-      "titleLine2": "Messenger’da cevaplasın",
-      "description": "Sayfayı bağlayın; yazışma, yorum ve reklamdan gelen konuşma aynı kutuya düşsün."
+      "titleLine1": "Reklam, yorum ve mesaj",
+      "titleLine2": "tek kutuda cevaplanır",
+      "description": "Facebook sayfanızı bağlayın. Reklam sohbeti, gönderi yorumu ve doğrudan mesaj aynı gelen kutusuna düşer. Yapay zeka ilk yanıtı verir, ekibiniz devralır, randevu takvime yazılır.",
+      "cta": "Sizi arayalım",
+      "flowLabel": "Messenger akışı",
+      "flow": [
+        { "title": "Reklam tıklaması", "detail": "Messenger" },
+        { "title": "Sohbet", "detail": "7/24 yanıt" },
+        { "title": "Randevu", "detail": "Takvime bağlandı" },
+        { "title": "Satış", "detail": "Gelen kutuda" }
+      ]
     },
     "interactive": {
       "eyebrow": "Messenger’da etkileşimli mesaj",

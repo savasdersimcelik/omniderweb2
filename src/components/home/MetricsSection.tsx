@@ -19,7 +19,7 @@ export async function MetricsSection() {
   return (
     <section
       id="metrics"
-      className="home-metrics home-section--dotted"
+      className="home-metrics home-section--plain"
       aria-labelledby="home-metrics-title"
     >
       <Container className="home-metrics__layout">

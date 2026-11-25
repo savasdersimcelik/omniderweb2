@@ -49,8 +49,6 @@ export default async function HomePage() {
 
       <HeroSection />
 
-      <MetricsSection />
-
       <AiAssistantSection />
 
       <LanguagesSection />
@@ -59,11 +57,13 @@ export default async function HomePage() {
 
       <AiCommentsSection />
 
-      <AppointmentSection />
-
       <AiCallsSection />
 
+      <AppointmentSection />
+
       <CampaignSection />
+
+      <MetricsSection />
     </>
   );
 }

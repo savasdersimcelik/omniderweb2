@@ -924,7 +924,7 @@
     }
   }
 
-  /* Home page section rhythm: plain white ↔ dotted slate */
+  /* Home page sections share a plain white background. */
   .home-section--plain {
     background-color: #ffffff;
     border-block: 1px solid var(--color-line-subtle, #f1f5f9);
@@ -6368,6 +6368,22 @@
   color: color-mix(in srgb, var(--ig-pink) 70%, #7c2d12);
 }
 
+/* Instagram inbox section uses the homepage chat widget under the hero. */
+.ig-inbox {
+  background: #fff;
+  border-bottom: 1px solid var(--color-line, #e2e8f0);
+}
+
+.ig-inbox .home-hero {
+  height: min(48rem, 92svh);
+  min-height: 38rem;
+}
+
+.ig-inbox .hero-chat-shell {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 .ig-biz-hero {
   isolation: isolate;
   background:
@@ -8658,76 +8674,17 @@
   pointer-events: none;
 }
 
-.ms-hero__glow {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(52px);
+.ms-hero__photo {
+  object-fit: cover;
+  object-position: center 40%;
 }
 
-.ms-hero__glow--a {
-  top: -14%;
-  left: 8%;
-  width: min(46vw, 28rem);
-  height: min(36vw, 22rem);
-  background: color-mix(in srgb, var(--color-messenger-blue) 34%, transparent);
-  animation: ms-hero-drift-a 16s ease-in-out infinite;
-}
-
-.ms-hero__glow--b {
-  top: 18%;
-  right: -8%;
-  width: min(42vw, 26rem);
-  height: min(34vw, 20rem);
-  background: color-mix(in srgb, #7cc4ff 40%, transparent);
-  animation: ms-hero-drift-b 19s ease-in-out infinite;
-}
-
-.ms-hero__glow--c {
-  bottom: -16%;
-  left: 30%;
-  width: min(50vw, 32rem);
-  height: min(36vw, 22rem);
-  background: color-mix(in srgb, var(--color-messenger-blue) 22%, transparent);
-  animation: ms-hero-drift-c 22s ease-in-out infinite;
-}
-
-.ms-hero__beam {
-  position: absolute;
-  top: -12%;
-  right: 8%;
-  width: min(42vw, 24rem);
-  height: 70%;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--color-messenger-blue) 22%, transparent), transparent 78%);
-  filter: blur(28px);
-  opacity: 0.7;
-}
-
-.ms-hero__mesh {
-  position: absolute;
-  inset: 0;
-  opacity: 0.18;
-  background-image: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--color-messenger-blue) 28%, transparent) 1px, transparent 0);
-  background-size: 22px 22px;
-  mask-image: radial-gradient(ellipse 70% 60% at 62% 48%, #000 18%, transparent 76%);
-}
-
+/* Dark veil between the forest photo and the hero copy. */
 .ms-hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgb(255 255 255 / 0.35), transparent 28%, transparent 70%, rgb(255 255 255 / 0.45));
-}
-
-@keyframes ms-hero-drift-a {
-  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.75; }
-  50% { transform: translate3d(4%, 6%, 0); opacity: 1; }
-}
-@keyframes ms-hero-drift-b {
-  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.7; }
-  50% { transform: translate3d(-6%, 4%, 0); opacity: 1; }
-}
-@keyframes ms-hero-drift-c {
-  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.6; }
-  50% { transform: translate3d(3%, -5%, 0); opacity: 0.9; }
+  background:
+    radial-gradient(ellipse 78% 72% at 50% 46%, rgb(4 10 8 / 0.72), rgb(4 10 8 / 0.52) 70%, rgb(4 10 8 / 0.34) 100%);
 }
 
 .ms-biz-hero__shell {
@@ -8746,22 +8703,33 @@
 
 .ms-biz-hero__copy {
   display: flex;
-  width: min(100%, 46rem);
+  width: min(100%, 68rem);
+  flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 0;
   text-align: center;
 }
 
 .ms-biz-hero__title {
   display: flex;
   width: 100%;
+  max-width: 100%;
   flex-direction: column;
   align-items: center;
   gap: 0.08em;
   text-align: center;
-  font-size: clamp(1.7rem, 4.6vw, 3.15rem);
+  color: #fff;
+  font-size: clamp(1.7rem, 5.6vw, 3.15rem);
   line-height: 1.08;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
+}
+
+.ms-biz-hero__title span {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .ms-biz-hero__accent {
@@ -8772,15 +8740,36 @@
 }
 
 .ms-biz-hero__desc {
-  max-width: 36rem;
-  margin: 0.85rem auto 0;
+  max-width: 46rem;
+  margin: 1.25rem auto 0;
+  color: rgb(241 245 249 / 0.92);
   text-align: center;
-  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
-  line-height: 1.5;
+  text-wrap: pretty;
+  font-size: clamp(1.02rem, 1.45vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.ms-biz-hero .meta-tech-provider {
+  color: #fff;
+}
+
+.ms-biz-hero .meta-tech-provider strong + span,
+.ms-biz-hero .user-trust__stars span,
+.ms-biz-hero .user-trust__rating p {
+  color: rgb(226 232 240 / 0.86);
+}
+
+.ms-biz-hero .user-trust__rating strong {
+  color: #fff;
+}
+
+.ms-biz-hero .user-trust__rating,
+.ms-biz-hero .hero-trust .user-trust {
+  border-left-color: rgb(255 255 255 / 0.28);
 }
 
 .ms-biz-hero__trust {
-  margin-top: 1.15rem;
+  margin-top: 1.65rem;
 }
 
 .ms-biz-hero__trust.hero-trust {
@@ -8790,6 +8779,87 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* Messenger hero flow: four pills under the copy. */
+.ms-hero-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: min(100%, 52rem);
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ms-hero-flow__step {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+  padding: 0.4rem 0.85rem 0.4rem 0.4rem;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 999px;
+  background: rgb(6 10 14 / 0.55);
+  color: #fff;
+  backdrop-filter: blur(12px);
+}
+
+.ms-hero-flow__step--active {
+  border-color: rgb(0 132 255 / 0.85);
+  background: rgb(0 132 255 / 0.22);
+  box-shadow: 0 0 0 1px rgb(0 132 255 / 0.28), 0 10px 28px rgb(0 70 160 / 0.28);
+}
+
+.ms-hero-flow__icon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.1);
+}
+
+.ms-hero-flow__icon svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.ms-hero-flow__step--active .ms-hero-flow__icon {
+  background: var(--color-messenger-blue, #0084ff);
+}
+
+.ms-hero-flow__text {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  text-align: left;
+}
+
+.ms-hero-flow__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.ms-hero-flow__detail {
+  margin-top: 0.08rem;
+  color: rgb(226 232 240 / 0.78);
+  font-size: 0.68rem;
+  line-height: 1.15;
+}
+
+.ms-biz-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
 }
 
 .ms-interactive {
@@ -9443,7 +9513,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ms-hero__glow,
   .ms-ad-referral__beam-dot,
   .ms-ad-referral__cta.is-tap,
   .ms-chat__typing span {
@@ -9451,7 +9520,7 @@
   }
 }
 
-/* Home: performance bento after the hero. Background comes from .home-section--dotted. */
+/* Home: performance bento after the hero. Background comes from .home-section--plain. */
 .home-metrics {
   color: var(--color-ink);
 }

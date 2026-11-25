@@ -16,7 +16,7 @@ export async function EmailSection() {
   const mails = t.raw("mails") as InboxMail[];
 
   return (
-    <section id="email-system" className="email-section home-section--dotted">
+    <section id="email-system" className="email-section home-section--plain">
       <Container className="section">
         <div className="mx-auto max-w-5xl space-y-5 text-center">
           <p className="eyebrow inline-flex items-center justify-center gap-2">

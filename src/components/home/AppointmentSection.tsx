@@ -15,7 +15,7 @@ export async function AppointmentSection() {
   const weekdays = t.raw("weekdays") as string[];
 
   return (
-    <section id="appointments" className="home-section--dotted">
+    <section id="appointments" className="home-section--plain">
       <Container className="section">
         <div className="appointment-layout">
           <div className="appointment-copy">

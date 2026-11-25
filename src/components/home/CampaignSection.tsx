@@ -20,7 +20,7 @@ export async function CampaignSection() {
   const progressPercent = Number(t("progressPercent")) || 68;
 
   return (
-    <section id="campaigns" className="campaign-section home-section--dotted">
+    <section id="campaigns" className="campaign-section home-section--plain">
       <Container className="section">
         <div className="mx-auto max-w-5xl space-y-5 text-center">
           <p className="eyebrow inline-flex items-center justify-center gap-2">
