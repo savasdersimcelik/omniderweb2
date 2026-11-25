@@ -4189,5 +4189,356 @@
         "imageAlt": "Omnider Telegram kişisel hesabı için QR kod"
       }
     }
+  },
+  "PlatformLine": {
+    "meta": {
+      "title": "LINE Entegrasyonu — Omnider",
+      "description": "LINE Official Account bot kanalınızı bağlayın; ortak gelen kutusu, Flex kartlar, butonlar ve yapay zeka yanıtları."
+    },
+    "hero": {
+      "badge": "LINE",
+      "titleLine1": "LINE mesajı gelsin,",
+      "titleLine2": "yapay zeka yanıtlasın",
+      "description": "Official Account bot kanalınızı bağlayın; gelen mesajları ortak gelen kutusunda toplayın, Flex kartlar ve butonlarla yanıtlayın.",
+      "ctaPrimary": "Sizi arayalım",
+      "ctaSecondary": "Ücretsiz Başla",
+      "account": "Official Account",
+      "accountNote": "Bot kanalı bağlı"
+    },
+    "inbox": {
+      "titleLine1": "LINE sohbeti,",
+      "titleLine2": "tek gelen kutu",
+      "description": "Official Account’tan gelen mesajlar Omnider gelen kutusunda toplanır. Yapay zeka ilk yanıtı verir; ekip gerektiğinde devralır.",
+      "cta": "Sizi arayalım",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Gelen kutusu",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Emma · Satış",
+        "customerName": "Maya Chen",
+        "deptName": "Satış",
+        "transferLabel": "Satışa aktarıldı",
+        "typingLabel": "Yanıt yazılıyor",
+        "inStockLabel": "Stokta",
+        "outOfStockLabel": "Tükendi",
+        "viewProductLabel": "Ürünü görüntüle",
+        "carouselHint": "{count} ürün · kaydırarak inceleyin",
+        "products": [
+          {
+            "id": "coat",
+            "name": "Kapüşonlu mont",
+            "price": "1.499 ₺",
+            "listPrice": "1.999 ₺",
+            "sku": "MNT-204",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Su itici kumaş, S–XL beden.",
+            "features": [
+              {
+                "key": "Renk",
+                "value": "Siyah"
+              },
+              {
+                "key": "Beden",
+                "value": "S–XL"
+              },
+              {
+                "key": "Kumaş",
+                "value": "Su itici"
+              }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Akıllı Saat",
+            "price": "2.450 ₺",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Kalp ritmi, uyku ve GPS takip."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Hoparlör",
+            "price": "890 ₺",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Su geçirmez, 12 saat çalma süresi."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Başka rengi var mı?",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Mert Kaya",
+            "preview": "Stok var mı?",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Selin Arı",
+            "preview": "Konumumu gönderdim",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Fiyat",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Grup: Siparişler",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Zeynep Akar",
+            "preview": "Randevu",
+            "platform": "line",
+            "channel": "LINE"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Bu montun haki rengi var mı?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Evet, öne çıkanlar:",
+            "productIds": [
+              "coat",
+              "pulse",
+              "nova"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Haki montun detayına bakar mısın?"
+          },
+          {
+            "kind": "product_detail",
+            "productId": "coat",
+            "text": "İşte detaylar:"
+          },
+          {
+            "kind": "ai",
+            "text": "Haki MNT-205 stokta. Kargo bugün çıkar."
+          },
+          {
+            "kind": "transfer",
+            "text": ""
+          },
+          {
+            "kind": "agent",
+            "text": "Ödeme linkini de göndereyim mi?"
+          }
+        ]
+      }
+    },
+    "rich": {
+      "eyebrow": "LINE’a özel",
+      "title": "LINE’da ürününüz kart olarak gider",
+      "subtitle": "Fiyat, indirim, stok ve butonlar tek Flex kartında. Müşteri kaydırır; tıklama panelde görünür.",
+      "demoNote": "Örnek görünüm",
+      "tabsLabel": "LINE’da ne gider",
+      "accountName": "Omnider",
+      "accountStatus": "Official Account",
+      "tabs": {
+        "product": {
+          "title": "Ürün kartı",
+          "desc": "Görsel, fiyat, indirim ve stok tek Flex kartında. Galeri varsa 10 karta kadar carousel."
+        },
+        "buttons": {
+          "title": "Butonlar",
+          "desc": "4 şablon + hızlı yanıt; link, arama ve konum isteme. Tıklama panelde görünür."
+        }
+      },
+      "product": {
+        "customer": "Bu montun başka rengi var mı?",
+        "features": [
+          "Görsel, fiyat, indirim ve stok tek kartta",
+          "Galeri varsa 10 karta kadar kaydırmalı carousel",
+          "Chatbot akışından tek adımda gönderim"
+        ],
+        "card": {
+          "name": "Kapüşonlu Mont",
+          "sku": "SKU: MNT-204",
+          "stock": "Stokta",
+          "price": "1.499 ₺",
+          "oldPrice": "1.999 ₺",
+          "discount": "%25",
+          "specs": [
+            {
+              "label": "Renk",
+              "value": "Siyah"
+            },
+            {
+              "label": "Beden",
+              "value": "S–XL"
+            }
+          ],
+          "tags": "#kış · #mont",
+          "buttons": [
+            "Ürünü incele",
+            "Video",
+            "Sepete ekle"
+          ],
+          "slides": [
+            "Siyah",
+            "Haki",
+            "Lacivert"
+          ]
+        }
+      },
+      "buttons": {
+        "message": "Size nasıl yardımcı olalım?",
+        "template": [
+          "Fiyat",
+          "Stok",
+          "Kargo",
+          "Bizi arayın"
+        ],
+        "quick": [
+          "Konumumu paylaş",
+          "Randevu",
+          "Kampanyalar"
+        ],
+        "reply": "Stok",
+        "panelKicker": "Buton tıklaması",
+        "panelBody": "Stok → akış devam etti",
+        "features": [
+          "4 şablon buton + 13’e kadar hızlı yanıt",
+          "Link, arama, e-posta ve konum isteme",
+          "Postback tıklamaları sohbette görünür"
+        ]
+      },
+      "connect": {
+        "title": "LINE Official Account",
+        "fields": [
+          {
+            "label": "Channel ID",
+            "value": "1657••••42"
+          },
+          {
+            "label": "Channel Secret",
+            "value": "a8f3••••e1"
+          },
+          {
+            "label": "Access Token",
+            "value": "eyJh••••k9"
+          }
+        ],
+        "check": "Bağlantıyı kontrol et",
+        "botName": "Omnider",
+        "status": "Bağlı",
+        "webhook": "Webhook kuruldu",
+        "steps": [
+          "LINE Developers Console’dan 3 bilgiyi alın",
+          "Omnider’e yapıştırın; bot adı ve fotoğraf gelir",
+          "Webhook otomatik kurulur, mesajlar anında düşer"
+        ]
+      },
+      "facts": [
+        {
+          "value": "10",
+          "label": "karta kadar carousel"
+        },
+        {
+          "value": "4+13",
+          "label": "şablon + hızlı yanıt"
+        },
+        {
+          "value": "Grup",
+          "label": "sohbetleri de gelir"
+        }
+      ]
+    },
+    "location": {
+      "eyebrow": "Konum",
+      "title": "Adresi yazdırmayın. Konumu tek dokunuşla alın.",
+      "subtitle": "Konum İste butonunu gönderin; müşteri LINE haritasından seçsin. Gelen konum panelde harita ile görünsün.",
+      "stepsLabel": "Konum adımları",
+      "panelLabel": "Panelde",
+      "demoNote": "Örnek görünüm",
+      "accountName": "Omnider",
+      "accountStatus": "Official Account",
+      "steps": [
+        {
+          "id": "ask",
+          "chip": "Sorun",
+          "title": "Siz sorun.",
+          "body": "“Kuryeyi nereye gönderelim?” yazın; altına Konum İste koyun."
+        },
+        {
+          "id": "tap",
+          "chip": "Dokunsun",
+          "title": "Müşteri dokunsun.",
+          "body": "LINE harita seçicisini açar; gönderince konum sohbete düşer."
+        },
+        {
+          "id": "pin",
+          "chip": "Pin gönderin",
+          "title": "Siz de pin gönderin.",
+          "body": "Şube pinini konum mesajı olarak yollayın."
+        }
+      ],
+      "features": [
+        "Konum İste, LINE’ın yerel paylaşımını açar",
+        "Gelen konum tek tıkla haritada açılır",
+        "Sık kullandığınız pinleri şablonda saklayın"
+      ],
+      "demo": {
+        "askAgent": "Kuryeyi nereye gönderelim?",
+        "askQuick": "Konumumu gönder",
+        "askRequest": "Konum İste",
+        "tapTitle": "Konum seçin",
+        "tapPlace": "Caferağa, Kadıköy",
+        "tapAddress": "Moda Cd. No:14, İstanbul",
+        "tapSend": "Gönder",
+        "tapPreview": "Konum",
+        "pinTitle": "Kadıköy Şube",
+        "pinAddress": "Moda Cd. No:42, Kadıköy",
+        "listName": "Ayşe Yılmaz",
+        "time": "14:21"
+      }
+    },
+    "team": {
+      "eyebrow": "Ekip + Yapay Zeka",
+      "title": "Bir LINE Bot. Tüm ekip aynı anda.",
+      "subtitle": "Official Account mesajları tek kutuda. Yapay zeka ilk yanıtı verir; zorlanınca ekibe bırakır.",
+      "items": [
+        {
+          "title": "Tek bot, ortak kutu",
+          "body": "Satış, destek ve operasyon aynı inbox’ta."
+        },
+        {
+          "title": "Saniyeler içinde AI yanıt",
+          "body": "Fiyat, stok ve kargo sorularına anında cevap."
+        },
+        {
+          "title": "İnsan lazımsa bırakır",
+          "body": "Konuşmayı doğru temsilciye aktarır."
+        }
+      ]
+    },
+    "try": {
+      "eyebrow": "Canlı deneme",
+      "title": "LINE hesabına yazın",
+      "body": "QR kodu taratın veya butona dokunun. Omnider LINE resmi hesabı açılır.",
+      "cardTitle": "Omnider LINE",
+      "handle": "@653nqviy",
+      "url": "https://line.me/R/ti/p/@653nqviy",
+      "cta": "LINE’da aç",
+      "ctaTitle": "Omnider LINE hesabını aç",
+      "imageAlt": "Omnider LINE hesabı için QR kod"
+    }
   }
 }

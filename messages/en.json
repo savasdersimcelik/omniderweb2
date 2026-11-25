@@ -4189,5 +4189,356 @@
         "imageAlt": "QR code for the Omnider personal Telegram account"
       }
     }
+  },
+  "PlatformLine": {
+    "meta": {
+      "title": "LINE Integration — Omnider",
+      "description": "Connect your LINE Official Account bot; shared inbox, Flex cards, buttons, and AI replies in one place."
+    },
+    "hero": {
+      "badge": "LINE",
+      "titleLine1": "LINE messages in,",
+      "titleLine2": "AI replies out",
+      "description": "Connect your Official Account bot, collect messages in a shared inbox, and reply with Flex cards and buttons.",
+      "ctaPrimary": "We'll call you",
+      "ctaSecondary": "Start for free",
+      "account": "Official Account",
+      "accountNote": "Bot channel connected"
+    },
+    "inbox": {
+      "titleLine1": "LINE chats,",
+      "titleLine2": "one inbox",
+      "description": "Messages from your Official Account land in Omnider. AI sends the first reply; your team takes over when it matters.",
+      "cta": "We'll call you",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Inbox",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Emma · Sales",
+        "customerName": "Maya Chen",
+        "deptName": "Sales",
+        "transferLabel": "Transferred to sales",
+        "typingLabel": "Typing a reply",
+        "inStockLabel": "In stock",
+        "outOfStockLabel": "Sold out",
+        "viewProductLabel": "View product",
+        "carouselHint": "{count} products · swipe to browse",
+        "products": [
+          {
+            "id": "coat",
+            "name": "Hooded coat",
+            "price": "TRY 1,499",
+            "listPrice": "TRY 1,999",
+            "sku": "MNT-204",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Water-repellent fabric, sizes S–XL.",
+            "features": [
+              {
+                "key": "Color",
+                "value": "Black"
+              },
+              {
+                "key": "Size",
+                "value": "S–XL"
+              },
+              {
+                "key": "Fabric",
+                "value": "Water-repellent"
+              }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Smartwatch",
+            "price": "TRY 2,450",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Heart rate, sleep, and GPS tracking."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Speaker",
+            "price": "TRY 890",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Water-resistant, 12-hour battery."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Other colors?",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Mert Kaya",
+            "preview": "In stock?",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Selin Arı",
+            "preview": "Sent my location",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Price",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Group: Orders",
+            "platform": "line",
+            "channel": "LINE"
+          },
+          {
+            "name": "Zeynep Akar",
+            "preview": "Booking",
+            "platform": "line",
+            "channel": "LINE"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Do you have this coat in olive?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Yes — highlights:",
+            "productIds": [
+              "coat",
+              "pulse",
+              "nova"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Can I see the olive coat details?"
+          },
+          {
+            "kind": "product_detail",
+            "productId": "coat",
+            "text": "Here are the details:"
+          },
+          {
+            "kind": "ai",
+            "text": "Olive MNT-205 is in stock. Ships today."
+          },
+          {
+            "kind": "transfer",
+            "text": ""
+          },
+          {
+            "kind": "agent",
+            "text": "Want me to send a payment link?"
+          }
+        ]
+      }
+    },
+    "rich": {
+      "eyebrow": "Built for LINE",
+      "title": "Your product ships as a card",
+      "subtitle": "Price, discount, stock, and buttons in one Flex card. Customers swipe; taps show up in your panel.",
+      "demoNote": "Example view",
+      "tabsLabel": "What LINE supports",
+      "accountName": "Omnider",
+      "accountStatus": "Official Account",
+      "tabs": {
+        "product": {
+          "title": "Product card",
+          "desc": "Image, price, discount, and stock in one Flex card. Carousel up to 10 bubbles when you have a gallery."
+        },
+        "buttons": {
+          "title": "Buttons",
+          "desc": "4 template + quick replies; links, calls, and location requests. Taps show in your panel."
+        }
+      },
+      "product": {
+        "customer": "Do you have this coat in another color?",
+        "features": [
+          "Image, price, discount, and stock in one card",
+          "Carousel up to 10 bubbles when you have a gallery",
+          "Send from chatbot flows in one step"
+        ],
+        "card": {
+          "name": "Hooded coat",
+          "sku": "SKU: MNT-204",
+          "stock": "In stock",
+          "price": "TRY 1,499",
+          "oldPrice": "TRY 1,999",
+          "discount": "25% off",
+          "specs": [
+            {
+              "label": "Color",
+              "value": "Black"
+            },
+            {
+              "label": "Size",
+              "value": "S–XL"
+            }
+          ],
+          "tags": "#winter · #coat",
+          "buttons": [
+            "View product",
+            "Video",
+            "Add to cart"
+          ],
+          "slides": [
+            "Black",
+            "Olive",
+            "Navy"
+          ]
+        }
+      },
+      "buttons": {
+        "message": "How can we help?",
+        "template": [
+          "Price",
+          "Stock",
+          "Shipping",
+          "Call us"
+        ],
+        "quick": [
+          "Share location",
+          "Booking",
+          "Offers"
+        ],
+        "reply": "Stock",
+        "panelKicker": "Button tap",
+        "panelBody": "Stock → flow continued",
+        "features": [
+          "4 template buttons + up to 13 quick replies",
+          "Link, call, email, and location request",
+          "Postback taps visible in the thread"
+        ]
+      },
+      "connect": {
+        "title": "LINE Official Account",
+        "fields": [
+          {
+            "label": "Channel ID",
+            "value": "1657••••42"
+          },
+          {
+            "label": "Channel Secret",
+            "value": "a8f3••••e1"
+          },
+          {
+            "label": "Access Token",
+            "value": "eyJh••••k9"
+          }
+        ],
+        "check": "Check connection",
+        "botName": "Omnider",
+        "status": "Connected",
+        "webhook": "Webhook configured",
+        "steps": [
+          "Copy the three values from LINE Developers Console",
+          "Paste into Omnider; bot name and photo come back",
+          "Webhook is set automatically; messages arrive instantly"
+        ]
+      },
+      "facts": [
+        {
+          "value": "10",
+          "label": "carousel bubbles max"
+        },
+        {
+          "value": "4+13",
+          "label": "template + quick reply"
+        },
+        {
+          "value": "Groups",
+          "label": "supported in inbox"
+        }
+      ]
+    },
+    "location": {
+      "eyebrow": "Location",
+      "title": "Skip typing addresses. Get location in one tap.",
+      "subtitle": "Send a location request; customers pick on LINE’s map. Incoming pins show in your panel with a map preview.",
+      "stepsLabel": "Location steps",
+      "panelLabel": "In the panel",
+      "demoNote": "Example view",
+      "accountName": "Omnider",
+      "accountStatus": "Official Account",
+      "steps": [
+        {
+          "id": "ask",
+          "chip": "Ask",
+          "title": "You ask.",
+          "body": "Type “Where should we deliver?” and add a location request button."
+        },
+        {
+          "id": "tap",
+          "chip": "They tap",
+          "title": "Customer taps.",
+          "body": "LINE opens the map picker; send drops the pin in chat."
+        },
+        {
+          "id": "pin",
+          "chip": "You pin",
+          "title": "You send a pin.",
+          "body": "Send your store location as a location message."
+        }
+      ],
+      "features": [
+        "Location request opens LINE’s native picker",
+        "Incoming pins open in maps in one tap",
+        "Save frequent pins in message templates"
+      ],
+      "demo": {
+        "askAgent": "Where should we send the courier?",
+        "askQuick": "Send my location",
+        "askRequest": "Request location",
+        "tapTitle": "Choose location",
+        "tapPlace": "Caferağa, Kadıköy",
+        "tapAddress": "Moda Cd. No:14, Istanbul",
+        "tapSend": "Send",
+        "tapPreview": "Location",
+        "pinTitle": "Kadıköy Store",
+        "pinAddress": "Moda Cd. No:42, Kadıköy",
+        "listName": "Ayşe Yılmaz",
+        "time": "14:21"
+      }
+    },
+    "team": {
+      "eyebrow": "Team + AI",
+      "title": "One LINE Bot. The whole team at once.",
+      "subtitle": "Official Account messages in one inbox. AI replies first and hands off to your team when needed.",
+      "items": [
+        {
+          "title": "One bot, shared inbox",
+          "body": "Sales, support, and ops in the same place."
+        },
+        {
+          "title": "AI replies in seconds",
+          "body": "Instant answers on price, stock, and shipping."
+        },
+        {
+          "title": "Hands off to humans",
+          "body": "Routes the chat to the right teammate."
+        }
+      ]
+    },
+    "try": {
+      "eyebrow": "Live test",
+      "title": "Message us on LINE",
+      "body": "Scan the QR or tap the button to open the Omnider LINE official account.",
+      "cardTitle": "Omnider LINE",
+      "handle": "@653nqviy",
+      "url": "https://line.me/R/ti/p/@653nqviy",
+      "cta": "Open in LINE",
+      "ctaTitle": "Open the Omnider LINE account",
+      "imageAlt": "QR code for the Omnider LINE account"
+    }
   }
 }
