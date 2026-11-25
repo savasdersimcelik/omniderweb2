@@ -32,9 +32,10 @@ export async function WhatsAppBusinessHero() {
       <Image
         src="/images/platforms/whatsapp/hero-woman.jpg"
         alt=""
-        width={1728}
-        height={1152}
+        width={2400}
+        height={1600}
         priority
+        unoptimized
         sizes="60vw"
         className="pointer-events-none absolute top-0 right-0 bottom-0 z-0 hidden h-full w-auto max-w-none object-cover lg:block"
         style={photoMask}
@@ -73,6 +74,7 @@ export async function WhatsAppBusinessHero() {
               alt=""
               fill
               priority
+              unoptimized
               sizes="100vw"
               className="object-cover object-[55%_12%]"
               style={photoMaskMobile}
