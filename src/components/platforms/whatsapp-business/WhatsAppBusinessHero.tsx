@@ -3,20 +3,19 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { HeroTrust } from "@/components/trust";
 
+/** Mobile: soft top fade into copy (single mask — reliable on Safari/Android). */
 const photoMaskMobile: CSSProperties = {
   WebkitMaskImage:
-    "linear-gradient(90deg, transparent 0%, #000 6%, #000 100%), linear-gradient(transparent 0%, #000 8%, #000 92%, transparent 100%)",
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%)",
   maskImage:
-    "linear-gradient(90deg, transparent 0%, #000 6%, #000 100%), linear-gradient(transparent 0%, #000 8%, #000 92%, transparent 100%)",
-  WebkitMaskComposite: "source-in",
-  maskComposite: "intersect",
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%)",
 };
 
 const photoMask: CSSProperties = {
   WebkitMaskImage:
-    "linear-gradient(90deg, transparent 0%, #000 50%, #000 100%), linear-gradient(transparent 0%, #000 4%, #000 97%, transparent 100%)",
+    "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%), linear-gradient(transparent 0%, #000 3%, #000 98%, transparent 100%)",
   maskImage:
-    "linear-gradient(90deg, transparent 0%, #000 50%, #000 100%), linear-gradient(transparent 0%, #000 4%, #000 97%, transparent 100%)",
+    "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%), linear-gradient(transparent 0%, #000 3%, #000 98%, transparent 100%)",
   WebkitMaskComposite: "source-in",
   maskComposite: "intersect",
 };
@@ -36,13 +35,13 @@ export async function WhatsAppBusinessHero() {
         height={1600}
         priority
         unoptimized
-        sizes="60vw"
+        sizes="65vw"
         className="pointer-events-none absolute top-0 right-0 bottom-0 z-0 hidden h-full w-auto max-w-none object-cover lg:block"
         style={photoMask}
       />
 
-      <div className="relative z-10 mx-auto flex h-full min-h-0 w-full max-w-360 flex-col px-4 py-4 sm:px-6 lg:pointer-events-none lg:grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-center lg:px-10 lg:py-0 xl:px-14">
-        <div className="flex min-h-0 min-w-0 flex-1 flex-col items-center justify-center text-center lg:pointer-events-auto lg:flex-none lg:items-start lg:py-6 lg:pr-8 lg:text-left">
+      <div className="relative z-10 mx-auto flex h-full min-h-0 w-full max-w-360 flex-col px-4 py-4 sm:px-6 lg:pointer-events-none lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:items-center lg:px-10 lg:py-0 xl:px-14">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col items-center justify-center text-center lg:pointer-events-auto lg:flex-none lg:items-start lg:py-6 lg:pr-6 lg:text-left">
           <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--wa-deep)] lg:mb-5 lg:gap-2.5 lg:text-[15px]">
             <Image
               src="/icons/platforms/whatsapp-business.png"
@@ -68,16 +67,18 @@ export async function WhatsAppBusinessHero() {
         </div>
 
         <div className="relative mt-2 h-[42%] shrink-0 lg:mt-0 lg:h-full">
-          <div className="absolute inset-0 overflow-hidden lg:hidden">
+          <div
+            className="absolute inset-0 overflow-hidden lg:hidden"
+            style={photoMaskMobile}
+          >
             <Image
-              src="/images/platforms/whatsapp/hero-woman.jpg"
+              src="/images/platforms/whatsapp/hero-woman-mobile.jpg"
               alt=""
               fill
               priority
               unoptimized
               sizes="100vw"
-              className="object-cover object-[55%_12%]"
-              style={photoMaskMobile}
+              className="object-cover object-[48%_18%]"
             />
           </div>
         </div>
