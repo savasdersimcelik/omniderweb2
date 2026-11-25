@@ -6382,7 +6382,15 @@
 
 /* WhatsApp inbox: browser chat lives under the hero. The hero slot stays empty. */
 .wa-inbox {
-  background: #fff;
+  /* Continues the photo-hero mint plane so hero → inbox reads as one surface */
+  background: linear-gradient(
+    105deg,
+    #ffffff 0%,
+    #f7fcf9 28%,
+    #eef8f3 52%,
+    #e8f5f0 72%,
+    #f4faf7 100%
+  );
   border-bottom: 1px solid color-mix(in srgb, var(--wa-deep, #026450) 14%, transparent);
 }
 
