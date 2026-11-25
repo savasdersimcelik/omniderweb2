@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CalendarDays } from "lucide-react";
 import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
 import { Link } from "@/i18n/navigation";
@@ -12,55 +12,48 @@ export async function AppointmentSection() {
   const t = await getTranslations("HomePage.appointments");
   const nav = await getTranslations("Nav");
   const slots = t.raw("slots") as AppointmentSlot[];
+  const weekdays = t.raw("weekdays") as string[];
 
   return (
-    <section id="appointments" className="appointment-section home-section--dotted">
+    <section id="appointments" className="home-section--dotted">
       <Container className="section">
-        <div className="mx-auto max-w-5xl space-y-5 text-center">
-          <p className="eyebrow inline-flex items-center justify-center gap-2">
-            <span
-              className="inline-block size-2 shrink-0 rounded-xs bg-brand-600"
-              aria-hidden
+        <div className="appointment-layout">
+          <div className="appointment-copy">
+              <p className="appointment-copy__eyebrow">
+                <span className="appointment-copy__mark">
+                  <CalendarDays className="size-3.5" />
+                </span>
+                {t("eyebrow")}
+              </p>
+              <h2 className="heading-section appointment-copy__title">
+                <span className="text-ink">{t("title")}</span>
+                <span className="appointment-copy__accent block text-ink-subtle">
+                  {t("titleAccent")}
+                </span>
+              </h2>
+              <p className="text-body appointment-copy__desc">{t("description")}</p>
+              <div className="appointment-copy__actions">
+                <DemoRequestButton
+                  source="home-appointments"
+                  className="btn-primary"
+                >
+                  {t("ctaPrimary")}
+                  <ArrowUpRight className="size-4" aria-hidden />
+                </DemoRequestButton>
+                <Link href="/register" id="cta-register" className="btn-secondary">
+                  {nav("startFree")}
+                </Link>
+              </div>
+            </div>
+
+            <AppointmentWidget
+              monthLabel={t("monthLabel")}
+              weekdays={weekdays}
+              selectedWeekday={t("selectedWeekday")}
+              selectedDate={t("selectedDate")}
+              bookLabel={t("bookLabel")}
+              slots={slots}
             />
-            {t("eyebrow")}
-          </p>
-
-          <h2 className="home-section-title heading-section text-[1.85rem] leading-[1.15] sm:text-4xl lg:text-[2.45rem]">
-            <span className="text-ink">{t("title")}</span>{" "}
-            <span className="home-section-title__accent text-ink-subtle">
-              {t("titleAccent")}
-            </span>
-          </h2>
-
-          <p className="text-body mx-auto max-w-2xl">{t("description")}</p>
-
-          <div className="flex flex-wrap justify-center gap-3 pt-1">
-            <DemoRequestButton
-              source="home-appointments"
-              className="btn-primary"
-            >
-              {t("ctaPrimary")}
-              <ArrowUpRight className="size-4" aria-hidden />
-            </DemoRequestButton>
-            <Link href="/register" id="cta-register" className="btn-secondary">
-              {nav("startFree")}
-            </Link>
-          </div>
-        </div>
-
-        <div className="mt-10 lg:mt-14">
-          <AppointmentWidget
-            calendarTitle={t("calendarTitle")}
-            calendarMeta={t("calendarMeta")}
-            statusLabel={t("statusLabel")}
-            slotsLabel={t("slotsLabel")}
-            slotsNote={t("slotsNote")}
-            slots={slots}
-            chatCustomer={t("chatCustomer")}
-            chatReply={t("chatReply")}
-            bookedLabel={t("bookedLabel")}
-            channelLabel={t("channelLabel")}
-          />
         </div>
       </Container>
     </section>

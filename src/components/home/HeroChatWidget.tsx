@@ -129,9 +129,14 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
+    const pageX = window.scrollX;
+    const pageY = window.scrollY;
     root.querySelectorAll<HTMLElement>(".hero-chat__thread").forEach((el) => {
-      el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+      el.scrollTop = el.scrollHeight;
     });
+    if (window.scrollX !== pageX || window.scrollY !== pageY) {
+      window.scrollTo({ left: pageX, top: pageY, behavior: "instant" });
+    }
   }, [visible]);
 
   useEffect(() => {
@@ -530,7 +535,7 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
   }
 
   return (
-    <div ref={rootRef} className="hero-chat" aria-hidden="true">
+    <div ref={rootRef} className="hero-chat" aria-hidden="true" inert>
       <div className="hero-chat__phone lg:hidden">
         <div className="hero-chat__phone-notch" />
         <div className="hero-chat__phone-bar">

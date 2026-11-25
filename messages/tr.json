@@ -407,7 +407,7 @@
     "metrics": {
       "eyebrow": "Performans",
       "title": "Hızlı cevap,",
-      "titleAccent": "daha çok satış.",
+      "titleAccent": "hızlı lead ve satış.",
       "body": "Ortalama cevap süresi, lead ve sipariş dönüşümü sohbetten çıkar. Ekip hepsini tek gelen kutusunda görür.",
       "note": "14 gün ücretsiz deneyin.",
       "cta": "Sizi arayalım",
@@ -755,6 +755,11 @@
       "chatReply": "Açık slotlar: Per 14:30 veya Cum 10:00. Hangisi uygun?",
       "bookedLabel": "Randevu oluşturuldu",
       "channelLabel": "WhatsApp",
+      "monthLabel": "Temmuz 2026",
+      "selectedWeekday": "Perşembe",
+      "selectedDate": "16 Temmuz 2026",
+      "bookLabel": "Ayır",
+      "weekdays": ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"],
       "slots": [
         {
           "time": "10:00",

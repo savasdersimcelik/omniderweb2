@@ -1,6 +1,4 @@
-"use client";
-
-import { CalendarDays, Check, Clock3, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type AppointmentSlot = {
@@ -9,86 +7,100 @@ export type AppointmentSlot = {
 };
 
 type AppointmentWidgetProps = {
-  calendarTitle: string;
-  calendarMeta: string;
-  statusLabel: string;
-  slotsLabel: string;
-  slotsNote: string;
+  monthLabel: string;
+  weekdays: string[];
+  selectedWeekday: string;
+  selectedDate: string;
+  bookLabel: string;
   slots: AppointmentSlot[];
-  chatCustomer: string;
-  chatReply: string;
-  bookedLabel: string;
-  channelLabel: string;
 };
 
+const YEAR = 2026;
+const MONTH = 6;
+const SELECTED_DAY = 16;
+
+function calendarCells() {
+  const firstWeekday = new Date(YEAR, MONTH, 1).getDay();
+  const daysInMonth = new Date(YEAR, MONTH + 1, 0).getDate();
+  const prevDays = new Date(YEAR, MONTH, 0).getDate();
+  const cells: Array<{ key: string; label: number; outside: boolean }> = [];
+
+  for (let i = 0; i < firstWeekday; i += 1) {
+    const label = prevDays - firstWeekday + 1 + i;
+    cells.push({ key: `prev-${label}`, label, outside: true });
+  }
+  for (let day = 1; day <= daysInMonth; day += 1) {
+    cells.push({ key: `day-${day}`, label: day, outside: false });
+  }
+  let next = 1;
+  while (cells.length % 7 !== 0) {
+    cells.push({ key: `next-${next}`, label: next, outside: true });
+    next += 1;
+  }
+  return cells;
+}
+
 export function AppointmentWidget({
-  calendarTitle,
-  calendarMeta,
-  statusLabel,
-  slotsLabel,
-  slotsNote,
+  monthLabel,
+  weekdays,
+  selectedWeekday,
+  selectedDate,
+  bookLabel,
   slots,
-  chatCustomer,
-  chatReply,
-  bookedLabel,
-  channelLabel,
 }: AppointmentWidgetProps) {
+  const openSlots = slots.filter((slot) => slot.open);
+  const times = openSlots.slice(-3);
+  const cells = calendarCells();
+
   return (
-    <div className="appointment-widget" aria-hidden="true">
-      <div className="appointment-widget__glow" />
-
-      <div className="appointment-widget__grid">
-        <div className="appointment-widget__panel appointment-widget__panel--calendar">
-          <div className="appointment-widget__panel-head">
-            <span className="appointment-widget__icon">
-              <CalendarDays className="size-4" />
+    <div className="appointment-cal" aria-hidden="true">
+      <div className="appointment-cal__month">
+        <div className="appointment-cal__nav">
+          <span className="appointment-cal__chevron">
+            <ChevronLeft className="size-4" />
+          </span>
+          <p className="appointment-cal__month-label">{monthLabel}</p>
+          <span className="appointment-cal__chevron">
+            <ChevronRight className="size-4" />
+          </span>
+        </div>
+        <div className="appointment-cal__grid">
+          {weekdays.map((day) => (
+            <span key={day} className="appointment-cal__dow">
+              {day}
             </span>
-            <div className="min-w-0">
-              <p className="appointment-widget__title">{calendarTitle}</p>
-              <p className="appointment-widget__meta">{calendarMeta}</p>
-            </div>
-            <span className="appointment-widget__status">{statusLabel}</span>
-          </div>
+          ))}
+          {cells.map((cell) => (
+            <span
+              key={cell.key}
+              className={cn(
+                "appointment-cal__daynum",
+                cell.outside && "is-out",
+                !cell.outside && cell.label === SELECTED_DAY && "is-selected",
+              )}
+            >
+              {cell.label}
+            </span>
+          ))}
+        </div>
+      </div>
 
-          <p className="appointment-widget__slots-label">{slotsLabel}</p>
-          <div className="appointment-widget__slots">
-            {slots.map((slot) => (
-              <span
-                key={slot.time}
-                className={cn(
-                  "appointment-widget__slot",
-                  slot.open
-                    ? "appointment-widget__slot--open"
-                    : "appointment-widget__slot--closed",
-                )}
-              >
-                <Clock3 className="size-3" />
+      <div className="appointment-cal__day">
+        <p className="appointment-cal__weekday">{selectedWeekday}</p>
+        <p className="appointment-cal__date">{selectedDate}</p>
+        <div className="appointment-cal__times">
+          {times.map((slot, index) =>
+            index === times.length - 1 ? (
+              <div key={slot.time} className="appointment-cal__bookrow">
+                <span className="appointment-cal__time">{slot.time}</span>
+                <span className="appointment-cal__book">{bookLabel}</span>
+              </div>
+            ) : (
+              <span key={slot.time} className="appointment-cal__time">
                 {slot.time}
               </span>
-            ))}
-          </div>
-          <p className="appointment-widget__note">{slotsNote}</p>
-        </div>
-
-        <div className="appointment-widget__panel appointment-widget__panel--chat">
-          <div className="appointment-widget__chat-head">
-            <span className="appointment-widget__chip">{channelLabel}</span>
-            <span className="appointment-widget__ai">
-              <Sparkles className="size-3.5" />
-              Omnider AI
-            </span>
-          </div>
-
-          <div className="appointment-widget__bubble appointment-widget__bubble--customer">
-            {chatCustomer}
-          </div>
-          <div className="appointment-widget__bubble appointment-widget__bubble--ai">
-            {chatReply}
-          </div>
-          <div className="appointment-widget__booked">
-            <Check className="size-3.5" />
-            {bookedLabel}
-          </div>
+            ),
+          )}
         </div>
       </div>
     </div>

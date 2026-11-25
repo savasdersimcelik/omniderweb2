@@ -19,7 +19,7 @@ export async function MetricsSection() {
   return (
     <section
       id="metrics"
-      className="home-metrics"
+      className="home-metrics home-section--dotted"
       aria-labelledby="home-metrics-title"
     >
       <Container className="home-metrics__layout">
@@ -76,7 +76,7 @@ export async function MetricsSection() {
         <div className="home-metrics__copy">
           <p className="home-metrics__eyebrow">{t("eyebrow")}</p>
           <h2 id="home-metrics-title" className="home-metrics__title">
-            {t("title")}{" "}
+            {t("title")}
             <span className="home-metrics__accent">{t("titleAccent")}</span>
           </h2>
           <p className="home-metrics__body">{t("body")}</p>

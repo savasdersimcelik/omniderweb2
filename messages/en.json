@@ -406,8 +406,8 @@
     },
     "metrics": {
       "eyebrow": "Performance",
-      "title": "Faster replies,",
-      "titleAccent": "more sales.",
+      "title": "Fast replies,",
+      "titleAccent": "fast leads and sales.",
       "body": "Reply time, lead conversion, and order conversion come out of the same chat. The team sees all of it in one inbox.",
       "note": "Try it free for 14 days.",
       "cta": "We'll call you",
@@ -755,6 +755,11 @@
       "chatReply": "Open slots: Thu 14:30 or Fri 10:00. Which works?",
       "bookedLabel": "Appointment created",
       "channelLabel": "WhatsApp",
+      "monthLabel": "July 2026",
+      "selectedWeekday": "Thursday",
+      "selectedDate": "July 16, 2026",
+      "bookLabel": "Book",
+      "weekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
       "slots": [
         {
           "time": "10:00",
