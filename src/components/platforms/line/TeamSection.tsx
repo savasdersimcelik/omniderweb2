@@ -11,7 +11,7 @@ export async function TeamSection() {
   return (
     <section
       id="team"
-      className="ln-team border-t border-line"
+      className="tg-team border-t border-line"
       aria-labelledby="ln-team-title"
     >
       <Container className="section">
@@ -26,13 +26,13 @@ export async function TeamSection() {
           <p className="ln-lede text-body mt-4">{t("subtitle")}</p>
         </header>
 
-        <ul className="ln-team__grid mt-10">
+        <ul className="tg-team__grid mt-10">
           {items.map((item, index) => {
             const Icon = ICONS[index] ?? UsersIcon;
             return (
               <li key={item.title}>
-                <article className="ln-team__card">
-                  <span className="ln-rich__ico">
+                <article className="tg-team__card ln-team__card">
+                  <span className="ln-interactive__ico" aria-hidden>
                     <Icon className="h-4 w-4" />
                   </span>
                   <h3>{item.title}</h3>

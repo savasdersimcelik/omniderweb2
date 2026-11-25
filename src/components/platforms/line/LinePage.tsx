@@ -1,7 +1,8 @@
+import { ConnectSection } from "./ConnectSection";
 import { InboxSection } from "./InboxSection";
+import { InteractiveSection } from "./InteractiveSection";
 import { LineHero } from "./LineHero";
 import { LocationSection } from "./LocationSection";
-import { RichSection } from "./RichSection";
 import { TeamSection } from "./TeamSection";
 import { TrySection } from "./TrySection";
 
@@ -10,7 +11,8 @@ export async function LinePage() {
     <div className="ln-page-atmosphere">
       <LineHero />
       <InboxSection />
-      <RichSection />
+      <ConnectSection />
+      <InteractiveSection />
       <LocationSection />
       <TeamSection />
       <TrySection />

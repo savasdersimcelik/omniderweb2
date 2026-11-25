@@ -4343,84 +4343,23 @@
         ]
       }
     },
-    "rich": {
-      "eyebrow": "Built for LINE",
-      "title": "Your product ships as a card",
-      "subtitle": "Price, discount, stock, and buttons in one Flex card. Customers swipe; taps show up in your panel.",
-      "demoNote": "Example view",
-      "tabsLabel": "What LINE supports",
-      "accountName": "Omnider",
-      "accountStatus": "Official Account",
-      "tabs": {
-        "product": {
-          "title": "Product card",
-          "desc": "Image, price, discount, and stock in one Flex card. Carousel up to 10 bubbles when you have a gallery."
-        },
-        "buttons": {
-          "title": "Buttons",
-          "desc": "4 template + quick replies; links, calls, and location requests. Taps show in your panel."
-        }
-      },
-      "product": {
-        "customer": "Do you have this coat in another color?",
-        "features": [
-          "Image, price, discount, and stock in one card",
-          "Carousel up to 10 bubbles when you have a gallery",
-          "Send from chatbot flows in one step"
-        ],
-        "card": {
-          "name": "Hooded coat",
-          "sku": "SKU: MNT-204",
-          "stock": "In stock",
-          "price": "TRY 1,499",
-          "oldPrice": "TRY 1,999",
-          "discount": "25% off",
-          "specs": [
-            {
-              "label": "Color",
-              "value": "Black"
-            },
-            {
-              "label": "Size",
-              "value": "S–XL"
-            }
-          ],
-          "tags": "#winter · #coat",
-          "buttons": [
-            "View product",
-            "Video",
-            "Add to cart"
-          ],
-          "slides": [
-            "Black",
-            "Olive",
-            "Navy"
-          ]
-        }
-      },
-      "buttons": {
-        "message": "How can we help?",
-        "template": [
-          "Price",
-          "Stock",
-          "Shipping",
-          "Call us"
-        ],
-        "quick": [
-          "Share location",
-          "Booking",
-          "Offers"
-        ],
-        "reply": "Stock",
-        "panelKicker": "Button tap",
-        "panelBody": "Stock → flow continued",
-        "features": [
-          "4 template buttons + up to 13 quick replies",
-          "Link, call, email, and location request",
-          "Postback taps visible in the thread"
-        ]
-      },
-      "connect": {
+    "connect": {
+      "eyebrow": "Connection",
+      "title": "Connect your LINE Official Account",
+      "subtitle": "Paste the three fields from Developers Console into Omnider; bot profile and webhook configure automatically and messages land in your inbox.",
+      "stepsLabel": "Connect in 3 steps",
+      "steps": [
+        "Copy Channel ID, Secret, and Token from LINE Developers Console",
+        "Paste into Omnider; bot name and photo sync back",
+        "Webhook is set automatically; messages arrive instantly"
+      ],
+      "features": [
+        "Webhook configured automatically",
+        "Bot name and profile photo stay in sync",
+        "Group chats use the same channel"
+      ],
+      "note": "Define template messages and automation rules in the panel.",
+      "widget": {
         "title": "LINE Official Account",
         "fields": [
           {
@@ -4439,27 +4378,63 @@
         "check": "Check connection",
         "botName": "Omnider",
         "status": "Connected",
-        "webhook": "Webhook configured",
-        "steps": [
-          "Copy the three values from LINE Developers Console",
-          "Paste into Omnider; bot name and photo come back",
-          "Webhook is set automatically; messages arrive instantly"
-        ]
+        "webhook": "Webhook configured"
+      }
+    },
+    "interactive": {
+      "eyebrow": "Built for LINE",
+      "title": "Your product ships as a card",
+      "subtitle": "Price, discount, stock, and buttons in one Flex card. Customers swipe; taps show up in your panel.",
+      "note": "Up to 10 carousel bubbles · 4 templates + 13 quick replies · Group chats in the same inbox.",
+      "tabs": {
+        "product": "Product card",
+        "buttons": "Buttons"
       },
-      "facts": [
-        {
-          "value": "10",
-          "label": "carousel bubbles max"
+      "cards": {
+        "product": "Image, price, discount, and stock in one Flex card. Carousel up to 10 bubbles when you have a gallery.",
+        "buttons": "4 template + quick replies; links, calls, and location requests. Taps show in your panel."
+      },
+      "demo": {
+        "customer": "Do you have this coat in another color?",
+        "card": {
+          "name": "Hooded coat",
+          "sku": "SKU: MNT-204",
+          "stock": "In stock",
+          "price": "TRY 1,499",
+          "oldPrice": "TRY 1,999",
+          "discount": "25% off",
+          "specs": [
+            {
+              "label": "Color",
+              "value": "Black"
+            },
+            {
+              "label": "Size",
+              "value": "S–XL"
+            }
+          ],
+          "buttons": [
+            "View product",
+            "Video",
+            "Add to cart"
+          ]
         },
-        {
-          "value": "4+13",
-          "label": "template + quick reply"
-        },
-        {
-          "value": "Groups",
-          "label": "supported in inbox"
-        }
-      ]
+        "buttonsMessage": "How can we help?",
+        "template": [
+          "Price",
+          "Stock",
+          "Shipping",
+          "Call us"
+        ],
+        "quick": [
+          "Share location",
+          "Booking",
+          "Offers"
+        ],
+        "picked": "Stock",
+        "panelKicker": "Button tap",
+        "panelBody": "Stock → flow continued"
+      }
     },
     "location": {
       "eyebrow": "Location",

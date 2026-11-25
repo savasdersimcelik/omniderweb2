@@ -4343,84 +4343,23 @@
         ]
       }
     },
-    "rich": {
-      "eyebrow": "LINE’a özel",
-      "title": "LINE’da ürününüz kart olarak gider",
-      "subtitle": "Fiyat, indirim, stok ve butonlar tek Flex kartında. Müşteri kaydırır; tıklama panelde görünür.",
-      "demoNote": "Örnek görünüm",
-      "tabsLabel": "LINE’da ne gider",
-      "accountName": "Omnider",
-      "accountStatus": "Official Account",
-      "tabs": {
-        "product": {
-          "title": "Ürün kartı",
-          "desc": "Görsel, fiyat, indirim ve stok tek Flex kartında. Galeri varsa 10 karta kadar carousel."
-        },
-        "buttons": {
-          "title": "Butonlar",
-          "desc": "4 şablon + hızlı yanıt; link, arama ve konum isteme. Tıklama panelde görünür."
-        }
-      },
-      "product": {
-        "customer": "Bu montun başka rengi var mı?",
-        "features": [
-          "Görsel, fiyat, indirim ve stok tek kartta",
-          "Galeri varsa 10 karta kadar kaydırmalı carousel",
-          "Chatbot akışından tek adımda gönderim"
-        ],
-        "card": {
-          "name": "Kapüşonlu Mont",
-          "sku": "SKU: MNT-204",
-          "stock": "Stokta",
-          "price": "1.499 ₺",
-          "oldPrice": "1.999 ₺",
-          "discount": "%25",
-          "specs": [
-            {
-              "label": "Renk",
-              "value": "Siyah"
-            },
-            {
-              "label": "Beden",
-              "value": "S–XL"
-            }
-          ],
-          "tags": "#kış · #mont",
-          "buttons": [
-            "Ürünü incele",
-            "Video",
-            "Sepete ekle"
-          ],
-          "slides": [
-            "Siyah",
-            "Haki",
-            "Lacivert"
-          ]
-        }
-      },
-      "buttons": {
-        "message": "Size nasıl yardımcı olalım?",
-        "template": [
-          "Fiyat",
-          "Stok",
-          "Kargo",
-          "Bizi arayın"
-        ],
-        "quick": [
-          "Konumumu paylaş",
-          "Randevu",
-          "Kampanyalar"
-        ],
-        "reply": "Stok",
-        "panelKicker": "Buton tıklaması",
-        "panelBody": "Stok → akış devam etti",
-        "features": [
-          "4 şablon buton + 13’e kadar hızlı yanıt",
-          "Link, arama, e-posta ve konum isteme",
-          "Postback tıklamaları sohbette görünür"
-        ]
-      },
-      "connect": {
+    "connect": {
+      "eyebrow": "Bağlantı",
+      "title": "LINE Official Account’ı bağlayın",
+      "subtitle": "Developers Console’dan üç alanı Omnider’e yapıştırın; bot profili ve webhook otomatik kurulur, mesajlar anında gelen kutusuna düşer.",
+      "stepsLabel": "3 adımda bağlantı",
+      "steps": [
+        "LINE Developers Console’dan Channel ID, Secret ve Token’ı alın",
+        "Omnider’e yapıştırın; bot adı ve fotoğraf gelir",
+        "Webhook otomatik kurulur, mesajlar anında düşer"
+      ],
+      "features": [
+        "Webhook otomatik kurulur",
+        "Bot adı ve profil fotoğrafı senkron olur",
+        "Grup sohbetleri de aynı kanaldan gelir"
+      ],
+      "note": "Şablon mesaj ve otomasyon kurallarını panelden tanımlayın.",
+      "widget": {
         "title": "LINE Official Account",
         "fields": [
           {
@@ -4439,27 +4378,63 @@
         "check": "Bağlantıyı kontrol et",
         "botName": "Omnider",
         "status": "Bağlı",
-        "webhook": "Webhook kuruldu",
-        "steps": [
-          "LINE Developers Console’dan 3 bilgiyi alın",
-          "Omnider’e yapıştırın; bot adı ve fotoğraf gelir",
-          "Webhook otomatik kurulur, mesajlar anında düşer"
-        ]
+        "webhook": "Webhook kuruldu"
+      }
+    },
+    "interactive": {
+      "eyebrow": "LINE’a özel",
+      "title": "LINE’da ürününüz kart olarak gider",
+      "subtitle": "Fiyat, indirim, stok ve butonlar tek Flex kartında. Müşteri kaydırır; tıklama panelde görünür.",
+      "note": "10 karta kadar carousel · 4 şablon + 13 hızlı yanıt · Grup sohbetleri aynı kutuda.",
+      "tabs": {
+        "product": "Ürün kartı",
+        "buttons": "Butonlar"
       },
-      "facts": [
-        {
-          "value": "10",
-          "label": "karta kadar carousel"
+      "cards": {
+        "product": "Görsel, fiyat, indirim ve stok tek Flex kartında. Galeri varsa 10 karta kadar carousel.",
+        "buttons": "4 şablon + hızlı yanıt; link, arama ve konum isteme. Tıklama panelde görünür."
+      },
+      "demo": {
+        "customer": "Bu montun başka rengi var mı?",
+        "card": {
+          "name": "Kapüşonlu Mont",
+          "sku": "SKU: MNT-204",
+          "stock": "Stokta",
+          "price": "1.499 ₺",
+          "oldPrice": "1.999 ₺",
+          "discount": "%25",
+          "specs": [
+            {
+              "label": "Renk",
+              "value": "Siyah"
+            },
+            {
+              "label": "Beden",
+              "value": "S–XL"
+            }
+          ],
+          "buttons": [
+            "Ürünü incele",
+            "Video",
+            "Sepete ekle"
+          ]
         },
-        {
-          "value": "4+13",
-          "label": "şablon + hızlı yanıt"
-        },
-        {
-          "value": "Grup",
-          "label": "sohbetleri de gelir"
-        }
-      ]
+        "buttonsMessage": "Size nasıl yardımcı olalım?",
+        "template": [
+          "Fiyat",
+          "Stok",
+          "Kargo",
+          "Bizi arayın"
+        ],
+        "quick": [
+          "Konumumu paylaş",
+          "Randevu",
+          "Kampanyalar"
+        ],
+        "picked": "Stok",
+        "panelKicker": "Buton tıklaması",
+        "panelBody": "Stok → akış devam etti"
+      }
     },
     "location": {
       "eyebrow": "Konum",

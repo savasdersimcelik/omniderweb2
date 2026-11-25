@@ -6864,11 +6864,160 @@ a.tg-modes__pick-card:hover {
 
 .ln-page-atmosphere .ln-biz-hero,
 .ln-page-atmosphere .ln-inbox,
-.ln-page-atmosphere .ln-rich,
-.ln-page-atmosphere .ln-loc,
-.ln-page-atmosphere .ln-team,
-.ln-page-atmosphere .ln-try {
+.ln-page-atmosphere .ln-connect,
+.ln-page-atmosphere .ln-interactive,
+.ln-page-atmosphere .ln-location,
+.ln-page-atmosphere .tg-team,
+.ln-page-atmosphere .ms-try {
   background: transparent !important;
+}
+
+.ln-interactive {
+  background:
+    radial-gradient(
+      ellipse 46% 38% at 78% 42%,
+      color-mix(in srgb, var(--ln-hero) 7%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #fff 0%, #f4fbf6 48%, #fff 100%);
+}
+
+.ln-interactive__subtitle,
+.ln-location .ln-interactive__subtitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.ln-interactive__cols,
+.ln-location__cols {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .ln-interactive__cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .ln-location__cols {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+.ln-interactive .ms-interactive__widget,
+.ln-location .ms-interactive__widget {
+  min-height: 17rem;
+  max-height: 19.5rem;
+  background:
+    radial-gradient(
+      color-mix(in srgb, var(--ln-hero) 6%, transparent) 0.7px,
+      transparent 0.75px
+    ),
+    #f3faf5;
+  background-size: 13px 13px, auto;
+}
+
+.ln-interactive .ms-interactive__col-icon,
+.ln-location .ms-interactive__col-icon {
+  background: color-mix(in srgb, var(--ln-hero) 12%, white);
+  color: var(--ln-hero-deep);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ln-hero) 22%, transparent);
+}
+
+.ln-interactive .ms-interactive__choice.is-hit,
+.ln-interactive .ln-template__grid span.is-hit {
+  color: var(--ln-hero-deep);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ln-hero) 45%, white);
+}
+
+.ln-interactive__ico {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  place-items: center;
+  border-radius: 0.7rem;
+  background: color-mix(in srgb, var(--ln-hero) 12%, white);
+  color: var(--ln-hero-deep);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ln-hero) 22%, transparent);
+}
+
+.ln-flex-card--demo {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 15.5rem;
+  margin-inline: auto;
+}
+
+.ln-phone--compact .ln-phone__chat {
+  min-height: 0;
+  padding-block: 0.65rem;
+}
+
+.ln-location__widget {
+  justify-content: center;
+  padding-block: 0.65rem;
+}
+
+.ln-location__widget .ln-phone--compact,
+.ln-location__widget .ln-map-picker {
+  width: 100%;
+  max-width: 14.5rem;
+  margin-inline: auto;
+}
+
+.ln-quick--compact {
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.45rem;
+}
+
+.ln-inbox-toast--compact {
+  margin: 0.35rem 0 0;
+  padding: 0.5rem 0.6rem;
+}
+
+.ln-connect .tg-connect__status {
+  background: color-mix(in srgb, var(--ln-hero) 10%, white);
+  color: var(--ln-hero-deep);
+}
+
+.ln-connect__widget {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      color-mix(in srgb, var(--ln-hero) 8%, transparent),
+      transparent 72%
+    ),
+    #fff;
+}
+
+.ln-connect__widget .ln-console {
+  width: 100%;
+  max-width: 22rem;
+}
+
+.ln-team__card {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ln-hero) 12%, transparent);
+}
+
+.ln-location {
+  background:
+    radial-gradient(
+      ellipse 42% 36% at 12% 88%,
+      color-mix(in srgb, var(--ln-hero-deep) 6%, transparent),
+      transparent 72%
+    ),
+    #fff;
 }
 
 .btn-line {
