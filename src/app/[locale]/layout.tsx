@@ -19,9 +19,20 @@ const RECAPTCHA_SITEKEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY?.trim();
 const isProduction = process.env.NEXT_PUBLIC_APP_ENV === "production";
 
 const WEBCHAT_KEY = "0e974af2-9d2a-43d2-af13-1c588c554c15";
-const webchatSrc = isProduction
-  ? `https://api.omnider.com/webchat/widget.js?key=${WEBCHAT_KEY}`
-  : `http://localhost:3000/webchat/widget.js?key=${WEBCHAT_KEY}`;
+const omniderApiBase = (
+  process.env.NEXT_PUBLIC_OMNIDER_API_URL?.replace(/\/$/, "") ??
+  (isProduction ? "https://api.omnider.com" : "https://api.savasdersimcelik.dev")
+).replace(/\/$/, "");
+const webchatSrc = `${omniderApiBase}/webchat/widget.js?key=${WEBCHAT_KEY}`;
+
+const analyticsTrackerSrc =
+  process.env.NEXT_PUBLIC_ANALYTICS_TRACKER_SRC?.trim() ||
+  (isProduction
+    ? "https://analytics.omnider.com/trackers/analytics.min.js"
+    : "https://analytics.savasdersimcelik.dev/trackers/analytics.min.js");
+const analyticsApiHost =
+  process.env.NEXT_PUBLIC_ANALYTICS_API_HOST?.trim() ||
+  (isProduction ? undefined : "https://analytics-api.savasdersimcelik.dev");
 
 const analytics: {
   websiteId: string;
@@ -30,12 +41,12 @@ const analytics: {
 } = isProduction
   ? {
       websiteId: "a2125f72-595e-4a4e-869d-e1db07b5d282",
-      src: "https://analytics.omnider.com/trackers/analytics.min.js",
+      src: analyticsTrackerSrc,
     }
   : {
       websiteId: "5bab23a0-bff9-4160-9828-0867dcb6eb30",
-      src: "http://localhost:8096/trackers/analytics.min.js",
-      apiHost: "http://localhost:8097",
+      src: analyticsTrackerSrc,
+      apiHost: analyticsApiHost,
     };
 
 const geistSans = Geist({

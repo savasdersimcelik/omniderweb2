@@ -1,7 +1,7 @@
 export function getSiteUrl() {
   return (
     process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") ||
-    "http://localhost:8001"
+    "https://v2.savasdersimcelik.dev"
   );
 }
 
@@ -14,7 +14,7 @@ export function getOmniderApiUrl() {
   if (fromEnv) return fromEnv;
   return process.env.NEXT_PUBLIC_APP_ENV === "production"
     ? "https://api.omnider.com"
-    : "http://localhost:3000";
+    : "https://api.savasdersimcelik.dev";
 }
 
 /**
@@ -27,5 +27,5 @@ export function getOmniderPanelUrl() {
   if (fromEnv) return fromEnv;
   return process.env.NEXT_PUBLIC_APP_ENV === "production"
     ? "https://app.omnider.com"
-    : "http://localhost:5174";
+    : "https://app.savasdersimcelik.dev";
 }
