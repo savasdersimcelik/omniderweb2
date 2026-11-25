@@ -10,7 +10,7 @@ import { WhatsAppPersonalHero } from "./WhatsAppPersonalHero";
 
 export async function WhatsAppPersonalPage() {
   return (
-    <>
+    <div className="wa-page-atmosphere">
       <WhatsAppPersonalHero />
       <WhatsAppInboxSection
         namespace="PlatformWhatsAppPersonal"
@@ -26,6 +26,6 @@ export async function WhatsAppPersonalPage() {
       <CatalogSection />
       <SharedContactsSection />
       <TrySection />
-    </>
+    </div>
   );
 }

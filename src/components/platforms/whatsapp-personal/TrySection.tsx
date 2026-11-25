@@ -27,7 +27,7 @@ export async function TrySection() {
   return (
     <section
       id="try-whatsapp-personal"
-      className="wa-try border-t border-line bg-surface-subtle/40"
+      className="wa-try border-t border-line"
       aria-labelledby="wap-try-title"
     >
       <Container className="section">

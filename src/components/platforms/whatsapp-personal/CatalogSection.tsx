@@ -18,7 +18,7 @@ export async function CatalogSection() {
   return (
     <section
       id="catalog"
-      className="wap-catalog border-t border-line bg-surface-subtle/40"
+      className="wap-catalog border-t border-line"
       aria-labelledby="wap-catalog-title"
     >
       <Container className="section">

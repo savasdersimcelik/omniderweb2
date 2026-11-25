@@ -5510,7 +5510,76 @@
     );
 }
 
-/* Shared mint plane — hero + all WhatsApp page sections read as one surface */
+/*
+ * Continuous WhatsApp page atmosphere:
+ * one mint plane + soft glows + dot mesh that follows across sections.
+ */
+.wa-page-atmosphere {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse 58% 42% at 8% 12%,
+      color-mix(in srgb, #026450 11%, transparent),
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 52% 38% at 92% 28%,
+      color-mix(in srgb, #1aad7a 10%, transparent),
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 60% 44% at 70% 72%,
+      color-mix(in srgb, #026450 8%, transparent),
+      transparent 76%
+    ),
+    radial-gradient(
+      ellipse 48% 36% at 18% 88%,
+      color-mix(in srgb, #03856a 9%, transparent),
+      transparent 72%
+    ),
+    linear-gradient(
+      168deg,
+      #ffffff 0%,
+      #f7fcf9 22%,
+      #eef8f3 48%,
+      #e8f5f0 74%,
+      #f4faf7 100%
+    );
+}
+
+.wa-page-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.38;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    color-mix(in srgb, #026450 22%, transparent) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+  mask-image: radial-gradient(
+    ellipse 88% 70% at 50% 42%,
+    #000 18%,
+    transparent 78%
+  );
+}
+
+@media (min-width: 64rem) {
+  .wa-page-atmosphere::before {
+    background-attachment: fixed;
+  }
+}
+
+.wa-page-atmosphere > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sections stay transparent so the page atmosphere continues unbroken */
 .wa-biz-hero--photo,
 .wa-inbox,
 .wa-connect,
@@ -5520,15 +5589,13 @@
 .wa-mid-cta,
 .wa-templates,
 .wa-ad-referral,
-.wa-try {
-  background: linear-gradient(
-    105deg,
-    #ffffff 0%,
-    #f7fcf9 28%,
-    #eef8f3 52%,
-    #e8f5f0 72%,
-    #f4faf7 100%
-  );
+.wa-try,
+.wap-connect,
+.wap-catalog,
+.wap-rich,
+.wap-mid-cta,
+.wap-contacts {
+  background: transparent;
 }
 
 /* Intro fills remaining space above chat and centers copy */

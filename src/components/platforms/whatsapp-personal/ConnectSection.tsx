@@ -93,7 +93,7 @@ export async function ConnectSection() {
   return (
     <section
       id="connect"
-      className="wap-connect border-t border-line bg-surface-subtle/40"
+      className="wap-connect border-t border-line"
       aria-labelledby="wap-connect-title"
     >
       <Container className="section">
