@@ -69,7 +69,7 @@ export async function POST(request: Request) {
   const email = body.email?.trim() || "";
   const pageName = body.pageName?.trim() || "";
   const pageUrl = body.pageUrl?.trim() || "";
-  const locale = body.locale === "en" ? "en" : "tr";
+  const locale = body.locale === "tr" ? "tr" : "en";
   const attribution = sanitizeAttribution(body.attribution);
 
   if (

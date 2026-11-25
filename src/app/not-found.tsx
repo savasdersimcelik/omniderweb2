@@ -1,6 +1,6 @@
 export default function NotFound() {
   return (
-    <html lang="tr">
+    <html lang="en">
       <body>
         <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
           <h1>404</h1>

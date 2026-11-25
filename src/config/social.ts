@@ -45,12 +45,12 @@ const SHARED_SOCIAL_LINKS = [
 export const socialLinks = [
   {
     label: "WhatsApp",
-    href: whatsappHref("tr"),
+    href: whatsappHref("en"),
   },
   ...SHARED_SOCIAL_LINKS,
 ] as const;
 
-export function getSocialLinks(locale = "tr") {
+export function getSocialLinks(locale = "en") {
   return [
     {
       label: "WhatsApp",

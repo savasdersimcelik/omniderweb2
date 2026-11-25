@@ -1223,7 +1223,7 @@
         "id": "account-deletion",
         "title": "Account Deletion / Data Deletion Request",
         "paragraphs": [
-          "You may request deletion of your Omnider account and associated personal data at any time. To submit a verified account or data deletion request, visit our dedicated page at <a href=\"/en/delete-account\">/en/delete-account</a> for full instructions, required information, and processing timelines.",
+          "You may request deletion of your Omnider account and associated personal data at any time. To submit a verified account or data deletion request, visit our dedicated page at <a href=\"/delete-account\">/delete-account</a> for full instructions, required information, and processing timelines.",
           "You may also send your request by email to <a href=\"mailto:info@omnider.com\">info@omnider.com</a> from your registered account email address. Upon verified account deletion:"
         ],
         "list": [
@@ -1236,7 +1236,7 @@
           {
             "title": "Partial Data Deletion",
             "paragraphs": [
-              "If you need to delete specific personal information without closing your entire account, follow the same process on the <a href=\"/en/delete-account\">/en/delete-account</a> page. Please note that deleting certain data may prevent us from providing all or part of the Services. Data controlled by third-party platforms must often be deleted directly through those platforms or their official tools, in addition to any request made to Omnider."
+              "If you need to delete specific personal information without closing your entire account, follow the same process on the <a href=\"/delete-account\">/delete-account</a> page. Please note that deleting certain data may prevent us from providing all or part of the Services. Data controlled by third-party platforms must often be deleted directly through those platforms or their official tools, in addition to any request made to Omnider."
             ]
           }
         ]
@@ -3736,6 +3736,458 @@
       "cta": "Open in Messenger",
       "ctaTitle": "Open the Omnider Messenger chat",
       "imageAlt": "QR code for Omnider Messenger"
+    }
+  },
+  "PlatformTelegram": {
+    "meta": {
+      "title": "Telegram Integration — Omnider",
+      "description": "Connect your Telegram bot or personal account to a shared inbox and reply with AI and chatbots."
+    },
+    "hero": {
+      "badge": "Telegram",
+      "titleLine1": "Customers write,",
+      "titleLine2": "AI replies",
+      "description": "Connect your bot or personal Telegram account, collect incoming messages in a shared inbox, and reply instantly with AI and chatbots.",
+      "ctaPrimary": "We'll call you",
+      "ctaSecondary": "Start for free"
+    },
+    "inbox": {
+      "titleLine1": "Telegram messages,",
+      "titleLine2": "one inbox",
+      "description": "Messages from your bot or personal account land in the Omnider inbox. AI sends the first reply, and your team takes over when it matters.",
+      "cta": "We'll call you",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Inbox",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Emma · Sales",
+        "customerName": "Maya Rivera",
+        "deptName": "Sales",
+        "transferLabel": "Transferred to sales",
+        "typingLabel": "Writing a reply",
+        "inStockLabel": "In stock",
+        "outOfStockLabel": "Sold out",
+        "viewProductLabel": "View product",
+        "carouselHint": "{count} products · swipe to browse",
+        "products": [
+          {
+            "id": "aura",
+            "name": "Yellow headphones",
+            "price": "$89",
+            "listPrice": "$119",
+            "sku": "AUR-42",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Active noise canceling, 36-hour battery, and fast charge.",
+            "features": [
+              {
+                "key": "Color",
+                "value": "Yellow"
+              },
+              {
+                "key": "Connect",
+                "value": "Bluetooth 5.3"
+              },
+              {
+                "key": "Warranty",
+                "value": "2 years"
+              }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Smartwatch",
+            "price": "$149",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Heart rate, sleep, and GPS tracking."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Speaker",
+            "price": "$59",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Waterproof, 12 hours of playback."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Maya Rivera",
+            "preview": "Can you send the price?",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "James Cole",
+            "preview": "Book an appointment",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Sara Lee",
+            "preview": "Group: Orders",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Ava Quinn",
+            "preview": "In stock?",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Noah Blake",
+            "preview": "Bot menu",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Lina Ortiz",
+            "preview": "Order #4821",
+            "platform": "telegram",
+            "channel": "Telegram"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Hi, are the yellow headphones in stock?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Yes — here are the featured ones:",
+            "productIds": [
+              "aura",
+              "pulse",
+              "nova"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Can you show the yellow headphones in detail?"
+          },
+          {
+            "kind": "product_detail",
+            "text": "Here’s the yellow pair in detail:",
+            "productId": "aura"
+          },
+          {
+            "kind": "buttons",
+            "text": "How would you like to continue?",
+            "buttons": [
+              "Buy in Telegram",
+              "Another color",
+              "Ask price"
+            ]
+          }
+        ]
+      }
+    },
+    "modes": {
+      "eyebrow": "Two paths, one inbox",
+      "title": "Connect Telegram two ways: bot or personal account?",
+      "subtitle": "Both land in the same shared inbox. The difference is what you want to do.",
+      "tabsLabel": "Telegram connection type",
+      "yesLabel": "Yes",
+      "demoNote": "Content in the visuals is an example.",
+      "tabs": {
+        "bot": "Telegram Bot",
+        "personal": "Telegram Personal",
+        "compare": "Compare side by side",
+        "botShort": "Bot",
+        "personalShort": "Personal",
+        "compareShort": "Compare"
+      },
+      "bot": {
+        "connectLabel": "Connect in 3 steps",
+        "connectSteps": [
+          "Create the bot in BotFather and copy the token.",
+          "Paste it into Omnider; bot name and group permissions come back.",
+          "Webhook is set automatically; messages arrive instantly."
+        ],
+        "features": [
+          "Button menus, polls, and media albums",
+          "Works in groups, with typing indicator"
+        ],
+        "bestLabel": "Best for",
+        "bestFor": "Menu bot, campaigns, and announcements",
+        "scene": {
+          "name": "Omnider Bot",
+          "online": "online",
+          "greeting": "How can we help?",
+          "typing": "typing…",
+          "poll": "Which day works?",
+          "options": [
+            "Tuesday",
+            "Thursday"
+          ],
+          "share": "Share my number",
+          "keys": [
+            "Price",
+            "Stock",
+            "Booking"
+          ]
+        }
+      },
+      "personal": {
+        "connectLabel": "Connect in 3 steps",
+        "connectSteps": [
+          "Scan the QR in Telegram, or open the 15-minute sign-in link.",
+          "Your contacts and groups are imported.",
+          "Last 50 messages per chat arrive without spending credits."
+        ],
+        "features": [
+          "Your own account; contact, group, and history sync",
+          "Messages from the phone also show in the panel"
+        ],
+        "bestLabel": "Best for",
+        "bestFor": "Customers who already message you, one-to-one sales",
+        "note": "Sending bulk messages from a personal account can affect that account. For campaigns, a bot or WhatsApp Business is a better fit.",
+        "scene": {
+          "status": "connected",
+          "inbox": "Shared inbox",
+          "progress": "Importing history… 50 messages/chat",
+          "echo": "You wrote from the phone → it shows in the panel too",
+          "rows": [
+            {
+              "name": "Ayşe Kaya",
+              "meta": "Contact"
+            },
+            {
+              "name": "Orders",
+              "meta": "Group"
+            },
+            {
+              "name": "Deniz Arslan",
+              "meta": "Contact"
+            },
+            {
+              "name": "Support",
+              "meta": "Group"
+            }
+          ]
+        }
+      },
+      "compareRows": [
+        {
+          "label": "Connection",
+          "bot": {
+            "text": "BotFather token"
+          },
+          "personal": {
+            "text": "QR or sign-in link"
+          }
+        },
+        {
+          "label": "Button menus and polls",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "dash"
+          }
+        },
+        {
+          "label": "Album of 10 media",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "dash"
+          }
+        },
+        {
+          "label": "Groups",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        },
+        {
+          "label": "Contact sync",
+          "bot": {
+            "mark": "dash"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        },
+        {
+          "label": "History import",
+          "bot": {
+            "mark": "dash"
+          },
+          "personal": {
+            "mark": "yes",
+            "note": "50 per chat"
+          }
+        },
+        {
+          "label": "Messages typed on the phone show in the panel",
+          "bot": {
+            "mark": "dash"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        },
+        {
+          "label": "Campaigns / bulk send",
+          "bot": {
+            "text": "No warning"
+          },
+          "personal": {
+            "text": "Use with care"
+          }
+        },
+        {
+          "label": "Shared inbox, AI, chatbot",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        }
+      ],
+      "pick": {
+        "title": "Which should I choose?",
+        "bot": {
+          "title": "I want menus, polls, and campaigns",
+          "result": "Bot",
+          "href": "#interactive"
+        },
+        "personal": {
+          "title": "Customers already write to my personal account",
+          "result": "Personal",
+          "href": "#connect"
+        },
+        "both": {
+          "title": "Both",
+          "body": "Connect both. They collect in the same inbox."
+        }
+      }
+    },
+    "interactive": {
+      "eyebrow": "Telegram Bot interactions",
+      "title": "Let them tap, not type",
+      "subtitle": "Guide customers with button menus, polls, and media albums. Omnider maps each message to Telegram Bot API formats.",
+      "cards": [
+        {
+          "id": "menus",
+          "title": "Button menus",
+          "desc": "Customers don’t have to type. Offer actions like open a link, call, email, or share a phone number/location as Telegram buttons—and the tap lands in your panel instantly.",
+          "points": [
+            "Inline or reply keyboard routing",
+            "Web, phone, and email buttons"
+          ]
+        },
+        {
+          "id": "polls",
+          "title": "Polls and votes",
+          "desc": "Send booking days, preferences, or satisfaction questions as polls. Results show in the chat so your team can see which option is ahead.",
+          "points": [
+            "Single or multi-choice polls",
+            "Live vote breakdown"
+          ]
+        },
+        {
+          "id": "albums",
+          "title": "Media albums",
+          "desc": "Send product photos, catalog pages, or documents as one album. Customers swipe through; the bot continues the next step in the same chat.",
+          "points": [
+            "Up to 10 media items in one message",
+            "Images, documents, or mixed albums"
+          ]
+        }
+      ],
+      "demo": {
+        "botName": "Omnider Bot",
+        "online": "online",
+        "greeting": "How can we help?",
+        "keys": [
+          "Price",
+          "Stock",
+          "Booking"
+        ],
+        "poll": "Which day works?",
+        "options": [
+          "Tuesday",
+          "Thursday",
+          "Saturday"
+        ],
+        "typing": "typing…"
+      }
+    },
+    "connect": {
+      "eyebrow": "Telegram Personal",
+      "title": "Connect the personal account with QR",
+      "subtitle": "Link your Telegram account via Unipile; contacts, groups, and chat history land in the panel.",
+      "stepsLabel": "Connect in 3 steps",
+      "steps": [
+        "Scan the QR in Telegram, or open the 15-minute sign-in link.",
+        "Your contacts and groups are imported.",
+        "Last 50 messages per chat arrive without spending credits."
+      ],
+      "features": [
+        "Your own account; contact, group, and history sync",
+        "Messages from the phone also show in the panel"
+      ],
+      "note": "For bulk messaging, a bot or WhatsApp Business is a better fit.",
+      "widget": {
+        "channel": "Telegram Personal",
+        "waiting": "Scan with Telegram",
+        "status": "Waiting",
+        "progress": "Importing history… 50 messages/chat",
+        "echo": "You wrote from the phone → it shows in the panel too"
+      }
+    },
+    "team": {
+      "eyebrow": "Team + AI",
+      "title": "One Telegram. The whole team at once.",
+      "subtitle": "Messages from the bot or personal account land in one inbox. AI replies first and hands off to your team when needed.",
+      "items": [
+        {
+          "title": "Bot + personal, shared inbox",
+          "body": "Both connection types merge in the same inbox."
+        },
+        {
+          "title": "AI replies in seconds",
+          "body": "Instant answers to price, stock, and booking questions."
+        },
+        {
+          "title": "Hands off to humans",
+          "body": "Transfers the chat to sales or support when needed."
+        }
+      ]
+    },
+    "try": {
+      "eyebrow": "Try it now",
+      "title": "Try the bot or personal account",
+      "body": "Scan the QR or open the link to experience Omnider Telegram live.",
+      "bot": {
+        "title": "Telegram Bot",
+        "body": "Talk to the Omnider bot right away.",
+        "handle": "t.me/omnider_bot",
+        "url": "https://t.me/omnider_bot",
+        "cta": "Open bot",
+        "ctaTitle": "Open the Omnider Telegram bot",
+        "imageAlt": "QR code for the Omnider Telegram bot"
+      },
+      "personal": {
+        "title": "Telegram Personal",
+        "body": "Message the Omnider personal account.",
+        "handle": "t.me/omnidertech",
+        "url": "https://t.me/omnidertech",
+        "cta": "Open account",
+        "ctaTitle": "Open the Omnider personal Telegram account",
+        "imageAlt": "QR code for the Omnider personal Telegram account"
+      }
     }
   }
 }

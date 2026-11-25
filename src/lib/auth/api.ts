@@ -17,8 +17,8 @@ export type AuthSessionData = {
 };
 
 function localeHeader(): string {
-  if (typeof document === "undefined") return "tr";
-  return document.documentElement.lang || "tr";
+  if (typeof document === "undefined") return "en";
+  return document.documentElement.lang || "en";
 }
 
 /** POST/GET Omnider tenant Auth API (`/auth/*`). */

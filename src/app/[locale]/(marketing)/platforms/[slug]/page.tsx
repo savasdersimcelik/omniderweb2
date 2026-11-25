@@ -4,6 +4,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { InstagramPage } from "@/components/platforms/instagram/InstagramPage";
 import { MessengerPage } from "@/components/platforms/messenger/MessengerPage";
 import { PlatformDetailPage } from "@/components/platforms/PlatformDetailPage";
+import { TelegramPage } from "@/components/platforms/telegram/TelegramPage";
 import { WhatsAppBusinessPage } from "@/components/platforms/whatsapp-business/WhatsAppBusinessPage";
 import { WhatsAppPersonalPage } from "@/components/platforms/whatsapp-personal/WhatsAppPersonalPage";
 import {
@@ -23,6 +24,7 @@ const dedicatedMetaNamespace: Record<string, string> = {
   "whatsapp-personal": "PlatformWhatsAppPersonal",
   instagram: "PlatformInstagram",
   messenger: "PlatformMessenger",
+  telegram: "PlatformTelegram",
 };
 
 export function generateStaticParams() {
@@ -88,6 +90,10 @@ async function PlatformSlugContent({ params }: PlatformSlugPageProps) {
 
   if (slug === "messenger") {
     return <MessengerPage />;
+  }
+
+  if (slug === "telegram") {
+    return <TelegramPage />;
   }
 
   return <PlatformDetailPage slug={slug} />;

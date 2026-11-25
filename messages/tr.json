@@ -1223,7 +1223,7 @@
         "id": "account-deletion",
         "title": "Hesap Silme / Veri Silme Talebi",
         "paragraphs": [
-          "Omnider hesabınızın ve ilişkili kişisel verilerinizin silinmesini istediğiniz zaman talep edebilirsiniz. Doğrulanmış hesap veya veri silme talebi göndermek için gerekli bilgiler, işlem süreleri ve talimatlar için <a href=\"/delete-account\">/delete-account</a> sayfasını ziyaret edin.",
+          "Omnider hesabınızın ve ilişkili kişisel verilerinizin silinmesini istediğiniz zaman talep edebilirsiniz. Doğrulanmış hesap veya veri silme talebi göndermek için gerekli bilgiler, işlem süreleri ve talimatlar için <a href=\"/tr/delete-account\">/tr/delete-account</a> sayfasını ziyaret edin.",
           "Kayıtlı hesap e-posta adresinizden <a href=\"mailto:info@omnider.com\">info@omnider.com</a> adresine de talep gönderebilirsiniz. Doğrulanmış hesap silme işleminden sonra:"
         ],
         "list": [
@@ -1236,7 +1236,7 @@
           {
             "title": "Kısmi Veri Silme",
             "paragraphs": [
-              "Tüm hesabınızı kapatmadan belirli kişisel bilgilerin silinmesini talep etmeniz gerekiyorsa aynı süreci <a href=\"/delete-account\">/delete-account</a> sayfasındaki talimatları izleyerek başlatabilirsiniz. Belirli verilerin silinmesi, Hizmetlerin tamamının veya bir kısmının sunulmasını engelleyebilir. Üçüncü taraf platformlar tarafından kontrol edilen verilerin çoğu zaman Omnider'a yapılan talebe ek olarak doğrudan ilgili platformlar veya resmi araçları üzerinden silinmesini gerektirir."
+              "Tüm hesabınızı kapatmadan belirli kişisel bilgilerin silinmesini talep etmeniz gerekiyorsa aynı süreci <a href=\"/tr/delete-account\">/tr/delete-account</a> sayfasındaki talimatları izleyerek başlatabilirsiniz. Belirli verilerin silinmesi, Hizmetlerin tamamının veya bir kısmının sunulmasını engelleyebilir. Üçüncü taraf platformlar tarafından kontrol edilen verilerin çoğu zaman Omnider'a yapılan talebe ek olarak doğrudan ilgili platformlar veya resmi araçları üzerinden silinmesini gerektirir."
             ]
           }
         ]
@@ -3736,6 +3736,458 @@
       "cta": "Messenger’da aç",
       "ctaTitle": "Omnider Messenger sohbetini aç",
       "imageAlt": "Omnider Messenger için QR kod"
+    }
+  },
+  "PlatformTelegram": {
+    "meta": {
+      "title": "Telegram Entegrasyonu — Omnider",
+      "description": "Telegram botunuzu veya kişisel hesabınızı ortak gelen kutusuna bağlayın; yapay zeka ve chatbot ile yanıtlayın."
+    },
+    "hero": {
+      "badge": "Telegram",
+      "titleLine1": "Müşteri yazsın,",
+      "titleLine2": "yapay zeka yanıtlasın",
+      "description": "Botunuzu veya kişisel Telegram hesabınızı bağlayın; gelen mesajları ortak gelen kutusunda toplayın, yapay zeka ve chatbot ile anında yanıtlayın.",
+      "ctaPrimary": "Sizi arayalım",
+      "ctaSecondary": "Ücretsiz Başla"
+    },
+    "inbox": {
+      "titleLine1": "Telegram mesajı,",
+      "titleLine2": "tek gelen kutu",
+      "description": "Bot veya kişisel hesaptan gelen mesajlar Omnider gelen kutusunda toplanır. Yapay zeka ilk yanıtı verir, ekibiniz gerektiğinde devralır.",
+      "cta": "Sizi arayalım",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Gelen kutusu",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Ayşe · Satış",
+        "customerName": "Ayşe Yılmaz",
+        "deptName": "Satış",
+        "transferLabel": "Satışa aktarıldı",
+        "typingLabel": "Yanıt yazılıyor",
+        "inStockLabel": "Stokta",
+        "outOfStockLabel": "Tükendi",
+        "viewProductLabel": "Ürünü görüntüle",
+        "carouselHint": "{count} ürün · kaydırarak inceleyin",
+        "products": [
+          {
+            "id": "aura",
+            "name": "Sarı kulaklık",
+            "price": "1.249 ₺",
+            "listPrice": "1.599 ₺",
+            "sku": "AUR-42",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Aktif gürültü engelleme, 36 saat pil ve hızlı şarj.",
+            "features": [
+              {
+                "key": "Renk",
+                "value": "Sarı"
+              },
+              {
+                "key": "Bağlantı",
+                "value": "Bluetooth 5.3"
+              },
+              {
+                "key": "Garanti",
+                "value": "2 yıl"
+              }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Akıllı Saat",
+            "price": "2.450 ₺",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Kalp ritmi, uyku ve GPS takip."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Hoparlör",
+            "price": "890 ₺",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Su geçirmez, 12 saat çalma süresi."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Fiyatı yazar mısınız?",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Randevu istiyorum",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Grup: Siparişler",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Zeynep Akar",
+            "preview": "Stok var mı?",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Mert Kaya",
+            "preview": "Bot menüsü",
+            "platform": "telegram",
+            "channel": "Telegram"
+          },
+          {
+            "name": "Selin Arı",
+            "preview": "Sipariş #4821",
+            "platform": "telegram",
+            "channel": "Telegram"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Merhaba, sarı kulaklık stokta mı?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Evet, öne çıkanlar burada:",
+            "productIds": [
+              "aura",
+              "pulse",
+              "nova"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Sarı kulaklığın detayına bakar mısın?"
+          },
+          {
+            "kind": "product_detail",
+            "text": "Sarı kulaklığın detayları:",
+            "productId": "aura"
+          },
+          {
+            "kind": "buttons",
+            "text": "Nasıl devam edelim?",
+            "buttons": [
+              "Telegram’dan al",
+              "Başka renk",
+              "Fiyat sor"
+            ]
+          }
+        ]
+      }
+    },
+    "modes": {
+      "eyebrow": "İki yol, tek gelen kutusu",
+      "title": "Telegram’ı iki yoldan bağlayın: Bot mu, kişisel hesap mı?",
+      "subtitle": "İkisi de aynı ortak gelen kutusuna düşer. Fark, ne yapmak istediğinizde.",
+      "tabsLabel": "Telegram bağlantı türü",
+      "yesLabel": "Var",
+      "demoNote": "Görseldeki içerikler örnektir.",
+      "tabs": {
+        "bot": "Telegram Bot",
+        "personal": "Telegram Personal",
+        "compare": "Yan yana karşılaştır",
+        "botShort": "Bot",
+        "personalShort": "Kişisel",
+        "compareShort": "Karşılaştır"
+      },
+      "bot": {
+        "connectLabel": "3 adımda bağlantı",
+        "connectSteps": [
+          "BotFather’da botu oluşturun, token’ı kopyalayın.",
+          "Omnider’e yapıştırın; bot adı ve grup izinleri gelir.",
+          "Webhook otomatik kurulur, mesajlar anında gelir."
+        ],
+        "features": [
+          "Butonlu menüler, anket ve medya albümü",
+          "Gruplarda çalışır, yazıyor göstergesi"
+        ],
+        "bestLabel": "En uygun",
+        "bestFor": "Menü botu, kampanya ve duyurular",
+        "scene": {
+          "name": "Omnider Bot",
+          "online": "çevrimiçi",
+          "greeting": "Size nasıl yardımcı olalım?",
+          "typing": "yazıyor…",
+          "poll": "Hangi gün uygun?",
+          "options": [
+            "Salı",
+            "Perşembe"
+          ],
+          "share": "Numaramı paylaş",
+          "keys": [
+            "Fiyat",
+            "Stok",
+            "Randevu"
+          ]
+        }
+      },
+      "personal": {
+        "connectLabel": "3 adımda bağlantı",
+        "connectSteps": [
+          "QR’ı Telegram ile taratın veya 15 dk’lık linki açın.",
+          "Rehberiniz ve gruplarınız içeri aktarılır.",
+          "Her sohbetten son 50 mesaj kredi harcamadan gelir."
+        ],
+        "features": [
+          "Kendi hesabınız; kişi, grup ve geçmiş senkronu",
+          "Telefondan yazılanlar da panelde"
+        ],
+        "bestLabel": "En uygun",
+        "bestFor": "Zaten konuştuğunuz müşteriler, birebir satış",
+        "note": "Kişisel hesaptan toplu mesaj göndermek hesabınızı etkileyebilir. Kampanyalar için bot veya WhatsApp Business önerilir.",
+        "scene": {
+          "status": "bağlı",
+          "inbox": "Ortak gelen kutusu",
+          "progress": "Geçmiş aktarılıyor… 50 mesaj/sohbet",
+          "echo": "Telefondan yazdınız → panelde de görünüyor",
+          "rows": [
+            {
+              "name": "Ayşe Kaya",
+              "meta": "Kişi"
+            },
+            {
+              "name": "Siparişler",
+              "meta": "Grup"
+            },
+            {
+              "name": "Deniz Arslan",
+              "meta": "Kişi"
+            },
+            {
+              "name": "Destek",
+              "meta": "Grup"
+            }
+          ]
+        }
+      },
+      "compareRows": [
+        {
+          "label": "Bağlantı",
+          "bot": {
+            "text": "BotFather token"
+          },
+          "personal": {
+            "text": "QR veya giriş bağlantısı"
+          }
+        },
+        {
+          "label": "Butonlu menü ve anket",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "dash"
+          }
+        },
+        {
+          "label": "10 medyalık albüm",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "dash"
+          }
+        },
+        {
+          "label": "Gruplar",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        },
+        {
+          "label": "Rehber senkronu",
+          "bot": {
+            "mark": "dash"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        },
+        {
+          "label": "Geçmiş mesaj aktarımı",
+          "bot": {
+            "mark": "dash"
+          },
+          "personal": {
+            "mark": "yes",
+            "note": "sohbet başına 50"
+          }
+        },
+        {
+          "label": "Telefondan yazılanlar panelde",
+          "bot": {
+            "mark": "dash"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        },
+        {
+          "label": "Kampanya/toplu gönderim",
+          "bot": {
+            "text": "Uyarısız"
+          },
+          "personal": {
+            "text": "Dikkatli kullanın"
+          }
+        },
+        {
+          "label": "Ortak gelen kutusu, AI, chatbot",
+          "bot": {
+            "mark": "yes"
+          },
+          "personal": {
+            "mark": "yes"
+          }
+        }
+      ],
+      "pick": {
+        "title": "Hangisini seçeyim?",
+        "bot": {
+          "title": "Menü, anket, kampanya istiyorum",
+          "result": "Bot",
+          "href": "#interactive"
+        },
+        "personal": {
+          "title": "Müşterilerim zaten kişisel hesabıma yazıyor",
+          "result": "Personal",
+          "href": "#connect"
+        },
+        "both": {
+          "title": "İkisi birden",
+          "body": "İkisini de bağlayın, aynı gelen kutusunda toplanır."
+        }
+      }
+    },
+    "interactive": {
+      "eyebrow": "Telegram Bot etkileşimi",
+      "title": "Yazı yazdırmayın, dokunsun",
+      "subtitle": "Butonlu menüler, anketler ve medya albümleri ile müşteriyi yönlendirin. Omnider Telegram Bot API biçimine çevirir.",
+      "cards": [
+        {
+          "id": "menus",
+          "title": "Butonlu menüler",
+          "desc": "Müşteri yazmak zorunda kalmaz. Link açma, arama, e-posta gönderme veya numara/konum paylaşma gibi aksiyonları Telegram butonlarıyla sunarsınız; seçim anında panele düşer.",
+          "points": [
+            "Inline veya reply keyboard ile yönlendirme",
+            "Web linki, telefon ve e-posta butonları"
+          ]
+        },
+        {
+          "id": "polls",
+          "title": "Anket ve oy",
+          "desc": "Randevu günü, tercih veya memnuniyet sorularını anket olarak gönderin. Oy sonuçları sohbette görünür; ekibiniz hangi seçeneğin önde olduğunu takip eder.",
+          "points": [
+            "Tek veya çok seçimli anket",
+            "Canlı oy dağılımı"
+          ]
+        },
+        {
+          "id": "albums",
+          "title": "Medya albümü",
+          "desc": "Ürün görselleri, katalog sayfaları veya dokümanları tek mesajda albüm olarak iletin. Müşteri kaydırarak inceler; bot bir sonraki adımı aynı sohbette sürdürür.",
+          "points": [
+            "Tek mesajda 10’a kadar medya",
+            "Görsel, belge veya karışık albüm"
+          ]
+        }
+      ],
+      "demo": {
+        "botName": "Omnider Bot",
+        "online": "çevrimiçi",
+        "greeting": "Size nasıl yardımcı olalım?",
+        "keys": [
+          "Fiyat",
+          "Stok",
+          "Randevu"
+        ],
+        "poll": "Hangi gün uygun?",
+        "options": [
+          "Salı",
+          "Perşembe",
+          "Cumartesi"
+        ],
+        "typing": "yazıyor…"
+      }
+    },
+    "connect": {
+      "eyebrow": "Telegram Personal",
+      "title": "Kişisel hesabı QR ile bağlayın",
+      "subtitle": "Unipile üzerinden Telegram hesabınızı bağlayın; rehber, gruplar ve sohbet geçmişi panelde toplanır.",
+      "stepsLabel": "3 adımda bağlantı",
+      "steps": [
+        "QR’ı Telegram ile taratın veya 15 dk’lık linki açın.",
+        "Rehberiniz ve gruplarınız içeri aktarılır.",
+        "Her sohbetten son 50 mesaj kredi harcamadan gelir."
+      ],
+      "features": [
+        "Kendi hesabınız; kişi, grup ve geçmiş senkronu",
+        "Telefondan yazılanlar da panelde"
+      ],
+      "note": "Toplu mesaj için bot veya WhatsApp Business önerilir.",
+      "widget": {
+        "channel": "Telegram Personal",
+        "waiting": "Telegram ile tarayın",
+        "status": "Bekleniyor",
+        "progress": "Geçmiş aktarılıyor… 50 mesaj/sohbet",
+        "echo": "Telefondan yazdınız → panelde de görünüyor"
+      }
+    },
+    "team": {
+      "eyebrow": "Ekip + Yapay Zeka",
+      "title": "Bir Telegram. Tüm ekip aynı anda.",
+      "subtitle": "Bot veya kişisel hesaptan gelen mesajlar tek kutuda. Yapay zeka ilk yanıtı verir; zorlanınca ekibe bırakır.",
+      "items": [
+        {
+          "title": "Bot + kişisel, ortak kutu",
+          "body": "İki bağlantı türü aynı inbox’ta birleşir."
+        },
+        {
+          "title": "Saniyeler içinde AI yanıt",
+          "body": "Fiyat, stok, randevu sorularına anında cevap."
+        },
+        {
+          "title": "İnsan lazımsa bırakır",
+          "body": "Konuşmayı satış veya destek ekibine aktarır."
+        }
+      ]
+    },
+    "try": {
+      "eyebrow": "Hemen deneyin",
+      "title": "Botu veya kişisel hesabı deneyin",
+      "body": "QR’ı tarayın veya bağlantıyı açın; Omnider Telegram deneyimini canlı görün.",
+      "bot": {
+        "title": "Telegram Bot",
+        "body": "Omnider botuyla hemen konuşun.",
+        "handle": "t.me/omnider_bot",
+        "url": "https://t.me/omnider_bot",
+        "cta": "Botu aç",
+        "ctaTitle": "Omnider Telegram botunu aç",
+        "imageAlt": "Omnider Telegram botu için QR kod"
+      },
+      "personal": {
+        "title": "Telegram Personal",
+        "body": "Kişisel Omnider hesabına yazın.",
+        "handle": "t.me/omnidertech",
+        "url": "https://t.me/omnidertech",
+        "cta": "Hesabı aç",
+        "ctaTitle": "Omnider Telegram kişisel hesabını aç",
+        "imageAlt": "Omnider Telegram kişisel hesabı için QR kod"
+      }
     }
   }
 }

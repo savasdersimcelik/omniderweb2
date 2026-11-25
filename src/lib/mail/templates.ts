@@ -145,7 +145,7 @@ export type LeadEmailData = {
 };
 
 export function buildAdminLeadEmail(data: LeadEmailData) {
-  const locale: Locale = data.locale === "en" ? "en" : "tr";
+  const locale: Locale = data.locale === "tr" ? "tr" : "en";
   const t = copy(locale);
   const year = String(new Date().getFullYear());
   const notProvided = t.notProvided;
@@ -263,7 +263,7 @@ export function buildAdminLeadEmail(data: LeadEmailData) {
 }
 
 export function buildUserLeadConfirmationEmail(data: LeadEmailData) {
-  const locale: Locale = data.locale === "en" ? "en" : "tr";
+  const locale: Locale = data.locale === "tr" ? "tr" : "en";
   const t = copy(locale);
   const year = String(new Date().getFullYear());
   const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://omnider.com";

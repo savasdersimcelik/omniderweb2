@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   const company = body.company?.trim() || "";
   const subject = body.subject?.trim() || "";
   const message = body.message?.trim() || "";
-  const locale = body.locale === "en" ? "en" : "tr";
+  const locale = body.locale === "tr" ? "tr" : "en";
 
   if (
     !name ||
