@@ -1,35 +1,47 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { InfoIcon } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { UserTrust } from "@/components/trust";
-import { WhatsAppHeroBackdrop } from "../whatsapp-business/WhatsAppHeroBackdrop";
-import { WhatsAppHeroChat } from "../whatsapp-business/WhatsAppHeroChat";
+
+const photoMaskMobile: CSSProperties = {
+  WebkitMaskImage:
+    "linear-gradient(90deg, transparent 0%, #000 6%, #000 100%), linear-gradient(transparent 0%, #000 8%, #000 92%, transparent 100%)",
+  maskImage:
+    "linear-gradient(90deg, transparent 0%, #000 6%, #000 100%), linear-gradient(transparent 0%, #000 8%, #000 92%, transparent 100%)",
+  WebkitMaskComposite: "source-in",
+  maskComposite: "intersect",
+};
+
+const photoMask: CSSProperties = {
+  WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 50%, #000 100%)",
+  maskImage: "linear-gradient(90deg, transparent 0%, #000 50%, #000 100%)",
+};
 
 export async function WhatsAppPersonalHero() {
   const t = await getTranslations("PlatformWhatsAppPersonal");
   const tTrust = await getTranslations("Trust");
-  const steps = t.raw("hero.chat.steps") as Array<{
-    kind: "customer" | "ai" | "agent" | "typing" | "transfer" | "buttons";
-    text?: string;
-    buttons?: string[];
-  }>;
-  const sidebar = t.raw("hero.chat.sidebar") as Array<{
-    name: string;
-    preview: string;
-    time: string;
-    unread?: number;
-  }>;
 
   return (
     <section
-      className="wa-biz-hero viewport-hero relative w-full overflow-hidden border-b border-[color-mix(in_srgb,var(--wa-deep)_14%,transparent)]"
+      className="wa-biz-hero wa-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b border-[color-mix(in_srgb,var(--wa-deep)_10%,transparent)]"
       aria-labelledby="wa-personal-hero-title"
     >
-      <WhatsAppHeroBackdrop />
+      <Image
+        src="/images/platforms/whatsapp/hero-personal-v3.jpg"
+        alt=""
+        width={2400}
+        height={1600}
+        priority
+        unoptimized
+        sizes="55vw"
+        className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden h-full w-auto max-w-none object-contain lg:block"
+        style={photoMask}
+      />
 
-      <div className="home-hero relative z-10 flex h-full min-h-0 w-full flex-1 flex-col items-stretch px-4 pt-0 pb-0 sm:items-center sm:px-6">
-        <div className="home-hero__intro wa-biz-hero__intro relative z-10 flex w-full max-w-7xl flex-col items-center justify-center self-center text-center">
-          <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--wa-teal)]">
+      <div className="relative z-10 mx-auto flex h-full min-h-0 w-full max-w-360 flex-col px-4 py-4 sm:px-6 lg:pointer-events-none lg:grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-center lg:px-10 lg:py-0 xl:px-14">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col items-center justify-center text-center lg:pointer-events-auto lg:flex-none lg:items-start lg:py-6 lg:pr-8 lg:text-left">
+          <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--wa-deep)] lg:mb-5 lg:gap-2.5 lg:text-[15px]">
             <Image
               src="/icons/platforms/whatsapp-personal.png"
               alt=""
@@ -42,19 +54,18 @@ export async function WhatsAppPersonalHero() {
           </p>
           <h1
             id="wa-personal-hero-title"
-            className="wa-biz-hero__title mx-auto text-center font-bold tracking-tight text-[var(--wa-deep)]"
+            className="font-sans text-[clamp(1.85rem,6.5vw,2.35rem)] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--wa-deep)] lg:text-5xl lg:leading-[1.06] xl:text-6xl"
           >
-            <span>{t("hero.titleLine1")}</span>
-            <span>{t("hero.titleLine2")}</span>
+            <span className="block whitespace-nowrap">{t("hero.titleLine1")}</span>
+            <span className="block whitespace-nowrap">{t("hero.titleLine2")}</span>
           </h1>
-
-          <p className="wa-biz-hero__desc mx-auto text-center text-[color-mix(in_srgb,var(--wa-deep)_72%,transparent)]">
+          <p className="mt-4 line-clamp-2 max-w-lg text-pretty text-lg leading-snug text-[color-mix(in_srgb,var(--wa-deep)_72%,transparent)] lg:mt-7 lg:max-w-xl lg:text-xl lg:leading-relaxed xl:max-w-2xl xl:text-2xl">
             {t("hero.description")}
           </p>
 
-          <div className="hero-trust home-hero__trust mt-5">
+          <div className="hero-trust home-hero__trust mt-5 max-w-none flex-row flex-wrap items-center justify-center gap-x-4 gap-y-3 lg:mt-8 lg:origin-left lg:scale-105 lg:justify-start">
             <div className="wap-hero__disclaimer" role="note">
-              <InfoIcon className="h-4 w-4 shrink-0" aria-hidden />
+              <InfoIcon className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
               <span>
                 <strong>{t("hero.disclaimer.title")}</strong>
                 <span>{t("hero.disclaimer.body")}</span>
@@ -69,22 +80,19 @@ export async function WhatsAppPersonalHero() {
           </div>
         </div>
 
-        <div className="hero-chat-shell wa-biz-hero__chat relative z-20 mt-0 flex min-h-0 w-full flex-col items-center self-center">
-          <WhatsAppHeroChat
-            businessName={t("hero.chat.businessName")}
-            online={t("hero.chat.online")}
-            typing={t("hero.chat.typing")}
-            aiLabel={t("hero.chat.aiLabel")}
-            agentLabel={t("hero.chat.agentLabel")}
-            customerName={t("hero.chat.customerName")}
-            browserUrl={t("hero.chat.browserUrl")}
-            inboxTitle={t("hero.chat.inboxTitle")}
-            searchPlaceholder={t("hero.chat.searchPlaceholder")}
-            composerPlaceholder={t("hero.chat.composerPlaceholder")}
-            sidebar={sidebar}
-            steps={steps}
-            platformIcon="/icons/platforms/whatsapp-personal.png"
-          />
+        <div className="relative mt-2 h-[42%] shrink-0 lg:mt-0 lg:h-full">
+          <div className="absolute inset-0 overflow-hidden lg:hidden">
+            <Image
+              src="/images/platforms/whatsapp/hero-personal-v3.jpg"
+              alt=""
+              fill
+              priority
+              unoptimized
+              sizes="100vw"
+              className="object-contain object-right"
+              style={photoMaskMobile}
+            />
+          </div>
         </div>
       </div>
     </section>

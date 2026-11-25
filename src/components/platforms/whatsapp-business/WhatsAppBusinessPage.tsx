@@ -7,11 +7,13 @@ import { PerformanceSection } from "./PerformanceSection";
 import { TemplatesSection } from "./TemplatesSection";
 import { TrySection } from "./TrySection";
 import { WhatsAppBusinessHero } from "./WhatsAppBusinessHero";
+import { WhatsAppInboxSection } from "./WhatsAppInboxSection";
 
 export async function WhatsAppBusinessPage() {
   return (
     <>
       <WhatsAppBusinessHero />
+      <WhatsAppInboxSection namespace="PlatformWhatsAppBusiness" />
       <ConnectSection />
       <PerformanceSection />
       <InteractiveSection />

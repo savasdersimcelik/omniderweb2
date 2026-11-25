@@ -2142,7 +2142,7 @@
       "badge": "WhatsApp Business",
       "titleLine1": "Customers write,",
       "titleLine2": "AI replies",
-      "description": "Run WhatsApp Business API, AI replies, and team inbox on Omnider — in one place.",
+      "description": "Manage WhatsApp Business API, AI responses and team inbox in one place with Omnider.",
       "ctaPrimary": "Open free demo account",
       "ctaSecondary": "View pricing",
       "chat": {
@@ -2218,6 +2218,12 @@
         "browserUrl": "app.omnider.com/inbox",
         "inboxTitle": "WhatsApp inbox"
       }
+    },
+    "inbox": {
+      "titleLine1": "WhatsApp messages,",
+      "titleLine2": "one inbox",
+      "description": "Incoming WhatsApp messages land in the Omnider inbox. AI sends the first reply, and your team takes over when it matters.",
+      "cta": "We'll call you"
     },
     "templates": {
       "eyebrow": "Meta templates",
@@ -2549,10 +2555,10 @@
       "badge": "WhatsApp Personal",
       "titleLine1": "Customers write,",
       "titleLine2": "AI replies",
-      "description": "Connect your number with a QR code — shared inbox, AI auto-replies and chatbot automation on Omnider, all in one platform.",
+      "description": "Connect via QR code for a shared inbox, AI replies and chatbot automation — all on Omnider.",
       "disclaimer": {
         "title": "Not an official connection",
-        "body": "Session-based · not Business API"
+        "body": "It is a session-based connection"
       },
       "chat": {
         "businessName": "Selin Studio",
@@ -2618,6 +2624,12 @@
           }
         ]
       }
+    },
+    "inbox": {
+      "titleLine1": "WhatsApp chats,",
+      "titleLine2": "one inbox",
+      "description": "Chats from the WhatsApp on your phone land in the Omnider inbox. AI sends the first reply, and your team takes over when it matters.",
+      "cta": "We'll call you"
     },
     "connect": {
       "eyebrow": "Connect with QR or a code",
@@ -2903,7 +2915,7 @@
     },
     "hero": {
       "badge": "Instagram",
-      "titleLine1": "DMs come in,",
+      "titleLine1": "A DM or comment comes in,",
       "titleLine2": "AI replies",
       "description": "Unify Instagram DMs, post comments, and team management in one Omnider inbox — AI replies first, your team stays in control.",
       "bubbles": [
@@ -3298,17 +3310,31 @@
     },
     "hero": {
       "badge": "Facebook Messenger",
-      "titleLine1": "Ads, comments, messages",
-      "titleLine2": "answered in one inbox",
-      "description": "Connect your Facebook Page. Chats that start from an ad, comments on a post, and direct messages all land in the same inbox. AI sends the first reply, your team takes over, and the appointment is written to the calendar.",
+      "title": "<line>Ads, comments and messages</line><line>answered <accent>in one inbox</accent></line>",
+      "description": "Connect your Facebook Page. Ad chats, comments, and direct messages land in the same inbox. AI sends the first reply, then your team takes over.",
       "cta": "We'll call you",
+      "ctaPrimary": "We'll call you",
+      "ctaSecondary": "Start for free",
       "flowLabel": "Messenger flow",
       "flow": [
         { "title": "Ad click", "detail": "Messenger" },
         { "title": "Chat", "detail": "24/7 reply" },
         { "title": "Appointment", "detail": "On the calendar" },
         { "title": "Sale", "detail": "Closed in inbox" }
-      ]
+      ],
+      "details": {
+        "aiValue": "24/7",
+        "aiLabel": "AI replies first",
+        "chats": [
+          { "title": "Ad chat", "detail": "New lead" },
+          { "title": "Direct message", "detail": "Customer question" }
+        ],
+        "inboxTitle": "One inbox",
+        "inboxDetail": "Every conversation in one place",
+        "tags": ["Ads", "Comments", "Messages"],
+        "assistTitle": "AI assisted",
+        "assistDetail": "Smart. Fast. Effective."
+      }
     },
     "interactive": {
       "eyebrow": "Interactive Messenger",

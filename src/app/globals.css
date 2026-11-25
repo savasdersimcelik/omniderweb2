@@ -5516,6 +5516,18 @@
     );
 }
 
+/* Photo hero: clean mint/white plane matching the marketing mockup */
+.wa-biz-hero--photo {
+  background: linear-gradient(
+    105deg,
+    #ffffff 0%,
+    #f7fcf9 28%,
+    #eef8f3 52%,
+    #e8f5f0 72%,
+    #f4faf7 100%
+  );
+}
+
 /* Intro fills remaining space above chat and centers copy */
 .wa-biz-hero .home-hero {
   justify-content: flex-start;
@@ -6368,6 +6380,31 @@
   color: color-mix(in srgb, var(--ig-pink) 70%, #7c2d12);
 }
 
+/* WhatsApp inbox: browser chat lives under the hero. The hero slot stays empty. */
+.wa-inbox {
+  background: #fff;
+  border-bottom: 1px solid color-mix(in srgb, var(--wa-deep, #026450) 14%, transparent);
+}
+
+.wa-inbox .home-hero {
+  height: min(48rem, 92svh);
+  min-height: 38rem;
+}
+
+.wa-inbox .hero-chat-shell {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+}
+
+@media (min-width: 40rem) {
+  .wa-inbox .hero-chat-shell {
+    margin-top: 2rem;
+  }
+}
+
 /* Instagram inbox section uses the homepage chat widget under the hero. */
 .ig-inbox {
   background: #fff;
@@ -6689,6 +6726,75 @@
 }
 
 @media (max-width: 39.99rem) {
+  /* Meta + güven yan yana */
+  .ig-biz-hero__trust.hero-trust {
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    margin-top: 0.65rem;
+    flex-shrink: 0;
+  }
+
+  .ig-biz-hero__trust .meta-tech-provider {
+    gap: 0.4rem;
+    flex-shrink: 0;
+    padding-right: 0.85rem;
+    border-right: 1px solid rgb(203 213 225);
+  }
+
+  .ig-biz-hero__trust .user-trust {
+    gap: 0.55rem;
+    padding-left: 0.15rem;
+    border-left: none;
+    min-width: 0;
+  }
+
+  .ig-biz-hero__trust .user-trust__face {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+
+  .ig-biz-hero__trust .user-trust__face + .user-trust__face {
+    margin-left: -0.55rem;
+  }
+
+  .ig-biz-hero__trust .user-trust__rating {
+    padding-left: 0.7rem;
+    margin-left: 0.15rem;
+    border-left: 1px solid rgb(203 213 225);
+  }
+
+  .ig-biz-hero__trust .user-trust__stars svg {
+    width: 0.78rem;
+    height: 0.78rem;
+  }
+
+  .ig-biz-hero__trust .user-trust__stars span {
+    margin-left: 0.25rem;
+    font-size: 0.7rem;
+  }
+
+  .ig-biz-hero__trust .user-trust__rating p {
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+
+  .ig-biz-hero__trust .meta-tech-provider strong {
+    font-size: 0.82rem;
+  }
+
+  .ig-biz-hero__trust .meta-tech-provider strong + span {
+    font-size: 0.58rem;
+  }
+
+  .ig-biz-hero__trust .meta-tech-provider__mark {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
   .ig-biz-hero__bubble.is-left.is-c,
   .ig-biz-hero__bubble.is-right.is-c {
     display: none;
@@ -8599,7 +8705,7 @@
 
 .wap-hero__disclaimer {
   display: inline-flex;
-  max-width: 22rem;
+  max-width: 16.5rem;
   align-items: flex-start;
   gap: 0.55rem;
   border-radius: 0.9rem;
@@ -8610,6 +8716,7 @@
   text-align: left;
   font-size: 0.75rem;
   line-height: 1.4;
+  white-space: normal;
 }
 
 .wap-hero__disclaimer strong {
@@ -8656,210 +8763,6 @@
   color: var(--color-messenger-blue);
   font-size: 0.7rem;
   font-weight: 700;
-}
-
-.ms-biz-hero {
-  isolation: isolate;
-  background:
-    radial-gradient(ellipse 70% 48% at 78% 18%, color-mix(in srgb, var(--color-messenger-blue) 16%, transparent), transparent 68%),
-    radial-gradient(ellipse 46% 40% at 8% 86%, color-mix(in srgb, #7cc4ff 28%, transparent), transparent 70%),
-    linear-gradient(180deg, #fff 0%, #f4f9ff 100%);
-}
-
-.ms-hero__bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.ms-hero__photo {
-  object-fit: cover;
-  object-position: center 40%;
-}
-
-/* Dark veil between the forest photo and the hero copy. */
-.ms-hero__scrim {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 78% 72% at 50% 46%, rgb(4 10 8 / 0.72), rgb(4 10 8 / 0.52) 70%, rgb(4 10 8 / 0.34) 100%);
-}
-
-.ms-biz-hero__shell {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  margin-inline: auto;
-  padding: 1.5rem 1.25rem;
-  text-align: center;
-}
-
-.ms-biz-hero__copy {
-  display: flex;
-  width: min(100%, 68rem);
-  flex: 1 1 auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-  text-align: center;
-}
-
-.ms-biz-hero__title {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.08em;
-  text-align: center;
-  color: #fff;
-  font-size: clamp(1.7rem, 5.6vw, 3.15rem);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-}
-
-.ms-biz-hero__title span {
-  display: block;
-  max-width: 100%;
-  white-space: nowrap;
-}
-
-.ms-biz-hero__accent {
-  background: linear-gradient(100deg, #5eb6ff, var(--color-messenger-blue));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.ms-biz-hero__desc {
-  max-width: 46rem;
-  margin: 1.25rem auto 0;
-  color: rgb(241 245 249 / 0.92);
-  text-align: center;
-  text-wrap: pretty;
-  font-size: clamp(1.02rem, 1.45vw, 1.22rem);
-  line-height: 1.55;
-}
-
-.ms-biz-hero .meta-tech-provider {
-  color: #fff;
-}
-
-.ms-biz-hero .meta-tech-provider strong + span,
-.ms-biz-hero .user-trust__stars span,
-.ms-biz-hero .user-trust__rating p {
-  color: rgb(226 232 240 / 0.86);
-}
-
-.ms-biz-hero .user-trust__rating strong {
-  color: #fff;
-}
-
-.ms-biz-hero .user-trust__rating,
-.ms-biz-hero .hero-trust .user-trust {
-  border-left-color: rgb(255 255 255 / 0.28);
-}
-
-.ms-biz-hero__trust {
-  margin-top: 1.65rem;
-}
-
-.ms-biz-hero__trust.hero-trust {
-  width: auto;
-  max-width: 100%;
-  margin-inline: auto;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Messenger hero flow: four pills under the copy. */
-.ms-hero-flow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  width: min(100%, 52rem);
-  margin: 2rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.ms-hero-flow__step {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  min-width: 0;
-  padding: 0.4rem 0.85rem 0.4rem 0.4rem;
-  border: 1px solid rgb(255 255 255 / 0.14);
-  border-radius: 999px;
-  background: rgb(6 10 14 / 0.55);
-  color: #fff;
-  backdrop-filter: blur(12px);
-}
-
-.ms-hero-flow__step--active {
-  border-color: rgb(0 132 255 / 0.85);
-  background: rgb(0 132 255 / 0.22);
-  box-shadow: 0 0 0 1px rgb(0 132 255 / 0.28), 0 10px 28px rgb(0 70 160 / 0.28);
-}
-
-.ms-hero-flow__icon {
-  display: grid;
-  width: 2rem;
-  height: 2rem;
-  flex-shrink: 0;
-  place-items: center;
-  border-radius: 999px;
-  background: rgb(255 255 255 / 0.1);
-}
-
-.ms-hero-flow__icon svg {
-  width: 0.95rem;
-  height: 0.95rem;
-}
-
-.ms-hero-flow__step--active .ms-hero-flow__icon {
-  background: var(--color-messenger-blue, #0084ff);
-}
-
-.ms-hero-flow__text {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  text-align: left;
-}
-
-.ms-hero-flow__title {
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-}
-
-.ms-hero-flow__detail {
-  margin-top: 0.08rem;
-  color: rgb(226 232 240 / 0.78);
-  font-size: 0.68rem;
-  line-height: 1.15;
-}
-
-.ms-biz-hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
 }
 
 .ms-interactive {
@@ -9974,7 +9877,6 @@
 .home-hero__title,
 .wa-biz-hero__title,
 .ig-biz-hero__title,
-.ms-biz-hero__title,
 .pricing-hero__title,
 .contact-hero__title {
   font-family: var(--font-brand), "Times New Roman", serif;
@@ -9988,7 +9890,6 @@
 .closing-cta__desc,
 .wa-biz-hero__desc,
 .ig-biz-hero__desc,
-.ms-biz-hero__desc,
 .wap-stats__body,
 .pricing-hero__desc,
 .pricing-section-subtitle,

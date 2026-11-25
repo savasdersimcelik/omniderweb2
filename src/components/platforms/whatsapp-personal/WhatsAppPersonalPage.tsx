@@ -5,12 +5,17 @@ import { RichMessagesSection } from "./RichMessagesSection";
 import { SharedContactsSection } from "./SharedContactsSection";
 import { StatsSection } from "./StatsSection";
 import { TrySection } from "./TrySection";
+import { WhatsAppInboxSection } from "../whatsapp-business/WhatsAppInboxSection";
 import { WhatsAppPersonalHero } from "./WhatsAppPersonalHero";
 
 export async function WhatsAppPersonalPage() {
   return (
     <>
       <WhatsAppPersonalHero />
+      <WhatsAppInboxSection
+        namespace="PlatformWhatsAppPersonal"
+        platformIcon="/icons/platforms/whatsapp-personal.png"
+      />
       <ConnectSection />
       <StatsSection
         id="personal-stats"

@@ -2142,7 +2142,7 @@
       "badge": "WhatsApp Business",
       "titleLine1": "Müşteri yazsın,",
       "titleLine2": "yapay zeka yanıtlasın",
-      "description": "WhatsApp Business API, yapay zeka yanıtlar ve ekip yönetimini Omnider’da tek yerden yönetin.",
+      "description": "WhatsApp Business API, yapay zeka yanıtları ve ekip gelen kutusunu Omnider ile tek yerden yönetin.",
       "ctaPrimary": "Hemen demo hesap aç",
       "ctaSecondary": "Fiyatları inceleyin",
       "chat": {
@@ -2218,6 +2218,12 @@
         "browserUrl": "app.omnider.com/inbox",
         "inboxTitle": "WhatsApp gelen kutusu"
       }
+    },
+    "inbox": {
+      "titleLine1": "WhatsApp mesajı,",
+      "titleLine2": "tek gelen kutu",
+      "description": "Gelen WhatsApp mesajları Omnider gelen kutusunda toplanır. Yapay zeka ilk yanıtı verir, ekibiniz gerektiğinde devralır.",
+      "cta": "Sizi arayalım"
     },
     "templates": {
       "eyebrow": "Meta şablonları",
@@ -2549,10 +2555,10 @@
       "badge": "WhatsApp Personal",
       "titleLine1": "Müşteri yazsın,",
       "titleLine2": "yapay zeka yanıtlasın",
-      "description": "QR kod ile numaranızı bağlayın; ortak gelen kutusu, yapay zeka yanıtları ve chatbot otomasyonunu Omnider ile tek platformda kullanın.",
+      "description": "QR kod ile bağlanın; ortak gelen kutusu, yapay zeka yanıtları ve chatbot otomasyonu — hepsi Omnider’da.",
       "disclaimer": {
         "title": "Resmi bağlantı değildir",
-        "body": "Oturum tabanlıdır · Business API değildir"
+        "body": "Oturum tabanlı bir bağlantıdır"
       },
       "chat": {
         "businessName": "Atölye Selin",
@@ -2618,6 +2624,12 @@
           }
         ]
       }
+    },
+    "inbox": {
+      "titleLine1": "WhatsApp sohbeti,",
+      "titleLine2": "tek gelen kutu",
+      "description": "Telefondaki WhatsApp sohbetleri Omnider gelen kutusunda toplanır. Yapay zeka ilk yanıtı verir, ekibiniz gerektiğinde devralır.",
+      "cta": "Sizi arayalım"
     },
     "connect": {
       "eyebrow": "QR ya da kodla bağlan",
@@ -2903,7 +2915,7 @@
     },
     "hero": {
       "badge": "Instagram",
-      "titleLine1": "DM gelsin,",
+      "titleLine1": "DM veya Yorum gelsin,",
       "titleLine2": "yapay zeka yanıtlasın",
       "description": "Instagram DM’leri, gönderi yorumları ve ekip yönetimini Omnider’da tek gelen kutuda birleştirin; yapay zeka yanıtlar, ekibiniz kontrol eder.",
       "bubbles": [
@@ -3298,17 +3310,31 @@
     },
     "hero": {
       "badge": "Facebook Messenger",
-      "titleLine1": "Reklam, yorum ve mesaj",
-      "titleLine2": "tek kutuda cevaplanır",
-      "description": "Facebook sayfanızı bağlayın. Reklam sohbeti, gönderi yorumu ve doğrudan mesaj aynı gelen kutusuna düşer. Yapay zeka ilk yanıtı verir, ekibiniz devralır, randevu takvime yazılır.",
+      "title": "<line>Reklam, yorum ve mesaj</line><line><accent>tek kutuda</accent> cevaplanır</line>",
+      "description": "Facebook sayfanızı bağlayın. Reklam sohbeti, yorum ve doğrudan mesaj aynı kutuda. Yapay zeka ilk yanıtı verir, ekibiniz devralır.",
       "cta": "Sizi arayalım",
+      "ctaPrimary": "Sizi arayalım",
+      "ctaSecondary": "Ücretsiz Başla",
       "flowLabel": "Messenger akışı",
       "flow": [
         { "title": "Reklam tıklaması", "detail": "Messenger" },
         { "title": "Sohbet", "detail": "7/24 yanıt" },
         { "title": "Randevu", "detail": "Takvime bağlandı" },
         { "title": "Satış", "detail": "Gelen kutuda" }
-      ]
+      ],
+      "details": {
+        "aiValue": "7/24",
+        "aiLabel": "yapay zeka yanıtı",
+        "chats": [
+          { "title": "Reklam sohbeti", "detail": "Yeni lead" },
+          { "title": "Doğrudan mesaj", "detail": "Müşteri sorusu" }
+        ],
+        "inboxTitle": "Aynı kutuda",
+        "inboxDetail": "Tüm konuşmalar tek yerde",
+        "tags": ["Reklam", "Yorum", "Mesaj"],
+        "assistTitle": "AI Destekli",
+        "assistDetail": "Akıllı. Hızlı. Etkili."
+      }
     },
     "interactive": {
       "eyebrow": "Messenger’da etkileşimli mesaj",
