@@ -35,7 +35,7 @@ export async function MessengerHero() {
 
   return (
     <section
-      className="relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b border-slate-200/70 bg-[linear-gradient(105deg,#ffffff_0%,#f7fbff_28%,#eef5ff_52%,#f4f8ff_72%,#ffffff_100%)]"
+      className="ms-biz-hero ms-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b border-slate-200/70"
       aria-labelledby="ms-biz-hero-title"
     >
       <Image

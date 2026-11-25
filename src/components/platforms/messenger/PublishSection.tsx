@@ -17,7 +17,7 @@ export async function PublishSection() {
   return (
     <section
       id="publish"
-      className="ms-publish border-t border-line bg-surface-subtle/40"
+      className="ms-publish border-t border-line"
       aria-labelledby="ms-publish-title"
     >
       <Container className="section">

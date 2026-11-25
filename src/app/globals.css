@@ -5598,6 +5598,166 @@
   background: transparent;
 }
 
+/*
+ * Messenger page atmosphere — same mesh pattern, Messenger blue.
+ */
+.ms-page-atmosphere {
+  --ms-hero: #0084ff;
+  --ms-hero-deep: #0072e6;
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse 58% 42% at 8% 12%,
+      color-mix(in srgb, var(--ms-hero) 12%, transparent),
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 52% 38% at 92% 28%,
+      color-mix(in srgb, var(--ms-hero-deep) 10%, transparent),
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 60% 44% at 70% 72%,
+      color-mix(in srgb, var(--ms-hero) 8%, transparent),
+      transparent 76%
+    ),
+    radial-gradient(
+      ellipse 48% 36% at 18% 88%,
+      color-mix(in srgb, #4dabf7 9%, transparent),
+      transparent 72%
+    ),
+    linear-gradient(
+      168deg,
+      #ffffff 0%,
+      #f7fbff 22%,
+      #eef5ff 48%,
+      #e8f1ff 74%,
+      #f4f8ff 100%
+    );
+}
+
+.ms-page-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.38;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    color-mix(in srgb, var(--ms-hero) 22%, transparent) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+  mask-image: radial-gradient(
+    ellipse 88% 70% at 50% 42%,
+    #000 18%,
+    transparent 78%
+  );
+}
+
+@media (min-width: 64rem) {
+  .ms-page-atmosphere::before {
+    background-attachment: fixed;
+  }
+}
+
+.ms-page-atmosphere > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ms-page-atmosphere .ms-biz-hero,
+.ms-page-atmosphere .ms-biz-hero--photo,
+.ms-page-atmosphere .ms-inbox,
+.ms-page-atmosphere .ms-interactive,
+.ms-page-atmosphere .ms-cm,
+.ms-page-atmosphere .ms-publish,
+.ms-page-atmosphere .ms-ad-referral,
+.ms-page-atmosphere .ms-try {
+  background: transparent !important;
+}
+
+/*
+ * Instagram page atmosphere — same mesh pattern, purple / pink / orange.
+ */
+.ig-page-atmosphere {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse 58% 42% at 8% 12%,
+      color-mix(in srgb, var(--ig-purple) 12%, transparent),
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 52% 38% at 92% 28%,
+      color-mix(in srgb, var(--ig-pink) 9%, transparent),
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 60% 44% at 70% 72%,
+      color-mix(in srgb, var(--ig-orange) 10%, transparent),
+      transparent 76%
+    ),
+    radial-gradient(
+      ellipse 48% 36% at 18% 88%,
+      color-mix(in srgb, var(--ig-purple) 8%, transparent),
+      transparent 72%
+    ),
+    linear-gradient(
+      168deg,
+      #ffffff 0%,
+      #faf7fc 22%,
+      #fff5f8 48%,
+      #fff6ec 74%,
+      #faf8fc 100%
+    );
+}
+
+.ig-page-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.36;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    color-mix(in srgb, var(--ig-purple) 22%, transparent) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+  mask-image: radial-gradient(
+    ellipse 88% 70% at 50% 42%,
+    #000 18%,
+    transparent 78%
+  );
+}
+
+@media (min-width: 64rem) {
+  .ig-page-atmosphere::before {
+    background-attachment: fixed;
+  }
+}
+
+.ig-page-atmosphere > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ig-page-atmosphere .ig-biz-hero,
+.ig-page-atmosphere .ig-inbox,
+.ig-page-atmosphere .ig-interactive,
+.ig-page-atmosphere .ig-cm,
+.ig-page-atmosphere .ig-publish,
+.ig-page-atmosphere .ig-ad-referral,
+.ig-page-atmosphere .ig-try,
+.ig-page-atmosphere .ig-moderation {
+  background: transparent !important;
+}
+
 /* Intro fills remaining space above chat and centers copy */
 .wa-biz-hero .home-hero {
   justify-content: flex-start;
@@ -6474,20 +6634,33 @@
   }
 }
 
-/* Instagram inbox section uses the homepage chat widget under the hero. */
-.ig-inbox {
+/* Instagram / Messenger inbox sections use the homepage chat widget under the hero. */
+.ig-inbox,
+.ms-inbox {
   background: #fff;
   border-bottom: 1px solid var(--color-line, #e2e8f0);
 }
 
-.ig-inbox .home-hero {
+.ig-inbox .home-hero,
+.ms-inbox .home-hero {
   height: min(48rem, 92svh);
   min-height: 38rem;
 }
 
-.ig-inbox .hero-chat-shell {
+.ig-inbox .hero-chat-shell,
+.ms-inbox .hero-chat-shell {
   flex: 1 1 auto;
   min-height: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+}
+
+@media (min-width: 40rem) {
+  .ig-inbox .hero-chat-shell,
+  .ms-inbox .hero-chat-shell {
+    margin-top: 2rem;
+  }
 }
 
 .ig-biz-hero {

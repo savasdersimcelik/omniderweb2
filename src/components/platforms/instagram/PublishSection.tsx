@@ -18,7 +18,7 @@ export async function PublishSection() {
   return (
     <section
       id="publish"
-      className="ig-publish border-t border-line bg-surface-subtle/40"
+      className="ig-publish border-t border-line"
       aria-labelledby="ig-publish-title"
     >
       <Container className="section">

@@ -759,7 +759,15 @@
       "selectedWeekday": "Thursday",
       "selectedDate": "July 16, 2026",
       "bookLabel": "Book",
-      "weekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "weekdays": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
       "slots": [
         {
           "time": "10:00",
@@ -2992,9 +3000,18 @@
             "image": "/images/hero/products/aura.jpg",
             "description": "Active noise canceling, 36-hour battery, and fast charge.",
             "features": [
-              { "key": "Color", "value": "Yellow" },
-              { "key": "Connect", "value": "Bluetooth 5.3" },
-              { "key": "Warranty", "value": "2 years" }
+              {
+                "key": "Color",
+                "value": "Yellow"
+              },
+              {
+                "key": "Connect",
+                "value": "Bluetooth 5.3"
+              },
+              {
+                "key": "Warranty",
+                "value": "2 years"
+              }
             ]
           },
           {
@@ -3062,7 +3079,11 @@
           {
             "kind": "product_list",
             "text": "Yes — here are the featured ones:",
-            "productIds": ["aura", "pulse", "nova"]
+            "productIds": [
+              "aura",
+              "pulse",
+              "nova"
+            ]
           },
           {
             "kind": "customer",
@@ -3076,7 +3097,11 @@
           {
             "kind": "buttons",
             "text": "How would you like to continue?",
-            "buttons": ["Buy in DM", "Another color", "Ask price"]
+            "buttons": [
+              "Buy in DM",
+              "Another color",
+              "Ask price"
+            ]
           }
         ]
       }
@@ -3317,23 +3342,180 @@
       "ctaSecondary": "Start for free",
       "flowLabel": "Messenger flow",
       "flow": [
-        { "title": "Ad click", "detail": "Messenger" },
-        { "title": "Chat", "detail": "24/7 reply" },
-        { "title": "Appointment", "detail": "On the calendar" },
-        { "title": "Sale", "detail": "Closed in inbox" }
+        {
+          "title": "Ad click",
+          "detail": "Messenger"
+        },
+        {
+          "title": "Chat",
+          "detail": "24/7 reply"
+        },
+        {
+          "title": "Appointment",
+          "detail": "On the calendar"
+        },
+        {
+          "title": "Sale",
+          "detail": "Closed in inbox"
+        }
       ],
       "details": {
         "aiValue": "24/7",
         "aiLabel": "AI replies first",
         "chats": [
-          { "title": "Ad chat", "detail": "New lead" },
-          { "title": "Direct message", "detail": "Customer question" }
+          {
+            "title": "Ad chat",
+            "detail": "New lead"
+          },
+          {
+            "title": "Direct message",
+            "detail": "Customer question"
+          }
         ],
         "inboxTitle": "One inbox",
         "inboxDetail": "Every conversation in one place",
-        "tags": ["Ads", "Comments", "Messages"],
+        "tags": [
+          "Ads",
+          "Comments",
+          "Messages"
+        ],
         "assistTitle": "AI assisted",
         "assistDetail": "Smart. Fast. Effective."
+      }
+    },
+    "inbox": {
+      "titleLine1": "Messenger chats,",
+      "titleLine2": "one inbox",
+      "description": "Page messages land in the Omnider inbox. AI sends the first reply, and your team takes over when it matters.",
+      "cta": "We'll call you",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Inbox",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Emma · Sales",
+        "customerName": "Maya Rivera",
+        "deptName": "Sales",
+        "transferLabel": "Transferred to sales",
+        "typingLabel": "Writing a reply",
+        "inStockLabel": "In stock",
+        "outOfStockLabel": "Sold out",
+        "viewProductLabel": "View product",
+        "carouselHint": "{count} products · swipe to browse",
+        "products": [
+          {
+            "id": "aura",
+            "name": "Yellow headphones",
+            "price": "$89",
+            "listPrice": "$119",
+            "sku": "AUR-42",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Active noise canceling, 36-hour battery, and fast charge.",
+            "features": [
+              {
+                "key": "Color",
+                "value": "Yellow"
+              },
+              {
+                "key": "Connect",
+                "value": "Bluetooth 5.3"
+              },
+              {
+                "key": "Warranty",
+                "value": "2 years"
+              }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Smartwatch",
+            "price": "$149",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Heart rate, sleep, and GPS tracking."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Speaker",
+            "price": "$59",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Waterproof, 12 hours of playback."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Maya Rivera",
+            "preview": "Are the yellow headphones in stock?",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "James Cole",
+            "preview": "Ad discount",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Sara Lee",
+            "preview": "Book an appointment",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Ava Quinn",
+            "preview": "Reply to comment",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Noah Blake",
+            "preview": "Store hours",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Lina Ortiz",
+            "preview": "Order #4821",
+            "platform": "messenger",
+            "channel": "Messenger"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Hi, are the yellow headphones in stock?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Yes — here are the featured ones:",
+            "productIds": [
+              "aura",
+              "pulse",
+              "nova"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Can you show the yellow headphones in detail?"
+          },
+          {
+            "kind": "product_detail",
+            "text": "Here’s the yellow pair in detail:",
+            "productId": "aura"
+          },
+          {
+            "kind": "buttons",
+            "text": "How would you like to continue?",
+            "buttons": [
+              "Buy in chat",
+              "Another color",
+              "Ask price"
+            ]
+          }
+        ]
       }
     },
     "interactive": {
@@ -3371,18 +3553,45 @@
         "cardsFollow": "Black leather bag selected",
         "viewProduct": "View product",
         "products": [
-          { "name": "Black leather bag", "price": "1,890 TRY", "tone": "bag" },
-          { "name": "Beige sneaker", "price": "2,450 TRY", "tone": "shoe" },
-          { "name": "Minimal watch", "price": "3,200 TRY", "tone": "watch" }
+          {
+            "name": "Black leather bag",
+            "price": "1,890 TRY",
+            "tone": "bag"
+          },
+          {
+            "name": "Beige sneaker",
+            "price": "2,450 TRY",
+            "tone": "shoe"
+          },
+          {
+            "name": "Minimal watch",
+            "price": "3,200 TRY",
+            "tone": "watch"
+          }
         ],
         "quickIntro": "Which day works for a visit?",
         "quickPicked": "Tuesday",
-        "quick": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "quick": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
         "actionsIntro": "How can we help?",
         "actions": [
-          { "id": "url", "label": "Open site" },
-          { "id": "call", "label": "Call us" },
-          { "id": "email", "label": "Send email" }
+          {
+            "id": "url",
+            "label": "Open site"
+          },
+          {
+            "id": "call",
+            "label": "Call us"
+          },
+          {
+            "id": "email",
+            "label": "Send email"
+          }
         ]
       },
       "note": "After 24 hours, an agent reply can only be sent as text. Messenger has no location message, so a place goes out as a map link."
@@ -3431,9 +3640,21 @@
       "widget": {
         "title": "Comment queue",
         "rows": [
-          { "user": "spam.bot", "text": "Cheap followers!!!", "action": "Hidden" },
-          { "user": "maya.r", "text": "What’s the price?", "action": "Replied" },
-          { "user": "james_c", "text": "Love it!", "action": "—" }
+          {
+            "user": "spam.bot",
+            "text": "Cheap followers!!!",
+            "action": "Hidden"
+          },
+          {
+            "user": "maya.r",
+            "text": "What’s the price?",
+            "action": "Replied"
+          },
+          {
+            "user": "james_c",
+            "text": "Love it!",
+            "action": "—"
+          }
         ]
       }
     },
@@ -3457,7 +3678,15 @@
       },
       "widget": {
         "month": "November 2026",
-        "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "weekdays": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
         "scheduled": "Scheduled",
         "draft": "Draft",
         "caption": "New season · window"

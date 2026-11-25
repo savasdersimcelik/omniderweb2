@@ -8,7 +8,7 @@ import { TrySection } from "./TrySection";
 
 export async function InstagramPage() {
   return (
-    <>
+    <div className="ig-page-atmosphere">
       <InstagramHero />
       <InboxSection />
       <InteractiveSection />
@@ -16,6 +16,6 @@ export async function InstagramPage() {
       <PublishSection />
       <AdReferralSection />
       <TrySection />
-    </>
+    </div>
   );
 }

@@ -759,7 +759,15 @@
       "selectedWeekday": "Perşembe",
       "selectedDate": "16 Temmuz 2026",
       "bookLabel": "Ayır",
-      "weekdays": ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"],
+      "weekdays": [
+        "Pz",
+        "Pt",
+        "Sa",
+        "Ça",
+        "Pe",
+        "Cu",
+        "Ct"
+      ],
       "slots": [
         {
           "time": "10:00",
@@ -2992,9 +3000,18 @@
             "image": "/images/hero/products/aura.jpg",
             "description": "Aktif gürültü engelleme, 36 saat pil ve hızlı şarj.",
             "features": [
-              { "key": "Renk", "value": "Sarı" },
-              { "key": "Bağlantı", "value": "Bluetooth 5.3" },
-              { "key": "Garanti", "value": "2 yıl" }
+              {
+                "key": "Renk",
+                "value": "Sarı"
+              },
+              {
+                "key": "Bağlantı",
+                "value": "Bluetooth 5.3"
+              },
+              {
+                "key": "Garanti",
+                "value": "2 yıl"
+              }
             ]
           },
           {
@@ -3062,7 +3079,11 @@
           {
             "kind": "product_list",
             "text": "Evet, öne çıkanlar burada:",
-            "productIds": ["aura", "pulse", "nova"]
+            "productIds": [
+              "aura",
+              "pulse",
+              "nova"
+            ]
           },
           {
             "kind": "customer",
@@ -3076,7 +3097,11 @@
           {
             "kind": "buttons",
             "text": "Nasıl devam edelim?",
-            "buttons": ["DM’den al", "Başka renk", "Fiyat sor"]
+            "buttons": [
+              "DM’den al",
+              "Başka renk",
+              "Fiyat sor"
+            ]
           }
         ]
       }
@@ -3317,23 +3342,180 @@
       "ctaSecondary": "Ücretsiz Başla",
       "flowLabel": "Messenger akışı",
       "flow": [
-        { "title": "Reklam tıklaması", "detail": "Messenger" },
-        { "title": "Sohbet", "detail": "7/24 yanıt" },
-        { "title": "Randevu", "detail": "Takvime bağlandı" },
-        { "title": "Satış", "detail": "Gelen kutuda" }
+        {
+          "title": "Reklam tıklaması",
+          "detail": "Messenger"
+        },
+        {
+          "title": "Sohbet",
+          "detail": "7/24 yanıt"
+        },
+        {
+          "title": "Randevu",
+          "detail": "Takvime bağlandı"
+        },
+        {
+          "title": "Satış",
+          "detail": "Gelen kutuda"
+        }
       ],
       "details": {
         "aiValue": "7/24",
         "aiLabel": "yapay zeka yanıtı",
         "chats": [
-          { "title": "Reklam sohbeti", "detail": "Yeni lead" },
-          { "title": "Doğrudan mesaj", "detail": "Müşteri sorusu" }
+          {
+            "title": "Reklam sohbeti",
+            "detail": "Yeni lead"
+          },
+          {
+            "title": "Doğrudan mesaj",
+            "detail": "Müşteri sorusu"
+          }
         ],
         "inboxTitle": "Aynı kutuda",
         "inboxDetail": "Tüm konuşmalar tek yerde",
-        "tags": ["Reklam", "Yorum", "Mesaj"],
+        "tags": [
+          "Reklam",
+          "Yorum",
+          "Mesaj"
+        ],
         "assistTitle": "AI Destekli",
         "assistDetail": "Akıllı. Hızlı. Etkili."
+      }
+    },
+    "inbox": {
+      "titleLine1": "Messenger sohbeti,",
+      "titleLine2": "tek gelen kutu",
+      "description": "Sayfa mesajları Omnider gelen kutusunda toplanır. Yapay zeka ilk yanıtı verir, ekibiniz gerektiğinde devralır.",
+      "cta": "Sizi arayalım",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Gelen kutusu",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Ayşe · Satış",
+        "customerName": "Ayşe Yılmaz",
+        "deptName": "Satış",
+        "transferLabel": "Satışa aktarıldı",
+        "typingLabel": "Yanıt yazılıyor",
+        "inStockLabel": "Stokta",
+        "outOfStockLabel": "Tükendi",
+        "viewProductLabel": "Ürünü görüntüle",
+        "carouselHint": "{count} ürün · kaydırarak inceleyin",
+        "products": [
+          {
+            "id": "aura",
+            "name": "Sarı kulaklık",
+            "price": "1.249 ₺",
+            "listPrice": "1.599 ₺",
+            "sku": "AUR-42",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Aktif gürültü engelleme, 36 saat pil ve hızlı şarj.",
+            "features": [
+              {
+                "key": "Renk",
+                "value": "Sarı"
+              },
+              {
+                "key": "Bağlantı",
+                "value": "Bluetooth 5.3"
+              },
+              {
+                "key": "Garanti",
+                "value": "2 yıl"
+              }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Akıllı Saat",
+            "price": "2.450 ₺",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Kalp ritmi, uyku ve GPS takip."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Hoparlör",
+            "price": "890 ₺",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Su geçirmez, 12 saat çalma süresi."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Ayşe Yılmaz",
+            "preview": "Sarı kulaklık stokta mı?",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Can Demir",
+            "preview": "Reklamdaki indirim",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Elif Kara",
+            "preview": "Randevu istiyorum",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Zeynep Akar",
+            "preview": "Yoruma cevap",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Mert Kaya",
+            "preview": "Mağaza saati",
+            "platform": "messenger",
+            "channel": "Messenger"
+          },
+          {
+            "name": "Selin Arı",
+            "preview": "Sipariş #4821",
+            "platform": "messenger",
+            "channel": "Messenger"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Merhaba, sarı kulaklık stokta mı?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Evet, öne çıkanlar burada:",
+            "productIds": [
+              "aura",
+              "pulse",
+              "nova"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Sarı kulaklığın detayına bakar mısın?"
+          },
+          {
+            "kind": "product_detail",
+            "text": "Sarı kulaklığın detayları:",
+            "productId": "aura"
+          },
+          {
+            "kind": "buttons",
+            "text": "Nasıl devam edelim?",
+            "buttons": [
+              "Mesajdan al",
+              "Başka renk",
+              "Fiyat sor"
+            ]
+          }
+        ]
       }
     },
     "interactive": {
@@ -3371,18 +3553,45 @@
         "cardsFollow": "Siyah deri çanta seçildi",
         "viewProduct": "Ürünü incele",
         "products": [
-          { "name": "Siyah deri çanta", "price": "1.890 TL", "tone": "bag" },
-          { "name": "Bej sneaker", "price": "2.450 TL", "tone": "shoe" },
-          { "name": "Minimal saat", "price": "3.200 TL", "tone": "watch" }
+          {
+            "name": "Siyah deri çanta",
+            "price": "1.890 TL",
+            "tone": "bag"
+          },
+          {
+            "name": "Bej sneaker",
+            "price": "2.450 TL",
+            "tone": "shoe"
+          },
+          {
+            "name": "Minimal saat",
+            "price": "3.200 TL",
+            "tone": "watch"
+          }
         ],
         "quickIntro": "Hangi gün uğramak istersiniz?",
         "quickPicked": "Salı",
-        "quick": ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma"],
+        "quick": [
+          "Pazartesi",
+          "Salı",
+          "Çarşamba",
+          "Perşembe",
+          "Cuma"
+        ],
         "actionsIntro": "Size nasıl yardımcı olalım?",
         "actions": [
-          { "id": "url", "label": "Siteye git" },
-          { "id": "call", "label": "Bizi arayın" },
-          { "id": "email", "label": "E-posta gönder" }
+          {
+            "id": "url",
+            "label": "Siteye git"
+          },
+          {
+            "id": "call",
+            "label": "Bizi arayın"
+          },
+          {
+            "id": "email",
+            "label": "E-posta gönder"
+          }
         ]
       },
       "note": "24 saati geçen konuşmalarda temsilci yanıtı yalnızca metin olarak gönderilebilir. Messenger konum mesajını desteklemediği için konum harita linkiyle gider."
@@ -3431,9 +3640,21 @@
       "widget": {
         "title": "Yorum kuyruğu",
         "rows": [
-          { "user": "spam.bot", "text": "Ucuz takipçi!!!", "action": "Gizlendi" },
-          { "user": "ayse.y", "text": "Fiyatı nedir?", "action": "Yanıtlandı" },
-          { "user": "can_d", "text": "Harika!", "action": "—" }
+          {
+            "user": "spam.bot",
+            "text": "Ucuz takipçi!!!",
+            "action": "Gizlendi"
+          },
+          {
+            "user": "ayse.y",
+            "text": "Fiyatı nedir?",
+            "action": "Yanıtlandı"
+          },
+          {
+            "user": "can_d",
+            "text": "Harika!",
+            "action": "—"
+          }
         ]
       }
     },
@@ -3457,7 +3678,15 @@
       },
       "widget": {
         "month": "Kasım 2026",
-        "weekdays": ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+        "weekdays": [
+          "Pzt",
+          "Sal",
+          "Çar",
+          "Per",
+          "Cum",
+          "Cmt",
+          "Paz"
+        ],
         "scheduled": "Planlandı",
         "draft": "Taslak",
         "caption": "Yeni sezon · vitrin"
