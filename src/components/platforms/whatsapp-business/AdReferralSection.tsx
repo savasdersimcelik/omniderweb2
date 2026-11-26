@@ -45,7 +45,7 @@ export async function AdReferralSection() {
                   {t("scene.sponsored")}
                 </span>
               </header>
-              <div className="wa-ad-referral__ad-media relative h-44 overflow-hidden bg-slate-100">
+              <div className="wa-ad-referral__ad-media relative overflow-hidden bg-slate-100">
                 <Image
                   src={AD_CREATIVE}
                   alt={t("scene.imageAlt")}
@@ -96,8 +96,17 @@ export async function AdReferralSection() {
                 </div>
               </div>
 
-              <div className="wa-ad-referral__bubble">
-                <p className="text-sm leading-snug text-ink">{t("scene.bubble")}</p>
+              <div className="wa-ad-referral__thread">
+                <div className="wa-ad-referral__bubble wa-ad-referral__bubble--in">
+                  <p className="text-sm leading-snug text-ink">{t("scene.bubble")}</p>
+                </div>
+                <div className="wa-ad-referral__bubble wa-ad-referral__bubble--out">
+                  <span className="wa-ad-referral__role">{t("scene.replyRole")}</span>
+                  <p className="text-sm leading-snug text-ink">{t("scene.reply")}</p>
+                </div>
+                <div className="wa-ad-referral__bubble wa-ad-referral__bubble--in">
+                  <p className="text-sm leading-snug text-ink">{t("scene.followUp")}</p>
+                </div>
               </div>
             </article>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   MessageCircleIcon,
   ShieldAlertIcon,
@@ -24,16 +24,7 @@ const HIGHLIGHTS = [
 
 export function HealthSection() {
   const t = useTranslations("PlatformWhatsAppBusiness.health");
-  const [tab, setTab] = useState<TabId>("green");
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    if (paused) return;
-    const id = window.setInterval(() => {
-      setTab((prev) => TABS[(TABS.indexOf(prev) + 1) % TABS.length]);
-    }, 4200);
-    return () => window.clearInterval(id);
-  }, [paused]);
+  const [tab, setTab] = useState<TabId>("yellow");
 
   return (
     <section
@@ -66,11 +57,7 @@ export function HealthSection() {
             </div>
           </div>
 
-          <div
-            className="wa-health__stage"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
-          >
+          <div className="wa-health__stage">
             <article
               className={cn("wa-health__sim", `is-${tab}`)}
               aria-label={t("sim.label")}

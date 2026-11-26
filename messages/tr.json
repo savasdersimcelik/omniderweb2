@@ -2357,6 +2357,98 @@
         }
       }
     },
+    "chatflow": {
+      "eyebrow": "Chatflow Otomasyon Akışı",
+      "title": "Kod yazmadan, tek cümleyle WhatsApp iş akışı kurun",
+      "subtitle": "Müşteri yazdığında botun ne anlayacağını, hangi bilgiyi kontrol edeceğini ve ne zaman ekibinize devredeceğini 3 net adımda görün.",
+      "modesLabel": "Chatflow senaryosu",
+      "steps": {
+        "one": {
+          "label": "1. Adım • Müşteri Mesaj Atar",
+          "badge": "Tetikleyici"
+        },
+        "two": {
+          "label": "2. Adım • Sistem Kontrol Eder",
+          "badge": "Otomatik Sorgu"
+        },
+        "three": {
+          "label": "3. Adım • Yanıtlar veya Devreder",
+          "badge": "Buton + Ekip Devri"
+        }
+      },
+      "preview": {
+        "label": "Müşterinin Gördüğü Ekran",
+        "live": "Canlı Önizleme",
+        "time": "14:22",
+        "response": "Ortalama yanıt: 0.8 sn",
+        "active": "7/24 Aktif"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "E-Ticaret & Sipariş",
+          "one": {
+            "title": "Sipariş veya kargo kelimesi yakalanır",
+            "body": "Müşteri mesajında “sipariş, kargo, iade” geçtiğinde akış otomatik olarak başlar."
+          },
+          "two": {
+            "title": "Kargo durumunu mağazanızdan çeker",
+            "body": "Sipariş numarasını doğrular ve e-ticaret/CRM sisteminizden güncel teslimat bilgisini alır."
+          },
+          "three": {
+            "title": "Butonlu yanıt gönderir, gerekirse temsilciye bağlar",
+            "body": "Müşteriye kargo linkini ve “İade Talebi” butonunu iletir; çözülmezse Destek ekibine aktarır."
+          },
+          "sim": {
+            "user": "#4829 numaralı siparişim nerede?",
+            "bot": "Siparişiniz (#4829) dağıtıma çıktı, tahmini teslimat bugün 17:00 öncesi.",
+            "btn1": "Kargo Takip Linki",
+            "btn2": "İade Talebi Oluştur"
+          }
+        },
+        "booking": {
+          "tab": "Randevu & Klinik",
+          "one": {
+            "title": "Randevu talebi otomatik algılanır",
+            "body": "Müşteri “randevu, muayene, saat” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Takvimden boş saatleri kontrol eder",
+            "body": "Klinik veya ekip takviminize bağlanarak o günkü uygun saat dilimlerini listeler."
+          },
+          "three": {
+            "title": "Randevuyu onaylar ve hatırlatma kurar",
+            "body": "Seçilen saati kaydeder, onay mesajı atar ve randevudan 1 saat önce otomatik hatırlatır."
+          },
+          "sim": {
+            "user": "Yarın öğleden sonra için randevu alabilir miyim?",
+            "bot": "Yarın (27 Kasım) için uygun saatlerimiz aşağıdadır. Seçiminizi yapabilirsiniz:",
+            "btn1": "14:00 — Uygun",
+            "btn2": "15:30 — Uygun"
+          }
+        },
+        "lead": {
+          "tab": "Reklam & Lead",
+          "one": {
+            "title": "Reklamdan gelen ilk mesaj yakalanır",
+            "body": "Instagram veya Facebook reklamından yazan müşterinin hangi ilandan geldiğini tanır."
+          },
+          "two": {
+            "title": "AI ile ihtiyacına uygun ürünü önerir",
+            "body": "Müşterinin ekip büyüklüğünü ve bütçesini sorar, katalogdan en doğru paketi eşleştirir."
+          },
+          "three": {
+            "title": "Lead bilgisini kaydedip Satış ekibine devreder",
+            "body": "Tüm görüşme özetini CRM’e işler ve sıcak müşteriyi anında Satış temsilcisine bağlar."
+          },
+          "sim": {
+            "user": "Instagram ilanından yazıyorum, 20 kişilik ofis için teklif alabilir miyim?",
+            "bot": "20 kişilik ofisiniz için Barista Pro X2 modelimizi öneririz. Teklif dosyasını ileteyim mi?",
+            "btn1": "Teklifi Gönder",
+            "btn2": "Satış Uzmanına Bağlan"
+          }
+        }
+      }
+    },
     "health": {
       "eyebrow": "Numara sağlığı",
       "title": "Hattınızı Meta kısıtlamalarına karşı proaktif koruyun",
@@ -2412,6 +2504,123 @@
         "continues": "Müşteri yazınca cevap vermek: devam ediyor"
       }
     },
+    "campaigns": {
+      "eyebrow": "Toplu Kampanya Motoru",
+      "title": "Binlerce müşteriye doğru anda, sıfır riskle ulaşın",
+      "subtitle": "Onaylı Meta şablonlarını dinamik hedef kitlelerle eşleştirin; gönderim öncesi hazırlık kapısı ve kota korumasıyla tek seferlik, tekrarlı veya API tetiklemeli kampanyalar yönetin.",
+      "modesLabel": "Kampanya gönderim türü",
+      "stages": {
+        "audience": "1. Hedef kitle",
+        "timing": "2. Zamanlama & kota"
+      },
+      "gate": {
+        "title": "Gönderim öncesi hazırlık kapısı",
+        "pass": "4/4 kontrol geçti",
+        "checks": {
+          "template": "Şablon onaylı",
+          "quality": "Kalite: Yeşil",
+          "number": "Numara aktif",
+          "risk": "Risk korumalı"
+        }
+      },
+      "funnel": {
+        "title": "Canlı teslimat & dönüşüm hunisi",
+        "target": "Hedef kitle",
+        "delivered": "İletilen",
+        "read": "Okunan",
+        "replied": "Yanıtlayan"
+      },
+      "preview": {
+        "business": "Omnider Mağaza",
+        "account": "Resmi işletme hesabı",
+        "footer": "İptal için STOP yazabilirsiniz",
+        "riskLabel": "Teslimat riski koruması",
+        "riskStatus": "Aktif • 0 hata"
+      },
+      "modes": {
+        "onetime": {
+          "tab": "Tek seferlik kampanya",
+          "title": "Kasım VIP Erken Erişim",
+          "status": "Tamamlandı",
+          "subtitle": "Segment: VIP Etiketi • Europe/Istanbul",
+          "scheduleTag": "Tek seferlik",
+          "audienceTitle": "Dinamik VIP segmenti",
+          "audienceDesc": "30 günlük aktif WhatsApp doğrulamasından geçen 4.820 kişi.",
+          "timingTitle": "Kademeli gönderim (10K kota)",
+          "timingDesc": "Europe/Istanbul 10:30 • Günlük benzersiz alıcı sınırına uyumlu.",
+          "routingLabel": "Yanıtlar → Omnider AI + Satış",
+          "target": "4.820",
+          "delivered": "4.791",
+          "read": "4.120",
+          "replied": "894",
+          "targetBar": "100%",
+          "deliveredBar": "99%",
+          "readBar": "86%",
+          "repliedBar": "19%",
+          "tplName": "vip_indirim_kasim",
+          "tplCat": "MARKETING",
+          "msgHeader": "VIP üyelere özel erken erişim",
+          "msgBody": "Merhaba '{{1}}', Kasım sezonuna özel %20 erken erişim indiriminiz hesabınıza tanımlandı.",
+          "cta1": "Hemen incele",
+          "cta2": "Temsilciye bağlan",
+          "time": "10:30"
+        },
+        "recurring": {
+          "tab": "Tekrarlı akış",
+          "title": "Haftalık Sepet Hatırlatma",
+          "status": "Planlı • Her Pazartesi",
+          "subtitle": "Segment: Aktif Lead • 10:00 Europe/Istanbul",
+          "scheduleTag": "Tekrarlı akış",
+          "audienceTitle": "Açık sepet & lead listesi",
+          "audienceDesc": "Son 7 günde sepet bırakan ve numarası doğrulanan 1.240 kişi.",
+          "timingTitle": "Haftalık otomatik döngü",
+          "timingDesc": "Her Pazartesi 10:00 • Kota dolunca otomatik ertesi güne sarkıtır.",
+          "routingLabel": "Yanıtlar → Sepet Kurtarma Akışı",
+          "target": "1.240",
+          "delivered": "1.234",
+          "read": "1.088",
+          "replied": "312",
+          "targetBar": "100%",
+          "deliveredBar": "99%",
+          "readBar": "88%",
+          "repliedBar": "25%",
+          "tplName": "sepet_hatirlatma_v2",
+          "tplCat": "MARKETING",
+          "msgHeader": "Sepetinizdeki ürünler sizi bekliyor",
+          "msgBody": "Merhaba '{{1}}', sepetinizdeki ürünler tükenmeden %10 ek indirimle siparişinizi tamamlayabilirsiniz.",
+          "cta1": "Sepete git",
+          "cta2": "Destek al",
+          "time": "10:00"
+        },
+        "api": {
+          "tab": "API / Webhook tetikleme",
+          "title": "Sipariş & Kargo Tetiklemesi",
+          "status": "Canlı webhook • 7/24",
+          "subtitle": "POST /v1/campaigns/trigger • REST API",
+          "scheduleTag": "API tetiklemeli",
+          "audienceTitle": "Gerçek zamanlı olay akışı",
+          "audienceDesc": "E-ticaret veya CRM sisteminizden anlık webhook ile tetiklenen alıcılar.",
+          "timingTitle": "Anlık gönderim (< 400ms)",
+          "timingDesc": "24 saatlik pencere dışında Utility şablonla otomatik güvenli teslimat.",
+          "routingLabel": "Yanıtlar → Kargo Takip Botu",
+          "target": "9.410",
+          "delivered": "9.392",
+          "read": "8.940",
+          "replied": "640",
+          "targetBar": "100%",
+          "deliveredBar": "99%",
+          "readBar": "95%",
+          "repliedBar": "7%",
+          "tplName": "kargo_yola_cikti",
+          "tplCat": "UTILITY",
+          "msgHeader": "Siparişiniz kargoya verildi",
+          "msgBody": "Merhaba '{{1}}', #'{{2}}' numaralı siparişiniz kargoya teslim edildi. Canlı takip için aşağıdaki butonu kullanabilirsiniz.",
+          "cta1": "Kargoyu takip et",
+          "cta2": "Teslimat adresi değiştir",
+          "time": "14:22"
+        }
+      }
+    },
     "adReferral": {
       "eyebrow": "Tıkla-WhatsApp (CTWA)",
       "title": "Reklamdan gelen müşteriyi hangi ilandan geldiğiyle tanıyın",
@@ -2431,30 +2640,154 @@
         "adId": "238591",
         "campaign": "Ofis Espresso Kampanyası",
         "source": "Instagram Reels",
-        "bubble": "Merhaba, bu ilan üzerinden yazıyorum. 20 kişilik ofis için teklif alabilir miyim?"
+        "bubble": "Merhaba, bu ilan üzerinden yazıyorum. 20 kişilik ofis için teklif alabilir miyim?",
+        "replyRole": "Omnider AI",
+        "reply": "Tabii! Kaç makine düşünüyorsunuz ve günlük yaklaşık kaç fincan tüketiminiz var?",
+        "followUp": "2 makine, günde ~80 fincan. Yarın öğleden sonra demo ayarlayabilir miyiz?"
+      }
+    },
+    "analytics": {
+      "eyebrow": "Gelir & Dönüşüm Raporları",
+      "title": "Her WhatsApp sohbetinin lead ve siparişe dönüşümünü ölçün",
+      "subtitle": "İlk yanıt hızınızdan nitelikli lead kazanımına, sipariş dönüşüm oranından teslimat güvenilirliğine kadar iş sonuçlarınızı tek raporda izleyin.",
+      "kpis": {
+        "speed": {
+          "label": "Ort. İlk Yanıt Süresi",
+          "value": "14 sn",
+          "badge": "Anlık AI",
+          "sub": "Sektör ort. 12 dk yerine 14 sn"
+        },
+        "lead": {
+          "label": "Lead Dönüşüm Oranı",
+          "value": "%58,4",
+          "badge": "+%12,6",
+          "sub": "2.815 nitelikli müşteri adayı"
+        },
+        "order": {
+          "label": "Sipariş Dönüşüm Oranı",
+          "value": "%38,6",
+          "badge": "₺2,87M",
+          "sub": "1.860 tamamlanan WhatsApp siparişi"
+        },
+        "fail": {
+          "label": "Teslimat Fail Oranı",
+          "value": "%0,4",
+          "badge": "Çok Düşük",
+          "sub": "%99,6 başarılı mesaj iletimi"
+        }
+      },
+      "funnel": {
+        "title": "Sohbetten Siparişe Dönüşüm Hunisi",
+        "subtitle": "Gelen her talebin lead ve satışa dönüşüm adımları",
+        "badge": "ROI Raporu",
+        "aovLabel": "Ortalama Sepet / İşlem Tutarı",
+        "aovValue": "₺1.542 / Sipariş",
+        "steps": {
+          "chats": {
+            "label": "1. Gelen Sohbet & Kampanya Etkileşimi",
+            "value": "4.820 (%100)"
+          },
+          "fast": {
+            "label": "2. 30 sn Altında Yanıtlanan",
+            "value": "4.798 (%99,5)"
+          },
+          "leads": {
+            "label": "3. Nitelikli Lead (İletişim + Talep)",
+            "value": "2.815 (%58,4)"
+          },
+          "orders": {
+            "label": "4. Tamamlanan Sipariş / Randevu",
+            "value": "1.860 (%38,6)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Kaynak Bazlı Dönüşüm Raporu",
+        "subtitle": "Hangi kanaldan gelen müşteri daha hızlı siparişe dönüyor?",
+        "columns": {
+          "source": "Giriş Kaynağı",
+          "reply": "İlk Yanıt",
+          "lead": "Lead",
+          "order": "Sipariş"
+        },
+        "rows": {
+          "ctwa": {
+            "name": "CTWA Reklamları",
+            "desc": "Instagram & Facebook",
+            "reply": "8 sn",
+            "lead": "%64,0",
+            "order": "%46,5"
+          },
+          "campaigns": {
+            "name": "Toplu Kampanyalar",
+            "desc": "VIP & Sepet Hatırlatma",
+            "reply": "18 sn",
+            "lead": "%56,4",
+            "order": "%38,2"
+          },
+          "web": {
+            "name": "Web Sitesi & QR",
+            "desc": "Widget & Mağaza İçi",
+            "reply": "12 sn",
+            "lead": "%52,8",
+            "order": "%34,6"
+          },
+          "organic": {
+            "name": "Organik WhatsApp",
+            "desc": "Doğrudan Hat Mesajları",
+            "reply": "16 sn",
+            "lead": "%48,1",
+            "order": "%31,0"
+          }
+        }
       }
     },
     "try": {
-      "eyebrow": "Canlı deneme",
-      "title": "WhatsApp Business’ı telefondan deneyin",
-      "body": "Türkiye, Avrupa veya Amerika hattını taratın, ya da butona dokunun. Omnider yanıt verir; fiyat, randevu veya sipariş sorun. Yapay zeka cevaplar, gerekirse ekip devralır.",
-      "cta": "WhatsApp’ta aç",
+      "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",
+      "title": "WhatsApp Business’ı telefondan hemen deneyin",
+      "body": "Türkiye, Avrupa veya Amerika hattını taratın ya da tek dokunuşla sohbeti başlatın. Yapay zeka fiyat, randevu ve sipariş sorularınızı yanıtlar; gerekirse ekip devralır.",
+      "cta": "WhatsApp’ta Sohbeti Başlat",
+      "promptsLabel": "Ne test etmek istersiniz?",
+      "regionsLabel": "Demo bölgesi seç",
+      "prefillLabel": "Hazır Test Mesajı",
+      "online": "Çevrimiçi",
+      "trust": {
+        "ai": "Anında AI yanıtı (1 sn altı)",
+        "handoff": "Tek tıkla canlı ekip devri"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Fiyat & Katalog Sor",
+          "message": "Merhaba, paketleriniz ve fiyatlarınız hakkında bilgi alabilir miyim?"
+        },
+        "booking": {
+          "tab": "Randevu Oluştur",
+          "message": "Yarın öğleden sonra için demo randevusu oluşturmak istiyorum."
+        },
+        "order": {
+          "tab": "Sipariş Sorgula",
+          "message": "#4829 numaralı siparişim ne zaman teslim edilir?"
+        }
+      },
       "lines": {
         "turkey": {
-          "title": "Omnider Turkey",
+          "title": "Omnider Türkiye",
           "phone": "+90 546 419 94 17",
-          "ctaTitle": "Omnider Turkey WhatsApp hattını aç",
-          "imageAlt": "Omnider Turkey WhatsApp hattı için QR kod, +90 546 419 94 17"
+          "lang": "Türkçe & İngilizce Otomatik Algılama",
+          "ctaTitle": "Omnider Türkiye WhatsApp hattını aç",
+          "imageAlt": "Omnider Türkiye WhatsApp hattı için QR kod, +90 546 419 94 17"
         },
         "europe": {
           "title": "Omnider Avrupa",
           "phone": "+44 7529 760393",
+          "lang": "İngilizce, Almanca & Çok Dilli Destek",
           "ctaTitle": "Omnider Avrupa WhatsApp hattını aç",
           "imageAlt": "Omnider Avrupa WhatsApp hattı için QR kod, +44 7529 760393"
         },
         "usa": {
           "title": "Omnider Amerika",
           "phone": "+1 845 720 3266",
+          "lang": "İngilizce & İspanyolca (US/LATAM)",
           "ctaTitle": "Omnider Amerika WhatsApp hattını aç",
           "imageAlt": "Omnider Amerika WhatsApp hattı için QR kod, +1 845 720 3266"
         }

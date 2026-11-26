@@ -2357,6 +2357,98 @@
         }
       }
     },
+    "chatflow": {
+      "eyebrow": "Chatflow Automation",
+      "title": "Build WhatsApp workflows in plain language — no code",
+      "subtitle": "See in three clear steps what the bot understands when a customer writes, what it checks next, and when it hands off to your team.",
+      "modesLabel": "Chatflow scenario",
+      "steps": {
+        "one": {
+          "label": "Step 1 • Customer messages",
+          "badge": "Trigger"
+        },
+        "two": {
+          "label": "Step 2 • System checks",
+          "badge": "Auto lookup"
+        },
+        "three": {
+          "label": "Step 3 • Reply or hand off",
+          "badge": "Buttons + team"
+        }
+      },
+      "preview": {
+        "label": "What the customer sees",
+        "live": "Live preview",
+        "time": "14:22",
+        "response": "Avg. reply: 0.8 sec",
+        "active": "24/7 active"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "Ecommerce & Orders",
+          "one": {
+            "title": "Order or shipping keywords are caught",
+            "body": "When the message includes “order, shipping, return”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls shipping status from your store",
+            "body": "Validates the order number and fetches live delivery data from your ecommerce/CRM system."
+          },
+          "three": {
+            "title": "Sends a button reply, or connects an agent",
+            "body": "Shares the tracking link and a Return Request button; if unresolved, routes to Support."
+          },
+          "sim": {
+            "user": "Where is my order #4829?",
+            "bot": "Order #4829 is out for delivery — estimated before 17:00 today.",
+            "btn1": "Tracking link",
+            "btn2": "Start a return"
+          }
+        },
+        "booking": {
+          "tab": "Booking & Clinic",
+          "one": {
+            "title": "Appointment intent is detected",
+            "body": "When the customer writes “appointment, visit, time”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks open slots on your calendar",
+            "body": "Connects to your clinic or team calendar and lists available windows for that day."
+          },
+          "three": {
+            "title": "Confirms the booking and sets a reminder",
+            "body": "Saves the chosen time, sends confirmation, and reminds automatically 1 hour before."
+          },
+          "sim": {
+            "user": "Can I book something for tomorrow afternoon?",
+            "bot": "Available slots for tomorrow (Nov 27) are below. Pick one:",
+            "btn1": "14:00 — Available",
+            "btn2": "15:30 — Available"
+          }
+        },
+        "lead": {
+          "tab": "Ads & Leads",
+          "one": {
+            "title": "The first ad-driven message is captured",
+            "body": "Recognizes which Instagram or Facebook ad brought the customer into the chat."
+          },
+          "two": {
+            "title": "AI recommends the right product",
+            "body": "Asks about team size and budget, then matches the best package from your catalog."
+          },
+          "three": {
+            "title": "Saves the lead and hands off to Sales",
+            "body": "Writes the conversation summary into CRM and connects the hot lead to a sales agent."
+          },
+          "sim": {
+            "user": "I’m writing from the Instagram ad — can I get a quote for a 20-person office?",
+            "bot": "For a 20-person office we recommend Barista Pro X2. Want me to send the quote?",
+            "btn1": "Send quote",
+            "btn2": "Talk to sales"
+          }
+        }
+      }
+    },
     "health": {
       "eyebrow": "Number health",
       "title": "Protect your line before Meta restricts it",
@@ -2412,6 +2504,123 @@
         "continues": "Replying when a customer writes: still on"
       }
     },
+    "campaigns": {
+      "eyebrow": "Bulk campaign engine",
+      "title": "Reach thousands at the right moment, with zero risk",
+      "subtitle": "Match approved Meta templates with dynamic audiences. Run one-time, recurring, or API-triggered campaigns behind a preflight gate and quota protection.",
+      "modesLabel": "Campaign send type",
+      "stages": {
+        "audience": "1. Audience",
+        "timing": "2. Timing & quota"
+      },
+      "gate": {
+        "title": "Preflight readiness gate",
+        "pass": "4/4 checks passed",
+        "checks": {
+          "template": "Template approved",
+          "quality": "Quality: Green",
+          "number": "Number active",
+          "risk": "Risk protected"
+        }
+      },
+      "funnel": {
+        "title": "Live delivery & conversion funnel",
+        "target": "Audience",
+        "delivered": "Delivered",
+        "read": "Read",
+        "replied": "Replied"
+      },
+      "preview": {
+        "business": "Omnider Store",
+        "account": "Official business account",
+        "footer": "Reply STOP to opt out",
+        "riskLabel": "Delivery-risk protection",
+        "riskStatus": "Active • 0 errors"
+      },
+      "modes": {
+        "onetime": {
+          "tab": "One-time campaign",
+          "title": "November VIP Early Access",
+          "status": "Completed",
+          "subtitle": "Segment: VIP Tag • Europe/Istanbul",
+          "scheduleTag": "One-time",
+          "audienceTitle": "Dynamic VIP segment",
+          "audienceDesc": "4,820 people who passed 30-day active WhatsApp verification.",
+          "timingTitle": "Staggered send (10K quota)",
+          "timingDesc": "Europe/Istanbul 10:30 • Aligned with the daily unique-recipient limit.",
+          "routingLabel": "Replies → Omnider AI + Sales",
+          "target": "4,820",
+          "delivered": "4,791",
+          "read": "4,120",
+          "replied": "894",
+          "targetBar": "100%",
+          "deliveredBar": "99%",
+          "readBar": "86%",
+          "repliedBar": "19%",
+          "tplName": "vip_discount_nov",
+          "tplCat": "MARKETING",
+          "msgHeader": "VIP early access just for you",
+          "msgBody": "Hi '{{1}}', your 20% early-access discount for the November season is ready in your account.",
+          "cta1": "Shop now",
+          "cta2": "Talk to an agent",
+          "time": "10:30"
+        },
+        "recurring": {
+          "tab": "Recurring flow",
+          "title": "Weekly Cart Reminder",
+          "status": "Scheduled • Every Monday",
+          "subtitle": "Segment: Active Lead • 10:00 Europe/Istanbul",
+          "scheduleTag": "Recurring",
+          "audienceTitle": "Open carts & lead list",
+          "audienceDesc": "1,240 people who abandoned a cart in the last 7 days and have a verified number.",
+          "timingTitle": "Weekly automatic cycle",
+          "timingDesc": "Every Monday at 10:00 • Rolls to the next day when quota fills.",
+          "routingLabel": "Replies → Cart Recovery Flow",
+          "target": "1,240",
+          "delivered": "1,234",
+          "read": "1,088",
+          "replied": "312",
+          "targetBar": "100%",
+          "deliveredBar": "99%",
+          "readBar": "88%",
+          "repliedBar": "25%",
+          "tplName": "cart_reminder_v2",
+          "tplCat": "MARKETING",
+          "msgHeader": "Your cart is waiting",
+          "msgBody": "Hi '{{1}}', finish your order with an extra 10% off before items sell out.",
+          "cta1": "Open cart",
+          "cta2": "Get help",
+          "time": "10:00"
+        },
+        "api": {
+          "tab": "API / Webhook trigger",
+          "title": "Order & Shipping Trigger",
+          "status": "Live webhook • 24/7",
+          "subtitle": "POST /v1/campaigns/trigger • REST API",
+          "scheduleTag": "API triggered",
+          "audienceTitle": "Real-time event stream",
+          "audienceDesc": "Recipients fired instantly from your ecommerce or CRM webhooks.",
+          "timingTitle": "Instant send (< 400ms)",
+          "timingDesc": "Outside the 24-hour window, Utility templates deliver safely and automatically.",
+          "routingLabel": "Replies → Shipping Tracker Bot",
+          "target": "9,410",
+          "delivered": "9,392",
+          "read": "8,940",
+          "replied": "640",
+          "targetBar": "100%",
+          "deliveredBar": "99%",
+          "readBar": "95%",
+          "repliedBar": "7%",
+          "tplName": "shipment_on_the_way",
+          "tplCat": "UTILITY",
+          "msgHeader": "Your order is on the way",
+          "msgBody": "Hi '{{1}}', order #'{{2}}' was handed to the carrier. Use the button below for live tracking.",
+          "cta1": "Track shipment",
+          "cta2": "Change delivery address",
+          "time": "14:22"
+        }
+      }
+    },
     "adReferral": {
       "eyebrow": "Click-to-WhatsApp (CTWA)",
       "title": "Know which ad brought each customer",
@@ -2431,30 +2640,154 @@
         "adId": "238591",
         "campaign": "Office Espresso Campaign",
         "source": "Instagram Reels",
-        "bubble": "Hi, I’m writing from this ad. Can I get a quote for a 20-person office?"
+        "bubble": "Hi, I’m writing from this ad. Can I get a quote for a 20-person office?",
+        "replyRole": "Omnider AI",
+        "reply": "Absolutely! How many machines are you considering, and roughly how many cups per day?",
+        "followUp": "Two machines, ~80 cups/day. Can we book a demo tomorrow afternoon?"
+      }
+    },
+    "analytics": {
+      "eyebrow": "Revenue & Conversion Reports",
+      "title": "Measure how every WhatsApp chat turns into leads and orders",
+      "subtitle": "Track first-response speed, qualified lead capture, order conversion, and delivery reliability in one revenue-focused report.",
+      "kpis": {
+        "speed": {
+          "label": "Avg. First Response",
+          "value": "14 sec",
+          "badge": "Instant AI",
+          "sub": "14 sec instead of a 12 min industry average"
+        },
+        "lead": {
+          "label": "Lead Conversion Rate",
+          "value": "58.4%",
+          "badge": "+12.6%",
+          "sub": "2,815 qualified prospects"
+        },
+        "order": {
+          "label": "Order Conversion Rate",
+          "value": "38.6%",
+          "badge": "₺2.87M",
+          "sub": "1,860 completed WhatsApp orders"
+        },
+        "fail": {
+          "label": "Delivery Fail Rate",
+          "value": "0.4%",
+          "badge": "Very low",
+          "sub": "99.6% successful message delivery"
+        }
+      },
+      "funnel": {
+        "title": "Chat-to-Order Conversion Funnel",
+        "subtitle": "How every inbound request becomes a lead and a sale",
+        "badge": "ROI report",
+        "aovLabel": "Average basket / transaction",
+        "aovValue": "₺1,542 / order",
+        "steps": {
+          "chats": {
+            "label": "1. Inbound chats & campaign engagement",
+            "value": "4,820 (100%)"
+          },
+          "fast": {
+            "label": "2. Answered under 30 seconds",
+            "value": "4,798 (99.5%)"
+          },
+          "leads": {
+            "label": "3. Qualified leads (contact + intent)",
+            "value": "2,815 (58.4%)"
+          },
+          "orders": {
+            "label": "4. Completed orders / appointments",
+            "value": "1,860 (38.6%)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Source-Based Conversion Report",
+        "subtitle": "Which channel turns customers into orders fastest?",
+        "columns": {
+          "source": "Entry source",
+          "reply": "First reply",
+          "lead": "Lead",
+          "order": "Order"
+        },
+        "rows": {
+          "ctwa": {
+            "name": "CTWA ads",
+            "desc": "Instagram & Facebook",
+            "reply": "8 sec",
+            "lead": "64.0%",
+            "order": "46.5%"
+          },
+          "campaigns": {
+            "name": "Bulk campaigns",
+            "desc": "VIP & cart reminders",
+            "reply": "18 sec",
+            "lead": "56.4%",
+            "order": "38.2%"
+          },
+          "web": {
+            "name": "Website & QR",
+            "desc": "Widget & in-store",
+            "reply": "12 sec",
+            "lead": "52.8%",
+            "order": "34.6%"
+          },
+          "organic": {
+            "name": "Organic WhatsApp",
+            "desc": "Direct line messages",
+            "reply": "16 sec",
+            "lead": "48.1%",
+            "order": "31.0%"
+          }
+        }
       }
     },
     "try": {
-      "eyebrow": "Live test",
-      "title": "Try WhatsApp Business from your phone",
-      "body": "Scan the Turkey, Europe or USA line, or tap the button. Omnider replies — ask about pricing, an appointment or an order. AI answers, and the team takes over when needed.",
-      "cta": "Open in WhatsApp",
+      "eyebrow": "Live demo • 24/7 active",
+      "title": "Try WhatsApp Business from your phone now",
+      "body": "Scan the Turkey, Europe, or USA line — or start a chat in one tap. AI answers pricing, booking, and order questions; the team takes over when needed.",
+      "cta": "Start chat in WhatsApp",
+      "promptsLabel": "What do you want to test?",
+      "regionsLabel": "Choose demo region",
+      "prefillLabel": "Ready test message",
+      "online": "Online",
+      "trust": {
+        "ai": "Instant AI reply (under 1 sec)",
+        "handoff": "One-tap live team handoff"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Ask pricing & catalog",
+          "message": "Hi, can I get details about your packages and pricing?"
+        },
+        "booking": {
+          "tab": "Book a demo",
+          "message": "I’d like to book a demo for tomorrow afternoon."
+        },
+        "order": {
+          "tab": "Track an order",
+          "message": "When will order #4829 be delivered?"
+        }
+      },
       "lines": {
         "turkey": {
           "title": "Omnider Turkey",
           "phone": "+90 546 419 94 17",
+          "lang": "Turkish & English auto-detect",
           "ctaTitle": "Open the Omnider Turkey WhatsApp line",
           "imageAlt": "QR code for the Omnider Turkey WhatsApp line, +90 546 419 94 17"
         },
         "europe": {
           "title": "Omnider Europe",
           "phone": "+44 7529 760393",
+          "lang": "English, German & multilingual support",
           "ctaTitle": "Open the Omnider Europe WhatsApp line",
           "imageAlt": "QR code for the Omnider Europe WhatsApp line, +44 7529 760393"
         },
         "usa": {
           "title": "Omnider USA",
           "phone": "+1 845 720 3266",
+          "lang": "English & Spanish (US/LATAM)",
           "ctaTitle": "Open the Omnider USA WhatsApp line",
           "imageAlt": "QR code for the Omnider USA WhatsApp line, +1 845 720 3266"
         }
