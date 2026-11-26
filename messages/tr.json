@@ -2237,6 +2237,8 @@
       "eyebrow": "Meta şablonları",
       "title": "WhatsApp şablonlarınızı tek yerden yönetin.",
       "subtitle": "Omnider şablonları Meta’dan çeker, taslak yazar ve onaya gönderir; onay, red ve kalite durumunu tek listede takip edersiniz.",
+      "ctaPrimary": "Sizi arayalım",
+      "ctaSecondary": "Ücretsiz başla",
       "cards": {
         "sync": {
           "label": "Meta ile senkronizasyon",

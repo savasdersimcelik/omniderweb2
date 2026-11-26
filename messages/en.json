@@ -2237,6 +2237,8 @@
       "eyebrow": "Meta templates",
       "title": "Manage your WhatsApp templates in one place.",
       "subtitle": "Omnider pulls templates from Meta, drafts them, and submits them for review—so you can track approval, rejection, and quality in one list.",
+      "ctaPrimary": "We'll call you",
+      "ctaSecondary": "Start for free",
       "cards": {
         "sync": {
           "label": "Sync with Meta",
