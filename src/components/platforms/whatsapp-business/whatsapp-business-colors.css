@@ -1,0 +1,288 @@
+body:has(.wa-biz-page) {
+  --wa-business-primary: #25d366;
+  --wa-business-hover: #087252;
+  --wa-dark-surface: #0d382b;
+  --wa-dark-raised: #154736;
+  --wa-dark-inset: #092e23;
+  --wa-dark-line: #3b6956;
+  --wa-dark-ink: #f0fff4;
+  --wa-dark-muted: #bedfcb;
+  --wa-light-accent: #8ff0ab;
+}
+
+.wa-biz-page.wa-page-atmosphere {
+  --wa-green: var(--wa-business-primary);
+  --wa-teal: var(--wa-business-hover);
+  --wa-deep: #064936;
+  --wa-wallpaper: #efeae2;
+  --wa-bubble-out: #d9fdd3;
+  --wa-atm-a: var(--wa-teal);
+  --wa-atm-b: var(--wa-green);
+  --wa-atm-c: var(--wa-teal);
+  --wa-atm-base-0: #f6fff8;
+  --wa-atm-base-1: #edfaf1;
+  --wa-atm-base-2: #e5f6eb;
+  --wa-atm-base-3: #ecf8ef;
+  --wa-atm-base-4: #f5fcf7;
+
+  --wa-status-green: #16a34a;
+  --wa-status-green-container: #dcfce7;
+  --wa-status-green-on: #14532d;
+  --wa-status-yellow: #ca8a04;
+  --wa-status-yellow-container: #fef9c3;
+  --wa-status-yellow-on: #713f12;
+  --wa-status-red: #dc2626;
+  --wa-status-red-container: #fee2e2;
+  --wa-status-red-on: #7f1d1d;
+
+  --color-ink: #133a2b;
+  --color-ink-muted: #355a49;
+  --color-ink-subtle: #3c6251;
+  --color-ink-faint: #506c5d;
+  --color-surface: #fff;
+  --color-surface-muted: #f5fcf7;
+  --color-surface-subtle: #e7f6ec;
+  --color-line: #bddbc8;
+  --color-line-subtle: #daece0;
+
+  color: var(--color-ink);
+}
+
+.wa-biz-page .wa-biz-hero--photo {
+  border-color: var(--color-line);
+  background:
+    radial-gradient(ellipse at 12% 88%, #abeac3, transparent 66%),
+    linear-gradient(120deg, #effff2, #d5f4df 60%, #bee5ce);
+}
+
+.wa-biz-page #wa-biz-hero-title span:last-child {
+  color: var(--wa-teal);
+}
+
+.wa-biz-page :is(
+  .heading-section,
+  .wa-inbox .home-hero__title,
+  .meta-tech-provider,
+  .user-trust__rating strong
+) {
+  color: var(--wa-deep);
+}
+
+.wa-biz-page :is(
+  .text-body,
+  .wa-inbox .home-hero__desc,
+  .meta-tech-provider strong + span,
+  .user-trust__stars span,
+  .user-trust__rating p
+) {
+  color: var(--color-ink-muted);
+}
+
+.wa-biz-page :is(.border-line, .user-trust__rating) {
+  border-color: var(--color-line);
+}
+
+.wa-biz-page :is(
+  .wa-connect__panel,
+  .wa-connect__compare,
+  .wa-campaigns__cockpit,
+  .wa-ad-referral__ad,
+  .wa-analytics__kpi,
+  .wa-analytics__panel,
+  .wa-connect__tab,
+  .wa-ai__model,
+  .wa-interactive__preview
+) {
+  background-color: var(--color-surface-muted);
+}
+
+.wa-biz-page .wa-connect__tab.is-on:is(.is-cloud, .is-coex) {
+  border-color: var(--wa-teal);
+  background: var(--color-surface-subtle);
+  color: var(--wa-deep);
+  box-shadow: 0 10px 24px -18px var(--wa-deep);
+}
+
+.wa-biz-page :is(.wa-connect__num.is-cloud, .wa-connect__mark.is-num) {
+  background: var(--wa-teal);
+}
+
+.wa-biz-page .wa-connect__num.is-coex {
+  background: var(--wa-deep);
+}
+
+.wa-biz-page .wa-inbox .wa-hero-chat__desktop {
+  border-color: var(--color-line);
+  box-shadow: 0 28px 60px -28px color-mix(in srgb, var(--wa-deep) 38%, transparent);
+}
+
+.wa-biz-page :is(
+  .wa-browser-side__search,
+  .wa-browser-main__composer-field,
+  .wa-hero-chat__desktop .hero-chat__url
+) {
+  border-color: var(--color-line-subtle);
+  background: var(--color-surface-muted);
+  color: var(--color-ink-muted);
+}
+
+.wa-biz-page .wa-browser-side__item.is-active {
+  background: var(--color-surface-subtle) !important;
+}
+
+.wa-biz-page :is(.wa-browser-side__avatar, .wa-hero-chat .wa-desk__unread) {
+  background: var(--color-surface-subtle);
+  color: var(--wa-deep);
+}
+
+.wa-biz-page :is(
+  .wa-interactive__card,
+  .wa-chatflow__preview,
+  .wa-campaigns__preview
+) {
+  border-color: var(--wa-dark-line);
+  background-color: var(--wa-dark-surface);
+  color: var(--wa-dark-ink);
+}
+
+.wa-biz-page .wa-interactive__card {
+  background-image: linear-gradient(145deg, var(--wa-dark-raised), var(--wa-dark-surface));
+}
+
+.wa-biz-page .wa-interactive__card-header p {
+  color: var(--wa-dark-muted);
+}
+
+.wa-biz-page .wa-templates {
+  background: linear-gradient(180deg, transparent, #fbf4e5 22% 78%, transparent);
+}
+
+body:has(.wa-biz-page) .closing-cta {
+  border-color: var(--wa-dark-line);
+  background-color: var(--wa-dark-inset);
+  background-image: radial-gradient(ellipse at 92% 8%, #1a6749, transparent 68%);
+  color: var(--wa-dark-ink);
+}
+
+body:has(.wa-biz-page) .closing-cta__orbit {
+  border-color: color-mix(in srgb, var(--wa-light-accent) 20%, transparent);
+  background: radial-gradient(circle at 40% 40%, color-mix(in srgb, var(--wa-light-accent) 12%, transparent), transparent 62%);
+}
+
+body:has(.wa-biz-page) .closing-cta__eyebrow,
+.wa-biz-page :is(.wa-biz-try__prompt, .wa-biz-try__region, .wa-biz-try__card) {
+  border-color: var(--wa-dark-line);
+  background: var(--wa-dark-raised);
+  color: var(--wa-dark-muted);
+}
+
+.wa-biz-page :is(.wa-biz-try__trust, .wa-biz-try__prefill) {
+  border-color: var(--wa-dark-line);
+}
+
+.wa-biz-page .wa-biz-try__prefill {
+  background: var(--wa-dark-inset);
+}
+
+.wa-biz-page :is(
+  .wa-biz-try__title,
+  .wa-biz-try__prompts-label,
+  .wa-biz-try__region span:first-child,
+  .wa-biz-try__panel-head h3,
+  .wa-biz-try__prefill p
+) {
+  color: var(--wa-dark-ink);
+}
+
+.wa-biz-page :is(
+  .wa-biz-try__body,
+  .wa-biz-try__trust-item,
+  .wa-biz-try__region span:last-child,
+  .wa-biz-try__panel-head p,
+  .wa-biz-try__prefill span
+) {
+  color: var(--wa-dark-muted);
+}
+
+.wa-biz-page :is(.wa-biz-try__prompt:hover, .wa-biz-try__region:hover, .wa-biz-try__region.is-on) {
+  border-color: var(--wa-light-accent);
+}
+
+.wa-biz-page .wa-biz-try__region.is-on {
+  background: var(--wa-dark-inset);
+}
+
+.wa-biz-page :is(.wa-biz-try__region.is-on span:last-child, .wa-biz-try__trust-item svg) {
+  color: var(--wa-light-accent);
+}
+
+.wa-biz-page :is(.wa-biz-try__prompt.is-on, .wa-biz-try__cta) {
+  background: var(--wa-green);
+  color: var(--wa-dark-inset);
+}
+
+.wa-biz-page .wa-biz-try__cta:hover {
+  background: var(--wa-light-accent);
+}
+
+.wa-biz-page :is(button, a):focus-visible {
+  outline-color: var(--wa-teal);
+}
+
+body:has(.wa-biz-page) .closing-cta :is(button, a):focus-visible {
+  outline-color: var(--wa-light-accent);
+}
+
+body:has(.wa-biz-page) :is(
+  .header-cta-primary,
+  [data-slot="sheet-content"] [id="cta-register"],
+  .closing-cta__btn-primary
+) {
+  background-color: var(--wa-business-primary);
+  color: var(--wa-dark-inset);
+  box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--wa-business-primary) 64%, transparent);
+}
+
+body:has(.wa-biz-page) :is(
+  .header-cta-primary,
+  [data-slot="sheet-content"] [id="cta-register"],
+  .closing-cta__btn-primary
+):hover {
+  background-color: var(--wa-light-accent);
+}
+
+body:has(.wa-biz-page) :is(
+  .header-cta-primary,
+  [data-slot="sheet-content"] [id="cta-register"],
+  .closing-cta__btn-primary
+):focus-visible {
+  --tw-ring-color: var(--wa-business-hover);
+  outline-color: var(--wa-business-hover);
+}
+
+body:has(.wa-biz-page) .closing-cta__title-accent {
+  background-image: linear-gradient(105deg, var(--wa-light-accent), var(--wa-business-primary));
+}
+
+body:has(.wa-biz-page) .closing-cta__card {
+  border-color: var(--wa-dark-line);
+  background: linear-gradient(165deg, var(--wa-dark-raised), var(--wa-dark-surface));
+}
+
+body:has(.wa-biz-page) :is(.closing-cta__inbox, .closing-cta__avatar) {
+  border-color: var(--wa-dark-line);
+  background: var(--wa-dark-inset);
+}
+
+body:has(.wa-biz-page) :is(.closing-cta__inbox-logo, .closing-cta__thread.is-active) {
+  background: var(--wa-dark-raised);
+}
+
+body:has(.wa-biz-page) :is(
+  .closing-cta__desc,
+  .closing-cta__trust-text,
+  .closing-cta__card-subtitle,
+  .closing-cta__inbox-live
+) {
+  color: var(--wa-dark-muted);
+}

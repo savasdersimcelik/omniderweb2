@@ -7161,45 +7161,7 @@
     );
 }
 
-/* Omnider WhatsApp Business design system palette (scoped) */
 .wa-biz-page {
-  --wa-green: #00a884;
-  --wa-teal: #006b53;
-  --wa-deep: #005130;
-  --wa-wallpaper: #efeae2;
-  --wa-bubble-out: #d9fdd3;
-  --wa-hero: #005130;
-  --wa-hero-mid: #116b43;
-  --wa-hero-soft: color-mix(in srgb, #005130 18%, #d3f8ec);
-  --wa-atm-a: #005130;
-  --wa-atm-b: #00a884;
-  --wa-atm-c: #006b53;
-  --wa-atm-base-0: #ffffff;
-  --wa-atm-base-1: #f7faf4;
-  --wa-atm-base-2: #f1f5ef;
-  --wa-atm-base-3: #ebefe9;
-  --wa-atm-base-4: #f7faf4;
-  --wa-status-green: #16a34a;
-  --wa-status-green-container: #dcfce7;
-  --wa-status-green-on: #14532d;
-  --wa-status-yellow: #ca8a04;
-  --wa-status-yellow-container: #fef9c3;
-  --wa-status-yellow-on: #713f12;
-  --wa-status-red: #dc2626;
-  --wa-status-red-container: #fee2e2;
-  --wa-status-red-on: #7f1d1d;
-  --color-wa-green: #00a884;
-  --color-wa-teal: #006b53;
-  --color-wa-dark: #005130;
-  --color-ink: #181d19;
-  --color-ink-muted: #3f4942;
-  --color-ink-subtle: #3f4942;
-  --color-ink-faint: #6f7a71;
-  --color-surface: #ffffff;
-  --color-surface-muted: #f7faf4;
-  --color-surface-subtle: #f1f5ef;
-  --color-line: #bec9bf;
-  --color-line-subtle: #e0e4de;
   --wa-section-title-size: clamp(1.7rem, 2.85vw, 2.35rem);
   --wa-section-title-leading: 1.15;
 }

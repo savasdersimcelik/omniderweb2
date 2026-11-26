@@ -57,7 +57,7 @@ export async function WhatsAppBusinessHero() {
             <span className="block whitespace-nowrap">{t("hero.titleLine1")}</span>
             <span className="block whitespace-nowrap">{t("hero.titleLine2")}</span>
           </h1>
-          <p className="mt-4 line-clamp-2 max-w-lg text-pretty text-lg leading-snug text-[color-mix(in_srgb,var(--wa-deep)_72%,transparent)] lg:mt-7 lg:max-w-xl lg:text-xl lg:leading-relaxed xl:max-w-2xl xl:text-2xl">
+          <p className="mt-4 line-clamp-2 max-w-lg text-pretty text-lg leading-snug text-[var(--color-ink-muted)] lg:mt-7 lg:max-w-xl lg:text-xl lg:leading-relaxed xl:max-w-2xl xl:text-2xl">
             {t("hero.description")}
           </p>
           <HeroTrust className="home-hero__trust mt-5 max-w-none flex-row flex-nowrap items-center justify-center lg:mt-8 lg:origin-left lg:scale-105 lg:justify-start" />

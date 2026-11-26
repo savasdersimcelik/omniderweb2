@@ -1,3 +1,5 @@
+import "./whatsapp-business-colors.css";
+
 import { AdReferralSection } from "./AdReferralSection";
 import { AiAutomationSection } from "./AiAutomationSection";
 import { AnalyticsSection } from "./AnalyticsSection";
