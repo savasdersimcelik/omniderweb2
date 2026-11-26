@@ -1,5 +1,4 @@
 import {
-  ArrowUpRightIcon,
   BadgeCheckIcon,
   ClockIcon,
   FileTextIcon,
@@ -12,9 +11,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
-import { Link } from "@/i18n/navigation";
 
 const CARDS = [
   {
@@ -61,24 +58,13 @@ export async function TemplatesSection() {
               <FileTextIcon aria-hidden="true" />
               {t("eyebrow")}
             </p>
-            <h2 id="wa-templates-title" className="heading-section mt-3 text-balance">
-              {t("title")}
+            <h2 id="wa-templates-title" className="heading-section mt-3">
+              <span className="block">{t("titleLine1")}</span>
+              <span className="block">{t("titleLine2")}</span>
             </h2>
           </div>
           <div>
             <p className="text-body text-pretty">{t("subtitle")}</p>
-            <div className="wa-templates__actions">
-              <DemoRequestButton
-                source="whatsapp-business-templates"
-                className="btn-primary wa-templates__demo"
-              >
-                {t("ctaPrimary")}
-              </DemoRequestButton>
-              <Link href="/register" className="btn-secondary wa-templates__register">
-                {t("ctaSecondary")}
-                <ArrowUpRightIcon size={16} aria-hidden="true" />
-              </Link>
-            </div>
           </div>
         </header>
 

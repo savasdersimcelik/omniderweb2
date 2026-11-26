@@ -21,14 +21,8 @@ export async function WhatsAppInboxSection({
   const nav = await getTranslations("Nav");
   const steps = t.raw("hero.chat.steps") as WaHeroStep[];
   const sidebar = t.raw("hero.chat.sidebar") as WaSidebarItem[];
-  const titleId =
-    namespace === "PlatformWhatsAppBusiness"
-      ? "wa-biz-inbox-title"
-      : "wa-personal-inbox-title";
-  const source =
-    namespace === "PlatformWhatsAppBusiness"
-      ? "whatsapp-business-inbox"
-      : "whatsapp-personal-inbox";
+  const isBusiness = namespace === "PlatformWhatsAppBusiness";
+  const titleId = isBusiness ? "wa-biz-inbox-title" : "wa-personal-inbox-title";
 
   return (
     <section className="wa-inbox" aria-labelledby={titleId}>
@@ -46,15 +40,20 @@ export async function WhatsAppInboxSection({
             {t("inbox.description")}
           </p>
 
-          <div className="home-hero__actions">
-            <DemoRequestButton source={source} className="btn-primary">
-              {t("inbox.cta")}
-              <ArrowUpRight className="size-4" aria-hidden />
-            </DemoRequestButton>
-            <Link href="/register" className="btn-secondary">
-              {nav("startFree")}
-            </Link>
-          </div>
+          {!isBusiness && (
+            <div className="home-hero__actions">
+              <DemoRequestButton
+                source="whatsapp-personal-inbox"
+                className="btn-primary"
+              >
+                {t("inbox.cta")}
+                <ArrowUpRight className="size-4" aria-hidden />
+              </DemoRequestButton>
+              <Link href="/register" className="btn-secondary">
+                {nav("startFree")}
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className="hero-chat-shell relative z-10 mt-6 flex min-h-0 w-full flex-col sm:mt-8">

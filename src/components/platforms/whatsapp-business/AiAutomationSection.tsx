@@ -1,5 +1,4 @@
 import {
-  ArrowUpRightIcon,
   CalendarDaysIcon,
   GitBranchIcon,
   LanguagesIcon,
@@ -9,9 +8,7 @@ import {
   ZapIcon,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { DemoRequestButton } from "@/components/demo";
 import { Container } from "@/components/layout/Container";
-import { Link } from "@/i18n/navigation";
 
 const MODELS = [
   { id: "assist", icon: LifeBuoyIcon },
@@ -40,18 +37,6 @@ export async function AiAutomationSection() {
           </div>
           <div>
             <p className="text-body text-pretty">{t("subtitle")}</p>
-            <div className="wa-ai__actions">
-              <DemoRequestButton
-                source="whatsapp-business-ai"
-                className="btn-primary wa-ai__demo"
-              >
-                {t("ctaPrimary")}
-              </DemoRequestButton>
-              <Link href="/register" className="btn-secondary wa-ai__register">
-                {t("ctaSecondary")}
-                <ArrowUpRightIcon size={16} aria-hidden="true" />
-              </Link>
-            </div>
           </div>
         </header>
 

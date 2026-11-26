@@ -10,10 +10,10 @@
 /* -------------------------------------------------------------------------- */
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-geist-sans);
-  --font-brand: var(--font-brand);
+  --font-sans: var(--font-instrument-sans, system-ui, sans-serif);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-heading: var(--font-newsreader, Georgia, serif);
+  --font-brand: var(--font-newsreader, Georgia, serif);
 
   /* Brand — indigo (primary) */
   --color-brand-50: #eef2ff;
@@ -2326,7 +2326,7 @@
   }
 
   .header-wordmark {
-    font-family: var(--font-brand), "Times New Roman", serif;
+    font-family: var(--font-brand);
     font-size: 1.55rem;
     font-weight: 800;
     letter-spacing: -0.03em;
@@ -4984,7 +4984,7 @@
 }
 
 .wa-templates__header .heading-section {
-  max-width: 21ch;
+  max-width: none;
 }
 
 .wa-templates__header .text-body {
@@ -6324,46 +6324,6 @@
 
 .wa-ai__header .text-body {
   max-width: 47ch;
-}
-
-.wa-templates__actions,
-.wa-ai__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 1.2rem;
-}
-
-.wa-templates__demo,
-.wa-ai__demo,
-.wa-templates__register,
-.wa-ai__register {
-  border-radius: 0.8rem;
-  padding-inline: 1.05rem;
-}
-
-.wa-templates__demo,
-.wa-ai__demo {
-  background: #175239;
-  color: #fff;
-}
-
-.wa-templates__demo:hover,
-.wa-ai__demo:hover {
-  background: #103f2c;
-}
-
-.wa-templates__register,
-.wa-ai__register {
-  border-color: #b9d2c1;
-  background: #f9fcf7;
-  color: #1c563d;
-}
-
-.wa-templates__register:hover,
-.wa-ai__register:hover {
-  background: #e9f4e9;
-  color: #15432f;
 }
 
 .wa-ai__catalog {
@@ -14177,7 +14137,7 @@ a.tg-modes__pick-card:hover {
   }
 }
 
-/* Section and hero titles share Playfair Display. */
+/* Newsreader for marketing headings. Body copy inherits Instrument Sans. */
 .heading-section,
 .heading-page,
 .home-metrics__title,
@@ -14196,24 +14156,7 @@ a.tg-modes__pick-card:hover {
 .wa-biz-hero__title,
 .ig-biz-hero__title,
 .pricing-hero__title,
-.contact-hero__title {
-  font-family: var(--font-brand), "Times New Roman", serif;
-}
-
-/* The paragraph under a section or hero title. */
-.text-body,
-.home-lead__body,
-.home-hero__desc,
-.home-metrics__body,
-.closing-cta__desc,
-.wa-biz-hero__desc,
-.ig-biz-hero__desc,
-.wap-stats__body,
-.pricing-hero__desc,
-.pricing-section-subtitle,
-.contact-hero__desc,
-.contact-main__subtitle,
-.contact-direct__subtitle,
-.contact-channels__subtitle {
-  font-family: var(--font-serif), "Times New Roman", serif;
+.contact-hero__title,
+:where(#wa-biz-hero-title, #wa-personal-hero-title, #ms-biz-hero-title, #tg-hero-title, #ln-hero-title) {
+  font-family: var(--font-brand);
 }

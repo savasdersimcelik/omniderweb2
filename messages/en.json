@@ -2151,8 +2151,6 @@
       "titleLine1": "Customers write,",
       "titleLine2": "AI replies",
       "description": "Manage WhatsApp Business API, AI responses and team inbox in one place with Omnider.",
-      "ctaPrimary": "Open free demo account",
-      "ctaSecondary": "View pricing",
       "chat": {
         "businessName": "Atelier",
         "online": "online",
@@ -2235,10 +2233,9 @@
     },
     "templates": {
       "eyebrow": "Meta templates",
-      "title": "Manage your WhatsApp templates in one place.",
+      "titleLine1": "Manage your WhatsApp templates",
+      "titleLine2": "in one place.",
       "subtitle": "Omnider pulls templates from Meta, drafts them, and submits them for review—so you can track approval, rejection, and quality in one list.",
-      "ctaPrimary": "We'll call you",
-      "ctaSecondary": "Start for free",
       "cards": {
         "sync": {
           "label": "Sync with Meta",
@@ -2330,8 +2327,6 @@
       "eyebrow": "Artificial intelligence",
       "title": "Pick a ready Omnider AI model for your channel",
       "subtitle": "Activate one of six Omnider AI models as the primary reply engine. With persona, media, and tags, answers stay in your brand voice.",
-      "ctaPrimary": "We'll call you",
-      "ctaSecondary": "Start for free",
       "catalogTitle": "Omnider AI model catalog",
       "catalogBadge": "Persona • Media • Tags",
       "detailTitle": "Omnider {name}",

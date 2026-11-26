@@ -2151,8 +2151,6 @@
       "titleLine1": "Müşteri yazsın,",
       "titleLine2": "yapay zeka yanıtlasın",
       "description": "WhatsApp Business API, yapay zeka yanıtları ve ekip gelen kutusunu Omnider ile tek yerden yönetin.",
-      "ctaPrimary": "Hemen demo hesap aç",
-      "ctaSecondary": "Fiyatları inceleyin",
       "chat": {
         "businessName": "Atölye",
         "online": "çevrimiçi",
@@ -2235,10 +2233,9 @@
     },
     "templates": {
       "eyebrow": "Meta şablonları",
-      "title": "WhatsApp şablonlarınızı tek yerden yönetin.",
+      "titleLine1": "WhatsApp şablonlarınızı",
+      "titleLine2": "tek yerden yönetin.",
       "subtitle": "Omnider şablonları Meta’dan çeker, taslak yazar ve onaya gönderir; onay, red ve kalite durumunu tek listede takip edersiniz.",
-      "ctaPrimary": "Sizi arayalım",
-      "ctaSecondary": "Ücretsiz başla",
       "cards": {
         "sync": {
           "label": "Meta ile senkronizasyon",
@@ -2330,8 +2327,6 @@
       "eyebrow": "Yapay Zeka",
       "title": "Kanalınız için hazır Omnider AI modelini seçin",
       "subtitle": "6 farklı Omnider AI modelinden birini birincil yanıt motoru olarak aktif edin. Persona, medya ve etiketlerle marka dilinize uygun yanıtlar üretir.",
-      "ctaPrimary": "Sizi arayalım",
-      "ctaSecondary": "Ücretsiz başla",
       "catalogTitle": "Omnider AI Model Kataloğu",
       "catalogBadge": "Persona • Medya • Etiket",
       "detailTitle": "Omnider {name}",

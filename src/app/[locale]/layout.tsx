@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
-import { Geist, Geist_Mono, Playfair_Display, Source_Serif_4 } from "next/font/google";
+import { Instrument_Sans, Newsreader } from "next/font/google";
 import Script from "next/script";
 import { Suspense } from "react";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
@@ -49,24 +49,15 @@ const analytics: {
       apiHost: analyticsApiHost,
     };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin", "latin-ext"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin", "latin-ext"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-brand",
-  subsets: ["latin", "latin-ext"],
-});
-
-const sourceSerif = Source_Serif_4({
-  variable: "--font-serif",
-  subsets: ["latin", "latin-ext"],
+  axes: ["opsz"],
 });
 
 export function generateStaticParams() {
@@ -116,7 +107,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${sourceSerif.variable} h-full antialiased`}
+      className={`${instrumentSans.variable} ${newsreader.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>
