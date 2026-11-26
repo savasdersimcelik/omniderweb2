@@ -49,7 +49,7 @@ export async function CatalogSection() {
                   <span className="wap-catalog__point-icon" aria-hidden="true">
                     <Icon size={16} strokeWidth={1.85} />
                   </span>
-                  <div>
+                  <div className="wap-catalog__point-copy">
                     <p>{t(`items.${id}.title`)}</p>
                     <span>{t(`items.${id}.body`)}</span>
                   </div>
