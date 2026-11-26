@@ -2266,17 +2266,13 @@
     },
     "interactive": {
       "eyebrow": "Cloud API",
-      "title": "Reply buttons, lists, and links",
-      "subtitle": "Bot replies go out as WhatsApp’s own buttons, lists, and links—customers tap, the choice lands in the panel, and the next message continues the flow.",
-      "tabs": {
-        "buttons": "Reply buttons",
-        "list": "Product list",
-        "link": "Link button"
-      },
+      "title": "Make the next step easy in WhatsApp.",
+      "subtitle": "Customers can reply with a tap, choose a product, track an order, or book an appointment in the chat.",
       "cards": {
-        "buttons": "Up to three quick replies. The customer taps instead of typing; that choice continues the flow.",
-        "list": "A list opens. Product, price, and stock sit on the row; the picked row lands in the panel.",
-        "link": "Tracking, a catalog, or a form in one CTA button. It opens the browser from inside WhatsApp."
+        "buttons": "The customer picks a quick reply and the bot continues the conversation based on their choice.",
+        "list": "Show products and prices in one list. The customer's selection appears in the chat.",
+        "link": "Send the customer to order tracking, a catalog, or an application page.",
+        "form": "Customers can pick a time and confirm an appointment without leaving the WhatsApp chat."
       },
       "buttons": {
         "body": "How would you like to get this?",
@@ -2289,13 +2285,10 @@
       },
       "list": {
         "body": "I found products that fit.",
-        "cta": "Products",
-        "sheet": "Choose a product",
         "rows": [
           {
             "title": "Yellow headphones",
-            "description": "1,249 TL",
-            "picked": true
+            "description": "1,249 TL"
           },
           {
             "title": "Pulse Smart Watch",
@@ -2309,9 +2302,26 @@
       },
       "link": {
         "body": "You can track your order from here.",
-        "cta": "Open tracking",
         "previewTitle": "Order tracking",
-        "previewUrl": "omnider.app/track"
+        "previewUrl": "omnider.app/track",
+        "status": "The sample order has been shipped."
+      },
+      "preview": "Sample conversation",
+      "form": {
+        "body": "Choose a time that works for your appointment.",
+        "chooseTime": "Appointment time",
+        "times": [
+          "10:00 AM",
+          "1:30 PM",
+          "4:00 PM"
+        ],
+        "success": "Your sample appointment is confirmed for {time}."
+      },
+      "labels": {
+        "buttons": "Reply buttons",
+        "list": "Product list",
+        "link": "Link button",
+        "form": "WhatsApp form"
       }
     },
     "aiAutomation": {

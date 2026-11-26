@@ -1,48 +1,26 @@
-"use client";
-
 import {
+  ArrowUpRightIcon,
+  CalendarDaysIcon,
   CheckIcon,
-  ExternalLinkIcon,
+  Link2Icon,
   ListIcon,
   MessageCircleIcon,
-  GlobeIcon,
+  PackageCheckIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
-import { cn } from "@/lib/utils";
 
-const COLUMNS = [
-  { id: "buttons" as const, Icon: MessageCircleIcon },
-  { id: "list" as const, Icon: ListIcon },
-  { id: "link" as const, Icon: GlobeIcon },
-];
+const FEATURES = [
+  { id: "buttons", icon: MessageCircleIcon },
+  { id: "list", icon: ListIcon },
+  { id: "link", icon: Link2Icon },
+  { id: "form", icon: CalendarDaysIcon },
+] as const;
 
-type ListRow = {
-  title: string;
-  description: string;
-  picked?: boolean;
-  out?: boolean;
-};
+const OPTIONS = [0, 1, 2] as const;
 
-function ProductShot() {
-  return (
-    <svg viewBox="0 0 320 120" className="h-full w-full" aria-hidden>
-      <rect width="320" height="120" fill="#f4ece4" />
-      <circle cx="250" cy="28" r="36" fill="#fff" opacity="0.45" />
-      <path
-        fill="#f7f1e8"
-        stroke="#e4d3c0"
-        strokeWidth="1"
-        d="M160 42c-8 0-14-8-26-11l-18 8-20 26 20 9 6-15v40h76V59l6 15 20-9-20-26-18-8c-12 3-18 11-26 11Z"
-      />
-    </svg>
-  );
-}
-
-export function InteractiveSection() {
-  const t = useTranslations("PlatformWhatsAppBusiness.interactive");
-  const options = t.raw("buttons.options") as string[];
-  const listRows = (t.raw("list.rows") as ListRow[]).slice(0, 3);
+export async function InteractiveSection() {
+  const t = await getTranslations("PlatformWhatsAppBusiness.interactive");
 
   return (
     <section
@@ -51,137 +29,103 @@ export function InteractiveSection() {
       aria-labelledby="wa-interactive-title"
     >
       <Container className="section">
-        <div className="wa-section-stack">
-          <header className="mx-auto max-w-3xl text-center">
-            <p className="wa-section-label">
-              <MessageCircleIcon />
-              {t("eyebrow")}
-            </p>
-            <h2 id="wa-interactive-title" className="heading-section mt-3">
-              {t("title")}
-            </h2>
-            <p className="wa-interactive__subtitle text-body mt-4">
-              {t("subtitle")}
-            </p>
-          </header>
+        <header className="wa-interactive__header">
+          <p className="wa-section-label">
+            <MessageCircleIcon aria-hidden="true" />
+            {t("eyebrow")}
+          </p>
+          <h2 id="wa-interactive-title" className="heading-section mt-3 text-balance">
+            {t("title")}
+          </h2>
+          <p className="text-body mt-4 text-pretty">{t("subtitle")}</p>
+        </header>
 
-          <div className="wa-interactive__cols">
-            {COLUMNS.map(({ id, Icon }) => (
-              <article key={id} className="wa-interactive__col">
-                <div className="wa-interactive__widget">
-                  <header className="wa-interactive__card-header">
-                    <div className="wa-interactive__col-heading">
-                      <span className="wa-interactive__col-icon">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <h3 className="wa-interactive__col-title">
-                        {t(`tabs.${id}`)}
-                      </h3>
-                    </div>
-                    <p className="wa-interactive__col-desc">{t(`cards.${id}`)}</p>
-                  </header>
-
-                  {id === "buttons" ? (
-                    <div className="wa-interactive__widget-inner is-buttons">
-                      <article className="wa-interactive__card">
-                        <div className="wa-interactive__shot">
-                          <ProductShot />
-                        </div>
-                        <p className="wa-interactive__card-body">
-                          {t("buttons.body")}
-                        </p>
-                        <div className="wa-interactive__actions">
-                          {options.map((label, index) => (
-                            <span
-                              key={label}
-                              className={cn(
-                                "wa-interactive__choice",
-                                index === 0 && "is-hit",
-                              )}
-                            >
-                              {label}
-                            </span>
-                          ))}
-                        </div>
-                      </article>
-                      <p className="wa-interactive__bubble is-out">{options[0]}</p>
-                      <p className="wa-interactive__bubble is-in">
-                        {t("buttons.follow")}
-                      </p>
-                    </div>
-                  ) : null}
-
-                  {id === "list" ? (
-                    <div className="wa-interactive__widget-inner is-list">
-                      <article className="wa-interactive__card">
-                        <p className="wa-interactive__card-body">
-                          {t("list.body")}
-                        </p>
-                        <div className="wa-interactive__actions">
-                          <span className="wa-interactive__choice is-hit">
-                            <ListIcon className="h-3.5 w-3.5" />
-                            {t("list.cta")}
-                          </span>
-                        </div>
-                      </article>
-                      <div className="wa-interactive__sheet">
-                        <p className="wa-interactive__sheet-title">
-                          {t("list.sheet")}
-                        </p>
-                        <ul className="wa-interactive__rows">
-                          {listRows.map((row) => (
-                            <li
-                              key={row.title}
-                              className={cn(
-                                "wa-interactive__row",
-                                row.picked && "is-picked",
-                                row.out && "is-out",
-                              )}
-                            >
-                              <span>
-                                <strong>{row.title}</strong>
-                                <small>{row.description}</small>
-                              </span>
-                              {row.picked ? (
-                                <CheckIcon className="wa-interactive__check h-4 w-4" />
-                              ) : null}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  ) : null}
-
-                  {id === "link" ? (
-                    <div className="wa-interactive__widget-inner is-link">
-                      <article className="wa-interactive__card">
-                        <p className="wa-interactive__card-body">
-                          {t("link.body")}
-                        </p>
-                        <div className="wa-interactive__actions">
-                          <span className="wa-interactive__choice is-hit">
-                            <ExternalLinkIcon className="h-3.5 w-3.5" />
-                            {t("link.cta")}
-                          </span>
-                        </div>
-                      </article>
-                      <div className="wa-interactive__link-preview">
-                        <span className="wa-interactive__link-dot" />
-                        <div className="min-w-0">
-                          <p className="truncate text-xs font-semibold text-ink">
-                            {t("link.previewTitle")}
-                          </p>
-                          <p className="truncate text-[11px] text-ink-subtle">
-                            {t("link.previewUrl")}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ) : null}
+        <div className="wa-interactive__grid">
+          {FEATURES.map(({ id, icon: Icon }) => (
+            <article key={id} className="wa-interactive__card">
+              <header className="wa-interactive__card-header">
+                <span className="wa-interactive__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <div>
+                  <h3>{t(`labels.${id}`)}</h3>
+                  <p>{t(`cards.${id}`)}</p>
                 </div>
-              </article>
-            ))}
-          </div>
+              </header>
+
+              <div className="wa-interactive__preview">
+                <p className="wa-interactive__preview-label">{t("preview")}</p>
+                <p className="wa-interactive__message">{t(`${id}.body`)}</p>
+
+                {id === "buttons" && (
+                  <>
+                    <ul className="wa-interactive__choices">
+                      {OPTIONS.map((option) => (
+                        <li key={option} data-selected={option === 0 || undefined}>
+                          {t(`buttons.options.${option}`)}
+                          {option === 0 && <CheckIcon aria-hidden="true" />}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="wa-interactive__result">{t("buttons.follow")}</p>
+                  </>
+                )}
+
+                {id === "list" && (
+                  <ul className="wa-interactive__products">
+                    {OPTIONS.map((option) => (
+                      <li key={option} data-selected={option === 0 || undefined}>
+                        <span className="wa-interactive__product-name">
+                          {option === 0 && <CheckIcon aria-hidden="true" />}
+                          {t(`list.rows.${option}.title`)}
+                        </span>
+                        <span>{t(`list.rows.${option}.description`)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {id === "link" && (
+                  <div className="wa-interactive__tracking">
+                    <div className="wa-interactive__destination">
+                      <span className="wa-interactive__target-icon" aria-hidden="true">
+                        <Link2Icon />
+                      </span>
+                      <div>
+                        <p>{t("link.previewTitle")}</p>
+                        <p>{t("link.previewUrl")}</p>
+                      </div>
+                      <ArrowUpRightIcon aria-hidden="true" />
+                    </div>
+                    <p className="wa-interactive__result">
+                      <PackageCheckIcon aria-hidden="true" />
+                      {t("link.status")}
+                    </p>
+                  </div>
+                )}
+
+                {id === "form" && (
+                  <>
+                    <div className="wa-interactive__appointment">
+                      <p>{t("form.chooseTime")}</p>
+                      <ul className="wa-interactive__choices">
+                        {OPTIONS.map((option) => (
+                          <li key={option} data-selected={option === 1 || undefined}>
+                            {t(`form.times.${option}`)}
+                            {option === 1 && <CheckIcon aria-hidden="true" />}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <p className="wa-interactive__result">
+                      <CheckIcon aria-hidden="true" />
+                      {t("form.success", { time: t("form.times.1") })}
+                    </p>
+                  </>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </Container>
     </section>

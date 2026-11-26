@@ -2266,17 +2266,13 @@
     },
     "interactive": {
       "eyebrow": "Cloud API",
-      "title": "Cevap butonu, liste ve link",
-      "subtitle": "Bot cevabı WhatsApp’ın kendi butonları, listesi ve linkiyle gider; müşteri dokunur, seçim panele düşer ve akış bir sonraki mesaja göre devam eder.",
-      "tabs": {
-        "buttons": "Cevap butonları",
-        "list": "Ürün listesi",
-        "link": "Link butonu"
-      },
+      "title": "WhatsApp’ta bir sonraki adımı kolaylaştırın.",
+      "subtitle": "Müşteriler hızlı yanıt verebilir, ürün seçebilir, siparişini takip edebilir veya sohbet içinde randevu alabilir.",
       "cards": {
-        "buttons": "En fazla üç hızlı yanıt. Müşteri yazmadan dokunur; seçim akışı o adımla sürdürür.",
-        "list": "Liste açılır. Ürün, fiyat ve stok satırda durur; seçilen satır panele düşer.",
-        "link": "Takip, katalog veya form tek CTA butonunda. WhatsApp içinden tarayıcıya açılır."
+        "buttons": "Müşteri hazır bir yanıt seçer, bot konuşmayı o seçime göre sürdürür.",
+        "list": "Ürünleri ve fiyatları tek listede gösterin. Müşterinin seçtiği ürün sohbete gelir.",
+        "link": "Müşteriyi sipariş takibi, katalog veya başvuru sayfasına yönlendirin.",
+        "form": "Müşteri saatini seçip WhatsApp sohbetinden ayrılmadan randevusunu onaylar."
       },
       "buttons": {
         "body": "Bu ürünü nasıl almak istersiniz?",
@@ -2289,13 +2285,10 @@
       },
       "list": {
         "body": "Size uygun ürünler buldum.",
-        "cta": "Ürünler",
-        "sheet": "Ürün seçin",
         "rows": [
           {
             "title": "Sarı kulaklık",
-            "description": "1.249 TL",
-            "picked": true
+            "description": "1.249 TL"
           },
           {
             "title": "Pulse Akıllı Saat",
@@ -2309,9 +2302,26 @@
       },
       "link": {
         "body": "Siparişinizi buradan takip edebilirsiniz.",
-        "cta": "Takibi aç",
         "previewTitle": "Sipariş takibi",
-        "previewUrl": "omnider.app/track"
+        "previewUrl": "omnider.app/track",
+        "status": "Örnek sipariş kargoya verildi."
+      },
+      "preview": "Örnek sohbet",
+      "form": {
+        "body": "Görüşme için size uygun saati seçebilirsiniz.",
+        "chooseTime": "Randevu saati",
+        "times": [
+          "10:00",
+          "13:30",
+          "16:00"
+        ],
+        "success": "{time} için örnek randevunuz onaylandı."
+      },
+      "labels": {
+        "buttons": "Cevap butonları",
+        "list": "Ürün listesi",
+        "link": "Link butonu",
+        "form": "WhatsApp formu"
       }
     },
     "aiAutomation": {
