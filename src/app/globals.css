@@ -197,6 +197,7 @@
   --wa-teal: #128c7e;
   --wa-deep: #075e54;
   --wa-wallpaper: #e5ddd5;
+  --wa-bubble-out: #d9fdd3;
 
   --ig-purple: #833ab4;
   --ig-pink: #fd1d1d;
@@ -4208,7 +4209,7 @@
   border: 1px solid color-mix(in srgb, var(--wa-deep) 18%, transparent);
   background: #111b21;
   box-shadow:
-    0 24px 60px -28px rgb(7 94 84 / 0.55),
+    0 24px 60px -28px color-mix(in srgb, var(--wa-deep) 55%, transparent),
     0 0 0 1px rgb(255 255 255 / 0.4) inset;
 }
 
@@ -4241,7 +4242,11 @@
   overflow: auto;
   padding: 0.85rem 0.75rem 1.1rem;
   background:
-    linear-gradient(180deg, rgb(229 221 213 / 0.92), rgb(220 210 200 / 0.95)),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--wa-wallpaper) 92%, white),
+      color-mix(in srgb, var(--wa-wallpaper) 88%, #c8beb2)
+    ),
     var(--wa-wallpaper);
   scrollbar-width: none;
 }
@@ -4280,7 +4285,7 @@
 
 .wa-chat__bubble--out {
   border-top-right-radius: 0.2rem;
-  background: #d9fdd3;
+  background: var(--wa-bubble-out, #d9fdd3);
   color: #111b21;
 }
 
@@ -4591,7 +4596,7 @@
 .wa-interactive__bubble.is-out {
   align-self: flex-end;
   border-radius: 0.85rem 0.85rem 0.28rem 0.85rem;
-  background: #d9fdd3;
+  background: var(--wa-bubble-out, #d9fdd3);
 }
 
 .wa-interactive__bubble.is-in {
@@ -4909,23 +4914,30 @@
 
 .wa-health__tab.is-green.is-on,
 .wa-health__tab.is-green:hover {
-  border-color: color-mix(in srgb, var(--wa-green) 45%, transparent);
-  background: color-mix(in srgb, var(--wa-green) 12%, white);
-  color: var(--wa-deep);
+  border-color: color-mix(
+    in srgb,
+    var(--wa-status-green, var(--wa-green)) 45%,
+    transparent
+  );
+  background: var(
+    --wa-status-green-container,
+    color-mix(in srgb, var(--wa-green) 12%, white)
+  );
+  color: var(--wa-status-green-on, var(--wa-deep));
 }
 
 .wa-health__tab.is-yellow.is-on,
 .wa-health__tab.is-yellow:hover {
-  border-color: #fbbf24;
-  background: #fffbeb;
-  color: #b45309;
+  border-color: var(--wa-status-yellow, #fbbf24);
+  background: var(--wa-status-yellow-container, #fffbeb);
+  color: var(--wa-status-yellow-on, #b45309);
 }
 
 .wa-health__tab.is-red.is-on,
 .wa-health__tab.is-red:hover {
-  border-color: #f87171;
-  background: #fef2f2;
-  color: #b91c1c;
+  border-color: var(--wa-status-red, #f87171);
+  background: var(--wa-status-red-container, #fef2f2);
+  color: var(--wa-status-red-on, #b91c1c);
 }
 
 .wa-health__card {
@@ -4960,18 +4972,21 @@
 }
 
 .wa-health__pill.is-green {
-  background: color-mix(in srgb, var(--wa-green) 16%, white);
-  color: var(--wa-deep);
+  background: var(
+    --wa-status-green-container,
+    color-mix(in srgb, var(--wa-green) 16%, white)
+  );
+  color: var(--wa-status-green-on, var(--wa-deep));
 }
 
 .wa-health__pill.is-yellow {
-  background: #fffbeb;
-  color: #b45309;
+  background: var(--wa-status-yellow-container, #fffbeb);
+  color: var(--wa-status-yellow-on, #b45309);
 }
 
 .wa-health__pill.is-red {
-  background: #fef2f2;
-  color: #b91c1c;
+  background: var(--wa-status-red-container, #fef2f2);
+  color: var(--wa-status-red-on, #b91c1c);
 }
 
 .wa-health__rows {
@@ -5015,18 +5030,21 @@
 }
 
 .wa-health__banner.is-green {
-  background: color-mix(in srgb, var(--wa-green) 10%, white);
-  color: var(--wa-deep);
+  background: var(
+    --wa-status-green-container,
+    color-mix(in srgb, var(--wa-green) 10%, white)
+  );
+  color: var(--wa-status-green-on, var(--wa-deep));
 }
 
 .wa-health__banner.is-yellow {
-  background: #fffbeb;
-  color: #b45309;
+  background: var(--wa-status-yellow-container, #fffbeb);
+  color: var(--wa-status-yellow-on, #b45309);
 }
 
 .wa-health__banner.is-red {
-  background: #fef2f2;
-  color: #b91c1c;
+  background: var(--wa-status-red-container, #fef2f2);
+  color: var(--wa-status-red-on, #b91c1c);
 }
 
 .wa-health__halt {
@@ -5041,7 +5059,7 @@
   padding-left: 0.9rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #b91c1c;
+  color: var(--wa-status-red-on, #b91c1c);
 }
 
 .wa-health__halt li + li {
@@ -5200,7 +5218,7 @@
   border-radius: 999px;
   background: var(--wa-green);
   color: #fff;
-  box-shadow: 0 8px 18px -10px rgb(7 94 84 / 0.7);
+  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--wa-deep) 70%, transparent);
   animation: wa-ad-beam-bob 1.1s ease-in-out infinite;
 }
 
@@ -5353,7 +5371,7 @@
   border: 1px solid color-mix(in srgb, var(--wa-deep) 22%, transparent);
   background: #111b21;
   box-shadow:
-    0 28px 70px -34px rgb(7 94 84 / 0.55),
+    0 28px 70px -34px color-mix(in srgb, var(--wa-deep) 55%, transparent),
     0 0 0 1px rgb(255 255 255 / 0.04) inset;
 }
 
@@ -5482,32 +5500,29 @@
 }
 
 .wa-biz-hero {
-  --wa-hero: #026450;
-  --wa-hero-mid: color-mix(in srgb, #026450 72%, #1aad7a);
-  --wa-hero-soft: color-mix(in srgb, #026450 18%, #e8f5f0);
   isolation: isolate;
   background:
     radial-gradient(
       ellipse 72% 50% at 50% -10%,
-      color-mix(in srgb, var(--wa-hero) 28%, transparent),
+      color-mix(in srgb, var(--wa-hero, #026450) 28%, transparent),
       transparent 70%
     ),
     radial-gradient(
       ellipse 46% 36% at 12% 78%,
-      color-mix(in srgb, var(--wa-hero) 14%, transparent),
+      color-mix(in srgb, var(--wa-hero, #026450) 14%, transparent),
       transparent 72%
     ),
     radial-gradient(
       ellipse 40% 32% at 88% 62%,
-      color-mix(in srgb, var(--wa-hero-mid) 16%, transparent),
+      color-mix(in srgb, var(--wa-hero-mid, #1aad7a) 16%, transparent),
       transparent 70%
     ),
     linear-gradient(
       168deg,
-      #f1faf6 0%,
-      color-mix(in srgb, var(--wa-hero) 8%, #ebf7f2) 34%,
-      color-mix(in srgb, var(--wa-hero) 12%, #e4f3ed) 68%,
-      color-mix(in srgb, var(--wa-hero) 10%, #dff0e9) 100%
+      var(--wa-atm-base-1, #f1faf6) 0%,
+      color-mix(in srgb, var(--wa-hero, #026450) 8%, var(--wa-atm-base-2, #ebf7f2)) 34%,
+      color-mix(in srgb, var(--wa-hero, #026450) 12%, var(--wa-atm-base-3, #e4f3ed)) 68%,
+      color-mix(in srgb, var(--wa-hero, #026450) 10%, var(--wa-atm-base-4, #dff0e9)) 100%
     );
 }
 
@@ -5516,37 +5531,89 @@
  * one mint plane + soft glows + dot mesh that follows across sections.
  */
 .wa-page-atmosphere {
+  --wa-hero: #026450;
+  --wa-hero-mid: color-mix(in srgb, #026450 72%, #1aad7a);
+  --wa-hero-soft: color-mix(in srgb, #026450 18%, #e8f5f0);
+  --wa-atm-a: #026450;
+  --wa-atm-b: #1aad7a;
+  --wa-atm-c: #03856a;
+  --wa-atm-base-0: #ffffff;
+  --wa-atm-base-1: #f7fcf9;
+  --wa-atm-base-2: #eef8f3;
+  --wa-atm-base-3: #e8f5f0;
+  --wa-atm-base-4: #f4faf7;
   position: relative;
   isolation: isolate;
   background:
     radial-gradient(
       ellipse 58% 42% at 8% 12%,
-      color-mix(in srgb, #026450 11%, transparent),
+      color-mix(in srgb, var(--wa-atm-a) 11%, transparent),
       transparent 72%
     ),
     radial-gradient(
       ellipse 52% 38% at 92% 28%,
-      color-mix(in srgb, #1aad7a 10%, transparent),
+      color-mix(in srgb, var(--wa-atm-b) 10%, transparent),
       transparent 74%
     ),
     radial-gradient(
       ellipse 60% 44% at 70% 72%,
-      color-mix(in srgb, #026450 8%, transparent),
+      color-mix(in srgb, var(--wa-atm-a) 8%, transparent),
       transparent 76%
     ),
     radial-gradient(
       ellipse 48% 36% at 18% 88%,
-      color-mix(in srgb, #03856a 9%, transparent),
+      color-mix(in srgb, var(--wa-atm-c) 9%, transparent),
       transparent 72%
     ),
     linear-gradient(
       168deg,
-      #ffffff 0%,
-      #f7fcf9 22%,
-      #eef8f3 48%,
-      #e8f5f0 74%,
-      #f4faf7 100%
+      var(--wa-atm-base-0) 0%,
+      var(--wa-atm-base-1) 22%,
+      var(--wa-atm-base-2) 48%,
+      var(--wa-atm-base-3) 74%,
+      var(--wa-atm-base-4) 100%
     );
+}
+
+/* Omnider WhatsApp Business design system palette (scoped) */
+.wa-biz-page {
+  --wa-green: #00a884;
+  --wa-teal: #006b53;
+  --wa-deep: #005130;
+  --wa-wallpaper: #efeae2;
+  --wa-bubble-out: #d9fdd3;
+  --wa-hero: #005130;
+  --wa-hero-mid: #116b43;
+  --wa-hero-soft: color-mix(in srgb, #005130 18%, #d3f8ec);
+  --wa-atm-a: #005130;
+  --wa-atm-b: #00a884;
+  --wa-atm-c: #006b53;
+  --wa-atm-base-0: #ffffff;
+  --wa-atm-base-1: #f7faf4;
+  --wa-atm-base-2: #f1f5ef;
+  --wa-atm-base-3: #ebefe9;
+  --wa-atm-base-4: #f7faf4;
+  --wa-status-green: #16a34a;
+  --wa-status-green-container: #dcfce7;
+  --wa-status-green-on: #14532d;
+  --wa-status-yellow: #ca8a04;
+  --wa-status-yellow-container: #fef9c3;
+  --wa-status-yellow-on: #713f12;
+  --wa-status-red: #dc2626;
+  --wa-status-red-container: #fee2e2;
+  --wa-status-red-on: #7f1d1d;
+  --color-wa-green: #00a884;
+  --color-wa-teal: #006b53;
+  --color-wa-dark: #005130;
+  --color-ink: #181d19;
+  --color-ink-muted: #3f4942;
+  --color-ink-subtle: #3f4942;
+  --color-ink-faint: #6f7a71;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f7faf4;
+  --color-surface-subtle: #f1f5ef;
+  --color-line: #bec9bf;
+  --color-line-subtle: #e0e4de;
 }
 
 .wa-page-atmosphere::before {
@@ -5558,7 +5625,7 @@
   opacity: 0.38;
   background-image: radial-gradient(
     circle at 1px 1px,
-    color-mix(in srgb, #026450 22%, transparent) 1px,
+    color-mix(in srgb, var(--wa-atm-a, #026450) 22%, transparent) 1px,
     transparent 0
   );
   background-size: 22px 22px;
@@ -8659,7 +8726,7 @@ a.tg-modes__pick-card:hover {
 .wa-connect__tab.is-on.is-coex {
   border-color: color-mix(in srgb, var(--wa-green) 45%, transparent);
   background: color-mix(in srgb, var(--wa-green) 10%, white);
-  box-shadow: 0 10px 24px -18px rgb(7 94 84 / 0.45);
+  box-shadow: 0 10px 24px -18px color-mix(in srgb, var(--wa-deep) 45%, transparent);
   color: var(--wa-deep);
 }
 
@@ -8829,7 +8896,7 @@ a.tg-modes__pick-card:hover {
 .wa-connect__bubble {
   margin: 0.25rem 0 0;
   border-radius: 0.75rem;
-  background: #d9fdd3;
+  background: var(--wa-bubble-out, #d9fdd3);
   padding: 0.65rem 0.8rem;
   font-size: 0.8125rem;
   font-weight: 600;

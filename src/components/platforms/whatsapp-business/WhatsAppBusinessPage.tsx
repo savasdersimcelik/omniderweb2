@@ -11,7 +11,7 @@ import { WhatsAppInboxSection } from "./WhatsAppInboxSection";
 
 export async function WhatsAppBusinessPage() {
   return (
-    <div className="wa-page-atmosphere">
+    <div className="wa-page-atmosphere wa-biz-page">
       <WhatsAppBusinessHero />
       <WhatsAppInboxSection namespace="PlatformWhatsAppBusiness" />
       <ConnectSection />

@@ -15,20 +15,20 @@ export function WhatsAppHeroBackdrop() {
       >
         <defs>
           <linearGradient id="wa-hill-fill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#026450" stopOpacity="0.26" />
-            <stop offset="48%" stopColor="#026450" stopOpacity="0.14" />
-            <stop offset="100%" stopColor="#026450" stopOpacity="0.05" />
+            <stop offset="0%" stopColor="var(--wa-deep)" stopOpacity="0.26" />
+            <stop offset="48%" stopColor="var(--wa-deep)" stopOpacity="0.14" />
+            <stop offset="100%" stopColor="var(--wa-deep)" stopOpacity="0.05" />
           </linearGradient>
           <linearGradient id="wa-hill-fill-mid" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#03856a" stopOpacity="0.2" />
-            <stop offset="100%" stopColor="#026450" stopOpacity="0.06" />
+            <stop offset="0%" stopColor="var(--wa-teal)" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="var(--wa-deep)" stopOpacity="0.06" />
           </linearGradient>
           <linearGradient id="wa-hill-stroke" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#026450" stopOpacity="0" />
-            <stop offset="28%" stopColor="#026450" stopOpacity="0.5" />
-            <stop offset="55%" stopColor="#03856a" stopOpacity="0.42" />
-            <stop offset="78%" stopColor="#026450" stopOpacity="0.28" />
-            <stop offset="100%" stopColor="#026450" stopOpacity="0" />
+            <stop offset="0%" stopColor="var(--wa-deep)" stopOpacity="0" />
+            <stop offset="28%" stopColor="var(--wa-deep)" stopOpacity="0.5" />
+            <stop offset="55%" stopColor="var(--wa-teal)" stopOpacity="0.42" />
+            <stop offset="78%" stopColor="var(--wa-deep)" stopOpacity="0.28" />
+            <stop offset="100%" stopColor="var(--wa-deep)" stopOpacity="0" />
           </linearGradient>
         </defs>
         <path
