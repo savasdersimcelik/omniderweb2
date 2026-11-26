@@ -286,3 +286,62 @@ body:has(.wa-biz-page) :is(
 ) {
   color: var(--wa-dark-muted);
 }
+
+/* Mobile: center section titles / descriptions / eyebrows */
+@media (max-width: 899.98px) {
+  .wa-biz-page :is(
+    .wa-ai__header,
+    .wa-templates__header,
+    .wa-interactive__header
+  ) {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .wa-biz-page :is(
+    .wa-ai__header .heading-section,
+    .wa-ai__header .text-body,
+    .wa-templates__header .heading-section,
+    .wa-templates__header .text-body,
+    .wa-interactive__header .heading-section,
+    .wa-interactive__header .text-body
+  ) {
+    max-width: none;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .wa-biz-page :is(
+    .wa-ad-referral__copy,
+    .wa-health__copy,
+    .wa-biz-try__copy
+  ) {
+    align-items: center;
+    text-align: center;
+  }
+
+  .wa-biz-page :is(
+    .wa-ad-referral__checks,
+    .wa-health__highlights,
+    .wa-biz-try__prompts,
+    .wa-biz-try__trust
+  ) {
+    align-self: stretch;
+  }
+
+  .wa-biz-page .wa-ad-referral__checks {
+    text-align: left;
+  }
+
+  .wa-biz-page .wa-health__highlight {
+    text-align: left;
+  }
+
+  .wa-biz-page .wa-biz-try__prompt-list {
+    justify-content: center;
+  }
+
+  .wa-biz-page .wa-biz-try__trust-item {
+    justify-content: center;
+  }
+}

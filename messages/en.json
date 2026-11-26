@@ -2266,7 +2266,7 @@
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "Make the next step easy in WhatsApp.",
-      "subtitle": "Customers can reply with a tap, choose a product, track an order, or book an appointment in the chat.",
+      "subtitle": "Guide customers to the next step with reply buttons, product lists, links, and WhatsApp forms. Their choice stays in the chat so your bot or team can continue from there. Order tracking and appointments can finish without leaving WhatsApp.",
       "cards": {
         "buttons": "The customer picks a quick reply and the bot continues the conversation based on their choice.",
         "list": "Show products and prices in one list. The customer's selection appears in the chat.",

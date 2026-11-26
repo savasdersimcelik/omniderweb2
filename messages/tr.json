@@ -2266,7 +2266,7 @@
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "WhatsApp’ta bir sonraki adımı kolaylaştırın.",
-      "subtitle": "Müşteriler hızlı yanıt verebilir, ürün seçebilir, siparişini takip edebilir veya sohbet içinde randevu alabilir.",
+      "subtitle": "Hızlı yanıt butonları, ürün listeleri, bağlantılar ve WhatsApp formlarıyla müşteriye bir sonraki adımı gösterin. Seçim sohbette kalır; bot veya ekibiniz konuşmayı oradan sürdürür. Sipariş takibi ve randevu gibi işlemler WhatsApp’tan çıkmadan tamamlanır.",
       "cards": {
         "buttons": "Müşteri hazır bir yanıt seçer, bot konuşmayı o seçime göre sürdürür.",
         "list": "Ürünleri ve fiyatları tek listede gösterin. Müşterinin seçtiği ürün sohbete gelir.",

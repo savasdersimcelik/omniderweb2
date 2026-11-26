@@ -30,14 +30,18 @@ export async function InteractiveSection() {
     >
       <Container className="section">
         <header className="wa-interactive__header">
-          <p className="wa-section-label">
-            <MessageCircleIcon aria-hidden="true" />
-            {t("eyebrow")}
-          </p>
-          <h2 id="wa-interactive-title" className="heading-section mt-3 text-balance">
-            {t("title")}
-          </h2>
-          <p className="text-body mt-4 text-pretty">{t("subtitle")}</p>
+          <div>
+            <p className="wa-section-label">
+              <MessageCircleIcon aria-hidden="true" />
+              {t("eyebrow")}
+            </p>
+            <h2 id="wa-interactive-title" className="heading-section mt-3 text-balance">
+              {t("title")}
+            </h2>
+          </div>
+          <div>
+            <p className="text-body text-pretty">{t("subtitle")}</p>
+          </div>
         </header>
 
         <div className="wa-interactive__grid">

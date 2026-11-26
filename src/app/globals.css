@@ -4753,9 +4753,25 @@
 }
 
 .wa-interactive__header {
-  max-width: 44rem;
-  margin: 0 auto clamp(1.75rem, 4vw, 3rem);
-  text-align: center;
+  display: grid;
+  align-items: end;
+  gap: 1.25rem 3.5rem;
+  margin-bottom: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.wa-interactive__header .heading-section {
+  max-width: 22ch;
+}
+
+.wa-interactive__header .text-body {
+  max-width: 48ch;
+}
+
+@media (min-width: 900px) {
+  .wa-interactive__header {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    justify-items: start;
+  }
 }
 
 .wa-interactive__grid {
