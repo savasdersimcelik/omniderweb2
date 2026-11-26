@@ -36,8 +36,8 @@ export function ConnectSection() {
       <Container className="section">
         <div className="wa-section-stack">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow inline-flex items-center gap-2 text-[var(--wa-teal)]">
-              <LayersIcon className="h-3.5 w-3.5" />
+            <p className="wa-section-label">
+              <LayersIcon />
               {t("eyebrow")}
             </p>
             <h2 id="wa-connect-title" className="heading-section mt-3">

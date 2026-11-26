@@ -1,9 +1,8 @@
 import { AdReferralSection } from "./AdReferralSection";
+import { AiAutomationSection } from "./AiAutomationSection";
 import { ConnectSection } from "./ConnectSection";
 import { HealthSection } from "./HealthSection";
 import { InteractiveSection } from "./InteractiveSection";
-import { MidCtaSection } from "./MidCtaSection";
-import { PerformanceSection } from "./PerformanceSection";
 import { TemplatesSection } from "./TemplatesSection";
 import { TrySection } from "./TrySection";
 import { WhatsAppBusinessHero } from "./WhatsAppBusinessHero";
@@ -15,10 +14,9 @@ export async function WhatsAppBusinessPage() {
       <WhatsAppBusinessHero />
       <WhatsAppInboxSection namespace="PlatformWhatsAppBusiness" />
       <ConnectSection />
-      <PerformanceSection />
       <InteractiveSection />
+      <AiAutomationSection />
       <HealthSection />
-      <MidCtaSection />
       <TemplatesSection />
       <AdReferralSection />
       <TrySection />

@@ -2264,29 +2264,6 @@
         }
       }
     },
-    "performance": {
-      "eyebrow": "Performance",
-      "title": "Replies in seconds",
-      "body": "A fast reply keeps the lead and the order in the chat.",
-      "reply": {
-        "value": "12 sec",
-        "label": "Average reply time. A fast response when the customer writes."
-      },
-      "lead": {
-        "kicker": "Lead conversion",
-        "value": "58%",
-        "label": "Chats become qualified leads the team sees in the panel."
-      },
-      "order": {
-        "kicker": "Order conversion",
-        "value": "44%",
-        "label": "The conversation turns into an order."
-      },
-      "always": {
-        "kicker": "Replies",
-        "value": "24/7"
-      }
-    },
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "Reply buttons, lists, and links",
@@ -2337,109 +2314,125 @@
         "previewUrl": "omnider.app/track"
       }
     },
+    "aiAutomation": {
+      "eyebrow": "Artificial intelligence",
+      "title": "Pick a ready Omnider AI model for your channel",
+      "subtitle": "Activate one of six Omnider AI models as the primary reply engine. With persona, media, and tags, answers stay in your brand voice.",
+      "ctaPrimary": "We'll call you",
+      "ctaSecondary": "Start for free",
+      "catalogTitle": "Omnider AI model catalog",
+      "catalogBadge": "Persona • Media • Tags",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Automatic language detection",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Default",
+          "description": "A fast, reliable default for daily support, automatic AI replies, and chatflow steps."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Sales & FAQ",
+          "description": "A high-quality chat model for natural sales conversations, product questions, and FAQ answers."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Live support",
+          "description": "Optimized for quick, natural chats with strong instruction following in live support and chatflow steps."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Multi-step",
+          "description": "An advanced model for complex questions, multi-step chatflow scenarios, and reliable instruction following."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Booking & Pro",
+          "description": "A high-quality model for professional support, detailed explanations, bookings, and product advice."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "Highest",
+          "description": "The flagship model for hard multi-step conversations, premium experiences, and maximum answer accuracy."
+        }
+      }
+    },
     "health": {
       "eyebrow": "Number health",
-      "title": "Quality, quota, and send status",
-      "subtitle": "Meta’s score, daily limit, and send status sit on the channel page.",
+      "title": "Protect your line before Meta restricts it",
+      "subtitle": "Quality rating, daily messaging limit, and send status are monitored live over webhooks. When risk rises, Omnider pauses cold outbound before Meta penalties hit.",
       "tabsLabel": "Quality view",
       "tabs": {
         "green": "Green",
         "yellow": "Yellow",
         "red": "Red"
       },
-      "items": {
-        "quality": {
-          "title": "Quality rating",
-          "desc": "Meta gives your number green, yellow, or red. The score sits on the channel page and updates when Meta sends a notification."
+      "highlights": {
+        "session": {
+          "title": "Session replies stay open",
+          "body": "Even on red quality, you can keep answering customers who write to you within 24 hours."
         },
-        "quota": {
-          "title": "Messaging limit",
-          "desc": "How many new people you can message in 24 hours. The limit runs from 250 to Unlimited; the current cap is on the card."
-        },
-        "status": {
-          "title": "Send status",
-          "desc": "Available, Limited, or Blocked. If there is a problem, Meta’s suggested fix sits on the same card."
-        },
-        "halt": {
-          "title": "On red, bulk sending pauses",
-          "desc": "When the score turns red, campaigns, new chats, and out-of-session templates pause. You can still reply when a customer writes."
+        "alerts": {
+          "title": "Actionable alerts",
+          "body": "See Meta health errors and recommended fixes directly in the Health tab."
         }
       },
-      "mock": {
-        "title": "Account info",
-        "label": "Sample account info card",
-        "nameLabel": "Display name",
-        "name": "Sample Store",
-        "phoneLabel": "Phone",
-        "phone": "+90 5xx xxx xx xx",
-        "qualityLabel": "Quality",
-        "quotaLabel": "Messaging limit",
-        "quota": "1,000 messages / 24 hours",
-        "sendLabel": "Sending status",
-        "send": {
-          "green": "Available",
-          "yellow": "Limited",
-          "red": "Blocked"
+      "sim": {
+        "label": "Live number health simulator",
+        "kicker": "Live monitoring",
+        "title": "Number health simulator"
+      },
+      "states": {
+        "green": {
+          "title": "Quality rating: Green · Ready to send",
+          "code": "AVAILABLE",
+          "body": "Bulk campaigns, starting new chats, and 24-hour session replies all run normally."
         },
-        "nameStatusLabel": "Display name status",
-        "nameStatus": "Approved",
-        "quality": {
-          "green": "Green",
-          "yellow": "Yellow",
-          "red": "Red"
+        "yellow": {
+          "title": "Quality rating: Yellow · Watch mode",
+          "code": "LIMITED",
+          "body": "Blocks or complaints rose. An overview warning appears and delivery-risk protection tightens."
+        },
+        "red": {
+          "title": "Quality rating: Red · Cold outbound paused",
+          "code": "BLOCKED",
+          "body": "Campaigns and cold messages stop automatically; you can still reply to customers inside the 24-hour window."
         }
       },
-      "banners": {
-        "green": "Everything looks good; campaigns run as usual.",
-        "yellow": "Sending continues; watch the score in the panel.",
-        "red": "Quality is red — bulk sending paused."
+      "tiers": {
+        "label": "24-hour unique recipient limit",
+        "active": "Active tier: 10,000 / day"
+      },
+      "shield": {
+        "title": "Omnider delivery-risk protection",
+        "body": "When error rates climb, cold outbound pauses before Meta penalties; resume with one click once the issue is fixed."
       },
       "halt": {
-        "stopped": "Campaigns, starting new chats, and out-of-session templates: paused",
+        "stopped": "Campaigns, new chats, and out-of-session templates: paused",
         "continues": "Replying when a customer writes: still on"
-      },
-      "note": "The score comes from Meta; the panel updates when Meta sends a notification."
+      }
     },
     "adReferral": {
-      "eyebrow": "Messages from ads",
-      "title": "Which ad did this DM come from?",
-      "lead": "A Send message tap on the ad opens the chat with the ad title, image, and link.",
-      "note": "Messages from Click-to-WhatsApp ads arrive with the headline, image, and source link.",
-      "items": {
-        "card": {
-          "title": "The ad card sits above the message",
-          "body": "An Ad badge, the ad image, and the headline appear right above the first message."
-        },
-        "utm": {
-          "title": "A link with UTM",
-          "body": "Open the ad link from the inbox and the conversation and ad id are added as UTM parameters, so you can see them in Google Analytics."
-        },
-        "contact": {
-          "title": "Saved on the contact",
-          "body": "Referral source fills in automatically and exports as a Referral column."
-        }
-      },
+      "eyebrow": "Click-to-WhatsApp (CTWA)",
+      "title": "Know which ad brought each customer",
+      "lead": "When someone taps Send message on your Instagram or Facebook ad, the first chat arrives in your inbox with the ad card, ad_id, and source link attached.",
+      "checks": [
+        "Automatic Ad context card at the start of the chat",
+        "Referral source saved to the contact and ready for CRM",
+        "UTM and conversion tracking on outbound links"
+      ],
       "scene": {
-        "brand": "Studio No.4",
-        "sponsored": "Sponsored",
-        "send": "Send message",
-        "inbox": "Inbox",
-        "adBadge": "Ad",
-        "headline": "Summer campaign this week",
-        "link": "omnider.com/campaign…",
-        "bubble": "Hi, is this campaign still on?",
-        "customer": "Maya",
-        "referralLabel": "Referral source",
-        "referralPrefix": "Referral",
-        "adId": "120384756"
-      },
-      "footnote": "Ad details appear according to the fields Meta sends."
-    },
-    "midCta": {
-      "line1": "Customers write on WhatsApp.",
-      "strong": "Omnider AI replies.",
-      "demo": "We'll call you",
-      "start": "Start for free"
+        "brand": "Cafe Roastery",
+        "sponsored": "Sponsored ad",
+        "send": "Send WhatsApp message",
+        "headline": "Professional espresso solutions for your office — get a quote now.",
+        "imageAlt": "Espresso machine ad creative",
+        "referralBadge": "Ad referral",
+        "adId": "238591",
+        "campaign": "Office Espresso Campaign",
+        "source": "Instagram Reels",
+        "bubble": "Hi, I’m writing from this ad. Can I get a quote for a 20-person office?"
+      }
     },
     "try": {
       "eyebrow": "Live test",

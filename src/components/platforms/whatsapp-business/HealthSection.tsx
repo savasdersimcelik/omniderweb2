@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import {
-  ChartNoAxesColumnIcon,
-  SendIcon,
+  MessageCircleIcon,
   ShieldAlertIcon,
-  ShieldIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/Container";
@@ -14,11 +14,12 @@ import { cn } from "@/lib/utils";
 const TABS = ["green", "yellow", "red"] as const;
 type TabId = (typeof TABS)[number];
 
-const ITEM_META = [
-  { key: "quality", Icon: ChartNoAxesColumnIcon },
-  { key: "quota", Icon: SendIcon },
-  { key: "status", Icon: ShieldIcon },
-  { key: "halt", Icon: ShieldAlertIcon },
+const TIERS = ["250", "1K", "2K", "10K", "100K", "∞"] as const;
+const ACTIVE_TIER = 3; // 10K
+
+const HIGHLIGHTS = [
+  { key: "session" as const, Icon: MessageCircleIcon },
+  { key: "alerts" as const, Icon: SparklesIcon },
 ] as const;
 
 export function HealthSection() {
@@ -30,7 +31,7 @@ export function HealthSection() {
     if (paused) return;
     const id = window.setInterval(() => {
       setTab((prev) => TABS[(TABS.indexOf(prev) + 1) % TABS.length]);
-    }, 3800);
+    }, 4200);
     return () => window.clearInterval(id);
   }, [paused]);
 
@@ -41,102 +42,110 @@ export function HealthSection() {
       aria-labelledby="wa-health-title"
     >
       <Container className="section">
-        <div className="wa-section-aside">
-          <div className="wa-section-copy">
-            <p className="eyebrow inline-flex items-center gap-2 text-[var(--wa-teal)]">
-              <ShieldAlertIcon className="h-3.5 w-3.5" />
+        <div className="wa-health__layout">
+          <div className="wa-health__copy">
+            <p className="wa-section-label">
+              <ShieldAlertIcon />
               {t("eyebrow")}
             </p>
-            <h2 id="wa-health-title" className="heading-section mt-3">
+            <h2 id="wa-health-title" className="heading-section mt-3 text-balance">
               {t("title")}
             </h2>
-            <p className="text-body mt-4">{t("subtitle")}</p>
-            <ul className="mt-8 space-y-5">
-              {ITEM_META.map(({ key, Icon }) => (
-                <li key={key} className="flex gap-3">
-                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[color-mix(in_srgb,var(--wa-green)_12%,white)] text-[var(--wa-teal)] ring-1 ring-[color-mix(in_srgb,var(--wa-green)_25%,transparent)]">
+            <p className="text-body mt-4 text-pretty">{t("subtitle")}</p>
+
+            <div className="wa-health__highlights">
+              {HIGHLIGHTS.map(({ key, Icon }) => (
+                <article key={key} className="wa-health__highlight">
+                  <span className="wa-health__highlight-icon">
                     <Icon className="h-4 w-4" />
                   </span>
-                  <div>
-                    <h3 className="text-sm font-semibold text-ink">
-                      {t(`items.${key}.title`)}
-                    </h3>
-                    <p className="mt-1 text-sm leading-6 text-ink-subtle">
-                      {t(`items.${key}.desc`)}
-                    </p>
-                  </div>
-                </li>
+                  <h3>{t(`highlights.${key}.title`)}</h3>
+                  <p>{t(`highlights.${key}.body`)}</p>
+                </article>
               ))}
-            </ul>
-            <p className="mt-6 text-xs text-ink-faint">{t("note")}</p>
+            </div>
           </div>
 
           <div
-            className="wa-section-widget"
+            className="wa-health__stage"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
-            <div
-              className="wa-health__tabs"
-              role="tablist"
-              aria-label={t("tabsLabel")}
-            >
-              {TABS.map((id) => (
-                <button
-                  key={id}
-                  type="button"
-                  role="tab"
-                  aria-selected={tab === id}
-                  className={cn("wa-health__tab", `is-${id}`, tab === id && "is-on")}
-                  onClick={() => setTab(id)}
-                >
-                  <i aria-hidden />
-                  {t(`tabs.${id}`)}
-                </button>
-              ))}
-            </div>
-
             <article
-              className={cn("wa-health__card", `is-${tab}`)}
-              aria-label={t("mock.label")}
+              className={cn("wa-health__sim", `is-${tab}`)}
+              aria-label={t("sim.label")}
             >
-              <header className="wa-health__card-head">
-                <h3>{t("mock.title")}</h3>
-                <span className={cn("wa-health__pill", `is-${tab}`)}>
-                  {t(`mock.quality.${tab}`)}
-                </span>
+              <header className="wa-health__sim-head">
+                <div>
+                  <p className="wa-health__sim-kicker">{t("sim.kicker")}</p>
+                  <h3 className="wa-health__sim-title">{t("sim.title")}</h3>
+                </div>
+                <div
+                  className="wa-health__seg"
+                  role="tablist"
+                  aria-label={t("tabsLabel")}
+                >
+                  {TABS.map((id) => (
+                    <button
+                      key={id}
+                      type="button"
+                      role="tab"
+                      aria-selected={tab === id}
+                      className={cn(
+                        "wa-health__seg-btn",
+                        `is-${id}`,
+                        tab === id && "is-on",
+                      )}
+                      onClick={() => setTab(id)}
+                    >
+                      {t(`tabs.${id}`)}
+                    </button>
+                  ))}
+                </div>
               </header>
 
-              <dl className="wa-health__rows">
-                <div>
-                  <dt>{t("mock.nameLabel")}</dt>
-                  <dd>{t("mock.name")}</dd>
+              <div className={cn("wa-health__status", `is-${tab}`)}>
+                <div className="wa-health__status-top">
+                  <p className="wa-health__status-title">
+                    {t(`states.${tab}.title`)}
+                  </p>
+                  <span className="wa-health__status-code">
+                    {t(`states.${tab}.code`)}
+                  </span>
                 </div>
-                <div>
-                  <dt>{t("mock.phoneLabel")}</dt>
-                  <dd>{t("mock.phone")}</dd>
-                </div>
-                <div>
-                  <dt>{t("mock.qualityLabel")}</dt>
-                  <dd>{t(`mock.quality.${tab}`)}</dd>
-                </div>
-                <div>
-                  <dt>{t("mock.quotaLabel")}</dt>
-                  <dd>{t("mock.quota")}</dd>
-                </div>
-                <div>
-                  <dt>{t("mock.sendLabel")}</dt>
-                  <dd>{t(`mock.send.${tab}`)}</dd>
-                </div>
-                <div>
-                  <dt>{t("mock.nameStatusLabel")}</dt>
-                  <dd>{t("mock.nameStatus")}</dd>
-                </div>
-              </dl>
+                <p className="wa-health__status-body">
+                  {t(`states.${tab}.body`)}
+                </p>
+              </div>
 
-              <p className={cn("wa-health__banner", `is-${tab}`)}>
-                {t(`banners.${tab}`)}
-              </p>
+              <div className="wa-health__tiers">
+                <div className="wa-health__tiers-head">
+                  <p>{t("tiers.label")}</p>
+                  <span>{t("tiers.active")}</span>
+                </div>
+                <div className="wa-health__tiers-track" aria-hidden>
+                  {TIERS.map((tier, index) => (
+                    <span
+                      key={tier}
+                      className={cn(
+                        "wa-health__tier",
+                        index < ACTIVE_TIER && "is-passed",
+                        index === ACTIVE_TIER && "is-active",
+                      )}
+                    >
+                      {tier}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="wa-health__shield">
+                <ShieldCheckIcon className="h-5 w-5" />
+                <div>
+                  <p className="wa-health__shield-title">{t("shield.title")}</p>
+                  <p className="wa-health__shield-body">{t("shield.body")}</p>
+                </div>
+              </div>
 
               {tab === "red" ? (
                 <ul className="wa-health__halt">

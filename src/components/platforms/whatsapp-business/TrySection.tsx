@@ -33,8 +33,8 @@ export async function TrySection() {
       <Container className="section">
         <div className="wa-try__layout">
           <div className="wa-try__copy">
-            <p className="eyebrow inline-flex items-center gap-2 text-[var(--wa-teal)]">
-              <ScanLineIcon className="h-4 w-4" />
+            <p className="wa-section-label">
+              <ScanLineIcon />
               {t("eyebrow")}
             </p>
             <h2 id="wa-try-title" className="heading-section mt-3">

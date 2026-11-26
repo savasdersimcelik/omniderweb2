@@ -53,8 +53,8 @@ export function InteractiveSection() {
       <Container className="section">
         <div className="wa-section-stack">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--wa-teal)]">
-              <MessageCircleIcon className="h-3.5 w-3.5" />
+            <p className="wa-section-label">
+              <MessageCircleIcon />
               {t("eyebrow")}
             </p>
             <h2 id="wa-interactive-title" className="heading-section mt-3">
@@ -68,19 +68,19 @@ export function InteractiveSection() {
           <div className="wa-interactive__cols">
             {COLUMNS.map(({ id, Icon }) => (
               <article key={id} className="wa-interactive__col">
-                <div className="wa-interactive__col-copy">
-                  <div className="wa-interactive__col-heading">
-                    <span className="wa-interactive__col-icon">
-                      <Icon className="h-4 w-4" />
-                    </span>
-                    <h3 className="wa-interactive__col-title">
-                      {t(`tabs.${id}`)}
-                    </h3>
-                  </div>
-                  <p className="wa-interactive__col-desc">{t(`cards.${id}`)}</p>
-                </div>
-
                 <div className="wa-interactive__widget">
+                  <header className="wa-interactive__card-header">
+                    <div className="wa-interactive__col-heading">
+                      <span className="wa-interactive__col-icon">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <h3 className="wa-interactive__col-title">
+                        {t(`tabs.${id}`)}
+                      </h3>
+                    </div>
+                    <p className="wa-interactive__col-desc">{t(`cards.${id}`)}</p>
+                  </header>
+
                   {id === "buttons" ? (
                     <div className="wa-interactive__widget-inner is-buttons">
                       <article className="wa-interactive__card">

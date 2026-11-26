@@ -26,14 +26,12 @@ export async function TemplatesSection() {
   return (
     <section
       id="templates"
-      className="wa-templates border-t border-line"
+      className="wa-templates border-y border-line"
       aria-labelledby="wa-templates-title"
     >
       <Container className="section">
         <header className="wa-templates__header mx-auto max-w-3xl text-center">
-          <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--wa-teal)]">
-            {t("eyebrow")}
-          </p>
+          <p className="wa-section-label">{t("eyebrow")}</p>
           <h2 id="wa-templates-title" className="heading-section mt-3">
             {t("title")}
           </h2>

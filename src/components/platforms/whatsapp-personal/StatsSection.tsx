@@ -4,9 +4,7 @@ import { Container } from "@/components/layout/Container";
 
 type StatsSectionProps = {
   id: string;
-  namespace:
-    | "PlatformWhatsAppPersonal.stats"
-    | "PlatformWhatsAppBusiness.performance";
+  namespace: "PlatformWhatsAppPersonal.stats";
 };
 
 export async function StatsSection({ id, namespace }: StatsSectionProps) {

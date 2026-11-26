@@ -2264,29 +2264,6 @@
         }
       }
     },
-    "performance": {
-      "eyebrow": "Performans",
-      "title": "Saniyeler içinde dönüş",
-      "body": "Hızlı cevap lead’i ve siparişi sohbette tutar.",
-      "reply": {
-        "value": "12 sn",
-        "label": "Ortalama cevap hızı. Müşteri yazınca hızlı dönüş."
-      },
-      "lead": {
-        "kicker": "Lead dönüşümü",
-        "value": "58%",
-        "label": "Sohbet nitelikli talebe döner, kayıt panele düşer."
-      },
-      "order": {
-        "kicker": "Sipariş dönüşümü",
-        "value": "44%",
-        "label": "Konuşma siparişe bağlanır."
-      },
-      "always": {
-        "kicker": "Yanıt",
-        "value": "7/24"
-      }
-    },
     "interactive": {
       "eyebrow": "Cloud API",
       "title": "Cevap butonu, liste ve link",
@@ -2337,109 +2314,125 @@
         "previewUrl": "omnider.app/track"
       }
     },
+    "aiAutomation": {
+      "eyebrow": "Yapay Zeka",
+      "title": "Kanalınız için hazır Omnider AI modelini seçin",
+      "subtitle": "6 farklı Omnider AI modelinden birini birincil yanıt motoru olarak aktif edin. Persona, medya ve etiketlerle marka dilinize uygun yanıtlar üretir.",
+      "ctaPrimary": "Sizi arayalım",
+      "ctaSecondary": "Ücretsiz başla",
+      "catalogTitle": "Omnider AI Model Kataloğu",
+      "catalogBadge": "Persona • Medya • Etiket",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Otomatik Dil Algılama",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Varsayılan",
+          "description": "Günlük müşteri desteği, otomatik AI yanıtları ve chatflow adımları için güçlü, hızlı ve güvenilir varsayılan model."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Satış & SSS",
+          "description": "Doğal müşteri konuşmaları, satış görüşmeleri, ürün soruları ve SSS yanıtları için yüksek kaliteli sohbet modeli."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Canlı Destek",
+          "description": "Hızlı ve doğal konuşmalar için optimize edilmiş model. Canlı destek ve chatflow adımlarında güçlü talimat takibi sağlar."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Çok Adımlı",
+          "description": "Karmaşık müşteri soruları, çok adımlı chatflow senaryoları ve güvenilir talimat takibi için gelişmiş model."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Randevu & Pro",
+          "description": "Profesyonel müşteri desteği, detaylı açıklamalar, randevu ve ürün danışmanlığı için yüksek kaliteli model."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "En Yüksek",
+          "description": "Zorlu ve çok adımlı konuşmalar, premium müşteri deneyimi ve en yüksek yanıt doğruluğu için amiral gemisi model."
+        }
+      }
+    },
     "health": {
       "eyebrow": "Numara sağlığı",
-      "title": "Kalite, kota ve gönderim durumu",
-      "subtitle": "Meta’nın verdiği puan, günlük kota ve gönderim durumu kanal sayfasında durur.",
+      "title": "Hattınızı Meta kısıtlamalarına karşı proaktif koruyun",
+      "subtitle": "Kalite puanı, günlük mesaj limiti ve gönderim durumu webhook ile canlı izlenir. Risk yükselince Omnider soğuk gönderimi Meta cezasından önce duraklatır.",
       "tabsLabel": "Kalite görünümü",
       "tabs": {
         "green": "Yeşil",
         "yellow": "Sarı",
         "red": "Kırmızı"
       },
-      "items": {
-        "quality": {
-          "title": "Kalite puanı",
-          "desc": "Meta numaranıza yeşil, sarı ya da kırmızı verir. Puan kanal sayfasında durur; Meta bildirim gönderince panel güncellenir."
+      "highlights": {
+        "session": {
+          "title": "Oturum yanıtları korunur",
+          "body": "Kalite kırmızı olsa bile size yazan müşterilere 24 saat içinde yanıt vermeye devam edersiniz."
         },
-        "quota": {
-          "title": "Mesaj kotası",
-          "desc": "24 saatte kaç yeni kişiye yazabildiğiniz görünür. Kota 250’den Sınırsız’a kadar çıkar; kartta güncel limit yazılır."
-        },
-        "status": {
-          "title": "Gönderim durumu",
-          "desc": "Kullanılabilir, Sınırlı ya da Engelli. Sorun varsa Meta’nın önerdiği çözüm aynı kartta durur."
-        },
-        "halt": {
-          "title": "Kırmızıda toplu gönderim durur",
-          "desc": "Puan kırmızıya düşünce kampanya, yeni sohbet ve 24 saat dışı şablon durur. Müşteri yazınca cevap vermeye devam edersiniz."
+        "alerts": {
+          "title": "Çözüm odaklı uyarılar",
+          "body": "Meta sağlık hatalarını ve önerilen çözüm adımlarını doğrudan Sağlık sekmesinde görün."
         }
       },
-      "mock": {
-        "title": "Hesap Bilgileri",
-        "label": "Örnek hesap bilgileri kartı",
-        "nameLabel": "Görünen Ad",
-        "name": "Örnek Mağaza",
-        "phoneLabel": "Telefon",
-        "phone": "+90 5xx xxx xx xx",
-        "qualityLabel": "Kalite",
-        "quotaLabel": "Mesaj Kotası",
-        "quota": "1.000 mesaj / 24 saat",
-        "sendLabel": "Genel Gönderim Durumu",
-        "send": {
-          "green": "Kullanılabilir",
-          "yellow": "Sınırlı",
-          "red": "Engelli"
+      "sim": {
+        "label": "Canlı numara sağlığı simülatörü",
+        "kicker": "Canlı izleme",
+        "title": "Numara sağlığı simülatörü"
+      },
+      "states": {
+        "green": {
+          "title": "Kalite puanı: Yeşil · Gönderime uygun",
+          "code": "AVAILABLE",
+          "body": "Toplu kampanyalar, yeni müşteri başlatmaları ve 24 saatlik oturum yanıtları sorunsuz çalışır."
         },
-        "nameStatusLabel": "Görünen Ad Durumu",
-        "nameStatus": "Onaylandı",
-        "quality": {
-          "green": "Yeşil",
-          "yellow": "Sarı",
-          "red": "Kırmızı"
+        "yellow": {
+          "title": "Kalite puanı: Sarı · İzleme modunda",
+          "code": "LIMITED",
+          "body": "Şikayet veya engelleme oranı arttı. Genel bakışta uyarı gösterilir; teslimat riski koruması sıkılaşır."
+        },
+        "red": {
+          "title": "Kalite puanı: Kırmızı · Soğuk gönderim durdu",
+          "code": "BLOCKED",
+          "body": "Kampanyalar ve soğuk mesajlar otomatik durur; size yazan müşterilere 24 saatlik pencereden yanıt vermeye devam edebilirsiniz."
         }
       },
-      "banners": {
-        "green": "Her şey yolunda; kampanyalarınız normal gider.",
-        "yellow": "Gönderim devam ediyor; puanı panelde takip edin.",
-        "red": "Kalite kırmızı — toplu gönderim durdu."
+      "tiers": {
+        "label": "24 saatlik benzersiz alıcı limiti",
+        "active": "Aktif kademe: 10.000 / gün"
+      },
+      "shield": {
+        "title": "Omnider teslimat riski koruması",
+        "body": "Hata oranları yükseldiğinde Meta cezasından önce soğuk gönderimleri otomatik duraklatır; sorun çözülünce tek tıkla devam ettirirsiniz."
       },
       "halt": {
-        "stopped": "Kampanya, yeni sohbet başlatma ve 24 saat dışı şablon: durduruldu",
+        "stopped": "Kampanya, yeni sohbet ve 24 saat dışı şablon: durduruldu",
         "continues": "Müşteri yazınca cevap vermek: devam ediyor"
-      },
-      "note": "Puan Meta’dan gelir; Meta bildirim gönderdiğinde panel güncellenir."
+      }
     },
     "adReferral": {
-      "eyebrow": "Reklamdan gelen mesajlar",
-      "title": "Bu DM hangi reklamdan geldi?",
-      "lead": "Reklamdaki “Mesaj Gönder” ile açılan sohbette reklamın başlığı, görseli ve linki durur.",
-      "note": "Click-to-WhatsApp reklamlarından gelen mesajlar reklam başlığı, görseli ve kaynak linkiyle gelir.",
-      "items": {
-        "card": {
-          "title": "Reklam kartı mesajın üstünde",
-          "body": "“Reklam” rozeti, reklam görseli ve başlığı ilk mesajın hemen üstünde."
-        },
-        "utm": {
-          "title": "UTM’li link",
-          "body": "Reklam linkine gelen kutusundan tıklayınca konuşma ve reklam kimliği UTM olarak eklenir; Google Analytics’te görürsünüz."
-        },
-        "contact": {
-          "title": "Kişi kartına işlenir",
-          "body": "“Yönlendirme Kaynağı” otomatik dolar, dışa aktarmada “Referral” sütunu olarak gelir."
-        }
-      },
+      "eyebrow": "Tıkla-WhatsApp (CTWA)",
+      "title": "Reklamdan gelen müşteriyi hangi ilandan geldiğiyle tanıyın",
+      "lead": "Instagram veya Facebook reklamınızdan “Mesaj Gönder” butonuna tıklayan müşteri, ilk mesajında reklam kartı, ad_id ve kaynak bağlantısıyla birlikte gelen kutunuza düşer.",
+      "checks": [
+        "Sohbet başında otomatik “Reklam” bağlam kartı",
+        "Kişi kartına otomatik referral kaynağı ve CRM aktarımı",
+        "Giden linklerde UTM ve dönüşüm takibi"
+      ],
       "scene": {
-        "brand": "Atölye No.4",
-        "sponsored": "Sponsorlu",
-        "send": "Mesaj Gönder",
-        "inbox": "Gelen kutusu",
-        "adBadge": "Reklam",
-        "headline": "Yaz kampanyası bu hafta",
-        "link": "omnider.com/kampanya…",
-        "bubble": "Merhaba, bu kampanya hâlâ geçerli mi?",
-        "customer": "Ayşe",
-        "referralLabel": "Yönlendirme Kaynağı",
-        "referralPrefix": "Referans",
-        "adId": "120384756"
-      },
-      "footnote": "Reklam bilgisi Meta’nın gönderdiği alanlara göre görünür."
-    },
-    "midCta": {
-      "line1": "Müşteri WhatsApp’ta yazar.",
-      "strong": "Omnider AI yanıtlar.",
-      "demo": "Sizi arayalım",
-      "start": "Ücretsiz başla"
+        "brand": "Kafe Roastery",
+        "sponsored": "Sponsorlu Reklam",
+        "send": "WhatsApp’ta Mesaj Gönder",
+        "headline": "Ofisiniz için profesyonel espresso çözümleri — hemen fiyat teklifi alın.",
+        "imageAlt": "Espresso makinesi reklam görseli",
+        "referralBadge": "Reklam Yönlendirmesi",
+        "adId": "238591",
+        "campaign": "Ofis Espresso Kampanyası",
+        "source": "Instagram Reels",
+        "bubble": "Merhaba, bu ilan üzerinden yazıyorum. 20 kişilik ofis için teklif alabilir miyim?"
+      }
     },
     "try": {
       "eyebrow": "Canlı deneme",
