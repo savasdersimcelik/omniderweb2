@@ -3036,39 +3036,75 @@
       "cta": "We'll call you"
     },
     "connect": {
-      "eyebrow": "Connect with QR or a code",
-      "title": "Move the WhatsApp on your phone into the panel.",
+      "eyebrow": "Connection options",
+      "title": "Move the WhatsApp on your phone into the panel",
       "subtitle": "Scan a QR code, or get an 8-digit connection code with your phone number. The panel notices when you connect; your contacts and the latest messages arrive in the background.",
-      "tabs": {
-        "qr": "QR Code",
-        "code": "Phone Code"
-      },
-      "paths": {
+      "toggleLabel": "Connection type",
+      "stepsLabel": "Setup steps",
+      "modes": {
         "qr": {
-          "title": "Scan the QR code to link WhatsApp to the Omnider panel.",
-          "desc": "On your phone open Linked devices → Link a device and scan the QR in the panel. Once the session is up, your contacts and the latest chat messages land in the panel in the background—no extra setup."
+          "short": "QR Code",
+          "title": "Scan with camera"
         },
         "code": {
-          "title": "Get an 8-digit phone code and enter it in WhatsApp.",
-          "desc": "Enter your number with the country code; the panel generates a short code. In WhatsApp choose link with phone number, enter the code, and the channel is ready—no QR scan needed."
+          "short": "Phone Code",
+          "title": "Connect with an 8-digit code"
         }
       },
-      "qrSteps": [
-        "In the panel, click “Connect with QR Code”.",
-        "On your phone, open WhatsApp → Linked devices → Link a device.",
-        "Scan the QR code on the screen."
-      ],
-      "codeSteps": [
-        "Choose “Connect with phone” and enter your number with the country code.",
-        "The panel shows an 8-digit connection code.",
-        "In WhatsApp, on Linked devices, choose link with phone number and enter the code."
-      ],
-      "afterTitle": "What arrives once you connect?",
-      "after": [
-        "Your contacts are imported as people.",
-        "The last 50 messages of each chat land in the inbox; no message credits are used, and the bot does not reply to older messages.",
-        "Messages you send from the phone also land in the thread."
-      ],
+      "steps": {
+        "qr": [
+          {
+            "title": "Open the QR in the panel",
+            "body": "Click “Connect with QR Code”; the code appears on screen."
+          },
+          {
+            "title": "Open linked devices",
+            "body": "On your phone, go to WhatsApp → Linked devices → Link a device."
+          },
+          {
+            "title": "Scan the QR",
+            "body": "Scan the code in the panel; the session starts in the background."
+          }
+        ],
+        "code": [
+          {
+            "title": "Enter your number",
+            "body": "Choose “Connect with phone” and enter the number with country code."
+          },
+          {
+            "title": "Get the 8-digit code",
+            "body": "The panel generates a short connection code."
+          },
+          {
+            "title": "Enter it in WhatsApp",
+            "body": "On Linked devices, choose link with phone number and type the code."
+          }
+        ]
+      },
+      "compare": {
+        "label": "What differs",
+        "caption": {
+          "qr": "The fastest path when your camera is ready. Once linked, contacts and recent messages land in the panel.",
+          "code": "Use your phone number when you prefer not to scan a QR or camera access is limited."
+        },
+        "rows": {
+          "scan": {
+            "label": "What you need",
+            "qr": "Camera / QR scan",
+            "code": "Phone number"
+          },
+          "phone": {
+            "label": "On the phone",
+            "qr": "Link device → scan QR",
+            "code": "Link device → enter code"
+          },
+          "fit": {
+            "label": "Best when",
+            "qr": "Phone is next to you",
+            "code": "You don’t want to scan a QR"
+          }
+        }
+      },
       "widget": {
         "waitingQr": "Waiting for connection… (scan the QR)",
         "waitingCode": "Waiting for connection… (enter the code)",
@@ -3086,6 +3122,10 @@
         "contactsDone": "Contacts · 312 ✓",
         "messagesDone": "Chats · last 50 messages ✓",
         "creditNote": "No credits used · The bot did not reply to older messages"
+      },
+      "status": {
+        "qr": "Connect with QR code selected",
+        "code": "Connect with phone code selected"
       },
       "riskNote": "Note: WhatsApp Personal is not an official Meta / WhatsApp Business API connection. It is session-based; the link can drop and may carry account risk. For critical work, use the official WhatsApp Business API.",
       "demoNote": "The account and numbers in the preview are examples."

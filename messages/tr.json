@@ -3036,39 +3036,75 @@
       "cta": "Sizi arayalım"
     },
     "connect": {
-      "eyebrow": "QR ya da kodla bağlan",
-      "title": "Telefonunuzdaki WhatsApp’ı panele taşıyın.",
+      "eyebrow": "Bağlantı seçenekleri",
+      "title": "Telefonunuzdaki WhatsApp’ı panele taşıyın",
       "subtitle": "QR kodu okutun ya da telefon numaranızla 8 haneli bağlantı kodu alın. Panel bağlandığınızı kendisi fark eder; rehberiniz ve sohbetlerinizin son mesajları arka planda gelir.",
-      "tabs": {
-        "qr": "QR Kod",
-        "code": "Telefon Kodu"
-      },
-      "paths": {
+      "toggleLabel": "Bağlantı tipi",
+      "stepsLabel": "Kurulum adımları",
+      "modes": {
         "qr": {
-          "title": "QR kodu okutarak WhatsApp’ınızı Omnider paneline bağlayın.",
-          "desc": "Telefonda Bağlı cihazlar → Cihaz bağla adımlarını açıp paneldeki QR’ı okutmanız yeterli. Oturum kurulunca rehberiniz ve sohbetlerinizin son mesajları arka planda panele düşer; ekstra kurulum gerekmez."
+          "short": "QR Kod",
+          "title": "Kamerayla okut"
         },
         "code": {
-          "title": "Telefon numaranızla 8 haneli kod alın ve WhatsApp’ta girin.",
-          "desc": "Ülke koduyla numaranızı yazın; panel size kısa bir kod üretir. WhatsApp’ta telefon numarasıyla bağlanmayı seçip kodu girdiğinizde kanal hazır olur — QR okutmaya gerek kalmaz."
+          "short": "Telefon Kodu",
+          "title": "8 haneli kodla bağlan"
         }
       },
-      "qrSteps": [
-        "Panelde «QR Kod ile Bağlan»a tıklayın.",
-        "Telefonda WhatsApp → Bağlı cihazlar → Cihaz bağla’yı açın.",
-        "Ekrandaki QR kodu okutun."
-      ],
-      "codeSteps": [
-        "«Telefon ile Bağlan»ı seçin, numaranızı ülke koduyla yazın.",
-        "Panel size 8 haneli bir bağlantı kodu gösterir.",
-        "WhatsApp’ta Bağlı cihazlar ekranında telefon numarasıyla bağlanmayı seçip kodu girin."
-      ],
-      "afterTitle": "Bağlanınca ne gelir?",
-      "after": [
-        "Rehberiniz kişi olarak içeri alınır.",
-        "Her sohbetin son 50 mesajı gelen kutusuna yazılır; mesaj kredisi harcanmaz, bot eski mesajlara cevap vermez.",
-        "Telefondan yazdığınız mesajlar da sohbet geçmişine düşer."
-      ],
+      "steps": {
+        "qr": [
+          {
+            "title": "Panelde QR’ı aç",
+            "body": "«QR Kod ile Bağlan»a tıklayın; ekranda kod görünür."
+          },
+          {
+            "title": "Bağlı cihazları aç",
+            "body": "Telefonda WhatsApp → Bağlı cihazlar → Cihaz bağla’yı seçin."
+          },
+          {
+            "title": "QR’ı okut",
+            "body": "Paneldeki kodu okutun; oturum arka planda kurulur."
+          }
+        ],
+        "code": [
+          {
+            "title": "Numaranızı yazın",
+            "body": "«Telefon ile Bağlan»ı seçip numarayı ülke koduyla girin."
+          },
+          {
+            "title": "8 haneli kodu alın",
+            "body": "Panel kısa bir bağlantı kodu üretir."
+          },
+          {
+            "title": "WhatsApp’ta kodu girin",
+            "body": "Bağlı cihazlar ekranında telefon numarasıyla bağlanmayı seçip kodu yazın."
+          }
+        ]
+      },
+      "compare": {
+        "label": "İki yolun farkı",
+        "caption": {
+          "qr": "Kameranız hazırsa en hızlı yol. Oturum kurulunca rehber ve son mesajlar panele düşer.",
+          "code": "QR okutmak istemiyorsanız veya kameraya erişiminiz yoksa telefon numarasıyla bağlanın."
+        },
+        "rows": {
+          "scan": {
+            "label": "Ne gerekir",
+            "qr": "Kamera / QR okutma",
+            "code": "Telefon numarası"
+          },
+          "phone": {
+            "label": "Telefonda işlem",
+            "qr": "Cihaz bağla → QR okut",
+            "code": "Cihaz bağla → kodu gir"
+          },
+          "fit": {
+            "label": "Ne zaman",
+            "qr": "Telefon yanınızdayken",
+            "code": "QR okutmak istemediğinizde"
+          }
+        }
+      },
       "widget": {
         "waitingQr": "Bağlantı bekleniyor… (QR okutun)",
         "waitingCode": "Bağlantı bekleniyor… (Kodu girin)",
@@ -3086,6 +3122,10 @@
         "contactsDone": "Rehber · 312 kişi ✓",
         "messagesDone": "Sohbetler · son 50 mesaj ✓",
         "creditNote": "Kredi harcanmadı · Bot eski mesajlara cevap vermedi"
+      },
+      "status": {
+        "qr": "QR kod ile bağlama seçildi",
+        "code": "Telefon kodu ile bağlama seçildi"
       },
       "riskNote": "Not: WhatsApp Personal resmi bir Meta / WhatsApp Business API bağlantısı değildir. Oturum tabanlıdır; bağlantı kopabilir ve hesap riski taşıyabilir. Kritik işler için resmi WhatsApp Business API önerilir.",
       "demoNote": "Görseldeki hesap ve sayılar örnektir."
