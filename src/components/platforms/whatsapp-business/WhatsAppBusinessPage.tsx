@@ -20,10 +20,10 @@ export async function WhatsAppBusinessPage() {
       <InteractiveSection />
       <AiAutomationSection />
       <ChatflowSection />
-      <HealthSection />
+      <AdReferralSection />
       <TemplatesSection />
       <CampaignsSection />
-      <AdReferralSection />
+      <HealthSection />
       <AnalyticsSection />
       <TrySection />
     </div>
