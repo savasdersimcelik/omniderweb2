@@ -1,22 +1,44 @@
+import {
+  BadgeCheckIcon,
+  ClockIcon,
+  FileTextIcon,
+  LayersIcon,
+  MegaphoneIcon,
+  RefreshCwIcon,
+  ShieldCheckIcon,
+  SignalIcon,
+  WorkflowIcon,
+} from "lucide-react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 
 const CARDS = [
   {
-    key: "sync" as const,
+    key: "sync",
     image: "/images/platforms/whatsapp/templates/sync-gold.jpg",
-    imageAlt: "",
+    icon: RefreshCwIcon,
+    items: [{ key: "field", icon: WorkflowIcon }],
   },
   {
-    key: "types" as const,
+    key: "types",
     image: "/images/platforms/whatsapp/templates/types-gold.jpg",
-    imageAlt: "",
+    icon: LayersIcon,
+    items: [
+      { key: "options.utility", icon: FileTextIcon },
+      { key: "options.marketing", icon: MegaphoneIcon },
+      { key: "options.auth", icon: ShieldCheckIcon },
+    ],
   },
   {
-    key: "status" as const,
+    key: "status",
     image: "/images/platforms/whatsapp/templates/status-gold.jpg",
-    imageAlt: "",
+    icon: BadgeCheckIcon,
+    items: [
+      { key: "pills.approved", icon: BadgeCheckIcon, tone: "green" },
+      { key: "pills.pending", icon: ClockIcon, tone: "amber" },
+      { key: "pills.quality", icon: SignalIcon, tone: "green" },
+    ],
   },
 ] as const;
 
@@ -30,94 +52,54 @@ export async function TemplatesSection() {
       aria-labelledby="wa-templates-title"
     >
       <Container className="section">
-        <header className="wa-templates__header mx-auto max-w-3xl text-center">
-          <p className="wa-section-label">{t("eyebrow")}</p>
-          <h2 id="wa-templates-title" className="heading-section mt-3">
-            {t("title")}
-          </h2>
-          <p className="wa-templates__subtitle text-body mt-4">
-            {t("subtitle")}
-          </p>
+        <header className="wa-templates__header">
+          <div>
+            <p className="wa-section-label">
+              <FileTextIcon aria-hidden="true" />
+              {t("eyebrow")}
+            </p>
+            <h2 id="wa-templates-title" className="heading-section mt-3 text-balance">
+              {t("title")}
+            </h2>
+          </div>
+          <p className="text-body text-pretty">{t("subtitle")}</p>
         </header>
 
         <div className="wa-templates__grid">
-          {CARDS.map((card) => (
-            <article key={card.key} className="wa-templates__shot">
-              <Image
-                src={card.image}
-                alt={card.imageAlt}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="wa-templates__shot-img object-cover"
-              />
-              <div className="wa-templates__glass">
-                <div className="wa-templates__glass-top">
-                  <p className="wa-templates__glass-label">
-                    {t(`cards.${card.key}.label`)}
-                  </p>
-                  <span className="wa-templates__glass-menu" aria-hidden>
-                    ···
-                  </span>
-                </div>
-
-                {card.key === "sync" ? (
-                  <div className="wa-templates__glass-body">
-                    <div className="wa-templates__field">
-                      <span>{t("cards.sync.field")}</span>
-                      <span aria-hidden>▾</span>
-                    </div>
-                    <div className="wa-templates__field is-muted">
-                      <span>{t("cards.sync.meta")}</span>
-                      <span aria-hidden>▾</span>
-                    </div>
-                  </div>
-                ) : null}
-
-                {card.key === "types" ? (
-                  <div className="wa-templates__glass-body">
-                    {(
-                      ["utility", "marketing", "auth"] as const
-                    ).map((opt) => (
-                      <div
-                        key={opt}
-                        className={
-                          opt === "utility"
-                            ? "wa-templates__radio is-on"
-                            : "wa-templates__radio"
-                        }
-                      >
-                        <span className="wa-templates__radio-dot" aria-hidden />
-                        <span>{t(`cards.types.options.${opt}`)}</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
-
-                {card.key === "status" ? (
-                  <div className="wa-templates__glass-body">
-                    <div className="wa-templates__pills">
-                      {(
-                        ["approved", "pending", "quality"] as const
-                      ).map((pill) => (
-                        <span
-                          key={pill}
-                          className={
-                            pill === "approved"
-                              ? "wa-templates__pill is-on"
-                              : "wa-templates__pill"
-                          }
-                        >
-                          {t(`cards.status.pills.${pill}`)}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
-
-                <div className="wa-templates__cta">
-                  <span>{t(`cards.${card.key}.cta`)}</span>
-                  <span aria-hidden>→</span>
-                </div>
+          {CARDS.map(({ key, image, icon: Icon, items }) => (
+            <article key={key} className="wa-templates__card">
+              <div className="wa-templates__art">
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1320px) 416px, (min-width: 900px) 33vw, (min-width: 600px) 36vw, 100vw"
+                />
+              </div>
+              <div className="wa-templates__content">
+                <span className="wa-templates__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <h3>{t(`cards.${key}.label`)}</h3>
+                <p>{t(`cards.${key}.description`)}</p>
+                <ul className="wa-templates__items">
+                  {items.map((item) => (
+                    <li key={item.key}>
+                      <item.icon
+                        aria-hidden="true"
+                        data-tone={"tone" in item ? item.tone : undefined}
+                      />
+                      <span>
+                        {t(`cards.${key}.${item.key}`)}
+                        {key === "sync" && (
+                          <span className="wa-templates__account">
+                            {t("cards.sync.meta")}
+                          </span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </article>
           ))}

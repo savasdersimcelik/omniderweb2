@@ -2239,14 +2239,14 @@
       "subtitle": "Omnider şablonları Meta’dan çeker, taslak yazar ve onaya gönderir; onay, red ve kalite durumunu tek listede takip edersiniz.",
       "cards": {
         "sync": {
-          "label": "Meta senkron",
+          "label": "Meta ile senkronizasyon",
           "field": "Cloud API hesabı",
           "meta": "WABA · tr",
-          "cta": "Şablonları senkronize et"
+          "description": "Meta hesabınızdaki mevcut şablonları Omnider’a aktarın."
         },
         "types": {
           "label": "Şablon kategorisi",
-          "cta": "Devam et",
+          "description": "Mesajınızın amacına uygun Meta kategorisini seçin.",
           "options": {
             "utility": "Bildirim",
             "marketing": "Pazarlama",
@@ -2255,7 +2255,7 @@
         },
         "status": {
           "label": "Durum ve kalite",
-          "cta": "Test gönder",
+          "description": "Şablonlarınızın inceleme ve kalite durumunu takip edin.",
           "pills": {
             "approved": "Onaylı",
             "pending": "İncelemede",
@@ -2445,6 +2445,69 @@
             "bot": "20 kişilik ofisiniz için Barista Pro X2 modelimizi öneririz. Teklif dosyasını ileteyim mi?",
             "btn1": "Teklifi Gönder",
             "btn2": "Satış Uzmanına Bağlan"
+          }
+        },
+        "education": {
+          "tab": "Eğitim & Kurs",
+          "one": {
+            "title": "Kurs veya kayıt niyeti yakalanır",
+            "body": "Öğrenci “kurs, kayıt, kontenjan, ücret” yazdığında akış otomatik başlar."
+          },
+          "two": {
+            "title": "Program ve kontenjan bilgisini çeker",
+            "body": "Eğitim yönetim sisteminizden açık dönemleri, ücretleri ve kalan kontenjanı alır."
+          },
+          "three": {
+            "title": "Kayıt seçeneklerini sunar, danışmana bağlar",
+            "body": "Uygun programı butonlarla listeler; ödeme veya özel soru olursa kayıt danışmanına aktarır."
+          },
+          "sim": {
+            "user": "İngilizce B1 kursuna kayıt olmak istiyorum, kontenjan var mı?",
+            "bot": "B1 akşam grubunda 4 kontenjan kaldı. Başlangıç: 2 Aralık. Nasıl ilerleyelim?",
+            "btn1": "Kayıt Formunu Aç",
+            "btn2": "Danışmana Bağlan"
+          }
+        },
+        "travel": {
+          "tab": "Seyahat & Tur",
+          "one": {
+            "title": "Tur veya rezervasyon talebi algılanır",
+            "body": "Misafir “tur, uçuş, otel, rezervasyon” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Müsaitlik ve fiyatı sistemden kontrol eder",
+            "body": "Tur operatörü veya rezervasyon yazılımınızdaki tarih, kişi sayısı ve müsaitliği doğrular."
+          },
+          "three": {
+            "title": "Seçenekleri sunar, rezervasyonu başlatır",
+            "body": "Uygun paketleri butonlarla gösterir; kapora veya özel istekte Operasyon ekibine bağlar."
+          },
+          "sim": {
+            "user": "15–18 Aralık Kapadokya turu için 2 kişilik yer var mı?",
+            "bot": "15–18 Aralık’ta 2 kişilik yer açık. Standart paket kişi başı ₺8.900. Devam edelim mi?",
+            "btn1": "Rezervasyonu Başlat",
+            "btn2": "Diğer Tarihler"
+          }
+        },
+        "restaurant": {
+          "tab": "Restoran & Menü",
+          "one": {
+            "title": "Sipariş veya masa talebi yakalanır",
+            "body": "Misafir “menü, sipariş, masa, rezervasyon” yazdığında restoran akışı başlar."
+          },
+          "two": {
+            "title": "Menü ve müsaitliği kontrol eder",
+            "body": "POS veya rezervasyon sisteminizden güncel menüyü, stokları ve boş masa saatlerini alır."
+          },
+          "three": {
+            "title": "Siparişi alır veya masayı onaylar",
+            "body": "Seçilen ürün veya saati kaydeder; özel istek veya şikayette salona / mutfağa aktarır."
+          },
+          "sim": {
+            "user": "Bu akşam 20:00 için 4 kişilik masa ayırtabilir miyiz?",
+            "bot": "20:00’de 4 kişilik masa müsait. Bahçe veya salon tercihinizi seçebilirsiniz:",
+            "btn1": "Bahçe Masası",
+            "btn2": "Salon Masası"
           }
         }
       }

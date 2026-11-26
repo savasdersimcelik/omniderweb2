@@ -2239,14 +2239,14 @@
       "subtitle": "Omnider pulls templates from Meta, drafts them, and submits them for review—so you can track approval, rejection, and quality in one list.",
       "cards": {
         "sync": {
-          "label": "Meta sync",
+          "label": "Sync with Meta",
           "field": "Cloud API account",
           "meta": "WABA · en",
-          "cta": "Sync templates"
+          "description": "Import existing templates from your Meta account into Omnider."
         },
         "types": {
           "label": "Template category",
-          "cta": "Continue",
+          "description": "Choose the Meta category that matches the purpose of your message.",
           "options": {
             "utility": "Utility",
             "marketing": "Marketing",
@@ -2255,7 +2255,7 @@
         },
         "status": {
           "label": "Status and quality",
-          "cta": "Test send",
+          "description": "Track review and quality status for your templates.",
           "pills": {
             "approved": "Approved",
             "pending": "Pending",
@@ -2445,6 +2445,69 @@
             "bot": "For a 20-person office we recommend Barista Pro X2. Want me to send the quote?",
             "btn1": "Send quote",
             "btn2": "Talk to sales"
+          }
+        },
+        "education": {
+          "tab": "Education & Courses",
+          "one": {
+            "title": "Course or enrollment intent is caught",
+            "body": "When a student writes “course, enroll, seats, tuition”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls program and seat availability",
+            "body": "Fetches open terms, fees, and remaining seats from your education management system."
+          },
+          "three": {
+            "title": "Offers enrollment options or an advisor",
+            "body": "Lists matching programs with buttons; routes payment or special questions to enrollment staff."
+          },
+          "sim": {
+            "user": "I’d like to enroll in English B1 — any seats left?",
+            "bot": "4 seats left in the B1 evening group. Starts Dec 2. How would you like to continue?",
+            "btn1": "Open enrollment form",
+            "btn2": "Talk to an advisor"
+          }
+        },
+        "travel": {
+          "tab": "Travel & Tours",
+          "one": {
+            "title": "Tour or booking request is detected",
+            "body": "When a guest writes “tour, flight, hotel, reservation”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks availability and pricing",
+            "body": "Validates dates, party size, and inventory in your tour operator or booking software."
+          },
+          "three": {
+            "title": "Presents options and starts the booking",
+            "body": "Shows matching packages with buttons; hands deposits or special requests to Operations."
+          },
+          "sim": {
+            "user": "Any spots left for 2 on the Dec 15–18 Cappadocia tour?",
+            "bot": "2 seats open for Dec 15–18. Standard package is $280 per person. Shall we continue?",
+            "btn1": "Start reservation",
+            "btn2": "Other dates"
+          }
+        },
+        "restaurant": {
+          "tab": "Restaurant & Menu",
+          "one": {
+            "title": "Order or table request is caught",
+            "body": "When a guest writes “menu, order, table, reservation”, the restaurant flow starts."
+          },
+          "two": {
+            "title": "Checks the menu and availability",
+            "body": "Pulls the live menu, stock, and open table times from your POS or reservation system."
+          },
+          "three": {
+            "title": "Takes the order or confirms the table",
+            "body": "Saves the chosen items or time; routes special requests or complaints to the floor team."
+          },
+          "sim": {
+            "user": "Can we reserve a table for 4 at 20:00 tonight?",
+            "bot": "A table for 4 is available at 20:00. Choose garden or indoor seating:",
+            "btn1": "Garden table",
+            "btn2": "Indoor table"
           }
         }
       }
