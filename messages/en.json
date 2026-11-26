@@ -3132,58 +3132,46 @@
     },
     "richMessages": {
       "eyebrow": "More than plain text",
-      "title": "Send polls, buttons, and locations",
+      "title": "Send buttons, files, and locations",
       "subtitle": "Don’t make customers type the options — let them tap. Every button, location, edit or emoji reaction shows up correctly in the panel.",
-      "tabs": {
+      "preview": "Sample chat",
+      "labels": {
         "text": "Text",
-        "location": "Location",
-        "poll": "Poll",
         "button": "Button",
-        "document": "File"
+        "document": "File",
+        "location": "Location"
       },
       "cards": {
-        "text": {
-          "title": "Plain text and reactions",
-          "desc": "Bubbles, edited labels, and emoji reactions show correctly in the chat."
-        },
-        "poll": {
-          "title": "Collect choices with polls",
-          "desc": "Customers tap an option; the answer lands in the panel without typing."
-        },
-        "location": {
-          "title": "Send a location card",
-          "desc": "Map pin and address open as a native location card."
-        },
-        "button": {
-          "title": "Reply buttons",
-          "desc": "Up to three buttons; the choice continues the right flow branch."
-        },
-        "document": {
-          "title": "Share files",
-          "desc": "PDFs and documents go out as chat cards."
-        }
+        "text": "Bubbles, edited labels, and emoji reactions show correctly in the chat.",
+        "button": "Up to three buttons; the choice continues the right flow branch.",
+        "document": "PDFs and documents go out as chat cards.",
+        "location": "Map pin and address open as a native location card."
       },
-      "phone": {
-        "name": "Selin Studio",
-        "status": "online",
-        "text": "Hi, how can I help?",
-        "pollQuestion": "Which weekday would you like to come?",
-        "pollOptions": [
-          "Tuesday",
-          "Thursday",
-          "Saturday"
-        ],
-        "buttonBody": "How should we continue?",
-        "buttons": [
+      "text": {
+        "body": "Hi, how can I help?",
+        "edited": "edited",
+        "reaction": "👍"
+      },
+      "button": {
+        "body": "How should we continue?",
+        "options": [
           "Book a slot",
           "Call us",
           "View menu"
         ],
-        "locationTitle": "Selin Studio – Downtown",
-        "locationAddress": "14 Market Street, Suite 2",
+        "follow": "Pick a time and we’ll set it up."
+      },
+      "document": {
+        "body": "Here’s our menu.",
         "fileName": "studio-menu.pdf",
-        "edited": "edited",
-        "reaction": "👍"
+        "fileMeta": "PDF · 1.2 MB",
+        "status": "File landed in the chat."
+      },
+      "location": {
+        "body": "Here’s our studio location.",
+        "title": "Selin Studio – Downtown",
+        "address": "14 Market Street, Suite 2",
+        "status": "Location card sent."
       }
     },
     "catalog": {
@@ -3297,28 +3285,53 @@
       "riskNote": "WhatsApp Personal is session-based, not the official Business API. For critical work, prefer WhatsApp Business API."
     },
     "try": {
-      "eyebrow": "Live test",
-      "title": "Try WhatsApp Personal from your phone",
-      "body": "Scan the Turkey, Europe or USA line. Omnider replies — ask about pricing, an appointment or an order.",
-      "cta": "Open in WhatsApp",
+      "eyebrow": "Live demo • 24/7 active",
+      "title": "Try WhatsApp Personal from your phone now",
+      "body": "Scan the Turkey, Europe, or USA line — or start a chat in one tap. AI answers pricing, booking, and order questions; the team takes over when needed.",
+      "cta": "Start chat in WhatsApp",
+      "promptsLabel": "What do you want to test?",
+      "regionsLabel": "Choose demo region",
+      "prefillLabel": "Ready test message",
+      "online": "Online",
+      "trust": {
+        "ai": "Instant AI reply (under 1 sec)",
+        "handoff": "One-tap live team handoff"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Ask pricing & catalog",
+          "message": "Hi, can I get details about your packages and pricing?"
+        },
+        "booking": {
+          "tab": "Book a demo",
+          "message": "I’d like to book a demo for tomorrow afternoon."
+        },
+        "order": {
+          "tab": "Track an order",
+          "message": "When will order #4829 be delivered?"
+        }
+      },
       "lines": {
         "turkey": {
           "title": "Omnider Turkey",
           "phone": "+90 546 419 94 17",
+          "lang": "Turkish & English auto-detect",
           "ctaTitle": "Open the Omnider Turkey WhatsApp line",
-          "imageAlt": "QR code for the Omnider Turkey WhatsApp line"
+          "imageAlt": "QR code for the Omnider Turkey WhatsApp line, +90 546 419 94 17"
         },
         "europe": {
           "title": "Omnider Europe",
           "phone": "+44 7529 760393",
+          "lang": "English, German & multilingual support",
           "ctaTitle": "Open the Omnider Europe WhatsApp line",
-          "imageAlt": "QR code for the Omnider Europe WhatsApp line"
+          "imageAlt": "QR code for the Omnider Europe WhatsApp line, +44 7529 760393"
         },
         "usa": {
           "title": "Omnider USA",
           "phone": "+1 845 720 3266",
+          "lang": "English & Spanish (US/LATAM)",
           "ctaTitle": "Open the Omnider USA WhatsApp line",
-          "imageAlt": "QR code for the Omnider USA WhatsApp line"
+          "imageAlt": "QR code for the Omnider USA WhatsApp line, +1 845 720 3266"
         }
       }
     }

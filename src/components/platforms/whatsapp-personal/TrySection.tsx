@@ -1,9 +1,18 @@
-import Image from "next/image";
-import { ScanLineIcon, SendIcon } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import { Container } from "@/components/layout/Container";
+"use client";
 
-const LINES = [
+import { useMemo, useState } from "react";
+import Image from "next/image";
+import {
+  BotIcon,
+  HeadsetIcon,
+  QrCodeIcon,
+  SendIcon,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Container } from "@/components/layout/Container";
+import { cn } from "@/lib/utils";
+
+const REGIONS = [
   {
     key: "turkey" as const,
     url: "https://wa.me/905464199417",
@@ -19,68 +28,146 @@ const LINES = [
     url: "https://wa.me/18457203266",
     image: "/images/home/qr/whatsapp-usa.svg",
   },
-];
+] as const;
 
-export async function TrySection() {
-  const t = await getTranslations("PlatformWhatsAppPersonal.try");
+const PROMPTS = ["price", "booking", "order"] as const;
+
+type RegionKey = (typeof REGIONS)[number]["key"];
+type PromptKey = (typeof PROMPTS)[number];
+
+export function TrySection() {
+  const t = useTranslations("PlatformWhatsAppPersonal.try");
+  const [region, setRegion] = useState<RegionKey>("turkey");
+  const [prompt, setPrompt] = useState<PromptKey>("price");
+
+  const active = REGIONS.find((item) => item.key === region) ?? REGIONS[0];
+  const prefill = t(`prompts.${prompt}.message`);
+
+  const href = useMemo(() => {
+    const url = new URL(active.url);
+    url.searchParams.set("text", prefill);
+    return url.toString();
+  }, [active.url, prefill]);
 
   return (
     <section
       id="try-whatsapp-personal"
-      className="wa-try border-t border-line"
+      className="closing-cta"
       aria-labelledby="wap-try-title"
     >
-      <Container className="section">
-        <div className="wa-try__layout">
-          <div className="wa-try__copy">
-            <p className="eyebrow inline-flex items-center gap-2 text-[var(--wa-teal)]">
-              <ScanLineIcon className="h-4 w-4" />
+      <div className="closing-cta__orbit" aria-hidden />
+      <Container className="section closing-cta__inner">
+        <div className="wa-biz-try">
+          <div className="wa-biz-try__copy">
+            <p className="closing-cta__eyebrow">
+              <QrCodeIcon className="size-3.5" aria-hidden />
               {t("eyebrow")}
             </p>
-            <h2 id="wap-try-title" className="heading-section mt-3">
+            <h2 id="wap-try-title" className="wa-biz-try__title">
               {t("title")}
             </h2>
-            <p className="text-body mt-4">{t("body")}</p>
+            <p className="wa-biz-try__body">{t("body")}</p>
+
+            <div className="wa-biz-try__prompts">
+              <p className="wa-biz-try__prompts-label">{t("promptsLabel")}</p>
+              <div
+                className="wa-biz-try__prompt-list"
+                role="tablist"
+                aria-label={t("promptsLabel")}
+              >
+                {PROMPTS.map((id) => (
+                  <button
+                    key={id}
+                    type="button"
+                    role="tab"
+                    aria-selected={prompt === id}
+                    className={cn(
+                      "wa-biz-try__prompt",
+                      prompt === id && "is-on",
+                    )}
+                    onClick={() => setPrompt(id)}
+                  >
+                    {t(`prompts.${id}.tab`)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="wa-biz-try__trust">
+              <div className="wa-biz-try__trust-item">
+                <BotIcon aria-hidden />
+                <span>{t("trust.ai")}</span>
+              </div>
+              <div className="wa-biz-try__trust-item">
+                <HeadsetIcon aria-hidden />
+                <span>{t("trust.handoff")}</span>
+              </div>
+            </div>
           </div>
 
-          <div className="wa-try__cards">
-            {LINES.map((line) => (
-              <article
-                key={line.key}
-                className="wa-try__card rounded-2xl border border-line bg-white shadow-sm"
-              >
-                <div className="px-4 pt-4 sm:px-5 sm:pt-5">
-                  <h3 className="text-base font-semibold tracking-tight text-ink sm:text-lg">
-                    {t(`lines.${line.key}.title`)}
-                  </h3>
-                  <p className="mt-1 text-sm text-ink-subtle">
-                    {t(`lines.${line.key}.phone`)}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center gap-4 px-4 pt-4 pb-5 sm:px-5">
-                  <div className="w-full max-w-[220px] rounded-lg bg-white p-3 ring-1 ring-line">
-                    <Image
-                      src={line.image}
-                      alt={t(`lines.${line.key}.imageAlt`)}
-                      width={174}
-                      height={174}
-                      className="h-auto w-full"
-                      unoptimized
-                    />
+          <div className="wa-biz-try__console">
+            <div
+              className="wa-biz-try__regions"
+              role="tablist"
+              aria-label={t("regionsLabel")}
+            >
+              {REGIONS.map((item) => (
+                <button
+                  key={item.key}
+                  type="button"
+                  role="tab"
+                  aria-selected={region === item.key}
+                  className={cn(
+                    "wa-biz-try__region",
+                    region === item.key && "is-on",
+                  )}
+                  onClick={() => setRegion(item.key)}
+                >
+                  <span>{t(`lines.${item.key}.title`)}</span>
+                  <span>{t(`lines.${item.key}.phone`)}</span>
+                </button>
+              ))}
+            </div>
+
+            <article className="wa-biz-try__card">
+              <div className="wa-biz-try__qr">
+                <Image
+                  src={active.image}
+                  alt={t(`lines.${region}.imageAlt`)}
+                  width={174}
+                  height={174}
+                  className="h-auto w-full"
+                  unoptimized
+                />
+                <span>{t(`lines.${region}.phone`)}</span>
+              </div>
+
+              <div className="wa-biz-try__panel">
+                <div className="wa-biz-try__panel-head">
+                  <div>
+                    <h3>{t(`lines.${region}.title`)}</h3>
+                    <p>{t(`lines.${region}.lang`)}</p>
                   </div>
-                  <a
-                    href={line.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={t(`lines.${line.key}.ctaTitle`)}
-                    className="btn-whatsapp inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg px-4 text-sm font-bold"
-                  >
-                    <SendIcon className="h-4 w-4" />
-                    {t("cta")}
-                  </a>
+                  <span className="wa-biz-try__online">{t("online")}</span>
                 </div>
-              </article>
-            ))}
+
+                <div className="wa-biz-try__prefill">
+                  <span>{t("prefillLabel")}</span>
+                  <p>{`“${prefill}”`}</p>
+                </div>
+
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={t(`lines.${region}.ctaTitle`)}
+                  className="wa-biz-try__cta"
+                >
+                  <SendIcon className="h-4 w-4" />
+                  {t("cta")}
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </Container>

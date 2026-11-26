@@ -76,7 +76,7 @@ export async function SharedContactsSection() {
                 </dl>
               </article>
 
-              <div className="rounded-2xl bg-surface-subtle/80 p-3 ring-1 ring-line">
+              <div className="wap-contacts__summary rounded-2xl p-3 ring-1 ring-line">
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-semibold text-ink">
                     {t("demo.listTitle")}

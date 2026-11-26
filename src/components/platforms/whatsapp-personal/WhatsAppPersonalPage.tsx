@@ -1,3 +1,5 @@
+import "./whatsapp-personal-colors.css";
+
 import { CatalogSection } from "./CatalogSection";
 import { ConnectSection } from "./ConnectSection";
 import { RichMessagesSection } from "./RichMessagesSection";
@@ -8,7 +10,7 @@ import { WhatsAppPersonalHero } from "./WhatsAppPersonalHero";
 
 export async function WhatsAppPersonalPage() {
   return (
-    <div className="wa-page-atmosphere">
+    <div className="wa-page-atmosphere wa-personal-page">
       <WhatsAppPersonalHero />
       <WhatsAppInboxSection
         namespace="PlatformWhatsAppPersonal"

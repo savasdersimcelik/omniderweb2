@@ -3132,58 +3132,46 @@
     },
     "richMessages": {
       "eyebrow": "Düz metinden fazlası",
-      "title": "Anket, buton ve konum gönderin",
+      "title": "Buton, dosya ve konum gönderin",
       "subtitle": "Müşteriye seçenekleri yazdırmayın, dokundurun. Butona bastığı, konum attığı, mesajını düzelttiği ya da emojiyle tepki verdiği her şey panelde doğru görünür.",
-      "tabs": {
+      "preview": "Örnek sohbet",
+      "labels": {
         "text": "Metin",
-        "location": "Konum",
-        "poll": "Anket",
         "button": "Buton",
-        "document": "Dosya"
+        "document": "Dosya",
+        "location": "Konum"
       },
       "cards": {
-        "text": {
-          "title": "Düz metin ve tepkiler",
-          "desc": "Mesaj balonu, düzenlendi etiketi ve emoji tepkisi sohbette doğru görünür."
-        },
-        "poll": {
-          "title": "Anketle seçim alın",
-          "desc": "Müşteri seçeneklere dokunur; cevap panele düşer, yazmaya gerek kalmaz."
-        },
-        "location": {
-          "title": "Konum kartı gönderin",
-          "desc": "Harita pini ve adres native konum kartında açılır."
-        },
-        "button": {
-          "title": "Cevap butonları",
-          "desc": "En fazla üç buton; seçim akışı doğru dala taşır."
-        },
-        "document": {
-          "title": "Dosya paylaşın",
-          "desc": "PDF ve belgeler sohbette kart olarak gider."
-        }
+        "text": "Mesaj balonu, düzenlendi etiketi ve emoji tepkisi sohbette doğru görünür.",
+        "button": "En fazla üç buton; seçim akışı doğru dala taşır.",
+        "document": "PDF ve belgeler sohbette kart olarak gider.",
+        "location": "Harita pini ve adres native konum kartında açılır."
       },
-      "phone": {
-        "name": "Atölye Selin",
-        "status": "çevrimiçi",
-        "text": "Merhaba, nasıl yardımcı olabilirim?",
-        "pollQuestion": "Hafta içi hangi gün gelmek istersiniz?",
-        "pollOptions": [
-          "Salı",
-          "Perşembe",
-          "Cumartesi"
-        ],
-        "buttonBody": "Nasıl devam edelim?",
-        "buttons": [
+      "text": {
+        "body": "Merhaba, nasıl yardımcı olabilirim?",
+        "edited": "düzenlendi",
+        "reaction": "👍"
+      },
+      "button": {
+        "body": "Nasıl devam edelim?",
+        "options": [
           "Randevu al",
           "Bizi arayın",
           "Menüyü gör"
         ],
-        "locationTitle": "Atölye Selin – Kadıköy",
-        "locationAddress": "Caferağa Mah. Moda Cad. No:14, Kadıköy",
+        "follow": "Uygun saati seçin, hemen ayarlayalım."
+      },
+      "document": {
+        "body": "Menümüzü paylaştım.",
         "fileName": "atelye-menu.pdf",
-        "edited": "düzenlendi",
-        "reaction": "👍"
+        "fileMeta": "PDF · 1.2 MB",
+        "status": "Dosya sohbete düştü."
+      },
+      "location": {
+        "body": "Atölyemizin konumu burada.",
+        "title": "Atölye Selin – Kadıköy",
+        "address": "Caferağa Mah. Moda Cad. No:14, Kadıköy",
+        "status": "Konum kartı gönderildi."
       }
     },
     "catalog": {
@@ -3297,28 +3285,53 @@
       "riskNote": "WhatsApp Personal oturum tabanlıdır; resmi Business API değildir. Kritik işler için WhatsApp Business API önerilir."
     },
     "try": {
-      "eyebrow": "Canlı deneme",
-      "title": "WhatsApp Personal’ı telefondan deneyin",
-      "body": "Türkiye, Avrupa veya ABD hattını taratın. Omnider yanıt verir; fiyat, randevu veya sipariş sorun.",
-      "cta": "WhatsApp’ta aç",
+      "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",
+      "title": "WhatsApp Personal’ı telefondan hemen deneyin",
+      "body": "Türkiye, Avrupa veya Amerika hattını taratın ya da tek dokunuşla sohbeti başlatın. Yapay zeka fiyat, randevu ve sipariş sorularınızı yanıtlar; gerekirse ekip devralır.",
+      "cta": "WhatsApp’ta Sohbeti Başlat",
+      "promptsLabel": "Ne test etmek istersiniz?",
+      "regionsLabel": "Demo bölgesi seç",
+      "prefillLabel": "Hazır Test Mesajı",
+      "online": "Çevrimiçi",
+      "trust": {
+        "ai": "Anında AI yanıtı (1 sn altı)",
+        "handoff": "Tek tıkla canlı ekip devri"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Fiyat & Katalog Sor",
+          "message": "Merhaba, paketleriniz ve fiyatlarınız hakkında bilgi alabilir miyim?"
+        },
+        "booking": {
+          "tab": "Randevu Oluştur",
+          "message": "Yarın öğleden sonra için demo randevusu oluşturmak istiyorum."
+        },
+        "order": {
+          "tab": "Sipariş Sorgula",
+          "message": "#4829 numaralı siparişim ne zaman teslim edilir?"
+        }
+      },
       "lines": {
         "turkey": {
-          "title": "Omnider Turkey",
+          "title": "Omnider Türkiye",
           "phone": "+90 546 419 94 17",
-          "ctaTitle": "Omnider Turkey WhatsApp hattını aç",
-          "imageAlt": "Omnider Turkey WhatsApp hattı için QR kod"
+          "lang": "Türkçe & İngilizce Otomatik Algılama",
+          "ctaTitle": "Omnider Türkiye WhatsApp hattını aç",
+          "imageAlt": "Omnider Türkiye WhatsApp hattı için QR kod, +90 546 419 94 17"
         },
         "europe": {
           "title": "Omnider Avrupa",
           "phone": "+44 7529 760393",
+          "lang": "İngilizce, Almanca & Çok Dilli Destek",
           "ctaTitle": "Omnider Avrupa WhatsApp hattını aç",
-          "imageAlt": "Omnider Avrupa WhatsApp hattı için QR kod"
+          "imageAlt": "Omnider Avrupa WhatsApp hattı için QR kod, +44 7529 760393"
         },
         "usa": {
-          "title": "Omnider USA",
+          "title": "Omnider Amerika",
           "phone": "+1 845 720 3266",
-          "ctaTitle": "Omnider USA WhatsApp hattını aç",
-          "imageAlt": "Omnider USA WhatsApp hattı için QR kod"
+          "lang": "İngilizce & İspanyolca (US/LATAM)",
+          "ctaTitle": "Omnider Amerika WhatsApp hattını aç",
+          "imageAlt": "Omnider Amerika WhatsApp hattı için QR kod, +1 845 720 3266"
         }
       }
     }
