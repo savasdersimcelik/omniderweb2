@@ -3176,34 +3176,35 @@
     },
     "catalog": {
       "eyebrow": "Product catalog",
-      "title": "Send a WhatsApp product card in the chat",
-      "subtitle": "Sync Omnider products with the account’s WhatsApp product catalog. One product is a native card; several become an order card.",
+      "title": "Send the catalog in chat",
+      "subtitle": "Omnider products sync to the WhatsApp catalog. One item is a native card; several become an order summary.",
+      "bridge": "or multi-item order",
       "items": {
         "sync": {
           "title": "Catalog sync",
-          "body": "Omnider products are written to the account catalog, or imported from it."
+          "body": "Products are written to the account or imported from it."
         },
         "product": {
           "title": "Single product card",
-          "body": "Image, price and title open as a native product card in the chat."
+          "body": "Image, price and title open as a native card."
         },
         "order": {
-          "title": "Multi-product / order",
-          "body": "When several products are selected, they go out as an order card."
+          "title": "Multi-item order",
+          "body": "Selected products go out as one order summary."
         }
       },
       "widget": {
-        "title": "Product card",
+        "title": "Catalog preview",
         "productName": "Yellow headphones",
         "price": "$49",
         "stock": "In stock",
         "cta": "Add to cart",
-        "synced": "Synced to catalog",
+        "synced": "Synced",
         "orderTitle": "Order summary",
-        "orderRef": "Order #4821",
-        "orderCount": "3 items",
+        "orderRef": "#4821",
+        "orderCount": "2 items",
         "orderTotalLabel": "Total",
-        "orderTotal": "$247",
+        "orderTotal": "$198",
         "orderCta": "Confirm order",
         "orderLines": [
           {
@@ -3215,47 +3216,10 @@
             "name": "Pulse Smart Watch",
             "price": "$149",
             "qty": "1 pc"
-          },
-          {
-            "name": "Nova Mini Speaker",
-            "price": "$49",
-            "qty": "1 pc"
           }
         ]
       },
       "note": "Without sync, a plain card or buttons are used instead."
-    },
-    "sharedContacts": {
-      "eyebrow": "Contact cards",
-      "title": "Stop typing the number. A shared card becomes a contact in the panel.",
-      "subtitle": "When a customer shares a contact card — or several at once — Omnider reads the card and adds the name, phone and email to Contacts.",
-      "items": [
-        "One card or a batch: if “3 contacts” were shared, each one is its own card.",
-        "Name, phone and email are taken from the card and saved to your contacts.",
-        "Tap the card: if you already have a chat, it opens. Otherwise the contact card opens."
-      ],
-      "demo": {
-        "chatTitle": "Maya Rivera · WhatsApp Personal",
-        "customer": "My accountant’s number — could you send the invoice to them too?",
-        "contactName": "Alex Morgan",
-        "contactPhone": "+1 5•• ••• 12 34",
-        "contactEmail": "alex@example.com",
-        "badge": "Shared contact",
-        "multiLabel": "2 contacts",
-        "multi": [
-          "Sara Lee",
-          "James Cole"
-        ],
-        "listTitle": "Contacts",
-        "newBadge": "New",
-        "channel": "WhatsApp Personal",
-        "fields": {
-          "name": "Name",
-          "phone": "Phone",
-          "email": "Email",
-          "channel": "Channel"
-        }
-      }
     },
     "session": {
       "eyebrow": "Session status",
@@ -3283,6 +3247,298 @@
         "rescan": "Reconnect"
       },
       "riskNote": "WhatsApp Personal is session-based, not the official Business API. For critical work, prefer WhatsApp Business API."
+    },
+    "aiAutomation": {
+      "eyebrow": "Artificial intelligence",
+      "title": "Pick an Omnider AI model for your Personal line",
+      "subtitle": "Activate one of six Omnider AI models as the primary reply engine. With persona, media, and tags, answers stay in your brand voice on WhatsApp Personal sessions.",
+      "catalogTitle": "Omnider AI model catalog",
+      "catalogBadge": "Persona • Media • Tags",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Automatic language detection",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Default",
+          "description": "A fast, reliable default for daily support, automatic AI replies, and chatflow steps."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Sales & FAQ",
+          "description": "A high-quality chat model for natural sales conversations, product questions, and FAQ answers."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Live support",
+          "description": "Optimized for quick, natural chats with strong instruction following in live support and chatflow steps."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Multi-step",
+          "description": "An advanced model for complex questions, multi-step chatflow scenarios, and reliable instruction following."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Booking & Pro",
+          "description": "A high-quality model for professional support, detailed explanations, bookings, and product advice."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "Highest",
+          "description": "The flagship model for hard multi-step conversations, premium experiences, and maximum answer accuracy."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Automation",
+      "title": "Build Personal WhatsApp workflows in plain language — no code",
+      "subtitle": "See in three clear steps what the bot understands when a customer writes, what it checks next, and when it hands off to your team.",
+      "modesLabel": "Chatflow scenario",
+      "steps": {
+        "one": {
+          "label": "Step 1 • Customer messages",
+          "badge": "Trigger"
+        },
+        "two": {
+          "label": "Step 2 • System checks",
+          "badge": "Auto lookup"
+        },
+        "three": {
+          "label": "Step 3 • Reply or hand off",
+          "badge": "Buttons + team"
+        }
+      },
+      "preview": {
+        "label": "What the customer sees",
+        "live": "Live preview",
+        "time": "14:22",
+        "response": "Avg. reply: 0.8 sec",
+        "active": "24/7 active"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "Ecommerce & Orders",
+          "one": {
+            "title": "Order or shipping keywords are caught",
+            "body": "When the message includes “order, shipping, return”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls shipping status from your store",
+            "body": "Validates the order number and fetches live delivery data from your ecommerce/CRM system."
+          },
+          "three": {
+            "title": "Sends a button reply, or connects an agent",
+            "body": "Shares the tracking link and a Return Request button; if unresolved, routes to Support."
+          },
+          "sim": {
+            "user": "Where is my order #4829?",
+            "bot": "Order #4829 is out for delivery — estimated before 17:00 today.",
+            "btn1": "Tracking link",
+            "btn2": "Start a return"
+          }
+        },
+        "booking": {
+          "tab": "Booking & Clinic",
+          "one": {
+            "title": "Appointment intent is detected",
+            "body": "When the customer writes “appointment, visit, time”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks open slots on your calendar",
+            "body": "Connects to your clinic or team calendar and lists available windows for that day."
+          },
+          "three": {
+            "title": "Confirms the booking and sets a reminder",
+            "body": "Saves the chosen time, sends confirmation, and reminds automatically 1 hour before."
+          },
+          "sim": {
+            "user": "Can I book something for tomorrow afternoon?",
+            "bot": "Available slots for tomorrow (Nov 27) are below. Pick one:",
+            "btn1": "14:00 — Available",
+            "btn2": "15:30 — Available"
+          }
+        },
+        "lead": {
+          "tab": "Ads & Leads",
+          "one": {
+            "title": "The first ad-driven message is captured",
+            "body": "Recognizes which Instagram or Facebook ad brought the customer into the chat."
+          },
+          "two": {
+            "title": "AI recommends the right product",
+            "body": "Asks about team size and budget, then matches the best package from your catalog."
+          },
+          "three": {
+            "title": "Saves the lead and hands off to Sales",
+            "body": "Writes the conversation summary into CRM and connects the hot lead to a sales agent."
+          },
+          "sim": {
+            "user": "I’m writing from the Instagram ad — can I get a quote for a 20-person office?",
+            "bot": "For a 20-person office we recommend Barista Pro X2. Want me to send the quote?",
+            "btn1": "Send quote",
+            "btn2": "Talk to sales"
+          }
+        },
+        "education": {
+          "tab": "Education & Courses",
+          "one": {
+            "title": "Course or enrollment intent is caught",
+            "body": "When a student writes “course, enroll, seats, tuition”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls program and seat availability",
+            "body": "Fetches open terms, fees, and remaining seats from your education management system."
+          },
+          "three": {
+            "title": "Offers enrollment options or an advisor",
+            "body": "Lists matching programs with buttons; routes payment or special questions to enrollment staff."
+          },
+          "sim": {
+            "user": "I’d like to enroll in English B1 — any seats left?",
+            "bot": "4 seats left in the B1 evening group. Starts Dec 2. How would you like to continue?",
+            "btn1": "Open enrollment form",
+            "btn2": "Talk to an advisor"
+          }
+        },
+        "travel": {
+          "tab": "Travel & Tours",
+          "one": {
+            "title": "Tour or booking request is detected",
+            "body": "When a guest writes “tour, flight, hotel, reservation”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks availability and pricing",
+            "body": "Validates dates, party size, and inventory in your tour operator or booking software."
+          },
+          "three": {
+            "title": "Presents options and starts the booking",
+            "body": "Shows matching packages with buttons; hands deposits or special requests to Operations."
+          },
+          "sim": {
+            "user": "Any spots left for 2 on the Dec 15–18 Cappadocia tour?",
+            "bot": "2 seats open for Dec 15–18. Standard package is $280 per person. Shall we continue?",
+            "btn1": "Start reservation",
+            "btn2": "Other dates"
+          }
+        },
+        "restaurant": {
+          "tab": "Restaurant & Menu",
+          "one": {
+            "title": "Order or table request is caught",
+            "body": "When a guest writes “menu, order, table, reservation”, the restaurant flow starts."
+          },
+          "two": {
+            "title": "Checks the menu and availability",
+            "body": "Pulls the live menu, stock, and open table times from your POS or reservation system."
+          },
+          "three": {
+            "title": "Takes the order or confirms the table",
+            "body": "Saves the chosen items or time; routes special requests or complaints to the floor team."
+          },
+          "sim": {
+            "user": "Can we reserve a table for 4 at 20:00 tonight?",
+            "bot": "A table for 4 is available at 20:00. Choose garden or indoor seating:",
+            "btn1": "Garden table",
+            "btn2": "Indoor table"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "Session & conversion rates",
+      "title": "See reply and conversion rates on your Personal line",
+      "subtitle": "Track first-reply rate, AI resolve share, catalog taps, and booking/order conversion as percentages on WhatsApp Personal.",
+      "kpis": {
+        "reply": {
+          "label": "First-reply rate",
+          "value": "94.2%",
+          "badge": "+6.1%",
+          "sub": "Chats answered within 30 seconds"
+        },
+        "resolve": {
+          "label": "AI resolve rate",
+          "value": "71.8%",
+          "badge": "Autonomous",
+          "sub": "Conversations closed without handoff"
+        },
+        "catalog": {
+          "label": "Catalog tap rate",
+          "value": "46.5%",
+          "badge": "+9.3%",
+          "sub": "Customers who tapped a product card"
+        },
+        "uptime": {
+          "label": "Session uptime",
+          "value": "99.1%",
+          "badge": "Stable",
+          "sub": "Connected time over the period"
+        }
+      },
+      "funnel": {
+        "title": "Chat-to-conversion rate funnel",
+        "subtitle": "Intent and conversion steps inside a Personal session",
+        "badge": "Rate report",
+        "aovLabel": "Avg. time to convert",
+        "aovValue": "4m 12s",
+        "steps": {
+          "sessions": {
+            "label": "1. Incoming chats",
+            "value": "3,240 (100%)"
+          },
+          "replied": {
+            "label": "2. Replied under 30s",
+            "value": "3,052 (94.2%)"
+          },
+          "intent": {
+            "label": "3. Intent clear (catalog / booking)",
+            "value": "2,171 (67.0%)"
+          },
+          "converted": {
+            "label": "4. Order or booking completed",
+            "value": "1,328 (41.0%)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Source rate report",
+        "subtitle": "Which entry path converts at a higher rate?",
+        "columns": {
+          "source": "Entry source",
+          "reply": "Reply",
+          "intent": "Intent",
+          "convert": "Convert"
+        },
+        "rows": {
+          "qr": {
+            "name": "QR & store code",
+            "desc": "Counter / business card",
+            "reply": "96.4%",
+            "intent": "74.2%",
+            "convert": "49.8%"
+          },
+          "organic": {
+            "name": "Organic DM",
+            "desc": "Direct line messages",
+            "reply": "93.1%",
+            "intent": "61.5%",
+            "convert": "38.4%"
+          },
+          "catalog": {
+            "name": "Catalog share",
+            "desc": "Product / order card",
+            "reply": "95.0%",
+            "intent": "82.6%",
+            "convert": "44.1%"
+          },
+          "contact": {
+            "name": "Shared contact",
+            "desc": "Card → new chat",
+            "reply": "88.7%",
+            "intent": "52.3%",
+            "convert": "29.6%"
+          }
+        }
+      }
     },
     "try": {
       "eyebrow": "Live demo • 24/7 active",

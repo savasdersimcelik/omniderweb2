@@ -1,0 +1,494 @@
+/* Personal-only AI + Chatflow styles (independent from business wa-* rules) */
+
+.wap-ai,
+.wap-chatflow {
+  background: transparent;
+}
+
+.wap-ai__header {
+  display: grid;
+  align-items: end;
+  gap: 1.25rem 3.5rem;
+  margin-bottom: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.wap-ai__header .heading-section {
+  max-width: 20ch;
+}
+
+.wap-ai__header .text-body {
+  max-width: 47ch;
+}
+
+.wap-ai__catalog {
+  padding: clamp(0.85rem, 2.5vw, 1.85rem);
+  border: 1px solid #c9dcce;
+  border-radius: clamp(1.3rem, 2.8vw, 2.15rem);
+  background:
+    radial-gradient(ellipse at 100% 0%, #d1ead9, transparent 55%),
+    linear-gradient(145deg, #f8fbf6, #eaf3eb);
+  box-shadow: 0 24px 48px -40px rgb(17 56 37 / 0.58);
+}
+
+.wap-ai__catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.2rem;
+  padding: 0.15rem 0.25rem clamp(0.9rem, 2vw, 1.25rem);
+  color: #193a2b;
+}
+
+.wap-ai__catalog-header h3 {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.wap-ai__catalog-header p {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #345e48;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.wap-ai__catalog-header svg {
+  flex: none;
+}
+
+.wap-ai__models {
+  display: grid;
+  gap: clamp(0.5rem, 1.25vw, 0.85rem);
+}
+
+.wap-ai__model {
+  min-width: 0;
+  padding: clamp(0.9rem, 2vw, 1.4rem);
+  border: 1px solid #d6e3d8;
+  border-radius: clamp(0.85rem, 1.6vw, 1.2rem);
+  background: #fbfdfa;
+  box-shadow: 0 8px 18px -17px rgb(17 56 37 / 0.42);
+}
+
+.wap-ai__model[data-model="assist"] {
+  border-color: #9ec7aa;
+  background: linear-gradient(145deg, #f6fcf5, #e3f2e6);
+}
+
+.wap-ai__model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.wap-ai__model-header h4 {
+  color: #153627;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.wap-ai__model-tag {
+  margin-top: 0.3rem;
+  color: #38684f;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.wap-ai__model-icon {
+  display: grid;
+  width: clamp(2.4rem, 4vw, 3rem);
+  flex: none;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid #cee2d2;
+  border-radius: 0.8rem;
+  background: #eaf4eb;
+  color: #275c42;
+}
+
+.wap-ai__model[data-model="assist"] .wap-ai__model-icon {
+  border-color: #22533b;
+  background: #22533b;
+  color: #dff8e3;
+}
+
+.wap-ai__model-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke-width: 1.75;
+}
+
+.wap-ai__model-description {
+  margin-top: 0.85rem;
+  color: #43594d;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+@media (min-width: 600px) {
+  .wap-ai__models {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .wap-ai__header {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    justify-items: start;
+  }
+
+  .wap-ai__models {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.wap-chatflow__stack {
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .wap-chatflow__stack {
+    gap: 2.5rem;
+  }
+}
+
+.wap-chatflow__intro {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wap-chatflow__modes {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.wap-chatflow__mode {
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--color-line) 88%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-surface-subtle) 75%, white);
+  padding: 0.55rem 1rem;
+  color: var(--color-ink-subtle);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.wap-chatflow__mode[hidden] {
+  display: none !important;
+}
+
+.wap-chatflow__modes.is-measuring .wap-chatflow__mode[hidden] {
+  display: inline-flex !important;
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.wap-chatflow__mode.is-on {
+  border-color: var(--wa-deep, #005130);
+  background: var(--wa-deep, #005130);
+  color: #fff;
+  box-shadow: 0 10px 22px -14px color-mix(in srgb, var(--wa-deep, #005130) 75%, transparent);
+}
+
+.wap-chatflow__layout {
+  display: grid;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .wap-chatflow__layout {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 1.5rem;
+  }
+}
+
+.wap-chatflow__steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.wap-chatflow__step-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.wap-chatflow__arrow {
+  display: grid;
+  place-items: center;
+  padding-block: 0.15rem;
+  color: var(--wa-deep, #005130);
+}
+
+.wap-chatflow__arrow svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.wap-chatflow__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--color-line) 88%, transparent);
+  border-radius: 0.95rem;
+  background: #fff;
+  box-shadow: 0 14px 32px -28px rgb(15 23 42 / 0.35);
+  padding: 1.1rem 1.15rem;
+}
+
+.wap-chatflow__step.is-active {
+  border-color: var(--wa-deep, #005130);
+  border-width: 2px;
+}
+
+.wap-chatflow__step-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--wa-green, #25d366) 14%, white);
+  color: var(--wa-deep, #005130);
+}
+
+.wap-chatflow__step-icon.is-active {
+  background: var(--wa-deep, #005130);
+  color: #fff;
+}
+
+.wap-chatflow__step-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.wap-chatflow__step-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.wap-chatflow__step-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.wap-chatflow__step-meta > span:first-child {
+  color: var(--wa-deep, #005130);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.wap-chatflow__step-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.wap-chatflow__step-badge.is-one {
+  background: color-mix(in srgb, var(--color-line) 45%, white);
+  color: var(--color-ink-muted);
+}
+
+.wap-chatflow__step-badge.is-two {
+  background: color-mix(in srgb, var(--wa-green, #25d366) 14%, white);
+  color: var(--wa-deep, #005130);
+}
+
+.wap-chatflow__step-badge.is-three {
+  background: color-mix(in srgb, #16a34a 16%, white);
+  color: #166534;
+}
+
+.wap-chatflow__step-body h3 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.wap-chatflow__step-body p {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.wap-chatflow__preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+  border: 1px solid #3f4942;
+  border-radius: 1rem;
+  background: #101411;
+  color: #e0e4de;
+  box-shadow: 0 24px 48px -34px rgb(2 6 23 / 0.75);
+  padding: 1.15rem 1.2rem;
+}
+
+.wap-chatflow__preview-head,
+.wap-chatflow__preview-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.wap-chatflow__preview-head {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #3f4942;
+}
+
+.wap-chatflow__preview-head > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #e0e4de;
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.wap-chatflow__preview-head i {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #16a34a;
+  box-shadow: 0 0 0 4px color-mix(in srgb, #16a34a 22%, transparent);
+}
+
+.wap-chatflow__live {
+  border-radius: 999px;
+  background: #272b27;
+  color: #86d8a6;
+  padding: 0.2rem 0.55rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.wap-chatflow__chat {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7rem;
+  justify-content: flex-end;
+  border: 1px solid #3f4942;
+  border-radius: 0.9rem;
+  background: #efeae2;
+  padding: 0.9rem;
+}
+
+.wap-chatflow__bubble {
+  max-width: 92%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 0.5px rgb(15 23 42 / 0.08);
+}
+
+.wap-chatflow__bubble.is-out {
+  align-self: flex-end;
+  background: #d9fdd3;
+  padding: 0.75rem;
+}
+
+.wap-chatflow__bubble.is-in {
+  align-self: flex-start;
+  border: 1px solid color-mix(in srgb, var(--color-line) 70%, transparent);
+  background: #fff;
+}
+
+.wap-chatflow__bubble-copy {
+  padding: 0.75rem;
+}
+
+.wap-chatflow__bubble p {
+  margin: 0;
+  color: #181d19;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.wap-chatflow__bubble time {
+  display: block;
+  margin-top: 0.35rem;
+  color: #3f4942;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+  text-align: right;
+}
+
+.wap-chatflow__actions {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid color-mix(in srgb, var(--color-line) 70%, transparent);
+}
+
+.wap-chatflow__actions span {
+  padding: 0.65rem 0.75rem;
+  color: #006b53;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-align: center;
+}
+
+.wap-chatflow__actions span + span {
+  border-top: 1px solid color-mix(in srgb, var(--color-line) 70%, transparent);
+}
+
+.wap-chatflow__preview-foot {
+  padding-top: 0.75rem;
+  border-top: 1px solid #3f4942;
+  color: #bec9bf;
+  font-size: 0.82rem;
+}
+
+.wap-chatflow__preview-foot span:last-child {
+  color: #86d8a6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+

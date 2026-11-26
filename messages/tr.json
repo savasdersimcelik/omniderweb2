@@ -3176,34 +3176,35 @@
     },
     "catalog": {
       "eyebrow": "Ürün kataloğu",
-      "title": "WhatsApp ürün kartını sohbete gönderin",
-      "subtitle": "Omnider ürünlerinizi hesabın WhatsApp ürün kataloğuyla senkronlayın. Tek ürün native kart; birden fazla ürün sipariş kartı olarak gider.",
+      "title": "Katalogu sohbete gönderin",
+      "subtitle": "Omnider ürünleri WhatsApp kataloğuyla senkronlanır. Tek ürün native kart, birden fazlası sipariş özeti olur.",
+      "bridge": "veya çoklu sipariş",
       "items": {
         "sync": {
           "title": "Katalog senkronu",
-          "body": "Omnider ürünleri hesabın yerel kataloğuna yazılır veya hesaptan içeri alınır."
+          "body": "Ürünler hesaba yazılır veya hesaptan içeri alınır."
         },
         "product": {
           "title": "Tek ürün kartı",
-          "body": "Sohbette görsel, fiyat ve başlık native ürün kartında açılır."
+          "body": "Görsel, fiyat ve başlık native kartta açılır."
         },
         "order": {
-          "title": "Çoklu ürün / sipariş",
-          "body": "Birden fazla ürün seçildiğinde sipariş kartı olarak gider."
+          "title": "Çoklu sipariş",
+          "body": "Seçilen ürünler tek sipariş özeti olarak gider."
         }
       },
       "widget": {
-        "title": "Ürün kartı",
+        "title": "Katalog önizleme",
         "productName": "Sarı kulaklık",
         "price": "1.249 TL",
         "stock": "Stokta",
         "cta": "Sepete ekle",
-        "synced": "Katalogda senkron",
+        "synced": "Senkron",
         "orderTitle": "Sipariş özeti",
-        "orderRef": "Sipariş #4821",
-        "orderCount": "3 ürün",
+        "orderRef": "#4821",
+        "orderCount": "2 ürün",
         "orderTotalLabel": "Toplam",
-        "orderTotal": "4.589 TL",
+        "orderTotal": "3.699 TL",
         "orderCta": "Siparişi onayla",
         "orderLines": [
           {
@@ -3215,47 +3216,10 @@
             "name": "Pulse Akıllı Saat",
             "price": "2.450 TL",
             "qty": "1 adet"
-          },
-          {
-            "name": "Nova Mini Hoparlör",
-            "price": "890 TL",
-            "qty": "1 adet"
           }
         ]
       },
       "note": "Senkron yoksa düz kart veya butonla gönderilir."
-    },
-    "sharedContacts": {
-      "eyebrow": "Kişi kartları",
-      "title": "Numarayı yazıp durmayın. Paylaşılan kart, panelde kişi olur.",
-      "subtitle": "Müşteri WhatsApp’tan bir kişi kartı ya da birkaç kart birden paylaştığında Omnider kartı okur; adı, telefonu ve e-postasıyla Kişiler’e ekler.",
-      "items": [
-        "Tek kart da, toplu kart da gelir: “3 kişi” paylaşıldıysa üçü de ayrı kart.",
-        "Ad, telefon ve e-posta karttan alınır, rehberinize kaydedilir.",
-        "Karta dokunun: sohbet varsa açılır, yoksa kişi kartı açılır."
-      ],
-      "demo": {
-        "chatTitle": "Ayşe Yılmaz · WhatsApp Personal",
-        "customer": "Muhasebecimin numarası, faturayı ona da atar mısınız?",
-        "contactName": "Mehmet Kaya",
-        "contactPhone": "+90 5•• ••• 12 34",
-        "contactEmail": "mehmet@ornek.com",
-        "badge": "Paylaşılan kişi",
-        "multiLabel": "2 kişi",
-        "multi": [
-          "Elif Demir",
-          "Can Öz"
-        ],
-        "listTitle": "Kişiler",
-        "newBadge": "Yeni",
-        "channel": "WhatsApp Personal",
-        "fields": {
-          "name": "Ad",
-          "phone": "Telefon",
-          "email": "E-posta",
-          "channel": "Kanal"
-        }
-      }
     },
     "session": {
       "eyebrow": "Oturum durumu",
@@ -3283,6 +3247,298 @@
         "rescan": "Yeniden bağlan"
       },
       "riskNote": "WhatsApp Personal oturum tabanlıdır; resmi Business API değildir. Kritik işler için WhatsApp Business API önerilir."
+    },
+    "aiAutomation": {
+      "eyebrow": "Yapay Zeka",
+      "title": "Personal hattınız için Omnider AI modelini seçin",
+      "subtitle": "6 Omnider AI modelinden birini birincil yanıt motoru yapın. Persona, medya ve etiketlerle kişisel WhatsApp oturumunuzda marka dilinize uygun yanıtlar üretir.",
+      "catalogTitle": "Omnider AI Model Kataloğu",
+      "catalogBadge": "Persona • Medya • Etiket",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Otomatik Dil Algılama",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Varsayılan",
+          "description": "Günlük müşteri desteği, otomatik AI yanıtları ve chatflow adımları için güçlü, hızlı varsayılan model."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Satış & SSS",
+          "description": "Doğal müşteri konuşmaları, satış görüşmeleri, ürün soruları ve SSS yanıtları için yüksek kaliteli sohbet modeli."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Canlı Destek",
+          "description": "Hızlı ve doğal konuşmalar için optimize. Canlı destek ve chatflow adımlarında güçlü talimat takibi."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Çok Adımlı",
+          "description": "Karmaşık sorular, çok adımlı chatflow senaryoları ve güvenilir talimat takibi için gelişmiş model."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Randevu & Pro",
+          "description": "Profesyonel destek, detaylı açıklamalar, randevu ve ürün danışmanlığı için yüksek kaliteli model."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "En Yüksek",
+          "description": "Zorlu çok adımlı konuşmalar, premium deneyim ve en yüksek yanıt doğruluğu için amiral gemisi model."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Otomasyon Akışı",
+      "title": "Personal WhatsApp’ta kod yazmadan iş akışı kurun",
+      "subtitle": "Müşteri yazdığında botun ne anlayacağını, hangi bilgiyi kontrol edeceğini ve ne zaman ekibinize devredeceğini 3 net adımda görün.",
+      "modesLabel": "Chatflow senaryosu",
+      "steps": {
+        "one": {
+          "label": "1. Adım • Müşteri Mesaj Atar",
+          "badge": "Tetikleyici"
+        },
+        "two": {
+          "label": "2. Adım • Sistem Kontrol Eder",
+          "badge": "Otomatik Sorgu"
+        },
+        "three": {
+          "label": "3. Adım • Yanıtlar veya Devreder",
+          "badge": "Buton + Ekip Devri"
+        }
+      },
+      "preview": {
+        "label": "Müşterinin Gördüğü Ekran",
+        "live": "Canlı Önizleme",
+        "time": "14:22",
+        "response": "Ortalama yanıt: 0.8 sn",
+        "active": "7/24 Aktif"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "E-Ticaret & Sipariş",
+          "one": {
+            "title": "Sipariş veya kargo kelimesi yakalanır",
+            "body": "Müşteri mesajında “sipariş, kargo, iade” geçtiğinde akış otomatik olarak başlar."
+          },
+          "two": {
+            "title": "Kargo durumunu mağazanızdan çeker",
+            "body": "Sipariş numarasını doğrular ve e-ticaret/CRM sisteminizden güncel teslimat bilgisini alır."
+          },
+          "three": {
+            "title": "Butonlu yanıt gönderir, gerekirse temsilciye bağlar",
+            "body": "Müşteriye kargo linkini ve “İade Talebi” butonunu iletir; çözülmezse Destek ekibine aktarır."
+          },
+          "sim": {
+            "user": "#4829 numaralı siparişim nerede?",
+            "bot": "Siparişiniz (#4829) dağıtıma çıktı, tahmini teslimat bugün 17:00 öncesi.",
+            "btn1": "Kargo Takip Linki",
+            "btn2": "İade Talebi Oluştur"
+          }
+        },
+        "booking": {
+          "tab": "Randevu & Klinik",
+          "one": {
+            "title": "Randevu talebi otomatik algılanır",
+            "body": "Müşteri “randevu, muayene, saat” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Takvimden boş saatleri kontrol eder",
+            "body": "Klinik veya ekip takviminize bağlanarak o günkü uygun saat dilimlerini listeler."
+          },
+          "three": {
+            "title": "Randevuyu onaylar ve hatırlatma kurar",
+            "body": "Seçilen saati kaydeder, onay mesajı atar ve randevudan 1 saat önce otomatik hatırlatır."
+          },
+          "sim": {
+            "user": "Yarın öğleden sonra için randevu alabilir miyim?",
+            "bot": "Yarın (27 Kasım) için uygun saatlerimiz aşağıdadır. Seçiminizi yapabilirsiniz:",
+            "btn1": "14:00 — Uygun",
+            "btn2": "15:30 — Uygun"
+          }
+        },
+        "lead": {
+          "tab": "Reklam & Lead",
+          "one": {
+            "title": "Reklamdan gelen ilk mesaj yakalanır",
+            "body": "Instagram veya Facebook reklamından yazan müşterinin hangi ilandan geldiğini tanır."
+          },
+          "two": {
+            "title": "AI ile ihtiyacına uygun ürünü önerir",
+            "body": "Müşterinin ekip büyüklüğünü ve bütçesini sorar, katalogdan en doğru paketi eşleştirir."
+          },
+          "three": {
+            "title": "Lead bilgisini kaydedip Satış ekibine devreder",
+            "body": "Tüm görüşme özetini CRM’e işler ve sıcak müşteriyi anında Satış temsilcisine bağlar."
+          },
+          "sim": {
+            "user": "Instagram ilanından yazıyorum, 20 kişilik ofis için teklif alabilir miyim?",
+            "bot": "20 kişilik ofisiniz için Barista Pro X2 modelimizi öneririz. Teklif dosyasını ileteyim mi?",
+            "btn1": "Teklifi Gönder",
+            "btn2": "Satış Uzmanına Bağlan"
+          }
+        },
+        "education": {
+          "tab": "Eğitim & Kurs",
+          "one": {
+            "title": "Kurs veya kayıt niyeti yakalanır",
+            "body": "Öğrenci “kurs, kayıt, kontenjan, ücret” yazdığında akış otomatik başlar."
+          },
+          "two": {
+            "title": "Program ve kontenjan bilgisini çeker",
+            "body": "Eğitim yönetim sisteminizden açık dönemleri, ücretleri ve kalan kontenjanı alır."
+          },
+          "three": {
+            "title": "Kayıt seçeneklerini sunar, danışmana bağlar",
+            "body": "Uygun programı butonlarla listeler; ödeme veya özel soru olursa kayıt danışmanına aktarır."
+          },
+          "sim": {
+            "user": "İngilizce B1 kursuna kayıt olmak istiyorum, kontenjan var mı?",
+            "bot": "B1 akşam grubunda 4 kontenjan kaldı. Başlangıç: 2 Aralık. Nasıl ilerleyelim?",
+            "btn1": "Kayıt Formunu Aç",
+            "btn2": "Danışmana Bağlan"
+          }
+        },
+        "travel": {
+          "tab": "Seyahat & Tur",
+          "one": {
+            "title": "Tur veya rezervasyon talebi algılanır",
+            "body": "Misafir “tur, uçuş, otel, rezervasyon” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Müsaitlik ve fiyatı sistemden kontrol eder",
+            "body": "Tur operatörü veya rezervasyon yazılımınızdaki tarih, kişi sayısı ve müsaitliği doğrular."
+          },
+          "three": {
+            "title": "Seçenekleri sunar, rezervasyonu başlatır",
+            "body": "Uygun paketleri butonlarla gösterir; kapora veya özel istekte Operasyon ekibine bağlar."
+          },
+          "sim": {
+            "user": "15–18 Aralık Kapadokya turu için 2 kişilik yer var mı?",
+            "bot": "15–18 Aralık’ta 2 kişilik yer açık. Standart paket kişi başı ₺8.900. Devam edelim mi?",
+            "btn1": "Rezervasyonu Başlat",
+            "btn2": "Diğer Tarihler"
+          }
+        },
+        "restaurant": {
+          "tab": "Restoran & Menü",
+          "one": {
+            "title": "Sipariş veya masa talebi yakalanır",
+            "body": "Misafir “menü, sipariş, masa, rezervasyon” yazdığında restoran akışı başlar."
+          },
+          "two": {
+            "title": "Menü ve müsaitliği kontrol eder",
+            "body": "POS veya rezervasyon sisteminizden güncel menüyü, stokları ve boş masa saatlerini alır."
+          },
+          "three": {
+            "title": "Siparişi alır veya masayı onaylar",
+            "body": "Seçilen ürün veya saati kaydeder; özel istek veya şikayette salona / mutfağa aktarır."
+          },
+          "sim": {
+            "user": "Bu akşam 20:00 için 4 kişilik masa ayırtabilir miyiz?",
+            "bot": "20:00’de 4 kişilik masa müsait. Bahçe veya salon tercihinizi seçebilirsiniz:",
+            "btn1": "Bahçe Masası",
+            "btn2": "Salon Masası"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "Oturum & Dönüşüm Oranları",
+      "title": "Personal hattınızın yanıt ve dönüşüm oranlarını görün",
+      "subtitle": "İlk yanıt oranından AI çözüm payına, katalog tıklamasından randevu/sipariş dönüşümüne kadar kişisel WhatsApp performansını yüzdelerle izleyin.",
+      "kpis": {
+        "reply": {
+          "label": "İlk Yanıt Oranı",
+          "value": "%94,2",
+          "badge": "+%6,1",
+          "sub": "30 sn içinde yanıtlanan sohbet payı"
+        },
+        "resolve": {
+          "label": "AI Çözüm Oranı",
+          "value": "%71,8",
+          "badge": "Otonom",
+          "sub": "Ekibe düşmeden kapanan konuşmalar"
+        },
+        "catalog": {
+          "label": "Katalog Tıklama Oranı",
+          "value": "%46,5",
+          "badge": "+%9,3",
+          "sub": "Ürün kartına dokunan müşteri payı"
+        },
+        "uptime": {
+          "label": "Oturum Uptime",
+          "value": "%99,1",
+          "badge": "Stabil",
+          "sub": "Bağlı kalınan süre / dönem"
+        }
+      },
+      "funnel": {
+        "title": "Sohbetten Dönüşüme Oran Hunisi",
+        "subtitle": "Personal oturumdaki her talebin niyet ve dönüşüm adımları",
+        "badge": "Oran Raporu",
+        "aovLabel": "Ortalama Dönüşüm Süresi",
+        "aovValue": "4 dk 12 sn",
+        "steps": {
+          "sessions": {
+            "label": "1. Gelen sohbetler",
+            "value": "3.240 (%100)"
+          },
+          "replied": {
+            "label": "2. 30 sn altında yanıtlanan",
+            "value": "3.052 (%94,2)"
+          },
+          "intent": {
+            "label": "3. Niyet netleşen (katalog / randevu)",
+            "value": "2.171 (%67,0)"
+          },
+          "converted": {
+            "label": "4. Sipariş veya randevu tamamlanan",
+            "value": "1.328 (%41,0)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Kaynak Bazlı Oran Raporu",
+        "subtitle": "Hangi giriş yolunda dönüşüm oranı daha yüksek?",
+        "columns": {
+          "source": "Giriş kaynağı",
+          "reply": "Yanıt",
+          "intent": "Niyet",
+          "convert": "Dönüşüm"
+        },
+        "rows": {
+          "qr": {
+            "name": "QR & Mağaza kodu",
+            "desc": "Vitrin / kartvizit",
+            "reply": "%96,4",
+            "intent": "%74,2",
+            "convert": "%49,8"
+          },
+          "organic": {
+            "name": "Organik DM",
+            "desc": "Doğrudan hat mesajı",
+            "reply": "%93,1",
+            "intent": "%61,5",
+            "convert": "%38,4"
+          },
+          "catalog": {
+            "name": "Katalog paylaşımı",
+            "desc": "Ürün kartı / sipariş",
+            "reply": "%95,0",
+            "intent": "%82,6",
+            "convert": "%44,1"
+          },
+          "contact": {
+            "name": "Paylaşılan kişi",
+            "desc": "Kart → yeni sohbet",
+            "reply": "%88,7",
+            "intent": "%52,3",
+            "convert": "%29,6"
+          }
+        }
+      }
     },
     "try": {
       "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",

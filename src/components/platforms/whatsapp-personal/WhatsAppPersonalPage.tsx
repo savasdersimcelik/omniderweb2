@@ -1,9 +1,12 @@
 import "./whatsapp-personal-colors.css";
+import "./whatsapp-personal-ai-chatflow.css";
 
+import { AiAutomationSection } from "./AiAutomationSection";
+import { AnalyticsSection } from "./AnalyticsSection";
 import { CatalogSection } from "./CatalogSection";
+import { ChatflowSection } from "./ChatflowSection";
 import { ConnectSection } from "./ConnectSection";
 import { RichMessagesSection } from "./RichMessagesSection";
-import { SharedContactsSection } from "./SharedContactsSection";
 import { TrySection } from "./TrySection";
 import { WhatsAppInboxSection } from "../whatsapp-business/WhatsAppInboxSection";
 import { WhatsAppPersonalHero } from "./WhatsAppPersonalHero";
@@ -18,8 +21,10 @@ export async function WhatsAppPersonalPage() {
       />
       <ConnectSection />
       <RichMessagesSection />
+      <AiAutomationSection />
+      <ChatflowSection />
       <CatalogSection />
-      <SharedContactsSection />
+      <AnalyticsSection />
       <TrySection />
     </div>
   );
