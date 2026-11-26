@@ -3130,29 +3130,6 @@
       "riskNote": "Note: WhatsApp Personal is not an official Meta / WhatsApp Business API connection. It is session-based; the link can drop and may carry account risk. For critical work, use the official WhatsApp Business API.",
       "demoNote": "The account and numbers in the preview are examples."
     },
-    "stats": {
-      "eyebrow": "Performance",
-      "title": "Replies in seconds",
-      "body": "A fast reply keeps the lead and the order in the chat.",
-      "reply": {
-        "value": "12 sec",
-        "label": "Average reply time. A fast response when the customer writes."
-      },
-      "lead": {
-        "kicker": "Lead conversion",
-        "value": "58%",
-        "label": "Chats become qualified leads the team sees in the panel."
-      },
-      "order": {
-        "kicker": "Order conversion",
-        "value": "44%",
-        "label": "The conversation turns into an order."
-      },
-      "always": {
-        "kicker": "Replies",
-        "value": "24/7"
-      }
-    },
     "richMessages": {
       "eyebrow": "More than plain text",
       "title": "Send polls, buttons, and locations",
@@ -3318,12 +3295,6 @@
         "rescan": "Reconnect"
       },
       "riskNote": "WhatsApp Personal is session-based, not the official Business API. For critical work, prefer WhatsApp Business API."
-    },
-    "midCta": {
-      "line1": "Customers write on WhatsApp.",
-      "strong": "Omnider AI replies.",
-      "demo": "We'll call you",
-      "start": "Start for free"
     },
     "try": {
       "eyebrow": "Live test",
