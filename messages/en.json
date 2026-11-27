@@ -5024,16 +5024,9 @@
       "description": "Connect your bot or personal Telegram account, collect incoming messages in a shared inbox, and reply instantly with AI and chatbots.",
       "ctaPrimary": "We'll call you",
       "ctaSecondary": "Start for free",
-      "badgesLabel": "Telegram connection status",
-      "badges": {
-        "bot": {
-          "title": "Bot API",
-          "body": "Official bot connected"
-        },
-        "personal": {
-          "title": "Personal account",
-          "body": "Userbot support"
-        }
+      "provider": {
+        "title": "Telegram",
+        "body": "Official connection"
       }
     },
     "inbox": {
@@ -5859,16 +5852,9 @@
       "description": "Connect your Official Account bot, collect messages in a shared inbox, and reply with Flex cards and buttons.",
       "ctaPrimary": "We'll call you",
       "ctaSecondary": "Start for free",
-      "badgesLabel": "LINE connection status",
-      "badges": {
-        "official": {
-          "title": "Official Account",
-          "body": "Official channel connected"
-        },
-        "bot": {
-          "title": "Bot channel",
-          "body": "Messaging API active"
-        }
+      "provider": {
+        "title": "LINE",
+        "body": "Official connection"
       }
     },
     "inbox": {

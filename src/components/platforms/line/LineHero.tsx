@@ -1,6 +1,5 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import { BadgeCheckIcon, BotIcon } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { UserTrust } from "@/components/trust";
 
@@ -67,23 +66,21 @@ export async function LineHero() {
             {t("hero.description")}
           </p>
 
-          <div className="hero-trust home-hero__trust mt-5 max-w-none flex-row flex-wrap items-center justify-center gap-x-4 gap-y-3 lg:mt-8 lg:origin-left lg:scale-105 lg:justify-start">
-            <ul className="ln-hero__badges" aria-label={t("hero.badgesLabel")}>
-              <li className="ln-hero__badge">
-                <BadgeCheckIcon aria-hidden />
-                <span>
-                  <strong>{t("hero.badges.official.title")}</strong>
-                  <span>{t("hero.badges.official.body")}</span>
-                </span>
-              </li>
-              <li className="ln-hero__badge">
-                <BotIcon aria-hidden />
-                <span>
-                  <strong>{t("hero.badges.bot.title")}</strong>
-                  <span>{t("hero.badges.bot.body")}</span>
-                </span>
-              </li>
-            </ul>
+          <div className="hero-trust home-hero__trust mt-5 max-w-none flex-row flex-nowrap items-center justify-center gap-x-4 lg:mt-8 lg:origin-left lg:scale-105 lg:justify-start">
+            <p className="meta-tech-provider ln-hero__provider">
+              <Image
+                src="/icons/platforms/line.png"
+                alt=""
+                width={30}
+                height={30}
+                className="meta-tech-provider__mark object-contain"
+                unoptimized
+              />
+              <span>
+                <strong>{t("hero.provider.title")}</strong>
+                <span>{t("hero.provider.body")}</span>
+              </span>
+            </p>
             <UserTrust
               rating={tTrust("rating")}
               before={tTrust("before")}

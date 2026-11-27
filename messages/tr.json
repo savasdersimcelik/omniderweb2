@@ -5024,16 +5024,9 @@
       "description": "Botunuzu veya kişisel Telegram hesabınızı bağlayın; gelen mesajları ortak gelen kutusunda toplayın, yapay zeka ve chatbot ile anında yanıtlayın.",
       "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "Ücretsiz Başla",
-      "badgesLabel": "Telegram bağlantı durumu",
-      "badges": {
-        "bot": {
-          "title": "Bot API",
-          "body": "Resmi bot bağlandı"
-        },
-        "personal": {
-          "title": "Kişisel hesap",
-          "body": "Userbot desteği"
-        }
+      "provider": {
+        "title": "Telegram",
+        "body": "Resmi Bağlantıdır"
       }
     },
     "inbox": {
@@ -5859,16 +5852,9 @@
       "description": "Official Account bot kanalınızı bağlayın; gelen mesajları ortak gelen kutusunda toplayın, Flex kartlar ve butonlarla yanıtlayın.",
       "ctaPrimary": "Sizi arayalım",
       "ctaSecondary": "Ücretsiz Başla",
-      "badgesLabel": "LINE bağlantı durumu",
-      "badges": {
-        "official": {
-          "title": "Official Account",
-          "body": "Resmi kanal bağlandı"
-        },
-        "bot": {
-          "title": "Bot kanalı",
-          "body": "Messaging API aktif"
-        }
+      "provider": {
+        "title": "LINE",
+        "body": "Resmi Bağlantıdır"
       }
     },
     "inbox": {
