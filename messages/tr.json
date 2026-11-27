@@ -3830,6 +3830,7 @@
       "eyebrow": "Etkileşimli DM",
       "title": "Hızlı cevap, ice breaker ve ürün kartı",
       "subtitle": "Bot cevabı Instagram’ın kendi hızlı cevapları, ice breaker’ı ve ürün kartıyla gider; müşteri dokunur, seçim panele düşer ve akış bir sonraki mesaja göre devam eder.",
+      "preview": "Örnek sohbet",
       "tabs": {
         "quick": "Hızlı cevap",
         "ice": "Ice breaker",
@@ -3959,49 +3960,63 @@
       }
     },
     "adReferral": {
-      "eyebrow": "Reklamdan gelen mesajlar",
+      "eyebrow": "Click-to-Instagram",
       "title": "Bu DM hangi reklamdan geldi?",
-      "lead": "Reklamdaki “Mesaj Gönder” ile açılan Instagram sohbetinde reklamın başlığı, görseli ve linki durur.",
-      "note": "Click-to-Instagram reklamlarından gelen mesajlar reklam başlığı, görseli ve kaynak linkiyle gelir.",
-      "items": {
-        "card": {
-          "title": "Reklam kartı mesajın üstünde",
-          "body": "“Reklam” rozeti, görsel ve başlık ilk mesajın hemen üstünde."
-        },
-        "utm": {
-          "title": "UTM’li link",
-          "body": "Reklam kimliği UTM olarak eklenir; Analytics’te görürsünüz."
-        },
-        "contact": {
-          "title": "Kişi kartına işlenir",
-          "body": "Yönlendirme kaynağı otomatik dolar."
-        }
-      },
+      "lead": "Instagram reklamınızdaki “Mesaj Gönder” butonuna tıklayan müşteri, ilk DM’inde reklam kartı, ad_id ve kaynak bağlantısıyla birlikte gelen kutunuza düşer.",
+      "checks": [
+        "Sohbet başında otomatik “Reklam” bağlam kartı",
+        "Kişi kartına otomatik referral kaynağı ve CRM aktarımı",
+        "Giden linklerde UTM ve dönüşüm takibi"
+      ],
       "scene": {
         "brand": "Atölye No.4",
-        "sponsored": "Sponsorlu",
-        "send": "Mesaj Gönder",
-        "inbox": "Gelen kutusu",
-        "adBadge": "Reklam",
-        "headline": "Yaz kampanyası bu hafta",
-        "link": "omnider.com/kampanya…",
-        "bubble": "Merhaba, bu kampanya hâlâ geçerli mi?",
-        "customer": "Ayşe",
-        "referralLabel": "Yönlendirme Kaynağı",
-        "referralPrefix": "Referans",
-        "adId": "120384756"
-      },
-      "footnote": "Reklam bilgisi Meta’nın gönderdiği alanlara göre görünür."
+        "sponsored": "Sponsorlu Reklam",
+        "send": "Instagram’da Mesaj Gönder",
+        "headline": "Yaz kampanyası bu hafta — stok bitmeden DM’den sorun.",
+        "imageAlt": "Yaz kampanyası Instagram reklam görseli",
+        "referralBadge": "Reklam Yönlendirmesi",
+        "adId": "120384756",
+        "campaign": "Yaz Kampanyası",
+        "source": "Instagram Feed",
+        "bubble": "Merhaba, bu ilan üzerinden yazıyorum. Kampanya hâlâ geçerli mi?",
+        "replyRole": "Omnider AI",
+        "reply": "Evet! Bu hafta geçerli. Hangi ürünle ilgileniyorsunuz?",
+        "followUp": "Kulaklık seti. Yarın teslim mümkün mü?"
+      }
     },
     "try": {
-      "eyebrow": "Canlı deneme",
-      "title": "Instagram DM’den yazın",
-      "body": "QR kodu taratın veya butona dokunun. Omnider Instagram hesabına mesaj penceresi açılır.",
-      "cardTitle": "omnider.tech",
-      "handle": "ig.me/m/omnider.tech",
-      "cta": "Instagram’da aç",
-      "ctaTitle": "Omnider Instagram hesabına mesaj aç",
-      "imageAlt": "Omnider Instagram DM için QR kod, ig.me/m/omnider.tech"
+      "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",
+      "title": "Instagram DM’i telefondan hemen deneyin",
+      "body": "QR kodu taratın veya tek dokunuşla sohbeti başlatın. Yapay zeka fiyat, randevu ve sipariş sorularınızı yanıtlar; gerekirse ekip devralır.",
+      "cta": "Instagram’da Sohbeti Başlat",
+      "promptsLabel": "Ne test etmek istersiniz?",
+      "prefillLabel": "Hazır Test Mesajı",
+      "online": "Çevrimiçi",
+      "trust": {
+        "ai": "Anında AI yanıtı (1 sn altı)",
+        "handoff": "Tek tıkla canlı ekip devri"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Fiyat & Katalog Sor",
+          "message": "Merhaba, paketleriniz ve fiyatlarınız hakkında bilgi alabilir miyim?"
+        },
+        "booking": {
+          "tab": "Randevu Oluştur",
+          "message": "Yarın öğleden sonra için demo randevusu oluşturmak istiyorum."
+        },
+        "order": {
+          "tab": "Sipariş Sorgula",
+          "message": "#4829 numaralı siparişim ne zaman teslim edilir?"
+        }
+      },
+      "account": {
+        "title": "omnider.tech",
+        "handle": "@omnider.tech",
+        "lang": "Türkçe & İngilizce Otomatik Algılama",
+        "ctaTitle": "Omnider Instagram hesabına mesaj aç",
+        "imageAlt": "Omnider Instagram DM için QR kod, @omnider.tech"
+      }
     }
   },
   "PlatformMessenger": {

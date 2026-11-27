@@ -1,60 +1,135 @@
-import Image from "next/image";
-import { ScanLineIcon, SendIcon } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import { Container } from "@/components/layout/Container";
+"use client";
 
-export async function TrySection() {
-  const t = await getTranslations("PlatformInstagram.try");
+import { useMemo, useState } from "react";
+import Image from "next/image";
+import {
+  BotIcon,
+  HeadsetIcon,
+  QrCodeIcon,
+  SendIcon,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Container } from "@/components/layout/Container";
+import { cn } from "@/lib/utils";
+
+const ACCOUNT = {
+  url: "https://ig.me/m/omnider.tech",
+  image: "/images/platforms/qr/instagram.svg",
+} as const;
+
+const PROMPTS = ["price", "booking", "order"] as const;
+
+type PromptKey = (typeof PROMPTS)[number];
+
+export function TrySection() {
+  const t = useTranslations("PlatformInstagram.try");
+  const [prompt, setPrompt] = useState<PromptKey>("price");
+
+  const prefill = t(`prompts.${prompt}.message`);
+
+  const href = useMemo(() => {
+    const url = new URL(ACCOUNT.url);
+    url.searchParams.set("text", prefill);
+    return url.toString();
+  }, [prefill]);
 
   return (
     <section
       id="try-instagram"
-      className="ig-try border-t border-line"
+      className="closing-cta"
       aria-labelledby="ig-try-title"
     >
-      <Container className="section">
-        <div className="wa-section-aside">
-          <div className="wa-section-copy">
-            <p className="eyebrow inline-flex items-center gap-2 text-[var(--ig-purple)]">
-              <ScanLineIcon className="h-4 w-4" />
+      <div className="closing-cta__orbit" aria-hidden />
+      <Container className="section closing-cta__inner">
+        <div className="wa-biz-try">
+          <div className="wa-biz-try__copy">
+            <p className="closing-cta__eyebrow">
+              <QrCodeIcon className="size-3.5" aria-hidden />
               {t("eyebrow")}
             </p>
-            <h2 id="ig-try-title" className="heading-section mt-3">
+            <h2 id="ig-try-title" className="wa-biz-try__title">
               {t("title")}
             </h2>
-            <p className="text-body mt-4">{t("body")}</p>
+            <p className="wa-biz-try__body">{t("body")}</p>
+
+            <div className="wa-biz-try__prompts">
+              <p className="wa-biz-try__prompts-label">{t("promptsLabel")}</p>
+              <div
+                className="wa-biz-try__prompt-list"
+                role="tablist"
+                aria-label={t("promptsLabel")}
+              >
+                {PROMPTS.map((id) => (
+                  <button
+                    key={id}
+                    type="button"
+                    role="tab"
+                    aria-selected={prompt === id}
+                    className={cn(
+                      "wa-biz-try__prompt",
+                      prompt === id && "is-on",
+                    )}
+                    onClick={() => setPrompt(id)}
+                  >
+                    {t(`prompts.${id}.tab`)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="wa-biz-try__trust">
+              <div className="wa-biz-try__trust-item">
+                <BotIcon aria-hidden />
+                <span>{t("trust.ai")}</span>
+              </div>
+              <div className="wa-biz-try__trust-item">
+                <HeadsetIcon aria-hidden />
+                <span>{t("trust.handoff")}</span>
+              </div>
+            </div>
           </div>
 
-          <article className="ig-try__card justify-self-stretch lg:justify-self-end lg:w-full lg:max-w-sm">
-            <div className="px-5 pt-5">
-              <h3 className="text-lg font-semibold tracking-tight text-ink">
-                {t("cardTitle")}
-              </h3>
-              <p className="mt-1 text-sm text-ink-subtle">{t("handle")}</p>
-            </div>
-            <div className="flex flex-col items-center gap-4 px-5 pt-4 pb-5">
-              <div className="w-full max-w-[220px] rounded-lg bg-white p-3 ring-1 ring-line">
+          <div className="wa-biz-try__console">
+            <article className="wa-biz-try__card">
+              <div className="wa-biz-try__qr">
                 <Image
-                  src="/images/platforms/qr/instagram.svg"
-                  alt={t("imageAlt")}
+                  src={ACCOUNT.image}
+                  alt={t("account.imageAlt")}
                   width={174}
                   height={174}
                   className="h-auto w-full"
                   unoptimized
                 />
+                <span>{t("account.handle")}</span>
               </div>
-              <a
-                href="https://ig.me/m/omnider.tech"
-                target="_blank"
-                rel="noopener noreferrer"
-                title={t("ctaTitle")}
-                className="btn-instagram inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg px-4 text-sm font-bold"
-              >
-                <SendIcon className="h-4 w-4" />
-                {t("cta")}
-              </a>
-            </div>
-          </article>
+
+              <div className="wa-biz-try__panel">
+                <div className="wa-biz-try__panel-head">
+                  <div>
+                    <h3>{t("account.title")}</h3>
+                    <p>{t("account.lang")}</p>
+                  </div>
+                  <span className="wa-biz-try__online">{t("online")}</span>
+                </div>
+
+                <div className="wa-biz-try__prefill">
+                  <span>{t("prefillLabel")}</span>
+                  <p>{`“${prefill}”`}</p>
+                </div>
+
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={t("account.ctaTitle")}
+                  className="wa-biz-try__cta"
+                >
+                  <SendIcon className="h-4 w-4" />
+                  {t("cta")}
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
       </Container>
     </section>

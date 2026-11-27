@@ -3830,6 +3830,7 @@
       "eyebrow": "Interactive DM",
       "title": "Quick replies, ice breakers, and product cards",
       "subtitle": "Bot replies go out as Instagram’s own quick replies, ice breakers, and product cards—customers tap, the choice lands in the panel, and the next message continues the flow.",
+      "preview": "Sample chat",
       "tabs": {
         "quick": "Quick reply",
         "ice": "Ice breaker",
@@ -3959,49 +3960,63 @@
       }
     },
     "adReferral": {
-      "eyebrow": "Messages from ads",
+      "eyebrow": "Click-to-Instagram",
       "title": "Which ad started this DM?",
-      "lead": "Chats opened via Send Message keep the ad title, creative, and link.",
-      "note": "Click-to-Instagram ad messages arrive with creative, title, and source link.",
-      "items": {
-        "card": {
-          "title": "Ad card above the message",
-          "body": "Ad badge, creative, and headline sit above the first message."
-        },
-        "utm": {
-          "title": "UTM link",
-          "body": "Ad id lands as UTM for Analytics."
-        },
-        "contact": {
-          "title": "Stored on the contact",
-          "body": "Referral source fills automatically."
-        }
-      },
+      "lead": "When someone taps Send message on your Instagram ad, the first DM arrives in your inbox with the ad card, ad_id, and source link attached.",
+      "checks": [
+        "Automatic Ad context card at the start of the chat",
+        "Referral source saved to the contact and ready for CRM",
+        "UTM and conversion tracking on outbound links"
+      ],
       "scene": {
         "brand": "Atelier No.4",
-        "sponsored": "Sponsored",
-        "send": "Send message",
-        "inbox": "Inbox",
-        "adBadge": "Ad",
-        "headline": "Summer campaign this week",
-        "link": "omnider.com/campaign…",
-        "bubble": "Hi, is this campaign still on?",
-        "customer": "Maya",
-        "referralLabel": "Referral source",
-        "referralPrefix": "Referral",
-        "adId": "120384756"
-      },
-      "footnote": "Ad details appear according to the fields Meta sends."
+        "sponsored": "Sponsored ad",
+        "send": "Send Instagram message",
+        "headline": "Summer campaign this week — ask in DM before stock runs out.",
+        "imageAlt": "Summer campaign Instagram ad creative",
+        "referralBadge": "Ad referral",
+        "adId": "120384756",
+        "campaign": "Summer Campaign",
+        "source": "Instagram Feed",
+        "bubble": "Hi, I’m writing from this ad. Is the campaign still on?",
+        "replyRole": "Omnider AI",
+        "reply": "Yes — it’s live this week. Which product are you looking at?",
+        "followUp": "The headphone set. Can you deliver tomorrow?"
+      }
     },
     "try": {
-      "eyebrow": "Live test",
-      "title": "Message us on Instagram",
-      "body": "Scan the QR code or tap the button. A message window opens for the Omnider Instagram account.",
-      "cardTitle": "omnider.tech",
-      "handle": "ig.me/m/omnider.tech",
-      "cta": "Open in Instagram",
-      "ctaTitle": "Open a message to the Omnider Instagram account",
-      "imageAlt": "QR code for Omnider Instagram DM, ig.me/m/omnider.tech"
+      "eyebrow": "Live demo • 24/7 active",
+      "title": "Try Instagram DM from your phone now",
+      "body": "Scan the QR code — or start a chat in one tap. AI answers pricing, booking, and order questions; the team takes over when needed.",
+      "cta": "Start chat in Instagram",
+      "promptsLabel": "What do you want to test?",
+      "prefillLabel": "Ready test message",
+      "online": "Online",
+      "trust": {
+        "ai": "Instant AI reply (under 1 sec)",
+        "handoff": "One-tap live team handoff"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Ask pricing & catalog",
+          "message": "Hi, can I get details about your packages and pricing?"
+        },
+        "booking": {
+          "tab": "Book a demo",
+          "message": "I’d like to book a demo for tomorrow afternoon."
+        },
+        "order": {
+          "tab": "Track an order",
+          "message": "When will order #4829 be delivered?"
+        }
+      },
+      "account": {
+        "title": "omnider.tech",
+        "handle": "@omnider.tech",
+        "lang": "Turkish & English auto-detect",
+        "ctaTitle": "Open a message to the Omnider Instagram account",
+        "imageAlt": "QR code for Omnider Instagram DM, @omnider.tech"
+      }
     }
   },
   "PlatformMessenger": {

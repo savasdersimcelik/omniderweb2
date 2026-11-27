@@ -1,3 +1,5 @@
+import "./instagram-colors.css";
+
 import { AdReferralSection } from "./AdReferralSection";
 import { CommentsSection } from "./CommentsSection";
 import { InboxSection } from "./InboxSection";
@@ -8,7 +10,7 @@ import { TrySection } from "./TrySection";
 
 export async function InstagramPage() {
   return (
-    <div className="ig-page-atmosphere">
+    <div className="ig-page-atmosphere ig-page">
       <InstagramHero />
       <InboxSection />
       <InteractiveSection />
