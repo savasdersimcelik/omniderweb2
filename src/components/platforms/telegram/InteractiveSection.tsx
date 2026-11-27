@@ -1,4 +1,6 @@
+import Image from "next/image";
 import {
+  CheckIcon,
   ImagesIcon,
   ListChecksIcon,
   MessageCircleIcon,
@@ -6,38 +8,41 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
-import { cn } from "@/lib/utils";
 
-const CARD_ICONS = {
-  menus: MousePointerClickIcon,
-  polls: ListChecksIcon,
-  albums: ImagesIcon,
-} as const;
+const FEATURES = [
+  { id: "menus", icon: MousePointerClickIcon },
+  { id: "polls", icon: ListChecksIcon },
+  { id: "albums", icon: ImagesIcon },
+] as const;
 
-type Card = {
-  id: keyof typeof CARD_ICONS;
+const ALBUM_IMAGES = [
+  "/images/hero/products/aura.jpg",
+  "/images/hero/products/nova.jpg",
+  "/images/hero/products/pulse.jpg",
+] as const;
+
+type PollRow = {
   title: string;
-  desc: string;
-  points?: string[];
+  description: string;
+  picked?: boolean;
 };
 
 export async function InteractiveSection() {
   const t = await getTranslations("PlatformTelegram.interactive");
-  const cards = t.raw("cards") as Card[];
-  const keys = t.raw("demo.keys") as string[];
-  const options = t.raw("demo.options") as string[];
+  const menuOptions = t.raw("menus.options") as string[];
+  const pollRows = (t.raw("polls.rows") as PollRow[]).slice(0, 3);
 
   return (
     <section
       id="interactive"
-      className="tg-interactive border-t border-line"
+      className="wa-interactive border-t border-line"
       aria-labelledby="tg-interactive-title"
     >
       <Container className="section">
-        <div className="wa-section-stack">
-          <header className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--color-telegram)]">
-              <MessageCircleIcon className="h-3.5 w-3.5" />
+        <header className="wa-interactive__header">
+          <div>
+            <p className="wa-section-label">
+              <MessageCircleIcon aria-hidden="true" />
               {t("eyebrow")}
             </p>
             <h2
@@ -46,86 +51,102 @@ export async function InteractiveSection() {
             >
               {t("title")}
             </h2>
-            <p className="tg-lede text-body mt-4">{t("subtitle")}</p>
-          </header>
-
-          <div className="tg-interactive__grid">
-            <ul className="tg-interactive__cards">
-              {cards.map((card) => {
-                const Icon = CARD_ICONS[card.id] ?? MousePointerClickIcon;
-                return (
-                  <li key={card.id}>
-                    <article className="tg-interactive__card">
-                      <span className="tg-interactive__ico">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <div className="tg-interactive__card-copy">
-                        <h3>{card.title}</h3>
-                        <p>{card.desc}</p>
-                        {card.points?.length ? (
-                          <ul className="tg-interactive__points">
-                            {card.points.map((point) => (
-                              <li key={point}>{point}</li>
-                            ))}
-                          </ul>
-                        ) : null}
-                      </div>
-                    </article>
-                  </li>
-                );
-              })}
-            </ul>
-
-            <div className="tg-interactive__widget" aria-hidden>
-              <header className="tg-modes__phone-top">
-                <span className="tg-modes__avatar">
-                  <MessageCircleIcon className="h-4 w-4" />
-                </span>
-                <span className="min-w-0">
-                  <strong>{t("demo.botName")}</strong>
-                  <small>{t("demo.online")}</small>
-                </span>
-              </header>
-              <div className="tg-modes__chat">
-                <p className="tg-modes__bubble">{t("demo.greeting")}</p>
-                <div className="tg-modes__keys">
-                  {keys.map((key) => (
-                    <span key={key}>{key}</span>
-                  ))}
-                </div>
-                <div className="tg-modes__album">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <p className="tg-modes__typing">
-                  <span className="tg-modes__dots">
-                    <i />
-                    <i />
-                    <i />
-                  </span>
-                  {t("demo.typing")}
-                </p>
-                <div className="tg-modes__poll">
-                  <p>{t("demo.poll")}</p>
-                  <ul className="tg-modes__opts">
-                    {options.map((option, index) => (
-                      <li
-                        key={option}
-                        className={cn(
-                          "tg-modes__opt",
-                          index === 0 && "is-on",
-                        )}
-                      >
-                        <span className="tg-modes__opt-dot" />
-                        <span>{option}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
+          <div>
+            <p className="text-body text-pretty">{t("subtitle")}</p>
+          </div>
+        </header>
+
+        <div className="wa-interactive__grid tg-interactive__grid">
+          {FEATURES.map(({ id, icon: Icon }) => (
+            <article key={id} className="wa-interactive__card">
+              <header className="wa-interactive__card-header">
+                <span className="wa-interactive__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <div>
+                  <h3>{t(`tabs.${id}`)}</h3>
+                  <p>{t(`cards.${id}`)}</p>
+                </div>
+              </header>
+
+              <div className="wa-interactive__preview">
+                <p className="wa-interactive__preview-label">{t("preview")}</p>
+
+                {id === "menus" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("menus.prompt")}
+                    </p>
+                    <ul className="wa-interactive__choices">
+                      {menuOptions.map((option, index) => (
+                        <li
+                          key={option}
+                          data-selected={index === 0 || undefined}
+                        >
+                          {option}
+                          {index === 0 && <CheckIcon aria-hidden="true" />}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="wa-interactive__result">
+                      {t("menus.follow")}
+                    </p>
+                  </>
+                )}
+
+                {id === "polls" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("polls.intro")}
+                    </p>
+                    <ul className="wa-interactive__products">
+                      {pollRows.map((row) => (
+                        <li
+                          key={row.title}
+                          data-selected={row.picked || undefined}
+                        >
+                          <span className="wa-interactive__product-name">
+                            {row.picked && <CheckIcon aria-hidden="true" />}
+                            {row.title}
+                          </span>
+                          <span>{row.description}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+
+                {id === "albums" && (
+                  <div className="wa-interactive__tracking">
+                    <div className="tg-interactive__album" aria-hidden>
+                      {ALBUM_IMAGES.map((src) => (
+                        <span key={src} className="relative overflow-hidden">
+                          <Image
+                            src={src}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            sizes="120px"
+                            unoptimized
+                          />
+                        </span>
+                      ))}
+                    </div>
+                    <p className="wa-interactive__message">
+                      {t("albums.title")}
+                    </p>
+                    <p className="tg-interactive__album-caption">
+                      {t("albums.subtitle")}
+                    </p>
+                    <p className="wa-interactive__result">
+                      {t("albums.follow")}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </Container>
     </section>

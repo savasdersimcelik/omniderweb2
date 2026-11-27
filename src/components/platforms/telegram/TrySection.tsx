@@ -1,77 +1,171 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
-import { ScanLineIcon, SendIcon } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import {
+  BotIcon,
+  HeadsetIcon,
+  QrCodeIcon,
+  SendIcon,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/Container";
+import { cn } from "@/lib/utils";
 
-type TryCard = {
-  key: "bot" | "personal";
-  image: string;
-};
+const LINES = [
+  {
+    key: "bot" as const,
+    url: "https://t.me/omnider_bot",
+    image: "/images/platforms/qr/telegram-bot.svg",
+  },
+  {
+    key: "personal" as const,
+    url: "https://t.me/omnidertech",
+    image: "/images/platforms/qr/telegram-personal.svg",
+  },
+] as const;
 
-const CARDS: TryCard[] = [
-  { key: "bot", image: "/images/platforms/qr/telegram-bot.svg" },
-  { key: "personal", image: "/images/platforms/qr/telegram-personal.svg" },
-];
+const PROMPTS = ["price", "booking", "order"] as const;
 
-export async function TrySection() {
-  const t = await getTranslations("PlatformTelegram.try");
+type LineKey = (typeof LINES)[number]["key"];
+type PromptKey = (typeof PROMPTS)[number];
+
+export function TrySection() {
+  const t = useTranslations("PlatformTelegram.try");
+  const [line, setLine] = useState<LineKey>("bot");
+  const [prompt, setPrompt] = useState<PromptKey>("price");
+
+  const active = LINES.find((item) => item.key === line) ?? LINES[0];
+  const prefill = t(`prompts.${prompt}.message`);
+
+  const href = useMemo(() => {
+    const url = new URL(active.url);
+    if (active.key === "bot") {
+      url.searchParams.set("start", prompt);
+    }
+    return url.toString();
+  }, [active.key, active.url, prompt]);
 
   return (
     <section
       id="try-telegram"
-      className="tg-try border-t border-line"
+      className="closing-cta"
       aria-labelledby="tg-try-title"
     >
-      <Container className="section">
-        <header className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--color-telegram)]">
-            <ScanLineIcon className="h-4 w-4" />
-            {t("eyebrow")}
-          </p>
-          <h2 id="tg-try-title" className="heading-section mt-3 text-balance">
-            {t("title")}
-          </h2>
-          <p className="tg-lede text-body mt-4">{t("body")}</p>
-        </header>
+      <div className="closing-cta__orbit" aria-hidden />
+      <Container className="section closing-cta__inner">
+        <div className="wa-biz-try">
+          <div className="wa-biz-try__copy">
+            <p className="closing-cta__eyebrow">
+              <QrCodeIcon className="size-3.5" aria-hidden />
+              {t("eyebrow")}
+            </p>
+            <h2 id="tg-try-title" className="wa-biz-try__title">
+              {t("title")}
+            </h2>
+            <p className="wa-biz-try__body">{t("body")}</p>
 
-        <div className="tg-try__grid mt-10">
-          {CARDS.map((card) => (
-            <article key={card.key} className="tg-try__card">
-              <div className="px-5 pt-5">
-                <h3 className="text-lg font-semibold tracking-tight text-ink">
-                  {t(`${card.key}.title`)}
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink-subtle text-pretty">
-                  {t(`${card.key}.body`)}
-                </p>
-                <p className="mt-2 inline-flex rounded-full bg-[color-mix(in_srgb,var(--color-telegram)_10%,white)] px-2.5 py-1 text-xs font-bold text-[var(--color-telegram)]">
-                  {t(`${card.key}.handle`)}
-                </p>
+            <div className="wa-biz-try__prompts">
+              <p className="wa-biz-try__prompts-label">{t("promptsLabel")}</p>
+              <div
+                className="wa-biz-try__prompt-list"
+                role="tablist"
+                aria-label={t("promptsLabel")}
+              >
+                {PROMPTS.map((id) => (
+                  <button
+                    key={id}
+                    type="button"
+                    role="tab"
+                    aria-selected={prompt === id}
+                    className={cn(
+                      "wa-biz-try__prompt",
+                      prompt === id && "is-on",
+                    )}
+                    onClick={() => setPrompt(id)}
+                  >
+                    {t(`prompts.${id}.tab`)}
+                  </button>
+                ))}
               </div>
-              <div className="flex flex-col items-center gap-4 px-5 pt-4 pb-5">
-                <div className="w-full max-w-[220px] rounded-lg bg-white p-3 ring-1 ring-line">
-                  <Image
-                    src={card.image}
-                    alt={t(`${card.key}.imageAlt`)}
-                    width={174}
-                    height={174}
-                    className="h-auto w-full"
-                    unoptimized
-                  />
+            </div>
+
+            <div className="wa-biz-try__trust">
+              <div className="wa-biz-try__trust-item">
+                <BotIcon aria-hidden />
+                <span>{t("trust.ai")}</span>
+              </div>
+              <div className="wa-biz-try__trust-item">
+                <HeadsetIcon aria-hidden />
+                <span>{t("trust.handoff")}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="wa-biz-try__console">
+            <div
+              className="wa-biz-try__regions"
+              role="tablist"
+              aria-label={t("linesLabel")}
+            >
+              {LINES.map((item) => (
+                <button
+                  key={item.key}
+                  type="button"
+                  role="tab"
+                  aria-selected={line === item.key}
+                  className={cn(
+                    "wa-biz-try__region",
+                    line === item.key && "is-on",
+                  )}
+                  onClick={() => setLine(item.key)}
+                >
+                  <span>{t(`lines.${item.key}.title`)}</span>
+                  <span>{t(`lines.${item.key}.handle`)}</span>
+                </button>
+              ))}
+            </div>
+
+            <article className="wa-biz-try__card">
+              <div className="wa-biz-try__qr">
+                <Image
+                  src={active.image}
+                  alt={t(`lines.${line}.imageAlt`)}
+                  width={174}
+                  height={174}
+                  className="h-auto w-full"
+                  unoptimized
+                />
+                <span>{t(`lines.${line}.handle`)}</span>
+              </div>
+
+              <div className="wa-biz-try__panel">
+                <div className="wa-biz-try__panel-head">
+                  <div>
+                    <h3>{t(`lines.${line}.title`)}</h3>
+                    <p>{t(`lines.${line}.lang`)}</p>
+                  </div>
+                  <span className="wa-biz-try__online">{t("online")}</span>
                 </div>
+
+                <div className="wa-biz-try__prefill">
+                  <span>{t("prefillLabel")}</span>
+                  <p>{`“${prefill}”`}</p>
+                </div>
+
                 <a
-                  href={t(`${card.key}.url`)}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title={t(`${card.key}.ctaTitle`)}
-                  className="btn-telegram inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg px-4 text-sm font-bold"
+                  title={t(`lines.${line}.ctaTitle`)}
+                  className="wa-biz-try__cta"
                 >
                   <SendIcon className="h-4 w-4" />
-                  {t(`${card.key}.cta`)}
+                  {t("cta")}
                 </a>
               </div>
             </article>
-          ))}
+          </div>
         </div>
       </Container>
     </section>

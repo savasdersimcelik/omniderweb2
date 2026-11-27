@@ -3984,6 +3984,298 @@
         "followUp": "Kulaklık seti. Yarın teslim mümkün mü?"
       }
     },
+    "aiAutomation": {
+      "eyebrow": "Yapay Zeka",
+      "title": "Kanalınız için hazır Omnider AI modelini seçin",
+      "subtitle": "6 farklı Omnider AI modelinden birini birincil yanıt motoru olarak aktif edin. Persona, medya ve etiketlerle marka dilinize uygun yanıtlar üretir.",
+      "catalogTitle": "Omnider AI Model Kataloğu",
+      "catalogBadge": "Persona • Medya • Etiket",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Otomatik Dil Algılama",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Varsayılan",
+          "description": "Günlük müşteri desteği, otomatik AI yanıtları ve chatflow adımları için güçlü, hızlı ve güvenilir varsayılan model."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Satış & SSS",
+          "description": "Doğal müşteri konuşmaları, satış görüşmeleri, ürün soruları ve SSS yanıtları için yüksek kaliteli sohbet modeli."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Canlı Destek",
+          "description": "Hızlı ve doğal konuşmalar için optimize edilmiş model. Canlı destek ve chatflow adımlarında güçlü talimat takibi sağlar."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Çok Adımlı",
+          "description": "Karmaşık müşteri soruları, çok adımlı chatflow senaryoları ve güvenilir talimat takibi için gelişmiş model."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Randevu & Pro",
+          "description": "Profesyonel müşteri desteği, detaylı açıklamalar, randevu ve ürün danışmanlığı için yüksek kaliteli model."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "En Yüksek",
+          "description": "Zorlu ve çok adımlı konuşmalar, premium müşteri deneyimi ve en yüksek yanıt doğruluğu için amiral gemisi model."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Otomasyon Akışı",
+      "title": "Kod yazmadan, tek cümleyle Instagram iş akışı kurun",
+      "subtitle": "Müşteri yazdığında botun ne anlayacağını, hangi bilgiyi kontrol edeceğini ve ne zaman ekibinize devredeceğini 3 net adımda görün.",
+      "modesLabel": "Chatflow senaryosu",
+      "steps": {
+        "one": {
+          "label": "1. Adım • Müşteri Mesaj Atar",
+          "badge": "Tetikleyici"
+        },
+        "two": {
+          "label": "2. Adım • Sistem Kontrol Eder",
+          "badge": "Otomatik Sorgu"
+        },
+        "three": {
+          "label": "3. Adım • Yanıtlar veya Devreder",
+          "badge": "Buton + Ekip Devri"
+        }
+      },
+      "preview": {
+        "label": "Müşterinin Gördüğü Ekran",
+        "live": "Canlı Önizleme",
+        "time": "14:22",
+        "response": "Ortalama yanıt: 0.8 sn",
+        "active": "7/24 Aktif"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "E-Ticaret & Sipariş",
+          "one": {
+            "title": "Sipariş veya kargo kelimesi yakalanır",
+            "body": "Müşteri mesajında “sipariş, kargo, iade” geçtiğinde akış otomatik olarak başlar."
+          },
+          "two": {
+            "title": "Kargo durumunu mağazanızdan çeker",
+            "body": "Sipariş numarasını doğrular ve e-ticaret/CRM sisteminizden güncel teslimat bilgisini alır."
+          },
+          "three": {
+            "title": "Butonlu yanıt gönderir, gerekirse temsilciye bağlar",
+            "body": "Müşteriye kargo linkini ve “İade Talebi” butonunu iletir; çözülmezse Destek ekibine aktarır."
+          },
+          "sim": {
+            "user": "#4829 numaralı siparişim nerede?",
+            "bot": "Siparişiniz (#4829) dağıtıma çıktı, tahmini teslimat bugün 17:00 öncesi.",
+            "btn1": "Kargo Takip Linki",
+            "btn2": "İade Talebi Oluştur"
+          }
+        },
+        "booking": {
+          "tab": "Randevu & Klinik",
+          "one": {
+            "title": "Randevu talebi otomatik algılanır",
+            "body": "Müşteri “randevu, muayene, saat” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Takvimden boş saatleri kontrol eder",
+            "body": "Klinik veya ekip takviminize bağlanarak o günkü uygun saat dilimlerini listeler."
+          },
+          "three": {
+            "title": "Randevuyu onaylar ve hatırlatma kurar",
+            "body": "Seçilen saati kaydeder, onay mesajı atar ve randevudan 1 saat önce otomatik hatırlatır."
+          },
+          "sim": {
+            "user": "Yarın öğleden sonra için randevu alabilir miyim?",
+            "bot": "Yarın (27 Kasım) için uygun saatlerimiz aşağıdadır. Seçiminizi yapabilirsiniz:",
+            "btn1": "14:00 — Uygun",
+            "btn2": "15:30 — Uygun"
+          }
+        },
+        "lead": {
+          "tab": "Reklam & Lead",
+          "one": {
+            "title": "Reklamdan gelen ilk mesaj yakalanır",
+            "body": "Instagram veya Facebook reklamından yazan müşterinin hangi ilandan geldiğini tanır."
+          },
+          "two": {
+            "title": "AI ile ihtiyacına uygun ürünü önerir",
+            "body": "Müşterinin ekip büyüklüğünü ve bütçesini sorar, katalogdan en doğru paketi eşleştirir."
+          },
+          "three": {
+            "title": "Lead bilgisini kaydedip Satış ekibine devreder",
+            "body": "Tüm görüşme özetini CRM’e işler ve sıcak müşteriyi anında Satış temsilcisine bağlar."
+          },
+          "sim": {
+            "user": "Instagram ilanından yazıyorum, 20 kişilik ofis için teklif alabilir miyim?",
+            "bot": "20 kişilik ofisiniz için Barista Pro X2 modelimizi öneririz. Teklif dosyasını ileteyim mi?",
+            "btn1": "Teklifi Gönder",
+            "btn2": "Satış Uzmanına Bağlan"
+          }
+        },
+        "education": {
+          "tab": "Eğitim & Kurs",
+          "one": {
+            "title": "Kurs veya kayıt niyeti yakalanır",
+            "body": "Öğrenci “kurs, kayıt, kontenjan, ücret” yazdığında akış otomatik başlar."
+          },
+          "two": {
+            "title": "Program ve kontenjan bilgisini çeker",
+            "body": "Eğitim yönetim sisteminizden açık dönemleri, ücretleri ve kalan kontenjanı alır."
+          },
+          "three": {
+            "title": "Kayıt seçeneklerini sunar, danışmana bağlar",
+            "body": "Uygun programı butonlarla listeler; ödeme veya özel soru olursa kayıt danışmanına aktarır."
+          },
+          "sim": {
+            "user": "İngilizce B1 kursuna kayıt olmak istiyorum, kontenjan var mı?",
+            "bot": "B1 akşam grubunda 4 kontenjan kaldı. Başlangıç: 2 Aralık. Nasıl ilerleyelim?",
+            "btn1": "Kayıt Formunu Aç",
+            "btn2": "Danışmana Bağlan"
+          }
+        },
+        "travel": {
+          "tab": "Seyahat & Tur",
+          "one": {
+            "title": "Tur veya rezervasyon talebi algılanır",
+            "body": "Misafir “tur, uçuş, otel, rezervasyon” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Müsaitlik ve fiyatı sistemden kontrol eder",
+            "body": "Tur operatörü veya rezervasyon yazılımınızdaki tarih, kişi sayısı ve müsaitliği doğrular."
+          },
+          "three": {
+            "title": "Seçenekleri sunar, rezervasyonu başlatır",
+            "body": "Uygun paketleri butonlarla gösterir; kapora veya özel istekte Operasyon ekibine bağlar."
+          },
+          "sim": {
+            "user": "15–18 Aralık Kapadokya turu için 2 kişilik yer var mı?",
+            "bot": "15–18 Aralık’ta 2 kişilik yer açık. Standart paket kişi başı ₺8.900. Devam edelim mi?",
+            "btn1": "Rezervasyonu Başlat",
+            "btn2": "Diğer Tarihler"
+          }
+        },
+        "restaurant": {
+          "tab": "Restoran & Menü",
+          "one": {
+            "title": "Sipariş veya masa talebi yakalanır",
+            "body": "Misafir “menü, sipariş, masa, rezervasyon” yazdığında restoran akışı başlar."
+          },
+          "two": {
+            "title": "Menü ve müsaitliği kontrol eder",
+            "body": "POS veya rezervasyon sisteminizden güncel menüyü, stokları ve boş masa saatlerini alır."
+          },
+          "three": {
+            "title": "Siparişi alır veya masayı onaylar",
+            "body": "Seçilen ürün veya saati kaydeder; özel istek veya şikayette salona / mutfağa aktarır."
+          },
+          "sim": {
+            "user": "Bu akşam 20:00 için 4 kişilik masa ayırtabilir miyiz?",
+            "bot": "20:00’de 4 kişilik masa müsait. Bahçe veya salon tercihinizi seçebilirsiniz:",
+            "btn1": "Bahçe Masası",
+            "btn2": "Salon Masası"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "DM & Dönüşüm Raporları",
+      "title": "Her Instagram DM’inin lead ve siparişe dönüşümünü ölçün",
+      "subtitle": "İlk yanıt hızından Story ve yorum kaynaklı lead’lere, sipariş dönüşümünden mesaj iletimine kadar Instagram sonuçlarını tek raporda izleyin.",
+      "kpis": {
+        "speed": {
+          "label": "Ort. İlk Yanıt Süresi",
+          "value": "11 sn",
+          "badge": "Anlık AI",
+          "sub": "Sektör ort. 18 dk yerine 11 sn"
+        },
+        "lead": {
+          "label": "DM Lead Dönüşümü",
+          "value": "%61,2",
+          "badge": "+%14,1",
+          "sub": "3.240 nitelikli Instagram lead"
+        },
+        "order": {
+          "label": "Sipariş Dönüşüm Oranı",
+          "value": "%34,8",
+          "badge": "₺1,94M",
+          "sub": "1.420 tamamlanan DM siparişi"
+        },
+        "comment": {
+          "label": "Yorum → DM Oranı",
+          "value": "%42,6",
+          "badge": "Yüksek",
+          "sub": "Yorumdan sohbete geçen müşteri payı"
+        }
+      },
+      "funnel": {
+        "title": "DM’den Siparişe Dönüşüm Hunisi",
+        "subtitle": "Gelen her Instagram talebinin lead ve satışa dönüşüm adımları",
+        "badge": "ROI Raporu",
+        "aovLabel": "Ortalama Sepet / İşlem Tutarı",
+        "aovValue": "₺1.368 / Sipariş",
+        "steps": {
+          "chats": {
+            "label": "1. Gelen DM & Story etkileşimi",
+            "value": "5.280 (%100)"
+          },
+          "fast": {
+            "label": "2. 30 sn altında yanıtlanan",
+            "value": "5.214 (%98,7)"
+          },
+          "leads": {
+            "label": "3. Nitelikli lead (iletişim + talep)",
+            "value": "3.240 (%61,2)"
+          },
+          "orders": {
+            "label": "4. Tamamlanan sipariş / randevu",
+            "value": "1.420 (%34,8)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Kaynak Bazlı Instagram Raporu",
+        "subtitle": "Hangi giriş yolundan gelen müşteri daha hızlı siparişe dönüyor?",
+        "columns": {
+          "source": "Giriş Kaynağı",
+          "reply": "İlk Yanıt",
+          "lead": "Lead",
+          "order": "Sipariş"
+        },
+        "rows": {
+          "ads": {
+            "name": "Click-to-DM Reklamları",
+            "desc": "Meta reklam → Instagram DM",
+            "reply": "7 sn",
+            "lead": "%68,4",
+            "order": "%44,2"
+          },
+          "stories": {
+            "name": "Story Yanıtları",
+            "desc": "Story sticker & reply",
+            "reply": "9 sn",
+            "lead": "%59,1",
+            "order": "%36,8"
+          },
+          "comments": {
+            "name": "Yorum → DM",
+            "desc": "Gönderi yorumundan sohbet",
+            "reply": "13 sn",
+            "lead": "%54,7",
+            "order": "%32,4"
+          },
+          "organic": {
+            "name": "Organik DM",
+            "desc": "Doğrudan profil mesajı",
+            "reply": "15 sn",
+            "lead": "%47,3",
+            "order": "%28,9"
+          }
+        }
+      }
+    },
     "try": {
       "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",
       "title": "Instagram DM’i telefondan hemen deneyin",
@@ -4393,6 +4685,298 @@
         "followUp": "Kulaklık seti. Yarın teslim mümkün mü?"
       }
     },
+    "aiAutomation": {
+      "eyebrow": "Yapay Zeka",
+      "title": "Kanalınız için hazır Omnider AI modelini seçin",
+      "subtitle": "6 farklı Omnider AI modelinden birini birincil yanıt motoru olarak aktif edin. Persona, medya ve etiketlerle marka dilinize uygun yanıtlar üretir.",
+      "catalogTitle": "Omnider AI Model Kataloğu",
+      "catalogBadge": "Persona • Medya • Etiket",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Otomatik Dil Algılama",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Varsayılan",
+          "description": "Günlük müşteri desteği, otomatik AI yanıtları ve chatflow adımları için güçlü, hızlı ve güvenilir varsayılan model."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Satış & SSS",
+          "description": "Doğal müşteri konuşmaları, satış görüşmeleri, ürün soruları ve SSS yanıtları için yüksek kaliteli sohbet modeli."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Canlı Destek",
+          "description": "Hızlı ve doğal konuşmalar için optimize edilmiş model. Canlı destek ve chatflow adımlarında güçlü talimat takibi sağlar."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Çok Adımlı",
+          "description": "Karmaşık müşteri soruları, çok adımlı chatflow senaryoları ve güvenilir talimat takibi için gelişmiş model."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Randevu & Pro",
+          "description": "Profesyonel müşteri desteği, detaylı açıklamalar, randevu ve ürün danışmanlığı için yüksek kaliteli model."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "En Yüksek",
+          "description": "Zorlu ve çok adımlı konuşmalar, premium müşteri deneyimi ve en yüksek yanıt doğruluğu için amiral gemisi model."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Otomasyon Akışı",
+      "title": "Kod yazmadan, tek cümleyle Messenger iş akışı kurun",
+      "subtitle": "Müşteri yazdığında botun ne anlayacağını, hangi bilgiyi kontrol edeceğini ve ne zaman ekibinize devredeceğini 3 net adımda görün.",
+      "modesLabel": "Chatflow senaryosu",
+      "steps": {
+        "one": {
+          "label": "1. Adım • Müşteri Mesaj Atar",
+          "badge": "Tetikleyici"
+        },
+        "two": {
+          "label": "2. Adım • Sistem Kontrol Eder",
+          "badge": "Otomatik Sorgu"
+        },
+        "three": {
+          "label": "3. Adım • Yanıtlar veya Devreder",
+          "badge": "Buton + Ekip Devri"
+        }
+      },
+      "preview": {
+        "label": "Müşterinin Gördüğü Ekran",
+        "live": "Canlı Önizleme",
+        "time": "14:22",
+        "response": "Ortalama yanıt: 0.8 sn",
+        "active": "7/24 Aktif"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "E-Ticaret & Sipariş",
+          "one": {
+            "title": "Sipariş veya kargo kelimesi yakalanır",
+            "body": "Müşteri mesajında “sipariş, kargo, iade” geçtiğinde akış otomatik olarak başlar."
+          },
+          "two": {
+            "title": "Kargo durumunu mağazanızdan çeker",
+            "body": "Sipariş numarasını doğrular ve e-ticaret/CRM sisteminizden güncel teslimat bilgisini alır."
+          },
+          "three": {
+            "title": "Butonlu yanıt gönderir, gerekirse temsilciye bağlar",
+            "body": "Müşteriye kargo linkini ve “İade Talebi” butonunu iletir; çözülmezse Destek ekibine aktarır."
+          },
+          "sim": {
+            "user": "#4829 numaralı siparişim nerede?",
+            "bot": "Siparişiniz (#4829) dağıtıma çıktı, tahmini teslimat bugün 17:00 öncesi.",
+            "btn1": "Kargo Takip Linki",
+            "btn2": "İade Talebi Oluştur"
+          }
+        },
+        "booking": {
+          "tab": "Randevu & Klinik",
+          "one": {
+            "title": "Randevu talebi otomatik algılanır",
+            "body": "Müşteri “randevu, muayene, saat” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Takvimden boş saatleri kontrol eder",
+            "body": "Klinik veya ekip takviminize bağlanarak o günkü uygun saat dilimlerini listeler."
+          },
+          "three": {
+            "title": "Randevuyu onaylar ve hatırlatma kurar",
+            "body": "Seçilen saati kaydeder, onay mesajı atar ve randevudan 1 saat önce otomatik hatırlatır."
+          },
+          "sim": {
+            "user": "Yarın öğleden sonra için randevu alabilir miyim?",
+            "bot": "Yarın (27 Kasım) için uygun saatlerimiz aşağıdadır. Seçiminizi yapabilirsiniz:",
+            "btn1": "14:00 — Uygun",
+            "btn2": "15:30 — Uygun"
+          }
+        },
+        "lead": {
+          "tab": "Reklam & Lead",
+          "one": {
+            "title": "Reklamdan gelen ilk mesaj yakalanır",
+            "body": "Instagram veya Facebook reklamından yazan müşterinin hangi ilandan geldiğini tanır."
+          },
+          "two": {
+            "title": "AI ile ihtiyacına uygun ürünü önerir",
+            "body": "Müşterinin ekip büyüklüğünü ve bütçesini sorar, katalogdan en doğru paketi eşleştirir."
+          },
+          "three": {
+            "title": "Lead bilgisini kaydedip Satış ekibine devreder",
+            "body": "Tüm görüşme özetini CRM’e işler ve sıcak müşteriyi anında Satış temsilcisine bağlar."
+          },
+          "sim": {
+            "user": "Instagram ilanından yazıyorum, 20 kişilik ofis için teklif alabilir miyim?",
+            "bot": "20 kişilik ofisiniz için Barista Pro X2 modelimizi öneririz. Teklif dosyasını ileteyim mi?",
+            "btn1": "Teklifi Gönder",
+            "btn2": "Satış Uzmanına Bağlan"
+          }
+        },
+        "education": {
+          "tab": "Eğitim & Kurs",
+          "one": {
+            "title": "Kurs veya kayıt niyeti yakalanır",
+            "body": "Öğrenci “kurs, kayıt, kontenjan, ücret” yazdığında akış otomatik başlar."
+          },
+          "two": {
+            "title": "Program ve kontenjan bilgisini çeker",
+            "body": "Eğitim yönetim sisteminizden açık dönemleri, ücretleri ve kalan kontenjanı alır."
+          },
+          "three": {
+            "title": "Kayıt seçeneklerini sunar, danışmana bağlar",
+            "body": "Uygun programı butonlarla listeler; ödeme veya özel soru olursa kayıt danışmanına aktarır."
+          },
+          "sim": {
+            "user": "İngilizce B1 kursuna kayıt olmak istiyorum, kontenjan var mı?",
+            "bot": "B1 akşam grubunda 4 kontenjan kaldı. Başlangıç: 2 Aralık. Nasıl ilerleyelim?",
+            "btn1": "Kayıt Formunu Aç",
+            "btn2": "Danışmana Bağlan"
+          }
+        },
+        "travel": {
+          "tab": "Seyahat & Tur",
+          "one": {
+            "title": "Tur veya rezervasyon talebi algılanır",
+            "body": "Misafir “tur, uçuş, otel, rezervasyon” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Müsaitlik ve fiyatı sistemden kontrol eder",
+            "body": "Tur operatörü veya rezervasyon yazılımınızdaki tarih, kişi sayısı ve müsaitliği doğrular."
+          },
+          "three": {
+            "title": "Seçenekleri sunar, rezervasyonu başlatır",
+            "body": "Uygun paketleri butonlarla gösterir; kapora veya özel istekte Operasyon ekibine bağlar."
+          },
+          "sim": {
+            "user": "15–18 Aralık Kapadokya turu için 2 kişilik yer var mı?",
+            "bot": "15–18 Aralık’ta 2 kişilik yer açık. Standart paket kişi başı ₺8.900. Devam edelim mi?",
+            "btn1": "Rezervasyonu Başlat",
+            "btn2": "Diğer Tarihler"
+          }
+        },
+        "restaurant": {
+          "tab": "Restoran & Menü",
+          "one": {
+            "title": "Sipariş veya masa talebi yakalanır",
+            "body": "Misafir “menü, sipariş, masa, rezervasyon” yazdığında restoran akışı başlar."
+          },
+          "two": {
+            "title": "Menü ve müsaitliği kontrol eder",
+            "body": "POS veya rezervasyon sisteminizden güncel menüyü, stokları ve boş masa saatlerini alır."
+          },
+          "three": {
+            "title": "Siparişi alır veya masayı onaylar",
+            "body": "Seçilen ürün veya saati kaydeder; özel istek veya şikayette salona / mutfağa aktarır."
+          },
+          "sim": {
+            "user": "Bu akşam 20:00 için 4 kişilik masa ayırtabilir miyiz?",
+            "bot": "20:00’de 4 kişilik masa müsait. Bahçe veya salon tercihinizi seçebilirsiniz:",
+            "btn1": "Bahçe Masası",
+            "btn2": "Salon Masası"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "Gelir & Dönüşüm Raporları",
+      "title": "Her Messenger sohbetinin lead ve siparişe dönüşümünü ölçün",
+      "subtitle": "İlk yanıt hızından nitelikli lead’e, sipariş dönüşümünden teslimat güvenilirliğine kadar Facebook Messenger sonuçlarını tek raporda izleyin.",
+      "kpis": {
+        "speed": {
+          "label": "Ort. İlk Yanıt Süresi",
+          "value": "13 sn",
+          "badge": "Anlık AI",
+          "sub": "Sektör ort. 15 dk yerine 13 sn"
+        },
+        "lead": {
+          "label": "Lead Dönüşüm Oranı",
+          "value": "%55,8",
+          "badge": "+%11,2",
+          "sub": "2.640 nitelikli müşteri adayı"
+        },
+        "order": {
+          "label": "Sipariş Dönüşüm Oranı",
+          "value": "%36,4",
+          "badge": "₺2,21M",
+          "sub": "1.520 tamamlanan Messenger siparişi"
+        },
+        "fail": {
+          "label": "Teslimat Fail Oranı",
+          "value": "%0,6",
+          "badge": "Çok Düşük",
+          "sub": "%99,4 başarılı mesaj iletimi"
+        }
+      },
+      "funnel": {
+        "title": "Sohbetten Siparişe Dönüşüm Hunisi",
+        "subtitle": "Gelen her Messenger talebinin lead ve satışa dönüşüm adımları",
+        "badge": "ROI Raporu",
+        "aovLabel": "Ortalama Sepet / İşlem Tutarı",
+        "aovValue": "₺1.455 / Sipariş",
+        "steps": {
+          "chats": {
+            "label": "1. Gelen sohbet & reklam etkileşimi",
+            "value": "4.730 (%100)"
+          },
+          "fast": {
+            "label": "2. 30 sn altında yanıtlanan",
+            "value": "4.682 (%99,0)"
+          },
+          "leads": {
+            "label": "3. Nitelikli lead (iletişim + talep)",
+            "value": "2.640 (%55,8)"
+          },
+          "orders": {
+            "label": "4. Tamamlanan sipariş / randevu",
+            "value": "1.520 (%36,4)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Kaynak Bazlı Dönüşüm Raporu",
+        "subtitle": "Hangi kanaldan gelen müşteri daha hızlı siparişe dönüyor?",
+        "columns": {
+          "source": "Giriş Kaynağı",
+          "reply": "İlk Yanıt",
+          "lead": "Lead",
+          "order": "Sipariş"
+        },
+        "rows": {
+          "ads": {
+            "name": "Click-to-Messenger",
+            "desc": "Facebook & Instagram reklam",
+            "reply": "8 sn",
+            "lead": "%63,2",
+            "order": "%45,1"
+          },
+          "comments": {
+            "name": "Yorum Yanıtları",
+            "desc": "Sayfa gönderisi → sohbet",
+            "reply": "14 sn",
+            "lead": "%52,6",
+            "order": "%33,8"
+          },
+          "plugin": {
+            "name": "Web Site Plugin",
+            "desc": "Messenger müşteri sohbeti",
+            "reply": "11 sn",
+            "lead": "%50,4",
+            "order": "%31,9"
+          },
+          "organic": {
+            "name": "Organik Sayfa Mesajı",
+            "desc": "Doğrudan Messenger inbox",
+            "reply": "16 sn",
+            "lead": "%46,8",
+            "order": "%29,4"
+          }
+        }
+      }
+    },
     "try": {
       "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",
       "title": "Messenger’ı telefondan hemen deneyin",
@@ -4767,74 +5351,133 @@
       "eyebrow": "Telegram Bot etkileşimi",
       "title": "Yazı yazdırmayın, dokunsun",
       "subtitle": "Butonlu menüler, anketler ve medya albümleri ile müşteriyi yönlendirin. Omnider Telegram Bot API biçimine çevirir.",
-      "cards": [
-        {
-          "id": "menus",
-          "title": "Butonlu menüler",
-          "desc": "Müşteri yazmak zorunda kalmaz. Link açma, arama, e-posta gönderme veya numara/konum paylaşma gibi aksiyonları Telegram butonlarıyla sunarsınız; seçim anında panele düşer.",
-          "points": [
-            "Inline veya reply keyboard ile yönlendirme",
-            "Web linki, telefon ve e-posta butonları"
-          ]
-        },
-        {
-          "id": "polls",
-          "title": "Anket ve oy",
-          "desc": "Randevu günü, tercih veya memnuniyet sorularını anket olarak gönderin. Oy sonuçları sohbette görünür; ekibiniz hangi seçeneğin önde olduğunu takip eder.",
-          "points": [
-            "Tek veya çok seçimli anket",
-            "Canlı oy dağılımı"
-          ]
-        },
-        {
-          "id": "albums",
-          "title": "Medya albümü",
-          "desc": "Ürün görselleri, katalog sayfaları veya dokümanları tek mesajda albüm olarak iletin. Müşteri kaydırarak inceler; bot bir sonraki adımı aynı sohbette sürdürür.",
-          "points": [
-            "Tek mesajda 10’a kadar medya",
-            "Görsel, belge veya karışık albüm"
-          ]
-        }
-      ],
-      "demo": {
-        "botName": "Omnider Bot",
-        "online": "çevrimiçi",
-        "greeting": "Size nasıl yardımcı olalım?",
-        "keys": [
+      "preview": "Örnek sohbet",
+      "tabs": {
+        "menus": "Butonlu menüler",
+        "polls": "Anket ve oy",
+        "albums": "Medya albümü"
+      },
+      "cards": {
+        "menus": "Inline veya reply keyboard. Müşteri yazmak yerine dokunur; seçim akışı sürdürür.",
+        "polls": "Randevu günü, tercih veya memnuniyet sorularını anket olarak gönderin — sonuç sohbette kalır.",
+        "albums": "Tek mesajda 10’a kadar görsel veya belge. Müşteri kaydırır; bot aynı sohbette devam eder."
+      },
+      "menus": {
+        "prompt": "Size nasıl yardımcı olalım?",
+        "options": [
           "Fiyat",
           "Stok",
           "Randevu"
         ],
-        "poll": "Hangi gün uygun?",
-        "options": [
-          "Salı",
-          "Perşembe",
-          "Cumartesi"
-        ],
-        "typing": "yazıyor…"
+        "follow": "Sarı kulaklık 1.249 TL · stokta."
+      },
+      "polls": {
+        "intro": "Hangi gün uğramak istersiniz?",
+        "rows": [
+          {
+            "title": "Salı",
+            "description": "Sabah slotları açık",
+            "picked": true
+          },
+          {
+            "title": "Perşembe",
+            "description": "Yalnızca öğleden sonra"
+          },
+          {
+            "title": "Cumartesi",
+            "description": "Hafta sonu ziyareti"
+          }
+        ]
+      },
+      "albums": {
+        "title": "Yaz kataloğu",
+        "subtitle": "3 fotoğraf · kaydırarak inceleyin",
+        "follow": "Albüm gönderildi · sohbette devam"
       }
     },
     "connect": {
-      "eyebrow": "Telegram Personal",
-      "title": "Kişisel hesabı QR ile bağlayın",
-      "subtitle": "Unipile üzerinden Telegram hesabınızı bağlayın; rehber, gruplar ve sohbet geçmişi panelde toplanır.",
-      "stepsLabel": "3 adımda bağlantı",
-      "steps": [
-        "QR’ı Telegram ile taratın veya 15 dk’lık linki açın.",
-        "Rehberiniz ve gruplarınız içeri aktarılır.",
-        "Her sohbetten son 50 mesaj kredi harcamadan gelir."
-      ],
-      "features": [
-        "Kendi hesabınız; kişi, grup ve geçmiş senkronu",
-        "Telefondan yazılanlar da panelde"
-      ],
-      "note": "Toplu mesaj için bot veya WhatsApp Business önerilir.",
-      "widget": {
-        "channel": "Telegram Personal",
-        "waiting": "Telegram ile tarayın",
-        "status": "Bekleniyor",
-        "progress": "Geçmiş aktarılıyor… 50 mesaj/sohbet",
-        "echo": "Telefondan yazdınız → panelde de görünüyor"
+      "eyebrow": "Bağlantı seçenekleri",
+      "title": "Telegram’ınızı istediğiniz gibi bağlayın",
+      "subtitle": "Kişisel hesabı QR ile bağlayın veya BotFather token’ını yapıştırın. Omnider her iki yöntemi de tek gelen kutuda destekler.",
+      "toggleLabel": "Bağlantı tipi",
+      "stepsLabel": "Kurulum adımları",
+      "modes": {
+        "personal": {
+          "label": "Kişisel Telegram hesabımı kullanıyorum",
+          "short": "Kişisel",
+          "title": "QR veya giriş linki"
+        },
+        "bot": {
+          "label": "Telegram botum var",
+          "short": "Bot",
+          "title": "BotFather token"
+        }
+      },
+      "steps": {
+        "personal": [
+          {
+            "title": "QR’ı taratın",
+            "body": "Telegram ile taratın veya 15 dk’lık giriş linkini açın."
+          },
+          {
+            "title": "Rehber ve grupları aktarın",
+            "body": "Kişileriniz ve gruplarınız panele senkronlanır."
+          },
+          {
+            "title": "Geçmiş kredsiz gelir",
+            "body": "Her sohbetten son 50 mesaj kredi harcamadan gelir."
+          }
+        ],
+        "bot": [
+          {
+            "title": "Botu oluşturun",
+            "body": "BotFather’da botu oluşturun, token’ı kopyalayın."
+          },
+          {
+            "title": "Omnider’e yapıştırın",
+            "body": "Bot adı ve grup izinleri otomatik gelir."
+          },
+          {
+            "title": "Webhook hazır",
+            "body": "Webhook otomatik kurulur; mesajlar anında gelir."
+          }
+        ]
+      },
+      "compare": {
+        "label": "İki yolun farkı",
+        "caption": {
+          "personal": "Kendi hesabınız telefonda kalır. Rehber, gruplar ve geçmiş Omnider’e senkronlanır.",
+          "bot": "BotFather token’ı botu bağlar. Menü, anket ve kampanyalar kişisel hesaba dokunmadan çalışır."
+        },
+        "rows": {
+          "method": {
+            "label": "Nasıl bağlanır",
+            "personal": "QR veya giriş linki",
+            "bot": "BotFather token"
+          },
+          "history": {
+            "label": "Geçmiş ve rehber",
+            "personal": "Senkron (50 mesaj/sohbet)",
+            "bot": "Yalnızca yeni mesajlar"
+          },
+          "fit": {
+            "label": "Ne zaman",
+            "personal": "Müşteriler zaten size yazıyorsa",
+            "bot": "Menü, anket, kampanya"
+          }
+        }
+      },
+      "visual": {
+        "sameAccount": "Aynı hesap",
+        "message": "Randevu alabilir miyim?",
+        "inbox": "Omnider gelen kutusu",
+        "personalApp": "Telegram Personal",
+        "botFather": "BotFather",
+        "token": "Bot token"
+      },
+      "status": {
+        "personal": "Telegram Personal bağlantısı seçildi",
+        "bot": "Telegram Bot bağlantısı seçildi"
       }
     },
     "team": {
@@ -4856,27 +5499,340 @@
         }
       ]
     },
-    "try": {
-      "eyebrow": "Hemen deneyin",
-      "title": "Botu veya kişisel hesabı deneyin",
-      "body": "QR’ı tarayın veya bağlantıyı açın; Omnider Telegram deneyimini canlı görün.",
-      "bot": {
-        "title": "Telegram Bot",
-        "body": "Omnider botuyla hemen konuşun.",
-        "handle": "t.me/omnider_bot",
-        "url": "https://t.me/omnider_bot",
-        "cta": "Botu aç",
-        "ctaTitle": "Omnider Telegram botunu aç",
-        "imageAlt": "Omnider Telegram botu için QR kod"
+    "aiAutomation": {
+      "eyebrow": "Yapay Zeka",
+      "title": "Kanalınız için hazır Omnider AI modelini seçin",
+      "subtitle": "6 farklı Omnider AI modelinden birini birincil yanıt motoru olarak aktif edin. Persona, medya ve etiketlerle marka dilinize uygun yanıtlar üretir.",
+      "catalogTitle": "Omnider AI Model Kataloğu",
+      "catalogBadge": "Persona • Medya • Etiket",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Otomatik Dil Algılama",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Varsayılan",
+          "description": "Günlük müşteri desteği, otomatik AI yanıtları ve chatflow adımları için güçlü, hızlı ve güvenilir varsayılan model."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Satış & SSS",
+          "description": "Doğal müşteri konuşmaları, satış görüşmeleri, ürün soruları ve SSS yanıtları için yüksek kaliteli sohbet modeli."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Canlı Destek",
+          "description": "Hızlı ve doğal konuşmalar için optimize edilmiş model. Canlı destek ve chatflow adımlarında güçlü talimat takibi sağlar."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Çok Adımlı",
+          "description": "Karmaşık müşteri soruları, çok adımlı chatflow senaryoları ve güvenilir talimat takibi için gelişmiş model."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Randevu & Pro",
+          "description": "Profesyonel müşteri desteği, detaylı açıklamalar, randevu ve ürün danışmanlığı için yüksek kaliteli model."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "En Yüksek",
+          "description": "Zorlu ve çok adımlı konuşmalar, premium müşteri deneyimi ve en yüksek yanıt doğruluğu için amiral gemisi model."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Otomasyon Akışı",
+      "title": "Kod yazmadan, tek cümleyle Telegram iş akışı kurun",
+      "subtitle": "Müşteri yazdığında botun ne anlayacağını, hangi bilgiyi kontrol edeceğini ve ne zaman ekibinize devredeceğini 3 net adımda görün.",
+      "modesLabel": "Chatflow senaryosu",
+      "steps": {
+        "one": {
+          "label": "1. Adım • Müşteri Mesaj Atar",
+          "badge": "Tetikleyici"
+        },
+        "two": {
+          "label": "2. Adım • Sistem Kontrol Eder",
+          "badge": "Otomatik Sorgu"
+        },
+        "three": {
+          "label": "3. Adım • Yanıtlar veya Devreder",
+          "badge": "Buton + Ekip Devri"
+        }
       },
-      "personal": {
-        "title": "Telegram Personal",
-        "body": "Kişisel Omnider hesabına yazın.",
-        "handle": "t.me/omnidertech",
-        "url": "https://t.me/omnidertech",
-        "cta": "Hesabı aç",
-        "ctaTitle": "Omnider Telegram kişisel hesabını aç",
-        "imageAlt": "Omnider Telegram kişisel hesabı için QR kod"
+      "preview": {
+        "label": "Müşterinin Gördüğü Ekran",
+        "live": "Canlı Önizleme",
+        "time": "14:22",
+        "response": "Ortalama yanıt: 0.8 sn",
+        "active": "7/24 Aktif"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "E-Ticaret & Sipariş",
+          "one": {
+            "title": "Sipariş veya kargo kelimesi yakalanır",
+            "body": "Müşteri mesajında “sipariş, kargo, iade” geçtiğinde akış otomatik olarak başlar."
+          },
+          "two": {
+            "title": "Kargo durumunu mağazanızdan çeker",
+            "body": "Sipariş numarasını doğrular ve e-ticaret/CRM sisteminizden güncel teslimat bilgisini alır."
+          },
+          "three": {
+            "title": "Butonlu yanıt gönderir, gerekirse temsilciye bağlar",
+            "body": "Müşteriye kargo linkini ve “İade Talebi” butonunu iletir; çözülmezse Destek ekibine aktarır."
+          },
+          "sim": {
+            "user": "#4829 numaralı siparişim nerede?",
+            "bot": "Siparişiniz (#4829) dağıtıma çıktı, tahmini teslimat bugün 17:00 öncesi.",
+            "btn1": "Kargo Takip Linki",
+            "btn2": "İade Talebi Oluştur"
+          }
+        },
+        "booking": {
+          "tab": "Randevu & Klinik",
+          "one": {
+            "title": "Randevu talebi otomatik algılanır",
+            "body": "Müşteri “randevu, muayene, saat” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Takvimden boş saatleri kontrol eder",
+            "body": "Klinik veya ekip takviminize bağlanarak o günkü uygun saat dilimlerini listeler."
+          },
+          "three": {
+            "title": "Randevuyu onaylar ve hatırlatma kurar",
+            "body": "Seçilen saati kaydeder, onay mesajı atar ve randevudan 1 saat önce otomatik hatırlatır."
+          },
+          "sim": {
+            "user": "Yarın öğleden sonra için randevu alabilir miyim?",
+            "bot": "Yarın (27 Kasım) için uygun saatlerimiz aşağıdadır. Seçiminizi yapabilirsiniz:",
+            "btn1": "14:00 — Uygun",
+            "btn2": "15:30 — Uygun"
+          }
+        },
+        "lead": {
+          "tab": "Reklam & Lead",
+          "one": {
+            "title": "Reklamdan gelen ilk mesaj yakalanır",
+            "body": "Instagram veya Facebook reklamından yazan müşterinin hangi ilandan geldiğini tanır."
+          },
+          "two": {
+            "title": "AI ile ihtiyacına uygun ürünü önerir",
+            "body": "Müşterinin ekip büyüklüğünü ve bütçesini sorar, katalogdan en doğru paketi eşleştirir."
+          },
+          "three": {
+            "title": "Lead bilgisini kaydedip Satış ekibine devreder",
+            "body": "Tüm görüşme özetini CRM’e işler ve sıcak müşteriyi anında Satış temsilcisine bağlar."
+          },
+          "sim": {
+            "user": "Instagram ilanından yazıyorum, 20 kişilik ofis için teklif alabilir miyim?",
+            "bot": "20 kişilik ofisiniz için Barista Pro X2 modelimizi öneririz. Teklif dosyasını ileteyim mi?",
+            "btn1": "Teklifi Gönder",
+            "btn2": "Satış Uzmanına Bağlan"
+          }
+        },
+        "education": {
+          "tab": "Eğitim & Kurs",
+          "one": {
+            "title": "Kurs veya kayıt niyeti yakalanır",
+            "body": "Öğrenci “kurs, kayıt, kontenjan, ücret” yazdığında akış otomatik başlar."
+          },
+          "two": {
+            "title": "Program ve kontenjan bilgisini çeker",
+            "body": "Eğitim yönetim sisteminizden açık dönemleri, ücretleri ve kalan kontenjanı alır."
+          },
+          "three": {
+            "title": "Kayıt seçeneklerini sunar, danışmana bağlar",
+            "body": "Uygun programı butonlarla listeler; ödeme veya özel soru olursa kayıt danışmanına aktarır."
+          },
+          "sim": {
+            "user": "İngilizce B1 kursuna kayıt olmak istiyorum, kontenjan var mı?",
+            "bot": "B1 akşam grubunda 4 kontenjan kaldı. Başlangıç: 2 Aralık. Nasıl ilerleyelim?",
+            "btn1": "Kayıt Formunu Aç",
+            "btn2": "Danışmana Bağlan"
+          }
+        },
+        "travel": {
+          "tab": "Seyahat & Tur",
+          "one": {
+            "title": "Tur veya rezervasyon talebi algılanır",
+            "body": "Misafir “tur, uçuş, otel, rezervasyon” yazdığında akış beklemeden devreye girer."
+          },
+          "two": {
+            "title": "Müsaitlik ve fiyatı sistemden kontrol eder",
+            "body": "Tur operatörü veya rezervasyon yazılımınızdaki tarih, kişi sayısı ve müsaitliği doğrular."
+          },
+          "three": {
+            "title": "Seçenekleri sunar, rezervasyonu başlatır",
+            "body": "Uygun paketleri butonlarla gösterir; kapora veya özel istekte Operasyon ekibine bağlar."
+          },
+          "sim": {
+            "user": "15–18 Aralık Kapadokya turu için 2 kişilik yer var mı?",
+            "bot": "15–18 Aralık’ta 2 kişilik yer açık. Standart paket kişi başı ₺8.900. Devam edelim mi?",
+            "btn1": "Rezervasyonu Başlat",
+            "btn2": "Diğer Tarihler"
+          }
+        },
+        "restaurant": {
+          "tab": "Restoran & Menü",
+          "one": {
+            "title": "Sipariş veya masa talebi yakalanır",
+            "body": "Misafir “menü, sipariş, masa, rezervasyon” yazdığında restoran akışı başlar."
+          },
+          "two": {
+            "title": "Menü ve müsaitliği kontrol eder",
+            "body": "POS veya rezervasyon sisteminizden güncel menüyü, stokları ve boş masa saatlerini alır."
+          },
+          "three": {
+            "title": "Siparişi alır veya masayı onaylar",
+            "body": "Seçilen ürün veya saati kaydeder; özel istek veya şikayette salona / mutfağa aktarır."
+          },
+          "sim": {
+            "user": "Bu akşam 20:00 için 4 kişilik masa ayırtabilir miyiz?",
+            "bot": "20:00’de 4 kişilik masa müsait. Bahçe veya salon tercihinizi seçebilirsiniz:",
+            "btn1": "Bahçe Masası",
+            "btn2": "Salon Masası"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "Bot & Dönüşüm Raporları",
+      "title": "Her Telegram sohbetinin lead ve siparişe dönüşümünü ölçün",
+      "subtitle": "Bot ve kişisel hesap yanıt hızından lead kazanımına, sipariş dönüşümünden mesaj iletimine kadar Telegram sonuçlarını tek raporda izleyin.",
+      "kpis": {
+        "speed": {
+          "label": "Ort. İlk Yanıt Süresi",
+          "value": "9 sn",
+          "badge": "Anlık AI",
+          "sub": "Sektör ort. 10 dk yerine 9 sn"
+        },
+        "lead": {
+          "label": "Lead Dönüşüm Oranı",
+          "value": "%57,1",
+          "badge": "+%13,4",
+          "sub": "2.980 nitelikli Telegram lead"
+        },
+        "order": {
+          "label": "Sipariş Dönüşüm Oranı",
+          "value": "%37,2",
+          "badge": "₺2,08M",
+          "sub": "1.710 tamamlanan Telegram siparişi"
+        },
+        "bot": {
+          "label": "Bot Start → Sohbet",
+          "value": "%72,5",
+          "badge": "Yüksek",
+          "sub": "/start sonrası aktif kalan kullanıcı"
+        }
+      },
+      "funnel": {
+        "title": "Sohbetten Siparişe Dönüşüm Hunisi",
+        "subtitle": "Gelen her Telegram talebinin lead ve satışa dönüşüm adımları",
+        "badge": "ROI Raporu",
+        "aovLabel": "Ortalama Sepet / İşlem Tutarı",
+        "aovValue": "₺1.216 / Sipariş",
+        "steps": {
+          "chats": {
+            "label": "1. Gelen bot & kişisel sohbet",
+            "value": "5.220 (%100)"
+          },
+          "fast": {
+            "label": "2. 30 sn altında yanıtlanan",
+            "value": "5.168 (%99,0)"
+          },
+          "leads": {
+            "label": "3. Nitelikli lead (iletişim + talep)",
+            "value": "2.980 (%57,1)"
+          },
+          "orders": {
+            "label": "4. Tamamlanan sipariş / randevu",
+            "value": "1.710 (%37,2)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Kaynak Bazlı Telegram Raporu",
+        "subtitle": "Hangi giriş yolundan gelen müşteri daha hızlı siparişe dönüyor?",
+        "columns": {
+          "source": "Giriş Kaynağı",
+          "reply": "İlk Yanıt",
+          "lead": "Lead",
+          "order": "Sipariş"
+        },
+        "rows": {
+          "deeplink": {
+            "name": "Bot Deep Link",
+            "desc": "Reklam / web → bot start",
+            "reply": "6 sn",
+            "lead": "%66,8",
+            "order": "%43,5"
+          },
+          "bot": {
+            "name": "Organik Bot",
+            "desc": "Doğrudan bot araması",
+            "reply": "10 sn",
+            "lead": "%54,2",
+            "order": "%35,1"
+          },
+          "personal": {
+            "name": "Kişisel Hesap",
+            "desc": "Bağlı Telegram hesabı",
+            "reply": "12 sn",
+            "lead": "%51,6",
+            "order": "%33,4"
+          },
+          "channel": {
+            "name": "Kanal / Buton",
+            "desc": "Kanal postu & inline buton",
+            "reply": "14 sn",
+            "lead": "%48,9",
+            "order": "%30,2"
+          }
+        }
+      }
+    },
+    "try": {
+      "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",
+      "title": "Telegram’ı telefondan hemen deneyin",
+      "body": "Bot veya kişisel hesap QR’ını taratın — ya da tek dokunuşla sohbeti başlatın. Yapay zeka fiyat, randevu ve sipariş sorularınızı yanıtlar; gerekirse ekip devralır.",
+      "cta": "Telegram’da Sohbeti Başlat",
+      "promptsLabel": "Ne test etmek istersiniz?",
+      "linesLabel": "Telegram hattını seçin",
+      "prefillLabel": "Hazır Test Mesajı",
+      "online": "Çevrimiçi",
+      "trust": {
+        "ai": "Anında AI yanıtı (1 sn altı)",
+        "handoff": "Tek tıkla canlı ekip devri"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Fiyat & Katalog Sor",
+          "message": "Merhaba, paketleriniz ve fiyatlarınız hakkında bilgi alabilir miyim?"
+        },
+        "booking": {
+          "tab": "Randevu Oluştur",
+          "message": "Yarın öğleden sonra için demo randevusu oluşturmak istiyorum."
+        },
+        "order": {
+          "tab": "Sipariş Sorgula",
+          "message": "#4829 numaralı siparişim ne zaman teslim edilir?"
+        }
+      },
+      "lines": {
+        "bot": {
+          "title": "Telegram Bot",
+          "handle": "t.me/omnider_bot",
+          "lang": "Türkçe & İngilizce Otomatik Algılama",
+          "ctaTitle": "Omnider Telegram botunu aç",
+          "imageAlt": "Omnider Telegram botu için QR kod"
+        },
+        "personal": {
+          "title": "Telegram Personal",
+          "handle": "t.me/omnidertech",
+          "lang": "Türkçe & İngilizce Otomatik Algılama",
+          "ctaTitle": "Omnider Telegram kişisel hesabını aç",
+          "imageAlt": "Omnider Telegram kişisel hesabı için QR kod"
+        }
       }
     }
   },

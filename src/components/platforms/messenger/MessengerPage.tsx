@@ -1,6 +1,9 @@
 import "./messenger-colors.css";
 
 import { AdReferralSection } from "./AdReferralSection";
+import { AiAutomationSection } from "./AiAutomationSection";
+import { AnalyticsSection } from "./AnalyticsSection";
+import { ChatflowSection } from "./ChatflowSection";
 import { CommentsSection } from "./CommentsSection";
 import { InboxSection } from "./InboxSection";
 import { InteractiveSection } from "./InteractiveSection";
@@ -14,9 +17,12 @@ export async function MessengerPage() {
       <MessengerHero />
       <InboxSection />
       <InteractiveSection />
+      <AiAutomationSection />
+      <ChatflowSection />
       <CommentsSection />
       <PublishSection />
       <AdReferralSection />
+      <AnalyticsSection />
       <TrySection />
     </div>
   );

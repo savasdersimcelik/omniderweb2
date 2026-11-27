@@ -131,6 +131,116 @@ body:has(.ig-page) {
   color: var(--ig-purple);
 }
 
+.ig-page .wa-ai__catalog {
+  border-color: color-mix(in srgb, var(--ig-purple) 28%, transparent);
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      color-mix(in srgb, var(--ig-pink) 22%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--ig-purple) 6%, white),
+      color-mix(in srgb, var(--ig-pink) 8%, white)
+    );
+  box-shadow: 0 24px 48px -40px color-mix(in srgb, var(--ig-deep) 58%, transparent);
+}
+
+.ig-page .wa-ai__catalog-header {
+  color: var(--ig-deep);
+}
+
+.ig-page .wa-ai__catalog-header p {
+  color: color-mix(in srgb, var(--ig-deep) 72%, var(--ig-purple));
+}
+
+.ig-page .wa-ai__model {
+  border-color: color-mix(in srgb, var(--ig-purple) 18%, transparent);
+  background: color-mix(in srgb, var(--ig-purple) 3%, white);
+  box-shadow: 0 8px 18px -17px color-mix(in srgb, var(--ig-deep) 42%, transparent);
+}
+
+.ig-page .wa-ai__model[data-model="assist"] {
+  border-color: color-mix(in srgb, var(--ig-purple) 42%, transparent);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--ig-purple) 5%, white),
+    color-mix(in srgb, var(--ig-pink) 10%, white)
+  );
+}
+
+.ig-page .wa-ai__model-header h4 {
+  color: var(--ig-deep);
+}
+
+.ig-page .wa-ai__model-tag {
+  color: var(--ig-purple);
+}
+
+.ig-page .wa-ai__model-icon {
+  border-color: color-mix(in srgb, var(--ig-purple) 22%, transparent);
+  background: color-mix(in srgb, var(--ig-purple) 12%, white);
+  color: var(--ig-deep);
+}
+
+.ig-page .wa-ai__model[data-model="assist"] .wa-ai__model-icon {
+  border-color: var(--ig-deep);
+  background: var(--ig-deep);
+  color: var(--ig-light-accent);
+}
+
+.ig-page .wa-ai__model-description {
+  color: color-mix(in srgb, var(--ig-deep) 68%, #64748b);
+}
+
+.ig-page .wa-analytics {
+  --wa-deep: var(--ig-deep);
+  --wa-green: var(--ig-purple);
+}
+
+.ig-page .wa-analytics__kpi,
+.ig-page .wa-analytics__panel {
+  background: color-mix(in srgb, var(--ig-purple) 3%, white);
+}
+
+.ig-page .wa-chatflow {
+  --wa-deep: var(--ig-deep);
+  --wa-green: var(--ig-purple);
+}
+
+.ig-page .wa-chatflow__preview {
+  border-color: var(--ig-dark-line);
+  background-color: var(--ig-dark-surface);
+  color: var(--ig-dark-ink);
+}
+
+.ig-page .wa-chatflow__preview-head,
+.ig-page .wa-chatflow__preview-foot {
+  border-color: var(--ig-dark-line);
+}
+
+.ig-page .wa-chatflow__preview-foot {
+  color: var(--ig-dark-muted);
+}
+
+.ig-page .wa-chatflow__live {
+  background: var(--ig-dark-raised);
+  color: var(--ig-light-accent);
+}
+
+.ig-page .wa-chatflow__preview-foot span:last-child {
+  color: var(--ig-light-accent);
+}
+
+.ig-page .wa-chatflow__bubble.is-out {
+  background: color-mix(in srgb, var(--ig-pink) 18%, white);
+}
+
+.ig-page .wa-chatflow__actions span {
+  color: var(--ig-deep);
+}
+
 .ig-page .wa-interactive__card {
   border-color: var(--ig-dark-line);
   background-color: var(--ig-dark-surface);

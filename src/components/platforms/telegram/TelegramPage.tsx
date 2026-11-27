@@ -1,10 +1,12 @@
 import "./telegram-colors.css";
 
+import { AiAutomationSection } from "./AiAutomationSection";
+import { AnalyticsSection } from "./AnalyticsSection";
+import { ChatflowSection } from "./ChatflowSection";
 import { ConnectSection } from "./ConnectSection";
 import { InboxSection } from "./InboxSection";
 import { InteractiveSection } from "./InteractiveSection";
 import { ModesSection } from "./ModesSection";
-import { TeamSection } from "./TeamSection";
 import { TelegramHero } from "./TelegramHero";
 import { TrySection } from "./TrySection";
 
@@ -13,10 +15,12 @@ export async function TelegramPage() {
     <div className="tg-page-atmosphere tg-page">
       <TelegramHero />
       <InboxSection />
+      <ConnectSection />
       <ModesSection />
       <InteractiveSection />
-      <ConnectSection />
-      <TeamSection />
+      <AiAutomationSection />
+      <ChatflowSection />
+      <AnalyticsSection />
       <TrySection />
     </div>
   );

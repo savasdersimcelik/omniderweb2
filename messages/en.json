@@ -3984,6 +3984,298 @@
         "followUp": "The headphone set. Can you deliver tomorrow?"
       }
     },
+    "aiAutomation": {
+      "eyebrow": "Artificial intelligence",
+      "title": "Pick a ready Omnider AI model for your channel",
+      "subtitle": "Activate one of six Omnider AI models as the primary reply engine. With persona, media, and tags, answers stay in your brand voice.",
+      "catalogTitle": "Omnider AI model catalog",
+      "catalogBadge": "Persona • Media • Tags",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Automatic language detection",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Default",
+          "description": "A fast, reliable default for daily support, automatic AI replies, and chatflow steps."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Sales & FAQ",
+          "description": "A high-quality chat model for natural sales conversations, product questions, and FAQ answers."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Live support",
+          "description": "Optimized for quick, natural chats with strong instruction following in live support and chatflow steps."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Multi-step",
+          "description": "An advanced model for complex questions, multi-step chatflow scenarios, and reliable instruction following."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Booking & Pro",
+          "description": "A high-quality model for professional support, detailed explanations, bookings, and product advice."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "Highest",
+          "description": "The flagship model for hard multi-step conversations, premium experiences, and maximum answer accuracy."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Automation",
+      "title": "Build Instagram workflows in plain language — no code",
+      "subtitle": "See in three clear steps what the bot understands when a customer writes, what it checks next, and when it hands off to your team.",
+      "modesLabel": "Chatflow scenario",
+      "steps": {
+        "one": {
+          "label": "Step 1 • Customer messages",
+          "badge": "Trigger"
+        },
+        "two": {
+          "label": "Step 2 • System checks",
+          "badge": "Auto lookup"
+        },
+        "three": {
+          "label": "Step 3 • Reply or hand off",
+          "badge": "Buttons + team"
+        }
+      },
+      "preview": {
+        "label": "What the customer sees",
+        "live": "Live preview",
+        "time": "14:22",
+        "response": "Avg. reply: 0.8 sec",
+        "active": "24/7 active"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "Ecommerce & Orders",
+          "one": {
+            "title": "Order or shipping keywords are caught",
+            "body": "When the message includes “order, shipping, return”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls shipping status from your store",
+            "body": "Validates the order number and fetches live delivery data from your ecommerce/CRM system."
+          },
+          "three": {
+            "title": "Sends a button reply, or connects an agent",
+            "body": "Shares the tracking link and a Return Request button; if unresolved, routes to Support."
+          },
+          "sim": {
+            "user": "Where is my order #4829?",
+            "bot": "Order #4829 is out for delivery — estimated before 17:00 today.",
+            "btn1": "Tracking link",
+            "btn2": "Start a return"
+          }
+        },
+        "booking": {
+          "tab": "Booking & Clinic",
+          "one": {
+            "title": "Appointment intent is detected",
+            "body": "When the customer writes “appointment, visit, time”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks open slots on your calendar",
+            "body": "Connects to your clinic or team calendar and lists available windows for that day."
+          },
+          "three": {
+            "title": "Confirms the booking and sets a reminder",
+            "body": "Saves the chosen time, sends confirmation, and reminds automatically 1 hour before."
+          },
+          "sim": {
+            "user": "Can I book something for tomorrow afternoon?",
+            "bot": "Available slots for tomorrow (Nov 27) are below. Pick one:",
+            "btn1": "14:00 — Available",
+            "btn2": "15:30 — Available"
+          }
+        },
+        "lead": {
+          "tab": "Ads & Leads",
+          "one": {
+            "title": "The first ad-driven message is captured",
+            "body": "Recognizes which Instagram or Facebook ad brought the customer into the chat."
+          },
+          "two": {
+            "title": "AI recommends the right product",
+            "body": "Asks about team size and budget, then matches the best package from your catalog."
+          },
+          "three": {
+            "title": "Saves the lead and hands off to Sales",
+            "body": "Writes the conversation summary into CRM and connects the hot lead to a sales agent."
+          },
+          "sim": {
+            "user": "I’m writing from the Instagram ad — can I get a quote for a 20-person office?",
+            "bot": "For a 20-person office we recommend Barista Pro X2. Want me to send the quote?",
+            "btn1": "Send quote",
+            "btn2": "Talk to sales"
+          }
+        },
+        "education": {
+          "tab": "Education & Courses",
+          "one": {
+            "title": "Course or enrollment intent is caught",
+            "body": "When a student writes “course, enroll, seats, tuition”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls program and seat availability",
+            "body": "Fetches open terms, fees, and remaining seats from your education management system."
+          },
+          "three": {
+            "title": "Offers enrollment options or an advisor",
+            "body": "Lists matching programs with buttons; routes payment or special questions to enrollment staff."
+          },
+          "sim": {
+            "user": "I’d like to enroll in English B1 — any seats left?",
+            "bot": "4 seats left in the B1 evening group. Starts Dec 2. How would you like to continue?",
+            "btn1": "Open enrollment form",
+            "btn2": "Talk to an advisor"
+          }
+        },
+        "travel": {
+          "tab": "Travel & Tours",
+          "one": {
+            "title": "Tour or booking request is detected",
+            "body": "When a guest writes “tour, flight, hotel, reservation”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks availability and pricing",
+            "body": "Validates dates, party size, and inventory in your tour operator or booking software."
+          },
+          "three": {
+            "title": "Presents options and starts the booking",
+            "body": "Shows matching packages with buttons; hands deposits or special requests to Operations."
+          },
+          "sim": {
+            "user": "Any spots left for 2 on the Dec 15–18 Cappadocia tour?",
+            "bot": "2 seats open for Dec 15–18. Standard package is $280 per person. Shall we continue?",
+            "btn1": "Start reservation",
+            "btn2": "Other dates"
+          }
+        },
+        "restaurant": {
+          "tab": "Restaurant & Menu",
+          "one": {
+            "title": "Order or table request is caught",
+            "body": "When a guest writes “menu, order, table, reservation”, the restaurant flow starts."
+          },
+          "two": {
+            "title": "Checks the menu and availability",
+            "body": "Pulls the live menu, stock, and open table times from your POS or reservation system."
+          },
+          "three": {
+            "title": "Takes the order or confirms the table",
+            "body": "Saves the chosen items or time; routes special requests or complaints to the floor team."
+          },
+          "sim": {
+            "user": "Can we reserve a table for 4 at 20:00 tonight?",
+            "bot": "A table for 4 is available at 20:00. Choose garden or indoor seating:",
+            "btn1": "Garden table",
+            "btn2": "Indoor table"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "DM & Conversion Reports",
+      "title": "Measure how every Instagram DM turns into leads and orders",
+      "subtitle": "Track first-response speed, Story and comment-sourced leads, order conversion, and delivery in one Instagram-focused report.",
+      "kpis": {
+        "speed": {
+          "label": "Avg. First Response",
+          "value": "11 sec",
+          "badge": "Instant AI",
+          "sub": "11 sec instead of an 18 min industry average"
+        },
+        "lead": {
+          "label": "DM Lead Conversion",
+          "value": "61.2%",
+          "badge": "+14.1%",
+          "sub": "3,240 qualified Instagram leads"
+        },
+        "order": {
+          "label": "Order Conversion Rate",
+          "value": "34.8%",
+          "badge": "₺1.94M",
+          "sub": "1,420 completed DM orders"
+        },
+        "comment": {
+          "label": "Comment → DM Rate",
+          "value": "42.6%",
+          "badge": "High",
+          "sub": "Share of commenters who open a chat"
+        }
+      },
+      "funnel": {
+        "title": "DM-to-Order Conversion Funnel",
+        "subtitle": "How every Instagram request becomes a lead and a sale",
+        "badge": "ROI report",
+        "aovLabel": "Average basket / transaction",
+        "aovValue": "₺1,368 / order",
+        "steps": {
+          "chats": {
+            "label": "1. Inbound DMs & Story engagement",
+            "value": "5,280 (100%)"
+          },
+          "fast": {
+            "label": "2. Answered under 30 seconds",
+            "value": "5,214 (98.7%)"
+          },
+          "leads": {
+            "label": "3. Qualified leads (contact + intent)",
+            "value": "3,240 (61.2%)"
+          },
+          "orders": {
+            "label": "4. Completed orders / appointments",
+            "value": "1,420 (34.8%)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Source-Based Instagram Report",
+        "subtitle": "Which entry path turns customers into orders fastest?",
+        "columns": {
+          "source": "Entry source",
+          "reply": "First reply",
+          "lead": "Lead",
+          "order": "Order"
+        },
+        "rows": {
+          "ads": {
+            "name": "Click-to-DM ads",
+            "desc": "Meta ads → Instagram DM",
+            "reply": "7 sec",
+            "lead": "68.4%",
+            "order": "44.2%"
+          },
+          "stories": {
+            "name": "Story replies",
+            "desc": "Story sticker & reply",
+            "reply": "9 sec",
+            "lead": "59.1%",
+            "order": "36.8%"
+          },
+          "comments": {
+            "name": "Comment → DM",
+            "desc": "Post comment to chat",
+            "reply": "13 sec",
+            "lead": "54.7%",
+            "order": "32.4%"
+          },
+          "organic": {
+            "name": "Organic DM",
+            "desc": "Direct profile messages",
+            "reply": "15 sec",
+            "lead": "47.3%",
+            "order": "28.9%"
+          }
+        }
+      }
+    },
     "try": {
       "eyebrow": "Live demo • 24/7 active",
       "title": "Try Instagram DM from your phone now",
@@ -4393,6 +4685,298 @@
         "followUp": "The headphone set. Can you deliver tomorrow?"
       }
     },
+    "aiAutomation": {
+      "eyebrow": "Artificial intelligence",
+      "title": "Pick a ready Omnider AI model for your channel",
+      "subtitle": "Activate one of six Omnider AI models as the primary reply engine. With persona, media, and tags, answers stay in your brand voice.",
+      "catalogTitle": "Omnider AI model catalog",
+      "catalogBadge": "Persona • Media • Tags",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Automatic language detection",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Default",
+          "description": "A fast, reliable default for daily support, automatic AI replies, and chatflow steps."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Sales & FAQ",
+          "description": "A high-quality chat model for natural sales conversations, product questions, and FAQ answers."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Live support",
+          "description": "Optimized for quick, natural chats with strong instruction following in live support and chatflow steps."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Multi-step",
+          "description": "An advanced model for complex questions, multi-step chatflow scenarios, and reliable instruction following."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Booking & Pro",
+          "description": "A high-quality model for professional support, detailed explanations, bookings, and product advice."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "Highest",
+          "description": "The flagship model for hard multi-step conversations, premium experiences, and maximum answer accuracy."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Automation",
+      "title": "Build Messenger workflows in plain language — no code",
+      "subtitle": "See in three clear steps what the bot understands when a customer writes, what it checks next, and when it hands off to your team.",
+      "modesLabel": "Chatflow scenario",
+      "steps": {
+        "one": {
+          "label": "Step 1 • Customer messages",
+          "badge": "Trigger"
+        },
+        "two": {
+          "label": "Step 2 • System checks",
+          "badge": "Auto lookup"
+        },
+        "three": {
+          "label": "Step 3 • Reply or hand off",
+          "badge": "Buttons + team"
+        }
+      },
+      "preview": {
+        "label": "What the customer sees",
+        "live": "Live preview",
+        "time": "14:22",
+        "response": "Avg. reply: 0.8 sec",
+        "active": "24/7 active"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "Ecommerce & Orders",
+          "one": {
+            "title": "Order or shipping keywords are caught",
+            "body": "When the message includes “order, shipping, return”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls shipping status from your store",
+            "body": "Validates the order number and fetches live delivery data from your ecommerce/CRM system."
+          },
+          "three": {
+            "title": "Sends a button reply, or connects an agent",
+            "body": "Shares the tracking link and a Return Request button; if unresolved, routes to Support."
+          },
+          "sim": {
+            "user": "Where is my order #4829?",
+            "bot": "Order #4829 is out for delivery — estimated before 17:00 today.",
+            "btn1": "Tracking link",
+            "btn2": "Start a return"
+          }
+        },
+        "booking": {
+          "tab": "Booking & Clinic",
+          "one": {
+            "title": "Appointment intent is detected",
+            "body": "When the customer writes “appointment, visit, time”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks open slots on your calendar",
+            "body": "Connects to your clinic or team calendar and lists available windows for that day."
+          },
+          "three": {
+            "title": "Confirms the booking and sets a reminder",
+            "body": "Saves the chosen time, sends confirmation, and reminds automatically 1 hour before."
+          },
+          "sim": {
+            "user": "Can I book something for tomorrow afternoon?",
+            "bot": "Available slots for tomorrow (Nov 27) are below. Pick one:",
+            "btn1": "14:00 — Available",
+            "btn2": "15:30 — Available"
+          }
+        },
+        "lead": {
+          "tab": "Ads & Leads",
+          "one": {
+            "title": "The first ad-driven message is captured",
+            "body": "Recognizes which Instagram or Facebook ad brought the customer into the chat."
+          },
+          "two": {
+            "title": "AI recommends the right product",
+            "body": "Asks about team size and budget, then matches the best package from your catalog."
+          },
+          "three": {
+            "title": "Saves the lead and hands off to Sales",
+            "body": "Writes the conversation summary into CRM and connects the hot lead to a sales agent."
+          },
+          "sim": {
+            "user": "I’m writing from the Instagram ad — can I get a quote for a 20-person office?",
+            "bot": "For a 20-person office we recommend Barista Pro X2. Want me to send the quote?",
+            "btn1": "Send quote",
+            "btn2": "Talk to sales"
+          }
+        },
+        "education": {
+          "tab": "Education & Courses",
+          "one": {
+            "title": "Course or enrollment intent is caught",
+            "body": "When a student writes “course, enroll, seats, tuition”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls program and seat availability",
+            "body": "Fetches open terms, fees, and remaining seats from your education management system."
+          },
+          "three": {
+            "title": "Offers enrollment options or an advisor",
+            "body": "Lists matching programs with buttons; routes payment or special questions to enrollment staff."
+          },
+          "sim": {
+            "user": "I’d like to enroll in English B1 — any seats left?",
+            "bot": "4 seats left in the B1 evening group. Starts Dec 2. How would you like to continue?",
+            "btn1": "Open enrollment form",
+            "btn2": "Talk to an advisor"
+          }
+        },
+        "travel": {
+          "tab": "Travel & Tours",
+          "one": {
+            "title": "Tour or booking request is detected",
+            "body": "When a guest writes “tour, flight, hotel, reservation”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks availability and pricing",
+            "body": "Validates dates, party size, and inventory in your tour operator or booking software."
+          },
+          "three": {
+            "title": "Presents options and starts the booking",
+            "body": "Shows matching packages with buttons; hands deposits or special requests to Operations."
+          },
+          "sim": {
+            "user": "Any spots left for 2 on the Dec 15–18 Cappadocia tour?",
+            "bot": "2 seats open for Dec 15–18. Standard package is $280 per person. Shall we continue?",
+            "btn1": "Start reservation",
+            "btn2": "Other dates"
+          }
+        },
+        "restaurant": {
+          "tab": "Restaurant & Menu",
+          "one": {
+            "title": "Order or table request is caught",
+            "body": "When a guest writes “menu, order, table, reservation”, the restaurant flow starts."
+          },
+          "two": {
+            "title": "Checks the menu and availability",
+            "body": "Pulls the live menu, stock, and open table times from your POS or reservation system."
+          },
+          "three": {
+            "title": "Takes the order or confirms the table",
+            "body": "Saves the chosen items or time; routes special requests or complaints to the floor team."
+          },
+          "sim": {
+            "user": "Can we reserve a table for 4 at 20:00 tonight?",
+            "bot": "A table for 4 is available at 20:00. Choose garden or indoor seating:",
+            "btn1": "Garden table",
+            "btn2": "Indoor table"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "Revenue & Conversion Reports",
+      "title": "Measure how every Messenger chat turns into leads and orders",
+      "subtitle": "Track first-response speed, qualified lead capture, order conversion, and delivery reliability in one Messenger-focused report.",
+      "kpis": {
+        "speed": {
+          "label": "Avg. First Response",
+          "value": "13 sec",
+          "badge": "Instant AI",
+          "sub": "13 sec instead of a 15 min industry average"
+        },
+        "lead": {
+          "label": "Lead Conversion Rate",
+          "value": "55.8%",
+          "badge": "+11.2%",
+          "sub": "2,640 qualified prospects"
+        },
+        "order": {
+          "label": "Order Conversion Rate",
+          "value": "36.4%",
+          "badge": "₺2.21M",
+          "sub": "1,520 completed Messenger orders"
+        },
+        "fail": {
+          "label": "Delivery Fail Rate",
+          "value": "0.6%",
+          "badge": "Very low",
+          "sub": "99.4% successful message delivery"
+        }
+      },
+      "funnel": {
+        "title": "Chat-to-Order Conversion Funnel",
+        "subtitle": "How every Messenger request becomes a lead and a sale",
+        "badge": "ROI report",
+        "aovLabel": "Average basket / transaction",
+        "aovValue": "₺1,455 / order",
+        "steps": {
+          "chats": {
+            "label": "1. Inbound chats & ad engagement",
+            "value": "4,730 (100%)"
+          },
+          "fast": {
+            "label": "2. Answered under 30 seconds",
+            "value": "4,682 (99.0%)"
+          },
+          "leads": {
+            "label": "3. Qualified leads (contact + intent)",
+            "value": "2,640 (55.8%)"
+          },
+          "orders": {
+            "label": "4. Completed orders / appointments",
+            "value": "1,520 (36.4%)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Source-Based Conversion Report",
+        "subtitle": "Which channel turns customers into orders fastest?",
+        "columns": {
+          "source": "Entry source",
+          "reply": "First reply",
+          "lead": "Lead",
+          "order": "Order"
+        },
+        "rows": {
+          "ads": {
+            "name": "Click-to-Messenger",
+            "desc": "Facebook & Instagram ads",
+            "reply": "8 sec",
+            "lead": "63.2%",
+            "order": "45.1%"
+          },
+          "comments": {
+            "name": "Comment replies",
+            "desc": "Page post → chat",
+            "reply": "14 sec",
+            "lead": "52.6%",
+            "order": "33.8%"
+          },
+          "plugin": {
+            "name": "Website plugin",
+            "desc": "Messenger customer chat",
+            "reply": "11 sec",
+            "lead": "50.4%",
+            "order": "31.9%"
+          },
+          "organic": {
+            "name": "Organic page message",
+            "desc": "Direct Messenger inbox",
+            "reply": "16 sec",
+            "lead": "46.8%",
+            "order": "29.4%"
+          }
+        }
+      }
+    },
     "try": {
       "eyebrow": "Live demo • 24/7 active",
       "title": "Try Messenger from your phone now",
@@ -4767,74 +5351,133 @@
       "eyebrow": "Telegram Bot interactions",
       "title": "Let them tap, not type",
       "subtitle": "Guide customers with button menus, polls, and media albums. Omnider maps each message to Telegram Bot API formats.",
-      "cards": [
-        {
-          "id": "menus",
-          "title": "Button menus",
-          "desc": "Customers don’t have to type. Offer actions like open a link, call, email, or share a phone number/location as Telegram buttons—and the tap lands in your panel instantly.",
-          "points": [
-            "Inline or reply keyboard routing",
-            "Web, phone, and email buttons"
-          ]
-        },
-        {
-          "id": "polls",
-          "title": "Polls and votes",
-          "desc": "Send booking days, preferences, or satisfaction questions as polls. Results show in the chat so your team can see which option is ahead.",
-          "points": [
-            "Single or multi-choice polls",
-            "Live vote breakdown"
-          ]
-        },
-        {
-          "id": "albums",
-          "title": "Media albums",
-          "desc": "Send product photos, catalog pages, or documents as one album. Customers swipe through; the bot continues the next step in the same chat.",
-          "points": [
-            "Up to 10 media items in one message",
-            "Images, documents, or mixed albums"
-          ]
-        }
-      ],
-      "demo": {
-        "botName": "Omnider Bot",
-        "online": "online",
-        "greeting": "How can we help?",
-        "keys": [
+      "preview": "Sample chat",
+      "tabs": {
+        "menus": "Button menus",
+        "polls": "Polls and votes",
+        "albums": "Media albums"
+      },
+      "cards": {
+        "menus": "Inline or reply keyboards. Shoppers tap instead of typing; that choice continues the flow.",
+        "polls": "Booking days, preferences, or satisfaction questions as polls — results stay in the chat.",
+        "albums": "Up to 10 photos or documents in one album. Customers swipe; the bot continues in the same chat."
+      },
+      "menus": {
+        "prompt": "How can we help?",
+        "options": [
           "Price",
           "Stock",
           "Booking"
         ],
-        "poll": "Which day works?",
-        "options": [
-          "Tuesday",
-          "Thursday",
-          "Saturday"
-        ],
-        "typing": "typing…"
+        "follow": "Yellow headphones 1,249 TRY · in stock."
+      },
+      "polls": {
+        "intro": "Which day works for a visit?",
+        "rows": [
+          {
+            "title": "Tuesday",
+            "description": "Morning slots open",
+            "picked": true
+          },
+          {
+            "title": "Thursday",
+            "description": "Afternoon only"
+          },
+          {
+            "title": "Saturday",
+            "description": "Weekend visit"
+          }
+        ]
+      },
+      "albums": {
+        "title": "Summer catalog",
+        "subtitle": "3 photos · swipe to browse",
+        "follow": "Album sent · continue in chat"
       }
     },
     "connect": {
-      "eyebrow": "Telegram Personal",
-      "title": "Connect the personal account with QR",
-      "subtitle": "Link your Telegram account via Unipile; contacts, groups, and chat history land in the panel.",
-      "stepsLabel": "Connect in 3 steps",
-      "steps": [
-        "Scan the QR in Telegram, or open the 15-minute sign-in link.",
-        "Your contacts and groups are imported.",
-        "Last 50 messages per chat arrive without spending credits."
-      ],
-      "features": [
-        "Your own account; contact, group, and history sync",
-        "Messages from the phone also show in the panel"
-      ],
-      "note": "For bulk messaging, a bot or WhatsApp Business is a better fit.",
-      "widget": {
-        "channel": "Telegram Personal",
-        "waiting": "Scan with Telegram",
-        "status": "Waiting",
-        "progress": "Importing history… 50 messages/chat",
-        "echo": "You wrote from the phone → it shows in the panel too"
+      "eyebrow": "Connection options",
+      "title": "Connect Telegram the way you want",
+      "subtitle": "Link a personal account with QR, or paste a BotFather token. Omnider supports both connection methods in one inbox.",
+      "toggleLabel": "Connection type",
+      "stepsLabel": "Setup steps",
+      "modes": {
+        "personal": {
+          "label": "I use my personal Telegram",
+          "short": "Personal",
+          "title": "QR or sign-in link"
+        },
+        "bot": {
+          "label": "I have a Telegram bot",
+          "short": "Bot",
+          "title": "BotFather token"
+        }
+      },
+      "steps": {
+        "personal": [
+          {
+            "title": "Scan the QR",
+            "body": "Scan with Telegram, or open the 15-minute sign-in link."
+          },
+          {
+            "title": "Import contacts and groups",
+            "body": "Your contacts and groups sync into the panel."
+          },
+          {
+            "title": "History without credits",
+            "body": "Last 50 messages per chat arrive without spending credits."
+          }
+        ],
+        "bot": [
+          {
+            "title": "Create the bot",
+            "body": "Create the bot in BotFather and copy the token."
+          },
+          {
+            "title": "Paste into Omnider",
+            "body": "Bot name and group permissions come back automatically."
+          },
+          {
+            "title": "Webhook is ready",
+            "body": "Webhook is set automatically; messages arrive instantly."
+          }
+        ]
+      },
+      "compare": {
+        "label": "What differs",
+        "caption": {
+          "personal": "Your own account stays on the phone. Contacts, groups, and history sync into Omnider.",
+          "bot": "BotFather token connects the bot. Menus, polls, and campaigns work without touching a personal account."
+        },
+        "rows": {
+          "method": {
+            "label": "How you connect",
+            "personal": "QR or sign-in link",
+            "bot": "BotFather token"
+          },
+          "history": {
+            "label": "History & contacts",
+            "personal": "Syncs (50 msgs/chat)",
+            "bot": "New messages only"
+          },
+          "fit": {
+            "label": "Best when",
+            "personal": "Customers already write you",
+            "bot": "Menus, polls, campaigns"
+          }
+        }
+      },
+      "visual": {
+        "sameAccount": "Same account",
+        "message": "Can I book an appointment?",
+        "inbox": "Omnider inbox",
+        "personalApp": "Telegram Personal",
+        "botFather": "BotFather",
+        "token": "Bot token"
+      },
+      "status": {
+        "personal": "Telegram Personal connection selected",
+        "bot": "Telegram Bot connection selected"
       }
     },
     "team": {
@@ -4856,27 +5499,340 @@
         }
       ]
     },
-    "try": {
-      "eyebrow": "Try it now",
-      "title": "Try the bot or personal account",
-      "body": "Scan the QR or open the link to experience Omnider Telegram live.",
-      "bot": {
-        "title": "Telegram Bot",
-        "body": "Talk to the Omnider bot right away.",
-        "handle": "t.me/omnider_bot",
-        "url": "https://t.me/omnider_bot",
-        "cta": "Open bot",
-        "ctaTitle": "Open the Omnider Telegram bot",
-        "imageAlt": "QR code for the Omnider Telegram bot"
+    "aiAutomation": {
+      "eyebrow": "Artificial intelligence",
+      "title": "Pick a ready Omnider AI model for your channel",
+      "subtitle": "Activate one of six Omnider AI models as the primary reply engine. With persona, media, and tags, answers stay in your brand voice.",
+      "catalogTitle": "Omnider AI model catalog",
+      "catalogBadge": "Persona • Media • Tags",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Automatic language detection",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Default",
+          "description": "A fast, reliable default for daily support, automatic AI replies, and chatflow steps."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Sales & FAQ",
+          "description": "A high-quality chat model for natural sales conversations, product questions, and FAQ answers."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Live support",
+          "description": "Optimized for quick, natural chats with strong instruction following in live support and chatflow steps."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Multi-step",
+          "description": "An advanced model for complex questions, multi-step chatflow scenarios, and reliable instruction following."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Booking & Pro",
+          "description": "A high-quality model for professional support, detailed explanations, bookings, and product advice."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "Highest",
+          "description": "The flagship model for hard multi-step conversations, premium experiences, and maximum answer accuracy."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Automation",
+      "title": "Build Telegram workflows in plain language — no code",
+      "subtitle": "See in three clear steps what the bot understands when a customer writes, what it checks next, and when it hands off to your team.",
+      "modesLabel": "Chatflow scenario",
+      "steps": {
+        "one": {
+          "label": "Step 1 • Customer messages",
+          "badge": "Trigger"
+        },
+        "two": {
+          "label": "Step 2 • System checks",
+          "badge": "Auto lookup"
+        },
+        "three": {
+          "label": "Step 3 • Reply or hand off",
+          "badge": "Buttons + team"
+        }
       },
-      "personal": {
-        "title": "Telegram Personal",
-        "body": "Message the Omnider personal account.",
-        "handle": "t.me/omnidertech",
-        "url": "https://t.me/omnidertech",
-        "cta": "Open account",
-        "ctaTitle": "Open the Omnider personal Telegram account",
-        "imageAlt": "QR code for the Omnider personal Telegram account"
+      "preview": {
+        "label": "What the customer sees",
+        "live": "Live preview",
+        "time": "14:22",
+        "response": "Avg. reply: 0.8 sec",
+        "active": "24/7 active"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "Ecommerce & Orders",
+          "one": {
+            "title": "Order or shipping keywords are caught",
+            "body": "When the message includes “order, shipping, return”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls shipping status from your store",
+            "body": "Validates the order number and fetches live delivery data from your ecommerce/CRM system."
+          },
+          "three": {
+            "title": "Sends a button reply, or connects an agent",
+            "body": "Shares the tracking link and a Return Request button; if unresolved, routes to Support."
+          },
+          "sim": {
+            "user": "Where is my order #4829?",
+            "bot": "Order #4829 is out for delivery — estimated before 17:00 today.",
+            "btn1": "Tracking link",
+            "btn2": "Start a return"
+          }
+        },
+        "booking": {
+          "tab": "Booking & Clinic",
+          "one": {
+            "title": "Appointment intent is detected",
+            "body": "When the customer writes “appointment, visit, time”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks open slots on your calendar",
+            "body": "Connects to your clinic or team calendar and lists available windows for that day."
+          },
+          "three": {
+            "title": "Confirms the booking and sets a reminder",
+            "body": "Saves the chosen time, sends confirmation, and reminds automatically 1 hour before."
+          },
+          "sim": {
+            "user": "Can I book something for tomorrow afternoon?",
+            "bot": "Available slots for tomorrow (Nov 27) are below. Pick one:",
+            "btn1": "14:00 — Available",
+            "btn2": "15:30 — Available"
+          }
+        },
+        "lead": {
+          "tab": "Ads & Leads",
+          "one": {
+            "title": "The first ad-driven message is captured",
+            "body": "Recognizes which Instagram or Facebook ad brought the customer into the chat."
+          },
+          "two": {
+            "title": "AI recommends the right product",
+            "body": "Asks about team size and budget, then matches the best package from your catalog."
+          },
+          "three": {
+            "title": "Saves the lead and hands off to Sales",
+            "body": "Writes the conversation summary into CRM and connects the hot lead to a sales agent."
+          },
+          "sim": {
+            "user": "I’m writing from the Instagram ad — can I get a quote for a 20-person office?",
+            "bot": "For a 20-person office we recommend Barista Pro X2. Want me to send the quote?",
+            "btn1": "Send quote",
+            "btn2": "Talk to sales"
+          }
+        },
+        "education": {
+          "tab": "Education & Courses",
+          "one": {
+            "title": "Course or enrollment intent is caught",
+            "body": "When a student writes “course, enroll, seats, tuition”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls program and seat availability",
+            "body": "Fetches open terms, fees, and remaining seats from your education management system."
+          },
+          "three": {
+            "title": "Offers enrollment options or an advisor",
+            "body": "Lists matching programs with buttons; routes payment or special questions to enrollment staff."
+          },
+          "sim": {
+            "user": "I’d like to enroll in English B1 — any seats left?",
+            "bot": "4 seats left in the B1 evening group. Starts Dec 2. How would you like to continue?",
+            "btn1": "Open enrollment form",
+            "btn2": "Talk to an advisor"
+          }
+        },
+        "travel": {
+          "tab": "Travel & Tours",
+          "one": {
+            "title": "Tour or booking request is detected",
+            "body": "When a guest writes “tour, flight, hotel, reservation”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks availability and pricing",
+            "body": "Validates dates, party size, and inventory in your tour operator or booking software."
+          },
+          "three": {
+            "title": "Presents options and starts the booking",
+            "body": "Shows matching packages with buttons; hands deposits or special requests to Operations."
+          },
+          "sim": {
+            "user": "Any spots left for 2 on the Dec 15–18 Cappadocia tour?",
+            "bot": "2 seats open for Dec 15–18. Standard package is $280 per person. Shall we continue?",
+            "btn1": "Start reservation",
+            "btn2": "Other dates"
+          }
+        },
+        "restaurant": {
+          "tab": "Restaurant & Menu",
+          "one": {
+            "title": "Order or table request is caught",
+            "body": "When a guest writes “menu, order, table, reservation”, the restaurant flow starts."
+          },
+          "two": {
+            "title": "Checks the menu and availability",
+            "body": "Pulls the live menu, stock, and open table times from your POS or reservation system."
+          },
+          "three": {
+            "title": "Takes the order or confirms the table",
+            "body": "Saves the chosen items or time; routes special requests or complaints to the floor team."
+          },
+          "sim": {
+            "user": "Can we reserve a table for 4 at 20:00 tonight?",
+            "bot": "A table for 4 is available at 20:00. Choose garden or indoor seating:",
+            "btn1": "Garden table",
+            "btn2": "Indoor table"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "Bot & Conversion Reports",
+      "title": "Measure how every Telegram chat turns into leads and orders",
+      "subtitle": "Track bot and personal-account response speed, lead capture, order conversion, and delivery in one Telegram-focused report.",
+      "kpis": {
+        "speed": {
+          "label": "Avg. First Response",
+          "value": "9 sec",
+          "badge": "Instant AI",
+          "sub": "9 sec instead of a 10 min industry average"
+        },
+        "lead": {
+          "label": "Lead Conversion Rate",
+          "value": "57.1%",
+          "badge": "+13.4%",
+          "sub": "2,980 qualified Telegram leads"
+        },
+        "order": {
+          "label": "Order Conversion Rate",
+          "value": "37.2%",
+          "badge": "₺2.08M",
+          "sub": "1,710 completed Telegram orders"
+        },
+        "bot": {
+          "label": "Bot Start → Chat",
+          "value": "72.5%",
+          "badge": "High",
+          "sub": "Users who stay active after /start"
+        }
+      },
+      "funnel": {
+        "title": "Chat-to-Order Conversion Funnel",
+        "subtitle": "How every Telegram request becomes a lead and a sale",
+        "badge": "ROI report",
+        "aovLabel": "Average basket / transaction",
+        "aovValue": "₺1,216 / order",
+        "steps": {
+          "chats": {
+            "label": "1. Inbound bot & personal chats",
+            "value": "5,220 (100%)"
+          },
+          "fast": {
+            "label": "2. Answered under 30 seconds",
+            "value": "5,168 (99.0%)"
+          },
+          "leads": {
+            "label": "3. Qualified leads (contact + intent)",
+            "value": "2,980 (57.1%)"
+          },
+          "orders": {
+            "label": "4. Completed orders / appointments",
+            "value": "1,710 (37.2%)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Source-Based Telegram Report",
+        "subtitle": "Which entry path turns customers into orders fastest?",
+        "columns": {
+          "source": "Entry source",
+          "reply": "First reply",
+          "lead": "Lead",
+          "order": "Order"
+        },
+        "rows": {
+          "deeplink": {
+            "name": "Bot deep link",
+            "desc": "Ads / web → bot start",
+            "reply": "6 sec",
+            "lead": "66.8%",
+            "order": "43.5%"
+          },
+          "bot": {
+            "name": "Organic bot",
+            "desc": "Direct bot search",
+            "reply": "10 sec",
+            "lead": "54.2%",
+            "order": "35.1%"
+          },
+          "personal": {
+            "name": "Personal account",
+            "desc": "Linked Telegram account",
+            "reply": "12 sec",
+            "lead": "51.6%",
+            "order": "33.4%"
+          },
+          "channel": {
+            "name": "Channel / button",
+            "desc": "Channel post & inline button",
+            "reply": "14 sec",
+            "lead": "48.9%",
+            "order": "30.2%"
+          }
+        }
+      }
+    },
+    "try": {
+      "eyebrow": "Live demo • 24/7 active",
+      "title": "Try Telegram from your phone now",
+      "body": "Scan the bot or personal account QR — or start a chat in one tap. AI answers pricing, booking, and order questions; the team takes over when needed.",
+      "cta": "Start chat in Telegram",
+      "promptsLabel": "What do you want to test?",
+      "linesLabel": "Choose Telegram line",
+      "prefillLabel": "Ready test message",
+      "online": "Online",
+      "trust": {
+        "ai": "Instant AI reply (under 1 sec)",
+        "handoff": "One-tap live team handoff"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Ask pricing & catalog",
+          "message": "Hi, can I get details about your packages and pricing?"
+        },
+        "booking": {
+          "tab": "Book a demo",
+          "message": "I’d like to book a demo for tomorrow afternoon."
+        },
+        "order": {
+          "tab": "Track an order",
+          "message": "When will order #4829 be delivered?"
+        }
+      },
+      "lines": {
+        "bot": {
+          "title": "Telegram Bot",
+          "handle": "t.me/omnider_bot",
+          "lang": "Turkish & English auto-detect",
+          "ctaTitle": "Open the Omnider Telegram bot",
+          "imageAlt": "QR code for the Omnider Telegram bot"
+        },
+        "personal": {
+          "title": "Telegram Personal",
+          "handle": "t.me/omnidertech",
+          "lang": "Turkish & English auto-detect",
+          "ctaTitle": "Open the Omnider personal Telegram account",
+          "imageAlt": "QR code for the Omnider personal Telegram account"
+        }
       }
     }
   },

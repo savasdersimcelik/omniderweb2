@@ -1,6 +1,9 @@
 import "./instagram-colors.css";
 
 import { AdReferralSection } from "./AdReferralSection";
+import { AiAutomationSection } from "./AiAutomationSection";
+import { AnalyticsSection } from "./AnalyticsSection";
+import { ChatflowSection } from "./ChatflowSection";
 import { CommentsSection } from "./CommentsSection";
 import { InboxSection } from "./InboxSection";
 import { InstagramHero } from "./InstagramHero";
@@ -14,9 +17,12 @@ export async function InstagramPage() {
       <InstagramHero />
       <InboxSection />
       <InteractiveSection />
+      <AiAutomationSection />
+      <ChatflowSection />
       <CommentsSection />
       <PublishSection />
       <AdReferralSection />
+      <AnalyticsSection />
       <TrySection />
     </div>
   );
