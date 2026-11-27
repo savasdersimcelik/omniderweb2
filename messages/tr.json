@@ -6488,6 +6488,95 @@
         "body": "Kendi widget’ınız"
       }
     },
+    "widgetDemo": {
+      "title": "Sohbet, SSS, ürünler ve sipariş takibi",
+      "description": "Ziyaretçiler tek bir widget’tan ekibinize yazabilir, sık sorulan soruları arayabilir, ürünlere bakabilir ve siparişlerini sorgulayabilir. Sekmeler arasında geçerek deneyin.",
+      "support": "Canlı destek",
+      "sampleStore": "Örnek mağaza",
+      "demo": "Demo",
+      "tabsLabel": "Widget sekmeleri",
+      "tabs": {
+        "chat": "Sohbet",
+        "faq": "SSS",
+        "products": "Ürünler",
+        "orders": "Sipariş"
+      },
+      "greeting": "Merhaba! Size nasıl yardımcı olabiliriz?",
+      "demoReply": "Mesajınız demo sohbete eklendi. Ürünleri inceleyebilir veya örnek siparişinizi sorgulayabilirsiniz.",
+      "message": "Mesajınızı yazın",
+      "send": "Mesajı gönder",
+      "faq": {
+        "search": "SSS’de ara",
+        "empty": "Aramanıza uygun soru bulunamadı.",
+        "shipping": {
+          "question": "Siparişim ne zaman kargoya verilir?",
+          "answer": "Örnek mağazada siparişler iki iş günü içinde kargoya verilir."
+        },
+        "returns": {
+          "question": "Ürünümü nasıl iade edebilirim?",
+          "answer": "İade işlemini başlatmak için sipariş numaranızla destek ekibine yazabilirsiniz."
+        },
+        "payment": {
+          "question": "Hangi ödeme yöntemleri kullanılabilir?",
+          "answer": "Örnek mağazada banka kartı ve kredi kartı geçerlidir."
+        }
+      },
+      "inStock": "Stokta",
+      "outOfStock": "Tükendi",
+      "askProduct": "Ürünü sor",
+      "productQuestion": "{name} hakkında bilgi alabilir miyim?",
+      "orderNumber": "Sipariş numarası",
+      "orderHint": "Örnek sipariş numarası {number}.",
+      "lookup": "Sorgula",
+      "orderFound": "#{number} numaralı sipariş",
+      "orderStatus": "Kargoya verildi",
+      "orderMissing": "Sipariş bulunamadı. Örnek numarayla tekrar deneyin."
+    },
+    "sourcePage": {
+      "title": "Müşteri hangi sayfadan yazıyor?",
+      "description": "Ziyaretçinin mesajı gönderdiği sayfanın başlığı ve adresi Omnider gelen kutusunda görünür. Örnek sayfayı değiştirip ekibin gördüğü bilgiyi inceleyin.",
+      "choosePage": "Örnek kaynak sayfa",
+      "visitor": "Ziyaretçi ekranı",
+      "inbox": "Omnider gelen kutusu",
+      "sourceLabel": "Mesajın kaynak sayfası",
+      "pages": {
+        "product": {
+          "label": "Ürün sayfası",
+          "name": "Aura Kulaklık",
+          "message": "Bu kulaklığın başka rengi var mı?",
+          "reply": "Evet, siyah modeli de mevcut."
+        },
+        "cart": {
+          "label": "Sepet",
+          "name": "Alışveriş Sepeti",
+          "message": "Sepetime kargo ücreti eklenecek mi?",
+          "reply": "Kargo ücretini ödeme ekranında görebilirsiniz."
+        }
+      }
+    },
+    "install": {
+      "title": "Tek satır kodla sitenize ekleyin",
+      "steps": {
+        "create": {
+          "title": "Webchat kanalını oluşturun",
+          "body": "Omnider panelinde yeni bir Webchat kanalı açıp sitenizin alan adını girin."
+        },
+        "embed": {
+          "title": "Widget kodunu sitenize ekleyin",
+          "body": "Kanalınıza özel kodu kopyalayıp sitenizin kapanış body etiketinden önce yapıştırın."
+        },
+        "test": {
+          "title": "İlk mesajı gönderin",
+          "body": "Sitenizi açın, widget’tan test mesajı gönderin ve Omnider gelen kutusunda kontrol edin."
+        }
+      },
+      "cta": "Ücretsiz başlayın",
+      "codeLabel": "Örnek kurulum kodu",
+      "keyHint": "CHANNEL_UUID yerine paneldeki Webchat kanal anahtarınızı kullanın.",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı",
+      "copyFailed": "Kod kopyalanamadı. Kodu seçip elle kopyalayabilirsiniz."
+    },
     "inbox": {
       "titleLine1": "Site sohbeti,",
       "titleLine2": "tek gelen kutu",

@@ -5,6 +5,9 @@ import { AnalyticsSection } from "./AnalyticsSection";
 import { ChatflowSection } from "./ChatflowSection";
 import { InboxSection } from "./InboxSection";
 import { InteractiveSection } from "./InteractiveSection";
+import { InstallSection } from "./InstallSection";
+import { SourcePageSection } from "./SourcePageSection";
+import { WidgetDemoSection } from "./WidgetDemoSection";
 import { WebchatHero } from "./WebchatHero";
 
 export async function WebchatPage() {
@@ -12,6 +15,9 @@ export async function WebchatPage() {
     <div className="wc-page-atmosphere wc-page">
       <WebchatHero />
       <InboxSection />
+      <WidgetDemoSection />
+      <SourcePageSection />
+      <InstallSection />
       <InteractiveSection />
       <AiAutomationSection />
       <ChatflowSection />

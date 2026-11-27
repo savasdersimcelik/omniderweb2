@@ -6488,6 +6488,95 @@
         "body": "Your own widget"
       }
     },
+    "widgetDemo": {
+      "title": "Chat, FAQs, products, and order tracking",
+      "description": "Visitors can message your team, search FAQs, browse products, and check orders from one widget. Switch tabs to try it.",
+      "support": "Live support",
+      "sampleStore": "Sample store",
+      "demo": "Demo",
+      "tabsLabel": "Widget tabs",
+      "tabs": {
+        "chat": "Chat",
+        "faq": "FAQs",
+        "products": "Products",
+        "orders": "Orders"
+      },
+      "greeting": "Hi! How can we help?",
+      "demoReply": "Your message was added to the demo chat. You can also browse products or check the sample order.",
+      "message": "Write a message",
+      "send": "Send message",
+      "faq": {
+        "search": "Search FAQs",
+        "empty": "No questions match your search.",
+        "shipping": {
+          "question": "When will my order ship?",
+          "answer": "The sample store ships orders within two business days."
+        },
+        "returns": {
+          "question": "How do I return a product?",
+          "answer": "Message the support team with your order number to start a return."
+        },
+        "payment": {
+          "question": "Which payment methods are accepted?",
+          "answer": "The sample store accepts debit and credit cards."
+        }
+      },
+      "inStock": "In stock",
+      "outOfStock": "Sold out",
+      "askProduct": "Ask about this product",
+      "productQuestion": "Can you tell me more about {name}?",
+      "orderNumber": "Order number",
+      "orderHint": "Try sample order {number}.",
+      "lookup": "Look up",
+      "orderFound": "Order #{number}",
+      "orderStatus": "Shipped",
+      "orderMissing": "Order not found. Try again with the sample number."
+    },
+    "sourcePage": {
+      "title": "Which page is your customer messaging from?",
+      "description": "The page title and address travel with the message to the Omnider inbox. Switch sample pages to see what your team gets.",
+      "choosePage": "Sample source page",
+      "visitor": "Visitor view",
+      "inbox": "Omnider inbox",
+      "sourceLabel": "Message source page",
+      "pages": {
+        "product": {
+          "label": "Product page",
+          "name": "Aura Headphones",
+          "message": "Do these headphones come in another color?",
+          "reply": "Yes, they also come in black."
+        },
+        "cart": {
+          "label": "Cart",
+          "name": "Shopping Cart",
+          "message": "Will shipping be added to my order?",
+          "reply": "You can see the shipping cost at checkout."
+        }
+      }
+    },
+    "install": {
+      "title": "Add webchat to your site with one line of code",
+      "steps": {
+        "create": {
+          "title": "Create a Webchat channel",
+          "body": "Open a new Webchat channel in Omnider and enter your website domain."
+        },
+        "embed": {
+          "title": "Add the widget code to your site",
+          "body": "Copy your channel’s code and paste it before your site’s closing body tag."
+        },
+        "test": {
+          "title": "Send your first message",
+          "body": "Open your site, send a test message from the widget, and check the Omnider inbox."
+        }
+      },
+      "cta": "Start for free",
+      "codeLabel": "Sample embed code",
+      "keyHint": "Replace CHANNEL_UUID with the Webchat channel key shown in your dashboard.",
+      "copy": "Copy",
+      "copied": "Copied",
+      "copyFailed": "Could not copy the code. Select the code to copy it manually."
+    },
     "inbox": {
       "titleLine1": "Site chat,",
       "titleLine2": "one inbox",
