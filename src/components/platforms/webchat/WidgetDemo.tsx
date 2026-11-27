@@ -55,7 +55,9 @@ export function WidgetDemo({ products }: { products: DemoProduct[] }) {
   return (
     <Tabs.Root className="wc-widget" value={tab} onValueChange={setTab}>
       <div className="wc-widget-header">
-        <MessageCircle aria-hidden="true" size={23} />
+        <span className="wc-widget-header-mark" aria-hidden="true">
+          <MessageCircle size={20} />
+        </span>
         <div>
           <p className="wc-widget-title">{t("support")}</p>
           <p className="wc-widget-subtitle">{t("sampleStore")}</p>

@@ -4,7 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { getOmniderApiUrl } from "@/lib/site";
 import { CopyEmbedButton } from "./CopyEmbedButton";
 
-const steps = ["create", "embed", "test"] as const;
+const steps = ["create", "embed"] as const;
 
 export async function InstallSection() {
   const t = await getTranslations("PlatformWebchat.install");

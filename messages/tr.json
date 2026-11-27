@@ -6478,17 +6478,17 @@
     },
     "hero": {
       "badge": "Webchat",
-      "titleLine1": "Sitenizde konuşsun,",
-      "titleLine2": "yapay zeka yanıtlasın",
-      "description": "Tek satır kodla webchat widget’ını ekleyin; ziyaretçi mesajlarını ortak gelen kutusunda toplayın, yapay zeka ve chatbot ile anında yanıtlayın.",
+      "titleLine1": "Web siteniz artık",
+      "titleLine2": "müşterilerinizle konuşuyor",
+      "description": "Tek satır kodla canlı sohbet widget’ını ekleyin. Ziyaretçi mesajları ortak gelen kutusunda toplanır; yapay zeka yanıtlar, ekibiniz gerektiğinde devralır.",
       "provider": {
         "title": "Omnider Webchat",
         "body": "Kendi widget’ınız"
       }
     },
     "widgetDemo": {
-      "title": "Sohbet, SSS, ürünler ve sipariş takibi",
-      "description": "Ziyaretçiler tek bir widget’tan ekibinize yazabilir, sık sorulan soruları arayabilir, ürünlere bakabilir ve siparişlerini sorgulayabilir. Sekmeler arasında geçerek deneyin.",
+      "title": "SSS, ürün ve sipariş aynı widget’ta",
+      "description": "Ziyaretçi önce SSS, ürün veya sipariş sekmesini kullanır; takılırsa aynı pencereden ekibe yazar. Boş sekmeler gizlenir.",
       "support": "Canlı destek",
       "sampleStore": "Örnek mağaza",
       "demo": "Demo",
@@ -6528,7 +6528,27 @@
       "lookup": "Sorgula",
       "orderFound": "#{number} numaralı sipariş",
       "orderStatus": "Kargoya verildi",
-      "orderMissing": "Sipariş bulunamadı. Örnek numarayla tekrar deneyin."
+      "orderMissing": "Sipariş bulunamadı. Örnek numarayla tekrar deneyin.",
+      "eyebrow": "Widget sekmeleri",
+      "note": "İçerik yoksa sekme görünmez · Panelden tek tıkla aç/kapa · Mobilde tam ekran",
+      "points": {
+        "chat": {
+          "title": "Sohbet",
+          "body": "Canlı destek ve yapay zeka aynı pencerede. Ziyaretçi başka ekrana geçmeden yazar; mesaj ortak gelen kutusuna düşer."
+        },
+        "faq": {
+          "title": "S.S.S",
+          "body": "Paneldeki SSS kayıtları widget’ta aranır. Yazıldıkça liste daralır; soruya basınca cevap akordeon olarak açılır."
+        },
+        "products": {
+          "title": "Ürünler",
+          "body": "Katalog widget’ta listelenir. Ziyaretçi arar, stoktakileri süzer; ürüne basınca sohbette sorabilir veya sayfaya gider."
+        },
+        "orders": {
+          "title": "Sipariş",
+          "body": "Sipariş numarası eşleşince durum, kalemler ve kargo takip linki görünür. Bağlı mağaza siparişleri senkronlanır."
+        }
+      }
     },
     "sourcePage": {
       "title": "Müşteri hangi sayfadan yazıyor?",
@@ -6550,7 +6570,17 @@
           "message": "Sepetime kargo ücreti eklenecek mi?",
           "reply": "Kargo ücretini ödeme ekranında görebilirsiniz."
         }
-      }
+      },
+      "eyebrow": "Sayfa bağlamı",
+      "tracked": "UTM ile izlenir",
+      "utmHint": "Banta tıklayınca sayfa UTM parametreleriyle açılır.",
+      "checks": [
+        "Her mesajda otomatik kaynak sayfa bandı",
+        "Başlık yoksa kısaltılmış adres görünür",
+        "Tıklayınca UTM’li sayfa açılır — ek kod gerekmez"
+      ],
+      "sendMessage": "Sohbeti aç",
+      "replyRole": "Omnider AI"
     },
     "install": {
       "title": "Tek satır kodla sitenize ekleyin",

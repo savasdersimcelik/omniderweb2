@@ -1,6 +1,21 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { UserTrust } from "@/components/trust";
+
+/** Mobile: soft top fade into copy only — no bottom blur. */
+const photoMaskMobile: CSSProperties = {
+  WebkitMaskImage:
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
+  maskImage:
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
+};
+
+/** Desktop: left soft fade only — no bottom blur. */
+const photoMask: CSSProperties = {
+  WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%)",
+  maskImage: "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%)",
+};
 
 export async function WebchatHero() {
   const t = await getTranslations("PlatformWebchat");
@@ -11,8 +26,20 @@ export async function WebchatHero() {
       className="wc-biz-hero wc-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b"
       aria-labelledby="wc-hero-title"
     >
-      <div className="relative z-10 mx-auto flex h-full min-h-0 w-full max-w-360 flex-col px-4 py-4 sm:px-6 lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:items-center lg:px-10 lg:py-0 xl:px-14">
-        <div className="flex min-h-0 min-w-0 flex-1 flex-col items-center justify-center text-center lg:flex-none lg:items-start lg:py-6 lg:pr-6 lg:text-left">
+      <Image
+        src="/images/platforms/webchat/hero-woman.jpg"
+        alt=""
+        width={1024}
+        height={682}
+        priority
+        unoptimized
+        sizes="65vw"
+        className="pointer-events-none absolute top-0 right-0 bottom-0 z-0 hidden h-full w-auto max-w-none object-cover lg:block"
+        style={photoMask}
+      />
+
+      <div className="relative z-10 mx-auto flex h-full min-h-0 w-full max-w-360 flex-col px-4 py-4 sm:px-6 lg:pointer-events-none lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:items-center lg:px-10 lg:py-0 xl:px-14">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col items-center justify-center text-center lg:pointer-events-auto lg:flex-none lg:items-start lg:py-6 lg:pr-6 lg:text-left">
           <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--wc-primary)] lg:mb-5 lg:gap-2.5 lg:text-[15px]">
             <Image
               src="/icons/platforms/webchat.svg"
@@ -61,8 +88,22 @@ export async function WebchatHero() {
           </div>
         </div>
 
-        {/* Hero visual slot — photo / widget preview later */}
-        <div className="relative mt-2 hidden h-[42%] shrink-0 lg:mt-0 lg:block lg:h-full" aria-hidden />
+        <div className="relative mt-2 h-[42%] shrink-0 lg:mt-0 lg:h-full">
+          <div
+            className="absolute inset-0 overflow-hidden lg:hidden"
+            style={photoMaskMobile}
+          >
+            <Image
+              src="/images/platforms/webchat/hero-woman-mobile.jpg"
+              alt=""
+              fill
+              priority
+              unoptimized
+              sizes="100vw"
+              className="object-cover object-[50%_22%]"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

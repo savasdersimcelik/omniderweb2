@@ -6478,17 +6478,17 @@
     },
     "hero": {
       "badge": "Webchat",
-      "titleLine1": "Visitors chat on-site,",
-      "titleLine2": "AI replies",
-      "description": "Add the webchat widget with one line of code, collect visitor messages in a shared inbox, and reply instantly with AI and chatbots.",
+      "titleLine1": "Your website can now",
+      "titleLine2": "talk to customers",
+      "description": "Add the live chat widget with one line of code. Visitor messages land in a shared inbox — AI replies first, your team takes over when needed.",
       "provider": {
         "title": "Omnider Webchat",
         "body": "Your own widget"
       }
     },
     "widgetDemo": {
-      "title": "Chat, FAQs, products, and order tracking",
-      "description": "Visitors can message your team, search FAQs, browse products, and check orders from one widget. Switch tabs to try it.",
+      "title": "FAQs, products, and orders in one widget",
+      "description": "Visitors use FAQ, product, or order tabs first — and message your team in the same window if needed. Empty tabs stay hidden.",
       "support": "Live support",
       "sampleStore": "Sample store",
       "demo": "Demo",
@@ -6528,7 +6528,27 @@
       "lookup": "Look up",
       "orderFound": "Order #{number}",
       "orderStatus": "Shipped",
-      "orderMissing": "Order not found. Try again with the sample number."
+      "orderMissing": "Order not found. Try again with the sample number.",
+      "eyebrow": "Widget tabs",
+      "note": "Hidden when empty · One-click toggle in the panel · Full-screen on mobile",
+      "points": {
+        "chat": {
+          "title": "Chat",
+          "body": "Live support and AI in the same window. Visitors write without leaving the page; messages land in your shared inbox."
+        },
+        "faq": {
+          "title": "FAQs",
+          "body": "Panel FAQ entries are searchable in the widget. The list narrows as they type; answers open as an accordion."
+        },
+        "products": {
+          "title": "Products",
+          "body": "Your catalog lists in the widget. Visitors search, filter in-stock items, then ask in chat or open the product page."
+        },
+        "orders": {
+          "title": "Orders",
+          "body": "When the order number matches, status, line items, and tracking appear. Synced store orders show automatically."
+        }
+      }
     },
     "sourcePage": {
       "title": "Which page is your customer messaging from?",
@@ -6550,7 +6570,17 @@
           "message": "Will shipping be added to my order?",
           "reply": "You can see the shipping cost at checkout."
         }
-      }
+      },
+      "eyebrow": "Page context",
+      "tracked": "Tracked with UTM",
+      "utmHint": "Clicking the band opens the page with UTM parameters.",
+      "checks": [
+        "Automatic source-page band on every message",
+        "Short URL when the page title is missing",
+        "Opens with UTM on click — no extra code"
+      ],
+      "sendMessage": "Open chat",
+      "replyRole": "Omnider AI"
     },
     "install": {
       "title": "Add webchat to your site with one line of code",
