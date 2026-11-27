@@ -22,7 +22,7 @@ export async function TelegramHero() {
 
   return (
     <section
-      className="tg-biz-hero tg-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b border-[color-mix(in_srgb,#178cc8_14%,transparent)]"
+      className="tg-biz-hero tg-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b"
       aria-labelledby="tg-hero-title"
     >
       <Image

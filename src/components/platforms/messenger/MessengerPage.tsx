@@ -1,3 +1,5 @@
+import "./messenger-colors.css";
+
 import { AdReferralSection } from "./AdReferralSection";
 import { CommentsSection } from "./CommentsSection";
 import { InboxSection } from "./InboxSection";
@@ -8,7 +10,7 @@ import { TrySection } from "./TrySection";
 
 export async function MessengerPage() {
   return (
-    <div className="ms-page-atmosphere">
+    <div className="ms-page-atmosphere ms-page">
       <MessengerHero />
       <InboxSection />
       <InteractiveSection />

@@ -19,7 +19,7 @@ const photoMask: CSSProperties = {
 
 function MessengerMark() {
   return (
-    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#0072e6] text-white shadow-[0_8px_16px_-10px_rgba(0,84,180,0.9)]">
+    <span className="ms-hero-mark grid size-8 shrink-0 place-items-center rounded-full text-white">
       <svg viewBox="0 0 24 24" className="size-[1.15rem]" aria-hidden>
         <path
           fill="currentColor"
@@ -35,7 +35,7 @@ export async function MessengerHero() {
 
   return (
     <section
-      className="ms-biz-hero ms-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b border-slate-200/70"
+      className="ms-biz-hero ms-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b"
       aria-labelledby="ms-biz-hero-title"
     >
       <Image
@@ -62,7 +62,7 @@ export async function MessengerHero() {
           >
             {t.rich("hero.title", {
               line: (chunks) => <span className="block whitespace-nowrap">{chunks}</span>,
-              accent: (chunks) => <span className="text-[#0072e6]">{chunks}</span>,
+              accent: (chunks) => <span className="ms-hero-accent">{chunks}</span>,
             })}
           </h1>
           <p className="mt-4 line-clamp-2 max-w-lg text-pretty text-lg leading-snug text-slate-600 lg:mt-7 lg:max-w-xl lg:text-xl lg:leading-relaxed xl:max-w-2xl xl:text-2xl">

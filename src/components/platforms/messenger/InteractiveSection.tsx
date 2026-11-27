@@ -1,6 +1,5 @@
-"use client";
-
 import {
+  CheckIcon,
   ExternalLinkIcon,
   GalleryHorizontalIcon,
   MailIcon,
@@ -8,16 +7,15 @@ import {
   MousePointerClickIcon,
   PhoneIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
-import { cn } from "@/lib/utils";
 import { ProductArt } from "./ProductArt";
 
-const COLUMNS = [
-  { id: "cards" as const, Icon: GalleryHorizontalIcon },
-  { id: "quick" as const, Icon: MessageCircleIcon },
-  { id: "actions" as const, Icon: MousePointerClickIcon },
-];
+const FEATURES = [
+  { id: "cards", icon: GalleryHorizontalIcon },
+  { id: "quick", icon: MessageCircleIcon },
+  { id: "actions", icon: MousePointerClickIcon },
+] as const;
 
 const ACTION_ICONS = {
   url: ExternalLinkIcon,
@@ -36,138 +34,120 @@ type Action = {
   label: string;
 };
 
-export function InteractiveSection() {
-  const t = useTranslations("PlatformMessenger.interactive");
-  const products = t.raw("demo.products") as Product[];
-  const quick = t.raw("demo.quick") as string[];
-  const actions = t.raw("demo.actions") as Action[];
-  const picked = t("demo.quickPicked");
+export async function InteractiveSection() {
+  const t = await getTranslations("PlatformMessenger.interactive");
+  const featured = (t.raw("products.items") as Product[])[0];
+  const quickOptions = t.raw("quick.options") as string[];
+  const actions = t.raw("actions.buttons") as Action[];
 
   return (
     <section
       id="interactive"
-      className="ms-interactive border-t border-line"
+      className="wa-interactive border-t border-line"
       aria-labelledby="ms-interactive-title"
     >
       <Container className="section">
-        <div className="wa-section-stack">
-          <header className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--color-messenger-blue)]">
-              <MessageCircleIcon className="h-3.5 w-3.5" />
+        <header className="wa-interactive__header">
+          <div>
+            <p className="wa-section-label">
+              <MessageCircleIcon aria-hidden="true" />
               {t("eyebrow")}
             </p>
-            <h2 id="ms-interactive-title" className="heading-section mt-3">
+            <h2
+              id="ms-interactive-title"
+              className="heading-section mt-3 text-balance"
+            >
               {t("title")}
             </h2>
-            <p className="ms-interactive__subtitle text-body mt-4">
-              {t("subtitle")}
-            </p>
-          </header>
-
-          <div className="ms-interactive__cols">
-            {COLUMNS.map(({ id, Icon }) => (
-              <article key={id} className="ms-interactive__col">
-                <div className="ms-interactive__col-copy">
-                  <div className="ms-interactive__col-heading">
-                    <span className="ms-interactive__col-icon">
-                      <Icon className="h-4 w-4" />
-                    </span>
-                    <h3 className="ms-interactive__col-title">{t(`tabs.${id}`)}</h3>
-                  </div>
-                  <p className="ms-interactive__col-desc">
-                    {t(`facts.${id}.body`)}
-                    {id === "cards" ? ` ${t("facts.flow.body")}` : null}
-                  </p>
-                </div>
-
-                <div className="ms-interactive__widget">
-                  {id === "cards" ? (
-                    <div className="ms-interactive__widget-inner">
-                      <p className="ms-interactive__bubble is-in">
-                        {t("demo.cardsIntro")}
-                      </p>
-                      <div className="ms-interactive__rail">
-                        {products.map((product, index) => (
-                          <article
-                            key={product.name}
-                            className={cn(
-                              "ms-interactive__pcard",
-                              index === 0 && "is-hit",
-                            )}
-                          >
-                            <div className="ms-interactive__shot">
-                              <ProductArt tone={product.tone} />
-                            </div>
-                            <p className="ms-interactive__card-body">{product.name}</p>
-                            <p className="ms-interactive__card-sub">{product.price}</p>
-                            <span className="ms-interactive__choice">
-                              {t("demo.viewProduct")}
-                            </span>
-                          </article>
-                        ))}
-                      </div>
-                      <p className="ms-interactive__bubble is-out">
-                        {t("demo.cardsFollow")}
-                      </p>
-                    </div>
-                  ) : null}
-
-                  {id === "quick" ? (
-                    <div className="ms-interactive__widget-inner">
-                      <article className="ms-interactive__card">
-                        <p className="ms-interactive__card-body">
-                          {t("demo.quickIntro")}
-                        </p>
-                        <div className="ms-interactive__actions">
-                          {quick.map((label) => (
-                            <span
-                              key={label}
-                              className={cn(
-                                "ms-interactive__choice",
-                                label === picked && "is-hit",
-                              )}
-                            >
-                              {label}
-                            </span>
-                          ))}
-                        </div>
-                      </article>
-                      <p className="ms-interactive__bubble is-out">{picked}</p>
-                    </div>
-                  ) : null}
-
-                  {id === "actions" ? (
-                    <div className="ms-interactive__widget-inner">
-                      <article className="ms-interactive__card">
-                        <p className="ms-interactive__card-body">
-                          {t("demo.actionsIntro")}
-                        </p>
-                        <div className="ms-interactive__actions">
-                          {actions.map((action, index) => {
-                            const ActionIcon = ACTION_ICONS[action.id];
-                            return (
-                              <span
-                                key={action.id}
-                                className={cn(
-                                  "ms-interactive__choice",
-                                  index === 0 && "is-hit",
-                                )}
-                              >
-                                <ActionIcon className="h-3.5 w-3.5" />
-                                {action.label}
-                              </span>
-                            );
-                          })}
-                        </div>
-                      </article>
-                    </div>
-                  ) : null}
-                </div>
-              </article>
-            ))}
           </div>
+          <div>
+            <p className="text-body text-pretty">{t("subtitle")}</p>
+          </div>
+        </header>
 
-          <p className="ms-interactive__note">{t("note")}</p>
+        <div className="wa-interactive__grid ms-interactive__grid">
+          {FEATURES.map(({ id, icon: Icon }) => (
+            <article key={id} className="wa-interactive__card">
+              <header className="wa-interactive__card-header">
+                <span className="wa-interactive__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <div>
+                  <h3>{t(`tabs.${id}`)}</h3>
+                  <p>{t(`cards.${id}`)}</p>
+                </div>
+              </header>
+
+              <div className="wa-interactive__preview">
+                <p className="wa-interactive__preview-label">{t("preview")}</p>
+
+                {id === "cards" && featured && (
+                  <div className="wa-interactive__tracking">
+                    <div className="ms-interactive__card-shot">
+                      <ProductArt tone={featured.tone} />
+                    </div>
+                    <p className="wa-interactive__message">{featured.name}</p>
+                    <p className="ms-interactive__card-price">
+                      {featured.price}
+                    </p>
+                    <ul className="wa-interactive__choices">
+                      <li data-selected>
+                        <ExternalLinkIcon aria-hidden="true" />
+                        {t("products.view")}
+                      </li>
+                    </ul>
+                    <p className="wa-interactive__result">
+                      {t("products.follow")}
+                    </p>
+                  </div>
+                )}
+
+                {id === "quick" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("quick.prompt")}
+                    </p>
+                    <ul className="wa-interactive__choices">
+                      {quickOptions.map((option, index) => (
+                        <li
+                          key={option}
+                          data-selected={index === 1 || undefined}
+                        >
+                          {option}
+                          {index === 1 && <CheckIcon aria-hidden="true" />}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="wa-interactive__result">
+                      {t("quick.follow")}
+                    </p>
+                  </>
+                )}
+
+                {id === "actions" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("actions.prompt")}
+                    </p>
+                    <ul className="wa-interactive__choices">
+                      {actions.map((action, index) => {
+                        const ActionIcon = ACTION_ICONS[action.id];
+                        return (
+                          <li
+                            key={action.id}
+                            data-selected={index === 0 || undefined}
+                          >
+                            <ActionIcon aria-hidden="true" />
+                            {action.label}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </Container>
     </section>

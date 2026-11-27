@@ -4213,37 +4213,21 @@
       "eyebrow": "Messenger’da etkileşimli mesaj",
       "title": "Yazı yazdırmayın, dokunsun",
       "subtitle": "Ürünlerinizi kart olarak gösterin, seçenekleri balon olarak sunun, linki ve telefonu butona koyun. Omnider her mesajı Messenger’ın anladığı biçime kendisi çevirir.",
-      "tabsLabel": "Mesaj biçimi",
+      "preview": "Örnek sohbet",
       "tabs": {
         "cards": "Ürün kartları",
         "quick": "Hızlı cevaplar",
         "actions": "Butonlar"
       },
-      "facts": {
-        "cards": {
-          "title": "Ürün başına bir kart",
-          "body": "Görsel, ad ve fiyat. En fazla 10 kart."
-        },
-        "quick": {
-          "title": "Seçenekler balon olur",
-          "body": "En fazla 13 balon."
-        },
-        "actions": {
-          "title": "Link, arama, e-posta",
-          "body": "En fazla 3 buton."
-        },
-        "flow": {
-          "title": "Seçim akışa geri döner",
-          "body": "Dokunuş akışa iletilir."
-        }
+      "cards": {
+        "cards": "Görsel, ad ve fiyat. En fazla 10 kart — dokunuş akışa geri döner.",
+        "quick": "Seçenekler balon olur. Müşteri yazmak yerine dokunur; seçim akışı sürdürür.",
+        "actions": "Link, arama veya e-posta buton olarak. Mesajın altında en fazla 3 aksiyon."
       },
-      "demo": {
-        "phoneName": "Atölye",
-        "phoneStatus": "şu an aktif",
-        "cardsIntro": "Size uygun 3 model buldum",
-        "cardsFollow": "Siyah deri çanta seçildi",
-        "viewProduct": "Ürünü incele",
-        "products": [
+      "products": {
+        "view": "Ürünü incele",
+        "follow": "Siyah deri çanta seçildi",
+        "items": [
           {
             "name": "Siyah deri çanta",
             "price": "1.890 TL",
@@ -4259,18 +4243,20 @@
             "price": "3.200 TL",
             "tone": "watch"
           }
-        ],
-        "quickIntro": "Hangi gün uğramak istersiniz?",
-        "quickPicked": "Salı",
-        "quick": [
+        ]
+      },
+      "quick": {
+        "prompt": "Hangi gün uğramak istersiniz?",
+        "options": [
           "Pazartesi",
           "Salı",
-          "Çarşamba",
-          "Perşembe",
-          "Cuma"
+          "Çarşamba"
         ],
-        "actionsIntro": "Size nasıl yardımcı olalım?",
-        "actions": [
+        "follow": "Salı seçildi · randevu onaylandı."
+      },
+      "actions": {
+        "prompt": "Size nasıl yardımcı olalım?",
+        "buttons": [
           {
             "id": "url",
             "label": "Siteye git"
@@ -4284,8 +4270,7 @@
             "label": "E-posta gönder"
           }
         ]
-      },
-      "note": "24 saati geçen konuşmalarda temsilci yanıtı yalnızca metin olarak gönderilebilir. Messenger konum mesajını desteklemediği için konum harita linkiyle gider."
+      }
     },
     "comments": {
       "eyebrow": "Sayfa yorumları",
@@ -4384,49 +4369,63 @@
       }
     },
     "adReferral": {
-      "eyebrow": "Reklamdan gelen yazışma",
+      "eyebrow": "Click-to-Messenger",
       "title": "Bu yazışma hangi reklamdan geldi?",
-      "lead": "Reklamdaki “Mesaj gönder” Messenger penceresini açar. Başlık ve kaynak gelen kutuda durur.",
-      "note": "Tıkla-ve-Messenger reklamından gelen konuşma, reklam kartı ve yönlendirme kaynağıyla düşer.",
-      "items": {
-        "card": {
-          "title": "Reklam kartı mesajın üstünde",
-          "body": "Reklam rozeti, başlık ve link ilk mesajın hemen üstünde."
-        },
-        "utm": {
-          "title": "UTM’li link",
-          "body": "Reklam kimliği UTM olarak eklenir; Analytics’te görürsünüz."
-        },
-        "contact": {
-          "title": "Kişi kartına işlenir",
-          "body": "Yönlendirme kaynağı otomatik dolar."
-        }
-      },
+      "lead": "Facebook reklamınızdaki “Mesaj Gönder” butonuna tıklayan müşteri, ilk Messenger sohbetinde reklam kartı, ad_id ve kaynak bağlantısıyla birlikte gelen kutunuza düşer.",
+      "checks": [
+        "Sohbet başında otomatik “Reklam” bağlam kartı",
+        "Kişi kartına otomatik referral kaynağı ve CRM aktarımı",
+        "Giden linklerde UTM ve dönüşüm takibi"
+      ],
       "scene": {
-        "brand": "Atölye",
-        "sponsored": "Sponsorlu",
-        "send": "Mesaj gönder",
-        "inbox": "Gelen kutusu",
-        "adBadge": "Reklam",
-        "headline": "Yaz kampanyası bu hafta",
-        "link": "omnider.com/kampanya…",
-        "bubble": "Merhaba, bu kampanya hâlâ geçerli mi?",
-        "customer": "Ayşe",
-        "referralLabel": "Yönlendirme kaynağı",
-        "referralPrefix": "Reklam",
-        "adId": "120384756"
-      },
-      "footnote": "Reklam bilgisi Meta’nın gönderdiği alanlara göre görünür."
+        "brand": "Atölye No.4",
+        "sponsored": "Sponsorlu Reklam",
+        "send": "Messenger’da Mesaj Gönder",
+        "headline": "Yaz kampanyası bu hafta — stok bitmeden Messenger’dan sorun.",
+        "imageAlt": "Yaz kampanyası Facebook Messenger reklam görseli",
+        "referralBadge": "Reklam Yönlendirmesi",
+        "adId": "120384756",
+        "campaign": "Yaz Kampanyası",
+        "source": "Facebook Feed",
+        "bubble": "Merhaba, bu ilan üzerinden yazıyorum. Kampanya hâlâ geçerli mi?",
+        "replyRole": "Omnider AI",
+        "reply": "Evet! Bu hafta geçerli. Hangi ürünle ilgileniyorsunuz?",
+        "followUp": "Kulaklık seti. Yarın teslim mümkün mü?"
+      }
     },
     "try": {
-      "eyebrow": "Canlı deneme",
-      "title": "Messenger’dan yazın",
-      "body": "QR kodu taratın veya butona dokunun. Omnider Facebook sayfasının Messenger penceresi açılır.",
-      "cardTitle": "Omnider Messenger",
-      "handle": "m.me/1076656148865069",
-      "cta": "Messenger’da aç",
-      "ctaTitle": "Omnider Messenger sohbetini aç",
-      "imageAlt": "Omnider Messenger için QR kod"
+      "eyebrow": "Canlı Deneme • 7/24 Aktif Demo",
+      "title": "Messenger’ı telefondan hemen deneyin",
+      "body": "QR kodu taratın veya tek dokunuşla sohbeti başlatın. Yapay zeka fiyat, randevu ve sipariş sorularınızı yanıtlar; gerekirse ekip devralır.",
+      "cta": "Messenger’da Sohbeti Başlat",
+      "promptsLabel": "Ne test etmek istersiniz?",
+      "prefillLabel": "Hazır Test Mesajı",
+      "online": "Çevrimiçi",
+      "trust": {
+        "ai": "Anında AI yanıtı (1 sn altı)",
+        "handoff": "Tek tıkla canlı ekip devri"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Fiyat & Katalog Sor",
+          "message": "Merhaba, paketleriniz ve fiyatlarınız hakkında bilgi alabilir miyim?"
+        },
+        "booking": {
+          "tab": "Randevu Oluştur",
+          "message": "Yarın öğleden sonra için demo randevusu oluşturmak istiyorum."
+        },
+        "order": {
+          "tab": "Sipariş Sorgula",
+          "message": "#4829 numaralı siparişim ne zaman teslim edilir?"
+        }
+      },
+      "account": {
+        "title": "Omnider Messenger",
+        "handle": "m.me/1076656148865069",
+        "lang": "Türkçe & İngilizce Otomatik Algılama",
+        "ctaTitle": "Omnider Messenger sayfasına mesaj aç",
+        "imageAlt": "Omnider Messenger için QR kod"
+      }
     }
   },
   "PlatformTelegram": {
