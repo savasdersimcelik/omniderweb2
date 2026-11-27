@@ -6481,8 +6481,6 @@
       "titleLine1": "Sitenizde konuşsun,",
       "titleLine2": "yapay zeka yanıtlasın",
       "description": "Tek satır kodla webchat widget’ını ekleyin; ziyaretçi mesajlarını ortak gelen kutusunda toplayın, yapay zeka ve chatbot ile anında yanıtlayın.",
-      "ctaPrimary": "Sizi arayalım",
-      "ctaSecondary": "Ücretsiz Başla",
       "provider": {
         "title": "Omnider Webchat",
         "body": "Kendi widget’ınız"
@@ -6570,7 +6568,6 @@
           "body": "Sitenizi açın, widget’tan test mesajı gönderin ve Omnider gelen kutusunda kontrol edin."
         }
       },
-      "cta": "Ücretsiz başlayın",
       "codeLabel": "Örnek kurulum kodu",
       "keyHint": "CHANNEL_UUID yerine paneldeki Webchat kanal anahtarınızı kullanın.",
       "copy": "Kopyala",
@@ -6581,7 +6578,6 @@
       "titleLine1": "Site sohbeti,",
       "titleLine2": "tek gelen kutu",
       "description": "Widget’tan gelen ziyaretçi mesajları Omnider gelen kutusunda toplanır. Her mesajda kaynak sayfa görünür; yapay zeka ilk yanıtı verir, ekibiniz gerektiğinde devralır.",
-      "cta": "Sizi arayalım",
       "chat": {
         "browserUrl": "app.omnider.com/inbox",
         "inboxTitle": "Gelen kutusu",

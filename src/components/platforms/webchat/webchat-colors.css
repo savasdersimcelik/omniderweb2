@@ -26,9 +26,9 @@ body:has(.wc-page) {
   --wc-atm-base-4: #f5f6fd;
 
   --color-ink: #1e1b4b;
-  --color-ink-muted: #4338ca;
-  --color-ink-subtle: #4c4689;
-  --color-ink-faint: #6366a8;
+  --color-ink-muted: #3f3d6b;
+  --color-ink-subtle: #5b5890;
+  --color-ink-faint: #7a77a8;
   --color-surface: #fff;
   --color-surface-muted: #f8f9ff;
   --color-surface-subtle: #eef2ff;
@@ -129,10 +129,15 @@ body:has(.wc-page) {
 }
 
 .wc-page :is(.heading-section, .wc-inbox .home-hero__title) {
+  font-family: var(--font-brand);
   font-size: var(--wc-section-title-size);
   font-weight: 650;
   letter-spacing: -0.03em;
   line-height: var(--wc-section-title-leading);
+}
+
+.wc-page #wc-hero-title {
+  font-family: var(--font-brand);
 }
 
 @media (min-width: 40rem) {
@@ -604,6 +609,39 @@ body:has(.wc-page) .closing-cta__title-accent {
   border-radius: 1.25rem;
   background: white;
   box-shadow: 0 20px 44px -30px #312e81a0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.wc-feature-copy .heading-section {
+  font-family: var(--font-brand);
+  font-size: var(--wc-section-title-size);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: var(--wc-section-title-leading);
+}
+
+.wc-feature-copy .text-body,
+.wc-install-steps .text-body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 40rem) {
+  .wc-feature-copy .text-body,
+  .wc-install-steps .text-body {
+    font-size: 1.125rem;
+  }
+}
+
+.wc-install-steps strong {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+  color: var(--color-ink);
 }
 
 .wc-widget {
@@ -631,7 +669,46 @@ body:has(.wc-page) .closing-cta__title-accent {
   border: 1px solid #a5b4fc;
   border-radius: 0.5rem;
   padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.wc-widget-title {
+  margin: 0;
   font-size: 0.875rem;
+  font-weight: 650;
+  line-height: 1.35;
+  color: inherit;
+}
+
+.wc-widget-subtitle,
+.wc-widget-meta,
+.wc-source-meta,
+.wc-source-address {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: inherit;
+}
+
+.wc-widget-subtitle {
+  color: #e0e7ff;
+}
+
+.wc-widget-meta,
+.wc-source-meta,
+.wc-source-address {
+  color: var(--color-ink-subtle);
+}
+
+.wc-source-name {
+  margin: 0.1rem 0;
+  font-size: 0.875rem;
+  font-weight: 650;
+  line-height: 1.35;
+  color: var(--color-ink);
 }
 
 .wc-widget-tabs {
@@ -649,8 +726,8 @@ body:has(.wc-page) .closing-cta__title-accent {
   padding: 0.25rem 0.1rem;
   border-bottom: 2px solid transparent;
   color: var(--color-ink-subtle);
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 650;
 }
 
 .wc-widget-tabs button[data-state="active"] {
@@ -692,6 +769,8 @@ body:has(.wc-page) .closing-cta__title-accent {
   padding: 0.55rem 0.8rem;
   background: #eef2ff;
   color: var(--color-ink);
+  font-size: 0.8125rem;
+  font-weight: 500;
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
@@ -738,12 +817,13 @@ body:has(.wc-page) .closing-cta__title-accent {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.75rem;
-  padding: 0.55rem 0.9rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 0.65rem;
   background: var(--wc-primary);
   color: white;
-  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
   font-weight: 650;
 }
 
@@ -767,12 +847,15 @@ body:has(.wc-page) .closing-cta__title-accent {
 .wc-widget-faq summary {
   padding-block: 0.65rem;
   cursor: pointer;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 650;
 }
 
 .wc-widget-faq details p {
   padding-bottom: 0.65rem;
   color: var(--color-ink-subtle);
+  font-size: 0.8125rem;
+  line-height: 1.45;
 }
 
 .wc-widget-products li,
@@ -797,7 +880,7 @@ body:has(.wc-page) .closing-cta__title-accent {
 .wc-widget-product-action {
   margin-top: 0.15rem;
   color: var(--wc-hover);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 650;
   text-decoration: underline;
   text-underline-offset: 0.15em;
@@ -836,12 +919,13 @@ body:has(.wc-page) .closing-cta__title-accent {
 }
 
 .wc-source-options button {
-  min-height: 2.75rem;
+  min-height: 2.5rem;
   padding: 0.4rem 0.8rem;
   border: 1px solid var(--color-line);
   border-radius: 0.65rem;
   background: white;
-  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
   font-weight: 650;
 }
 
@@ -854,6 +938,8 @@ body:has(.wc-page) .closing-cta__title-accent {
 .wc-source-card h3 {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--color-line-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
   font-weight: 650;
 }
 
@@ -869,7 +955,7 @@ body:has(.wc-page) .closing-cta__title-accent {
 
 .wc-source-url {
   color: var(--color-ink-subtle);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .wc-source-card svg {
@@ -902,7 +988,8 @@ body:has(.wc-page) .closing-cta__title-accent {
   justify-content: space-between;
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--wc-dark-line);
-  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
   font-weight: 650;
 }
 
@@ -928,12 +1015,16 @@ body:has(.wc-page) .closing-cta__title-accent {
   overflow-wrap: anywhere;
   background: var(--wc-dark-inset);
   color: #c7d2fe;
-  font-size: 0.875rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.5;
 }
 
 .wc-install-code > p {
   color: var(--wc-dark-muted);
-  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
 }
 
 @media (min-width: 42rem) {

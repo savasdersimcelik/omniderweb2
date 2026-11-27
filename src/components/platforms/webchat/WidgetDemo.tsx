@@ -57,8 +57,8 @@ export function WidgetDemo({ products }: { products: DemoProduct[] }) {
       <div className="wc-widget-header">
         <MessageCircle aria-hidden="true" size={23} />
         <div>
-          <p className="font-semibold">{t("support")}</p>
-          <p className="text-sm text-indigo-100">{t("sampleStore")}</p>
+          <p className="wc-widget-title">{t("support")}</p>
+          <p className="wc-widget-subtitle">{t("sampleStore")}</p>
         </div>
         <span className="wc-widget-demo-label">{t("demo")}</span>
       </div>
@@ -126,8 +126,8 @@ export function WidgetDemo({ products }: { products: DemoProduct[] }) {
             <li key={product.id}>
               <Image src={product.image} width={68} height={68} alt="" className="wc-widget-product-photo" />
               <div className="min-w-0">
-                <p className="font-semibold">{product.name}</p>
-                <p className="text-sm text-ink-subtle">{product.price} · {t(product.inStock ? "inStock" : "outOfStock")}</p>
+                <p className="wc-widget-title">{product.name}</p>
+                <p className="wc-widget-meta">{product.price} · {t(product.inStock ? "inStock" : "outOfStock")}</p>
                 <button type="button" className="wc-widget-product-action" onClick={() => askAboutProduct(product.name)}>{t("askProduct")}</button>
               </div>
             </li>
@@ -140,8 +140,8 @@ export function WidgetDemo({ products }: { products: DemoProduct[] }) {
           event.preventDefault();
           setOrderResult(order.trim() === sampleOrder ? "found" : "missing");
         }}>
-          <label htmlFor="wc-demo-order" className="block font-semibold">{t("orderNumber")}</label>
-          <p id="wc-demo-order-hint" className="mt-1 mb-3 text-sm text-ink-subtle">{t("orderHint", { number: sampleOrder })}</p>
+          <label htmlFor="wc-demo-order" className="wc-widget-title block">{t("orderNumber")}</label>
+          <p id="wc-demo-order-hint" className="wc-widget-meta mt-1 mb-3">{t("orderHint", { number: sampleOrder })}</p>
           <div className="wc-widget-form">
             <input id="wc-demo-order" aria-describedby="wc-demo-order-hint" inputMode="numeric" value={order} required onChange={(event) => {
               setOrder(event.target.value);
@@ -155,8 +155,8 @@ export function WidgetDemo({ products }: { products: DemoProduct[] }) {
             <div className="wc-widget-order">
               <Truck size={23} aria-hidden="true" />
               <div>
-                <p className="font-semibold">{t("orderFound", { number: sampleOrder })}</p>
-                <p className="text-sm text-ink-subtle">{t("orderStatus")}</p>
+                <p className="wc-widget-title">{t("orderFound", { number: sampleOrder })}</p>
+                <p className="wc-widget-meta">{t("orderStatus")}</p>
               </div>
             </div>
           )}

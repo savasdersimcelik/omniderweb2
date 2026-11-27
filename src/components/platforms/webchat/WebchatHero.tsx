@@ -26,7 +26,7 @@ export async function WebchatHero() {
           </p>
           <h1
             id="wc-hero-title"
-            className="font-sans text-[clamp(1.85rem,6.5vw,2.35rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ink lg:text-5xl lg:leading-[1.06] xl:text-6xl"
+            className="text-[clamp(1.85rem,6.5vw,2.35rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ink lg:text-5xl lg:leading-[1.06] xl:text-6xl"
           >
             <span className="block whitespace-nowrap">{t("hero.titleLine1")}</span>
             <span className="block whitespace-nowrap text-[var(--wc-primary)]">

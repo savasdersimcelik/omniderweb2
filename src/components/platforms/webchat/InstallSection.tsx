@@ -1,7 +1,6 @@
 import { CodeXml } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
-import { Link } from "@/i18n/navigation";
 import { getOmniderApiUrl } from "@/lib/site";
 import { CopyEmbedButton } from "./CopyEmbedButton";
 
@@ -24,7 +23,6 @@ export async function InstallSection() {
               </li>
             ))}
           </ol>
-          <Link href="/register" className="wc-feature-button w-fit">{t("cta")}</Link>
         </div>
         <div className="wc-install-code">
           <div className="wc-install-code-header">

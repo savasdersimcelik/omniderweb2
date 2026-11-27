@@ -6481,8 +6481,6 @@
       "titleLine1": "Visitors chat on-site,",
       "titleLine2": "AI replies",
       "description": "Add the webchat widget with one line of code, collect visitor messages in a shared inbox, and reply instantly with AI and chatbots.",
-      "ctaPrimary": "We'll call you",
-      "ctaSecondary": "Start for free",
       "provider": {
         "title": "Omnider Webchat",
         "body": "Your own widget"
@@ -6570,7 +6568,6 @@
           "body": "Open your site, send a test message from the widget, and check the Omnider inbox."
         }
       },
-      "cta": "Start for free",
       "codeLabel": "Sample embed code",
       "keyHint": "Replace CHANNEL_UUID with the Webchat channel key shown in your dashboard.",
       "copy": "Copy",
@@ -6581,7 +6578,6 @@
       "titleLine1": "Site chat,",
       "titleLine2": "one inbox",
       "description": "Visitor messages from the widget land in the Omnider inbox. Every message shows its source page; AI sends the first reply, and your team takes over when it matters.",
-      "cta": "We'll call you",
       "chat": {
         "browserUrl": "app.omnider.com/inbox",
         "inboxTitle": "Inbox",

@@ -13783,6 +13783,6 @@ a.tg-modes__pick-card:hover {
 .ig-biz-hero__title,
 .pricing-hero__title,
 .contact-hero__title,
-:where(#wa-biz-hero-title, #wa-personal-hero-title, #ms-biz-hero-title, #tg-hero-title, #ln-hero-title) {
+:where(#wa-biz-hero-title, #wa-personal-hero-title, #ms-biz-hero-title, #tg-hero-title, #ln-hero-title, #wc-hero-title) {
   font-family: var(--font-brand);
 }

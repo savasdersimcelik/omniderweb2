@@ -46,9 +46,9 @@ export function SourcePageSection() {
                 <div className="wc-source-context">
                   <Globe size={18} aria-hidden="true" />
                   <div className="min-w-0">
-                    <p className="text-sm text-ink-subtle">{t("sourceLabel")}</p>
-                    <p className="font-semibold">{t(`pages.${page.id}.name`)}</p>
-                    <p className="wc-source-address text-sm text-ink-subtle">{address}</p>
+                    <p className="wc-source-meta">{t("sourceLabel")}</p>
+                    <p className="wc-source-name">{t(`pages.${page.id}.name`)}</p>
+                    <p className="wc-source-address">{address}</p>
                   </div>
                 </div>
                 <p className="wc-widget-bubble">{t(`pages.${page.id}.message`)}</p>
