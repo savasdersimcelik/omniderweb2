@@ -67,7 +67,7 @@ export async function AdReferralSection() {
             <article className="wa-ad-referral__inbox">
               <div className="wa-ad-referral__referral">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="rounded bg-[color-mix(in_srgb,var(--wa-green)_14%,white)] px-2 py-0.5 text-[11px] font-semibold text-[var(--wa-deep)]">
+                  <span className="wa-ad-referral__badge rounded px-2 py-0.5 text-[11px] font-semibold">
                     {t("scene.referralBadge")}
                   </span>
                   <span className="font-mono text-[11px] text-ink-subtle">
