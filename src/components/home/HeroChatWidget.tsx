@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Bot, UserRound, Sparkles, Package, ExternalLink } from "lucide-react";
 
 function ProductThumb({
@@ -126,16 +126,23 @@ export function HeroChatWidget({ copy }: { copy: HeroChatCopy }) {
     return () => clearTimeout(t);
   }, [freshIndex]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const root = rootRef.current;
     if (!root) return;
+
     const pageX = window.scrollX;
     const pageY = window.scrollY;
+
     root.querySelectorAll<HTMLElement>(".hero-chat__thread").forEach((el) => {
+      // Skip display:none phone/desk twin — scrolling hidden nodes can jump the page.
+      if (el.offsetParent === null && getComputedStyle(el).display === "none") {
+        return;
+      }
       el.scrollTop = el.scrollHeight;
     });
+
     if (window.scrollX !== pageX || window.scrollY !== pageY) {
-      window.scrollTo({ left: pageX, top: pageY, behavior: "instant" });
+      window.scrollTo(pageX, pageY);
     }
   }, [visible]);
 
