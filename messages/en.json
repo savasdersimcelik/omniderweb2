@@ -5023,7 +5023,18 @@
       "titleLine2": "AI replies",
       "description": "Connect your bot or personal Telegram account, collect incoming messages in a shared inbox, and reply instantly with AI and chatbots.",
       "ctaPrimary": "We'll call you",
-      "ctaSecondary": "Start for free"
+      "ctaSecondary": "Start for free",
+      "badgesLabel": "Telegram connection status",
+      "badges": {
+        "bot": {
+          "title": "Bot API",
+          "body": "Official bot connected"
+        },
+        "personal": {
+          "title": "Personal account",
+          "body": "Userbot support"
+        }
+      }
     },
     "inbox": {
       "titleLine1": "Telegram messages,",
@@ -5848,8 +5859,17 @@
       "description": "Connect your Official Account bot, collect messages in a shared inbox, and reply with Flex cards and buttons.",
       "ctaPrimary": "We'll call you",
       "ctaSecondary": "Start for free",
-      "account": "Official Account",
-      "accountNote": "Bot channel connected"
+      "badgesLabel": "LINE connection status",
+      "badges": {
+        "official": {
+          "title": "Official Account",
+          "body": "Official channel connected"
+        },
+        "bot": {
+          "title": "Bot channel",
+          "body": "Messaging API active"
+        }
+      }
     },
     "inbox": {
       "titleLine1": "LINE chats,",
@@ -6028,94 +6048,278 @@
       }
     },
     "interactive": {
-      "eyebrow": "Built for LINE",
-      "title": "Your product ships as a card",
-      "subtitle": "Price, discount, stock, and buttons in one Flex card. Customers swipe; taps show up in your panel.",
-      "note": "Up to 10 carousel bubbles · 4 templates + 13 quick replies · Group chats in the same inbox.",
+      "eyebrow": "LINE Flex & buttons",
+      "title": "Quick replies, template buttons, and product cards",
+      "subtitle": "Bot replies go out as LINE’s own quick replies, template buttons, and Flex product cards—customers tap, the choice lands in the panel, and the next message continues the flow.",
+      "preview": "Sample chat",
       "tabs": {
-        "product": "Product card",
-        "buttons": "Buttons"
+        "quick": "Quick reply",
+        "template": "Template button",
+        "card": "Flex product card"
       },
       "cards": {
-        "product": "Image, price, discount, and stock in one Flex card. Carousel up to 10 bubbles when you have a gallery.",
-        "buttons": "4 template + quick replies; links, calls, and location requests. Taps show in your panel."
+        "quick": "Chips under the message. Shoppers tap instead of typing; that choice continues the flow.",
+        "template": "4 template buttons + quick replies. Links, calls, and location; taps show in your panel.",
+        "card": "Image + price + buttons. Flex card or carousel into catalog and cart."
       },
-      "demo": {
-        "customer": "Do you have this coat in another color?",
-        "card": {
-          "name": "Hooded coat",
-          "sku": "SKU: MNT-204",
-          "stock": "In stock",
-          "price": "TRY 1,499",
-          "oldPrice": "TRY 1,999",
-          "discount": "25% off",
-          "specs": [
-            {
-              "label": "Color",
-              "value": "Black"
-            },
-            {
-              "label": "Size",
-              "value": "S–XL"
-            }
-          ],
-          "buttons": [
-            "View product",
-            "Video",
-            "Add to cart"
-          ]
-        },
-        "buttonsMessage": "How can we help?",
-        "template": [
+      "quick": {
+        "prompt": "How can we help?",
+        "options": [
           "Price",
           "Stock",
-          "Shipping",
-          "Call us"
+          "Shipping"
         ],
-        "quick": [
-          "Share location",
-          "Booking",
-          "Offers"
+        "follow": "Hooded coat 1,499 TRY · in stock. Reply for details."
+      },
+      "template": {
+        "intro": "Hi! Tap an option to get started.",
+        "rows": [
+          {
+            "title": "View product",
+            "description": "Catalog & pricing",
+            "picked": true
+          },
+          {
+            "title": "Share location",
+            "description": "Delivery address"
+          },
+          {
+            "title": "Call us",
+            "description": "Live support"
+          }
+        ]
+      },
+      "card": {
+        "title": "Hooded coat",
+        "subtitle": "1,499 TRY · in stock · 25% off",
+        "buttons": [
+          "View product",
+          "Add to cart"
         ],
-        "picked": "Stock",
-        "panelKicker": "Button tap",
-        "panelBody": "Stock → flow continued"
+        "previewTitle": "Product page",
+        "previewUrl": "omnider.app/shop/coat"
+      }
+    },
+    "aiAutomation": {
+      "eyebrow": "Artificial intelligence",
+      "title": "Pick a ready Omnider AI model for your channel",
+      "subtitle": "Activate one of six Omnider AI models as the primary reply engine. With persona, media, and tags, answers stay in your brand voice.",
+      "catalogTitle": "Omnider AI model catalog",
+      "catalogBadge": "Persona • Media • Tags",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Automatic language detection",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Default",
+          "description": "A fast, reliable default for daily support, automatic AI replies, and chatflow steps."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Sales & FAQ",
+          "description": "A high-quality chat model for natural sales conversations, product questions, and FAQ answers."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Live support",
+          "description": "Optimized for quick, natural chats with strong instruction following in live support and chatflow steps."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Multi-step",
+          "description": "An advanced model for complex questions, multi-step chatflow scenarios, and reliable instruction following."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Booking & Pro",
+          "description": "A high-quality model for professional support, detailed explanations, bookings, and product advice."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "Highest",
+          "description": "The flagship model for hard multi-step conversations, premium experiences, and maximum answer accuracy."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Automation",
+      "title": "Build LINE workflows in plain language — no code",
+      "subtitle": "See in three clear steps what the bot understands when a customer writes, what it checks next, and when it hands off to your team.",
+      "modesLabel": "Chatflow scenario",
+      "steps": {
+        "one": {
+          "label": "Step 1 • Customer messages",
+          "badge": "Trigger"
+        },
+        "two": {
+          "label": "Step 2 • System checks",
+          "badge": "Auto lookup"
+        },
+        "three": {
+          "label": "Step 3 • Reply or hand off",
+          "badge": "Buttons + team"
+        }
+      },
+      "preview": {
+        "label": "What the customer sees",
+        "live": "Live preview",
+        "time": "14:22",
+        "response": "Avg. reply: 0.8 sec",
+        "active": "24/7 active"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "Ecommerce & Orders",
+          "one": {
+            "title": "Order or shipping keywords are caught",
+            "body": "When the message includes “order, shipping, return”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls shipping status from your store",
+            "body": "Validates the order number and fetches live delivery data from your ecommerce/CRM system."
+          },
+          "three": {
+            "title": "Sends a button reply, or connects an agent",
+            "body": "Shares the tracking link and a Return Request button; if unresolved, routes to Support."
+          },
+          "sim": {
+            "user": "Where is my order #4829?",
+            "bot": "Order #4829 is out for delivery — estimated before 17:00 today.",
+            "btn1": "Tracking link",
+            "btn2": "Start a return"
+          }
+        },
+        "booking": {
+          "tab": "Booking & Clinic",
+          "one": {
+            "title": "Appointment intent is detected",
+            "body": "When the customer writes “appointment, visit, time”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks open slots on your calendar",
+            "body": "Connects to your clinic or team calendar and lists available windows for that day."
+          },
+          "three": {
+            "title": "Confirms the booking and sets a reminder",
+            "body": "Saves the chosen time, sends confirmation, and reminds automatically 1 hour before."
+          },
+          "sim": {
+            "user": "Can I book something for tomorrow afternoon?",
+            "bot": "Available slots for tomorrow (Nov 27) are below. Pick one:",
+            "btn1": "14:00 — Available",
+            "btn2": "15:30 — Available"
+          }
+        },
+        "lead": {
+          "tab": "Ads & Leads",
+          "one": {
+            "title": "The first ad-driven message is captured",
+            "body": "Recognizes which Instagram or Facebook ad brought the customer into the chat."
+          },
+          "two": {
+            "title": "AI recommends the right product",
+            "body": "Asks about team size and budget, then matches the best package from your catalog."
+          },
+          "three": {
+            "title": "Saves the lead and hands off to Sales",
+            "body": "Writes the conversation summary into CRM and connects the hot lead to a sales agent."
+          },
+          "sim": {
+            "user": "I’m writing from the Instagram ad — can I get a quote for a 20-person office?",
+            "bot": "For a 20-person office we recommend Barista Pro X2. Want me to send the quote?",
+            "btn1": "Send quote",
+            "btn2": "Talk to sales"
+          }
+        },
+        "education": {
+          "tab": "Education & Courses",
+          "one": {
+            "title": "Course or enrollment intent is caught",
+            "body": "When a student writes “course, enroll, seats, tuition”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls program and seat availability",
+            "body": "Fetches open terms, fees, and remaining seats from your education management system."
+          },
+          "three": {
+            "title": "Offers enrollment options or an advisor",
+            "body": "Lists matching programs with buttons; routes payment or special questions to enrollment staff."
+          },
+          "sim": {
+            "user": "I’d like to enroll in English B1 — any seats left?",
+            "bot": "4 seats left in the B1 evening group. Starts Dec 2. How would you like to continue?",
+            "btn1": "Open enrollment form",
+            "btn2": "Talk to an advisor"
+          }
+        },
+        "travel": {
+          "tab": "Travel & Tours",
+          "one": {
+            "title": "Tour or booking request is detected",
+            "body": "When a guest writes “tour, flight, hotel, reservation”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks availability and pricing",
+            "body": "Validates dates, party size, and inventory in your tour operator or booking software."
+          },
+          "three": {
+            "title": "Presents options and starts the booking",
+            "body": "Shows matching packages with buttons; hands deposits or special requests to Operations."
+          },
+          "sim": {
+            "user": "Any spots left for 2 on the Dec 15–18 Cappadocia tour?",
+            "bot": "2 seats open for Dec 15–18. Standard package is $280 per person. Shall we continue?",
+            "btn1": "Start reservation",
+            "btn2": "Other dates"
+          }
+        },
+        "restaurant": {
+          "tab": "Restaurant & Menu",
+          "one": {
+            "title": "Order or table request is caught",
+            "body": "When a guest writes “menu, order, table, reservation”, the restaurant flow starts."
+          },
+          "two": {
+            "title": "Checks the menu and availability",
+            "body": "Pulls the live menu, stock, and open table times from your POS or reservation system."
+          },
+          "three": {
+            "title": "Takes the order or confirms the table",
+            "body": "Saves the chosen items or time; routes special requests or complaints to the floor team."
+          },
+          "sim": {
+            "user": "Can we reserve a table for 4 at 20:00 tonight?",
+            "bot": "A table for 4 is available at 20:00. Choose garden or indoor seating:",
+            "btn1": "Garden table",
+            "btn2": "Indoor table"
+          }
+        }
       }
     },
     "location": {
       "eyebrow": "Location",
       "title": "Skip typing addresses. Get location in one tap.",
       "subtitle": "Send a location request; customers pick on LINE’s map. Incoming pins show in your panel with a map preview.",
-      "stepsLabel": "Location steps",
-      "panelLabel": "In the panel",
-      "demoNote": "Example view",
+      "preview": "Sample chat",
+      "tabs": {
+        "ask": "You ask",
+        "tap": "They tap",
+        "pin": "You pin"
+      },
+      "cards": {
+        "ask": "Type “Where should we deliver?” and add a location request. Customers tap instead of typing.",
+        "tap": "LINE opens the map picker; send drops the pin in chat and your panel.",
+        "pin": "Send your store pin as a location message; customers open it on the map in one tap."
+      },
+      "ask": {
+        "follow": "Location request sent · customer opens the map"
+      },
+      "pin": {
+        "previewTitle": "Location message",
+        "follow": "Store pin landed in chat · map preview in the panel"
+      },
       "accountName": "Omnider",
       "accountStatus": "Official Account",
-      "steps": [
-        {
-          "id": "ask",
-          "chip": "Ask",
-          "title": "You ask.",
-          "body": "Type “Where should we deliver?” and add a location request button."
-        },
-        {
-          "id": "tap",
-          "chip": "They tap",
-          "title": "Customer taps.",
-          "body": "LINE opens the map picker; send drops the pin in chat."
-        },
-        {
-          "id": "pin",
-          "chip": "You pin",
-          "title": "You send a pin.",
-          "body": "Send your store location as a location message."
-        }
-      ],
-      "features": [
-        "Location request opens LINE’s native picker",
-        "Incoming pins open in maps in one tap",
-        "Save frequent pins in message templates"
-      ],
       "demo": {
         "askAgent": "Where should we send the courier?",
         "askQuick": "Send my location",
@@ -6150,16 +6354,135 @@
         }
       ]
     },
+    "analytics": {
+      "eyebrow": "LINE Conversion Reports",
+      "title": "Measure how every LINE chat turns into leads and orders",
+      "subtitle": "Track first-response speed, Flex and location-sourced leads, order conversion, and Official Account engagement in one LINE-focused report.",
+      "kpis": {
+        "speed": {
+          "label": "Avg. First Response",
+          "value": "10 sec",
+          "badge": "Instant AI",
+          "sub": "10 sec instead of a 12 min industry average"
+        },
+        "lead": {
+          "label": "Lead Conversion Rate",
+          "value": "59.4%",
+          "badge": "+12.8%",
+          "sub": "3,110 qualified LINE leads"
+        },
+        "order": {
+          "label": "Order Conversion Rate",
+          "value": "38.1%",
+          "badge": "₺2.34M",
+          "sub": "1,840 completed LINE orders"
+        },
+        "location": {
+          "label": "Location Share Rate",
+          "value": "44.7%",
+          "badge": "High",
+          "sub": "Share who send a pin after Location Request"
+        }
+      },
+      "funnel": {
+        "title": "Chat-to-Order Conversion Funnel",
+        "subtitle": "How every LINE request becomes a lead and a sale",
+        "badge": "ROI report",
+        "aovLabel": "Average basket / transaction",
+        "aovValue": "₺1,274 / order",
+        "steps": {
+          "chats": {
+            "label": "1. Inbound OA chats & Flex engagement",
+            "value": "5,240 (100%)"
+          },
+          "fast": {
+            "label": "2. Answered under 30 seconds",
+            "value": "5,188 (99.0%)"
+          },
+          "leads": {
+            "label": "3. Qualified leads (contact + intent)",
+            "value": "3,110 (59.4%)"
+          },
+          "orders": {
+            "label": "4. Completed orders / appointments",
+            "value": "1,840 (38.1%)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Source-Based LINE Report",
+        "subtitle": "Which entry path turns customers into orders fastest?",
+        "columns": {
+          "source": "Entry source",
+          "reply": "First reply",
+          "lead": "Lead",
+          "order": "Order"
+        },
+        "rows": {
+          "qr": {
+            "name": "QR & LIFF",
+            "desc": "Store / campaign code",
+            "reply": "7 sec",
+            "lead": "67.2%",
+            "order": "45.8%"
+          },
+          "flex": {
+            "name": "Flex product card",
+            "desc": "Carousel & button taps",
+            "reply": "9 sec",
+            "lead": "61.5%",
+            "order": "39.4%"
+          },
+          "location": {
+            "name": "Location request",
+            "desc": "Map pin → delivery",
+            "reply": "11 sec",
+            "lead": "55.8%",
+            "order": "36.2%"
+          },
+          "organic": {
+            "name": "Organic OA message",
+            "desc": "Direct Official Account",
+            "reply": "14 sec",
+            "lead": "48.3%",
+            "order": "29.7%"
+          }
+        }
+      }
+    },
     "try": {
-      "eyebrow": "Live test",
-      "title": "Message us on LINE",
-      "body": "Scan the QR or tap the button to open the Omnider LINE official account.",
-      "cardTitle": "Omnider LINE",
-      "handle": "@653nqviy",
-      "url": "https://line.me/R/ti/p/@653nqviy",
-      "cta": "Open in LINE",
-      "ctaTitle": "Open the Omnider LINE account",
-      "imageAlt": "QR code for the Omnider LINE account"
+      "eyebrow": "Live demo • 24/7 active",
+      "title": "Try LINE from your phone now",
+      "body": "Scan the QR code — or start a chat in one tap. AI answers pricing, booking, and order questions; the team takes over when needed.",
+      "cta": "Start chat in LINE",
+      "promptsLabel": "What do you want to test?",
+      "prefillLabel": "Ready test message",
+      "online": "Online",
+      "trust": {
+        "ai": "Instant AI reply (under 1 sec)",
+        "handoff": "One-tap live team handoff"
+      },
+      "prompts": {
+        "price": {
+          "tab": "Ask pricing & catalog",
+          "message": "Hi, can I get details about your packages and pricing?"
+        },
+        "booking": {
+          "tab": "Book a demo",
+          "message": "I’d like to book a demo for tomorrow afternoon."
+        },
+        "order": {
+          "tab": "Track an order",
+          "message": "When will order #4829 be delivered?"
+        }
+      },
+      "account": {
+        "title": "Omnider LINE",
+        "handle": "@653nqviy",
+        "lang": "Turkish & English auto-detect",
+        "ctaTitle": "Open a message to the Omnider LINE account",
+        "imageAlt": "QR code for the Omnider LINE account"
+      }
     }
   }
 }

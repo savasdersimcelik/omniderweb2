@@ -1,79 +1,114 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
+import { BadgeCheckIcon, BotIcon } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { DemoRequestButton } from "@/components/demo";
-import { HeroTrust } from "@/components/trust";
-import { Link } from "@/i18n/navigation";
+import { UserTrust } from "@/components/trust";
+
+/** Mobile: soft top fade into copy only — no bottom blur. */
+const photoMaskMobile: CSSProperties = {
+  WebkitMaskImage:
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
+  maskImage:
+    "linear-gradient(180deg, transparent 0%, #000 14%, #000 100%)",
+};
+
+/** Desktop: left soft fade only — no bottom blur. */
+const photoMask: CSSProperties = {
+  WebkitMaskImage: "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%)",
+  maskImage: "linear-gradient(90deg, transparent 0%, #000 38%, #000 100%)",
+};
 
 export async function LineHero() {
-  const t = await getTranslations("PlatformLine.hero");
+  const t = await getTranslations("PlatformLine");
+  const tTrust = await getTranslations("Trust");
 
   return (
     <section
-      className="ln-biz-hero viewport-hero relative isolate flex w-full flex-col items-center justify-center overflow-hidden border-b border-[color-mix(in_srgb,var(--ln-hero)_18%,transparent)]"
+      className="ln-biz-hero ln-biz-hero--photo relative isolate flex h-[calc(100svh-var(--header-height)-1px)] max-h-[calc(100svh-var(--header-height)-1px)] min-h-0 w-full overflow-hidden border-b"
       aria-labelledby="ln-hero-title"
     >
-      <div className="ln-biz-hero__glow ln-biz-hero__glow--a" aria-hidden />
-      <div className="ln-biz-hero__glow ln-biz-hero__glow--b" aria-hidden />
+      <Image
+        src="/images/platforms/line/hero-woman.jpg"
+        alt=""
+        width={2400}
+        height={1600}
+        priority
+        unoptimized
+        sizes="65vw"
+        className="pointer-events-none absolute top-0 right-0 bottom-0 z-0 hidden h-full w-auto max-w-none object-cover lg:block"
+        style={photoMask}
+      />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-360 flex-col items-center px-4 py-14 text-center sm:px-6 lg:px-10 lg:py-20 xl:px-14">
-        <p className="mb-4 inline-flex items-center gap-2.5 text-sm font-semibold text-[var(--ln-hero-deep)] lg:text-[15px]">
-          <Image
-            src="/icons/platforms/line.png"
-            alt=""
-            width={20}
-            height={20}
-            className="h-5 w-5 object-contain"
-            unoptimized
-          />
-          {t("badge")}
-        </p>
-
-        <h1
-          id="ln-hero-title"
-          className="text-[clamp(2rem,6.5vw,3.75rem)] font-bold leading-[1.06] tracking-[-0.035em] text-ink"
-        >
-          <span className="block">{t("titleLine1")}</span>
-          <span className="block text-[var(--ln-hero-deep)]">{t("titleLine2")}</span>
-        </h1>
-
-        <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-ink-subtle lg:mt-7 lg:text-xl">
-          {t("description")}
-        </p>
-
-        <p className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm text-ink shadow-[inset_0_0_0_1px_color-mix(in_srgb,var(--ln-hero)_16%,transparent)]">
-          <Image
-            src="/icons/platforms/line.png"
-            alt=""
-            width={18}
-            height={18}
-            className="h-[18px] w-[18px]"
-            unoptimized
-          />
-          <span>
-            <strong className="font-semibold text-ink">{t("account")}</strong>
-            <span className="text-ink-subtle"> · {t("accountNote")}</span>
-          </span>
-        </p>
-
-        <div className="mt-8 flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:items-center sm:justify-center">
-          <DemoRequestButton
-            source="line-hero"
-            className="btn-primary inline-flex h-12 items-center justify-center px-7"
+      <div className="relative z-10 mx-auto flex h-full min-h-0 w-full max-w-360 flex-col px-4 py-4 sm:px-6 lg:pointer-events-none lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:items-center lg:px-10 lg:py-0 xl:px-14">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col items-center justify-center text-center lg:pointer-events-auto lg:flex-none lg:items-start lg:py-6 lg:pr-6 lg:text-left">
+          <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--ln-primary)] lg:mb-5 lg:gap-2.5 lg:text-[15px]">
+            <Image
+              src="/icons/platforms/line.png"
+              alt=""
+              width={20}
+              height={20}
+              className="h-5 w-5 object-contain"
+              unoptimized
+            />
+            {t("hero.badge")}
+          </p>
+          <h1
+            id="ln-hero-title"
+            className="font-sans text-[clamp(1.85rem,6.5vw,2.35rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ink lg:text-5xl lg:leading-[1.06] xl:text-6xl"
           >
-            {t("ctaPrimary")}
-          </DemoRequestButton>
-          <Link
-            href="/register"
-            className="btn-secondary inline-flex h-12 items-center justify-center px-7"
-          >
-            {t("ctaSecondary")}
-          </Link>
+            <span className="block whitespace-nowrap">
+              {t("hero.titleLine1")}
+            </span>
+            <span className="block whitespace-nowrap text-[var(--ln-primary)]">
+              {t("hero.titleLine2")}
+            </span>
+          </h1>
+          <p className="mt-4 line-clamp-2 max-w-lg text-pretty text-lg leading-snug text-ink-subtle lg:mt-7 lg:max-w-xl lg:text-xl lg:leading-relaxed xl:max-w-2xl xl:text-2xl">
+            {t("hero.description")}
+          </p>
+
+          <div className="hero-trust home-hero__trust mt-5 max-w-none flex-row flex-wrap items-center justify-center gap-x-4 gap-y-3 lg:mt-8 lg:origin-left lg:scale-105 lg:justify-start">
+            <ul className="ln-hero__badges" aria-label={t("hero.badgesLabel")}>
+              <li className="ln-hero__badge">
+                <BadgeCheckIcon aria-hidden />
+                <span>
+                  <strong>{t("hero.badges.official.title")}</strong>
+                  <span>{t("hero.badges.official.body")}</span>
+                </span>
+              </li>
+              <li className="ln-hero__badge">
+                <BotIcon aria-hidden />
+                <span>
+                  <strong>{t("hero.badges.bot.title")}</strong>
+                  <span>{t("hero.badges.bot.body")}</span>
+                </span>
+              </li>
+            </ul>
+            <UserTrust
+              rating={tTrust("rating")}
+              before={tTrust("before")}
+              count={tTrust("count")}
+              after={tTrust("after")}
+            />
+          </div>
         </div>
 
-        <HeroTrust
-          showMeta={false}
-          className="mt-8 flex-row flex-wrap items-center justify-center gap-x-4 gap-y-3"
-        />
+        <div className="relative mt-2 h-[42%] shrink-0 lg:mt-0 lg:h-full">
+          <div
+            className="absolute inset-0 overflow-hidden lg:hidden"
+            style={photoMaskMobile}
+          >
+            <Image
+              src="/images/platforms/line/hero-woman-mobile.jpg"
+              alt=""
+              fill
+              priority
+              unoptimized
+              sizes="100vw"
+              className="object-cover object-[50%_28%]"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

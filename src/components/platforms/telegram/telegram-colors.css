@@ -88,6 +88,59 @@ body:has(.tg-page) {
   color: var(--tg-primary);
 }
 
+.tg-page .tg-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tg-page .tg-hero__badge {
+  display: inline-flex;
+  max-width: 15.5rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--tg-primary) 22%, transparent);
+  border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--tg-primary) 8%, white);
+  padding: 0.65rem 0.85rem;
+  color: var(--tg-deep);
+  text-align: left;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.tg-page .tg-hero__badge svg {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.1rem;
+  flex: none;
+  color: var(--tg-primary);
+}
+
+.tg-page .tg-hero__badge strong {
+  display: block;
+  font-weight: 750;
+  color: var(--tg-deep);
+}
+
+.tg-page .tg-hero__badge strong + span {
+  display: block;
+  margin-top: 0.12rem;
+  font-weight: 550;
+  color: var(--color-ink-muted);
+}
+
+@media (min-width: 64rem) {
+  .tg-page .tg-hero__badges {
+    justify-content: flex-start;
+  }
+}
+
 .tg-page :is(
   .heading-section,
   .tg-inbox .home-hero__title,

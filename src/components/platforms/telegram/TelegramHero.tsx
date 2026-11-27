@@ -1,7 +1,8 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
+import { BadgeCheckIcon, UserRoundIcon } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { HeroTrust } from "@/components/trust";
+import { UserTrust } from "@/components/trust";
 
 /** Mobile: soft top fade into copy only — no bottom blur. */
 const photoMaskMobile: CSSProperties = {
@@ -19,6 +20,7 @@ const photoMask: CSSProperties = {
 
 export async function TelegramHero() {
   const t = await getTranslations("PlatformTelegram");
+  const tTrust = await getTranslations("Trust");
 
   return (
     <section
@@ -62,7 +64,31 @@ export async function TelegramHero() {
           <p className="mt-4 line-clamp-2 max-w-lg text-pretty text-lg leading-snug text-ink-subtle lg:mt-7 lg:max-w-xl lg:text-xl lg:leading-relaxed xl:max-w-2xl xl:text-2xl">
             {t("hero.description")}
           </p>
-          <HeroTrust className="home-hero__trust mt-5 max-w-none flex-row flex-nowrap items-center justify-center lg:mt-8 lg:origin-left lg:scale-105 lg:justify-start" />
+
+          <div className="hero-trust home-hero__trust mt-5 max-w-none flex-row flex-wrap items-center justify-center gap-x-4 gap-y-3 lg:mt-8 lg:origin-left lg:scale-105 lg:justify-start">
+            <ul className="tg-hero__badges" aria-label={t("hero.badgesLabel")}>
+              <li className="tg-hero__badge">
+                <BadgeCheckIcon aria-hidden />
+                <span>
+                  <strong>{t("hero.badges.bot.title")}</strong>
+                  <span>{t("hero.badges.bot.body")}</span>
+                </span>
+              </li>
+              <li className="tg-hero__badge">
+                <UserRoundIcon aria-hidden />
+                <span>
+                  <strong>{t("hero.badges.personal.title")}</strong>
+                  <span>{t("hero.badges.personal.body")}</span>
+                </span>
+              </li>
+            </ul>
+            <UserTrust
+              rating={tTrust("rating")}
+              before={tTrust("before")}
+              count={tTrust("count")}
+              after={tTrust("after")}
+            />
+          </div>
         </div>
 
         <div className="relative mt-2 h-[42%] shrink-0 lg:mt-0 lg:h-full">

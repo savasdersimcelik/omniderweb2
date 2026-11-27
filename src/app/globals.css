@@ -8531,12 +8531,19 @@ a.tg-modes__pick-card:hover {
 }
 
 .ln-page-atmosphere .ln-biz-hero,
+.ln-page-atmosphere .ln-biz-hero--photo,
 .ln-page-atmosphere .ln-inbox,
 .ln-page-atmosphere .ln-connect,
 .ln-page-atmosphere .ln-interactive,
-.ln-page-atmosphere .ln-location,
-.ln-page-atmosphere .tg-team,
-.ln-page-atmosphere .ms-try {
+.ln-page-atmosphere .wa-interactive,
+.ln-page-atmosphere .wa-ai,
+.ln-page-atmosphere .wa-chatflow,
+.ln-page-atmosphere .wa-analytics,
+.ln-page-atmosphere .ln-location {
+  background: transparent !important;
+}
+
+.ln-page-atmosphere .ln-location.wa-interactive {
   background: transparent !important;
 }
 
@@ -8707,32 +8714,8 @@ a.tg-modes__pick-card:hover {
   font-weight: 500;
 }
 
-.ln-biz-hero {
+.ln-biz-hero--photo {
   position: relative;
-  min-height: calc(100svh - var(--header-height) - 1px);
-}
-
-.ln-biz-hero__glow {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(56px);
-  pointer-events: none;
-}
-
-.ln-biz-hero__glow--a {
-  top: 8%;
-  right: 12%;
-  width: min(48vw, 28rem);
-  height: min(48vw, 28rem);
-  background: color-mix(in srgb, var(--ln-hero) 28%, transparent);
-}
-
-.ln-biz-hero__glow--b {
-  bottom: 5%;
-  left: 6%;
-  width: min(42vw, 22rem);
-  height: min(42vw, 22rem);
-  background: color-mix(in srgb, var(--ln-hero-deep) 18%, transparent);
 }
 
 .ln-rich__aside-tabs {

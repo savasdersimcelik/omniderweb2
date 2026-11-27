@@ -1,139 +1,139 @@
 import Image from "next/image";
-import { MapPinIcon, NavigationIcon, SendIcon } from "lucide-react";
+import {
+  CheckIcon,
+  MapPinIcon,
+  NavigationIcon,
+  SendIcon,
+} from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
 
-const COLUMNS = [
-  { id: "ask" as const, Icon: SendIcon },
-  { id: "tap" as const, Icon: NavigationIcon },
-  { id: "pin" as const, Icon: MapPinIcon },
+const FEATURES = [
+  { id: "ask", icon: SendIcon },
+  { id: "tap", icon: NavigationIcon },
+  { id: "pin", icon: MapPinIcon },
 ] as const;
-
-type Step = {
-  id: (typeof COLUMNS)[number]["id"];
-  title: string;
-  body: string;
-};
 
 export async function LocationSection() {
   const t = await getTranslations("PlatformLine.location");
-  const steps = t.raw("steps") as Step[];
 
   return (
     <section
       id="location"
-      className="ln-location border-t border-line"
+      className="wa-interactive ln-location border-t border-line"
       aria-labelledby="ln-location-title"
     >
       <Container className="section">
-        <div className="wa-section-stack">
-          <header className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--ln-hero-deep)]">
-              <MapPinIcon className="h-3.5 w-3.5" />
+        <header className="wa-interactive__header">
+          <div>
+            <p className="wa-section-label">
+              <MapPinIcon aria-hidden="true" />
               {t("eyebrow")}
             </p>
-            <h2 id="ln-location-title" className="heading-section mt-3">
+            <h2
+              id="ln-location-title"
+              className="heading-section mt-3 text-balance"
+            >
               {t("title")}
             </h2>
-            <p className="ln-interactive__subtitle text-body mt-4">
-              {t("subtitle")}
-            </p>
-          </header>
-
-          <div className="ln-location__cols">
-            {COLUMNS.map(({ id, Icon }) => {
-              const step = steps.find((item) => item.id === id) ?? steps[0];
-
-              return (
-                <article key={id} className="ms-interactive__col">
-                  <div className="ms-interactive__col-copy">
-                    <div className="ms-interactive__col-heading">
-                      <span className="ms-interactive__col-icon">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <h3 className="ms-interactive__col-title">
-                        {step.title}
-                      </h3>
-                    </div>
-                    <p className="ms-interactive__col-desc">{step.body}</p>
-                  </div>
-
-                  <div className="ms-interactive__widget ln-location__widget">
-                    {id === "ask" ? (
-                      <div className="ln-phone ln-phone--compact">
-                        <header className="ln-phone__top">
-                          <Image
-                            src="/icons/platforms/line.png"
-                            alt=""
-                            width={20}
-                            height={20}
-                            className="h-5 w-5"
-                            unoptimized
-                          />
-                          <span className="min-w-0">
-                            <strong>{t("accountName")}</strong>
-                            <small>{t("accountStatus")}</small>
-                          </span>
-                        </header>
-                        <div className="ln-phone__chat ln-phone__chat--loc">
-                          <p className="ln-bubble ln-bubble--oa">
-                            {t("demo.askAgent")}
-                          </p>
-                          <span className="ln-quick ln-quick--pin">
-                            <MapPinIcon className="h-3.5 w-3.5" aria-hidden />
-                            {t("demo.askQuick")}
-                          </span>
-                        </div>
-                      </div>
-                    ) : null}
-
-                    {id === "tap" ? (
-                      <div className="ln-map-picker">
-                        <header>
-                          <strong>{t("demo.tapTitle")}</strong>
-                        </header>
-                        <div className="ln-map-art" aria-hidden />
-                        <div className="ln-map-sheet">
-                          <strong>{t("demo.tapPlace")}</strong>
-                          <span>{t("demo.tapAddress")}</span>
-                          <b>{t("demo.tapSend")}</b>
-                        </div>
-                      </div>
-                    ) : null}
-
-                    {id === "pin" ? (
-                      <div className="ln-phone ln-phone--compact">
-                        <header className="ln-phone__top">
-                          <Image
-                            src="/icons/platforms/line.png"
-                            alt=""
-                            width={20}
-                            height={20}
-                            className="h-5 w-5"
-                            unoptimized
-                          />
-                          <span className="min-w-0">
-                            <strong>{t("accountName")}</strong>
-                            <small>{t("accountStatus")}</small>
-                          </span>
-                        </header>
-                        <article className="ln-loc-bubble">
-                          <div
-                            className="ln-map-art ln-map-art--bubble"
-                            aria-hidden
-                          />
-                          <p>
-                            <strong>{t("demo.pinTitle")}</strong>
-                            <span>{t("demo.pinAddress")}</span>
-                          </p>
-                        </article>
-                      </div>
-                    ) : null}
-                  </div>
-                </article>
-              );
-            })}
           </div>
+          <div>
+            <p className="text-body text-pretty">{t("subtitle")}</p>
+          </div>
+        </header>
+
+        <div className="wa-interactive__grid ln-location__grid">
+          {FEATURES.map(({ id, icon: Icon }) => (
+            <article key={id} className="wa-interactive__card">
+              <header className="wa-interactive__card-header">
+                <span className="wa-interactive__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <div>
+                  <h3>{t(`tabs.${id}`)}</h3>
+                  <p>{t(`cards.${id}`)}</p>
+                </div>
+              </header>
+
+              <div className="wa-interactive__preview">
+                <p className="wa-interactive__preview-label">{t("preview")}</p>
+
+                {id === "ask" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("demo.askAgent")}
+                    </p>
+                    <ul className="wa-interactive__choices">
+                      <li data-selected>
+                        <MapPinIcon aria-hidden="true" />
+                        {t("demo.askRequest")}
+                      </li>
+                      <li>{t("demo.askQuick")}</li>
+                    </ul>
+                    <p className="wa-interactive__result">
+                      {t("ask.follow")}
+                    </p>
+                  </>
+                )}
+
+                {id === "tap" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("demo.tapTitle")}
+                    </p>
+                    <div className="wa-interactive__tracking ln-location__map">
+                      <div className="ln-map-art" aria-hidden />
+                      <p className="wa-interactive__product-name">
+                        <CheckIcon aria-hidden="true" />
+                        {t("demo.tapPlace")}
+                      </p>
+                      <p className="ln-location__map-address">
+                        {t("demo.tapAddress")}
+                      </p>
+                      <ul className="wa-interactive__choices">
+                        <li data-selected>{t("demo.tapSend")}</li>
+                      </ul>
+                    </div>
+                  </>
+                )}
+
+                {id === "pin" && (
+                  <div className="wa-interactive__tracking">
+                    <div className="ln-location__pin-shot">
+                      <div className="ln-map-art ln-map-art--bubble" aria-hidden />
+                    </div>
+                    <p className="wa-interactive__message">
+                      {t("demo.pinTitle")}
+                    </p>
+                    <p className="ln-location__map-address">
+                      {t("demo.pinAddress")}
+                    </p>
+                    <div className="wa-interactive__destination">
+                      <span
+                        className="wa-interactive__target-icon"
+                        aria-hidden="true"
+                      >
+                        <MapPinIcon />
+                      </span>
+                      <div>
+                        <p>{t("pin.previewTitle")}</p>
+                        <p>{t("accountName")}</p>
+                      </div>
+                      <Image
+                        src="/icons/platforms/line.png"
+                        alt=""
+                        width={18}
+                        height={18}
+                        className="h-[18px] w-[18px]"
+                        unoptimized
+                      />
+                    </div>
+                    <p className="wa-interactive__result">{t("pin.follow")}</p>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </Container>
     </section>

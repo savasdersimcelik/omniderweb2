@@ -1,154 +1,169 @@
-"use client";
-
 import Image from "next/image";
-import { LayersIcon, MousePointerClickIcon, PackageIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
+import {
+  ArrowUpRightIcon,
+  CheckIcon,
+  ExternalLinkIcon,
+  LayoutTemplateIcon,
+  MessageCircleIcon,
+  PackageIcon,
+} from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/Container";
-import { cn } from "@/lib/utils";
 
-const COLUMNS = [
-  { id: "product" as const, Icon: PackageIcon },
-  { id: "buttons" as const, Icon: MousePointerClickIcon },
+const FEATURES = [
+  { id: "quick", icon: MessageCircleIcon },
+  { id: "template", icon: LayoutTemplateIcon },
+  { id: "card", icon: PackageIcon },
 ] as const;
 
-type Spec = { label: string; value: string };
+const OPTIONS = [0, 1, 2] as const;
 
-export function InteractiveSection() {
-  const t = useTranslations("PlatformLine.interactive");
-  const specs = t.raw("demo.card.specs") as Spec[];
-  const template = t.raw("demo.template") as string[];
-  const quick = t.raw("demo.quick") as string[];
-  const cardButtons = t.raw("demo.card.buttons") as string[];
-  const picked = t("demo.picked");
+const CARD_IMAGE = "/images/hero/products/aura.jpg";
+
+type TemplateRow = {
+  title: string;
+  description: string;
+  picked?: boolean;
+};
+
+export async function InteractiveSection() {
+  const t = await getTranslations("PlatformLine.interactive");
+  const templateRows = (t.raw("template.rows") as TemplateRow[]).slice(0, 3);
 
   return (
     <section
       id="interactive"
-      className="ln-interactive border-t border-line"
+      className="wa-interactive border-t border-line"
       aria-labelledby="ln-interactive-title"
     >
       <Container className="section">
-        <div className="wa-section-stack">
-          <header className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow inline-flex items-center justify-center gap-2 text-[var(--ln-hero-deep)]">
-              <LayersIcon className="h-3.5 w-3.5" />
+        <header className="wa-interactive__header">
+          <div>
+            <p className="wa-section-label">
+              <MessageCircleIcon aria-hidden="true" />
               {t("eyebrow")}
             </p>
-            <h2 id="ln-interactive-title" className="heading-section mt-3">
+            <h2
+              id="ln-interactive-title"
+              className="heading-section mt-3 text-balance"
+            >
               {t("title")}
             </h2>
-            <p className="ln-interactive__subtitle text-body mt-4">
-              {t("subtitle")}
-            </p>
-          </header>
-
-          <div className="ln-interactive__cols">
-            {COLUMNS.map(({ id, Icon }) => (
-              <article key={id} className="ms-interactive__col">
-                <div className="ms-interactive__col-copy">
-                  <div className="ms-interactive__col-heading">
-                    <span className="ms-interactive__col-icon">
-                      <Icon className="h-4 w-4" />
-                    </span>
-                    <h3 className="ms-interactive__col-title">
-                      {t(`tabs.${id}`)}
-                    </h3>
-                  </div>
-                  <p className="ms-interactive__col-desc">{t(`cards.${id}`)}</p>
-                </div>
-
-                <div className="ms-interactive__widget">
-                  {id === "product" ? (
-                    <div className="ms-interactive__widget-inner">
-                      <p className="ms-interactive__bubble is-in">
-                        {t("demo.customer")}
-                      </p>
-                      <article className="ln-flex-card ln-flex-card--demo is-on">
-                        <div
-                          className="ln-flex-card__shot is-black"
-                          aria-hidden
-                        />
-                        <div className="ln-flex-card__body">
-                          <p className="ln-flex-card__name">
-                            {t("demo.card.name")}
-                          </p>
-                          <p className="ln-flex-card__sku">
-                            {t("demo.card.sku")}
-                          </p>
-                          <p className="ln-flex-card__stock">
-                            {t("demo.card.stock")}
-                          </p>
-                          <div className="ln-flex-card__price">
-                            <strong>{t("demo.card.price")}</strong>
-                            <span>{t("demo.card.oldPrice")}</span>
-                            <em>{t("demo.card.discount")}</em>
-                          </div>
-                          <ul className="ln-flex-card__specs">
-                            {specs.map((spec) => (
-                              <li key={spec.label}>
-                                <span>{spec.label}</span>
-                                <span>{spec.value}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="ln-flex-card__foot">
-                          {cardButtons.map((label, index) => (
-                            <span
-                              key={label}
-                              className={index === 0 ? "is-primary" : undefined}
-                            >
-                              {label}
-                            </span>
-                          ))}
-                        </div>
-                      </article>
-                    </div>
-                  ) : null}
-
-                  {id === "buttons" ? (
-                    <div className="ms-interactive__widget-inner">
-                      <div className="ln-template">
-                        <p>{t("demo.buttonsMessage")}</p>
-                        <div className="ln-template__grid">
-                          {template.map((label, index) => (
-                            <span
-                              key={label}
-                              className={cn(index === 0 && "is-hit")}
-                            >
-                              {label}
-                            </span>
-                          ))}
-                        </div>
-                        <div className="ln-quick ln-quick--compact">
-                          {quick.map((label) => (
-                            <span key={label}>{label}</span>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="ms-interactive__bubble is-out">{picked}</p>
-                      <aside className="ln-inbox-toast ln-inbox-toast--compact">
-                        <Image
-                          src="/icon.png"
-                          alt=""
-                          width={24}
-                          height={24}
-                          className="h-6 w-6 rounded-md"
-                          unoptimized
-                        />
-                        <p>
-                          <small>{t("demo.panelKicker")}</small>
-                          <strong>{t("demo.panelBody")}</strong>
-                        </p>
-                      </aside>
-                    </div>
-                  ) : null}
-                </div>
-              </article>
-            ))}
           </div>
+          <div>
+            <p className="text-body text-pretty">{t("subtitle")}</p>
+          </div>
+        </header>
 
-          <p className="ms-interactive__note">{t("note")}</p>
+        <div className="wa-interactive__grid ln-interactive__grid">
+          {FEATURES.map(({ id, icon: Icon }) => (
+            <article key={id} className="wa-interactive__card">
+              <header className="wa-interactive__card-header">
+                <span className="wa-interactive__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <div>
+                  <h3>{t(`tabs.${id}`)}</h3>
+                  <p>{t(`cards.${id}`)}</p>
+                </div>
+              </header>
+
+              <div className="wa-interactive__preview">
+                <p className="wa-interactive__preview-label">{t("preview")}</p>
+
+                {id === "quick" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("quick.prompt")}
+                    </p>
+                    <ul className="wa-interactive__choices">
+                      {OPTIONS.map((option) => (
+                        <li
+                          key={option}
+                          data-selected={option === 0 || undefined}
+                        >
+                          {t(`quick.options.${option}`)}
+                          {option === 0 && <CheckIcon aria-hidden="true" />}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="wa-interactive__result">
+                      {t("quick.follow")}
+                    </p>
+                  </>
+                )}
+
+                {id === "template" && (
+                  <>
+                    <p className="wa-interactive__message">
+                      {t("template.intro")}
+                    </p>
+                    <ul className="wa-interactive__products">
+                      {templateRows.map((row) => (
+                        <li
+                          key={row.title}
+                          data-selected={row.picked || undefined}
+                        >
+                          <span className="wa-interactive__product-name">
+                            {row.picked && <CheckIcon aria-hidden="true" />}
+                            {row.title}
+                          </span>
+                          <span>{row.description}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+
+                {id === "card" && (
+                  <div className="wa-interactive__tracking">
+                    <div className="ln-interactive__card-shot relative">
+                      <Image
+                        src={CARD_IMAGE}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="280px"
+                        unoptimized
+                      />
+                    </div>
+                    <p className="wa-interactive__message">{t("card.title")}</p>
+                    <p className="ln-interactive__card-price">
+                      {t("card.subtitle")}
+                    </p>
+                    <div className="wa-interactive__destination">
+                      <span
+                        className="wa-interactive__target-icon"
+                        aria-hidden="true"
+                      >
+                        <ExternalLinkIcon />
+                      </span>
+                      <div>
+                        <p>{t("card.previewTitle")}</p>
+                        <p>{t("card.previewUrl")}</p>
+                      </div>
+                      <ArrowUpRightIcon aria-hidden="true" />
+                    </div>
+                    <ul className="wa-interactive__choices">
+                      {(t.raw("card.buttons") as string[]).map(
+                        (label, index) => (
+                          <li
+                            key={label}
+                            data-selected={index === 0 || undefined}
+                          >
+                            {index === 0 && (
+                              <ExternalLinkIcon aria-hidden="true" />
+                            )}
+                            {label}
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </Container>
     </section>

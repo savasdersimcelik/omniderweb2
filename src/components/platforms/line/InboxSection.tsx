@@ -1,15 +1,11 @@
-import { ArrowUpRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { DemoRequestButton } from "@/components/demo";
 import {
   HeroChatWidget,
   type HeroChatCopy,
 } from "@/components/home/HeroChatWidget";
-import { Link } from "@/i18n/navigation";
 
 export async function InboxSection() {
   const t = await getTranslations("PlatformLine.inbox");
-  const nav = await getTranslations("Nav");
 
   const chat: HeroChatCopy = {
     browserUrl: t("chat.browserUrl"),
@@ -48,16 +44,6 @@ export async function InboxSection() {
           <p className="home-hero__desc mx-auto text-center text-muted-foreground">
             {t("description")}
           </p>
-
-          <div className="home-hero__actions">
-            <DemoRequestButton source="line-inbox" className="btn-primary">
-              {t("cta")}
-              <ArrowUpRight className="size-4" aria-hidden />
-            </DemoRequestButton>
-            <Link href="/register" className="btn-secondary">
-              {nav("startFree")}
-            </Link>
-          </div>
         </div>
 
         <div className="hero-chat-shell relative z-10 mt-6 flex min-h-0 w-full flex-col sm:mt-8">
