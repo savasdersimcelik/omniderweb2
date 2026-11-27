@@ -6470,5 +6470,499 @@
         "imageAlt": "QR code for the Omnider LINE account"
       }
     }
+  },
+  "PlatformWebchat": {
+    "meta": {
+      "title": "Webchat Integration — Omnider",
+      "description": "Add a live support widget to your site, collect visitor messages in a shared inbox, and reply with AI and chatbots."
+    },
+    "hero": {
+      "badge": "Webchat",
+      "titleLine1": "Visitors chat on-site,",
+      "titleLine2": "AI replies",
+      "description": "Add the webchat widget with one line of code, collect visitor messages in a shared inbox, and reply instantly with AI and chatbots.",
+      "ctaPrimary": "We'll call you",
+      "ctaSecondary": "Start for free",
+      "provider": {
+        "title": "Omnider Webchat",
+        "body": "Your own widget"
+      }
+    },
+    "inbox": {
+      "titleLine1": "Site chat,",
+      "titleLine2": "one inbox",
+      "description": "Visitor messages from the widget land in the Omnider inbox. Every message shows its source page; AI sends the first reply, and your team takes over when it matters.",
+      "cta": "We'll call you",
+      "chat": {
+        "browserUrl": "app.omnider.com/inbox",
+        "inboxTitle": "Inbox",
+        "aiLabel": "Omnider AI",
+        "agentLabel": "Emma · Sales",
+        "customerName": "Maya Rivera",
+        "deptName": "Sales",
+        "transferLabel": "Transferred to sales",
+        "typingLabel": "Writing a reply",
+        "inStockLabel": "In stock",
+        "outOfStockLabel": "Sold out",
+        "viewProductLabel": "View product",
+        "carouselHint": "{count} products · swipe to browse",
+        "products": [
+          {
+            "id": "aura",
+            "name": "Yellow headphones",
+            "price": "$89",
+            "listPrice": "$119",
+            "sku": "AUR-42",
+            "inStock": true,
+            "image": "/images/hero/products/aura.jpg",
+            "description": "Active noise canceling, 36-hour battery, and fast charge.",
+            "features": [
+              {
+                "key": "Color",
+                "value": "Yellow"
+              },
+              {
+                "key": "Connect",
+                "value": "Bluetooth 5.3"
+              },
+              {
+                "key": "Warranty",
+                "value": "2 years"
+              }
+            ]
+          },
+          {
+            "id": "pulse",
+            "name": "Pulse Smartwatch",
+            "price": "$149",
+            "sku": "PLS-11",
+            "inStock": true,
+            "image": "/images/hero/products/pulse.jpg",
+            "description": "Heart rate, sleep, and GPS tracking."
+          },
+          {
+            "id": "nova",
+            "name": "Nova Mini Speaker",
+            "price": "$59",
+            "sku": "NVA-08",
+            "inStock": false,
+            "image": "/images/hero/products/nova.jpg",
+            "description": "Waterproof, 12 hours of playback."
+          }
+        ],
+        "sidebar": [
+          {
+            "name": "Maya Rivera",
+            "preview": "Can you send the price?",
+            "platform": "webchat",
+            "channel": "Webchat"
+          },
+          {
+            "name": "James Cole",
+            "preview": "Book an appointment",
+            "platform": "webchat",
+            "channel": "Webchat"
+          },
+          {
+            "name": "Sara Lee",
+            "preview": "Group: Orders",
+            "platform": "webchat",
+            "channel": "Webchat"
+          },
+          {
+            "name": "Ava Quinn",
+            "preview": "In stock?",
+            "platform": "webchat",
+            "channel": "Webchat"
+          },
+          {
+            "name": "Noah Blake",
+            "preview": "Bot menu",
+            "platform": "webchat",
+            "channel": "Webchat"
+          },
+          {
+            "name": "Lina Ortiz",
+            "preview": "Order #4821",
+            "platform": "webchat",
+            "channel": "Webchat"
+          }
+        ],
+        "steps": [
+          {
+            "kind": "customer",
+            "text": "Hi, are the yellow headphones in stock?"
+          },
+          {
+            "kind": "product_list",
+            "text": "Yes — here are the featured ones:",
+            "productIds": [
+              "aura",
+              "pulse",
+              "nova"
+            ]
+          },
+          {
+            "kind": "customer",
+            "text": "Can you show the yellow headphones in detail?"
+          },
+          {
+            "kind": "product_detail",
+            "text": "Here’s the yellow pair in detail:",
+            "productId": "aura"
+          },
+          {
+            "kind": "buttons",
+            "text": "How would you like to continue?",
+            "buttons": [
+              "Buy in Telegram",
+              "Another color",
+              "Ask price"
+            ]
+          }
+        ]
+      }
+    },
+    "interactive": {
+      "eyebrow": "Widget interactivity",
+      "title": "Don’t make them type — let them tap",
+      "subtitle": "Guide visitors with buttons, polls, and product cards. FAQ, catalog, and order tabs sit beside the chat.",
+      "preview": "Sample chat",
+      "tabs": {
+        "buttons": "Reply buttons",
+        "polls": "Polls & choices",
+        "products": "Product cards"
+      },
+      "cards": {
+        "buttons": "Price, stock, shipping — visitors tap instead of typing; the selection continues the flow.",
+        "polls": "Send appointment days, preferences, or satisfaction questions as choices — results stay in the chat.",
+        "products": "Send product cards or a carousel from your catalog; visitors see stock and price, then open details."
+      },
+      "buttons": {
+        "prompt": "How can we help?",
+        "options": [
+          "Price",
+          "Stock",
+          "Shipping"
+        ],
+        "follow": "Yellow headphones $89 · in stock."
+      },
+      "polls": {
+        "intro": "Which day should we call you?",
+        "rows": [
+          {
+            "title": "Tuesday",
+            "description": "Morning slots open",
+            "picked": true
+          },
+          {
+            "title": "Thursday",
+            "description": "Afternoons only"
+          },
+          {
+            "title": "Saturday",
+            "description": "Weekend call"
+          }
+        ]
+      },
+      "products": {
+        "name": "Yellow headphones",
+        "price": "$89",
+        "stock": "In stock",
+        "follow": "Product card sent · continue in chat"
+      }
+    },
+    "aiAutomation": {
+      "eyebrow": "Artificial intelligence",
+      "title": "Pick a ready Omnider AI model for webchat",
+      "subtitle": "Answers price, stock, and setup questions instantly — and hands off to your team when needed. Set one of 6 models as the primary reply engine.",
+      "catalogTitle": "Omnider AI model catalog",
+      "catalogBadge": "Persona • Media • Tags",
+      "detailTitle": "Omnider {name}",
+      "langDetect": "Automatic language detection",
+      "models": {
+        "assist": {
+          "short": "Assist",
+          "tag": "Default",
+          "description": "A fast, reliable default for daily support, automatic AI replies, and chatflow steps."
+        },
+        "standard": {
+          "short": "Standard",
+          "tag": "Sales & FAQ",
+          "description": "A high-quality chat model for natural sales conversations, product questions, and FAQ answers."
+        },
+        "flow": {
+          "short": "Flow",
+          "tag": "Live support",
+          "description": "Optimized for quick, natural chats with strong instruction following in live support and chatflow steps."
+        },
+        "advanced": {
+          "short": "Advanced",
+          "tag": "Multi-step",
+          "description": "An advanced model for complex questions, multi-step chatflow scenarios, and reliable instruction following."
+        },
+        "expert": {
+          "short": "Expert",
+          "tag": "Booking & Pro",
+          "description": "A high-quality model for professional support, detailed explanations, bookings, and product advice."
+        },
+        "ultra": {
+          "short": "Ultra",
+          "tag": "Highest",
+          "description": "The flagship model for hard multi-step conversations, premium experiences, and maximum answer accuracy."
+        }
+      }
+    },
+    "chatflow": {
+      "eyebrow": "Chatflow Automation",
+      "title": "Build a webchat workflow in plain language — no code",
+      "subtitle": "See in 3 clear steps what the bot understands when a visitor writes, what it checks, and when it hands off to your team.",
+      "modesLabel": "Chatflow scenario",
+      "steps": {
+        "one": {
+          "label": "Step 1 • Visitor Sends a Message",
+          "badge": "Trigger"
+        },
+        "two": {
+          "label": "Step 2 • System checks",
+          "badge": "Auto lookup"
+        },
+        "three": {
+          "label": "Step 3 • Reply or hand off",
+          "badge": "Buttons + team"
+        }
+      },
+      "preview": {
+        "label": "What the customer sees",
+        "live": "Live preview",
+        "time": "14:22",
+        "response": "Avg. reply: 0.8 sec",
+        "active": "24/7 active"
+      },
+      "scenarios": {
+        "ecommerce": {
+          "tab": "Ecommerce & Orders",
+          "one": {
+            "title": "Order or shipping keywords are caught",
+            "body": "When the message includes “order, shipping, return”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls shipping status from your store",
+            "body": "Validates the order number and fetches live delivery data from your ecommerce/CRM system."
+          },
+          "three": {
+            "title": "Sends a button reply, or connects an agent",
+            "body": "Shares the tracking link and a Return Request button; if unresolved, routes to Support."
+          },
+          "sim": {
+            "user": "Where is my order #4829?",
+            "bot": "Order #4829 is out for delivery — estimated before 17:00 today.",
+            "btn1": "Tracking link",
+            "btn2": "Start a return"
+          }
+        },
+        "booking": {
+          "tab": "Booking & Clinic",
+          "one": {
+            "title": "Appointment intent is detected",
+            "body": "When the customer writes “appointment, visit, time”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks open slots on your calendar",
+            "body": "Connects to your clinic or team calendar and lists available windows for that day."
+          },
+          "three": {
+            "title": "Confirms the booking and sets a reminder",
+            "body": "Saves the chosen time, sends confirmation, and reminds automatically 1 hour before."
+          },
+          "sim": {
+            "user": "Can I book something for tomorrow afternoon?",
+            "bot": "Available slots for tomorrow (Nov 27) are below. Pick one:",
+            "btn1": "14:00 — Available",
+            "btn2": "15:30 — Available"
+          }
+        },
+        "lead": {
+          "tab": "Landing & Lead",
+          "one": {
+            "title": "First message from a landing page is captured",
+            "body": "When a visitor writes from a pricing or campaign page, source page and intent are recognized automatically."
+          },
+          "two": {
+            "title": "AI suggests the right product for their need",
+            "body": "Asks about team size and budget, then matches the best package from your catalog."
+          },
+          "three": {
+            "title": "Saves the lead and hands off to Sales",
+            "body": "Writes the conversation summary to your CRM and connects the hot visitor to a sales rep instantly."
+          },
+          "sim": {
+            "user": "I’m writing from the pricing page — can I get a quote for a 20-person office?",
+            "bot": "For a 20-person office we recommend Barista Pro X2. Shall I send the quote?",
+            "btn1": "Send Quote",
+            "btn2": "Talk to Sales"
+          }
+        },
+        "education": {
+          "tab": "Education & Courses",
+          "one": {
+            "title": "Course or enrollment intent is caught",
+            "body": "When a student writes “course, enroll, seats, tuition”, the flow starts automatically."
+          },
+          "two": {
+            "title": "Pulls program and seat availability",
+            "body": "Fetches open terms, fees, and remaining seats from your education management system."
+          },
+          "three": {
+            "title": "Offers enrollment options or an advisor",
+            "body": "Lists matching programs with buttons; routes payment or special questions to enrollment staff."
+          },
+          "sim": {
+            "user": "I’d like to enroll in English B1 — any seats left?",
+            "bot": "4 seats left in the B1 evening group. Starts Dec 2. How would you like to continue?",
+            "btn1": "Open enrollment form",
+            "btn2": "Talk to an advisor"
+          }
+        },
+        "travel": {
+          "tab": "Travel & Tours",
+          "one": {
+            "title": "Tour or booking request is detected",
+            "body": "When a guest writes “tour, flight, hotel, reservation”, the flow kicks in immediately."
+          },
+          "two": {
+            "title": "Checks availability and pricing",
+            "body": "Validates dates, party size, and inventory in your tour operator or booking software."
+          },
+          "three": {
+            "title": "Presents options and starts the booking",
+            "body": "Shows matching packages with buttons; hands deposits or special requests to Operations."
+          },
+          "sim": {
+            "user": "Any spots left for 2 on the Dec 15–18 Cappadocia tour?",
+            "bot": "2 seats open for Dec 15–18. Standard package is $280 per person. Shall we continue?",
+            "btn1": "Start reservation",
+            "btn2": "Other dates"
+          }
+        },
+        "restaurant": {
+          "tab": "Restaurant & Menu",
+          "one": {
+            "title": "Order or table request is caught",
+            "body": "When a guest writes “menu, order, table, reservation”, the restaurant flow starts."
+          },
+          "two": {
+            "title": "Checks the menu and availability",
+            "body": "Pulls the live menu, stock, and open table times from your POS or reservation system."
+          },
+          "three": {
+            "title": "Takes the order or confirms the table",
+            "body": "Saves the chosen items or time; routes special requests or complaints to the floor team."
+          },
+          "sim": {
+            "user": "Can we reserve a table for 4 at 20:00 tonight?",
+            "bot": "A table for 4 is available at 20:00. Choose garden or indoor seating:",
+            "btn1": "Garden table",
+            "btn2": "Indoor table"
+          }
+        }
+      }
+    },
+    "analytics": {
+      "eyebrow": "Widget & Conversion Reports",
+      "title": "Measure every webchat conversation’s lead and order conversion",
+      "subtitle": "Track widget results in one report — from reply speed and lead capture to page source and order conversion.",
+      "kpis": {
+        "speed": {
+          "label": "Avg. First Reply Time",
+          "value": "8s",
+          "badge": "Instant AI",
+          "sub": "8s instead of a 10 min industry avg."
+        },
+        "lead": {
+          "label": "Lead Conversion Rate",
+          "value": "54.8%",
+          "badge": "+11.2%",
+          "sub": "3,140 qualified webchat leads"
+        },
+        "order": {
+          "label": "Order Conversion Rate",
+          "value": "34.6%",
+          "badge": "$1.18M",
+          "sub": "1,980 completed webchat orders"
+        },
+        "bot": {
+          "label": "Widget Open → Chat",
+          "value": "68.4%",
+          "badge": "High",
+          "sub": "Visitors who leave a message after opening the widget"
+        }
+      },
+      "funnel": {
+        "title": "Chat-to-Order Conversion Funnel",
+        "subtitle": "How every inbound webchat request converts to leads and sales",
+        "badge": "ROI Report",
+        "aovLabel": "Average Order / Deal Value",
+        "aovValue": "$118 / Order",
+        "steps": {
+          "chats": {
+            "label": "1. Inbound widget chats",
+            "value": "5,720 (100%)"
+          },
+          "fast": {
+            "label": "2. Replied under 30s",
+            "value": "5,660 (99.0%)"
+          },
+          "leads": {
+            "label": "3. Qualified leads (contact + intent)",
+            "value": "3,140 (54.8%)"
+          },
+          "orders": {
+            "label": "4. Completed order / booking",
+            "value": "1,980 (34.6%)"
+          }
+        }
+      },
+      "sources": {
+        "title": "Page-Source Webchat Report",
+        "subtitle": "Which page’s visitors convert to orders fastest?",
+        "columns": {
+          "source": "Source Page",
+          "reply": "First Reply",
+          "lead": "Lead",
+          "order": "Order"
+        },
+        "rows": {
+          "product": {
+            "name": "Product page",
+            "desc": "/product/* · stock & size",
+            "reply": "6s",
+            "lead": "62.4%",
+            "order": "41.8%"
+          },
+          "cart": {
+            "name": "Cart",
+            "desc": "/cart · abandon risk",
+            "reply": "7s",
+            "lead": "58.1%",
+            "order": "38.6%"
+          },
+          "checkout": {
+            "name": "Checkout",
+            "desc": "/checkout · payment friction",
+            "reply": "5s",
+            "lead": "71.2%",
+            "order": "46.3%"
+          },
+          "home": {
+            "name": "Home / Blog",
+            "desc": "General questions & discovery",
+            "reply": "11s",
+            "lead": "42.5%",
+            "order": "22.8%"
+          }
+        }
+      }
+    }
   }
 }

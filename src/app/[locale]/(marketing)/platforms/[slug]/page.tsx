@@ -6,6 +6,7 @@ import { MessengerPage } from "@/components/platforms/messenger/MessengerPage";
 import { PlatformDetailPage } from "@/components/platforms/PlatformDetailPage";
 import { LinePage } from "@/components/platforms/line/LinePage";
 import { TelegramPage } from "@/components/platforms/telegram/TelegramPage";
+import { WebchatPage } from "@/components/platforms/webchat/WebchatPage";
 import { WhatsAppBusinessPage } from "@/components/platforms/whatsapp-business/WhatsAppBusinessPage";
 import { WhatsAppPersonalPage } from "@/components/platforms/whatsapp-personal/WhatsAppPersonalPage";
 import {
@@ -27,6 +28,7 @@ const dedicatedMetaNamespace: Record<string, string> = {
   messenger: "PlatformMessenger",
   telegram: "PlatformTelegram",
   line: "PlatformLine",
+  webchat: "PlatformWebchat",
 };
 
 export function generateStaticParams() {
@@ -100,6 +102,10 @@ async function PlatformSlugContent({ params }: PlatformSlugPageProps) {
 
   if (slug === "line") {
     return <LinePage />;
+  }
+
+  if (slug === "webchat") {
+    return <WebchatPage />;
   }
 
   return <PlatformDetailPage slug={slug} />;
